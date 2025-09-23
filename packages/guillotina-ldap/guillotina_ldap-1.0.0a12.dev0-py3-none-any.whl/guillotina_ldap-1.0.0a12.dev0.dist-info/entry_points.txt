@@ -1,0 +1,2 @@
+[guillotina]
+include = guillotina_ldap
