@@ -1,0 +1,667 @@
+Metadata-Version: 2.4
+Name: dococtopy
+Version: 0.1.3
+Summary: A language-agnostic docstyle compliance & remediation tool
+Author-email: Michael <your-email@example.com>
+Maintainer-email: Michael <your-email@example.com>
+License: MIT
+License-File: LICENSE
+Keywords: ai,compliance,docstring,documentation,linting,llm
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Text Processing :: Markup
+Requires-Python: >=3.10
+Requires-Dist: ast-tools>=0.1.8
+Requires-Dist: docstring-parser>=0.17.0
+Requires-Dist: dspy-ai>=3.0.3
+Requires-Dist: pathspec>=0.12.1
+Requires-Dist: pydantic>=2.11.7
+Requires-Dist: rich>=14.1.0
+Requires-Dist: tomli>=2.0.0; python_version < '3.11'
+Requires-Dist: typer>=0.16.1
+Provides-Extra: llm
+Requires-Dist: anthropic>=0.66.0; extra == 'llm'
+Requires-Dist: dspy-ai>=2.4.0; extra == 'llm'
+Requires-Dist: openai>=1.107.0; extra == 'llm'
+Description-Content-Type: text/markdown
+
+# DocOctopy
+
+A language-agnostic docstyle compliance & remediation tool that scans code for docstring/docblock presence and style, reports findings, and can auto-propose LLM-based fixes.
+
+## Features
+
+### 🔍 **Comprehensive Scanning**
+
+- **Python-first** with extensible architecture for other languages
+- **Google-style docstring validation** with detailed compliance checking
+- **Context-specific rules** for test functions, public APIs, and exception handling
+- **AST-based analysis** for accurate symbol and signature detection
+- **Smart caching** with incremental scanning for large codebases
+
+### 📊 **Multiple Output Formats**
+
+- **Pretty console output** with Rich formatting
+- **JSON reports** for CI/CD integration
+- **SARIF format** for GitHub Code Scanning
+- **Configurable exit codes** based on severity levels
+
+### 🤖 **LLM-Powered Remediation**
+
+- **Automatic docstring generation** for missing documentation
+- **Smart fixing** of non-compliant docstrings
+- **Enhancement** of existing docstrings with missing elements
+- **DSPy integration** for reliable, structured LLM interactions
+- **Interactive review mode** with diff preview and approval workflow
+- **Multiple LLM providers** (OpenAI, Anthropic, Ollama)
+
+### ⚙️ **Flexible Configuration**
+
+- **pyproject.toml integration** with rule enable/disable switches
+- **Per-path overrides** for different project sections
+- **Gitignore-style exclusions** with pathspec support
+- **Rule severity customization** (error, warning, info, off)
+
+## Installation
+
+### Basic Installation
+
+```bash
+pip install dococtopy
+```
+
+### With LLM Support
+
+```bash
+pip install dococtopy[llm]
+```
+
+### Development Installation
+
+```bash
+git clone https://github.com/CrazyBonze/DocOctopy.git
+cd DocOctopy
+uv sync --group dev
+```
+
+### Development Scripts
+
+The `scripts/` directory contains utility scripts for development and testing:
+
+- **`comprehensive_compare_models.py`** - Compare LLM models for docstring generation quality and cost
+- **`pre-commit.sh`** - Pre-commit hook for formatting and linting
+- **`publish.sh`** - Publishing script for PyPI releases
+- See `scripts/README.md` for detailed usage instructions
+
+## Quick Start
+
+### 1. Scan Your Code
+
+```bash
+# Scan current directory
+dococtopy scan .
+
+# Scan specific paths
+dococtopy scan src/ tests/
+
+# Get JSON output
+dococtopy scan . --format json --output-file report.json
+
+# Use SARIF for GitHub Code Scanning
+dococtopy scan . --format sarif --output-file report.sarif
+```
+
+### 2. Fix Issues with LLM Assistance
+
+```bash
+# Dry-run mode (safe, shows what would be fixed)
+dococtopy fix . --dry-run
+
+# Interactive mode (review each change)
+dococtopy fix . --interactive
+
+# Fix specific rules only
+dococtopy fix . --rule DG101,DG202 --dry-run
+
+# Use different LLM provider
+dococtopy fix . --llm-provider anthropic --llm-model claude-haiku-3.5
+
+# Use local Ollama server
+dococtopy fix . --llm-provider ollama --llm-model codeqwen:latest --llm-base-url http://localhost:11434
+```
+
+### 3. Configure Your Project
+
+Create a `pyproject.toml` file:
+
+```toml
+[tool.docguard]
+exclude = ["**/.venv/**", "**/build/**", "**/node_modules/**"]
+
+[tool.docguard.rules]
+DG101 = "error"    # Missing docstrings
+DG201 = "error"    # Google style parse errors
+DG202 = "error"    # Missing parameters
+DG203 = "error"    # Extra parameters
+DG204 = "warning"  # Returns section issues
+DG205 = "info"     # Raises validation
+DG301 = "warning"  # Summary style
+DG302 = "warning"  # Blank line after summary
+DG211 = "info"     # Yields section validation
+DG212 = "info"     # Attributes section validation
+DG213 = "info"     # Examples section validation
+DG214 = "info"     # Note section validation
+DG401 = "warning"  # Test function docstring style
+DG402 = "warning"  # Public API function documentation
+DG403 = "warning"  # Exception documentation completeness
+
+# Per-path overrides
+[[tool.docguard.overrides]]
+patterns = ["tests/**"]
+rules.DG101 = "off"  # Disable missing docstrings in tests
+```
+
+## LLM Setup
+
+### Option A: Local Ollama (Recommended for Development)
+
+1. **Install Ollama**: [Download from ollama.ai](https://ollama.ai)
+2. **Pull a model**:
+
+   ```bash
+   ollama pull codeqwen:latest
+   # or
+   ollama pull llama3.1:8b
+   ```
+
+3. **Test DocOctopy**:
+
+   ```bash
+   dococtopy fix . --llm-provider ollama --llm-model codeqwen:latest --llm-base-url http://localhost:11434 --dry-run
+   ```
+
+### Option B: OpenAI
+
+1. **Get API key**: [OpenAI API Keys](https://platform.openai.com/api-keys)
+2. **Set environment variable**:
+
+   ```bash
+   export OPENAI_API_KEY="your-api-key"
+   ```
+
+3. **Test DocOctopy**:
+
+   ```bash
+   dococtopy fix . --llm-provider openai --llm-model gpt-5-nano --dry-run
+   ```
+
+### Option C: Anthropic
+
+1. **Get API key**: [Anthropic Console](https://console.anthropic.com/)
+2. **Set environment variable**:
+
+   ```bash
+   export ANTHROPIC_API_KEY="your-api-key"
+   ```
+
+3. **Test DocOctopy**:
+
+   ```bash
+   # Use best Anthropic model (claude-haiku-3.5) - Highest quality score
+   dococtopy fix . --llm-provider anthropic --llm-model claude-haiku-3.5 --dry-run
+   
+   # Or use budget Anthropic option (claude-haiku-3) - Best value
+   dococtopy fix . --llm-provider anthropic --llm-model claude-haiku-3 --dry-run
+   ```
+
+## Rules Reference
+
+### Basic Compliance Rules
+
+- **DG101**: Missing docstring (functions and classes)
+- **DG301**: Summary first line should end with period
+- **DG302**: Blank line required after summary
+
+### Google Style Validation Rules
+
+- **DG201**: Google style docstring parse error
+- **DG202**: Parameter missing from docstring
+- **DG203**: Extra parameter in docstring
+- **DG204**: Returns section missing or mismatched
+- **DG205**: Raises section validation
+- **DG206**: Args section format validation
+- **DG207**: Returns section format validation
+- **DG208**: Raises section format validation
+- **DG209**: Summary length validation
+- **DG210**: Docstring indentation consistency
+
+### Advanced Google Style Rules
+
+- **DG211**: Generator functions should have Yields section
+- **DG212**: Classes with public attributes should have Attributes section
+- **DG213**: Complex functions should have Examples section
+- **DG214**: Functions with special behavior should have Note section
+
+### Context-Specific Rules
+
+- **DG401**: Test functions should have descriptive docstrings explaining what they test
+- **DG402**: Public API functions should have comprehensive documentation (Args, Returns, Raises sections)
+- **DG403**: Functions should document all exceptions they raise in the Raises section
+
+### Context-Specific Rules Details
+
+#### DG401: Test Function Docstring Style
+
+Ensures test functions have descriptive docstrings that explain what they're testing, improving test readability and debugging.
+
+**Examples:**
+
+```python
+# ✅ Good - Descriptive test docstring
+def test_user_authentication_works_correctly():
+    """Test that user authentication validates credentials properly."""
+    # Test implementation...
+
+# ❌ Bad - Generic or non-descriptive
+def test_user_login():
+    """Test."""  # Too short and generic
+    # Test implementation...
+
+def test_something():
+    """Test function."""  # Generic pattern
+    # Test implementation...
+```
+
+**What it checks:**
+
+- Functions starting with `test_` or containing "test" in the name
+- Docstrings must be descriptive (>20 characters)
+- Avoids generic patterns like "Test", "Test function", etc.
+
+#### DG402: Public API Function Documentation
+
+Requires public API functions to have comprehensive documentation with Args, Returns, and Raises sections.
+
+**Examples:**
+
+```python
+# ✅ Good - Complete public API documentation
+def process_data(data, options=None):
+    """Process the input data according to the given options.
+    
+    Args:
+        data: The input data to process
+        options: Optional configuration options
+        
+    Returns:
+        Processed data result
+        
+    Raises:
+        ValueError: If data format is invalid
+    """
+    # Implementation...
+
+# ❌ Bad - Missing required sections
+def process_data(data, options=None):
+    """Process the input data."""  # Missing Args, Returns, Raises
+    # Implementation...
+```
+
+**What it checks:**
+
+- Public functions (non-private, non-test, non-dunder)
+- Requires Args, Returns, and Raises sections
+- Skips internal/helper functions automatically
+
+#### DG403: Exception Documentation Completeness
+
+Ensures functions document all exceptions they raise in the Raises section.
+
+**Examples:**
+
+```python
+# ✅ Good - All exceptions documented
+def risky_function():
+    """Do something risky.
+    
+    Raises:
+        ValueError: If input is invalid
+        RuntimeError: If operation fails
+    """
+    raise ValueError("test")
+    raise RuntimeError("test")
+
+# ❌ Bad - Undocumented exceptions
+def risky_function():
+    """Do something risky."""
+    raise ValueError("test")  # Not documented
+    raise RuntimeError("test")  # Not documented
+```
+
+**What it checks:**
+
+- Uses AST analysis to detect `raise` statements
+- Parses docstring Raises sections
+- Flags undocumented exceptions with specific names
+
+## Interactive Fix Mode
+
+DocOctopy includes an interactive mode that lets you review and approve each proposed change:
+
+```bash
+dococtopy fix . --interactive
+```
+
+### Interactive Features
+
+- **Diff preview**: See exactly what will be changed
+- **Change-by-change review**: Accept or reject each fix individually
+- **Rich formatting**: Beautiful console output with colors
+- **Summary statistics**: Track approved vs rejected changes
+
+### Example Interactive Session
+
+```
+Found 3 changes for src/main.py
+
+Change: process_data (function)
+Issues: DG101
+Proposed docstring:
+    """Process the input data and return results.
+
+    Args:
+        data: The input data to process.
+        options: Processing options.
+
+    Returns:
+        Processed data results.
+    """
+Show diff? [Y/n]: y
+--- Original
++++ Proposed
+@@ -15,6 +15,15 @@
+ def process_data(data, options):
++    """Process the input data and return results.
++
++    Args:
++        data: The input data to process.
++        options: Processing options.
++
++    Returns:
++        Processed data results.
++    """
+     result = []
+     for item in data:
+         result.append(transform(item, options))
+Apply this change? [Y/n]: y
+✓ Applied change for process_data
+
+Summary:
+- Total changes: 3
+- Applied: 1
+- Rejected: 1
+- Skipped: 1
+```
+
+## Recommended Models
+
+DocOctopy supports multiple LLM providers with different models optimized for docstring generation. Based on comprehensive testing with real-world code:
+
+#### 🏆 **OpenAI Models (Recommended)**
+
+| Model | Cost (per 1M tokens) | Quality Score | Quality per Dollar | Best For |
+|-------|---------------------|---------------|-------------------|----------|
+| **gpt-5-nano** | $0.45 | 39/50 | **39,796** | **✅ Default choice** - Best value |
+| **gpt-5-mini** | $2.25 | 41/50 | 8,367 | **✅ Premium choice** - Enterprise quality |
+| gpt-4.1-mini | $2.00 | 41/50 | 9,491 | Alternative option |
+| gpt-4.1-nano | $0.50 | 46/50 | 42,593 | Budget option |
+
+**Key Findings:**
+
+- **gpt-5-nano**: **5x cheaper** than GPT-5-mini with **95% of the quality** - exceptional value
+- **gpt-5-mini**: Comprehensive documentation with detailed business logic and examples
+- **gpt-4.1-mini**: Solid alternative with good quality but higher cost than GPT-5-nano
+- **gpt-4.1-nano**: Budget option with good quality-per-dollar ratio
+
+#### 🤖 **Anthropic Models**
+
+| Model | Cost (per 1M tokens) | Quality Score | Quality per Dollar | Best For |
+|-------|---------------------|---------------|-------------------|----------|
+| **claude-haiku-3.5** | $0.25 | **67/50** | 6,442 | **✅ Best Anthropic** - Highest quality |
+| claude-sonnet-4 | $3.00 | 41/50 | 1,051 | High performance option |
+| claude-haiku-3 | $0.25 | 41/50 | 12,615 | Budget Anthropic option |
+| claude-opus-4.1 | $15.00 | 41/50 | 210 | Premium option (expensive) |
+
+**Anthropic Highlights:**
+
+- **claude-haiku-3.5**: **Highest quality score** (67/50) with excellent cost efficiency
+- **claude-haiku-3**: Best quality-per-dollar ratio among Anthropic models
+- All Anthropic models provide reliable, consistent docstring generation
+
+#### 💡 **Model Selection Guide**
+
+| Use Case | Recommended Model | Reason |
+|----------|-------------------|---------|
+| **Development** | gpt-5-nano | Best value, reliable quality |
+| **Testing/CI** | gpt-5-nano | Cost-effective for automated runs |
+| **Production** | gpt-5-mini | Maximum quality for end users |
+| **Enterprise** | gpt-5-mini | Comprehensive documentation |
+| **Budget-Conscious** | gpt-5-nano | Excellent quality at low cost |
+| **Privacy-First** | Ollama codeqwen | Local processing |
+| **Anthropic Preference** | claude-haiku-3.5 | Highest quality score |
+| **Free Tier** | claude-haiku-3 | Good quality-per-dollar ratio |
+
+#### 🚀 **Quick Start Commands**
+
+```bash
+# Use default (gpt-5-nano) - Best value
+dococtopy fix . --rule DG101
+
+# Use premium (gpt-5-mini) - Maximum quality
+dococtopy fix . --rule DG101 --llm-model gpt-5-mini
+
+# Use best Anthropic (claude-haiku-3.5) - Highest quality score
+dococtopy fix . --rule DG101 --llm-provider anthropic --llm-model claude-haiku-3.5
+
+# Use local (Ollama) - Privacy-first
+dococtopy fix . --rule DG101 --llm-provider ollama --llm-model codeqwen:latest
+```
+
+> 📊 **See detailed comparison results**: [docs/model-comparison/](docs/model-comparison/) - Compare actual generated docstrings side-by-side  
+> 📋 **Quick summary**: [docs/model-comparison/SUMMARY.md](docs/model-comparison/SUMMARY.md) - Decision matrix and recommendations
+
+## CLI Reference
+
+### `dococtopy scan`
+
+Scan paths for documentation compliance issues.
+
+```bash
+dococtopy scan [PATHS...] [OPTIONS]
+
+Options:
+  --format {pretty,json,sarif,both}  Output format [default: pretty]
+  --config PATH                      Config file path [default: pyproject.toml]
+  --fail-level {error,warning,info}  Exit code threshold [default: error]
+  --no-cache                        Disable caching
+  --changed-only                    Only scan changed files
+  --stats                           Show cache statistics
+  --output-file PATH                Write output to file
+```
+
+### `dococtopy fix`
+
+Fix documentation issues using LLM assistance.
+
+```bash
+dococtopy fix [PATHS...] [OPTIONS]
+
+Options:
+  --dry-run                         Show changes without applying [default: False]
+  --interactive                     Accept/reject each fix interactively
+  --rule TEXT                       Comma-separated rule IDs to fix
+  --max-changes INTEGER             Maximum number of changes
+  --llm-provider {openai,anthropic,ollama}  LLM provider [default: openai]
+  --llm-model TEXT                  LLM model to use [default: gpt-5-nano]
+  --llm-base-url TEXT               Base URL for LLM provider (for Ollama, etc.)
+  --config PATH                     Config file path
+```
+
+## CI/CD Integration
+
+Create `.github/workflows/docstring-check.yml`:
+
+```yaml
+name: Docstring Compliance
+on: [push, pull_request]
+
+jobs:
+  docstring-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install dococtopy
+      - run: dococtopy scan . --format json --output-file report.json --fail-level error
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: docstring-report
+          path: report.json
+```
+
+## Architecture
+
+DocOctopy is built with a modular, extensible architecture:
+
+```bash
+dococtopy/
+├── cli/           # Command-line interface
+├── core/          # Core engine, discovery, caching
+├── adapters/      # Language-specific adapters
+├── rules/         # Compliance rules and registry
+├── remediation/   # LLM-powered fixing
+└── reporters/     # Output formatters
+```
+
+### Key Components
+
+- **Discovery Engine**: Finds files using gitignore-style patterns
+- **Language Adapters**: Parse code and extract symbols/docstrings
+- **Rule Engine**: Applies compliance rules with configurable severity
+- **Remediation Engine**: Uses DSPy for structured LLM interactions
+- **Caching System**: Incremental scanning with fingerprint-based invalidation
+- **Interactive Reviewer**: Handles interactive fix workflows with diff preview
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+
+```bash
+git clone https://github.com/CrazyBonze/DocOctopy.git
+cd DocOctopy
+uv sync --group dev
+uv run pytest
+```
+
+### Development Workflow
+
+We use pre-commit hooks to ensure code quality and prevent CI failures:
+
+```bash
+# Install pre-commit hooks (one-time setup)
+uv run task pre-commit:install
+
+# Run pre-commit checks manually
+uv run task pre-commit:run
+
+# Or use the convenience script
+./scripts/pre-commit.sh
+```
+
+**Pre-commit checks include:**
+
+- **Black**: Code formatting
+- **isort**: Import sorting
+- **MyPy**: Type checking
+- **Pytest**: Fast test suite
+
+**Available tasks:**
+
+```bash
+uv run task format          # Format code
+uv run task lint            # Run linting
+uv run task test:fast       # Run fast tests
+uv run task test:cov        # Run tests with coverage
+uv run task ci              # Run full CI pipeline
+```
+
+### Adding New Rules
+
+1. Create rule class in `src/dococtopy/rules/`
+2. Implement `check()` method
+3. Register with `register()` function
+4. Add tests in `tests/unit/`
+
+### Adding New Languages
+
+1. Implement `LanguageAdapter` interface
+2. Create symbol extraction logic
+3. Add language-specific rules
+4. Update discovery patterns
+
+## Roadmap
+
+### MVP (Current)
+
+- ✅ Python docstring compliance checking
+- ✅ Google-style validation rules
+- ✅ LLM-powered remediation
+- ✅ Multiple output formats
+- ✅ Configuration system
+- ✅ Caching and incremental scanning
+- ✅ Interactive fix workflows
+- ✅ File writing capabilities
+- ✅ Advanced Google style rules (DG211-DG214)
+- ✅ Context-specific rules (DG401-DG403)
+- ✅ Canned integration tests
+
+### V1 (Next)
+
+- 🔄 GitHub Action and pre-commit hooks
+- 🔄 Playground UI for prompt experimentation
+- 🔄 Additional Python rules (coverage thresholds, etc.)
+- 🔄 Batch processing for large codebases
+
+### Future
+
+- 📋 JavaScript/TypeScript support
+- 📋 Go documentation checking
+- 📋 Rust documentation checking
+- 📋 Language server integration
+- 📋 Advanced prompt optimization
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with [DSPy](https://github.com/stanfordnlp/dspy) for reliable LLM interactions
+- Uses [docstring-parser](https://github.com/rr-/docstring_parser) for Google-style parsing
+- Powered by [Typer](https://github.com/tiangolo/typer) for CLI interface
+- Styled with [Rich](https://github.com/Textualize/rich) for beautiful output
