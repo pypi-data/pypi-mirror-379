@@ -1,0 +1,2 @@
+[console_scripts]
+persona-generator = persona_generator.cli:main
