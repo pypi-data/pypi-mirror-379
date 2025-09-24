@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: psr-lakehouse
+Version: 0.1.15
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: boto3>=1.39.3
+Requires-Dist: pandas>=2.3.0
+Requires-Dist: plotly>=5.17.0
+Requires-Dist: psycopg[binary]>=3.2.9
+Requires-Dist: sqlalchemy>=2.0.41
+Requires-Dist: streamlit>=1.48.1
+Description-Content-Type: text/markdown
+
+# PSR Lakehouse 🏞️🏡
+
+A Python client library for accessing PSR's data lakehouse, providing easy access to Brazilian energy market data including CCEE and ONS datasets.
+
+## Installation
+
+```bash
+pip install psr-lakehouse
+```
+
+## Examples
+
+### CCEE
+
+```python
+from psr.lakehouse import ccee
+
+df = ccee.spot_price()
+```
+
+### ONS
+
+```python
+from psr.lakehouse import ons
+
+df = ons.stored_energy(
+    start_reference_date="2023-05-01 03:00:00",
+    end_reference_date="2023-05-01 04:00:00",
+)
+```
+
+## Support
+
+For questions or issues, please open an issue on the project repository.
