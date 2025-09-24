@@ -1,0 +1,102 @@
+# Introduction 
+
+`touch_cache` is a smart memoization library that tracks the **files opened** during the process.
+The cache is **automatically invalidated** when one of the used file is modified (more recent) than the cache. 
+
+`touch_cache` also watch any change in the **code of the function itself**, or the values of the **global variables** used by them.
+
+It is particularly suitable for a dev environements in data science, for speeding dev iterations / debug 
+of a pipeline having some heavy steps, while making sure the output is always  **up to date** with input data and parameters.
+
+# Installation 
+
+> pip install touch_cache
+
+# Usage 
+
+## Basic function 
+
+This library provides a single decorator **touch_cache**. 
+The files used in the process are tracked via the usage of the standard function `open()`
+
+```python
+
+from touch_cache import touch_cache
+from pathlib import Path
+
+INPUT_FILE = "data/input.dat"
+
+@touch_cache
+def long_running_function(param1:int):
+    
+    print("Running ...")
+    
+    with open(INPUT_FILE) as f :
+        res = some_long_process(f)
+    
+    return res
+
+# First call 
+res = long_running_function(1)
+# will print "Running ..."
+
+# Second call 
+res = long_running_function(1)
+# will us the cached value and NOT print 'Running ...'
+
+# Touch INPUT file 
+# This may be any external update of it
+Path(INPUT_FILE).touch()
+
+# Thirds call 
+res = long_running_function(1)
+# Input file modified ==> will invalidate the cache and run again
+# "Running ..."
+```
+
+## Configure cache folder
+
+By default, cache data will be pickled on dick using [cloudpickle](https://pypi.org/project/cloudpickle/) in the folder `.cache`.
+You can choose another folder with **set_cache_dir()**.
+
+```python
+from touch_cache import set_cache_dir
+
+set_cache_dir("/some/folder")
+```
+
+## Clean cache
+
+
+
+## Manually track files
+
+`touch_cache` hooks to the standard function `open()` to track the files used. This works in most cases (including Pandas).
+some external libraries might use low level C code that doesn't directly calls `open()`. 
+In such case, you need to manually tell `touch_cache` that a file has been used, with the function **using_file()**.
+
+```python
+from touch_cache import using_file, touch_cache
+from third_parthy_library import load_some_file
+
+@touch_cache
+def long_running_function(param1:int):
+  
+    # Manually register this input file
+    using_file(INPUT_FILE)
+      
+    intermediate = load_some_file(INPUT_FILE)
+    res = some_long_process(intermediate)
+    
+    return res
+
+```
+
+# License 
+
+[MIT license](LICENSE)
+
+
+# Author 
+
+[Raphael Jolivet](https://rjo.name)

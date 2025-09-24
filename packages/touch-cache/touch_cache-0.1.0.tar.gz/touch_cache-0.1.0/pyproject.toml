@@ -1,0 +1,32 @@
+[project]
+name = "touch_cache"
+version = "0.1.0"
+description = "touch_cache is a smart memoization library that tracks the files opened during the process. The cache is automatically invalidated when one of the used file is modified (more recent) than the cache."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Raphaël Jolivet", email = "raph@rjo.name" }
+]
+
+
+dependencies = [
+    "cloudpickle"
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/raphael-jolivet/touch_cache"
+Repository = "https://codeberg.org/raphael-jolivet/touch_cache.git"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["touch_cache"]

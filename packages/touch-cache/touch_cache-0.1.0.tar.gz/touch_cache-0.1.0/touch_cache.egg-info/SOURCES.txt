@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_cache.py
+touch_cache/__init__.py
+touch_cache/memoize.py
+touch_cache/open_track.py
+touch_cache.egg-info/PKG-INFO
+touch_cache.egg-info/SOURCES.txt
+touch_cache.egg-info/dependency_links.txt
+touch_cache.egg-info/requires.txt
+touch_cache.egg-info/top_level.txt
