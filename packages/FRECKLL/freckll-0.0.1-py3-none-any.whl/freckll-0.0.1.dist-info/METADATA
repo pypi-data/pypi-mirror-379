@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: FRECKLL
+Version: 0.0.1
+Summary: Fast Disequilibrium chemistry
+Project-URL: Homepage, https://ahmed-f-alrefaie.github.io/FRECKLL/
+Project-URL: Repository, https://github.com/ahmed-f-alrefaie/FRECKLL
+Project-URL: Documentation, https://ahmed-f-alrefaie.github.io/FRECKLL/
+Author-email: "Ahmed F. Al-Refaie" <ahmed.al-refaie@ucl.ac.uk>
+License-File: LICENSE
+Keywords: python
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <4.0,>=3.10
+Requires-Dist: astropy>=5.3.2
+Requires-Dist: h5py>=3.13.0
+Requires-Dist: molmass>=2024.10.25
+Requires-Dist: numba>=0.60.0
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: scipy>=1.13.1
+Provides-Extra: ace
+Requires-Dist: acepython>=0.0.17; extra == 'ace'
+Provides-Extra: plot
+Requires-Dist: matplotlib>=3.9.4; extra == 'plot'
+Provides-Extra: recommended
+Requires-Dist: acepython>=0.0.17; extra == 'recommended'
+Requires-Dist: matplotlib>=3.9.4; extra == 'recommended'
+Description-Content-Type: text/markdown
+
+# FRECKLL
+
+[![Release](https://img.shields.io/github/v/release/ahmed-f-alrefaie/freckll)](https://img.shields.io/github/v/release/ahmed-f-alrefaie/freckll)
+[![Build status](https://img.shields.io/github/actions/workflow/status/ahmed-f-alrefaie/freckll/main.yml?branch=main)](https://github.com/ahmed-f-alrefaie/freckll/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/ahmed-f-alrefaie/freckll/branch/main/graph/badge.svg)](https://codecov.io/gh/ahmed-f-alrefaie/freckll)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/ahmed-f-alrefaie/freckll)](https://img.shields.io/github/commit-activity/m/ahmed-f-alrefaie/freckll)
+[![License](https://img.shields.io/github/license/ahmed-f-alrefaie/freckll)](https://img.shields.io/github/license/ahmed-f-alrefaie/freckll)
+
+Fast Disequilibrium chemistry
+
+- **Github repository**: <https://github.com/ahmed-f-alrefaie/freckll/>
+- **Documentation** <https://ahmed-f-alrefaie.github.io/freckll/>
+
+## Test case
+
+```bash
+cd freckll
+pip install .
+```
+
+```bash
+cd freckll/examples/inputs
+
+python -m freckll.main -i hd209458_full.yml -o result_full.h5 --overwrite --plot
+```

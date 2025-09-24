@@ -1,0 +1,5 @@
+[console_scripts]
+freckll = freckll.main:freckll_cli
+
+[taurex.plugins]
+freckll = freckll.taurex
