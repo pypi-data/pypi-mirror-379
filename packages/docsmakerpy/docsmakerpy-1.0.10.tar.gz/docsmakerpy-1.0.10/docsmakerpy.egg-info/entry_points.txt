@@ -1,0 +1,2 @@
+[console_scripts]
+docsmaker = docsmaker.cli:app

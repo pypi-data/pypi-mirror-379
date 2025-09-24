@@ -1,0 +1,9 @@
+dist
+docs
+docsforge
+docsmaker
+genedocs
+htmlcov
+site
+tests
+themes
