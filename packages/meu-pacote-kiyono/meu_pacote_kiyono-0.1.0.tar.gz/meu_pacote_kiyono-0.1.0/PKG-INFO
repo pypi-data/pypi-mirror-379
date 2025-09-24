@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: meu_pacote_kiyono
+Version: 0.1.0
+Summary: Meu pacote
+Home-page: UNKNOWN
+Author: Marcos Kiyono
+Author-email: kiyono.marcos@gmail.com
+License: UNKNOWN
+Description: Meu pacote
+Platform: UNKNOWN
+Requires-Python: >=3.8,<4.0
