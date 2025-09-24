@@ -1,0 +1,2 @@
+[console_scripts]
+modelscope-image-mcp = modelscope_image_mcp.server:cli_main
