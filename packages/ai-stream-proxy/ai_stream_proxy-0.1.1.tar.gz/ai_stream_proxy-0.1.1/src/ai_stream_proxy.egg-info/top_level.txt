@@ -1,0 +1,2 @@
+__main__
+ai_stream_proxy
