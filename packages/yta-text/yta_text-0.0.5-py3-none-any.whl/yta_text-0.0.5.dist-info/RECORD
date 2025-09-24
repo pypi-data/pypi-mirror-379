@@ -1,0 +1,11 @@
+yta_text/__init__.py,sha256=4xy2CanQbNcEDps-JQHUJv5b4T2DgdDSPy8rxpxS5LY,138
+yta_text/comparator.py,sha256=Ovcwd_gtOkVzVtn8iCkAXkn7vLJnWpO-rSLE_1T8mKQ,1306
+yta_text/dataclasses.py,sha256=EG-maUX7y0trO2VrtFGKy_AC08X48vHOItYkVsFfPQU,1111
+yta_text/finder.py,sha256=JN3tMiUt3F5GOYX4w5apy2exFVJNq-0XRcCfdLGo1qQ,2715
+yta_text/handler.py,sha256=PWMyRVcLbMjhj4dGMAJc1hwrwvf1UYo79ZCJgtpZr6Y,17285
+yta_text/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yta_text/utils/spanish_numbers.py,sha256=v0tAFCpNpXdEwbKj3AHazkMfTAZ0MWdSUFDATuOmHPA,2228
+yta_text-0.0.5.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+yta_text-0.0.5.dist-info/METADATA,sha256=qyzRcYjkUNVJkv5HtQUghizjUPu0wsdCWD8Psgevc7s,538
+yta_text-0.0.5.dist-info/WHEEL,sha256=M5asmiAlL6HEcOq52Yi5mmk9KmTVjY2RDPtO4p9DMrc,88
+yta_text-0.0.5.dist-info/RECORD,,
