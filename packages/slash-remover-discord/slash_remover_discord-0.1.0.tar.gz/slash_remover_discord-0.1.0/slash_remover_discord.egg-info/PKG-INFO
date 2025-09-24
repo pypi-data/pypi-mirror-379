@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: slash-remover-discord
+Version: 0.1.0
+Summary: Clear all slash commands (global & guild) from your Discord bot
+Author: Stark
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: discord.py
+
+# slash-remover-discord
+
+Clear all slash commands (global & guild) from your Discord bot By Syntax Development.
+
+## Usage
+
+# import the main function from the package
+from slash_remover_discord import main
+
+# run it
+main()

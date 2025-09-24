@@ -1,0 +1,2 @@
+[console_scripts]
+slash-remover-discord = slash_remover_discord.main:main
