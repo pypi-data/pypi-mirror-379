@@ -1,0 +1,4 @@
+[console_scripts]
+dev = smithery.cli.dev:main
+mcp-mysql-ops = mcp_mysql_ops.mcp_main:main
+playground = smithery.cli.playground:main
