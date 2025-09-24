@@ -1,0 +1,17 @@
+[project]
+name = "2to"
+version = "0.0.0"
+description = "Add your description here"
+readme = "README.md"
+dependencies = []
+
+[project.scripts]
+2to = "to2.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["to2*"]
