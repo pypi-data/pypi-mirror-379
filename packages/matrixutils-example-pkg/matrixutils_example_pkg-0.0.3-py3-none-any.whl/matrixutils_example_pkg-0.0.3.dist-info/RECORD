@@ -1,0 +1,9 @@
+matrixutils/__init__.py,sha256=qj7JF-dKexjapMXunlmlEtmnuqNj1G3G6lC2lMzilMo,190
+matrixutils/add.py,sha256=w2EldSeac0V8piaTvTa2Xp36L9L9LBq2IBnlkt4LjZI,1282
+matrixutils/matmul.py,sha256=LQ1ndcWrMVAUwd-e51XLfbIn1R6jEZZQ0y6G_CVLxaE,1481
+matrixutils/transpose.py,sha256=zE6g5pIC4NrdAS7-rBvSk2DLXebkiHuhHbGO8FdtZTA,594
+matrixutils_example_pkg-0.0.3.dist-info/licenses/LICENSE,sha256=3bnxT6FZvEg7djLBj3WFnxrzlpuG7-6j9xYMMx_O4BE,559
+matrixutils_example_pkg-0.0.3.dist-info/METADATA,sha256=EhYLAWNuISZXU7I3p1kKQIMkc3Trm-16Rd1NamCFhk0,1728
+matrixutils_example_pkg-0.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+matrixutils_example_pkg-0.0.3.dist-info/top_level.txt,sha256=neLQzyn_GuDClhfQeZVwCi60HdJ-E28C3BLel13qnjg,12
+matrixutils_example_pkg-0.0.3.dist-info/RECORD,,
