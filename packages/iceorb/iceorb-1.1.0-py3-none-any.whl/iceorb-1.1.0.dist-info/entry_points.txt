@@ -1,0 +1,4 @@
+[console_scripts]
+iceorb_config=iceorb.scripts:config
+iceorb_server=iceorb.scripts:server
+
