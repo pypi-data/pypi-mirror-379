@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/signia/__init__.py
+src/signia.egg-info/PKG-INFO
+src/signia.egg-info/SOURCES.txt
+src/signia.egg-info/dependency_links.txt
+src/signia.egg-info/top_level.txt
