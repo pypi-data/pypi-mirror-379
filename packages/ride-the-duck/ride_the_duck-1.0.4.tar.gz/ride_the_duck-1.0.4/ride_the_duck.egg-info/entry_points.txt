@@ -1,0 +1,2 @@
+[console_scripts]
+RTD = ride_the_duck:main
