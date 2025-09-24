@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physiqueUtils"
+version = "0.1.0"
+authors = [
+  { name="LE BIHAN Alwin", email="alwinlebihan@gmail.com" },
+]
+description = "Une librairie pour les TP de physique, gérant les unités, les incertitudes et les graphiques."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "uncertainties",
+    "scipy",
+    "pint",
+]
