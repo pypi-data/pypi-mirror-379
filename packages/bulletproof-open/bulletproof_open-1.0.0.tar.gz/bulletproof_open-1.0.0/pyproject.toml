@@ -1,0 +1,17 @@
+[project]
+name = "bulletproof-open"
+authors = [
+    {name = "Bryan Fichera", email="bfichera@anl.gov"},
+]
+dynamic = ["version"]
+license = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/bfichera/bulletproof-open"
+
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_file = "bulletproof_open/__version__.py"

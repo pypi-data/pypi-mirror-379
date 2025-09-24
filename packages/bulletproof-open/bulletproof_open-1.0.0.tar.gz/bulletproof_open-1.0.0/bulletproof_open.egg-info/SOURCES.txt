@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+bulletproof_open/__init__.py
+bulletproof_open/__version__.py
+bulletproof_open/open.py
+bulletproof_open.egg-info/PKG-INFO
+bulletproof_open.egg-info/SOURCES.txt
+bulletproof_open.egg-info/dependency_links.txt
+bulletproof_open.egg-info/top_level.txt
