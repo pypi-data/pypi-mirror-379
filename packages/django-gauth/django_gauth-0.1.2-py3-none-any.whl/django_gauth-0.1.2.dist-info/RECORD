@@ -1,0 +1,13 @@
+django_gauth/__init__.py,sha256=z5h4Ull68Xs1yqQkxQRx-pS8sg5zb_7p9bRjVNK40Xk,100
+django_gauth/admin.py,sha256=qnhUx9ZthrfOKgu520jQG_gIdL8Nmi0_y_GvubdXWQo,763
+django_gauth/apps.py,sha256=dobL1QlrIghxUqHF_E47mIFKbWWn2ioe9u1tKGjKGYc,256
+django_gauth/defaults.py,sha256=nBrPyJKggjs6drGTq1ehf-jeyqxXp6wFmsAZQ_SRrII,301
+django_gauth/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_gauth/urls.py,sha256=FhSppyz9bWWJp4eqYfI_DHFssJ6IIAGCmWe9TzrXFW4,534
+django_gauth/utilities.py,sha256=F2jmrpl_PBi3dglrPrI2wiuU7KbW-TzbNd5fNFSS_V0,2172
+django_gauth/views.py,sha256=OwATKSO1n472p1ywcpZpWLX0fEtmLZvgrQQkF1B7EUs,5228
+django_gauth-0.1.2.dist-info/licenses/LICENSE,sha256=sa9fkJoikefEiPkIVEtZ0noDhC1pantZxZ-vaMiphmU,1068
+django_gauth-0.1.2.dist-info/METADATA,sha256=0lvTACpcpIeHMk2EWJuo5XgYsUyl6XavGLug2Sp08LE,6739
+django_gauth-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+django_gauth-0.1.2.dist-info/top_level.txt,sha256=HluctPH9dJnIzt5oDEJoBSwGWFUx4qtiVsgIcqf4QzY,13
+django_gauth-0.1.2.dist-info/RECORD,,
