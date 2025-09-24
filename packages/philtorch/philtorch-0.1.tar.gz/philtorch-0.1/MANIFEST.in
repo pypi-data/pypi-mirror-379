@@ -1,0 +1,2 @@
+recursive-include philtorch *.txt
+recursive-include philtorch *.cuh
