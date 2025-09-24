@@ -1,0 +1,2 @@
+[console_scripts]
+git-gq = git_gq.git_gq:main

@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command line interface &mdash; git-gq 2.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c4a36953"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to install git-gq" href="install.html" />
+    <link rel="prev" title="Example Workflows" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            git-gq
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#patches-vs-commits">Patches vs. Commits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#the-patch-queue">The patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#advantages-of-the-patch-queue">Advantages of the patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#disadvantages-of-the-patch-queue">Disadvantages of the patch queue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#files-in-the-patch-queue-directory">Files in the patch queue directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#series">series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#parent">parent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#patch-files-patch">patch files ‘*.patch’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#applied">applied</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conflicts.html">Conflicts and conflict resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-create-a-backup">How to create  a backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-restore-a-backup">How to restore a backup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#local-development">Local development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#updates-from-a-remote-repository">Updates from a remote repository</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command line interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-conventions">Documentation conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help-and-documentation">Help and documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bash-completion-commands">Bash completion commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#queue-management-commands">Queue management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#patch-management-commands">Patch management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous-commands">Miscellaneous commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">OPTIONS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">How to install git-gq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-pypi-with-pip-recommended">Install from pypi with pip (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-distribution-tar-file">Install from distribution tar file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install.html#system-wide-installation">System wide installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#local-installation-in-directory">Local installation in DIRECTORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#how-to-uninstall">How to uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-source">Install from source</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">git-gq</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command line interface</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/commandline.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line-interface">
+<h1>Command line interface<a class="headerlink" href="#command-line-interface" title="Link to this heading"></a></h1>
+<p>usage: git_gq.py [OPTIONS] COMMAND</p>
+<section id="documentation-conventions">
+<h2>Documentation conventions<a class="headerlink" href="#documentation-conventions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Arguments for commands are in capital letters.</p></li>
+<li><p>Arguments in square brackets are optional.</p></li>
+<li><p>A ‘|’ means that one of the shown arguments must be used.</p></li>
+<li><p>‘REGEXP’ is a regular expression. For regular expression syntax see:
+<a class="reference external" href="https://docs.python.org/3/howto/regex.html#regex-howto">https://docs.python.org/3/howto/regex.html#regex-howto</a></p></li>
+</ul>
+</section>
+<section id="help-and-documentation">
+<h2>Help and documentation<a class="headerlink" href="#help-and-documentation" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>help</dt><dd><p>Show this help.</p>
+</dd>
+<dt>doc</dt><dd><p>Show reStructuredText source of man page.</p>
+</dd>
+<dt>man</dt><dd><p>Show man page.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="bash-completion-commands">
+<h2>Bash completion commands<a class="headerlink" href="#bash-completion-commands" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>commands</dt><dd><p>List all known commands on the console</p>
+</dd>
+</dl>
+<p>bashcompletion</p>
+<blockquote>
+<div><p>Prints a text that, if you add it to your bash configuration in
+$HOME/.bashrc, adds bash completion. This means that you get a list of
+possible commands when you type &lt;TAB&gt;, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>shows the possible completions <code class="docutils literal notranslate"><span class="pre">abort</span></code> and <code class="docutils literal notranslate"><span class="pre">applied</span></code>. If there is only one
+matching command, you command line is completed, e.g:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">ab</span><span class="o">&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">abort</span>
+</pre></div>
+</div>
+<p>This can save you many keystrokes and makes using this tool easier.</p>
+<p>Example how to install completion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git gq bashcompletion &gt;&gt; $HOME/.bashrc
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="queue-management-commands">
+<h2>Queue management commands<a class="headerlink" href="#queue-management-commands" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>init [QNAME [REV]]</dt><dd><p>Create/select a patch queue with name QNAME. QNAME is optional, the
+default patch queue name is ‘default’. If REV is given this is the parent
+revision, if it is not given, ‘HEAD’ is taken as the parent. You must run
+this command once to initialize the patch queue in your repository.</p>
+</dd>
+<dt>qname [QNAME]</dt><dd><p>If QNAME is not given, show current patch queue name. if QNAME is given,
+change to patch queue QNAME. If the patch queue QNAME is created for the
+first time, the parent revision is set to your ‘HEAD’ revision. If this is
+not intended, you may change this with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">parent</span> <span class="pre">REVISION</span></code> to
+another revision.</p>
+</dd>
+<dt>backup</dt><dd><p>Backup patch queue directory with a separate git repository. You may
+provide a short log message with option <code class="docutils literal notranslate"><span class="pre">-m</span></code>.</p>
+</dd>
+<dt>restore REVISION</dt><dd><p>Restore patch directory to a REVISION that was created with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span>
+<span class="pre">backup</span></code> before. This <em>does not</em> change your git repository. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span>
+<span class="pre">revert</span></code> to reset your repository to the last saved state.</p>
+</dd>
+<dt>revert</dt><dd><p>Revert git repository to the state from the last backup of the patch queue.
+All <em>applied</em> patches are restored to the state at the last <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span>
+<span class="pre">backup</span></code>. All <em>unapplied</em> patches remain in their present state. This will
+create a new branch in the repository at the PARENT revision. The new
+branch name will be the name of your current branch with a number appended
+like in ‘master-1’. If you want instead have the new branch given the name
+of the current branch and the old patches given a new branch name, use
+option ‘–move-branchname’.</p>
+</dd>
+<dt>qrepo COMMAND [– OPTIONS]</dt><dd><p>Run git command COMMAND with OPTIONS in patch-queue repository. Note that
+OPTIONS must be preceded by a <em>double</em> ‘-’ character.</p>
+</dd>
+<dt>change-order</dt><dd><p>Call an editor to edit the file ‘series’ that contains all currently
+unapplied patches. Note that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">push</span></code> always applies the patch from
+the <em>first</em> line in this file, so the top of the queue is the top of the
+file.</p>
+</dd>
+<dt>applied</dt><dd><p>Show all applied patches up to parent+1.</p>
+</dd>
+<dt>unapplied</dt><dd><p>Show all patches of the patch queue.</p>
+</dd>
+<dt>parent [REVISION]</dt><dd><p>Set REVISION as patch queue parent revision. Do never go beyond this
+revision with pop. Use ‘HEAD’ to set your repository HEAD as parent
+revision. If REVISION is <cite>NULL</cite>, it means that <em>all</em> revisions in the
+repository can be managed with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">pop</span></code>, you should only use this for
+unpublished repositories. If REVISION is not given, show the current parent
+revision.</p>
+</dd>
+<dt>export DIRECTORY</dt><dd><p>Create numbered patch files from all currently applied patches in
+DIRECTORY. The numbers are in the order of patches from bottom to top.
+DIRECTORY must exist.</p>
+</dd>
+<dt>import PATCHFILE [PATCHFILE…]</dt><dd><p>Import a number of patchfiles to the patch queue. The last patchfile in the
+list will be on the top of the queue. Note that the patch files must have
+been generated with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">format-patch</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">pop</span></code>. This
+cannot be used for patches generated with the <code class="docutils literal notranslate"><span class="pre">patch</span></code> program. These you
+have to apply with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">apply</span> <span class="pre">PATCHFILE</span></code>.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="patch-management-commands">
+<h2>Patch management commands<a class="headerlink" href="#patch-management-commands" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>new [NAME]</dt><dd><p>Create new patch (commit) with log-message NAME. NAME is meant as a
+preliminary commit message, it should be a single line without spaces. If
+NAME is omitted, you can enter a complete log message interactively.</p>
+</dd>
+<dt>record [NAME]</dt><dd><p>Interactively select changes for a new patch (commit with log-message
+NAME). This command runs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">--patch</span></code> to select the changes before
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p>
+</dd>
+<dt>refresh</dt><dd><p>Update the top patch, all changes in files known to git are added to the
+top patch. If you want to add new files, add them with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> first.
+If you want complete control over the changes added, run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>
+yourself and then run this command with option <code class="docutils literal notranslate"><span class="pre">--no-add</span></code>.</p>
+</dd>
+<dt>pop</dt><dd><p>Pop the top patch, the HEAD patch of your repository is moved to the patch
+queue.</p>
+</dd>
+<dt>push</dt><dd><p>Apply the top patch from the patch queue, the patch is moved to your
+repository as the new HEAD patch.</p>
+</dd>
+<dt>goto NAME|REGEXP</dt><dd><p>Do push or pop until the patch specified by name or regular expression is
+the latest applied patch.</p>
+</dd>
+<dt>fold NAME|REGEXP</dt><dd><p>Fold patch ‘NAME’ to the top patch. Patch ‘NAME’ must not have been applied
+already. Note that the log message of the fold-patch is appended to the
+existing log message. You can change the log message with
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">refresh</span> <span class="pre">-e</span></code>.</p>
+</dd>
+<dt>edit NAME|REGEXP</dt><dd><p>Call an editor to edit the patch file of an unapplied patch.</p>
+</dd>
+<dt>delete NAME|REGEXP</dt><dd><p>Delete unapplied patch with given by name or regular expression.</p>
+</dd>
+<dt>show NAME|REGEXP</dt><dd><p>Show changes of an applied or unapplied patch on the console.</p>
+</dd>
+<dt>continue</dt><dd><p>Continue ‘push’ after you had a conflict and had it fixed manually. This
+also removes all reject (*.rej) files that are not tracked by git.</p>
+</dd>
+<dt>abort</dt><dd><p>Abort (undo) ‘push’ after you had a conflict and could not fix it manually.
+This also removes all reject (*.rej) files that are not tracked by git.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="miscellaneous-commands">
+<h2>Miscellaneous commands<a class="headerlink" href="#miscellaneous-commands" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>conflict [CMD]</dt><dd><p>Show if the repository is in an unresolved conflict state.
+CMD is a sub-command, <code class="docutils literal notranslate"><span class="pre">files</span></code> shows files changed by the patch,
+<code class="docutils literal notranslate"><span class="pre">show</span></code> shows the patch.</p>
+</dd>
+<dt>glog</dt><dd><p>Graphical log, display all commits and branches as a tree on the console.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="options">
+<h2>OPTIONS<a class="headerlink" href="#options" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="option-list">
+<dt><kbd><span class="option">--version</span></kbd></dt>
+<dd><p>show program’s version number and exit</p>
+</dd>
+<dt><kbd><span class="option">--summary</span></kbd></dt>
+<dd><p>print a summary of the function of the program</p>
+</dd>
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>Show help.</p>
+</dd>
+<dt><kbd><span class="option">--verbose</span></kbd></dt>
+<dd><p>show what commands are called</p>
+</dd>
+<dt><kbd><span class="option">--dry-run</span></kbd></dt>
+<dd><p>show what commands would be called</p>
+</dd>
+<dt><kbd><span class="option">-D</span>, <span class="option">--debug</span></kbd></dt>
+<dd><p>Show debug information.</p>
+</dd>
+<dt><kbd><span class="option">-a</span>, <span class="option">--all</span></kbd></dt>
+<dd><p>push/pop: apply on ALL patches.</p>
+</dd>
+<dt><kbd><span class="option">-N</span>, <span class="option">--no-add</span></kbd></dt>
+<dd><p>new/refresh/fold: DO NOT add all modified changes to
+patch, continue: DO NOT add all modified and unknown
+changes to patch.</p>
+</dd>
+<dt><kbd><span class="option">-e</span>, <span class="option">--edit</span></kbd></dt>
+<dd><p>refresh/fold: start editor to edit log message</p>
+</dd>
+<dt><kbd><span class="option">-m</span>, <span class="option">--message <var>MESSAGE</var></span></kbd></dt>
+<dd><p>backup/refresh: use MESSAGE as log message.</p>
+</dd>
+<dt><kbd><span class="option">-F</span>, <span class="option">--file <var>FILE</var></span></kbd></dt>
+<dd><p>refresh: take log message from FILE.</p>
+</dd>
+<dt><kbd><span class="option">-l</span>, <span class="option">--lines <var>LINECOUNT</var></span></kbd></dt>
+<dd><p>applied, unapplied: Limit the number of lines printed
+by the command. Print only the first LINECOUNT lines.</p>
+</dd>
+<dt><kbd><span class="option">-R</span>, <span class="option">--force</span></kbd></dt>
+<dd><p><cite>git gq pop</cite>, <cite>git gq push</cite>: Execute command even if
+there are uncommited changes. Note that <cite>git gq pop</cite>
+will discard uncommited changes. <cite>git gq restore</cite>:
+discard uncommitted changes and unknown files in patch
+queue.</p>
+</dd>
+<dt><kbd><span class="option">--move-branchname</span></kbd></dt>
+<dd><p>For <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">revert</span></code>, move the current branch name to
+the new created branch.</p>
+</dd>
+<dt><kbd><span class="option">--exception</span></kbd></dt>
+<dd><p>do not catch exceptions (for debugging).</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples.html" class="btn btn-neutral float-left" title="Example Workflows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-right" title="How to install git-gq" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Goetz Pfeiffer &lt;goetzpf@googlemail.com&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conflicts and conflict resolution &mdash; git-gq 2.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c4a36953"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Backups" href="backups.html" />
+    <link rel="prev" title="Implementation" href="implementation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            git-gq
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#patches-vs-commits">Patches vs. Commits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#the-patch-queue">The patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#advantages-of-the-patch-queue">Advantages of the patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#disadvantages-of-the-patch-queue">Disadvantages of the patch queue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#files-in-the-patch-queue-directory">Files in the patch queue directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#series">series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#parent">parent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#patch-files-patch">patch files ‘*.patch’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#applied">applied</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conflicts and conflict resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-create-a-backup">How to create  a backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-restore-a-backup">How to restore a backup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#local-development">Local development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#updates-from-a-remote-repository">Updates from a remote repository</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commandline.html">Command line interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#documentation-conventions">Documentation conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#help-and-documentation">Help and documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#bash-completion-commands">Bash completion commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#queue-management-commands">Queue management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#patch-management-commands">Patch management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#miscellaneous-commands">Miscellaneous commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#options">OPTIONS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">How to install git-gq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-pypi-with-pip-recommended">Install from pypi with pip (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-distribution-tar-file">Install from distribution tar file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install.html#system-wide-installation">System wide installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#local-installation-in-directory">Local installation in DIRECTORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#how-to-uninstall">How to uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-source">Install from source</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">git-gq</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Conflicts and conflict resolution</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/conflicts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conflicts-and-conflict-resolution">
+<h1>Conflicts and conflict resolution<a class="headerlink" href="#conflicts-and-conflict-resolution" title="Link to this heading"></a></h1>
+<p>Conflicts may happen when:</p>
+<ul class="simple">
+<li><p>you change the order of unapplied patches with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">change-order</span></code>
+and then run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">push</span></code></p></li>
+<li><p>you unapply patches, make changes in the repository, e.g. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> and
+then apply the patches again</p></li>
+<li><p>you combine unapplied patches with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">fold</span></code> that are not in
+consecutive order</p></li>
+</ul>
+<p>In the patch file example above, you see after <code class="docutils literal notranslate"><span class="pre">&#64;&#64;</span> <span class="pre">-4,8</span> <span class="pre">+4,8</span> <span class="pre">&#64;&#64;</span></code> a single
+<em>hunk</em>. The numbers are line numbers in the source file, here ‘sample.c’.</p>
+<p>All following lines that are indented with a single space are <em>context</em> lines.
+Lines that start with a ‘-’ character are to be removed, lines that start with
+a ‘+’ character are to be added.</p>
+<p>A conflict occurs when the context lines or the lines to be removed couldn’t be
+found. In this case, a reject file is created.</p>
+<p>Here are the messages you see in case of a conflict after you ran
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">push</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Applying</span><span class="p">:</span> <span class="n">sample</span><span class="o">-</span><span class="n">comment</span>
+<span class="n">Checking</span> <span class="n">patch</span> <span class="n">sample</span><span class="o">.</span><span class="n">c</span><span class="o">...</span>
+<span class="n">error</span><span class="p">:</span> <span class="k">while</span> <span class="n">searching</span> <span class="k">for</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="nb">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;number of arguments: </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">argc</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;program name: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;arg no </span><span class="si">%2d</span><span class="s2">: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="n">error</span><span class="p">:</span> <span class="n">patch</span> <span class="n">failed</span><span class="p">:</span> <span class="n">sample</span><span class="o">.</span><span class="n">c</span><span class="p">:</span><span class="mi">4</span>
+<span class="n">Applying</span> <span class="n">patch</span> <span class="n">sample</span><span class="o">.</span><span class="n">c</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">reject</span><span class="o">...</span>
+<span class="n">Rejected</span> <span class="n">hunk</span> <span class="c1">#1.</span>
+<span class="n">Patch</span> <span class="n">failed</span> <span class="n">at</span> <span class="mi">0001</span> <span class="n">sample</span><span class="o">-</span><span class="n">comment</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">Use</span> <span class="s1">&#39;git am --show-current-patch=diff&#39;</span> <span class="n">to</span> <span class="n">see</span> <span class="n">the</span> <span class="n">failed</span> <span class="n">patch</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">When</span> <span class="n">you</span> <span class="n">have</span> <span class="n">resolved</span> <span class="n">this</span> <span class="n">problem</span><span class="p">,</span> <span class="n">run</span> <span class="s2">&quot;git am --continue&quot;</span><span class="o">.</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">If</span> <span class="n">you</span> <span class="n">prefer</span> <span class="n">to</span> <span class="n">skip</span> <span class="n">this</span> <span class="n">patch</span><span class="p">,</span> <span class="n">run</span> <span class="s2">&quot;git am --skip&quot;</span> <span class="n">instead</span><span class="o">.</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">To</span> <span class="n">restore</span> <span class="n">the</span> <span class="n">original</span> <span class="n">branch</span> <span class="ow">and</span> <span class="n">stop</span> <span class="n">patching</span><span class="p">,</span> <span class="n">run</span> <span class="s2">&quot;git am --abort&quot;</span><span class="o">.</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">Disable</span> <span class="n">this</span> <span class="n">message</span> <span class="k">with</span> <span class="s2">&quot;git config set advice.mergeConflict false&quot;</span>
+
+<span class="n">git</span> <span class="n">gq</span> <span class="n">help</span> <span class="n">on</span> <span class="n">conflicts</span>
+<span class="o">------------------------</span>
+
+<span class="n">Resolve</span> <span class="n">this</span> <span class="n">conflict</span> <span class="n">by</span> <span class="n">looking</span> <span class="n">at</span> <span class="n">the</span> <span class="o">*.</span><span class="n">rej</span> <span class="n">files</span><span class="o">.</span>
+<span class="n">For</span> <span class="n">files</span> <span class="n">that</span> <span class="n">were</span> <span class="ow">not</span> <span class="n">found</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">reject</span> <span class="n">file</span><span class="p">,</span> <span class="n">look</span> <span class="n">at</span> <span class="n">the</span> <span class="n">original</span>
+<span class="n">patch</span> <span class="k">with</span><span class="p">:</span>
+  <span class="n">less</span> <span class="o">.</span><span class="n">gqpatches</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">DIFF</span><span class="o">.</span><span class="n">patch</span>
+
+<span class="n">To</span> <span class="n">see</span> <span class="n">the</span> <span class="n">state</span> <span class="n">of</span> <span class="n">your</span> <span class="n">repository</span> <span class="n">enter</span><span class="p">:</span>
+  <span class="n">git</span> <span class="n">status</span>
+
+<span class="n">Unknown</span> <span class="n">files</span> <span class="k">for</span> <span class="n">git</span> <span class="n">that</span> <span class="n">should</span> <span class="n">be</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span> <span class="n">patch</span> <span class="n">must</span> <span class="n">be</span> <span class="n">added</span> <span class="k">with</span><span class="p">:</span>
+  <span class="n">git</span> <span class="n">add</span> <span class="n">FILE</span>
+
+<span class="n">If</span> <span class="n">you</span> <span class="n">managed</span> <span class="n">to</span> <span class="n">resolve</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">conflicts</span> <span class="n">run</span><span class="p">:</span>
+  <span class="n">git</span> <span class="n">gq</span> <span class="k">continue</span>
+
+<span class="n">To</span> <span class="n">abort</span> <span class="n">the</span> <span class="n">whole</span> <span class="n">operation</span> <span class="n">without</span> <span class="n">resolving</span> <span class="n">conflicts</span> <span class="n">run</span><span class="p">:</span>
+  <span class="n">git</span> <span class="n">gq</span> <span class="n">abort</span>
+</pre></div>
+</div>
+<p>And here is the content of the reject file, ‘sample.c.rej’ in this case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="n">a</span><span class="o">/</span><span class="n">sample</span><span class="o">.</span><span class="n">c</span> <span class="n">b</span><span class="o">/</span><span class="n">sample</span><span class="o">.</span><span class="n">c</span>    <span class="p">(</span><span class="n">rejected</span> <span class="n">hunks</span><span class="p">)</span>
+<span class="o">@@</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span> <span class="o">+</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span> <span class="o">@@</span> <span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="nb">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+   <span class="p">{</span>
+     <span class="nb">int</span> <span class="n">i</span><span class="p">;</span>
+
+<span class="o">-</span>    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;number of arguments: </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">argc</span><span class="p">);</span>
+     <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;program name: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="o">+</span>    <span class="o">/*</span> <span class="n">iterate</span> <span class="n">over</span> <span class="nb">all</span> <span class="n">command</span> <span class="n">line</span> <span class="n">arguments</span><span class="p">:</span> <span class="o">*/</span>
+     <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;arg no </span><span class="si">%2d</span><span class="s2">: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In our example here, while the patch was moved to the patch queue, this line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s2">&quot;number of arguments: </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">argc</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>had been changed to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s2">&quot;My number of arguments: </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">argc</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>So the line to remove by the patch wasn’t found and we had a conflict. If we
+open both, the original file ‘sample.c’ and the reject file ‘sample.c.rej’ in
+any text editor, we can easily see what the patch intended to do and apply the
+changes manually.</p>
+<p>This is called <em>resolving a conflict</em>. You have to go through all reject files,
+there may be more than one, and resolve all conflicts.</p>
+<blockquote>
+<div><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If a file that the patch modifies couldn’t be found, <strong>there is no reject
+file</strong>. Look carefully at the git message and look at the original patch as
+described in the git-gq help message that is printed when the conflict is
+detected.</p>
+</div>
+</div></blockquote>
+<p>After you are finished, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="k">continue</span>
+</pre></div>
+</div>
+<p>This finishes the operation and tells git that the conflict was resolved. You
+<em>must not</em> run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">am</span> <span class="pre">continue</span></code> yourself, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">continue</span></code> already
+does this for you.</p>
+<p>If you cannot resolve conflicts because the reject files are too long or
+complicated, you can abort the last command with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">abort</span>
+</pre></div>
+</div>
+<p>In this case you may have to compare two versions of files and apply changes
+directly.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="implementation.html" class="btn btn-neutral float-left" title="Implementation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="backups.html" class="btn btn-neutral float-right" title="Backups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Goetz Pfeiffer &lt;goetzpf@googlemail.com&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

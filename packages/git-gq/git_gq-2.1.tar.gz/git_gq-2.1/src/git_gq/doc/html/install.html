@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to install git-gq &mdash; git-gq 2.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c4a36953"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Command line interface" href="commandline.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            git-gq
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#patches-vs-commits">Patches vs. Commits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#the-patch-queue">The patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#advantages-of-the-patch-queue">Advantages of the patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#disadvantages-of-the-patch-queue">Disadvantages of the patch queue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#files-in-the-patch-queue-directory">Files in the patch queue directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#series">series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#parent">parent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#patch-files-patch">patch files ‘*.patch’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#applied">applied</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conflicts.html">Conflicts and conflict resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-create-a-backup">How to create  a backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-restore-a-backup">How to restore a backup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#local-development">Local development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#updates-from-a-remote-repository">Updates from a remote repository</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commandline.html">Command line interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#documentation-conventions">Documentation conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#help-and-documentation">Help and documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#bash-completion-commands">Bash completion commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#queue-management-commands">Queue management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#patch-management-commands">Patch management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#miscellaneous-commands">Miscellaneous commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#options">OPTIONS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to install git-gq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-from-pypi-with-pip-recommended">Install from pypi with pip (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-from-distribution-tar-file">Install from distribution tar file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-wide-installation">System wide installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-installation-in-directory">Local installation in DIRECTORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-uninstall">How to uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#install-from-source">Install from source</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">git-gq</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to install git-gq</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-install-git-gq">
+<h1>How to install git-gq<a class="headerlink" href="#how-to-install-git-gq" title="Link to this heading"></a></h1>
+<section id="install-from-pypi-with-pip-recommended">
+<h2>Install from pypi with pip (recommended)<a class="headerlink" href="#install-from-pypi-with-pip-recommended" title="Link to this heading"></a></h2>
+<p>In order to install git-gq with <a class="reference external" href="https://en.wikipedia.org/wiki/Pip_(package_manager)">pip</a>,
+you use the command <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">gq</span>
+</pre></div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Your version of pip may have a different name, e.g. “pip-3” or “pip-3.2”</p>
+</aside>
+</aside>
+<p>You find documentation for the usage of pip at <a class="reference external" href="https://docs.python.org/3/installing/index.html#installing-index">Installing Python Modules</a>.</p>
+</section>
+<section id="install-from-distribution-tar-file">
+<h2>Install from distribution tar file<a class="headerlink" href="#install-from-distribution-tar-file" title="Link to this heading"></a></h2>
+<p>This file can be downloaded at
+<a class="reference external" href="https://github.com/goetzpf/git-gq/releases">github</a>.</p>
+<p>Unpack the file with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="n">git</span><span class="o">-</span><span class="n">gq</span><span class="o">-</span><span class="n">VERSION</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>Enter the created directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">git</span><span class="o">-</span><span class="n">gq</span><span class="o">-</span><span class="n">VERSION</span>
+</pre></div>
+</div>
+<p>You can install git-gq system-wide if you have “sudo” rights, or in a local
+directory.</p>
+<p>In both cases you do this with the script <cite>install.sh</cite>.</p>
+<section id="system-wide-installation">
+<h3>System wide installation<a class="headerlink" href="#system-wide-installation" title="Link to this heading"></a></h3>
+<p>Run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</section>
+<section id="local-installation-in-directory">
+<h3>Local installation in DIRECTORY<a class="headerlink" href="#local-installation-in-directory" title="Link to this heading"></a></h3>
+<p>Run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="n">DIRECTORY</span>
+</pre></div>
+</div>
+<p>You should set your PATH variable to the install location. Add this line to
+your <cite>$HOME/.bashrc</cite> file (replace ‘DIRECTORY’ with the actual directory
+name):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PATH=DIRECTORY/bin:$PATH
+</pre></div>
+</div>
+<p>To have bash completion, add this line to your <cite>$HOME/.bashrc</cite> file (replace
+‘DIRECTORY’ with the actual directory name):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">DIRECTORY</span><span class="o">/</span><span class="n">profile</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">gq</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-uninstall">
+<h3>How to uninstall<a class="headerlink" href="#how-to-uninstall" title="Link to this heading"></a></h3>
+<p>In any case, git-gq can be uninstalled with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="o">-</span><span class="n">gq</span><span class="o">-</span><span class="n">uninstall</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>The script is installed at the same location as the program <cite>git-gq</cite>.</p>
+</section>
+</section>
+<section id="install-from-source">
+<h2>Install from source<a class="headerlink" href="#install-from-source" title="Link to this heading"></a></h2>
+<p>Check out the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">goetzpf</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">gq</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Build distribution directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">administration_tools</span><span class="o">/</span><span class="n">doc</span><span class="o">-</span><span class="n">rebuild</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">administration_tools</span><span class="o">/</span><span class="n">mk</span><span class="o">-</span><span class="n">tar</span><span class="o">-</span><span class="n">dist</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">keep</span>
+</pre></div>
+</div>
+<p>Now go to directory “dist:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">dist</span>
+</pre></div>
+</div>
+<p>go to the distribution directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">git</span><span class="o">-</span><span class="n">gq</span><span class="o">-*</span><span class="p">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>And continue at <a class="reference internal" href="#install-from-distribution-tar-file">Install from distribution tar file</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="commandline.html" class="btn btn-neutral float-left" title="Command line interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Goetz Pfeiffer &lt;goetzpf@googlemail.com&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

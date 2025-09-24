@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: git-gq
+Version: 2.1
+Summary: A patch queue implementation for git.
+Author-email: Goetz Pfeiffer <goetzpf@googlemail.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://goetzpf.github.io/git-gq/
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Dynamic: license-file
+
+git-gq
+======
+
+About
+-----
+
+A patch queue implementation for git.
+
+Author
+------
+
+Goetz Pfeiffer <goetzpf@googlemail.com>
+
+Documentation
+-------------
+
+https://goetzpf.github.io/git-gq
+
+License
+-------
+
+git-gq is licensed under GNU GPL v.3.
+

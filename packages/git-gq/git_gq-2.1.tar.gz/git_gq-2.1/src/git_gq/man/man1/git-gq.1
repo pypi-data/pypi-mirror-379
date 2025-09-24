@@ -1,0 +1,977 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "GIT GQ - PATCH QUEUES FOR GIT"  "" ""
+.SH NAME
+git gq - patch queues for git \- 
+.SH OVERVIEW
+.SS Patches vs. Commits
+.sp
+git manages a repository with \fIcommits\fP\&. A commit has the following properties:
+.INDENT 0.0
+.IP \(bu 2
+A state, this is the directory structure and the files and their contents and
+permissions.
+.IP \(bu 2
+Metadata: log message, author and date
+.IP \(bu 2
+A hash key that git uses internally to identify commits. Git hashes are
+calculated based on the contents of the files in the commit, the metadata of
+the commit (like timestamp and author), and the parent commit\(aqs hash.
+.IP \(bu 2
+A predecessor commit unless it is the first commit in the repository
+.IP \(bu 2
+A successor commit unless it is the head commit of a branch
+.UNINDENT
+.sp
+For simplicity, we only consider a single branch for now. Then each commit has
+exactly one or no predecessor and one or no successor.
+.sp
+All commits then form an ordered sequence like here:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+A \-\-> B \-\-> C \-\-> D
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+A \fIpatch\fP is the difference between two commits combined with the metadata of
+the second patch.
+.sp
+So the commits A, B, C and D as shown above could also be represented as patches:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+(A\-0) \-\-> (B\-A) \-\-> (C\-B) \-\-> (D\-C)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Here \(aq(B\-A)\(aq means the difference of the files and directories of commits \(aqB\(aq
+and \(aqA\(aq. \(aq0\(aq is the empty state before the very first commit where no files and
+directories exist.
+.sp
+When you apply a patch to a commit you get the next commit:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+A + (B\-A) = B
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS The patch queue
+.sp
+The \fIpatch queue\fP is a structure that contains patches outside of git. Patches
+can be moved between the repository and the patch queue. Patches on the patch
+queue are called \fIunapplied\fP, patches that are in the repository are called
+\fIapplied\fP\&.
+.sp
+In the following examples, the top of the repository and the patch queue is
+always on the right side:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+Repository:  A \-\-> B \-\-> C \-\-> D      Patch\-Queue: <empty>
+applied: (A\-0), (B\-A), (C\-B), (D\-C)   unapplied: <none>
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Now operation \(aqpop\(aq moves a patch from the repository to the patch\-queue:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+Repository:  A \-\-> B \-\-> C            Patch\-Queue: (D\-C)
+applied: (A\-0), (B\-A), (C\-B)          unapplied: (D\-C)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Another \(aqpop\(aq moves the next patch from the repository to the patch\-queue:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+Repository:  A \-\-> B                  Patch\-Queue: (D\-C) \-\-> (C\-B)
+applied: (A\-0), (B\-A)                 unapplied: (D\-C), (C\-B)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Operation \(aqpush\(aq moves the top patch from the patch\-queue back to the
+repository:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+Repository:  A \-\-> B \-\-> C            Patch\-Queue: (D\-C)
+applied: (A\-0), (B\-A), (C\-B)          unapplied: (D\-C)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Advantages of the patch queue
+.sp
+The patch\-queue is much more flexible than traditional commits:
+.INDENT 0.0
+.IP \(bu 2
+Patches can be reordered easily.
+.IP \(bu 2
+Patches can be combined (\fBgit gq fold\fP).
+.IP \(bu 2
+Patches can be updated (\fBgit gq refresh\fP).
+.IP \(bu 2
+Patches can replace development branches. You can put your local changes on
+the patch queue, run \fBgit pull\fP and put your patches back on the
+repository.
+.IP \(bu 2
+Conflicts that may occur with \fBgit gq push\fP are usually easier to resolve
+than git merge conflicts.
+.UNINDENT
+.SS Disadvantages of the patch queue
+.INDENT 0.0
+.IP \(bu 2
+Moving a patch to the patch queue and back changes it\(aqs git hash key. This
+means you must not apply this operation on patches that exist in other
+repositories. The definition of the \fIparent revision\fP ensures that you cannot
+do this by accident.
+.IP \(bu 2
+Changing the order of patches may lead to \fIconflicts\fP\&.
+.IP \(bu 2
+Applying new commits in the repository while some patches are unapplied may
+lead to conflicts when the patches are applied later on.
+.UNINDENT
+.SH IMPLEMENTATION
+.SS Directory structure
+.sp
+All files git\-gq uses are in directory \(aq.gqpatches\(aq. You may want to add this
+to your .gitignore file.
+.sp
+\(aq.gqpatches/tmp\(aq is the directory for temporary files git\-gq creates.
+.sp
+The program can manage more than one patch queue. Each patch queue has a name
+and all files of the queue are in a directory with the same name, e.g.
+\(aq.gqpatches/MYQUEUE\(aq. The default name for the first patch queue is \(aqdefault\(aq.
+.sp
+The file \(aq.gqpatches/queue\(aq contains the name of the currently selected patch
+queue.
+.SS Files in the patch queue directory
+.sp
+In the patch queue directory, e.g. \(aq.gqpatches/default\(aq, you find the following
+files or directories:
+.SS series
+.sp
+The order of patches is kept in a file named \(aqseries\(aq that just contains all
+the filenames of all unapplied patches. \fBgit gq push\fP takes and applies the
+patch from the first line in this file.
+.SS parent
+.sp
+The parent revision is stored in a file \(aqparent\(aq. This is the most recent
+commit that is not allowed to be modified. This file is created when you start
+your work with \fBgit gq init\fP\&. It can be changed with \fBgit gq parent\fP\&.
+.sp
+A special revision is \fINULL\fP\&. This is the very first revision in the repository
+where no files are committed. git doesn\(aqt have a concept of a \fINULL\fP revision,
+this is emulated by git\-gq by creating a revision with no files in it. When the
+parent is set to \fINULL\fP this means that you can put the very first revision on
+the patch queue and by this have the ability to modify the very first revision.
+Of course, you should never do this with a published repository, since \fBgit gq
+pop\fP and \fBgit gq push\fP always modify revision hash keys.
+.SS patch files \(aq*.patch\(aq
+.sp
+A \fIpatch file\fP is basically a file with recipes for changes in files. Each
+recipe is called a \fIhunk\fP\&. A \fIhunk\fP contains line numbers, context lines, lines
+to remove and lines to add.
+.sp
+git\-gq uses standard git commands to move patches between the
+repository and the patch queue. In the patch queue, each patch is a file
+created from the difference of a commit and it\(aqs predecessor in the repository
+with \fBgit format\-patch\fP\&. Among the changes between two commits this file also
+contains all the metadata of the second commit. The name of the patch file is
+computed from the first line of the log message where spaces are replaced with
+dashes and end with the extension \(aq.patch\(aq.
+.sp
+A patch file is re\-applied to the repository with \fBgit am\fP\&.
+.sp
+Here is an example of a patch file:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+From 273c3709f7da0fe0e11369ea0d9a26053f78e3ee Mon Sep 17 00:00:00 2001
+From: Goetz Pfeiffer <goetzpf@googlemail.com>
+Date: Tue, 3 Jun 2025 18:45:57 +0200
+Subject: [PATCH] sample\-comment
+
+\-\-\-
+ sample.c | 2 +\-
+ 1 file changed, 1 insertion(+), 1 deletion(\-)
+
+diff \-\-git a/sample.c b/sample.c
+index e5cf2b0..350c29b 100644
+\-\-\- a/sample.c
++++ b/sample.c
+@@ \-4,8 +4,8 @@ int main(int argc, char *argv[])
+   {
+     int i;
+
+\-    printf(\(dqnumber of arguments: %d\en\(dq, argc);
+     printf(\(dqprogram name: %s\en\(dq, argv[0]);
++    /* iterate over all command line arguments: */
+     for(i=1; i<argc; i++)
+       printf(\(dqarg no %2d: %s\en\(dq, i, argv[i]);
+     return 0;
+\-\-
+2.49.0
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS applied
+.sp
+Directory \(aqapplied\(aq is created by \fBgit gq backup\fP\&. It contains the \fIapplied\fP
+patches from the time this command is issued. Note that files in this directory
+are not changed by \fBgit gq push\fP or \fBgit gq pop\fP, only by \fBgit gq backup\fP\&.
+.SH CONFLICTS AND CONFLICT RESOLUTION
+.sp
+Conflicts may happen when:
+.INDENT 0.0
+.IP \(bu 2
+you change the order of unapplied patches with \fBgit gq change\-order\fP
+and then run \fBgit gq push\fP
+.IP \(bu 2
+you unapply patches, make changes in the repository, e.g. \fBgit pull\fP and
+then apply the patches again
+.IP \(bu 2
+you combine unapplied patches with \fBgit gq fold\fP that are not in
+consecutive order
+.UNINDENT
+.sp
+In the patch file example above, you see after \fB@@ \-4,8 +4,8 @@\fP a single
+\fIhunk\fP\&. The numbers are line numbers in the source file, here \(aqsample.c\(aq.
+.sp
+All following lines that are indented with a single space are \fIcontext\fP lines.
+Lines that start with a \(aq\-\(aq character are to be removed, lines that start with
+a \(aq+\(aq character are to be added.
+.sp
+A conflict occurs when the context lines or the lines to be removed couldn\(aqt be
+found. In this case, a reject file is created.
+.sp
+Here are the messages you see in case of a conflict after you ran
+\fBgit gq push\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+Applying: sample\-comment
+Checking patch sample.c...
+error: while searching for:
+  {
+    int i;
+
+    printf(\(dqnumber of arguments: %d\en\(dq, argc);
+    printf(\(dqprogram name: %s\en\(dq, argv[0]);
+    for(i=1; i<argc; i++)
+      printf(\(dqarg no %2d: %s\en\(dq, i, argv[i]);
+    return 0;
+
+error: patch failed: sample.c:4
+Applying patch sample.c with 1 reject...
+Rejected hunk #1.
+Patch failed at 0001 sample\-comment
+hint: Use \(aqgit am \-\-show\-current\-patch=diff\(aq to see the failed patch
+hint: When you have resolved this problem, run \(dqgit am \-\-continue\(dq.
+hint: If you prefer to skip this patch, run \(dqgit am \-\-skip\(dq instead.
+hint: To restore the original branch and stop patching, run \(dqgit am \-\-abort\(dq.
+hint: Disable this message with \(dqgit config set advice.mergeConflict false\(dq
+
+git gq help on conflicts
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+
+Resolve this conflict by looking at the *.rej files.
+For files that were not found there is no reject file, look at the original
+patch with:
+  less .gqpatches/tmp/DIFF.patch
+
+To see the state of your repository enter:
+  git status
+
+Unknown files for git that should be part of the patch must be added with:
+  git add FILE
+
+If you managed to resolve all the conflicts run:
+  git gq continue
+
+To abort the whole operation without resolving conflicts run:
+  git gq abort
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+And here is the content of the reject file, \(aqsample.c.rej\(aq in this case:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+diff a/sample.c b/sample.c    (rejected hunks)
+@@ \-4,8 +4,8 @@ int main(int argc, char *argv[])
+   {
+     int i;
+
+\-    printf(\(dqnumber of arguments: %d\en\(dq, argc);
+     printf(\(dqprogram name: %s\en\(dq, argv[0]);
++    /* iterate over all command line arguments: */
+     for(i=1; i<argc; i++)
+       printf(\(dqarg no %2d: %s\en\(dq, i, argv[i]);
+     return 0;
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+In our example here, while the patch was moved to the patch queue, this line:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+printf(\(dqnumber of arguments: %d\en\(dq, argc);
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+had been changed to:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+printf(\(dqMy number of arguments: %d\en\(dq, argc);
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+So the line to remove by the patch wasn\(aqt found and we had a conflict. If we
+open both, the original file \(aqsample.c\(aq and the reject file \(aqsample.c.rej\(aq in
+any text editor, we can easily see what the patch intended to do and apply the
+changes manually.
+.sp
+This is called \fIresolving a conflict\fP\&. You have to go through all reject files,
+there may be more than one, and resolve all conflicts.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+\fBIMPORTANT:\fP
+.INDENT 0.0
+.INDENT 3.5
+If a file that the patch modifies couldn\(aqt be found, \fBthere is no reject
+file\fP\&. Look carefully at the git message and look at the original patch as
+described in the git\-gq help message that is printed when the conflict is
+detected.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+After you are finished, run:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq continue
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This finishes the operation and tells git that the conflict was resolved. You
+\fImust not\fP run \fBgit am continue\fP yourself, \fBgit gq continue\fP already
+does this for you.
+.sp
+If you cannot resolve conflicts because the reject files are too long or
+complicated, you can abort the last command with:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq abort
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+In this case you may have to compare two versions of files and apply changes
+directly.
+.SH EXAMPLE WORKFLOWS
+.SS Local development
+.sp
+Assuming you have cloned another git repository and want to start development
+here. With git\-gq you don\(aqt need to create a local branch. Just run:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq init
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This sets up the git\-gq directory and marks the current HEAD revision
+as parent revision.
+.sp
+You can now begin to make changes. You create preliminary commits with:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq new NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+where NAME should be a one line string with no spaces in it. This is a
+preliminary log message that you can later update and extend. Every time you
+make more changes you can either:
+.INDENT 0.0
+.IP \(bu 2
+run \fBgit gq new\fP to create a new commit
+.IP \(bu 2
+run \fBgit gq refresh\fP to update the topmost commit
+.IP \(bu 2
+run the \fBgit add..\fP and \fBgit commit\fP as usual to create a new commit
+.UNINDENT
+.sp
+You can see what patches are applied with:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq applied
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+You can see what patches are unapplied with:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq unapplied
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+When you want to finalize your commits and update commit messages, first move
+all of them as patches to the patch queue:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq pop \-a
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Then for each patch, to provide a proper log message, run:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq push
+git gq refresh \-e
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+You can also combine (\(aqfold\(aq) an unapplied patch with:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq fold PATCH
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Inspect the applied patches with:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq glog
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+When you are finished for all patches you can finalize these changes by setting
+the parent version to the current HEAD version:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq parent HEAD
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+You are now ready to publish your patches.
+.SS Updates from a remote repository
+.sp
+When you have created local patches and want to update your repository with new
+patches from a remote repository, the usual way would be to run
+\fBgit pull\fP and then \fBgit merge\fP or \fBgit rebase \-i\fP\&.
+.sp
+With the patch queue, there is now another way to handle this. Before pulling
+patches from the public repository, put all your local changes on the patch
+queue:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq pop \-a
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+As a safety measure backup your patch queue with:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq backup
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Now pull patches from the remote repository:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git pull
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Reset the parent revision to the new repository HEAD:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq parent HEAD
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Finally re\-apply all your patches:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq push \-a
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+If you get messages about conflicts (\(dqrejects\(dq) you have to resolve them. See
+further above at \(dqConflicts and conflict resolution\(dq.
+.sp
+This workflow allows to resolve conflicts step by step which is usually easier
+than resolving all conflicts that arise from \fBgit pull\fP all at once. Also the
+reject files created for each conflict clearly show which change was intended
+at the patch which is usually easier than the common 3\-way merge.
+.SH COMMAND LINE INTERFACE
+.sp
+usage: git_gq.py [OPTIONS] COMMAND
+.SS Documentation conventions
+.INDENT 0.0
+.IP \(bu 2
+Arguments for commands are in capital letters.
+.IP \(bu 2
+Arguments in square brackets are optional.
+.IP \(bu 2
+A \(aq|\(aq means that one of the shown arguments must be used.
+.IP \(bu 2
+\(aqREGEXP\(aq is a regular expression. For regular expression syntax see:
+\fI\%https://docs.python.org/3/howto/regex.html#regex\-howto\fP
+.UNINDENT
+.SS Help and documentation
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B help
+Show this help.
+.TP
+.B doc
+Show reStructuredText source of man page.
+.TP
+.B man
+Show man page.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Bash completion commands
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B commands
+List all known commands on the console
+.UNINDENT
+.sp
+bashcompletion
+.INDENT 0.0
+.INDENT 3.5
+Prints a text that, if you add it to your bash configuration in
+$HOME/.bashrc, adds bash completion. This means that you get a list of
+possible commands when you type <TAB>, e.g.:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq a<TAB>
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+shows the possible completions \fBabort\fP and \fBapplied\fP\&. If there is only one
+matching command, you command line is completed, e.g:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq ab<TAB>
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+becomes:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq abort
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This can save you many keystrokes and makes using this tool easier.
+.sp
+Example how to install completion:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git gq bashcompletion >> $HOME/.bashrc
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Queue management commands
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B init [QNAME [REV]]
+Create/select a patch queue with name QNAME. QNAME is optional, the
+default patch queue name is \(aqdefault\(aq. If REV is given this is the parent
+revision, if it is not given, \(aqHEAD\(aq is taken as the parent. You must run
+this command once to initialize the patch queue in your repository.
+.TP
+.B qname [QNAME]
+If QNAME is not given, show current patch queue name. if QNAME is given,
+change to patch queue QNAME. If the patch queue QNAME is created for the
+first time, the parent revision is set to your \(aqHEAD\(aq revision. If this is
+not intended, you may change this with \fBgit gq parent REVISION\fP to
+another revision.
+.TP
+.B backup
+Backup patch queue directory with a separate git repository. You may
+provide a short log message with option \fB\-m\fP\&.
+.TP
+.B restore REVISION
+Restore patch directory to a REVISION that was created with \fBgit gq
+backup\fP before. This \fIdoes not\fP change your git repository. Enter \fBgit gq
+revert\fP to reset your repository to the last saved state.
+.TP
+.B revert
+Revert git repository to the state from the last backup of the patch queue.
+All \fIapplied\fP patches are restored to the state at the last \fBgit gq
+backup\fP\&. All \fIunapplied\fP patches remain in their present state. This will
+create a new branch in the repository at the PARENT revision. The new
+branch name will be the name of your current branch with a number appended
+like in \(aqmaster\-1\(aq. If you want instead have the new branch given the name
+of the current branch and the old patches given a new branch name, use
+option \(aq\-\-move\-branchname\(aq.
+.TP
+.B qrepo COMMAND [\-\- OPTIONS]
+Run git command COMMAND with OPTIONS in patch\-queue repository. Note that
+OPTIONS must be preceded by a \fIdouble\fP \(aq\-\(aq character.
+.TP
+.B change\-order
+Call an editor to edit the file \(aqseries\(aq that contains all currently
+unapplied patches. Note that \fBgit gq push\fP always applies the patch from
+the \fIfirst\fP line in this file, so the top of the queue is the top of the
+file.
+.TP
+.B applied
+Show all applied patches up to parent+1.
+.TP
+.B unapplied
+Show all patches of the patch queue.
+.TP
+.B parent [REVISION]
+Set REVISION as patch queue parent revision. Do never go beyond this
+revision with pop. Use \(aqHEAD\(aq to set your repository HEAD as parent
+revision. If REVISION is \fINULL\fP, it means that \fIall\fP revisions in the
+repository can be managed with \fBgit gq pop\fP, you should only use this for
+unpublished repositories. If REVISION is not given, show the current parent
+revision.
+.TP
+.B export DIRECTORY
+Create numbered patch files from all currently applied patches in
+DIRECTORY. The numbers are in the order of patches from bottom to top.
+DIRECTORY must exist.
+.TP
+.B import PATCHFILE [PATCHFILE...]
+Import a number of patchfiles to the patch queue. The last patchfile in the
+list will be on the top of the queue. Note that the patch files must have
+been generated with \fBgit format\-patch\fP or \fBgit gq pop\fP\&. This
+cannot be used for patches generated with the \fBpatch\fP program. These you
+have to apply with \fBgit apply PATCHFILE\fP\&.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Patch management commands
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B new [NAME]
+Create new patch (commit) with log\-message NAME. NAME is meant as a
+preliminary commit message, it should be a single line without spaces. If
+NAME is omitted, you can enter a complete log message interactively.
+.TP
+.B record [NAME]
+Interactively select changes for a new patch (commit with log\-message
+NAME). This command runs \fBgit add \-\-patch\fP to select the changes before
+\fBgit commit\fP\&.
+.TP
+.B refresh
+Update the top patch, all changes in files known to git are added to the
+top patch. If you want to add new files, add them with \fBgit add\fP first.
+If you want complete control over the changes added, run \fBgit add\fP
+yourself and then run this command with option \fB\-\-no\-add\fP\&.
+.TP
+.B pop
+Pop the top patch, the HEAD patch of your repository is moved to the patch
+queue.
+.TP
+.B push
+Apply the top patch from the patch queue, the patch is moved to your
+repository as the new HEAD patch.
+.TP
+.B goto NAME|REGEXP
+Do push or pop until the patch specified by name or regular expression is
+the latest applied patch.
+.TP
+.B fold NAME|REGEXP
+Fold patch \(aqNAME\(aq to the top patch. Patch \(aqNAME\(aq must not have been applied
+already. Note that the log message of the fold\-patch is appended to the
+existing log message. You can change the log message with
+\fBgit gq refresh \-e\fP\&.
+.TP
+.B edit NAME|REGEXP
+Call an editor to edit the patch file of an unapplied patch.
+.TP
+.B delete NAME|REGEXP
+Delete unapplied patch with given by name or regular expression.
+.TP
+.B show NAME|REGEXP
+Show changes of an applied or unapplied patch on the console.
+.TP
+.B continue
+Continue \(aqpush\(aq after you had a conflict and had it fixed manually. This
+also removes all reject (*.rej) files that are not tracked by git.
+.TP
+.B abort
+Abort (undo) \(aqpush\(aq after you had a conflict and could not fix it manually.
+This also removes all reject (*.rej) files that are not tracked by git.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Miscellaneous commands
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B conflict [CMD]
+Show if the repository is in an unresolved conflict state.
+CMD is a sub\-command, \fBfiles\fP shows files changed by the patch,
+\fBshow\fP shows the patch.
+.TP
+.B glog
+Graphical log, display all commits and branches as a tree on the console.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS OPTIONS
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B  \-\-version
+show program\(aqs version number and exit
+.TP
+.B  \-\-summary
+print a summary of the function of the program
+.TP
+.B  \-h\fP,\fB  \-\-help
+Show help.
+.TP
+.B  \-\-verbose
+show what commands are called
+.TP
+.B  \-\-dry\-run
+show what commands would be called
+.TP
+.B  \-D\fP,\fB  \-\-debug
+Show debug information.
+.TP
+.B  \-a\fP,\fB  \-\-all
+push/pop: apply on ALL patches.
+.TP
+.B  \-N\fP,\fB  \-\-no\-add
+new/refresh/fold: DO NOT add all modified changes to
+patch, continue: DO NOT add all modified and unknown
+changes to patch.
+.TP
+.B  \-e\fP,\fB  \-\-edit
+refresh/fold: start editor to edit log message
+.TP
+.BI \-m\fP,\fB  \-\-message \ MESSAGE
+backup/refresh: use MESSAGE as log message.
+.TP
+.BI \-F\fP,\fB  \-\-file \ FILE
+refresh: take log message from FILE.
+.TP
+.BI \-l\fP,\fB  \-\-lines \ LINECOUNT
+applied, unapplied: Limit the number of lines printed
+by the command. Print only the first LINECOUNT lines.
+.TP
+.B  \-R\fP,\fB  \-\-force
+\fIgit gq pop\fP, \fIgit gq push\fP: Execute command even if
+there are uncommited changes. Note that \fIgit gq pop\fP
+will discard uncommited changes. \fIgit gq restore\fP:
+discard uncommitted changes and unknown files in patch
+queue.
+.TP
+.B  \-\-move\-branchname
+For \fBgit gq revert\fP, move the current branch name to
+the new created branch.
+.TP
+.B  \-\-exception
+do not catch exceptions (for debugging).
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SH SEE ALSO
+.sp
+git\-gq online documentation at
+.sp
+\fI\%https://goetzpf.github.io/git\-gq\fP
+.\" Generated by docutils manpage writer.
+.

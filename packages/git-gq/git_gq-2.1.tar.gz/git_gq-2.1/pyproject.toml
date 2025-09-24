@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "git-gq"
+version =   "2.1" #VERSION#
+authors = [
+  { name="Goetz Pfeiffer", email='goetzpf@googlemail.com'},
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+description ='A patch queue implementation for git.'
+readme = "README.rst"
+# note: the current "pip" installed requires python>=3.8 !
+requires-python = ">=3.6"
+classifiers = [
+          'Development Status :: 5 - Production/Stable',
+          'Environment :: Console',
+          'Intended Audience :: Developers',
+          'Intended Audience :: Information Technology',
+          'Intended Audience :: Science/Research',
+          'Intended Audience :: System Administrators',
+          'Natural Language :: English',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+          'Programming Language :: Python :: 3.9',
+          'Programming Language :: Python :: 3.10',
+          'Programming Language :: Python :: 3.11',
+          'Programming Language :: Python :: 3.12',
+          'Topic :: Software Development',
+          'Topic :: Software Development :: Version Control',
+          'Topic :: Software Development :: Version Control :: Git',
+]
+
+[project.urls]
+"Homepage" ='https://goetzpf.github.io/git-gq/'
+#"Bug Tracker" = 'https://sourceforge.net/p/pyexpander/bugs'
+
+[project.scripts]
+"git-gq" = "git_gq.git_gq:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"git_gq.doc" = ["*"]
+"git_gq.doc.rst" = ["*.rst", ]
+"git_gq.doc.html" = ["*.*"]
+"git_gq.doc.html._images" = ["*.*"]
+"git_gq.doc.html._modules" = ["*.*"]
+"git_gq.doc.html._modules.git_gq" = ["*.*"]
+"git_gq.doc.html._sources" = ["*.*"]
+"git_gq.doc.html._static" = ["*.*"]
+"git_gq.doc.html._static.css" = ["*.*"]
+"git_gq.doc.html._static.css.fonts" = ["*.*"]
+"git_gq.doc.html._static.js" = ["*.*"]
+"git_gq.man" = ["*"]
+"git_gq.man.man1" = ["*"]
+"git_gq.profile_d" = ["*"]
+

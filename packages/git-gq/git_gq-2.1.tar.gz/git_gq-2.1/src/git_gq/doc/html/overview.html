@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; git-gq 2.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c4a36953"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Prerequisites" href="prerequisites.html" />
+    <link rel="prev" title="Welcome to git-gq’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            git-gq
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#patches-vs-commits">Patches vs. Commits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-patch-queue">The patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advantages-of-the-patch-queue">Advantages of the patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disadvantages-of-the-patch-queue">Disadvantages of the patch queue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#files-in-the-patch-queue-directory">Files in the patch queue directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#series">series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#parent">parent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#patch-files-patch">patch files ‘*.patch’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#applied">applied</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conflicts.html">Conflicts and conflict resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-create-a-backup">How to create  a backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backups.html#how-to-restore-a-backup">How to restore a backup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#local-development">Local development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#updates-from-a-remote-repository">Updates from a remote repository</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commandline.html">Command line interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#documentation-conventions">Documentation conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#help-and-documentation">Help and documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#bash-completion-commands">Bash completion commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#queue-management-commands">Queue management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#patch-management-commands">Patch management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#miscellaneous-commands">Miscellaneous commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#options">OPTIONS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">How to install git-gq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-pypi-with-pip-recommended">Install from pypi with pip (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-distribution-tar-file">Install from distribution tar file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install.html#system-wide-installation">System wide installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#local-installation-in-directory">Local installation in DIRECTORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#how-to-uninstall">How to uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-source">Install from source</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">git-gq</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<section id="patches-vs-commits">
+<h2>Patches vs. Commits<a class="headerlink" href="#patches-vs-commits" title="Link to this heading"></a></h2>
+<p>git manages a repository with <em>commits</em>. A commit has the following properties:</p>
+<ul class="simple">
+<li><p>A state, this is the directory structure and the files and their contents and
+permissions.</p></li>
+<li><p>Metadata: log message, author and date</p></li>
+<li><p>A hash key that git uses internally to identify commits. Git hashes are
+calculated based on the contents of the files in the commit, the metadata of
+the commit (like timestamp and author), and the parent commit’s hash.</p></li>
+<li><p>A predecessor commit unless it is the first commit in the repository</p></li>
+<li><p>A successor commit unless it is the head commit of a branch</p></li>
+</ul>
+<p>For simplicity, we only consider a single branch for now. Then each commit has
+exactly one or no predecessor and one or no successor.</p>
+<p>All commits then form an ordered sequence like here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">--&gt;</span> <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">C</span> <span class="o">--&gt;</span> <span class="n">D</span>
+</pre></div>
+</div>
+<p>A <em>patch</em> is the difference between two commits combined with the metadata of
+the second patch.</p>
+<p>So the commits A, B, C and D as shown above could also be represented as patches:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="n">A</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">B</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here ‘(B-A)’ means the difference of the files and directories of commits ‘B’
+and ‘A’. ‘0’ is the empty state before the very first commit where no files and
+directories exist.</p>
+<p>When you apply a patch to a commit you get the next commit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">+</span> <span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="n">A</span><span class="p">)</span> <span class="o">=</span> <span class="n">B</span>
+</pre></div>
+</div>
+</section>
+<section id="the-patch-queue">
+<h2>The patch queue<a class="headerlink" href="#the-patch-queue" title="Link to this heading"></a></h2>
+<p>The <em>patch queue</em> is a structure that contains patches outside of git. Patches
+can be moved between the repository and the patch queue. Patches on the patch
+queue are called <em>unapplied</em>, patches that are in the repository are called
+<em>applied</em>.</p>
+<p>In the following examples, the top of the repository and the patch queue is
+always on the right side:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Repository</span><span class="p">:</span>  <span class="n">A</span> <span class="o">--&gt;</span> <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">C</span> <span class="o">--&gt;</span> <span class="n">D</span>      <span class="n">Patch</span><span class="o">-</span><span class="n">Queue</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">empty</span><span class="o">&gt;</span>
+<span class="n">applied</span><span class="p">:</span> <span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="n">A</span><span class="p">),</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">B</span><span class="p">),</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">)</span>   <span class="n">unapplied</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">none</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Now operation ‘pop’ moves a patch from the repository to the patch-queue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Repository</span><span class="p">:</span>  <span class="n">A</span> <span class="o">--&gt;</span> <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">C</span>            <span class="n">Patch</span><span class="o">-</span><span class="n">Queue</span><span class="p">:</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">)</span>
+<span class="n">applied</span><span class="p">:</span> <span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="n">A</span><span class="p">),</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">B</span><span class="p">)</span>          <span class="n">unapplied</span><span class="p">:</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Another ‘pop’ moves the next patch from the repository to the patch-queue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Repository</span><span class="p">:</span>  <span class="n">A</span> <span class="o">--&gt;</span> <span class="n">B</span>                  <span class="n">Patch</span><span class="o">-</span><span class="n">Queue</span><span class="p">:</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">B</span><span class="p">)</span>
+<span class="n">applied</span><span class="p">:</span> <span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="n">A</span><span class="p">)</span>                 <span class="n">unapplied</span><span class="p">:</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">),</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Operation ‘push’ moves the top patch from the patch-queue back to the
+repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Repository</span><span class="p">:</span>  <span class="n">A</span> <span class="o">--&gt;</span> <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">C</span>            <span class="n">Patch</span><span class="o">-</span><span class="n">Queue</span><span class="p">:</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">)</span>
+<span class="n">applied</span><span class="p">:</span> <span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="n">A</span><span class="p">),</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">B</span><span class="p">)</span>          <span class="n">unapplied</span><span class="p">:</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="advantages-of-the-patch-queue">
+<h2>Advantages of the patch queue<a class="headerlink" href="#advantages-of-the-patch-queue" title="Link to this heading"></a></h2>
+<p>The patch-queue is much more flexible than traditional commits:</p>
+<ul class="simple">
+<li><p>Patches can be reordered easily.</p></li>
+<li><p>Patches can be combined (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">fold</span></code>).</p></li>
+<li><p>Patches can be updated (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">refresh</span></code>).</p></li>
+<li><p>Patches can replace development branches. You can put your local changes on
+the patch queue, run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> and put your patches back on the
+repository.</p></li>
+<li><p>Conflicts that may occur with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">push</span></code> are usually easier to resolve
+than git merge conflicts.</p></li>
+</ul>
+</section>
+<section id="disadvantages-of-the-patch-queue">
+<h2>Disadvantages of the patch queue<a class="headerlink" href="#disadvantages-of-the-patch-queue" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Moving a patch to the patch queue and back changes it’s git hash key. This
+means you must not apply this operation on patches that exist in other
+repositories. The definition of the <em>parent revision</em> ensures that you cannot
+do this by accident.</p></li>
+<li><p>Changing the order of patches may lead to <em>conflicts</em>.</p></li>
+<li><p>Applying new commits in the repository while some patches are unapplied may
+lead to conflicts when the patches are applied later on.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to git-gq’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prerequisites.html" class="btn btn-neutral float-right" title="Prerequisites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Goetz Pfeiffer &lt;goetzpf@googlemail.com&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
