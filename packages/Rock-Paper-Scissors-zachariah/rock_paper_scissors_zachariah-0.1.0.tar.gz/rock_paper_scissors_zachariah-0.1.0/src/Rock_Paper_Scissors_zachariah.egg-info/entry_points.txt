@@ -1,0 +1,2 @@
+[console_scripts]
+rps-zachariah = rock_paper_scissors_zachariah.cli:main

@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: Rock_Paper_Scissors_zachariah
+Version: 0.1.0
+Summary: لعبة حجرة ورقة مقص بسيطة بالبايثون وباللغة العربية
+Home-page: https://example.com/Rock_Paper_Scissors_zachariah
+Author: زكريا وهاس
+Author-email: zakaria@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Rock_Paper_Scissors_zachariah
+
+لعبة حجرة ورقة مقص بسيطة بالبايثون وباللغة العربية.
+
+التشغيل محلياً:
+- python -m rock_paper_scissors_zachariah
+
+بعد التثبيت:
+- rps-zachariah
+
+المؤلف: زكريا وهاس
