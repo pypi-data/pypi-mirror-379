@@ -1,0 +1,87 @@
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: rustfmt, clippy
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install ODBC drivers (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y unixodbc-dev unixodbc libodbc1
+        # Install additional ODBC drivers
+        sudo apt-get install -y odbc-postgresql odbc-mysql
+        # Verify ODBC installation
+        odbcinst -j
+
+    - name: Install maturin (Linux)
+      if: runner.os == 'Linux'
+      run: pip install maturin[patchelf]
+
+    - name: Install maturin (Windows)
+      if: runner.os == 'Windows'
+      run: pip install maturin
+
+    - name: Clean cargo cache
+      run: cargo clean
+
+    - name: Build package
+      env:
+        # Help linker find ODBC libraries
+        LIBRARY_PATH: /usr/lib/x86_64-linux-gnu
+        LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu
+      run: maturin build --release --out dist
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: wheels-${{ matrix.os }}-py${{ matrix.python-version }}
+        path: dist/
+
+  publish:
+    needs: build-and-publish
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: dist/
+
+    - name: Combine wheels
+      run: |
+        mkdir -p combined-dist
+        find . -name "*.whl" -exec cp {} combined-dist/ \;
+
+    - name: Publish to PyPI
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        pip install twine
+        twine upload combined-dist/*
