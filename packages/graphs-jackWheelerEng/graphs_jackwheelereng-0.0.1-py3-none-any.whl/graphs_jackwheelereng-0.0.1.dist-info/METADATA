@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: graphs_jackWheelerEng
+Version: 0.0.1
+Summary: A small example package
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Author-email: Example Author <author@example.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+Name of package: graphs_jackWheelerEng
+
+Purpose: 
+This package provides two core modules:
+1. `heapq.py` – a custom implementation of a binary heap priority queue.
+2. `sp.py` – shortest path algorithms (e.g., Dijkstra) built on top of the heap.
+
+The main purpose of this package is to demonstrate an implementation of the Dijkstra shortest path algorithm.
+
+Usage: 
+Example: Finding the shortest path in a weighted graph
+
+```python
+from sp import dijkstra
