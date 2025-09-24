@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: CompliEdge
+Version: 0.1.0
+Summary: CompliEdge - Enterprise GRC Management System
+Home-page: https://github.com/RajeshBasnet-dev/CompliEdge
+Author: Rajesh Basnet
+Author-email: basnetrajesh245@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django<5.0.0,>=4.2.0
+Requires-Dist: Pillow>=9.0.0
+Requires-Dist: django-crispy-forms>=2.0.0
+Requires-Dist: crispy-tailwind>=0.6.0
+Requires-Dist: pyotp>=2.6.0
+Requires-Dist: qrcode>=7.3.1
+Requires-Dist: python-decouple>=3.6
+Requires-Dist: requests>=2.31.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+CompliEdge is a cutting-edge, enterprise-grade GRC (Governance, Risk & Compliance)
+management system built with Django and modern web technologies. The system provides comprehensive tools
+for managing governance policies, identifying and mitigating risks, and ensuring compliance with
+regulatory frameworks.
+
+Key Features:
+- User Management: Multi-role system with Admin, Manager, Employee, and Auditor roles
+- Governance Module: Policy creation, approval, and publishing with versioning
+- Risk Management: Risk identification, scoring, and mitigation strategies
+- Compliance Management: Compliance frameworks and automated checklists
+- Dashboard & Analytics: Interactive dashboards with real-time data visualization
+- Notifications: Email and in-app notifications
+- AI-Driven Insights: Predictive analytics for risk assessment
+- Role-Based Access Control (RBAC): Fine-grained permissions for each user role
+- Workflow Management: Multi-step approval processes for policies and risks
+- Security Features: Two-factor authentication and comprehensive audit logs
+- Collaboration Tools: Internal commenting system for policies, risks, and compliance items
+
+Technologies Used:
+- Backend: Django 4.x, Python 3.8+
+- Frontend: HTML5, Tailwind CSS, JavaScript, Chart.js
+- Database: SQLite (default), PostgreSQL (recommended for production)
+- Authentication: Django's built-in authentication system
+- Security: Two-factor authentication (pyotp, qrcode)
+- AI/ML: Rule-based logic for risk prediction
+- Static Files: Custom CSS and JavaScript

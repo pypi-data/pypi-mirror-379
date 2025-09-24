@@ -1,0 +1,1 @@
+# The dashboard app doesn't need admin models
