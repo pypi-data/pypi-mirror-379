@@ -1,0 +1,15 @@
+pytidycensus/__init__.py,sha256=ScuGHdwzIMy1niDHDJcW7MWBtLmX7VlbkTr2iLmoVDA,955
+pytidycensus/acs.py,sha256=EQyx01hAUzl2YicJ8b-C_ZFjRrXLUj4dFepsbO__3pU,22581
+pytidycensus/api.py,sha256=VwoKZJaTkZof7PGeDPnteJQd11ezwz_I7qlHiHZpWY4,8590
+pytidycensus/decennial.py,sha256=xS0OU7oMuYFBUi1jK_1WG3waGMQ1Hm99BL8OUU1O6Xo,18229
+pytidycensus/estimates.py,sha256=dY8mzcmgOJkW5SAuQscJciuGi1Tn3oooGdyFRBvk8ZE,60210
+pytidycensus/geography.py,sha256=3ctJbeJn0jYICcG-SuJTAFdld_GNPwfHRzEZ3ODpSNg,12485
+pytidycensus/utils.py,sha256=46PSaWS8okKxOsgMX9XIJbDYIrADslYZCr9raAXm6mA,33289
+pytidycensus/variables.py,sha256=caZOVSIBN8n5e33UdPSiCgZsTHPjEagmRjW97-nN7go,8447
+pytidycensus/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytidycensus/data/national_county.txt,sha256=mbgqZGTvVQJGaTLzAtdrcNuAdLAgeNmE7p25jexiqVc,90975
+pytidycensus-0.1.8.dist-info/licenses/LICENSE,sha256=K2_H1DKK3ccbb_NhH6KPk4gYFrEQxLtZYlXjGLAAG6I,1066
+pytidycensus-0.1.8.dist-info/METADATA,sha256=i8_NkCZ7j1SKWtXdeN0fgmUFLpSehmdk1NimyYLkTqo,10861
+pytidycensus-0.1.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pytidycensus-0.1.8.dist-info/top_level.txt,sha256=HfjTSie06K5TbAYzoMM-2nM3Fhh_VO8zrDeRjKdBhdo,13
+pytidycensus-0.1.8.dist-info/RECORD,,
