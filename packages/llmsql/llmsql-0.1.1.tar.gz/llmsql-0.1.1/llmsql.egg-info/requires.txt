@@ -1,0 +1,10 @@
+torch
+transformers
+datasets
+trl
+huggingface_hub
+vllm
+tqdm
+numpy
+python-dotenv
+pyyaml
