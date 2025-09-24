@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: harry-test-sdk-mamotion
+Version: 0.0.6
+Summary: A simple math SDK (add, sub, mul, div)
+Author: Harry
+Author-email: your_email@example.com
+Requires-Python: >=3.7
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary

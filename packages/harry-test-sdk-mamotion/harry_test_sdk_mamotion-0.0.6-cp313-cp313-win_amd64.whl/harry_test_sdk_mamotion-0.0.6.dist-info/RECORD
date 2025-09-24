@@ -1,0 +1,9 @@
+my_sdk/__init__.py,sha256=P01Nojz-eUtC4NrTnkqxC012mC5rGNYImZrKf5twRhA,63
+my_sdk/api.cp313-win_amd64.pyd,sha256=y7d76NXTPZxDb1OAAs5cfm_B8aSNEoF63IRbdKI3VGA,40448
+my_sdk/api.py,sha256=_AHXAPN1w_7P3pQ49gNxsOyE4HH2IvuxkUsqfZ1oe5w,400
+my_sdk/core.cp313-win_amd64.pyd,sha256=N007in8dl4CBAlgE7t2Iof1LzSuZKngkYNm6QXwLGEQ,37888
+my_sdk/core.py,sha256=9F2H9eUrF683WXgyVEf4qOs6sc-eQFr1Na-0yktF68k,301
+harry_test_sdk_mamotion-0.0.6.dist-info/METADATA,sha256=4WgFmxVVvG2_9Jd4iluNw8by0LUHIOAvsurcs-CONF4,280
+harry_test_sdk_mamotion-0.0.6.dist-info/WHEEL,sha256=qV0EIPljj1XC_vuSatRWjn02nZIz3N1t8jsZz7HBr2U,101
+harry_test_sdk_mamotion-0.0.6.dist-info/top_level.txt,sha256=aW2Kn7YYUXrjh-s3dPL3fz5j4c-Zm20qy-ptn5BiHRE,7
+harry_test_sdk_mamotion-0.0.6.dist-info/RECORD,,
