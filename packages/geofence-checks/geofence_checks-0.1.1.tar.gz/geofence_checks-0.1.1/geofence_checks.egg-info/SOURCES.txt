@@ -1,0 +1,8 @@
+setup.py
+geofence_checks/__init__.py
+geofence_checks/geofence_detector.py
+geofence_checks.egg-info/PKG-INFO
+geofence_checks.egg-info/SOURCES.txt
+geofence_checks.egg-info/dependency_links.txt
+geofence_checks.egg-info/requires.txt
+geofence_checks.egg-info/top_level.txt

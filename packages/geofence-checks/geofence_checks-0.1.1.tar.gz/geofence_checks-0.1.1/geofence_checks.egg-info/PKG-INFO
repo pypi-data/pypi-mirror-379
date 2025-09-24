@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: geofence-checks
+Version: 0.1.1
+Summary: A package for detecting geofence entry and exit events for trucks
+Home-page: UNKNOWN
+Author: chandra shekhar
+Author-email: chandra.shekhar@enmovil.in
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
