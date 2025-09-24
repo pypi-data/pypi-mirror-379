@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linalg-fromscratch"
+version = "0.1.1"
+description = "Cosine similarity and PCA (cov + SVD) from scratch in NumPy with tests"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{ name="Izew Dev Labs", email="izewdevlabs@gmail.com" }]
+keywords = ["numpy", "linear algebra", "pca", "cosine similarity", "education"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = ["numpy>=1.23"]
+
+[project.urls]
+Homepage = "https://github.com/Izewdevlabs/Cosine_PCA"
+Issues = "https://github.com/Izewdevlabs/Cosine_PCA/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

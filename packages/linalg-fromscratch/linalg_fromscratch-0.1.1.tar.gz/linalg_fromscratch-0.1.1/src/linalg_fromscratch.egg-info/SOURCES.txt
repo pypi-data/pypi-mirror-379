@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/linalg_fromscratch/__init__.py
+src/linalg_fromscratch/cosine.py
+src/linalg_fromscratch/pca.py
+src/linalg_fromscratch.egg-info/PKG-INFO
+src/linalg_fromscratch.egg-info/SOURCES.txt
+src/linalg_fromscratch.egg-info/dependency_links.txt
+src/linalg_fromscratch.egg-info/requires.txt
+src/linalg_fromscratch.egg-info/top_level.txt
+tests/test_cosine.py
+tests/test_pca.py
