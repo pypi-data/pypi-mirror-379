@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: StrictTypePython
+Version: 0.1.0
+Summary: Python runtime type checking with forceType, forceUnion, remain_forceTypeCheck
+Author-email: howShoudIChooseMyUsername <trademark2179@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

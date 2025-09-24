@@ -1,0 +1,2 @@
+StrictTypePython
+tests
