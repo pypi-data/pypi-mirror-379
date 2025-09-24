@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+kibreabpdf/__init__.py
+kibreabpdf/pdf2image.py
+kibreabpdf/pdf2text.py
+kibreabpdf.egg-info/PKG-INFO
+kibreabpdf.egg-info/SOURCES.txt
+kibreabpdf.egg-info/dependency_links.txt
+kibreabpdf.egg-info/top_level.txt
