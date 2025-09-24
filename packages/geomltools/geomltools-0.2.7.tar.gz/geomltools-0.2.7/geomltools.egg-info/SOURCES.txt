@@ -1,0 +1,20 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+geomltools/__init__.py
+geomltools.egg-info/PKG-INFO
+geomltools.egg-info/SOURCES.txt
+geomltools.egg-info/dependency_links.txt
+geomltools.egg-info/requires.txt
+geomltools.egg-info/top_level.txt
+geomltools/datasets/__init__.py
+geomltools/datasets/spatial_data.py
+geomltools/datasets/data/Detroit 911 Calls.csv
+geomltools/datasets/data/__init__.py
+geomltools/datasets/data/earthquakes_2006_2019.csv
+geomltools/spatial_statistics/__init__.py
+geomltools/spatial_statistics/descriptive_statistics.py
+geomltools/spatial_statistics/spatial_indices.py
+geomltools/spatial_statistics/spatial_relationships.py
