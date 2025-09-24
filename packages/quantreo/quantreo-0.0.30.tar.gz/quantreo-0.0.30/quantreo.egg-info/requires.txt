@@ -1,0 +1,7 @@
+tqdm
+numpy
+pandas
+numba
+scipy
+PyWavelets
+antropy>=0.1.9
