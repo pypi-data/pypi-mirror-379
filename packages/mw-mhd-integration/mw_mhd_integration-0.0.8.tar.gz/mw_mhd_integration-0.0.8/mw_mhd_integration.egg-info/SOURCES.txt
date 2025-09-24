@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+mw2mhd/__init__.py
+mw2mhd/config.py
+mw2mhd/convertor_factory.py
+mw_mhd_integration.egg-info/PKG-INFO
+mw_mhd_integration.egg-info/SOURCES.txt
+mw_mhd_integration.egg-info/dependency_links.txt
+mw_mhd_integration.egg-info/entry_points.txt
+mw_mhd_integration.egg-info/requires.txt
+mw_mhd_integration.egg-info/top_level.txt
