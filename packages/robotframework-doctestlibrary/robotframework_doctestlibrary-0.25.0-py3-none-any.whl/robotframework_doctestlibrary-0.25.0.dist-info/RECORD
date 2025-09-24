@@ -1,0 +1,14 @@
+DocTest/DocumentRepresentation.py,sha256=sIyI0SU3S6oTwnxk46MV6LuEHHyEdSjKqsyr37mdVQs,43015
+DocTest/Downloader.py,sha256=9koiAy2izk_v92ZUMFJ9Ktaq2lq5QCHLgeohSYV4z8Y,1389
+DocTest/IgnoreAreaManager.py,sha256=Tkb7_lbVqWkon1KWOMbRXc5DdglR2VS4h9xFvwplBws,6211
+DocTest/Ocr.py,sha256=d08MlwtdMfdJ3c3_vp_rWNbXyq4Es5ixoHLrqH5j2GQ,9745
+DocTest/PdfTest.py,sha256=H8GA2OuRdwTvOJQdDR_5tL4wZGtrHdMCzAtL7ESOSvU,12298
+DocTest/PrintJob.py,sha256=RoKII3edyd_9TqVuM7gbubdEBv--ZUpxG1ET0mOWDSo,142
+DocTest/PrintJobTests.py,sha256=Md3tZ6G0RVEFaJSQEsxl2YMDnfrpN3GkmPsabGSiWQE,18779
+DocTest/VisualTest.py,sha256=4LQWZkn9VNhCH5ATytxgRhS4tu1fm0O3INJcfls6cTA,145661
+DocTest/__init__.py,sha256=8LWiwdc21QyL6B3PxJrKrC-cPB9F8zyWpTvb3WWbpg8,12721
+DocTest/config.py,sha256=jhFerJDyU0Wu4ZbNqD9U4a0a8QzdKhCJ5mMwYfVAwmk,310
+robotframework_doctestlibrary-0.25.0.dist-info/LICENSE,sha256=JYVY8Ud4KW4U2VPHP9RPpbvCcpSlXsX2SF2D_MJ7LmU,10243
+robotframework_doctestlibrary-0.25.0.dist-info/METADATA,sha256=jdl_sCsKo1F3f00OHGBci0gVIabkmaQuoayHWBi-L3s,14841
+robotframework_doctestlibrary-0.25.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+robotframework_doctestlibrary-0.25.0.dist-info/RECORD,,
