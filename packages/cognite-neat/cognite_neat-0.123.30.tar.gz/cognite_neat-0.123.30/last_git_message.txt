@@ -1,0 +1,26 @@
+Refactoring Data Model: Adding neat specific URI and NameSpace classes (#1280)
+
+# Description
+
+This is first of a number of PR that are focused on refactoring neat
+data model features to be exposed as Toolkit plugin. In this specific PR
+previously neat own `Uri` and `NameSpace` class is defined, such that
+`rdflib` package can be made into an optional dependency. Notice that
+`_constants.py` is copied from
+`cognite/neat/core/_data_model/models/entities`.
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Added
+
+- Added neat native `URI` and `NameSpace` classes that behave same as
+those provided by `rdflib` package
+
+---------
+
+Co-authored-by: Anders Albert <60234212+doctrino@users.noreply.github.com>
