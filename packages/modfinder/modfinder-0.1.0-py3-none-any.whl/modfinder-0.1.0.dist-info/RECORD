@@ -1,0 +1,9 @@
+modfinder/__init__.py,sha256=oBzOaOkNL-jV8zFS6UaALYnKgcBgnJvLt6Z4-gUMRpA,289
+modfinder/__main__.py,sha256=mx4-9IuZbDjRDsO7cl4Cfn-SXbo9SkmbBwg5GShMgWk,199
+modfinder/downloader.py,sha256=FD1JCSKeBvDXuCsbTRlujILJzx58UTCkRol8Dzv0e90,639
+modfinder/installer.py,sha256=5RudO6k96OUqB_Mdhd6N7G1sVIfll-QXoygjUhWnWTU,735
+modfinder-0.1.0.dist-info/METADATA,sha256=OK-Ugge47VibPz4jVYhSj4fa_x769n7uJ0mBVfKz9tA,491
+modfinder-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+modfinder-0.1.0.dist-info/entry_points.txt,sha256=fCihw2UV4Esx-GrPdhpmhyK5-5kWZKE-zaYzSpkJpF0,54
+modfinder-0.1.0.dist-info/top_level.txt,sha256=DdohaahGBGOJMWg1H-2EwYUHVJvYU_goXObhHjoIdLg,10
+modfinder-0.1.0.dist-info/RECORD,,
