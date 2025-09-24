@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: Django_local_lib_pycon2025
+Version: 1.7.9
+Summary: Local Django library packaged as a reusable app
+Home-page: https://github.com/joseph-njogu/Django_local_lib
+Author: Joseph
+Author-email: josephnjogu487@gmail.com
+License: MIT
+Keywords: django local library
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Django Local-lib
+Documentation coming soon.
