@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+head_hunter_job_bot_auth_tool/__init__.py
+head_hunter_job_bot_auth_tool/cli.py
+head_hunter_job_bot_auth_tool/main.py
+head_hunter_job_bot_auth_tool.egg-info/PKG-INFO
+head_hunter_job_bot_auth_tool.egg-info/SOURCES.txt
+head_hunter_job_bot_auth_tool.egg-info/dependency_links.txt
+head_hunter_job_bot_auth_tool.egg-info/entry_points.txt
+head_hunter_job_bot_auth_tool.egg-info/requires.txt
+head_hunter_job_bot_auth_tool.egg-info/top_level.txt
