@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mbu_msoffice_integration"   # 👈 must match the PyPI project name
+version = "1.0.4"
+authors = [
+  { name="MBU", email="rpa@mbu.aarhus.dk" },
+]
+description = "Repo containing functionality related to MSOffice"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+]
+license = "MIT"
+dependencies = [
+  "cryptography >= 43.0.0",
+  "pyodbc >= 5.1.0",
+  "python-dateutil == 2.9.*",
+  "openpyxl >= 3.1.2",
+  "pandas >= 2.2.3",
+  "office365-rest-python-client",
+]
