@@ -1,0 +1,2 @@
+[console_scripts]
+hangman-ashraf = hangman_ashraf.cli:main

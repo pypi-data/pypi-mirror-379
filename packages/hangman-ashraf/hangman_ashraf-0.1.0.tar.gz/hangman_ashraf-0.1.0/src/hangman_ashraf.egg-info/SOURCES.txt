@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/hangman_ashraf.egg-info/PKG-INFO
+src/hangman_ashraf.egg-info/SOURCES.txt
+src/hangman_ashraf.egg-info/dependency_links.txt
+src/hangman_ashraf.egg-info/entry_points.txt
+src/hangman_ashraf.egg-info/top_level.txt
