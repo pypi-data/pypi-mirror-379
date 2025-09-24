@@ -1,0 +1,10 @@
+eeglabio/__init__.py,sha256=wYK4CLlON-c7t17LdgrV0udSRE9MOYu6F98jnR42ezA,146
+eeglabio/_version.py,sha256=Y-ObHU0nyi1GE_wW_PH0HzxeKYatTzR3QlfBR_BPqno,49
+eeglabio/epochs.py,sha256=5LOPNBPZ06jlr9T5SQhKqVV2qT9HNuBAOVnP0vCoENw,9039
+eeglabio/raw.py,sha256=U7HEwg8UD7a2AZUs7jml8PoQX9Xj9kzDB-vxyGQyTEw,3878
+eeglabio/utils.py,sha256=MiqmRcp1y0WFR4DaOcJakfAA6fxYZsLp7XHEflf6TNU,6737
+eeglabio-0.1.1.dist-info/licenses/LICENSE,sha256=7AhTPMeTp5KvIHHrCWbrcOWxpl2SCjk9lcyMiCvWBIo,1517
+eeglabio-0.1.1.dist-info/METADATA,sha256=OpBQPDcf4NJfGonTXbC24SsTI4YB-CbaycAFxvCm5_s,3002
+eeglabio-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+eeglabio-0.1.1.dist-info/top_level.txt,sha256=7Z_D6nw6ppKDdFngxIEp7kf0AFqrsMhfOieXK-7afb8,9
+eeglabio-0.1.1.dist-info/RECORD,,
