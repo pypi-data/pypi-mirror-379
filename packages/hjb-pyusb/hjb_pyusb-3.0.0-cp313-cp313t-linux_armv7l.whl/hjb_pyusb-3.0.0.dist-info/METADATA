@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hjb_pyusb
+Version: 3.0.0
+Summary: Auto-generated package for hjb_pyusb
+Home-page: UNKNOWN
+Author: UNKNOWN
+License: UNKNOWN
+Platform: linux-armv7l
+Requires-Python: >=3.9
