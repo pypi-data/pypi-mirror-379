@@ -1,0 +1,8 @@
+pyspark_root_datasource/__init__.py,sha256=kco9cF527Hq_L_zuAgxrunjv5u_8z-qQRc-9ceDLhIA,486
+pyspark_root_datasource/_utils.py,sha256=ng_OSuTrQC2w6tLd0ZHobuyVxsi34685q-PTnprtuXE,6076
+pyspark_root_datasource/datasource.py,sha256=eZPo4EH6TnL4EES6nZtT3_lHl1_m6_cz-VJCBv3CBPg,14155
+pyspark_root_datasource-0.1.0.dist-info/licenses/LICENSE,sha256=xllut76FgcGL5zbIRvuRc7aezPbvlMUTWJPsVr2Sugg,11358
+pyspark_root_datasource-0.1.0.dist-info/METADATA,sha256=A3SwSgFtHLK7XRQmyUhsRh4f71CTMOL3n3PKNFz8gME,8745
+pyspark_root_datasource-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyspark_root_datasource-0.1.0.dist-info/top_level.txt,sha256=j78OdjzwfOU7kqr9rJwBS-yll0ZqMEQtwicV9bhIGmI,24
+pyspark_root_datasource-0.1.0.dist-info/RECORD,,
