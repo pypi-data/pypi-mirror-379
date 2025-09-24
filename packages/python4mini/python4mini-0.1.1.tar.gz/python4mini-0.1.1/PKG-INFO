@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: python4mini
+Version: 0.1.1
+Summary: Python4 MINI - Python with the addition of new functions to make life easier for programmers
+Home-page: 
+Author: KsDev
+Author-email: contatoksdev@tutamail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Python 4 MINI
+
+Python 4 MINI is a version with added functions to make your life easier, including:
+
+- Color prints (`say`, `csay`)
+- Repetitions (`times`)
+- Mathematical operations (`sum`, `sub`, `mul`, `div`, `perc`, `sqrt`)
+- Text manipulation (`upper`, `lower`, `reverse`, `length`)
+- Logic (`isEven`, `isOdd`, `greater`, `smaller`)
+- HUDs (`border`, `banner`, `mirror`)
+- Debug (`debug`, `typeOf`)
+
+Usage example:
+
+```python
+from python4mini import say, csay, sum, sqrt
+
+say("Hello World")
+csay("Colored message", "red")
+print(sum(1,2,3))
+print(sqrt(16))
