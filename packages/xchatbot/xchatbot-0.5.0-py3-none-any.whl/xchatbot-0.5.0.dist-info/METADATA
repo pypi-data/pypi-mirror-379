@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: xchatbot
+Version: 0.5.0
+Summary: the Xtensible XMPP Chat Bot
+Author-email: Fabio Comuni <fabrixxm@gmail.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://git.sr.ht/~fabrixxm/xchatbot
+Project-URL: Documentation, https://xchatbot.readthedocs.io/
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications :: Chat
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: nbxmpp<7.0.0,>=4.0.0
+Requires-Dist: PyGObject<3.60.0,>=3.40.0
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Dynamic: license-file
+
+# The Xtensible XMPP Chat Bot
+
+`XChatBot` is a xmpp bot library written in python using the 
+[nbxmpp library from Gajim](https://dev.gajim.org/gajim/python-nbxmpp/)
+
+![](https://readthedocs.org/projects/xchatbot/badge/?version=latest)  
+[https://xchatbot.readthedocs.io/](https://xchatbot.readthedocs.io/)
+
+## requirements
+
+- python 3
+- pygobject
+- nbxmpp
+
+optionally
+
+- pipenv
+
+## install
+
+    pip install xchatbot
+
+## git
+
+    git clone https://git.sr.ht/~fabrixxm/xchatbot
+
+install required packages:
+
+**with pipenv**
+
+    $ pipenv --site-packages --python 3
+    $ pipenv install
+    $ pipenv run ./xchatbot.py
+
+**on osx** you need first to install python3 with brew:
+
+    $ brew install python3 pipenv pygobject3 libsoup
+
+**on Arch**
+
+    # pacman -S python-gobject python-nbxmpp
+
+**on Debian**
+
+    # apt install python3-gi python3-nbxmpp
+
+
