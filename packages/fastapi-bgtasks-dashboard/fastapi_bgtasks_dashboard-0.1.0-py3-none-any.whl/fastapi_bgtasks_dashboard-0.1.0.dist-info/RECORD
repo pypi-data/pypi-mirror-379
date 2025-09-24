@@ -1,0 +1,10 @@
+fastapi_bgtasks_dashboard/__init__.py,sha256=EA6GgcoPYOheglht6TqFfAGrqMPwtRq1J4oSjj9KDuI,301
+fastapi_bgtasks_dashboard/core.py,sha256=ifmqgXXVtQK_0ufmd62kUxg3J3aa0IJzk9dXrYsgStY,3880
+fastapi_bgtasks_dashboard/dashboard.py,sha256=dm-2U0gpuBz5iVB_-cMLjDLd5fGBblX-U-gHbzx5cKA,14654
+fastapi_bgtasks_dashboard/route.py,sha256=lYlXR79C5DfdmQ6OBU8-Z-NaZVT-tDlZfUd8skthW6Y,769
+fastapi_bgtasks_dashboard/utils.py,sha256=_J2_MNjg5i2ERBqnCFskDjHT-iTIvcQCxCuTbdF8xtM,154
+fastapi_bgtasks_dashboard-0.1.0.dist-info/licenses/LICENSE,sha256=H5MrEgIotIoyx8inMBZsqin1oKdbLQixydvtCZc3Ld0,1069
+fastapi_bgtasks_dashboard-0.1.0.dist-info/METADATA,sha256=EdxPO2Jb1iLIWYeN0IVGJT4O46n7iwIjVN2XxlEf3io,4226
+fastapi_bgtasks_dashboard-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fastapi_bgtasks_dashboard-0.1.0.dist-info/top_level.txt,sha256=Xh3bst_iYyFKqi9h6eLtKXnX98e6OKv312NTScmzUJU,26
+fastapi_bgtasks_dashboard-0.1.0.dist-info/RECORD,,
