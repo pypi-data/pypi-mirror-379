@@ -1,0 +1,16 @@
+README.md
+setup.py
+torch_ms_adapter/__init__.py
+torch_ms_adapter/autograd.py
+torch_ms_adapter/data.py
+torch_ms_adapter/functional.py
+torch_ms_adapter/optim.py
+torch_ms_adapter/tensor.py
+torch_ms_adapter/training.py
+torch_ms_adapter.egg-info/PKG-INFO
+torch_ms_adapter.egg-info/SOURCES.txt
+torch_ms_adapter.egg-info/dependency_links.txt
+torch_ms_adapter.egg-info/requires.txt
+torch_ms_adapter.egg-info/top_level.txt
+torch_ms_adapter/nn/__init__.py
+torch_ms_adapter/nn/functional.py
