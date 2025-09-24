@@ -1,0 +1,17 @@
+agenzic/__init__.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+agenzic/__main__.py,sha256=kp8rBqv5-xgnhHv2V5waVYPZKPW0zDXGNbJ3muospB4,2906
+agenzic/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agenzic/commands/commit.py,sha256=ioL9OnSL2Z7ZaXowFjL_RE2biYAnMHLFsW7ABNN2zjE,1341
+agenzic/commands/docgen.py,sha256=GIyiEsKyrVX1oO3Hbt_Iv075BbkTZMP4M5l2R_kNKZo,3156
+agenzic/commands/review.py,sha256=pDEGh6uwa_Hck6_3zxFhZpxUoHFNh3IDjargm4gGIzs,1796
+agenzic/commands/summarize.py,sha256=SKEEKL9ce5VUxNbC22mVGF1pJgGvWpKY6Wzo73eB9lc,639
+agenzic/commands/tests.py,sha256=A2G1W-uUjbAD_plTZtHbrdWGqeOqXBsO1Dj9xuGT3Bo,1423
+agenzic/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agenzic/utils/ai_client.py,sha256=94m3tMMC7pvF62lbZ-R9TTJPlbAucdiPNoRxMf-dYFQ,782
+agenzic/utils/helpers.py,sha256=7dYlOMRnAc6JqCWybiP3xBdw5js_zQg8eNLF0zTSBtw,271
+agenzic-0.1.0.dist-info/licenses/LICENSE,sha256=DEmuGVjltH47OHFplbdNephmrwHoGmlb9q6QRE5X5iQ,1088
+agenzic-0.1.0.dist-info/METADATA,sha256=sNR-glWkQ4D7CljxHDBuGgmSmsFgdLgouT0OCPQHQAM,4965
+agenzic-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+agenzic-0.1.0.dist-info/entry_points.txt,sha256=ZtqSV8zv-mwv0pHEqATHt8LanHI1cGjbTiLQU62Dn-E,50
+agenzic-0.1.0.dist-info/top_level.txt,sha256=IoRN1PNsCKD5oyE0BFEKIqJDI9vSI2wy1z2uuxwyaM4,8
+agenzic-0.1.0.dist-info/RECORD,,
