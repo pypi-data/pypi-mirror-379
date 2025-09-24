@@ -1,0 +1,189 @@
+Metadata-Version: 2.4
+Name: openplaces
+Version: 0.1.0
+Summary: A Python package for place-based geospatial analysis
+Author-email: Christoph Nolte <nolte.christoph@gmail.com>, OpenPlaces Consortium <contact@openplaces.io>
+Maintainer-email: Christoph Nolte <nolte.christoph@gmail.com>, OpenPlaces Consortium <contact@openplaces.io>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/chrnolte/openplaces
+Project-URL: Documentation, https://openplaces.readthedocs.io/
+Project-URL: Repository, https://github.com/chrnolte/openplaces.git
+Project-URL: Bug Tracker, https://github.com/chrnolte/openplaces/issues
+Project-URL: Changelog, https://github.com/chrnolte/openplaces/blob/main/CHANGELOG.md
+Project-URL: Funding, https://openplaces.io/funding
+Keywords: geospatial,gis,places,property,parcels,sales,geography,spatial-analysis
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: geopandas>=0.13.0
+Requires-Dist: rasterio>=1.3.0
+Requires-Dist: pyproj>=3.4.0
+Requires-Dist: shapely>=2.0.0
+Requires-Dist: pyogrio>=0.7.0
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: pyarrow>=10.0.0
+Requires-Dist: openpyxl>=3.0.0
+Provides-Extra: analysis
+Requires-Dist: statsmodels>=0.14.0; extra == "analysis"
+Requires-Dist: scikit-learn>=1.3.0; extra == "analysis"
+Requires-Dist: rasterstats>=0.19.0; extra == "analysis"
+Provides-Extra: ml
+Requires-Dist: xgboost>=1.7.0; extra == "ml"
+Requires-Dist: lightgbm>=4.0.0; extra == "ml"
+Requires-Dist: catboost>=1.2.0; extra == "ml"
+Provides-Extra: viz
+Requires-Dist: matplotlib>=3.7.0; extra == "viz"
+Requires-Dist: plotly>=5.15.0; extra == "viz"
+Requires-Dist: folium>=0.15.0; extra == "viz"
+Requires-Dist: altair>=5.0.0; extra == "viz"
+Requires-Dist: seaborn>=0.12.0; extra == "viz"
+Provides-Extra: raster
+Requires-Dist: rioxarray>=0.15.0; extra == "raster"
+Requires-Dist: rio-cogeo>=4.0.0; extra == "raster"
+Requires-Dist: scikit-image>=0.21.0; extra == "raster"
+Requires-Dist: numba>=0.58.0; extra == "raster"
+Provides-Extra: dev
+Requires-Dist: jupyter>=1.0.0; extra == "dev"
+Requires-Dist: jupyterlab>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: sphinx>=7.0.0; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=1.3.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: openplaces[analysis,ml,raster,viz]; extra == "all"
+Provides-Extra: academic
+Requires-Dist: openplaces[analysis,viz]; extra == "academic"
+Requires-Dist: jupyter>=1.0.0; extra == "academic"
+Requires-Dist: matplotlib-scalebar>=0.8.0; extra == "academic"
+Dynamic: license-file
+
+# openplaces
+
+[![PyPI version](https://img.shields.io/pypi/v/openplaces.svg)](https://pypi.org/project/openplaces/)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.md)
+[![Docs](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://openplaces.readthedocs.io/en/latest/)
+
+**openplaces** is an open-source data and analytics platform for integrating parcel boundaries, environmental indicators, and socio‑economic data at scale.
+
+Maintained by researchers at academic institutions and released under the **Apache-2.0** license, it supports reproducible research for conservation, land policy, and environmental analytics.
+
+This repository is an inital commit with a sceleton structure and will be populated with code from sister projects 2025-2026.
+
+---
+
+## ✨ Features (goals)
+
+- Standardized **parcel-level** data ingestion and harmonization.
+- Connectors to **remote-sensing archives** (Landsat (LS), Sentinel, NAIP) and environmental datasets.
+- Utilities for **valuation modeling**, **conservation planning**, and spatial statistics.
+- Cloud/cluster-friendly workflows for **reproducibility** (containers, CI, distributed compute).
+- Modern Python stack (GeoPandas, Rasterio, Xarray, Dask, Scikit‑learn/PyTorch).
+
+---
+
+## 📦 Installation
+
+From PyPI:
+
+```bash
+pip install openplaces
+```
+
+From source (development):
+
+```bash
+git clone https://github.com/chrnolte/openplaces.git
+cd openplaces
+pip install -e .
+```
+
+Optional (recommended) extras:
+
+```bash
+# Example extras; adjust to your setup
+pip install "openplaces[dev,docs]"
+```
+
+---
+
+## 🚀 Quick Start
+
+> The snippet below is illustrative for intended use — consult the docs for the current interface.
+
+```python
+import openplaces as op
+
+# Load parcels for Middlesex, Massachusetts, United States
+parcels = op.load_parcels("US-MA-MI")
+
+# Join satellite-derived forest change
+parcels = op.join_forest_change(parcels)
+
+# Get sales dataset for hedonic analysis
+sales = op.get_sales(parcels)
+
+# Estimate land values
+values = op.estimate_land_values(parcels)
+print(values.describe())
+```
+
+---
+
+## 📖 Documentation
+
+- **User Guide:** https://openplaces.readthedocs.io/
+- **API Reference:** https://openplaces.readthedocs.io/en/latest/api/
+
+---
+
+## 🧭 Governance & Sustainability
+
+- **License:** Apache-2.0 (see [LICENSE.md](LICENSE.md)).
+- **Consortium:** Currently: informal network of international academic collaborators; new partners welcome.
+
+Contact: **contact@openplaces.io**
+
+---
+
+## 📜 License
+
+Released under the **Apache License 2.0**. See [LICENSE.md](LICENSE.md) for details.  
+© 2025 The openplaces Consortium.
+
+---
+
+## 📢 Citation
+
+If you use **openplaces** in academic work, please cite:
+
+```bibtex
+@misc{openplaces2025,
+  author       = {Christoph Nolte, openplaces Consortium},
+  title        = {openplaces: Global property data and analytics platform},
+  year         = {2025},
+  howpublished = {\url{https://github.com/chrnolte/openplaces}}
+}
+```
+
+---
+
+## 🙏 Acknowledgments
+
+This work has been supported in part by the U.S. National Science Foundation (NSF) and the National Aeronautics and Space Administration (NASA), together with partner institutions across multiple countries.
+
+Any opinions, findings, and conclusions or recommendations expressed are those of the authors and do not necessarily reflect the views of the supporting agencies.

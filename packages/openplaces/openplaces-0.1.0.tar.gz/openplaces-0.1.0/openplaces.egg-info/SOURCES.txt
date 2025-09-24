@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+pyproject.toml
+openplaces/__init__.py
+openplaces/main.py
+openplaces.egg-info/PKG-INFO
+openplaces.egg-info/SOURCES.txt
+openplaces.egg-info/dependency_links.txt
+openplaces.egg-info/requires.txt
+openplaces.egg-info/top_level.txt
