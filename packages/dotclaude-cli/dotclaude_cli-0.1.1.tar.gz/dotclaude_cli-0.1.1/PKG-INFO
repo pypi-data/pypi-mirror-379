@@ -1,0 +1,196 @@
+Metadata-Version: 2.4
+Name: dotclaude-cli
+Version: 0.1.1
+Summary: Universal CLI tool for managing AI agent configurations across different platforms
+Project-URL: Homepage, https://github.com/FradSer/dotclaude-cli
+Project-URL: Repository, https://github.com/FradSer/dotclaude-cli
+Project-URL: Documentation, https://github.com/FradSer/dotclaude-cli
+Project-URL: Bug Tracker, https://github.com/FradSer/dotclaude-cli/issues
+Author-email: FradSer <frad@frad.io>
+License: MIT
+Keywords: agents,ai,claude,configuration,copilot,cursor,sync
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Requires-Dist: aiofiles<24.0.0,>=23.0.0
+Requires-Dist: click<9.0.0,>=8.1.7
+Requires-Dist: gitpython<4.0.0,>=3.1.40
+Requires-Dist: inquirer<4.0.0,>=3.1.0
+Requires-Dist: pydantic<3.0.0,>=2.0.0
+Requires-Dist: rich<14.0.0,>=13.7.0
+Requires-Dist: ruamel-yaml<0.19.0,>=0.18.5
+Requires-Dist: typer<0.19.0,>=0.18.0
+Provides-Extra: dev
+Requires-Dist: black<24.0.0,>=23.12.0; extra == 'dev'
+Requires-Dist: coverage[toml]<8.0.0,>=7.3.0; extra == 'dev'
+Requires-Dist: mypy<2.0.0,>=1.8.0; extra == 'dev'
+Requires-Dist: pre-commit<4.0.0,>=3.6.0; extra == 'dev'
+Requires-Dist: pyinstaller<7.0.0,>=6.3.0; extra == 'dev'
+Requires-Dist: pytest-asyncio<1.0.0,>=0.21.0; extra == 'dev'
+Requires-Dist: pytest-cov<5.0.0,>=4.1.0; extra == 'dev'
+Requires-Dist: pytest-mock<4.0.0,>=3.12.0; extra == 'dev'
+Requires-Dist: pytest<8.0.0,>=7.4.3; extra == 'dev'
+Requires-Dist: ruff<1.0.0,>=0.1.9; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# DotAgent CLI
+
+> Universal CLI tool for managing AI agent configurations across different platforms - currently supports Claude Code with planned support for GitHub Copilot, Cursor, and more
+
+[![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Code Style](https://img.shields.io/badge/code%20style-black-black.svg)](https://github.com/psf/black)
+
+DotAgent is a universal CLI tool for managing AI agent configurations. Currently supports Claude Code with robust bidirectional synchronization between local (`~/.claude/`) and remote GitHub repositories. Future versions will add support for GitHub Copilot, Cursor, and other AI development tools.
+
+## 🎯 Current Support
+
+**Claude Code** - Full synchronization support:
+- Agents, commands, and CLAUDE.md configuration files
+- Bidirectional sync with intelligent conflict resolution
+- Project-specific agent management
+
+## Installation
+
+### Via pip (recommended)
+```bash
+pip install dotagent
+```
+
+### Via uv
+```bash
+uv tool install dotagent
+```
+
+### Development Installation
+```bash
+git clone https://github.com/FradSer/dotclaude-cli.git
+cd dotclaude-cli
+uv venv && source .venv/bin/activate
+uv pip install -e ".[dev]"
+```
+
+## Setup Configuration Repository
+
+Before using DotAgent, you need a configuration repository:
+
+1. **Fork the default repository**: https://github.com/FradSer/dotclaude
+2. **Customize your configurations** in the forked repository
+3. **Use your fork** when syncing:
+   ```bash
+   dotagent claude sync --repo yourusername/dotclaude
+   ```
+
+Or use the default repository directly:
+```bash
+dotagent claude sync  # Uses github.com/FradSer/dotclaude
+```
+
+## Usage
+
+### Basic Commands
+
+```bash
+# Sync global Claude configurations
+dotagent claude sync
+
+# Check sync status
+dotagent claude status
+
+# Include project-specific agents
+dotagent claude sync --local
+```
+
+### Repository Options
+
+```bash
+# Use custom repository
+dotagent claude sync --repo user/repo
+
+# Use specific branch
+dotagent claude sync --branch develop
+
+# Preview changes
+dotagent claude sync --dry-run
+
+# Force overwrite conflicts
+dotagent claude sync --force
+```
+
+### What Gets Synced
+
+**Global Items** (always synced):
+- `~/.claude/agents/` ↔ `remote:agents/`
+- `~/.claude/commands/` ↔ `remote:commands/`
+- `~/.claude/CLAUDE.md` ↔ `remote:CLAUDE.md`
+
+**Project Items** (only with `--local`):
+- `remote:local-agents/*.md` → `.claude/agents/`
+
+When using `--local`, you'll see a checkbox interface to select which `.md` files to copy from the remote `local-agents/` directory.
+
+### Repository Formats
+
+All these formats work:
+- `https://github.com/user/repo`
+- `git@github.com:user/repo.git`
+- `user/repo`
+
+## Examples
+
+```bash
+# Basic sync
+dotagent claude sync
+
+# Sync with project agents
+dotagent claude sync --local
+
+# Use custom repo and branch
+dotagent claude sync --repo company/configs --branch main --local
+
+# Check what would change
+dotagent claude status
+dotagent claude sync --dry-run
+```
+
+## Development
+
+```bash
+# Setup
+uv pip install -e ".[dev]"
+
+# Test
+pytest
+
+# Quality checks
+black src tests && ruff check src tests && mypy src
+
+# Build
+uv build
+```
+
+## Requirements
+
+- Python 3.9+
+- Git
+- GitHub repository with Claude Code configurations
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file.
+
+## Links
+
+- [Tool Repository](https://github.com/FradSer/dotclaude-cli) - This CLI tool
+- [Default Config Repository](https://github.com/FradSer/dotclaude) - Fork this for your configs
+- [Issues](https://github.com/FradSer/dotclaude-cli/issues)
+- [Claude Code Documentation](https://docs.anthropic.com/claude/docs)
