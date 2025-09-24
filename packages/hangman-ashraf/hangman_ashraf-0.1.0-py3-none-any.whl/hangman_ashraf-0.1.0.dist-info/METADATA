@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: hangman_ashraf
+Version: 0.1.0
+Summary: لعبة الرجل المشنوق (Hangman) بسيطة باللغة العربية
+Home-page: https://example.com/hangman_ashraf
+Author: أشرف عبدالملك
+Author-email: ashraf@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# hangman_ashraf
+
+لعبة الرجل المشنوق (Hangman) بسيطة مكتوبة بالبايثون وباللغة العربية.
+
+التشغيل محلياً:
+- python -m hangman_ashraf
+
+بعد التثبيت:
+- hangman-ashraf
+
+المؤلف: أشرف عبدالملك
