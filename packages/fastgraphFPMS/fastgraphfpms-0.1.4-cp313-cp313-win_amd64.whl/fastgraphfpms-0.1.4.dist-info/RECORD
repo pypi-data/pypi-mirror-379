@@ -1,0 +1,14 @@
+fastgraphFPMS.cp313-win_amd64.pyd,sha256=5CxhsDLBHfGfHE7p9xXiya-UUlgJ1tqzBvOc-_d39ck,182784
+examples/basic_usage.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastgraphfpms-0.1.4.dist-info/licenses/LICENSE,sha256=QVBn0GPG4F4FtZVYfEYiby3MFWs_zCp5RqK3s3LTCt8,1074
+python/fastgraphFPMS_module.cpp,sha256=QgRc3-OmV992DYVqJDR3qZMeoWR9EHQKXKeCdAWhZFI,3584
+src/graph.cpp,sha256=Zq1kflbOoXS84fIBYWgm1JNq8g_01e-14wuKAURbe7M,3050
+src/graph.h,sha256=IXGuj3U5JD2QoBJfUXvNtVQpnFYy5wu650ZG8zPiDNo,833
+tests/input_1.txt,sha256=wYNMyajlDSPudP-aCTPpYYGgLQgrLHXwQJj5I3VfloA,57
+tests/output_1.txt,sha256=3rg07cqjoLGaaKu922KcdRPfbw33KZw4NrgrhN7Mhww,61
+tests/test_basic.py,sha256=c-ybwmmStFX2QVzwQE4q76slIrrQaeDB2wAM63xXwQs,212
+tests/test_performance.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastgraphfpms-0.1.4.dist-info/METADATA,sha256=AExrS2bVXvW6aBCBxdUEq7lDbzlEJG9z2iHnZWw_-Hw,1029
+fastgraphfpms-0.1.4.dist-info/WHEEL,sha256=qV0EIPljj1XC_vuSatRWjn02nZIz3N1t8jsZz7HBr2U,101
+fastgraphfpms-0.1.4.dist-info/top_level.txt,sha256=p4GsoiFWQBwBLXCkMZiYUj0F6lCgcd0qrxB9m2VTmZg,40
+fastgraphfpms-0.1.4.dist-info/RECORD,,
