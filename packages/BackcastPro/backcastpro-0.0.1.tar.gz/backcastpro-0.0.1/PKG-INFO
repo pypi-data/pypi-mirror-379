@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: BackcastPro
+Version: 0.0.1
+Summary: A small example package
+Author-email: 笹澤ようすけ <yosuke.sasazawa@gmail.com>
+Project-URL: Homepage, https://BackcastPro.github.io/BackcastPro/
+Project-URL: Issues, https://github.com/BackcastPro/BackcastPro/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
