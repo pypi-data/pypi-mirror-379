@@ -1,0 +1,14 @@
+example/check_license.py,sha256=iUvQvfcSXDGkl19uAdMyGVGwt-6FtvxYitdJpnujdXU,1717
+example/example.py,sha256=CFxAD6Qv5eVz-7FClnQIYCrr_yQYxOJCA0elR8UpnpE,1382
+license_tool/__init__.py,sha256=2Re59R8Iia6fj2CRUWyD8ojBSyh2xClikfA9aCSmUtE,272
+license_tool/_version.py,sha256=-vIaxlWHbec4R2IIZib5PlGNL7wUi5jhf07P2Bx8cuY,746
+license_tool/cli.cp312-win_amd64.pyd,sha256=tmDZs2BAWtAbT1QCC3wUuJj2swG70cvhj3YWPdxMTVU,41472
+license_tool/keygen.cp312-win_amd64.pyd,sha256=iXfvHugWbCIWKvaqHHxS_jPBfG-71lwFUp7MOlaysAo,50176
+license_tool/key/__init__.py,sha256=QQRCiINgHLAx55SlWgEMLoYPyKP8i4aakAY9SfDiuek,184
+license_tool/key/signer.cp312-win_amd64.pyd,sha256=hOSc-6RculirzSTp4_OUNJdp-IC3NanQ5GLSiJ8MXyI,51712
+license_tool/key/verifier.cp312-win_amd64.pyd,sha256=JZE10toZWzlwTwuLLsnKOu1sITjlS2RVEa_-BAxlAvM,51200
+license_tool_ias-0.1.1.dist-info/METADATA,sha256=rjyyFTEja1aef_aC-weS8NW6nkip4rxZDsZee18FSlQ,2799
+license_tool_ias-0.1.1.dist-info/WHEEL,sha256=8UP9x9puWI0P1V_d7K2oMTBqfeLNm21CTzZ_Ptr0NXU,101
+license_tool_ias-0.1.1.dist-info/entry_points.txt,sha256=CanK69xH3QdAvNn4lv4p759H-KE0dL-35Z91CPaZcgE,55
+license_tool_ias-0.1.1.dist-info/top_level.txt,sha256=zhbbr1zdaG4NoTfhLe_7payS4ARGfLUUKBc4bICEN64,43
+license_tool_ias-0.1.1.dist-info/RECORD,,
