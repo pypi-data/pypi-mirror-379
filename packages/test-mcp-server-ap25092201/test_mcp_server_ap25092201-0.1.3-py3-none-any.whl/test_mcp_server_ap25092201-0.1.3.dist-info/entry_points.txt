@@ -1,0 +1,3 @@
+[console_scripts]
+test-mcp-server=test_mcp_server_ap25092201.prompt_server:main
+
