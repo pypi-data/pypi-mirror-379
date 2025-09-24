@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: abdalelah-calculator
+Version: 0.1.0
+Summary: آلة حاسبة احترافية ببايثون
+Author-email: abdalelah-calculator <alzaydybdalalh1@gmail.com>
+License: MIT License
+        Copyright (c) 2025 Your abod
+        
+Project-URL: Homepage, https://pypi.org/project/abdalelah/
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Calculator
+
+مكتبة بايثون لآلة حاسبة احترافية:
+- العمليات الأساسية: جمع، طرح، ضرب، قسمة.
+- العمليات المتقدمة: قوة، جذر تربيعي، مضروب، جيب، جيب تمام، ظل.
+
+## مثال استخدام
+```python
+from calculator import Calculator, AdvancedCalculator
+
+c = Calculator()
+print(c.add(5, 3))   # 8
+
+adv = AdvancedCalculator()
+print(adv.sqrt(16))  # 4.0
