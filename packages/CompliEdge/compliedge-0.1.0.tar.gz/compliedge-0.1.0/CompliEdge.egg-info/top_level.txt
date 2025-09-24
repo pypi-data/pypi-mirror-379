@@ -1,0 +1,12 @@
+ai
+compliance
+compliedge
+dashboard
+governance
+notifications
+pages
+permissions
+risk
+security
+users
+workflow
