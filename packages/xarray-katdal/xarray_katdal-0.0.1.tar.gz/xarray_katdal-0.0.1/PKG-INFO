@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: xarray-katdal
+Version: 0.0.1
+Summary: Add your description here
+Author: Simon Perkins
+Author-email: Simon Perkins <simon.perkins@gmail.com>
+Requires-Dist: katdal>=0.23
+Requires-Dist: xarray>=2024.7.0
+Requires-Dist: pytest>=8.4.2 ; extra == 'testing'
+Requires-Dist: zarr>=2.18.3 ; extra == 'testing'
+Requires-Python: >=3.10
+Provides-Extra: testing
+Description-Content-Type: text/markdown
+
