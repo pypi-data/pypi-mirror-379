@@ -1,0 +1,3 @@
+[pytest11]
+route256_7_1_plugin=lesson-7-1-plugin.plugin
+
