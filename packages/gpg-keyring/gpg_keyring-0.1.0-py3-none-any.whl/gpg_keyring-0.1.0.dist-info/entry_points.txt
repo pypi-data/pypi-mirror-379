@@ -1,0 +1,2 @@
+[keyring.backends]
+gpg = gpg_keyring
