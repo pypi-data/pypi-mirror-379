@@ -1,0 +1,187 @@
+Metadata-Version: 2.4
+Name: agentrylab
+Version: 0.2.0
+Summary: Lightweight, hackable multi-agent orchestration lab (CLI + Python) with transcripts, checkpoints, budgets, and pluggable providers/tools.
+Author: Alexey Kislitsin
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Alexeyisme/agentrylab
+Project-URL: Repository, https://github.com/Alexeyisme/agentrylab
+Project-URL: Documentation, https://github.com/Alexeyisme/agentrylab/tree/main/src/agentrylab/docs
+Project-URL: Issues, https://github.com/Alexeyisme/agentrylab/issues
+Keywords: multi-agent,llm,ai-agents,agent-orchestration,python,yaml-config,cli-tool,research,experimentation,ai-development,openai,ollama,llama3,transcripts,checkpoints,streaming,hackable,lightweight,lab,workflow-engine
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.7
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: jsonschema>=4.22.0
+Requires-Dist: typer>=0.12.3
+Requires-Dist: rich>=13.7.1
+Requires-Dist: ddgs>=1.8.0
+Requires-Dist: wolframalpha>=5.0.0
+Requires-Dist: python-dotenv>=1.0.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.2; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.24.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.11.1; extra == "dev"
+Requires-Dist: ruff>=0.6.9; extra == "dev"
+Requires-Dist: pyright>=1.1.381; extra == "dev"
+Requires-Dist: types-PyYAML>=6.0.12.20240808; extra == "dev"
+Requires-Dist: types-jsonschema>=4.23.0.20240813; extra == "dev"
+Dynamic: license-file
+
+# 🧪 AgentryLab
+
+**Multi-agent orchestration made simple. Drop in agents, watch the magic happen.**
+
+<p align="center">
+  <a href="https://github.com/Alexeyisme/agentrylab/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Alexeyisme/agentrylab/actions/workflows/ci.yml/badge.svg" /></a>
+  <a href="https://pypi.org/project/agentrylab/"><img alt="PyPI" src="https://img.shields.io/pypi/v/agentrylab.svg" /></a>
+  <a href="https://pypi.org/project/agentrylab/"><img alt="License" src="https://img.shields.io/pypi/l/agentrylab.svg" /></a>
+  <a href="https://pypi.org/project/agentrylab/"><img alt="Python" src="https://img.shields.io/pypi/pyversions/agentrylab.svg" /></a>
+</p>
+
+## 🚀 Quick Start
+
+```bash
+pip install agentrylab
+
+# Comedy gold
+agentrylab run standup_club.yaml --objective "remote work" --max-iters 4
+
+# Real debates with evidence  
+agentrylab run debates.yaml --objective "Should we colonize Mars?" --max-iters 4
+
+# Facebook Marketplace deals finder
+agentrylab run marketplace_deals.yaml --objective "MacBook Pro deals"
+```
+
+## 🎭 What You Get
+
+**5 killer presets** that actually work:
+
+| Preset | What It Does | Cool Factor |
+|--------|-------------|-------------|
+| 🎤 **Stand-Up Club** | Two comedians + MC | Comedy gold, pure entertainment |
+| 🏛️ **Debates** | Pro/con + evidence search | Real web research, actual citations |
+| 🔬 **Research** | Scientists collaborate | Academic rigor meets AI |
+| 🤖 **Research Assistant** | Interactive research chat | Human-in-the-loop web research |
+| 🛒 **Marketplace Deals** | Facebook Marketplace finder | Real listings, real URLs, real deals |
+
+## 🧠 Core Concepts
+
+- **Agents**: Roles that speak (comedian, scientist, debater — no limits!)
+- **Tools**: Real integrations (DuckDuckGo search, Facebook Marketplace, Wolfram Alpha)
+- **Providers**: LLM backends (OpenAI, Ollama)
+- **Schedulers**: Who talks when (round-robin, every-N)
+
+## 🛠️ Installation & Setup
+
+```bash
+# Install
+pip install agentrylab
+
+# Optional: Local models with Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+ollama pull llama3
+
+# Optional: API keys in .env
+echo "OPENAI_API_KEY=sk-..." >> .env
+echo "APIFY_API_TOKEN=apify_..." >> .env
+```
+
+## 🎯 Examples
+
+### Comedy Club
+```bash
+agentrylab run standup_club.yaml --objective "AI taking over the world" --max-iters 6
+```
+
+### Real Research
+```bash
+agentrylab run research.yaml --objective "quantum biology breakthroughs"
+```
+
+### Interactive Research
+```bash
+# Start conversation
+agentrylab run research_assistant.yaml --objective "latest AI developments"
+
+# Jump in anytime
+agentrylab say research_assistant.yaml demo "What about quantum computing?"
+agentrylab run research_assistant.yaml --thread-id demo --resume --max-iters 1
+```
+
+### Marketplace Deals
+```bash
+agentrylab run marketplace_deals.yaml --objective "iPhone 15 Pro deals in NYC"
+
+# With structured inputs (user_inputs) non-interactively
+agentrylab run marketplace_deals.yaml \
+  --params '{"query":"MacBook Pro 14 M3","location":"Tel Aviv","min_price":5000,"max_price":12000}'
+```
+
+### Telegram-style parameter collection (concept)
+- Presets may declare a `user_inputs` section. If required inputs are missing when starting a conversation via the Telegram adapter, the conversation enters `COLLECTING` status until inputs are provided.
+- Adapter helpers:
+  - `provide_user_param(conversation_id, key, value)`: supply a single input; returns remaining keys
+  - `finalize_params_and_start(conversation_id)`: substitute values, initialize the lab, transition to `ACTIVE`
+
+This enables progressive, chat-like forms for complex scenarios (e.g., location, radius, min/max price) while still supporting one-shot runs with `--params`.
+
+## 🐍 Python API
+
+```python
+from agentrylab import init
+
+# Start a comedy show
+lab = init("standup_club.yaml", experiment_id="comedy-night")
+lab.run(rounds=6)
+
+# Check out the show
+for msg in lab.state.history:
+    print(f"[{msg['role']}]: {msg['content']}")
+```
+
+## 🔧 Advanced Features
+
+- **Real-time streaming**: Watch agents work live
+- **Resume anywhere**: Pick up where you left off
+- **Tool budgets**: Prevent runaway API costs
+- **Human-in-the-loop**: Jump into conversations anytime
+- **Persistence**: Everything saved to SQLite + JSONL
+
+## 📚 Documentation
+
+- [CLI Reference](src/agentrylab/docs/CLI.md) - All commands
+- [Configuration](src/agentrylab/docs/CONFIG.md) - YAML preset format
+- [Architecture](src/agentrylab/docs/ARCHITECTURE.md) - How it works
+- [Persistence](src/agentrylab/docs/PERSISTENCE.md) - Data storage format
+
+## 🤝 Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+**Quick wins:**
+- New presets (comedy, debates, research, etc.)
+- New tools (APIs, databases, etc.)
+- New providers (Claude, Gemini, etc.)
+
+## 📄 License
+
+MIT - Go build something amazing!
+
+---
+
+**Made with ❤️ for the AI community. Because single agents are boring.** 🤖
