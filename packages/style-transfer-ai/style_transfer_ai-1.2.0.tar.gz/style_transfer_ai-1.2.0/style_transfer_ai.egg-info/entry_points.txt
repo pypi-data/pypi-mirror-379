@@ -1,0 +1,3 @@
+[console_scripts]
+style-transfer-ai = src.main:cli_entry_point
+style-transfer-ai-config = check_config:main
