@@ -1,0 +1,11 @@
+phandas/__init__.py,sha256=O8twbZZiPIvUb6_h3UW12diqYJMQT3NgF6ENUS4BaXg,2172
+phandas/backtest.py,sha256=B0dnerybkwnm4x6jMA1MGzQgtNpF_IMK2eRmZaARKIg,17692
+phandas/core.py,sha256=SN8BE0IIHEU4L3-s8MZsZ3HF_zliItt2JFchMhAvHkQ,51981
+phandas/data.py,sha256=5I-eX5d9-r7DxUcTZivCFTFVU26gf7v_CgXwZklsyGA,6670
+phandas/operators.py,sha256=M6qY92D0DpaUQbdXDP4pQ8JctaqwpS5_eXptr95EOP8,12680
+phandas/utils.py,sha256=9CxLp4aGLk9Ez1n0ZagaiBi1qrPbmgMo6mYLJtYOopQ,1666
+phandas-0.4.1.dist-info/licenses/LICENSE,sha256=t560eCmI7liwl97sO3Of-JXpGNvopNV5rmNyQn8qc2g,1096
+phandas-0.4.1.dist-info/METADATA,sha256=Fprav3ckbKzSZYxmiJeGGhR2gjfsmn20lgXHfoyyUYs,3888
+phandas-0.4.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+phandas-0.4.1.dist-info/top_level.txt,sha256=EZatGgXv4ruTR_jzXtJl9w7adDYFM9ydM30uCTBr1wU,8
+phandas-0.4.1.dist-info/RECORD,,
