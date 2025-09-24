@@ -1,0 +1,11 @@
+devstash/__init__.py,sha256=-zz8MZcJgdawV55LzhP6C7rIqlAszPS1xJk7Y8o6Z68,1197
+devstash/__main__.py,sha256=Oqf3y8f_zKpM3hiwUAM3xrLnIM2dxGA5vlPZ-2KcZ8A,706
+devstash/_ast_rewrite.py,sha256=wcVzHRXdV5JA0DaCUepRcqlSQgU6I_JFnU3yFeC89F4,2167
+devstash/_cache.py,sha256=nSYBA5E0RnEkTbAvYxlioxE6DNhT7C6jFxi4jE-q-D0,4172
+devstash/cli.py,sha256=Mo92hO4IEtGFMa5Tu_qVdfLVPtD8q1BE3buo_SGqZSs,3303
+devstash-0.1.1.dist-info/licenses/LICENSE,sha256=oIdPRhGC2wpQA2tkLQOwA3ZXrpeH0whi1Hyr4CDGhKY,1070
+devstash-0.1.1.dist-info/METADATA,sha256=-fh1UJC1ubY9Q5BWVjGr2-eZnE4eeqy4MWle_ACl7F8,14686
+devstash-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+devstash-0.1.1.dist-info/entry_points.txt,sha256=PwXGZfFhCJcBSPXOxbHT1Q5d2sMlXbZv_7fhrdvF8Vg,47
+devstash-0.1.1.dist-info/top_level.txt,sha256=OOEbOCKu8cEf6uL3Zo6kqR0Eoahd-n5hGMVYRdYh3kU,9
+devstash-0.1.1.dist-info/RECORD,,
