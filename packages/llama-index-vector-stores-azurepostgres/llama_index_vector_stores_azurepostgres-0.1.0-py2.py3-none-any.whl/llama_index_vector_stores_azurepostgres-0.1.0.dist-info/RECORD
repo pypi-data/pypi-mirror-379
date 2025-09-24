@@ -1,0 +1,11 @@
+llama_index/vector_stores/azure_postgres/__init__.py,sha256=37-HMwFaSHsPI0QpJbTpQwffDEzyWgUNZLDOOfXJxNg,159
+llama_index/vector_stores/azure_postgres/base.py,sha256=0vQIQALqrbWckP53ouWTcsp6Do2k2B--rPyNfRs0arA,14212
+llama_index/vector_stores/azure_postgres/common/__init__.py,sha256=QYYz1LlNXPWRRLy8KzdIORbg-nwgfctWKg6jfX1KWqk,1410
+llama_index/vector_stores/azure_postgres/common/_base.py,sha256=gOepKCc8-In3J0YO2IQ6WshxhRWVdMsaq2_5WesahsE,32746
+llama_index/vector_stores/azure_postgres/common/_connection.py,sha256=A_-GMGhcolbBdT8wtB_QA6ZN9WudDAbZTWQY5fAUIXI,8196
+llama_index/vector_stores/azure_postgres/common/_shared.py,sha256=tNzMev3edz-7m_IvyZVVGwgTCK3QP-JKF5ZN7Q9-fuw,14729
+llama_index/vector_stores/azure_postgres/common/aio/__init__.py,sha256=fGTKyD3lEqNh7AJPvaRTJJESYbF4G6_NnxT7cQCcneo,374
+llama_index/vector_stores/azure_postgres/common/aio/_connection.py,sha256=r8DwGmnuRHyAaZvTtiDAjg2KSZ_dsPzQjjOxPc4_BdI,8528
+llama_index_vector_stores_azurepostgres-0.1.0.dist-info/METADATA,sha256=d3sdkURE8CWzPw_NaEIR2lngxD7ziYXvIKkXDtl1hzM,3052
+llama_index_vector_stores_azurepostgres-0.1.0.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+llama_index_vector_stores_azurepostgres-0.1.0.dist-info/RECORD,,
