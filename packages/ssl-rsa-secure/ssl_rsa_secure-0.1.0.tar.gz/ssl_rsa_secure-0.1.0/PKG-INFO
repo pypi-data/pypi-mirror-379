@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ssl-rsa-secure
+Version: 0.1.0
+Summary: A secure package with SSL and RSA utility modules
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/ssl-rsa-secure
+Project-URL: Repository, https://github.com/yourusername/ssl-rsa-secure
+Keywords: ssl,rsa,aes,encryption,security
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pycryptodome>=3.14.1
+Requires-Dist: cryptography>=40.0.0
+Requires-Dist: authlib>=1.2.0
