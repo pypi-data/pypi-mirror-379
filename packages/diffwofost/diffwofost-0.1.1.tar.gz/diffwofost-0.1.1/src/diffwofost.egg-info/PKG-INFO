@@ -1,0 +1,71 @@
+Metadata-Version: 2.4
+Name: diffwofost
+Version: 0.1.1
+Summary: Differentiable WOFOST
+Author-email: Sarah Alidoost <f.alidoost@esciencecenter.nl>
+License: # Licensed under the EUPL, Version 1.1 or – as soon they
+        # will be approved by the European Commission - subsequent
+        # versions of the EUPL (the "Licence");
+        # You may not use this work except in compliance with the
+        # Licence.
+        # You may obtain a copy of the Licence at:
+        
+        # http://ec.europa.eu/idabc/eupl
+        
+        # Unless required by applicable law or agreed to in
+        # writing, software distributed under the Licence is
+        # distributed on an "AS IS" basis,
+        # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+        # express or implied.
+        # See the Licence for the specific language governing
+        # permissions and limitations under the Licence.
+        
+Project-URL: Repository, https://github.com/WUR-AI/diffwofost
+Project-URL: Issues, https://github.com/WUR-AI/diffwofost/issues
+Keywords: pytorch, differentiable, crop, optimization
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: pcse
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mkdocs-jupyter; extra == "docs"
+Requires-Dist: mkdocstrings[python]; extra == "docs"
+Requires-Dist: mkdocs-gen-files; extra == "docs"
+Requires-Dist: mkdocs-include-markdown-plugin; extra == "docs"
+Requires-Dist: jupyterlab; extra == "docs"
+Requires-Dist: matplotlib; extra == "docs"
+Dynamic: license-file
+
+# diffWOFOST
+
+The python package `diffWOFOST` is a differentiable implementation of WOFOST models using [`torch`](https://pytorch.org/), 
+allowing gradients to flow through the simulations for optimization and data assimilation.
+
+The python implementation of WOFOST is available at
+[`PCSE`](https://pcse.readthedocs.io/en/stable/). For more information about the
+models, the functional components of PCSE, and documentation have a look at the
+following links:
+
+- [Models available in PCSE](https://pcse.readthedocs.io/en/stable/available_models.html#models-available-in-pcse)
+- [The Engine](https://pcse.readthedocs.io/en/stable/reference_guide.html#the-engine)
+- [PCSE source code](https://github.com/ajwdewit/pcse)
+- [PCSE example notebooks](https://github.com/ajwdewit/pcse_notebooks): examples of optimization and data assimilation are notebooks number 8 and 9.
+- [WOFOST_crop_parameters](https://github.com/ajwdewit/WOFOST_crop_parameters): each branch contains the crop parameters for a specific crop model version
+
+  
