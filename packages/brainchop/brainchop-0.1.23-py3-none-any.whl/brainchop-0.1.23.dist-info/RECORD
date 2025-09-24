@@ -1,0 +1,17 @@
+brainchop/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+brainchop/cli.py,sha256=Sc-yyyvQclTkMO3Qw73dbUONMTqhG6C8O1Tu-btPJmo,24682
+brainchop/main.py,sha256=Ok0audwYVkvV5LJMMG9Ktn3Nodvl9496dbgXZ0WJRNA,314
+brainchop/tfjs_meshnet.py,sha256=4hiVXAOwpIqrp25JHUj886FCQAhu_QMtTwg3wSgvaeU,6178
+brainchop/tiny_meshnet.py,sha256=L8KXROPyBm7Ob1FFn59fjsnxNWafkrmXhSW492LS3FI,4294
+brainchop/types.py,sha256=-2wZsSUu1M9BL4mmEvMevzw2wlRxeqPk8o-1vzxnHs0,23108
+brainchop/utils.py,sha256=Om7YETlDR94Qady2E4242VaqFfVusbw2spd4ASBXVbM,12025
+brainchop/niimath/__init__.py,sha256=Ox5LeIRLnR2nCO5WmAhFmaOvrXdwC8sqO1C0jNgDPqE,16060
+brainchop-0.1.23.dist-info/licenses/LICENSE,sha256=hxJPYExi_agShTqPFAn10IQfV9Jnr7nrSb4708_llY8,1066
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_batching.py,sha256=HOOLRbTcekyZWtj9mh1RT0VVm6E7NvetofptuhX8Eck,7079
+tests/visual.py,sha256=YKMUIhRBH4foSpyiV0TZgWB_PWlajZBITci6f_Ri5SA,2441
+brainchop-0.1.23.dist-info/METADATA,sha256=VZHUxP08PKoFtbDwE_RG58vzU9Jan9_glZ-jr2SOgaY,1935
+brainchop-0.1.23.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+brainchop-0.1.23.dist-info/entry_points.txt,sha256=OtPeN3BNO5KV6lPYH_0yep4zcvwqbsCFQv4Oq4HqHBI,50
+brainchop-0.1.23.dist-info/top_level.txt,sha256=D6JBjGeGijODszxup_QO_uJC8m_RoY5FHiDBAA-Etsc,16
+brainchop-0.1.23.dist-info/RECORD,,
