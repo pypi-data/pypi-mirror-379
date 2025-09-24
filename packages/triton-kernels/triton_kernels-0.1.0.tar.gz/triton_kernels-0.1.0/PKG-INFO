@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: triton-kernels
+Version: 0.1.0
+Summary: Triton kernels and utilities from Kernelize AI
+Author-email: Matthew Leone <matt@kernelize.ai>
+Maintainer: Kernelize AI
+Project-URL: Homepage, https://github.com/kernelize-ai/triton-kernels
+Project-URL: Repository, https://github.com/kernelize-ai/triton-kernels
+Project-URL: Issues, https://github.com/kernelize-ai/triton-kernels/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.1
+Requires-Dist: triton>=2.1
+
+# triton_kernels
+A repository of the major Triton kernels for running various ML models

@@ -1,0 +1,2 @@
+[console_scripts]
+triton-kernels-cli = triton_kernels.utils.__main__:main
