@@ -1,0 +1,587 @@
+# Polarion ALM MCP Server
+
+A Model Context Protocol (MCP) server for Polarion ALM (Application Lifecycle Management) integration. This server provides comprehensive tools for managing projects, work items, attachments, comments, linked work items, and other ALM operations through the Polarion REST API.
+
+## Features
+
+- **Project Management**: List and retrieve project information with flexible field filtering
+- **Work Item Operations**: Create, read, update, delete, and query work items with full relationship support
+- **Assignee Management**: Add and retrieve work item assignees
+- **Attachment Handling**: Upload, list, download, and remove attachments
+- **Comment System**: Add, list, update, and remove comments with structured data support
+- **Linked Work Items**: Create, update, delete, and query linked work items with role-based relationships
+- **Advanced Query Support**: Comprehensive query parameters including pagination, field filtering, and includes
+- **Relationship Management**: Detailed support for assignees, categories, linked revisions, votes, and watches
+
+## Installation
+
+### Option 1: Local Development Setup
+
+1. Clone this repository:
+```bash
+git clone <repository-url>
+cd alm-mcp
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up environment variables (optional):
+```bash
+cp .env.example .env
+# Edit .env with your Polarion credentials
+```
+
+### Option 2: Package Installation (Future)
+
+```bash
+# For future package distribution
+uvx alm-mcp
+# or
+pip install alm-mcp
+```
+
+## Configuration
+
+The MCP server supports multiple configuration methods with the following priority:
+
+1. **Command line arguments** (highest priority)
+2. **Environment variables** (lower priority)
+
+### Authentication
+
+For security reasons, only **personal access tokens** are supported:
+
+- `POLARION_ACCESS_TOKEN` or `--access-token`
+
+### Environment Variables
+
+Create a `.env` file with the following variables:
+
+```env
+POLARION_BASE_URL=your-alm-base-url
+POLARION_ACCESS_TOKEN=your-access-token
+```
+
+## Usage
+
+### Running the Server Directly
+
+```bash
+# Using environment variables
+python main.py
+
+# Using command line arguments
+python main.py --base-url "your-alm-base-url" --access-token "your-token"
+
+# Mixed approach (args override env vars)
+python main.py --access-token "your-token"
+```
+
+### VS Code Integration with GitHub Copilot
+
+#### Setup Steps
+
+1. **Install GitHub Copilot Extension** in VS Code
+
+2. **Create MCP Configuration**: Add the following to your project's `.vscode/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "alm-mcp-server": {
+      "command": "python",
+      "args": ["/absolute/path/to/alm-mcp/main.py"],
+      "env": {
+        "POLARION_BASE_URL": "your-alm-base-url",
+        "POLARION_ACCESS_TOKEN": "${input:alm_access_token}"
+      },
+      "type": "stdio"
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "alm_access_token",
+      "description": "ALM Access Token",
+      "password": true
+    }
+  ]
+}
+```
+
+3. **Update File Paths**: Replace `/absolute/path/to/alm-mcp/main.py` with the actual path to your `main.py` file
+
+4. **Restart VS Code** to load the MCP server configuration
+
+## Available Tools (25 APIs)
+
+### Project Operations
+- `get_projects` - Get all projects
+- `get_project` - Get specific project information
+
+### Work Item Operations
+- `get_all_work_items` - Get all work items in a project
+- `get_work_item` - Get specific work item
+- `create_work_item` - Create new work item
+- `update_work_item` - Update existing work item
+- `delete_work_item` - Delete work item
+- `query_work_items` - Query work items using Lucene syntax
+
+### Assignee Operations
+- `get_assignees` - Get work item assignees
+- `add_assignee` - Add assignee to work item
+
+### Attachment Operations
+- `get_attachments` - Get work item attachments
+- `add_attachment` - Add attachment to work item
+- `remove_attachment` - Remove attachment from work item
+- `download_attachment` - Download attachment content
+
+### Comment Operations
+- `get_comments` - Get work item comments
+- `get_comment_details` - Get specific comment details
+- `add_comment` - Add comment to work item
+- `update_comment` - Update specific comment
+- `remove_comment` - Remove comment from work item
+
+### Linked Work Items Operations
+- `create_linked_work_items` - Create linked work items
+- `get_linked_work_items` - Get all linked work items
+- `get_linked_work_item` - Get specific linked work item
+- `update_linked_work_item` - Update specific linked work item
+- `delete_linked_work_items` - Delete multiple linked work items
+- `delete_linked_work_item` - Delete specific linked work item
+
+## Query Parameters
+
+Most API endpoints support comprehensive query parameters for filtering and pagination:
+
+### Field Filtering
+Use `fields` parameter to specify which fields to return:
+
+```json
+{
+  "fields": {
+    "workitems": "@basic",
+    "categories": "@all",
+    "workitem_comments": "@basic"
+  }
+}
+```
+
+**Available field types:**
+- `categories`, `collections`, `document_attachments`, `document_comments`
+- `document_parts`, `documents`, `enumerations`, `externallylinkedworkitems`
+- `featureselections`, `globalroles`, `icons`, `jobs`, `linkedoslcresources`
+- `linkedworkitems`, `page_attachments`, `pages`, `plans`, `projectroles`
+- `projects`, `projecttemplates`, `revisions`, `testparameter_definitions`
+- `testparameters`, `testrecord_attachments`, `testrecords`, `testrun_attachments`
+- `testrun_comments`, `testruns`, `teststep_results`, `teststepresult_attachments`
+- `teststeps`, `usergroups`, `users`, `workitem_approvals`, `workitem_attachments`
+- `workitem_comments`, `workitems`, `workrecords`
+
+**Field values:**
+- `@basic` - Basic set of fields
+- `@all` - All available fields
+- Custom comma-separated field list
+
+### Pagination
+```json
+{
+  "page_size": 50,
+  "page_number": 1
+}
+```
+
+### Additional Parameters
+```json
+{
+  "include": "related_entities",
+  "revision": "revision_id"
+}
+```
+
+## Body Parameters
+
+### Work Item Creation/Update
+
+```json
+{
+  "data": {
+    "type": "workitems",
+    "id": "WORK_ITEM_ID",
+    "attributes": {
+      "title": "Work Item Title",
+      "description": {
+        "type": "text/html",
+        "value": "<p>Description content</p>"
+      },
+      "dueDate": "2024-12-31",
+      "priority": "high",
+      "status": "open",
+      "severity": "major",
+      "hyperlinks": [
+        {
+          "role": "external_ref",
+          "title": "External Link",
+          "uri": "https://example.com"
+        }
+      ]
+    },
+    "relationships": {
+      "assignee": {
+        "data": [
+          {
+            "id": "user123",
+            "type": "users"
+          }
+        ]
+      },
+      "categories": {
+        "data": [
+          {
+            "id": "category456",
+            "type": "categories"
+          }
+        ]
+      },
+      "linkedRevisions": {
+        "data": [
+          {
+            "id": "revision789",
+            "type": "revisions"
+          }
+        ]
+      },
+      "votes": {
+        "data": [
+          {
+            "id": "user456",
+            "type": "users"
+          }
+        ]
+      },
+      "watches": {
+        "data": [
+          {
+            "id": "user789",
+            "type": "users"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+### Comment Creation
+
+```json
+{
+  "data": [
+    {
+      "type": "workitem_comments",
+      "attributes": {
+        "resolved": false,
+        "title": "Comment Title",
+        "text": {
+          "type": "text/html",
+          "value": "<p>Comment content</p>"
+        }
+      },
+      "relationships": {
+        "author": {
+          "data": {
+            "id": "user123",
+            "type": "users"
+          }
+        },
+        "parentComment": {
+          "data": {
+            "id": "parent_comment_id",
+            "type": "workitem_comments"
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+### Comment Update
+
+```json
+{
+  "data": {
+    "type": "workitem_comments",
+    "id": "comment_id",
+    "attributes": {
+      "resolved": true
+    }
+  }
+}
+```
+
+### Linked Work Items Creation
+
+```json
+{
+  "data": [
+    {
+      "type": "linkedworkitems",
+      "attributes": {
+        "revision": "1.0",
+        "role": "relates_to",
+        "suspect": false
+      },
+      "relationships": {
+        "workItem": {
+          "data": {
+            "id": "target_work_item_id",
+            "type": "workitems"
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+## Usage Examples
+
+### Basic Work Item Query with Field Filtering
+
+```json
+{
+  "name": "get_all_work_items",
+  "arguments": {
+    "project_id": "PROJECT_ID",
+    "page_size": 25,
+    "page_number": 1,
+    "fields": {
+      "workitems": "@basic",
+      "categories": "@all"
+    },
+    "include": "assignee,categories"
+  }
+}
+```
+
+### Create Work Item with Relationships
+
+```json
+{
+  "name": "create_work_item",
+  "arguments": {
+    "project_id": "PROJECT_ID",
+    "work_item_data": {
+      "data": {
+        "type": "workitems",
+        "attributes": {
+          "title": "New Feature Request",
+          "description": {
+            "type": "text/html",
+            "value": "<p>Feature description</p>"
+          },
+          "priority": "high"
+        },
+        "relationships": {
+          "assignee": {
+            "data": [
+              {
+                "id": "user123",
+                "type": "users"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Update Work Item with Complete Structure
+
+```json
+{
+  "name": "update_work_item",
+  "arguments": {
+    "project_id": "PROJECT_ID",
+    "work_item_id": "WORK_ITEM_ID",
+    "data": {
+      "type": "workitems",
+      "id": "WORK_ITEM_ID",
+      "attributes": {
+        "status": "resolved",
+        "resolution": "fixed"
+      },
+      "relationships": {
+        "assignee": {
+          "data": [
+            {
+              "id": "new_assignee_id",
+              "type": "users"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+### Add Comment with Rich Structure
+
+```json
+{
+  "name": "add_comment",
+  "arguments": {
+    "project_id": "PROJECT_ID",
+    "work_item_id": "WORK_ITEM_ID",
+    "data": [
+      {
+        "type": "workitem_comments",
+        "attributes": {
+          "resolved": false,
+          "title": "Review Comment",
+          "text": {
+            "type": "text/html",
+            "value": "<p>This needs more testing</p>"
+          }
+        },
+        "relationships": {
+          "author": {
+            "data": {
+              "id": "reviewer_user_id",
+              "type": "users"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+### Query Work Items with Advanced Filtering
+
+```json
+{
+  "name": "query_work_items",
+  "arguments": {
+    "project_id": "PROJECT_ID",
+    "query": "type:task AND status:open AND assignee.id:user123"
+  }
+}
+```
+
+### Create Linked Work Items
+
+```json
+{
+  "name": "create_linked_work_items",
+  "arguments": {
+    "project_id": "PROJECT_ID",
+    "work_item_id": "SOURCE_WORK_ITEM_ID",
+    "data": [
+      {
+        "type": "linkedworkitems",
+        "attributes": {
+          "role": "implements",
+          "suspect": false
+        },
+        "relationships": {
+          "workItem": {
+            "data": {
+              "id": "TARGET_WORK_ITEM_ID",
+              "type": "workitems"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+### Get Linked Work Items with Pagination
+
+```json
+{
+  "name": "get_linked_work_items",
+  "arguments": {
+    "project_id": "PROJECT_ID",
+    "work_item_id": "WORK_ITEM_ID",
+    "page_size": 10,
+    "fields": {
+      "linkedworkitems": "@basic",
+      "workitems": "@all"
+    }
+  }
+}
+```
+
+## API Endpoints Supported
+
+Based on the Polarion REST API specification, this server supports all 25 APIs:
+
+### Core APIs (10-18)
+- `/projects` - Project listing and details
+- `/projects/{projectId}/workitems` - Work item operations
+- `/projects/{projectId}/workitems/{workItemId}` - Individual work item operations
+
+### Management APIs (19-34)
+- `/projects/{projectId}/workitems/{workItemId}/assignees` - Assignee management
+- `/projects/{projectId}/workitems/{workItemId}/attachments` - Attachment management
+- `/projects/{projectId}/workitems/{workItemId}/attachments/{attachmentId}/content` - Attachment downloads
+- `/projects/{projectId}/workitems/{workItemId}/comments` - Comment management
+- `/projects/{projectId}/workitems/{workItemId}/comments/{commentId}` - Individual comment operations
+
+### Linked Work Items APIs (35-40)
+- `/projects/{projectId}/workitems/{workItemId}/linkedworkitems` - Linked work items management
+- `/projects/{projectId}/workitems/{workItemId}/linkedworkitems/{roleId}/{targetProjectId}/{linkedWorkItemId}` - Individual linked work item operations
+
+## Authentication
+
+The server uses personal access token authentication as required by Polarion:
+
+- **Authorization Header**: `Bearer {personal_access_token}`
+
+## Error Handling
+
+The server includes comprehensive error handling:
+
+- HTTP status code validation (401, 403, 404, etc.)
+- Connection timeout handling
+- JSON parsing error handling
+- Missing environment variable validation
+- Detailed error logging with truncated responses
+
+## Security Notes
+
+- Only personal access tokens are supported for enhanced security
+- Never commit credentials to version control
+- Use environment variables or secure input prompts for sensitive data
+- All authentication tokens are redacted in logs
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## License
+
+MIT License. Copyright (c) 2025 hy74.hwang@gmail.com
+
+## Reference
+
+- [Polarion REST API Documentation](https://docs.sw.siemens.com/en-US/doc/230235217/PL20241023686685479.polarion_help_sc.xid2134849/xid2134871)
+- [Polarion SDK Documentation](https://testdrive.polarion.com/polarion/sdk/doc/rest/index.html)
+- [Model Context Protocol Specification](https://modelcontextprotocol.io/introduction)
