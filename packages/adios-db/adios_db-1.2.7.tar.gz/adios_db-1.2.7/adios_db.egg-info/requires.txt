@@ -1,0 +1,3 @@
+numpy>=1.24
+pynucos>=3.3
+awesome-slugify>=1.6.5

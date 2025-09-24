@@ -1,0 +1,21 @@
+# Optional requirements file for the oil_database package.
+
+# These should all be in one of the following channels:
+# 1: conda-forge
+# 2: defaults
+
+# for working with mongodb
+mongodb>=6.0.0
+pymongo>=4.11.0
+
+# for downloading/importing data
+awesome-slugify>=1.6.5
+openpyxl>=3.0.0
+python-dateutil
+requests>=2.22.0
+
+# for the docs
+sphinx
+sphinx_rtd_theme
+
+
