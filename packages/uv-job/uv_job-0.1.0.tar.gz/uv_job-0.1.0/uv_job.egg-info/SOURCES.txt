@@ -1,0 +1,9 @@
+README.md
+job.py
+pyproject.toml
+uv_job.egg-info/PKG-INFO
+uv_job.egg-info/SOURCES.txt
+uv_job.egg-info/dependency_links.txt
+uv_job.egg-info/entry_points.txt
+uv_job.egg-info/requires.txt
+uv_job.egg-info/top_level.txt
