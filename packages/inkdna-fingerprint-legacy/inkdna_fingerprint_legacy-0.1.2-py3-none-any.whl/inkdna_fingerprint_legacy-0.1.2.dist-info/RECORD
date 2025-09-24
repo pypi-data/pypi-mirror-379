@@ -1,0 +1,11 @@
+inkdna_fingerprint_legacy/__init__.py,sha256=QVr9plt_3YyfoQCSLOWv6N7IaHEa8HLtC0OTSR9lj_U,280
+inkdna_fingerprint_legacy/__main__.py,sha256=UOKx5eZnmiobU8K_UY-ocPOspsbEJHgKrp9JYwif6jg,1749
+inkdna_fingerprint_legacy/stamp_pdf.py,sha256=9oJPLg2q3FTI2lEi5O_5_jaj9dd5cDjI0xwx7KkzTfg,2822
+inkdna_fingerprint_legacy/utils.py,sha256=wx9C1bFrzHgAH_PUrbjo58_pc_WDYdUNb3VqolB8Txw,771
+inkdna_fingerprint_legacy/verify.py,sha256=SsNOt4joJIxUJ-Q6XhdH70ymxxUetHNw8RQXkRC0ft4,3107
+inkdna_fingerprint_legacy-0.1.2.dist-info/licenses/LICENSE,sha256=flSbdXCUtXVZywlu-kz5ATE5zuDbogOH5a4_b8Mkcs4,33
+inkdna_fingerprint_legacy-0.1.2.dist-info/METADATA,sha256=x6dzHT0x6rQ9xlR9MB-hoaY3K7iTvDCWSIR7gIqL6bk,1750
+inkdna_fingerprint_legacy-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+inkdna_fingerprint_legacy-0.1.2.dist-info/entry_points.txt,sha256=ixZUH3F8REf4P6J-vZ4R76ENWHVOZAkRmSbdo_HLEwc,67
+inkdna_fingerprint_legacy-0.1.2.dist-info/top_level.txt,sha256=D6i79VEQyaY619A2F5xkqIV7ugkBYXH1z-7RnOLC57E,26
+inkdna_fingerprint_legacy-0.1.2.dist-info/RECORD,,
