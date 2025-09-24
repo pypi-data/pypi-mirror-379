@@ -1,0 +1,7 @@
+atproto>=0.0.61
+pyperclip>=1.9.0
+textual>=5.2.0
+pyfiglet>=1.0.3
+textual-fspicker>=0.4.1
+beautifulsoup4>=4.13.4
+aiohttp>=3.12.13

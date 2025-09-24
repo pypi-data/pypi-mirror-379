@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skyter"
+dynamic = ["version"]
+dependencies = [
+    "atproto >=0.0.61",
+    "pyperclip >=1.9.0",
+    "textual >=5.2.0",
+    "pyfiglet >=1.0.3",
+    "textual-fspicker >=0.4.1",
+    "beautifulsoup4 >=4.13.4",
+    "aiohttp >=3.12.13",
+]
+requires-python = ">=3.8"
+authors = [
+  { name = "Hudson Bailey", email = "dev@hudsonbailey.org" },
+]
+description = "TUI for Bsky"
+readme = "readme.md"
+license = { file = "license.md" }
+keywords = ["atproto", "bsky", "bluesky", "textual", "tui"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Communications",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "skyter.__version__"}
+
+[tool.setuptools.package-data]
+skyter = ["*.tcss"]
+
+[project.urls]
+"Homepage" = "https://github.com/hdb/skyter"
+"Bug Tracker" = "https://github.com/hdb/skyter/issues"
+
+[project.scripts]
+"skyter" = "skyter.app:main"
