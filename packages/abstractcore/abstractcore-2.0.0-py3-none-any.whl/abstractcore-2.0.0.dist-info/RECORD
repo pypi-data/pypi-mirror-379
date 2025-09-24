@@ -1,0 +1,7 @@
+abstractllm/__init__.py,sha256=pGVFsaabZjS2HW8cCnqB-QCHibDVGisW1H0exCOec4Q,601
+abstractllm/assets/architecture_formats.json,sha256=GFnTDQ9p2vCiqxYdJ5UxpkuVvA14Z0SYd9S1VshtbFI,5387
+abstractllm/assets/model_capabilities.json,sha256=Cbavg1V8gN24MFbZUKZtNLA9ipL87870bG3wa_EZHQc,24502
+abstractcore-2.0.0.dist-info/METADATA,sha256=GKEL9wskrIaAP4YS08Tt4UBwLJt53qcmOv2Y8Ifui3k,62129
+abstractcore-2.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+abstractcore-2.0.0.dist-info/top_level.txt,sha256=Md-8odCjB7hTNnE5hucnifAoLrL9HvRPffZmCq2jpoI,12
+abstractcore-2.0.0.dist-info/RECORD,,
