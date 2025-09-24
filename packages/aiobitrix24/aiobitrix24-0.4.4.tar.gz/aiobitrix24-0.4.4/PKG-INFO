@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: aiobitrix24
+Version: 0.4.4
+Summary: Simple async bitrix-24 rest client
+License: MIT
+License-File: LICENSE
+Keywords: bitrix24,asyncio,httpx
+Author: andrpocc
+Author-email: andrey.pochatkov@mail.ru
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Project-URL: Homepage, https://github.com/andrpocc/aiobitrix24
+Project-URL: Repository, https://github.com/andrpocc/aiobitrix24
+Description-Content-Type: text/markdown
+
+<h2 align="center">AIOBitrix24</h2>
+
+<p align="center">
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+</p>
