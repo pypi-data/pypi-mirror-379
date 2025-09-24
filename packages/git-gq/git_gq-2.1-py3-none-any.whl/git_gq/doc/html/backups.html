@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backups &mdash; git-gq 2.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c4a36953"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example Workflows" href="examples.html" />
+    <link rel="prev" title="Conflicts and conflict resolution" href="conflicts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            git-gq
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#patches-vs-commits">Patches vs. Commits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#the-patch-queue">The patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#advantages-of-the-patch-queue">Advantages of the patch queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#disadvantages-of-the-patch-queue">Disadvantages of the patch queue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#files-in-the-patch-queue-directory">Files in the patch queue directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#series">series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#parent">parent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#patch-files-patch">patch files ‘*.patch’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation.html#applied">applied</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conflicts.html">Conflicts and conflict resolution</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Backups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-create-a-backup">How to create  a backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-restore-a-backup">How to restore a backup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#local-development">Local development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#updates-from-a-remote-repository">Updates from a remote repository</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commandline.html">Command line interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#documentation-conventions">Documentation conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#help-and-documentation">Help and documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#bash-completion-commands">Bash completion commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#queue-management-commands">Queue management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#patch-management-commands">Patch management commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#miscellaneous-commands">Miscellaneous commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html#options">OPTIONS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">How to install git-gq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-pypi-with-pip-recommended">Install from pypi with pip (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-distribution-tar-file">Install from distribution tar file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install.html#system-wide-installation">System wide installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#local-installation-in-directory">Local installation in DIRECTORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#how-to-uninstall">How to uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-from-source">Install from source</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">git-gq</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Backups</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/backups.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="backups">
+<h1>Backups<a class="headerlink" href="#backups" title="Link to this heading"></a></h1>
+<p>The flexibility of the patch queue also makes it easier to mess things up.</p>
+<p>In order to have some kind of safety and to be able to restore an older working
+state of the patch queue, git-gq uses a git repository for backups.</p>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">backup</span></code> is called for the first time, it creates a git repository
+inside the patch queue directory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>All</em> patch queues are managed with a single git repository.</p>
+</div>
+<p>The backup command creates a directory ‘applied’ inside the current queue
+directory which has a copy of all patches applied at the time.</p>
+<p>It then runs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> for the patch queue repository.</p>
+<p>You can enter arbitrary git commands on the patch queue repository with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">qrepo</span> <span class="n">COMMAND</span> <span class="o">--</span> <span class="n">OPTIONS</span>
+</pre></div>
+</div>
+<p>The command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">restore</span> <span class="n">REVISION</span>
+</pre></div>
+</div>
+<p>checks out the given revision in the queue repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The command fails if there are <em>any</em> uncommitted changes or unknown files in
+the queue repository. This ensures that you don’t accidently loose data with
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">restore</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your project git repository is never changed by the commands <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span>
+<span class="pre">backup</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">gq</span> <span class="pre">restore</span></code>.</p>
+</div>
+<p>The command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">revert</span>
+</pre></div>
+</div>
+<p>changes the git repository to the state it had when the last backup was made.
+At the parent revision a new branch is created where all the patches from
+directory ‘applied’ are added as regular commits.</p>
+<p>The new branch gets the name of your current branch with a number appended,
+e.g. ‘master’ becomes ‘master-1’.With option <code class="docutils literal notranslate"><span class="pre">--move-branchname</span></code>, the new
+branch gets your current branch name and the old branch gets the new name.</p>
+</section>
+<section id="how-to-create-a-backup">
+<h2>How to create  a backup<a class="headerlink" href="#how-to-create-a-backup" title="Link to this heading"></a></h2>
+<p>Simply enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">backup</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-restore-a-backup">
+<h2>How to restore a backup<a class="headerlink" href="#how-to-restore-a-backup" title="Link to this heading"></a></h2>
+<p>Look what backups are present, e.g. with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">qrepo</span> <span class="n">log</span>
+</pre></div>
+</div>
+<p>Select a revision and restore it with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">restore</span> <span class="n">REVISION</span>
+</pre></div>
+</div>
+<p>Your main git repository is still not changed at this stage.</p>
+<p>If you want to reset your main repository to the state of the backup, enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">gq</span> <span class="n">revert</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="conflicts.html" class="btn btn-neutral float-left" title="Conflicts and conflict resolution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Example Workflows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Goetz Pfeiffer &lt;goetzpf@googlemail.com&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
