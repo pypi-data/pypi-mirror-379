@@ -1,0 +1,8 @@
+ndx_fiber_photometry/spec/ndx-fiber-photometry.extensions.yaml,sha256=clT4ZKImjZkVr3nFENJbt8AwJr_hR_KK-AWNrykSsNc,5286
+ndx_fiber_photometry/spec/ndx-fiber-photometry.namespace.yaml,sha256=ibifA0eNrLUQyQYRitUE7LTIOHGPgQS5H3v6w7jKVQ0,921
+ndx_fiber_photometry/__init__.py,sha256=Ynm3Xlh5SnlfqEsKtQplZ9_jhCbLvrfxXIFMWGKY8a4,1891
+ndx_fiber_photometry/fiber_photometry.py,sha256=8Ev0ercekHEvpse5zV9iOm3ixvEUIPBhkwzrhWdUxLs,737
+ndx_fiber_photometry-0.2.2.dist-info/METADATA,sha256=slzKMhnE9GfoQ6OzuOo1Ru2m_jpSiJY_zxT10O5vVVo,33927
+ndx_fiber_photometry-0.2.2.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+ndx_fiber_photometry-0.2.2.dist-info/licenses/LICENSE.txt,sha256=cjRa_b0vK18DAG6rJKa64w0cNUZO6p2Rmcd8zRqOjbY,1569
+ndx_fiber_photometry-0.2.2.dist-info/RECORD,,
