@@ -1,0 +1,9 @@
+[project]
+name = "sj-mcp-test2"
+version = "0.1.0"
+description = "在文件中写入内容"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.14.1",
+]

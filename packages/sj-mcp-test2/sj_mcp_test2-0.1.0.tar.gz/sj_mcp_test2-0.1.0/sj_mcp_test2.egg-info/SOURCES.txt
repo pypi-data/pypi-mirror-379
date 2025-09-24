@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+sj_mcp_test2.egg-info/PKG-INFO
+sj_mcp_test2.egg-info/SOURCES.txt
+sj_mcp_test2.egg-info/dependency_links.txt
+sj_mcp_test2.egg-info/requires.txt
+sj_mcp_test2.egg-info/top_level.txt
