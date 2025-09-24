@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: rust_add_pyo3
+Version: 0.1.0
+Summary: Minimal PyO3 example that adds two numbers.
+Requires-Python: >=3.8
