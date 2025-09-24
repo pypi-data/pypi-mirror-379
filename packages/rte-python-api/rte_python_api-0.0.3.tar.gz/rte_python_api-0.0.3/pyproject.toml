@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rte-python-api"
+version = "0.0.3"
+authors = [
+  { name="David Alvarado", email="alvaradodavid96@gmail.com" },
+]
+dependencies = [
+    "requests",
+    "tzdata",
+    'importlib-metadata; python_version>="3.13"',
+]
+license="GPL-3.0-or-later"
+license-files=["License*"]
+
+[project.urls]
+Homepage="https://github.com/nenio-traduko/rte-api"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "hypothesis",
+]
+
+[tool.setuptools.packages.find]
+where = ['.']
+include = ['rte_api*']
+exclude = ['tests*']
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]

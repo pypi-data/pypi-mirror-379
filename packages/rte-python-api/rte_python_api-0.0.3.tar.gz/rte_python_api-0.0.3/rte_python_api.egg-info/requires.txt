@@ -1,0 +1,10 @@
+requests
+tzdata
+
+[:python_version >= "3.13"]
+importlib-metadata
+
+[test]
+pytest
+pytest-cov
+hypothesis
