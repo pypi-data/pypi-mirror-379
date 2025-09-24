@@ -1,0 +1,12 @@
+tree_sitter_sql/__init__.py,sha256=fiNiv88hiumPN5C_Ei8BBStGpz4u-Z3zWun4Qzrf95I,1146
+tree_sitter_sql/__init__.pyi,sha256=A4sjCd_1pfiO7sWEnEjeKpZC2ximaBTNAhQX7OuSF2Y,245
+tree_sitter_sql/_binding.abi3.so,sha256=7BduZA9HBJNR9CsN1OtFU2IZ3fiFJmHLy3P7VxDPUc8,2717080
+tree_sitter_sql/binding.c,sha256=zQtFDlKhtCcDXvwuYw8sXDdHcGebbQZjeOLp-pgOrIw,677
+tree_sitter_sql/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tree_sitter_sql/queries/highlights.scm,sha256=gOcmkDtn--RxvxJypEeramdY6VZU-enI9cLkr3Ka-N4,7775
+tree_sitter_sql/queries/indents.scm,sha256=yQx5f_5szuWRLqssm4ZEug2wR37ZPL_voQxXRVI0izI,324
+tree_sitter_sql-0.3.9.dist-info/METADATA,sha256=BIs6-RULVk0p_eE9McGzAhk30UmAFp7_p492vGSU73s,3953
+tree_sitter_sql-0.3.9.dist-info/WHEEL,sha256=1IPtug2nFE0xsfeLQkDYEPUP0SRCV4Py7tatrvz_B4w,111
+tree_sitter_sql-0.3.9.dist-info/top_level.txt,sha256=wrevlSYXZSDx7lr2DDOyfbxHZ9Ky0Nfw8tAc45dfcPE,25
+tree_sitter_sql-0.3.9.dist-info/RECORD,,
+tree_sitter_sql-0.3.9.dist-info/licenses/LICENSE,sha256=Oz5OQlLV19HBjhJXAF8jJCvwWArWGSBP0JPJm4xWdI0,1069
