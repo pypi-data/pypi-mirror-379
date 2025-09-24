@@ -1,0 +1,36 @@
+# Archivo de configuración del paquete Alehundred-Depot
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alehundred-depot-es"
+version = "8.6"
+authors = [
+  { name="Alejandro Friant", email="friant2021@gmail.com" },
+]
+description = "Herramienta TUI para instalar y gestionar un servidor Perforce en una Raspberry Pi."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT License" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console :: Curses",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: System :: Installation/Setup",
+]
+
+# Dependencias que pip instalará automáticamente
+dependencies = [
+    "requests",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/alefriant/Alehundred-VCS-Toolkit/tree/spanish"
+"Bug Tracker" = "https://github.com/alefriant/Alehundred-VCS-Toolkit/issues"
+
+# El comando que el usuario ejecutará en su terminal
+[project.scripts]
+alehundred-depot-es = "alehundred_depot_es.main:main"
