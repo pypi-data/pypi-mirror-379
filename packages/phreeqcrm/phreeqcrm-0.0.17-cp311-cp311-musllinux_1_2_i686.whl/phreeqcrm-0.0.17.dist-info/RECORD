@@ -1,0 +1,11 @@
+phreeqcrm/__init__.py,sha256=U1vVjJnO8vvyOuIIgT04QmkJiYzMYTPPC_51Hw0_enI,326
+phreeqcrm/_phreeqcrm.cpython-311-i386-linux-musl.so,sha256=9eeceR7QR3vBU8yeVwN5yHJZj9dCxYYPcgFlF0RNnfY,6606573
+phreeqcrm/phreeqcrm.py,sha256=FtL7ccK_ojwSmEuxhiBdDECCHNPhfGPOtCwgtSuCp7Y,201817
+phreeqcrm/yamlphreeqcrm.py,sha256=Z6Wfm6N1Ln8H0RBxkxM6xfdBfzNYNe4iKhRUST_4RJA,77839
+phreeqcrm.libs/libgcc_s-e1925712.so.1,sha256=zNC20WoSDrvBESyFvpQmXislEOXNBrjO-4PdGgX1M74,218145
+phreeqcrm.libs/libgomp-6d7f45f1.so.1.0.0,sha256=BLk1x_5lj1-l241aUkQeWowKY72DcCXQr_MeT2ATRu0,365613
+phreeqcrm.libs/libstdc++-b2d5af4b.so.6.0.33,sha256=u4Iqw2-EuKPUFXgyINdCZhcipuq_WI4HqLFE-Kzot4M,3597909
+phreeqcrm-0.0.17.dist-info/METADATA,sha256=bWjpD4al8CpKqr8v9FBNsQi78wmvtsC5OnlGA3Goy0c,2031
+phreeqcrm-0.0.17.dist-info/WHEEL,sha256=Wb346Xo7gJLJ36R_NLtAQrbxklqkDpNol0V0cmuoxjo,115
+phreeqcrm-0.0.17.dist-info/RECORD,,
+phreeqcrm-0.0.17.dist-info/licenses/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
