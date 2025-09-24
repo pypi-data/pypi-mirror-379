@@ -1,0 +1,2 @@
+[console_scripts]
+my-password-tool = my_password_tool_ammar.cli:main

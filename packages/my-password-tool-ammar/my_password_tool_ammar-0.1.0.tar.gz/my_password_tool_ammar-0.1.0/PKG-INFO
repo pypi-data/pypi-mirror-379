@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: my_password_tool_ammar
+Version: 0.1.0
+Summary: أداة لتقييم وتوليد كلمات المرور (واجهة CLI بالعربية)
+Home-page: https://example.com/my_password_tool_ammar
+Author: عمار الشقاقي
+Author-email: ammar@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Security
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# my_password_tool_ammar
+
+أداة بسيطة بالبايثون لتقييم وتوليد كلمات المرور باللغة العربية.
+
+التشغيل محلياً:
+- python -m my_password_tool_ammar
+
+بعد التثبيت:
+- my-password-tool
+
+المؤلف: عمار الشقاقي

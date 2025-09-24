@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/my_password_tool_ammar.egg-info/PKG-INFO
+src/my_password_tool_ammar.egg-info/SOURCES.txt
+src/my_password_tool_ammar.egg-info/dependency_links.txt
+src/my_password_tool_ammar.egg-info/entry_points.txt
+src/my_password_tool_ammar.egg-info/top_level.txt
