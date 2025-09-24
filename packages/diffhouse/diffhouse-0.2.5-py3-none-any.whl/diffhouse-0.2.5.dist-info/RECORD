@@ -1,0 +1,12 @@
+diffhouse/__init__.py,sha256=NzMJHgX2wdrPQJcblSOZpt8xBiVD0mg0saWagOF8EtM,138
+diffhouse/cloning.py,sha256=mi2Zed4GPYZYvdZoXakMnFuliwA-EKZe_r0UTOd4FrE,1323
+diffhouse/config.py,sha256=MCVAHVSHT45VCUDUmXFVRnIt7p7v4518c4OKsmjMPJI,505
+diffhouse/constants.py,sha256=uqAtDNmjrN2K5v7VbRGzL77aiZHNBDPe3bx35DRVuGI,58
+diffhouse/engine.py,sha256=mAIaeAPKa2s6lv6PgZSzf_dgPggXMkYGFnATC6LS2rY,5597
+diffhouse/git.py,sha256=nuZBh2YcIKplvR6wQJ-m1BHO2xwuHeWCEQxuhrXhevA,3133
+diffhouse/repo.py,sha256=eysEdcWSYEWWstQQiEfi_3PSQiUtnRvMh5bFsWc6AHs,4411
+diffhouse-0.2.5.dist-info/licenses/LICENSE.md,sha256=cg1zl_bdiWZynvQRZVFPh7XHZC8ydFtVe1eIPAFYdfA,1104
+diffhouse-0.2.5.dist-info/METADATA,sha256=Vu9JjpZdsLZ3jyGz5z588pbCLoZVPNuwucwn3bE1IUQ,1692
+diffhouse-0.2.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+diffhouse-0.2.5.dist-info/top_level.txt,sha256=oAJr76UQU0JqllYf9_o9S032lEf8T7GfxWrkRUnZADM,10
+diffhouse-0.2.5.dist-info/RECORD,,
