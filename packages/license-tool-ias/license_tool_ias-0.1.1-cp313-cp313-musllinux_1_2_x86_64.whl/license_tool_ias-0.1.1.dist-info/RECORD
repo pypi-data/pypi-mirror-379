@@ -1,0 +1,14 @@
+example/check_license.py,sha256=Yhnu3iehNCstAJC12wJXC9K7nCPeTabB5Y_CqlvyHVc,1666
+example/example.py,sha256=IWBbGQvdNF4WAGDZ8L5OCA_NNQQanMrrgD9lhSD0-I8,1342
+license_tool/__init__.py,sha256=6r7wkKrUL6Zy8PHacpKd7Tdm-EdcaxRPYxwX5XB49kw,263
+license_tool/_version.py,sha256=aVKpqB9GzHFYyNg-U_86bWM04N0lsZwJxdX7g3m9U80,712
+license_tool/cli.cpython-313-x86_64-linux-musl.so,sha256=2wg9NXruPolI4qhqpbC6fmK7Mf7zsFtLjLwKXau7YaA,69928
+license_tool/keygen.cpython-313-x86_64-linux-musl.so,sha256=dp34jc9Q-XVWY_7heY_s-xAzUb2lPuqMD1s5A3d95LE,83632
+license_tool/key/__init__.py,sha256=vBJvjJ75w0UIG2muDzET9VkRZiorAeRo3dL9TXeiWFY,177
+license_tool/key/signer.cpython-313-x86_64-linux-musl.so,sha256=vMf0KbOemRCpF5isGkpwRUNcEBptyOjJQf8JXB0kmq8,92176
+license_tool/key/verifier.cpython-313-x86_64-linux-musl.so,sha256=AeSIXHLLLoi91-EReHIHo-Eug8lDfiFHXjQ4O_ZBln4,88088
+license_tool_ias-0.1.1.dist-info/METADATA,sha256=KdWuBiRMpXE1PYvDxAiiaRcXoQN9nt_pYb3z_-Tobwk,2694
+license_tool_ias-0.1.1.dist-info/WHEEL,sha256=4VbEOkf4fdBUBHdV24POjoH-zuik_eIDLSImZZCAQpQ,112
+license_tool_ias-0.1.1.dist-info/entry_points.txt,sha256=CanK69xH3QdAvNn4lv4p759H-KE0dL-35Z91CPaZcgE,55
+license_tool_ias-0.1.1.dist-info/top_level.txt,sha256=zhbbr1zdaG4NoTfhLe_7payS4ARGfLUUKBc4bICEN64,43
+license_tool_ias-0.1.1.dist-info/RECORD,,
