@@ -1,0 +1,78 @@
+Matrix and Plotting Helper Toolkit
+===================================
+
+Author: Institut fuer Baustatik und Baudynamik,Universitaet Stuttgart
+License: ADD LICENSE here
+Version: 1.0
+Date: July 2025
+
+Description:
+------------
+This helper module provides a set of tools to make symbolic math, matrix visualization,
+and plotting (2D/3D) more intuitive and presentation-friendly, especially when working 
+with SymPy, NumPy, Matplotlib, and Plotly in Jupyter Notebooks or other Python environments.
+
+Modules Included:
+-----------------
+
+1. DMAT
+   - Pretty-prints a truncated matrix with optional decimal or rational evaluation.
+
+2. DIS
+   - Nicely formats scalars, vectors, or matrices in LaTeX for display.
+
+3. DIS_EI
+   - Computes and displays eigenvalues and eigenvectors using clean LaTeX formatting.
+
+4. plot_2d
+   - Plots symbolic expressions or numeric datasets in 2D using Matplotlib.
+
+5. plot_3d
+   - Plots symbolic 3D surfaces using Plotly for interactive visualization.
+
+6. extend_plots
+   - Merges multiple plots side-by-side (e.g., shifted versions).
+
+7. append_plots
+   - Stacks multiple Matplotlib or Plotly plots into one combined figure.
+
+Dependencies:
+-------------
+- Python 3.8+
+- numpy
+- sympy
+- matplotlib
+- plotly
+- IPython (for LaTeX rendering in notebooks)
+
+How to Use:
+-----------
+1. Import the helper script:
+   >>> from your_module_name import *
+
+2. Visualize a matrix:
+   >>> DMAT(np.array([[1, 2], [3, 4]]), name="A")
+
+3. Display a symbolic expression:
+   >>> x = sp.Symbol('x')
+   >>> DIS(sp.sin(x)**2 + sp.cos(x)**2, name="Identity")
+
+4. Plot a symbolic 2D graph:
+   >>> plot_2d([sp.sin(x), sp.cos(x)], var=(x, (-np.pi, np.pi)), labels=["sin(x)", "cos(x)"])
+
+5. Plot a 3D surface:
+   >>> plot_3d(sp.sin(x*y), var=(x, (-2, 2), y, (-2, 2)), title="sin(xy) surface")
+
+Notes:
+------
+- This toolkit is especially suited for education, math research, or lab reports
+  where symbolic clarity and visualization are critical.
+- Functions are designed to handle both SymPy and NumPy formats seamlessly.
+
+License:
+--------
+ADD RELEVANT 
+
+Contact:
+--------
+Name/Email
