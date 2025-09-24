@@ -1,0 +1,229 @@
+---
+- name: Kernel version and architecture
+  type: shell
+  command: uname -a
+  destination: _commands/uname
+
+- name: Descriptive information about the OS
+  type: file
+  source: /etc/os-release
+  destination: etc/os-release
+
+- name: apparmor configuration file
+  type: file
+  source: etc/apparmor
+  destination: etc/apparmor
+
+- name: apparmor configuration directory
+  type: directory
+  source: /etc/apparmor.d
+  destination: etc/apparmor.d
+
+- name: apache2 configuration
+  type: directory
+  source: /etc/apache2
+  destination: etc/apache2
+
+- name: Shaken Fist configuration
+  type: directory
+  source: /etc/sf
+  destination: etc/sf
+
+- name: Installed system OS packages and versions
+  type: shell
+  command: dpkg -l
+  destination: _commands/dpkg
+
+- name: Installed system pip packages and versions
+  type: shell
+  command: pip3 freeze
+  destination: _commands/pip
+
+- name: Installed Shaken Fist pip packages and versions
+  type: shell
+  command: /srv/shakenfist/venv/bin/pip freeze
+  destination: _commands/pip-sf
+
+- name: Locked version of requirements based on what was used in this CI run
+  type: shell
+  command: |
+    /srv/shakenfist/venv/bin/pip install hashin
+    touch /tmp/requirements-locked.txt
+
+    echo
+    for dependency in `/srv/shakenfist/venv/bin/pip freeze --local | egrep -v "(shakenfist|pkg[_\-]resources)"`
+    do
+        echo "Locking $dependency"
+        /srv/shakenfist/venv/bin/hashin $dependency --requirements /tmp/requirements-locked.txt
+    done
+
+    echo
+    cat /tmp/requirements-locked.txt
+
+    echo
+    echo "EOF"
+  destination: _commands/pip-requirements-locked
+
+- name: Python version
+  type: shell
+  command: python3 --version
+  destination: _commands/python-version
+
+- name: systemd status
+  type: shell
+  command: systemctl status
+  destination: _commands/systemctl-status
+
+- name: etcd systemd unit logs
+  type: shell
+  command: journalctl -u etcd
+  destination: _commands/journalctl-etcd
+
+- name: libvirtd systemd unit logs
+  type: shell
+  command: journalctl -u libvirtd
+  destination: _commands/journalctl-libvirtd
+
+- name: SF systemd target logs
+  type: shell
+  command: journalctl -u sf.target
+  destination: _commands/journalctl-sf-target
+
+- name: SF systemd units
+  type: shell_emitter
+  command: |
+    for item in `find /etc/systemd/system -type f -name "sf-*" | sed 's/.*\///'`
+    do
+      echo "
+    - name: Record systemd unit (${item})
+      type: file
+      source: /etc/systemd/system/${item}
+      destination: etc/systemd/system/${item}
+    "
+    done
+
+- name: SF systemd unit pid and abort files
+  type: shell_emitter
+  command: |
+    for item in `find /run/sf -type f | sed 's/.*\///'`
+    do
+      echo "
+    - name: Record contents of file (${item})
+      type: file
+      source: /run/sf/${item}
+      destination: run/sf/${item}
+    "
+    done
+
+- name: libvirt VMs
+  type: shell
+  command: virsh list --all
+  destination: _commands/virsh-list-all
+
+- name: Network interfaces
+  type: shell
+  command: ip link
+  destination: _commands/ip-link
+
+- name: Network addresses
+  type: shell
+  command: ip addr
+  destination: _commands/ip-addr
+
+- name: Network routes
+  type: shell
+  command: ip route
+  destination: _commands/ip-route
+
+- name: iptables
+  type: shell
+  command: iptables -L -v -n
+  destination: _commands/iptables
+
+- name: Network namespaces
+  type: shell_emitter
+  command: |
+    for item in `find /var/run/netns -type f | sed 's/.*\///'`
+    do
+      echo "
+    - name: Network interfaces (namespace ${item})
+      type: shell
+      command: ip netns exec ${item} ip link
+      destination: _commands/netns-${item}/ip-link
+
+    - name: Network addresses (namespace ${item})
+      type: shell
+      command: ip netns exec ${item} ip addr
+      destination: _commands/netns-${item}/ip-addr
+
+    - name: Network routes (namespace ${item})
+      type: shell
+      command: ip netns exec ${item} ip route
+      destination: _commands/netns-${item}/ip-route
+
+    - name: iptables (namespace ${item})
+      type: shell
+      command: ip netns exec ${item} iptables -L -v -n
+      destination: _commands/netns-${item}/iptables
+    "
+    done
+
+- name: vxlan networks
+  type: shell_emitter
+  command: |
+    for item in `ip link | grep ": vxlan-" | cut -f 2 -d ":" | sed 's/ //'`
+    do
+      echo "
+    - name: vxlan iterface (vxlan ${item})
+      type: shell
+      command: ip -d link show ${item}
+      destination: _commands/${item}/ip-link
+
+    - name: vxlan forwarding (vxlan ${item})
+      type: shell
+      command: bridge fdb show dev ${item}
+      destination: _commands/${item}/bridge-fdb-show
+
+    - name: vxlan bridge (vxlan ${item})
+      type: shell
+      command: brctl show br-${item}
+      destination: _commands/${item}/brctl-show
+    "
+    done
+
+- name: syslog
+  type: file
+  source: /var/log/syslog
+  destination: var/log/syslog
+
+- name: syslog.1
+  type: file
+  source: /var/log/syslog.1
+  destination: var/log/syslog.1
+
+- name: libvirt logs
+  type: directory
+  source: /var/log/libvirt
+  destination: var/log/libvirt
+
+- name: apache2 logs
+  type: directory
+  source: /var/log/apache2
+  destination: var/log/apache2
+
+- name: Shaken Fist instances
+  type: directory
+  source: /srv/shakenfist/instances
+  destination: srv/shakenfist/instances
+  exclude: "([hsv]d[ac-z]|nvme[0-9]|sc-.*)"
+
+- name: Shaken Fist events
+  type: directory
+  source: /srv/shakenfist/events
+  destination: srv/shakenfist/events
+  exclude: ".*\\.lock"
+
+- name: Running processes
+  type: shell
+  command: ps -aux
+  destination: _commands/ps-aux

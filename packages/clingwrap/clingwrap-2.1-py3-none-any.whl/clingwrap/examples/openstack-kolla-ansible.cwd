@@ -1,0 +1,93 @@
+---
+- name: Kernel version and architecture
+  type: shell
+  command: uname -a
+  destination: _commands/uname
+
+- name: Descriptive information about the OS
+  type: file
+  source: /etc/os-release
+  destination: etc/os-release
+
+- name: apparmor configuration file
+  type: file
+  source: etc/apparmor
+  destination: etc/apparmor
+
+- name: Kolla-Ansible configuration
+  type: directory
+  source: /etc/kolla
+  destination: etc/kolla
+
+- name: Installed system OS packages and versions (Debian derived)
+  type: shell
+  command: dpkg -l
+  destination: _commands/dpkg
+
+- name: Installed system OS packages and versions (RedHat derived)
+  type: shell
+  command: rpm -qa
+  destination: _commands/rpm
+
+- name: Installed system pip packages and versions
+  type: shell
+  command: pip3 freeze
+  destination: _commands/pip
+
+- name: Python version
+  type: shell
+  command: python3 --version
+  destination: _commands/python-version
+
+- name: systemd status
+  type: shell
+  command: systemctl status
+  destination: _commands/systemctl-status
+
+- name: syslog
+  type: file
+  source: /var/log/syslog
+  destination: var/log/syslog
+
+- name: syslog.1
+  type: file
+  source: /var/log/syslog.1
+  destination: var/log/syslog.1
+
+- name: Kolla-Ansible logs
+  type: directory
+  source: /var/log/kolla
+  destination: var/log/kolla
+
+- name: Running processes
+  type: shell
+  command: ps -aux
+  destination: _commands/ps-aux
+
+- name: Running containers
+  type: shell
+  command: docker ps -all
+  destination: _commands/docker-ps-all
+
+- name: Running containers
+  type: shell
+  command: docker ps -all --format '{{ .Names }}'
+  destination: _commands/docker-ps-names
+
+- name: Container dumps
+  type: shell_emitter
+  command: |
+    for item in `docker ps --all --format '{{ .Names }}'`
+    do
+      echo "
+    - name: Inspect ${item} container
+      type: shell
+      command: docker inspect ${item}
+      destination: _commands/docker-inspect-${item}
+
+    - name: Docker logs for ${item} container
+      type: shell
+      command: docker logs ${item}
+      destination: _commands/docker-logs-${item}
+    "
+    done
