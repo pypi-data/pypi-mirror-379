@@ -1,0 +1,9 @@
+fpdf2
+sqlalchemy<1.5,>=1.4.16
+psycopg2-binary
+matplotlib>=3.7
+jinja2
+openpyxl
+pandas==1.5.3
+numpy>=1.26.4
+Office365-REST-Python-Client
