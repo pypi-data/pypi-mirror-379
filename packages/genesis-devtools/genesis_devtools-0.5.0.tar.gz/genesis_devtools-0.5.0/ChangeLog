@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.5.0
+-----
+
+* Backups without downtime, S3 support
