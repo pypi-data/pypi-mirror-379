@@ -1,0 +1,154 @@
+# Simple Facebook Marketplace Deals Finder
+# Uses existing agentrylab patterns - no overengineering!
+
+version: "1.0.0"
+id: marketplace_deals
+name: "Facebook Marketplace Deals Finder"
+description: "Scheduled monitoring of Facebook Marketplace for specific deals"
+
+# Dynamic user input specification (optional)
+user_inputs:
+  query:
+    type: string
+    description: "What are you looking for?"
+    placeholder: "e.g., 'MacBook Pro 14 M3'"
+    required: true
+  location:
+    type: string
+    description: "Search center (city/address)"
+    placeholder: "Tel Aviv, Israel"
+    required: true
+  min_price:
+    type: number
+    description: "Minimum price"
+    default: 0
+  max_price:
+    type: number
+    description: "Maximum price"
+    validate: "value >= min_price"
+  condition:
+    type: enum
+    description: "Item condition"
+    choices: ["any", "new", "used"]
+    default: "any"
+  top_n:
+    type: number
+    description: "Number of top deals to return"
+    default: 5
+    min: 1
+    max: 50
+  currency:
+    type: string
+    description: "Target currency for price filtering"
+    default: "ILS"
+  max_results:
+    type: number
+    description: "Max raw listings to fetch from Facebook"
+    default: 10
+    min: 1
+    max: 200
+  email_address:
+    type: string
+    description: "Email address to receive notifications"
+    placeholder: "your-email@example.com"
+    required: true
+
+# Runtime Configuration
+runtime:
+  scheduler:
+    impl: agentrylab.runtime.schedulers.round_robin.RoundRobinScheduler
+    params:
+      order: [deals_finder]
+  max_rounds: 1  # Single execution per scheduled run
+
+# Providers
+providers:
+  - id: openai_gpt4o_mini
+    impl: agentrylab.runtime.providers.openai.OpenAIProvider
+    model: "gpt-4o-mini"
+    api_key: ${OPENAI_API_KEY}
+
+# Tools - following existing agentrylab pattern
+tools:
+  - id: apify_marketplace_source
+    impl: agentrylab.runtime.tools.apify_marketplace.ApifyMarketplaceTool
+    params:
+      apify_token: ${APIFY_API_TOKEN}
+      actor_id: "apify/facebook-marketplace-scraper"
+      timeout_s: 300
+      retries: 3
+      backoff: 2.0
+      search_query: ${user_inputs.query}
+      location: ${user_inputs.location}
+      max_results: ${user_inputs.max_results}
+      min_price: ${user_inputs.min_price}
+      max_price: ${user_inputs.max_price}
+      condition: ${user_inputs.condition}
+      top_n: ${user_inputs.top_n}
+      currency: ${user_inputs.currency}
+    budget:
+      per_run_max: 10
+      per_iteration_max: 1
+
+# Agents - following existing agentrylab pattern  
+agents:
+  - id: deals_finder
+    role: agent
+    display_name: "Deals Finder"
+    description: "Finds and analyzes Facebook Marketplace deals"
+    provider: openai_gpt4o_mini
+    tools: [apify_marketplace_source]
+    context:
+      max_messages: 3
+      pin_objective: true
+    system_prompt: |
+      You are a deals finder for Facebook Marketplace. You have access to the apify_marketplace_source tool to fetch real marketplace data.
+      
+      TOOL USAGE:
+      - ALWAYS start by calling the apify_marketplace_source tool with JSON format:
+        ```json
+        {"tool": "apify_marketplace_source", "args": {"search_query": "MacBook Pro M3", "location": "Tel Aviv, Israel"}}
+        ```
+      - Use the search parameters provided in the tool configuration
+      - DO NOT generate fake data - only use real data from tool results
+      
+      Your job is to:
+      1. IMMEDIATELY call the apify_marketplace_source tool with the search parameters
+      2. Extract key information from each listing:
+         - Title
+         - Price and currency
+         - Location
+         - URL (if available)
+         - Seller name (if available)
+      3. Analyze each deal for value and quality
+      4. Rank deals by best value (price vs quality)
+      5. Format the results in a clean, readable way
+      6. Highlight the best deals based on value/price ratio
+      7. Provide a summary of findings
+      
+      Focus on:
+      - Price competitiveness
+      - Item condition
+      - Location convenience
+      - Seller reputation indicators
+      
+      Present the information clearly and help users identify the best deals.
+      Format: **Listing URL:** [View Listing](actual_url_from_listingUrl_field)
+      
+      Always provide reasoning for your rankings.
+      Return results in a clear, structured format with clickable links.
+
+# Persistence Configuration
+persistence:
+  checkpoints: [sqlite]
+  transcript: [jsonl]
+
+persistence_tools:
+  sqlite:
+    impl: LangGraphSqliteSaver
+    params:
+      db_path: "outputs/checkpoints.db"
+  jsonl:
+    impl: LangGraphJsonlSaver
+    params:
+      path: "outputs/transcripts"
