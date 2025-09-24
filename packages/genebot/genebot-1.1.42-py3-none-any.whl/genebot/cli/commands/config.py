@@ -1,0 +1,2076 @@
+"""
+Configuration Commands
+=====================
+
+Commands for managing configuration files and settings.
+"""
+
+import os
+import shutil
+from argparse import Namespace
+from pathlib import Path
+from typing import Dict, Any, List, Optional
+
+from ..result import CommandResult
+from .base import BaseCommand
+from ..utils.config_manager import ConfigurationManager
+from ..utils.error_handler import CLIException
+
+
+class InitConfigCommand(BaseCommand):
+    pass
+    """Initialize configuration files and database"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute init config command"""
+        overwrite = getattr(args, 'overwrite', False)
+        template = getattr(args, 'template', 'development')
+        skip_db = getattr(args, 'skip_database', False)
+        
+        self.logger.section("Initializing Configuration")
+        self.logger.info(f"Template: {template}")
+        self.logger.info(f"Overwrite existing: {overwrite}")
+        self.logger.info(f"Skip database initialization: {skip_db}")
+        
+        try:
+    pass
+            # Create configuration manager
+            config_manager = ConfigurationManager(
+                config_path=self.context.config_path,
+                env_file=self.context.env_file
+            )
+            
+            # Initialize configuration using the manager
+            result = config_manager.initialize_configuration(template, overwrite)
+            
+            if result.success:
+    
+        pass
+    pass
+                self.logger.success("Configuration initialization completed!")
+                
+                # Display created files
+                if result.data and result.data.get('created_files'):
+    
+        pass
+    pass
+                    self.logger.subsection("Created Files")
+                    for file_path in result.data['created_files']:
+    pass
+                        self.logger.list_item(file_path, "success")
+                
+                # Display skipped files
+                if result.data and result.data.get('skipped_files'):
+    
+        pass
+    pass
+                    self.logger.subsection("Skipped Existing Files")
+                    for file_path in result.data['skipped_files']:
+    pass
+                        self.logger.list_item(file_path, "info")
+                
+                # Initialize database if not skipped
+                if not skip_db:
+    
+        pass
+    pass
+                    db_result = self._initialize_database()
+                    if db_result.success:
+    
+        pass
+    pass
+                        self.logger.success("Database initialization completed!")
+                        # Merge database initialization data into result
+                        if result.data is None:
+    
+        pass
+    pass
+                            result.data = {}
+                        result.data['database_initialized'] = True
+                        result.data['database_info'] = db_result.data
+                    else:
+    pass
+                        self.logger.warning("Database initialization failed, but configuration was created successfully")
+                        if result.data is None:
+    
+        pass
+    pass
+                            result.data = {}
+                        result.data['database_initialized'] = False
+                        result.data['database_error'] = db_result.message
+                        # Add database suggestions to the main result
+                        if result.suggestions is None:
+    
+        pass
+    pass
+                            result.suggestions = []
+                        result.suggestions.extend(db_result.suggestions or [])
+            
+            return result
+            
+        except CLIException as e:
+    pass
+    pass
+            self.logger.error(f"Configuration initialization failed: {e.message}")
+            return CommandResult.error(
+                str(e.message),
+                suggestions=e.suggestions
+            )
+        except Exception as e:
+    pass
+    pass
+            self.logger.error(f"Unexpected error during initialization: {str(e)}")
+            return CommandResult.error(
+                f"Configuration initialization failed: {str(e)}",
+                suggestions=[
+                    "Check directory permissions",
+                    "Ensure sufficient disk space",
+                    "Try with --overwrite flag if files exist"
+                ]
+            )
+    
+    def _initialize_database(self) -> CommandResult:
+    
+        pass
+    pass
+        """Initialize database connection and schema"""
+        self.logger.subsection("Database Initialization")
+        
+        try:
+    pass
+            # Import database manager
+            from genebot.database.connection import DatabaseManager
+            
+            # Get database URL from environment or use default
+            import os
+            from dotenv import load_dotenv
+            
+            # Load environment variables from .env file
+            env_file = self.context.env_file
+            if env_file and env_file.exists():
+    
+        pass
+    pass
+            database_url = os.getenv("DATABASE_URL", "sqlite:///trading_bot.db")
+            self.logger.info(f"Database URL: {database_url}")
+            
+            # Create database manager
+            db_manager = DatabaseManager(database_url)
+            
+            # Test database connection
+            self.logger.progress("Testing database connection...")
+            try:
+    pass
+                session = db_manager.get_session()
+                try:
+    pass
+                    # Simple connection test using SQLAlchemy
+                    from sqlalchemy import text
+                    result = session.execute(text("SELECT 1"))
+                finally:
+    pass
+            except Exception as conn_error:
+    pass
+    pass
+                self.logger.error(f"❌ Database connection failed: {conn_error}")
+                return CommandResult.error(
+                    f"Database connection failed: {conn_error}",
+                    suggestions=[
+                        "Check DATABASE_URL in .env file",
+                        "Ensure database server is running (if using PostgreSQL/MySQL)",
+                        "Verify database file permissions (if using SQLite)",
+                        "Check network connectivity to database server"
+                    ]
+                )
+            
+            # Create database schema
+            self.logger.progress("Creating database schema...")
+            try:
+    
+        pass
+    pass
+                db_manager.create_tables()
+                self.logger.info("✅ Database schema created successfully")
+            except Exception as schema_error:
+    pass
+    pass
+                self.logger.error(f"❌ Database schema creation failed: {schema_error}")
+                return CommandResult.error(
+                    f"Database schema creation failed: {schema_error}",
+                    suggestions=[
+                        "Check database permissions",
+                        "Ensure database user has CREATE TABLE privileges",
+                        "Verify database disk space",
+                        "Check for conflicting table names"
+                    ]
+                )
+            
+            # Validate database schema
+            self.logger.progress("Validating database schema...")
+            validation_result = self._validate_database_schema(db_manager)
+            
+            if not validation_result['valid']:
+    
+        pass
+    pass
+                self.logger.warning("⚠️ Database schema validation issues found")
+                for issue in validation_result['issues']:
+    pass
+                    self.logger.warning(f"  • {issue}")
+            else:
+    pass
+                self.logger.info("✅ Database schema validation passed")
+            
+            # Test basic database operations
+            self.logger.progress("Testing database operations...")
+            operations_result = self._test_database_operations(db_manager)
+            
+            if operations_result['success']:
+    
+        pass
+    pass
+                self.logger.info("✅ Database operations test passed")
+            else:
+    pass
+                self.logger.warning("⚠️ Database operations test failed")
+                for error in operations_result['errors']:
+    pass
+                    self.logger.warning(f"  • {error}")
+            
+            # Prepare success result
+            db_info = {
+                'database_url': database_url,
+                'connection_successful': True,
+                'schema_created': True,
+                'schema_validation': validation_result,
+                'operations_test': operations_result,
+                'tables_created': self._get_created_tables(db_manager)
+            }
+            
+            return CommandResult.success(
+                "Database initialized successfully",
+                data=db_info,
+                suggestions=[
+                    "Database is ready for trading operations",
+                    "Run 'genebot validate' to verify complete setup",
+                    "Use 'genebot start' to begin trading"
+                ]
+            )
+            
+        except ImportError as e:
+    
+        pass
+    pass
+    pass
+            self.logger.error(f"❌ Database module import failed: {e}")
+            return CommandResult.error(
+                suggestions=[
+                    "Verify database driver is available",
+                    "Run 'pip install -r requirements.txt'"
+                ]
+            )
+        except Exception as e:
+    
+        pass
+    pass
+    pass
+            self.logger.error(f"❌ Database initialization failed: {e}")
+            return CommandResult.error(
+                f"Database initialization failed: {e}",
+                suggestions=[
+                    "Check database configuration in .env file",
+                    "Ensure database server is accessible",
+                    "Verify file permissions for SQLite databases",
+                    "Check system logs for detailed error information"
+                ]
+            )
+    
+    def _validate_database_schema(self, db_manager: 'DatabaseManager') -> Dict[str, Any]:
+    pass
+        """Validate database schema integrity"""
+        validation_result = {
+            'valid': True,
+            'issues': [],
+            'tables_found': [],
+            'missing_tables': []
+        }
+        
+        try:
+    pass
+            # Expected tables based on the models
+            expected_tables = [
+                'trades', 'orders', 'positions', 'strategy_performance',
+                'market_data', 'trading_signals', 'risk_events',
+                'unified_market_data', 'market_sessions', 'cross_market_correlations',
+                'market_holidays'
+            ]
+            
+            # Check which tables exist
+            session = db_manager.get_session()
+            try:
+    
+        pass
+    pass
+                from sqlalchemy import text
+                # Get list of tables (SQLite specific, but works for most databases)
+                if 'sqlite' in db_manager.database_url.lower():
+    
+        pass
+    pass
+                    result = session.execute(
+                        text("SELECT name FROM sqlite_master WHERE type='table'")
+                    existing_tables = [row[0] for row in result.fetchall()]
+                else:
+    pass
+                    # For PostgreSQL/MySQL, use information_schema
+                    result = session.execute(
+                        text("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'")
+                    )
+                    existing_tables = [row[0] for row in result.fetchall()]
+                
+                validation_result['tables_found'] = existing_tables
+                
+                # Check for missing tables
+                for table in expected_tables:
+    pass
+                    if table not in existing_tables:
+    
+        pass
+    pass
+                        validation_result['missing_tables'].append(table)
+                        validation_result['issues'].append(f"Missing table: {table}")
+                        validation_result['valid'] = False
+                
+                # Check for unexpected tables (informational only)
+                unexpected_tables = [t for t in existing_tables if t not in expected_tables and not t.startswith('sqlite_')]
+                if unexpected_tables:
+    
+        pass
+    pass
+                    validation_result['issues'].append(f"Unexpected tables found: {', '.join(unexpected_tables)}")
+                
+            finally:
+    pass
+                session.close()
+                
+        except Exception as e:
+    pass
+    pass
+            validation_result['valid'] = False
+            validation_result['issues'].append(f"Schema validation error: {e}")
+        
+        return validation_result
+    
+    def _test_database_operations(self, db_manager: 'DatabaseManager') -> Dict[str, Any]:
+    pass
+        """Test basic database CRUD operations"""
+        test_result = {
+            'success': True,
+            'errors': [],
+            'operations_tested': []
+        }
+        
+        try:
+    pass
+            session = db_manager.get_session()
+            try:
+    pass
+                from sqlalchemy import text
+                from datetime import datetime
+                
+                # Test 1: Simple INSERT operation
+                try:
+    pass
+                    # Insert a test trading signal
+                    session.execute(text("""
+                        INSERT INTO trading_signals (symbol, strategy_name, action, confidence, timestamp)
+                        VALUES ('TEST/USDT', 'init_config_test', 'BUY', 0.5, :timestamp)
+                    """), {'timestamp': datetime.now()})
+                    session.commit()
+                    test_result['operations_tested'].append('INSERT')
+                except Exception as e:
+    pass
+    pass
+                    test_result['success'] = False
+                    test_result['errors'].append(f"INSERT test failed: {e}")
+                
+                # Test 2: SELECT operation
+                try:
+    pass
+                    result = session.execute(text("""
+                        SELECT COUNT(*) FROM trading_signals WHERE strategy_name = 'init_config_test'
+                    """))
+                    count = result.fetchone()[0]
+                    if count > 0:
+    
+        pass
+    pass
+                        test_result['operations_tested'].append('SELECT')
+                    else:
+    pass
+                        test_result['success'] = False
+                        test_result['errors'].append("SELECT test failed: no records found")
+                except Exception as e:
+    pass
+    pass
+                    test_result['success'] = False
+                    test_result['errors'].append(f"SELECT test failed: {e}")
+                
+                # Test 3: UPDATE operation
+                try:
+    pass
+                    session.execute(text("""
+                        UPDATE trading_signals 
+                        SET confidence = 0.8 
+                        WHERE strategy_name = 'init_config_test'
+                    """))
+                    session.commit()
+                    test_result['operations_tested'].append('UPDATE')
+                except Exception as e:
+    pass
+    pass
+                    test_result['success'] = False
+                    test_result['errors'].append(f"UPDATE test failed: {e}")
+                
+                # Test 4: DELETE operation (cleanup)
+                try:
+    pass
+                    session.execute(text("""
+                        DELETE FROM trading_signals WHERE strategy_name = 'init_config_test'
+                    """))
+                    session.commit()
+                    test_result['operations_tested'].append('DELETE')
+                except Exception as e:
+    pass
+    pass
+                    test_result['success'] = False
+                    test_result['errors'].append(f"DELETE test failed: {e}")
+                
+            finally:
+    pass
+                session.close()
+                
+        except Exception as e:
+    pass
+    pass
+            test_result['success'] = False
+            test_result['errors'].append(f"Database operations test failed: {e}")
+        
+        return test_result
+    
+    def _get_created_tables(self, db_manager: 'DatabaseManager') -> List[str]:
+    pass
+        """Get list of tables that were created"""
+        try:
+    pass
+            session = db_manager.get_session()
+            try:
+    pass
+                from sqlalchemy import text
+                if 'sqlite' in db_manager.database_url.lower():
+    
+        pass
+    pass
+                    result = session.execute(text(
+                        "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"
+                    return [row[0] for row in result.fetchall()]
+                else:
+    pass
+                    result = session.execute(text(
+                        "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"
+                    ))
+                    return [row[0] for row in result.fetchall()]
+            finally:
+    pass
+                session.close()
+        except Exception:
+    pass
+    pass
+            return []
+
+
+class ConfigHelpCommand(BaseCommand):
+    pass
+    """Show configuration guide"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute config help command"""
+        self.logger.banner("GeneBot Configuration Guide")
+        
+        self._show_file_structure()
+        self._show_env_setup()
+        self._show_accounts_setup()
+        self._show_bot_config_setup()
+        self._show_next_steps()
+        
+        return CommandResult.success("Configuration guide displayed")
+    
+    def _show_file_structure(self) -> None:
+    pass
+        """Show required file structure"""
+        self.logger.section("Required File Structure")
+        
+        structure = [
+            "config/",
+            "├── accounts.yaml          # Trading account configurations",
+            "├── trading_bot_config.yaml # Bot and strategy settings",
+            "logs/                      # Log files directory",
+            "reports/                   # Trading reports directory", 
+            "backups/                   # Configuration backups",
+            ".env                       # Environment variables and API keys"
+        ]
+        
+        for line in structure:
+    pass
+            self.logger.info(f"  {line}")
+    
+    def _show_env_setup(self) -> None:
+    pass
+        """Show .env file setup"""
+        self.logger.section("Environment Variables (.env)")
+        
+        env_examples = [
+            "# Crypto Exchange API Keys",
+            "BINANCE_API_KEY=your_binance_api_key",
+            "BINANCE_API_SECRET=your_binance_api_secret",
+            "BINANCE_SANDBOX=true",
+            "",
+            "# Forex Broker Credentials", 
+            "OANDA_API_KEY=your_oanda_api_key",
+            "OANDA_ACCOUNT_ID=your_oanda_account_id",
+            "OANDA_SANDBOX=true",
+            "",
+            "# Database Configuration",
+            "DATABASE_URL=sqlite:///genebot.db"
+        ]
+        
+        for line in env_examples:
+    pass
+            self.logger.info(f"  {line}")
+    
+    def _show_accounts_setup(self) -> None:
+    pass
+        """Show accounts.yaml setup"""
+        self.logger.section("Account Configuration (config/accounts.yaml)")
+        
+        accounts_example = [
+            "crypto_exchanges:",
+            "  binance-demo:",
+            "    name: 'Binance Demo Account'",
+            "    exchange_type: 'binance'",
+            "    api_key: '${BINANCE_API_KEY}'",
+            "    api_secret: '${BINANCE_API_SECRET}'",
+            "    sandbox: true",
+            "    enabled: true",
+            "",
+            "forex_brokers:",
+            "  oanda-demo:",
+            "    name: 'OANDA Demo Account'",
+            "    broker_type: 'oanda'",
+            "    api_key: '${OANDA_API_KEY}'",
+            "    account_id: '${OANDA_ACCOUNT_ID}'",
+            "    sandbox: true",
+            "    enabled: true"
+        ]
+        
+        for line in accounts_example:
+    pass
+            self.logger.info(f"  {line}")
+    
+    def _show_bot_config_setup(self) -> None:
+    pass
+        """Show bot configuration setup"""
+        self.logger.section("Bot Configuration (config/trading_bot_config.yaml)")
+        
+        bot_config_example = [
+            "strategies:",
+            "  - name: 'RSI_Mean_Reversion'",
+            "    enabled: true",
+            "    risk_per_trade: 0.02",
+            "  - name: 'Moving_Average_Crossover'", 
+            "    enabled: true",
+            "    risk_per_trade: 0.015",
+            "",
+            "risk_management:",
+            "  max_daily_loss: 0.05",
+            "  max_drawdown: 0.10",
+            "  position_sizing: 'fixed_percentage'"
+        ]
+        
+        for line in bot_config_example:
+    pass
+            self.logger.info(f"  {line}")
+    
+    def _show_next_steps(self) -> None:
+    pass
+        """Show next steps"""
+        self.logger.section("Next Steps")
+        
+        steps = [
+            "1. Run 'genebot init-config' to create configuration files",
+            "2. Edit .env file with your API credentials",
+            "3. Add accounts with 'genebot add-crypto' or 'genebot add-forex'",
+            "4. Validate setup with 'genebot validate'",
+            "5. Start trading with 'genebot start'"
+        ]
+        
+        for step in steps:
+    pass
+            self.logger.list_item(step, "info")
+
+
+class ListStrategiesCommand(BaseCommand):
+    pass
+    """List all active trading strategies"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute list strategies command"""
+        status_filter = getattr(args, 'status', 'all')
+        
+        self.logger.section("Trading Strategies")
+        self.logger.info(f"Filter: {status_filter}")
+        
+        try:
+    pass
+            # Load strategies from actual configuration and registry
+            strategies = self._load_strategies_info(status_filter)
+            
+            if not strategies:
+    
+        pass
+    pass
+                return CommandResult.warning(
+                    suggestions=[
+                        "Check strategy configuration in config/trading_bot_config.yaml",
+                        "Use 'all' status filter to see all strategies",
+                        "Run 'genebot init-config' to create default configuration"
+                    ]
+                )
+            
+            # Display strategies
+            self.logger.table_header(['Name', 'Status', 'Markets', 'Risk/Trade', 'Win Rate', 'Trades'])
+            
+            for strategy in strategies:
+    pass
+                status_icon = "🟢" if strategy['status'] == 'active' else "🔴"
+                markets_str = ', '.join(strategy['markets'])
+                
+                self.logger.table_row([
+                    strategy['name'],
+                    f"{status_icon} {strategy['status']}",
+                    markets_str,
+                    strategy['risk_per_trade'],
+                    strategy['win_rate'],
+                    str(strategy['total_trades'])
+                ])
+            
+            return CommandResult.success(
+                f"Listed {len(strategies)} strateg{'y' if len(strategies) == 1 else 'ies'}",
+                data={'strategies': strategies}
+            )
+            
+        except Exception as e:
+    pass
+    pass
+            self.logger.error(f"Failed to load strategies: {e}")
+            return CommandResult.error(f"Failed to load strategies: {e}")
+    
+    def _load_strategies_info(self, status_filter: str) -> List[Dict[str, Any]]:
+    pass
+        """Load strategy information from configuration and registry"""
+        strategies = []
+        
+        try:
+    pass
+            # Try to load from configuration file
+            config_path = Path(self.context.config_path) / "trading_bot_config.yaml"
+            
+            if config_path.exists():
+    
+        pass
+    pass
+                import yaml
+                    config_data = yaml.safe_load(f)
+                
+                # Extract strategy configurations
+                strategy_configs = config_data.get('strategies', [])
+                
+                for strategy_config in strategy_configs:
+    pass
+                    strategy_info = {
+                        'name': strategy_config.get('name', 'Unknown'),
+                        'status': 'active' if strategy_config.get('enabled', False) else 'inactive',
+                        'markets': self._determine_strategy_markets(strategy_config.get('name', '')),
+                        'risk_per_trade': f"{strategy_config.get('risk_per_trade', 0.02) * 100:.1f}%",
+                        'win_rate': self._get_strategy_win_rate(strategy_config.get('name', '')),
+                        'total_trades': self._get_strategy_trade_count(strategy_config.get('name', ''))
+                    }
+                    
+                    # Apply status filter
+                    if status_filter == 'all' or strategy_info['status'] == status_filter:
+    
+        pass
+    pass
+                        strategies.append(strategy_info)
+            
+            # If no strategies from config, use registry information
+            if not strategies:
+    
+        pass
+    pass
+                strategies = self._get_registry_strategies(status_filter)
+                
+        except Exception as e:
+    pass
+    pass
+            # Fallback to registry or mock data
+            strategies = self._get_registry_strategies(status_filter)
+        
+        return strategies
+    
+    def _determine_strategy_markets(self, strategy_name: str) -> List[str]:
+    pass
+        """Determine which markets a strategy supports"""
+        # Map strategy names to their supported markets
+        market_mapping = {
+            'RSI_Mean_Reversion': ['crypto', 'forex'],
+            'RSIStrategy': ['crypto', 'forex'],
+            'Moving_Average_Crossover': ['crypto'],
+            'MovingAverageStrategy': ['crypto', 'forex'],
+            'Forex_Session_Strategy': ['forex'],
+            'ForexSessionStrategy': ['forex'],
+            'Forex_Carry_Trade_Strategy': ['forex'],
+            'ForexCarryTradeStrategy': ['forex'],
+            'Forex_News_Strategy': ['forex'],
+            'ForexNewsStrategy': ['forex'],
+            'Cross_Market_Arbitrage_Strategy': ['crypto', 'forex'],
+            'CrossMarketArbitrageStrategy': ['crypto', 'forex'],
+            'Crypto_Forex_Arbitrage_Strategy': ['crypto', 'forex'],
+            'CryptoForexArbitrageStrategy': ['crypto', 'forex'],
+            'Triangular_Arbitrage_Strategy': ['crypto'],
+            'TriangularArbitrageStrategy': ['crypto'],
+            'Multi_Indicator_Strategy': ['crypto', 'forex'],
+            'MultiIndicatorStrategy': ['crypto', 'forex'],
+            'ML_Pattern_Strategy': ['crypto', 'forex'],
+            'MLPatternStrategy': ['crypto', 'forex'],
+            'Advanced_Momentum_Strategy': ['crypto', 'forex'],
+            'AdvancedMomentumStrategy': ['crypto', 'forex'],
+            'ATR_Volatility_Strategy': ['crypto', 'forex'],
+            'ATRVolatilityStrategy': ['crypto', 'forex'],
+            'MeanReversionStrategy': ['crypto', 'forex']
+        }
+        
+        return market_mapping.get(strategy_name, ['crypto'])
+    
+    def _get_strategy_win_rate(self, strategy_name: str) -> str:
+    pass
+        """Get strategy win rate (mock data for now)"""
+        # This would normally come from performance analytics
+        win_rates = {
+            'Forex_Session_Strategy': '65%',
+            'ForexSessionStrategy': '65%',
+            'Forex_Carry_Trade_Strategy': '71%',
+            'ForexCarryTradeStrategy': '71%',
+            'Forex_News_Strategy': '58%',
+            'ForexNewsStrategy': '58%',
+            'Cross_Market_Arbitrage_Strategy': '85%',
+            'CrossMarketArbitrageStrategy': '85%',
+            'Crypto_Forex_Arbitrage_Strategy': '82%',
+            'CryptoForexArbitrageStrategy': '82%',
+            'Triangular_Arbitrage_Strategy': '78%',
+            'TriangularArbitrageStrategy': '78%',
+            'Multi_Indicator_Strategy': '69%',
+            'MultiIndicatorStrategy': '69%',
+            'ML_Pattern_Strategy': '74%',
+            'MLPatternStrategy': '74%',
+            'Advanced_Momentum_Strategy': '66%',
+            'AdvancedMomentumStrategy': '66%',
+            'ATR_Volatility_Strategy': '70%',
+            'ATRVolatilityStrategy': '70%',
+            'MeanReversionStrategy': '67%'
+        }
+        
+        return win_rates.get(strategy_name, '65%')
+    
+    def _get_strategy_trade_count(self, strategy_name: str) -> int:
+    pass
+        """Get strategy trade count (mock data for now)"""
+        # This would normally come from trade history
+        trade_counts = {
+            'Forex_Session_Strategy': 56,
+            'ForexSessionStrategy': 56,
+            'Forex_Carry_Trade_Strategy': 34,
+            'ForexCarryTradeStrategy': 34,
+            'Forex_News_Strategy': 78,
+            'ForexNewsStrategy': 78,
+            'Cross_Market_Arbitrage_Strategy': 23,
+            'CrossMarketArbitrageStrategy': 23,
+            'Crypto_Forex_Arbitrage_Strategy': 45,
+            'CryptoForexArbitrageStrategy': 45,
+            'Triangular_Arbitrage_Strategy': 67,
+            'TriangularArbitrageStrategy': 67,
+            'Multi_Indicator_Strategy': 98,
+            'MultiIndicatorStrategy': 98,
+            'ML_Pattern_Strategy': 112,
+            'MLPatternStrategy': 112,
+            'Advanced_Momentum_Strategy': 87,
+            'AdvancedMomentumStrategy': 87,
+            'ATR_Volatility_Strategy': 76,
+            'ATRVolatilityStrategy': 76,
+            'MeanReversionStrategy': 95
+        }
+        
+        return trade_counts.get(strategy_name, 25)
+    
+    def _get_registry_strategies(self, status_filter: str) -> List[Dict[str, Any]]:
+    pass
+        """Get strategies from registry as fallback"""
+        try:
+    pass
+            # Try to import and use strategy registry
+            from genebot.strategies.strategy_registry import StrategyRegistry
+            
+            registry = StrategyRegistry()
+            # Discover strategies from the strategies package
+            
+            strategies = []
+            for strategy_name in registry.get_registered_strategies():
+    pass
+                strategy_info = {
+                    'name': strategy_name,
+                    'status': 'active',  # Default to active for discovered strategies
+                    'markets': self._determine_strategy_markets(strategy_name),
+                    'risk_per_trade': '2.0%',
+                    'win_rate': self._get_strategy_win_rate(strategy_name),
+                    'total_trades': self._get_strategy_trade_count(strategy_name)
+                }
+                
+                # Apply status filter
+                if status_filter == 'all' or strategy_info['status'] == status_filter:
+    
+        pass
+    pass
+                    strategies.append(strategy_info)
+            
+            return strategies
+            
+        except ImportError:
+    pass
+    pass
+            # Fallback to mock data if registry not available
+    
+        # Get mock strategy data as final fallback
+        strategies = [
+            {
+                'name': 'RSI_Mean_Reversion',
+                'status': 'active',
+                'markets': ['crypto', 'forex'],
+                'risk_per_trade': '2%',
+                'win_rate': '68%',
+                'total_trades': 142
+            },
+            {
+                'name': 'Moving_Average_Crossover',
+                'status': 'active',
+                'markets': ['crypto'],
+                'risk_per_trade': '1.5%',
+                'win_rate': '72%',
+                'total_trades': 89
+            },
+            {
+                'name': 'Forex_Session_Strategy',
+                'status': 'inactive',
+                'markets': ['forex'],
+                'risk_per_trade': '3%',
+                'win_rate': '65%',
+                'total_trades': 56
+            }
+        ]
+        
+        # Filter strategies
+        if status_filter != 'all':
+    
+        pass
+    pass
+            strategies = [s for s in strategies if s['status'] == status_filter]
+        
+        return strategies
+
+
+class ValidateConfigCommand(BaseCommand):
+    
+        pass
+    pass
+    """Validate configuration files and settings"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute config validation command"""
+        verbose = getattr(args, 'verbose', False)
+        
+        self.logger.section("Configuration Validation")
+        
+        try:
+    pass
+            # Create configuration manager
+            config_manager = ConfigurationManager(
+                config_path=self.context.config_path,
+                env_file=self.context.env_file
+            )
+            
+            # Run validation
+            self.logger.progress("Validating configuration files...")
+            validation_result = config_manager.validate_configuration()
+            
+            # Display results
+            if validation_result.is_valid:
+    
+        pass
+    pass
+                self.logger.success("✅ Configuration is valid")
+            else:
+    pass
+                self.logger.error("❌ Configuration has errors")
+            
+            # Show errors
+            if validation_result.errors:
+    
+        pass
+    pass
+                self.logger.subsection(f"Errors ({len(validation_result.errors)})")
+                for error in validation_result.errors:
+    pass
+                    self.logger.list_item(f"❌ {error}", "error")
+            
+            # Show warnings
+            if validation_result.warnings:
+    
+        pass
+    pass
+                self.logger.subsection(f"Warnings ({len(validation_result.warnings)})")
+                for warning in validation_result.warnings:
+    pass
+                    self.logger.list_item(f"⚠️  {warning}", "warning")
+            
+            # Show info if verbose
+            if verbose and hasattr(validation_result, 'info') and validation_result.info:
+    
+        pass
+    pass
+                self.logger.subsection(f"Information ({len(validation_result.info)})")
+                for info in validation_result.info:
+    pass
+                    self.logger.list_item(f"ℹ️  {info}", "info")
+            
+            # Prepare result
+            if validation_result.is_valid:
+    
+        pass
+    pass
+                return CommandResult.success(
+                    "Configuration validation passed",
+                    data={
+                        'errors': validation_result.errors,
+                        'warnings': validation_result.warnings,
+                        'info': getattr(validation_result, 'info', [])
+                    }
+                )
+            else:
+    pass
+                suggestions = [
+                    "Fix configuration errors listed above",
+                    "Check file syntax and required fields",
+                    "Run 'genebot config-help' for setup guidance"
+                ]
+                
+                return CommandResult.error(
+                    f"Configuration validation failed with {len(validation_result.errors)} errors",
+                    suggestions=suggestions
+                )
+                
+        except CLIException as e:
+    pass
+    pass
+            self.logger.error(f"Validation failed: {e.message}")
+            return CommandResult.error(str(e.message), suggestions=e.suggestions)
+        except Exception as e:
+    pass
+    pass
+            import traceback
+            return CommandResult.error(
+                suggestions=[
+                    "Check if configuration files exist",
+                    "Verify file permissions",
+                    "Run 'genebot init-config' if files are missing"
+                ]
+            )
+
+
+class ConfigStatusCommand(BaseCommand):
+    
+        pass
+    pass
+    """Show configuration status and information"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute config status command"""
+        self.logger.section("Configuration Status")
+        
+        try:
+    pass
+            # Create configuration manager
+            config_manager = ConfigurationManager(
+                config_path=self.context.config_path,
+                env_file=self.context.env_file
+            )
+            
+            # Get configuration status
+            status = config_manager.get_configuration_status()
+            
+            # Display directory status
+            self.logger.subsection("Configuration Directory")
+            dir_status = status['config_directory']
+            dir_icon = "✅" if dir_status['exists'] and dir_status['writable'] else "❌"
+            self.logger.info(f"{dir_icon} Path: {dir_status['path']}")
+            self.logger.info(f"   Exists: {dir_status['exists']}")
+            self.logger.info(f"   Writable: {dir_status['writable']}")
+            
+            # Display file status
+            self.logger.subsection("Configuration Files")
+            files = status['files']
+            
+            for file_type, file_info in files.items():
+    pass
+                if file_info['exists']:
+    
+        pass
+    pass
+                    file_icon = "✅"
+                    size_mb = file_info['size'] / 1024 / 1024
+                    modified = file_info['modified'].strftime("%Y-%m-%d %H:%M:%S")
+                    self.logger.info(f"{file_icon} {file_type}: {size_mb:.2f} MB (modified: {modified})")
+                else:
+    
+        pass
+    pass
+                    file_icon = "❌"
+                    self.logger.info(f"{file_icon} {file_type}: Not found")
+            
+            # Display validation status
+            self.logger.subsection("Validation Status")
+            validation = status['validation']
+            if validation:
+    
+        pass
+    pass
+                if validation.get('is_valid'):
+    
+        pass
+    pass
+                    self.logger.info("✅ Configuration is valid")
+                else:
+    pass
+                    error_count = validation.get('error_count', 0)
+                    warning_count = validation.get('warning_count', 0)
+                    self.logger.info(f"❌ Configuration has {error_count} errors, {warning_count} warnings")
+            else:
+    pass
+                self.logger.info("⚠️  Validation status unknown")
+            
+            # Display backup status
+            self.logger.subsection("Backup Status")
+            if status['backups_available']:
+    
+        pass
+    pass
+                backups = config_manager.list_backups()
+                self.logger.info(f"✅ {len(backups)} backup(s) available")
+                
+                # Show recent backups
+                recent_backups = sorted(backups, key=lambda x: x['timestamp'], reverse=True)[:3]
+                for backup in recent_backups:
+    pass
+                    timestamp = backup['timestamp'].strftime("%Y-%m-%d %H:%M:%S")
+                    self.logger.info(f"   {backup['original_file']} - {timestamp}")
+            else:
+    pass
+                self.logger.info("ℹ️  No backups available")
+            
+            return CommandResult.success(
+                "Configuration status retrieved",
+                data=status
+            )
+            
+        except Exception as e:
+    pass
+    pass
+            self.logger.error(f"Failed to get configuration status: {str(e)}")
+            return CommandResult.error(
+                f"Configuration status check failed: {str(e)}",
+                suggestions=[
+                    "Check if configuration directory exists",
+                    "Verify file permissions",
+                    "Run 'genebot init-config' to initialize configuration"
+                ]
+            )
+
+
+class ConfigBackupCommand(BaseCommand):
+    
+        pass
+    pass
+    """Create backup of configuration files"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute config backup command"""
+        file_type = getattr(args, 'file', 'all')
+        
+        self.logger.section("Configuration Backup")
+        self.logger.info(f"Backing up: {file_type}")
+        
+        try:
+    pass
+            # Create configuration manager
+            config_manager = ConfigurationManager(
+                config_path=self.context.config_path,
+                env_file=self.context.env_file
+            )
+            
+            backed_up_files = []
+            
+            # Determine which files to backup
+            if file_type == 'all':
+    
+        pass
+    pass
+                files_to_backup = [
+                    ('bot_config', config_manager.bot_config_file),
+                    ('accounts', config_manager.accounts_file),
+                    ('env', config_manager.env_file)
+                ]
+            elif file_type == 'bot_config':
+    
+        pass
+    pass
+                files_to_backup = [('bot_config', config_manager.bot_config_file)]
+            elif file_type == 'accounts':
+    
+        pass
+    pass
+                files_to_backup = [('accounts', config_manager.accounts_file)]
+            elif file_type == 'env':
+    
+        pass
+    pass
+                files_to_backup = [('env', config_manager.env_file)]
+            else:
+    pass
+                return CommandResult.error(
+                    f"Unknown file type: {file_type}",
+                    suggestions=["Use 'all', 'bot_config', 'accounts', or 'env'"]
+                )
+            
+            # Create backups
+            for file_name, file_path in files_to_backup:
+    pass
+                if file_path.exists():
+    
+        pass
+    pass
+                    backup_path = config_manager.create_backup(file_path)
+                    if backup_path:
+    
+        pass
+    pass
+                        backed_up_files.append((file_name, str(backup_path)))
+                        self.logger.progress(f"Backed up {file_name}: {backup_path.name}")
+                    else:
+    pass
+                        self.logger.warning(f"Failed to backup {file_name}")
+                else:
+    pass
+                    self.logger.info(f"Skipped {file_name}: file does not exist")
+            
+            if backed_up_files:
+    
+        pass
+    pass
+                self.logger.success(f"Successfully backed up {len(backed_up_files)} file(s)")
+                return CommandResult.success(
+                    f"Created {len(backed_up_files)} backup(s)",
+                    data={'backed_up_files': backed_up_files}
+                )
+            else:
+    pass
+                return CommandResult.warning(
+                    "No files were backed up",
+                    suggestions=["Check if configuration files exist"]
+                )
+                
+        except Exception as e:
+    
+        pass
+    pass
+    pass
+            self.logger.error(f"Backup failed: {str(e)}")
+            return CommandResult.error(
+                f"Configuration backup failed: {str(e)}",
+                suggestions=[
+                    "Check file permissions",
+                    "Ensure backup directory is writable",
+                    "Verify sufficient disk space"
+                ]
+            )
+
+
+class ConfigRestoreCommand(BaseCommand):
+    
+        pass
+    pass
+    """Restore configuration files from backup"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute config restore command"""
+        file_type = getattr(args, 'file', None)
+        backup_timestamp = getattr(args, 'timestamp', None)
+        
+        self.logger.section("Configuration Restore")
+        
+        try:
+    pass
+            # Create configuration manager
+            config_manager = ConfigurationManager(
+                config_path=self.context.config_path,
+                env_file=self.context.env_file
+            )
+            
+            # List available backups
+            backups = config_manager.list_backups()
+            if not backups:
+    
+        pass
+    pass
+                return CommandResult.error(
+                    "No backups available",
+                    suggestions=["Create backups with 'genebot config-backup'"]
+                )
+            
+            # Filter backups if file type specified
+            if file_type:
+    
+        pass
+    pass
+                backups = [b for b in backups if file_type in b['original_file']]
+                if not backups:
+    
+        pass
+    pass
+                    return CommandResult.error(
+                        f"No backups found for file type: {file_type}",
+                        suggestions=["Check available backups with 'genebot config-status'"]
+                    )
+            
+            # Select backup to restore
+            if backup_timestamp:
+    
+        pass
+    pass
+                # Find specific backup by timestamp
+                selected_backup = None
+                for backup in backups:
+    
+        pass
+    pass
+                    if backup_timestamp in backup['backup_file']:
+    
+        pass
+    pass
+                        selected_backup = backup
+                        break
+                
+                if not selected_backup:
+    
+        pass
+    pass
+                    return CommandResult.error(
+                        f"Backup not found for timestamp: {backup_timestamp}",
+                        suggestions=["List available backups with 'genebot config-status'"]
+                    )
+            else:
+    pass
+                # Use most recent backup
+                selected_backup = max(backups, key=lambda x: x['timestamp'])
+            
+            # Confirm restore operation
+            self.logger.warning(f"This will restore: {selected_backup['original_file']}")
+            self.logger.warning(f"From backup: {selected_backup['backup_file']}")
+            self.logger.warning("Current file will be overwritten!")
+            
+            # Restore the backup
+            original_path = Path(selected_backup['original_file'])
+            backup_path = Path(selected_backup['backup_file'])
+            
+            if backup_path.exists():
+    
+        pass
+    pass
+                # Create backup of current file before restore
+                current_backup = config_manager.create_backup(original_path)
+                
+                # Restore from backup
+                
+                
+                return CommandResult.success(
+                    data={
+                        'current_backup': str(current_backup) if current_backup else None
+                    }
+                )
+            else:
+    
+        pass
+    pass
+                return CommandResult.error(
+                    f"Backup file not found: {backup_path}",
+                    suggestions=["Check backup directory integrity"]
+                )
+                
+        except Exception as e:
+    pass
+    pass
+            self.logger.error(f"Restore failed: {str(e)}")
+            return CommandResult.error(
+                f"Configuration restore failed: {str(e)}",
+                suggestions=[
+                    "Check file permissions",
+                    "Verify backup file exists",
+                    "Ensure sufficient disk space"
+                ]
+            )
+
+
+class ConfigMigrateCommand(BaseCommand):
+    
+        pass
+    pass
+    """Migrate configuration files to newer versions"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute config migration command"""
+        target_version = getattr(args, 'version', 'latest')
+        dry_run = getattr(args, 'dry_run', False)
+        
+        self.logger.section("Configuration Migration")
+        self.logger.info(f"Target version: {target_version}")
+        self.logger.info(f"Dry run: {dry_run}")
+        
+        try:
+    pass
+            # Create configuration manager
+            config_manager = ConfigurationManager(
+                config_path=self.context.config_path,
+                env_file=self.context.env_file
+            )
+            
+            # Check current configuration version
+            current_version = self._detect_config_version(config_manager)
+            self.logger.info(f"Current version: {current_version}")
+            
+            # Determine migration path
+            migrations = self._get_migration_path(current_version, target_version)
+            
+            if not migrations:
+    
+        pass
+    pass
+                return CommandResult.success(
+                    "Configuration is already up to date",
+                    data={'current_version': current_version}
+                )
+            
+            self.logger.subsection(f"Migration Plan ({len(migrations)} steps)")
+            for i, migration in enumerate(migrations, 1):
+    pass
+                self.logger.info(f"{i}. {migration['from_version']} → {migration['to_version']}: {migration['description']}")
+            
+            if dry_run:
+    
+        pass
+    pass
+                return CommandResult.success(
+                    data={'migrations': migrations, 'dry_run': True}
+                )
+            
+            # Execute migrations
+            migrated_files = []
+            
+            for migration in migrations:
+    pass
+                self.logger.progress(f"Applying migration: {migration['description']}")
+                
+                # Create backups before migration
+                for file_path in [config_manager.bot_config_file, config_manager.accounts_file]:
+    pass
+                    if file_path.exists():
+    
+        pass
+    pass
+                        config_manager.create_backup(file_path)
+                
+                # Apply migration
+                result = self._apply_migration(config_manager, migration)
+                if result:
+    
+        pass
+    pass
+                    migrated_files.extend(result)
+                else:
+    pass
+                    return CommandResult.error(
+                        f"Migration failed: {migration['description']}",
+                        suggestions=["Restore from backup and try again"]
+            
+            
+            return CommandResult.success(
+                f"Migrated configuration to version {target_version}",
+                data={
+                    'from_version': current_version,
+                }
+            
+        except Exception as e:
+    pass
+    pass
+            self.logger.error(f"Migration failed: {str(e)}")
+            return CommandResult.error(
+                f"Configuration migration failed: {str(e)}",
+                suggestions=[
+                    "Check configuration file syntax",
+                    "Restore from backup if needed",
+                    "Run with --dry-run to preview changes"
+                ]
+    
+    def _detect_config_version(self, config_manager: ConfigurationManager) -> str:
+    pass
+        """Detect current configuration version"""
+        try:
+    pass
+            if config_manager.bot_config_file.exists():
+    
+        pass
+    pass
+                bot_config = config_manager.load_bot_config()
+                
+                # Check for version field
+                if 'version' in bot_config:
+    
+        pass
+    pass
+                    return bot_config['version']
+                
+                # Detect version by structure
+                if 'multi_market' in bot_config:
+    
+        pass
+    pass
+                    return '2.0'
+                elif 'strategies' in bot_config and isinstance(bot_config['strategies'], dict):
+    
+        pass
+    pass
+                    return '1.1'
+                else:
+    pass
+                    return '1.0'
+            else:
+    pass
+                return 'none'
+        except Exception:
+    pass
+    pass
+            return 'unknown'
+    
+    def _get_migration_path(self, from_version: str, to_version: str) -> List[Dict[str, Any]]:
+    pass
+        """Get migration path between versions"""
+        migrations = []
+        
+        # Define available migrations
+        available_migrations = [
+            {
+                'from_version': '1.0',
+                'migration_func': self._migrate_1_0_to_1_1
+            {
+                'from_version': '1.1',
+                'migration_func': self._migrate_1_1_to_2_0
+            {
+                'from_version': '2.0',
+                'migration_func': self._migrate_2_0_to_2_1
+            }
+        ]
+        
+        # Build migration path
+        current = from_version
+        target = to_version if to_version != 'latest' else '2.1'
+        
+        while current != target:
+    
+        pass
+    pass
+            next_migration = None
+            for migration in available_migrations:
+    pass
+                if migration['from_version'] == current:
+    
+        pass
+    pass
+                    next_migration = migration
+                    break
+            
+            if not next_migration:
+    
+        pass
+    pass
+                break
+            
+            migrations.append(next_migration)
+            current = next_migration['to_version']
+        
+        return migrations
+    
+    def _apply_migration(self, config_manager: ConfigurationManager, migration: Dict[str, Any]) -> Optional[List[str]]:
+    pass
+        """Apply a specific migration"""
+        try:
+    
+        pass
+    pass
+            return migration['migration_func'](config_manager)
+        except Exception as e:
+    pass
+    pass
+            self.logger.error(f"Migration function failed: {str(e)}")
+            return None
+    
+    def _migrate_1_0_to_1_1(self, config_manager: ConfigurationManager) -> List[str]:
+    pass
+        """Migrate from version 1.0 to 1.1"""
+        bot_config = config_manager.load_bot_config()
+        
+        # Add version field
+        bot_config['version'] = '1.1'
+        
+        # Restructure strategies if needed
+        if 'strategies' not in bot_config or not isinstance(bot_config['strategies'], dict):
+    
+        pass
+    pass
+            bot_config['strategies'] = {
+                'rsi_strategy': {
+                    'strategy_type': 'rsi',
+                    'enabled': False,
+                    'symbols': ['BTC/USDT', 'ETH/USDT'],
+                    'timeframe': '1h',
+                    'parameters': {
+                        'rsi_period': 14,
+                        'oversold_threshold': 30,
+                        'overbought_threshold': 70
+                    }
+                }
+            }
+        
+        config_manager.save_bot_config(bot_config)
+        return [str(config_manager.bot_config_file)]
+    
+    def _migrate_1_1_to_2_0(self, config_manager: ConfigurationManager) -> List[str]:
+    pass
+        """Migrate from version 1.1 to 2.0"""
+        bot_config = config_manager.load_bot_config()
+        
+        # Update version
+        bot_config['version'] = '2.0'
+        
+        # Add multi-market configuration
+        if 'multi_market' not in bot_config:
+    
+        pass
+    pass
+            bot_config['multi_market'] = {
+                'enabled': True,
+                'crypto': {
+                    'enabled': True,
+                    'default_quote_currency': 'USDT'
+                },
+                'forex': {
+                    'enabled': False,
+                    'default_base_currency': 'USD'
+                }
+            }
+        
+        # Add cross-market risk management
+        if 'cross_market_risk' not in bot_config:
+    
+        pass
+    pass
+            bot_config['cross_market_risk'] = {
+                'max_total_exposure': 0.8,
+                'crypto_max_allocation': 0.6,
+                'forex_max_allocation': 0.4,
+                'correlation_threshold': 0.7
+            }
+        
+        config_manager.save_bot_config(bot_config)
+        return [str(config_manager.bot_config_file)]
+    
+    def _migrate_2_0_to_2_1(self, config_manager: ConfigurationManager) -> List[str]:
+    pass
+        """Migrate from version 2.0 to 2.1"""
+        bot_config = config_manager.load_bot_config()
+        
+        # Update version
+        bot_config['version'] = '2.1'
+        
+        # Add compliance configuration
+        if 'compliance' not in bot_config:
+    
+        pass
+    pass
+            bot_config['compliance'] = {
+                'enabled': True,
+                'audit_trail': True,
+                'report_frequency': 'daily',
+                'report_output_dir': 'reports/compliance',
+                'audit_retention_days': 365
+            }
+        
+        # Add enhanced monitoring
+        if 'monitoring' not in bot_config:
+    
+        pass
+    pass
+            bot_config['monitoring'] = {
+                'enabled': True,
+                'metrics_collection': True,
+                'performance_tracking': True,
+                'alert_thresholds': {
+                    'max_drawdown': 0.1,
+                    'daily_loss': 0.05
+                }
+            }
+        
+        config_manager.save_bot_config(bot_config)
+        return [str(config_manager.bot_config_file)]
+
+
+class SystemValidateCommand(BaseCommand):
+    pass
+    """Comprehensive system validation that checks all components"""
+    
+    def execute(self, args: Namespace) -> CommandResult:
+    pass
+        """Execute comprehensive system validation"""
+        verbose = getattr(args, 'verbose', False)
+        
+        self.logger.section("Comprehensive System Validation")
+        
+        try:
+    pass
+            # Create configuration manager
+            config_manager = ConfigurationManager(
+                config_path=self.context.config_path,
+                env_file=self.context.env_file
+            )
+            
+            validation_results = {}
+            overall_valid = True
+            
+            # 1. Configuration validation
+            self.logger.subsection("Configuration Validation")
+            config_result = config_manager.validate_configuration()
+            validation_results['configuration'] = config_result
+            if not config_result.is_valid:
+    
+        pass
+    pass
+                overall_valid = False
+            
+            self._display_validation_result("Configuration", config_result, verbose)
+            
+            # 2. File system validation
+            self.logger.subsection("File System Validation")
+            fs_result = self._validate_file_system()
+            validation_results['file_system'] = fs_result
+            if not fs_result.is_valid:
+    
+        pass
+    pass
+                overall_valid = False
+            
+            self._display_validation_result("File System", fs_result, verbose)
+            
+            # 3. Environment validation
+            self.logger.subsection("Environment Validation")
+            env_result = self._validate_environment(config_manager)
+            validation_results['environment'] = env_result
+            if not env_result.is_valid:
+    
+        pass
+    pass
+                overall_valid = False
+            
+            self._display_validation_result("Environment", env_result, verbose)
+            
+            # 4. Dependencies validation
+            self.logger.subsection("Dependencies Validation")
+            deps_result = self._validate_dependencies()
+            validation_results['dependencies'] = deps_result
+            if not deps_result.is_valid:
+    
+        pass
+    pass
+                overall_valid = False
+            
+            self._display_validation_result("Dependencies", deps_result, verbose)
+            
+            # 5. Database validation
+            self.logger.subsection("Database Validation")
+            db_result = self._validate_database(config_manager)
+            validation_results['database'] = db_result
+            if not db_result.is_valid:
+    
+        pass
+    pass
+                overall_valid = False
+            
+            self._display_validation_result("Database", db_result, verbose)
+            
+            # Summary
+            self.logger.section("Validation Summary")
+            if overall_valid:
+    
+        pass
+    pass
+                self.logger.success("✅ All system components are valid")
+            else:
+    pass
+                self.logger.error("❌ System validation failed")
+            
+            # Count totals
+            total_errors = sum(len(result.errors) for result in validation_results.values())
+            total_warnings = sum(len(result.warnings) for result in validation_results.values())
+            
+            self.logger.info(f"Total errors: {total_errors}")
+            self.logger.info(f"Total warnings: {total_warnings}")
+            
+            if overall_valid:
+    
+        pass
+    pass
+                return CommandResult.success(
+                    "System validation passed",
+                    data=validation_results
+                )
+            else:
+    pass
+                return CommandResult.error(
+                    f"System validation failed with {total_errors} errors",
+                    suggestions=[
+                        "Fix configuration errors",
+                        "Check file permissions",
+                        "Verify environment setup",
+                        "Run individual validations for details"
+                    ]
+                )
+                
+        except Exception as e:
+    
+        pass
+    pass
+    pass
+            self.logger.error(f"System validation failed: {str(e)}")
+            return CommandResult.error(
+                f"System validation error: {str(e)}",
+                suggestions=[
+                    "Check system permissions",
+                    "Verify installation integrity",
+                    "Run 'genebot config-help' for setup guidance"
+                ]
+            )
+    
+    def _validate_file_system(self) -> 'ConfigValidationResult':
+    
+        pass
+    pass
+        """Validate file system requirements"""
+        from genebot.config.validation_utils import ConfigValidationResult
+        
+        result = ConfigValidationResult()
+        
+        # Check required directories
+        required_dirs = [
+            ('config', 'Configuration files'),
+            ('logs', 'Log files'),
+            ('reports', 'Trading reports'),
+            ('backups', 'Configuration backups')
+        ]
+        
+        for dir_name, description in required_dirs:
+    pass
+            dir_path = Path(dir_name)
+            if not dir_path.exists():
+    
+        pass
+    pass
+                result.add_error(f"Required directory missing: {dir_name} ({description})")
+            elif not os.access(dir_path, os.W_OK):
+    
+        pass
+    pass
+                result.add_error(f"Directory not writable: {dir_name}")
+            else:
+    pass
+                result.add_info(f"Directory OK: {dir_name}")
+        
+        # Check disk space
+        try:
+    pass
+            import shutil
+            total, used, free = shutil.disk_usage('.')
+            free_gb = free / (1024**3)
+            
+            if free_gb < 1.0:
+    
+        pass
+    pass
+            elif free_gb < 5.0:
+    
+        pass
+    pass
+                result.add_warning(f"Limited disk space: {free_gb:.1f} GB available")
+            else:
+    pass
+                result.add_info(f"Disk space OK: {free_gb:.1f} GB available")
+        except Exception:
+    pass
+    pass
+            result.add_warning("Could not check disk space")
+        
+        return result
+    
+    def _validate_environment(self, config_manager: ConfigurationManager) -> 'ConfigValidationResult':
+    pass
+        """Validate environment variables and settings"""
+        from genebot.config.validation_utils import ConfigValidationResult
+        
+        result = ConfigValidationResult()
+        
+        # Check .env file
+        if not config_manager.env_file.exists():
+    
+        pass
+    pass
+            result.add_error("Environment file (.env) not found")
+        else:
+    pass
+            env_vars = config_manager.get_env_variables()
+            
+            # Check for required variables
+            required_vars = ['GENEBOT_ENV', 'DEBUG', 'DRY_RUN']
+            for var in required_vars:
+    pass
+                if var not in env_vars:
+    
+        pass
+    pass
+                    result.add_warning(f"Environment variable not set: {var}")
+                else:
+    pass
+                    result.add_info(f"Environment variable OK: {var}")
+            
+            # Check for placeholder values
+            placeholder_patterns = ['your_', 'placeholder', 'example', 'test_']
+            for key, value in env_vars.items():
+    pass
+                for pattern in placeholder_patterns:
+    pass
+                    if pattern in value.lower():
+    
+        pass
+    pass
+                        result.add_warning(f"Placeholder value detected: {key}")
+                        break
+        
+        # Check Python environment
+        try:
+    pass
+            import sys
+            python_version = f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
+            
+            if sys.version_info < (3, 8):
+    
+        pass
+    pass
+        except Exception:
+    pass
+    pass
+            result.add_error("Could not check Python version")
+        
+        return result
+    
+    def _validate_dependencies(self) -> 'ConfigValidationResult':
+    pass
+        """Validate required dependencies"""
+        from genebot.config.validation_utils import ConfigValidationResult
+        
+        result = ConfigValidationResult()
+        
+        # Check required packages
+        required_packages = [
+            ('yaml', 'PyYAML'),
+            ('dotenv', 'python-dotenv'),
+            ('pydantic', 'pydantic'),
+            ('sqlalchemy', 'SQLAlchemy'),
+            ('ccxt', 'ccxt')
+        ]
+        
+        for module_name, package_name in required_packages:
+    pass
+            try:
+    pass
+                __import__(module_name)
+            except ImportError:
+    pass
+    pass
+        # Check optional packages
+        optional_packages = [
+            ('pandas', 'pandas'),
+            ('numpy', 'numpy'),
+            ('matplotlib', 'matplotlib')
+        ]
+        
+        for module_name, package_name in optional_packages:
+    pass
+            try:
+    pass
+                __import__(module_name)
+            except ImportError:
+    pass
+    pass
+        return result
+    
+    def _validate_database(self, config_manager: ConfigurationManager) -> 'ConfigValidationResult':
+    pass
+        """Validate database connectivity and setup"""
+        from genebot.config.validation_utils import ConfigValidationResult
+        
+        result = ConfigValidationResult()
+        
+        try:
+    pass
+            # Load configuration to get database settings
+            try:
+    pass
+                # Try different methods to get config
+                try:
+    
+        pass
+    pass
+                    config = config_manager.get_config()
+                    if isinstance(config, dict):
+    
+        pass
+    pass
+                        db_url = config.get('database', {}).get('database_url', 'sqlite:///genebot.db')
+                    else:
+    pass
+                        db_url = getattr(config.database, 'database_url', 'sqlite:///genebot.db')
+                except Exception:
+    pass
+    pass
+                    # Fallback to default
+                    db_url = 'sqlite:///genebot.db'
+            except Exception as e:
+    pass
+    pass
+                result.add_error(f"Could not validate database: {str(e)}")
+                return result
+            
+            result.add_info(f"Database URL: {db_url}")
+            
+            # Test database connection
+            try:
+    pass
+                from sqlalchemy import create_engine
+                engine = create_engine(db_url)
+                
+                # Test connection
+                with engine.connect() as conn:
+    pass
+                    from sqlalchemy import text
+                
+                
+                # Check if tables exist
+                from sqlalchemy import inspect
+                inspector = inspect(engine)
+                tables = inspector.get_table_names()
+                
+                if tables:
+    
+        pass
+    pass
+                else:
+    pass
+                    result.add_warning("No database tables found - run migrations")
+                
+            except Exception as e:
+    pass
+    pass
+                result.add_error(f"Database connection failed: {str(e)}")
+                
+        except Exception as e:
+    pass
+    pass
+            result.add_error(f"Could not validate database: {str(e)}")
+        
+        return result
+    
+    def _display_validation_result(self, component: str, result: 'ConfigValidationResult', verbose: bool) -> None:
+    pass
+        """Display validation result for a component"""
+        if result.is_valid:
+    
+        pass
+    pass
+            self.logger.success(f"✅ {component}: Valid")
+        else:
+    pass
+            self.logger.error(f"❌ {component}: {len(result.errors)} errors")
+        
+        if result.errors:
+    
+        pass
+    pass
+            for error in result.errors:
+    pass
+                self.logger.list_item(f"❌ {error}", "error")
+        
+        if result.warnings:
+    
+        pass
+    pass
+            for warning in result.warnings:
+    pass
+                self.logger.list_item(f"⚠️  {warning}", "warning")
+        
+        if verbose and hasattr(result, 'info') and result.info:
+    
+        pass
+    pass
+            for info in result.info:
+    pass
+                self.logger.list_item(f"ℹ️  {info}", "info")
