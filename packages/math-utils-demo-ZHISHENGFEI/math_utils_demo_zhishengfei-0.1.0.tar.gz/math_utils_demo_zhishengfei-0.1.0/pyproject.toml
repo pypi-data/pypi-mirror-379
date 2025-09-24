@@ -1,0 +1,8 @@
+[project]
+name = "math-utils-demo-ZHISHENGFEI"  # 自定义名称，确保PyPI上唯一
+version = "0.1.0"
+authors = [{ name = "ZHISHENGFEI", email = "735534699@qq.com" }]
+description = "简易数学工具库"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["vaderSentiment>=3.3.2"]
