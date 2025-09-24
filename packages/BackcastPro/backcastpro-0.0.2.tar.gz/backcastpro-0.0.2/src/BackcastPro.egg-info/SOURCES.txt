@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/BackcastPro/__init__.py
+src/BackcastPro/_plotting.py
+src/BackcastPro/_stats.py
+src/BackcastPro/_util.py
+src/BackcastPro/backtesting.py
+src/BackcastPro/lib.py
+src/BackcastPro.egg-info/PKG-INFO
+src/BackcastPro.egg-info/SOURCES.txt
+src/BackcastPro.egg-info/dependency_links.txt
+src/BackcastPro.egg-info/top_level.txt
+src/BackcastPro/test/__init__.py
+src/BackcastPro/test/__main__.py
+src/BackcastPro/test/_test.py
