@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: brainforge-tokenizer
+Version: 1.0.1
+Summary: BrainForge custom tokenizer with tiktoken
+Author: Mayur Kalekar
+Requires-Python: >=3.7
+Requires-Dist: tiktoken>=0.5.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
