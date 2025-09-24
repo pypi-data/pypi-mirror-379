@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: espeak-py
+Version: 0.1.9
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+License-File: LICENSE
+License-File: LICENSE
+Requires-Python: >=3.11
+Project-URL: homepage, https://github.com/PolyAI-LDN/espeak-py
+Project-URL: repository, https://github.com/PolyAI-LDN/espeak-py
