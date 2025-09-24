@@ -1,0 +1,483 @@
+Metadata-Version: 2.4
+Name: synthetic-face-masks
+Version: 0.0.2
+Summary: A Python library for generating synthetic face mask datasets by mixing facial regions
+Author-email: Eldho Abraham <eldho.abraham@amadeus.com>
+Maintainer-email: Eldho Abraham <eldho.abraham@amadeus.com>
+License: MIT
+Project-URL: Homepage, https://github.com/eldhoabraham/synthetic-face-masks
+Project-URL: Repository, https://github.com/eldhoabraham/synthetic-face-masks
+Project-URL: Bug Tracker, https://github.com/eldhoabraham/synthetic-face-masks/issues
+Project-URL: Documentation, https://github.com/eldhoabraham/synthetic-face-masks/blob/main/README.md
+Keywords: face mask,dataset generation,computer vision,machine learning,synthetic face data,face detection,image processing,COCO format,MediaPipe
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python>=4.8.0
+Requires-Dist: mediapipe>=0.9.1.0
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: imgaug>=0.4.0
+Requires-Dist: tqdm>=4.64.0
+Requires-Dist: Pillow>=8.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.8; extra == "dev"
+Requires-Dist: isort>=5.0; extra == "dev"
+Requires-Dist: mypy>=0.900; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0; extra == "docs"
+Requires-Dist: myst-parser>=0.15; extra == "docs"
+Dynamic: license-file
+
+# Synthetic Face Mask Generator
+
+[![PyPI version](https://badge.fury.io/py/synthetic-face-masks.svg)](https://badge.fury.io/py/synthetic-face-masks)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://github.com/eldhoabraham/synthetic-face-masks/workflows/Publish%20Python%20🐍%20distribution%20📦%20to%20PyPI%20and%20TestPyPI/badge.svg)](https://github.com/eldhoabraham/synthetic-face-masks/actions)
+
+A Python library for generating synthetic face datasets with facial region masks between different face images. This tool is designed for creating training datasets for computer vision and machine learning applications.
+
+## Background
+
+Presentation Attack Detection (PAD) systems rely on analyzing facial dynamics, particularly the movement of eyes and mouth regions, to distinguish between live faces and spoofing attempts. Face mask attacks are one of the challenges in biometric security, where physical cutouts or synthetic overlays are used to circumvent facial recognition systems.
+
+Acquiring real-world face mask attack datasets is resource-intensive and requires controlled environments. This tool addresses this limitation by generating synthetic face mask datasets through computational facial region manipulation, enabling researchers and security professionals to develop and evaluate PAD systems with diverse training data.
+
+![Face Mask Generation Process](examples/doc.png)
+
+
+
+## Features
+
+- **Face Detection & Landmark Extraction**: Uses MediaPipe for robust face detection and landmark extraction
+- **Facial Region Masking**: Creates precise masks for eyes and mouth regions with elliptical or rectangular shapes
+- **Mask RegionBlending**: Blends facial regions between different images with smooth transitions
+- **COCO Format Output**: Generates datasets in COCO format for easy integration with ML frameworks
+- **Background Integration**: Supports masking with random background images
+
+
+## Installation
+
+### From PyPI (Recommended)
+
+```bash
+pip install synthetic-face-masks
+```
+
+### From Source
+
+```bash
+git clone https://github.com/eldhoabraham/synthetic-face-masks.git
+cd synthetic-face-masks
+pip install -e .
+```
+
+### Development Installation
+
+For development with additional tools:
+
+```bash
+git clone https://github.com/eldhoabraham/synthetic-face-masks.git
+cd synthetic-face-masks
+pip install -e ".[dev]"
+```
+
+### Prerequisites
+
+- Python 3.7 or higher
+- OpenCV compatible system
+- Sufficient disk space for output datasets
+
+### Dependencies
+
+The package automatically installs these dependencies:
+
+- `opencv-python>=4.8.0`: Image processing operations
+- `mediapipe>=0.9.1.0`: Face detection and landmark extraction
+- `numpy>=1.21.0`: Numerical operations
+- `imgaug>=0.4.0`: Image augmentation
+- `tqdm>=4.64.0`: Progress bars
+- `Pillow>=8.0.0`: Additional image processing support
+
+## Quick Start
+
+### Command Line Usage
+
+After installation, you can use the `synthetic-face-masks` command:
+
+```bash
+# Generate dataset with default settings
+synthetic-face-masks examples/testImages/ output_face_masks/
+
+
+
+# Custom configuration
+synthetic-face-masks examples/testImages/ output_face_masks/ \
+    --num_images 100 \
+    --mask_types eye mouth both \
+    --train_ratio 0.8 \
+    --output_format coco
+```
+
+### Python Script Usage
+
+You can also run the main script directly:
+
+```bash
+# If installed from source
+python main.py examples/testImages/ output_face_masks/
+
+# With custom parameters
+python main.py examples/testImages/ output_face_masks/ \
+    --num_images 50 \
+    --mask_types eye mouth
+```
+
+
+
+## Project Structure
+
+```
+synthetic-face-masks/
+├── face_mask/                     # Main Python package
+│   ├── core/                      # Core processing modules
+│   │   ├── face_processor.py      # Face detection and landmarks
+│   │   ├── mask_generator.py      # Facial region mask creation
+│   │   ├── image_mixer.py         # Image masking and blending
+│   │   └── dataset_generator.py   # Main orchestration class
+│   └── utils/                     # Utility modules
+│       ├── image_utils.py         # Image processing utilities
+│       ├── display_utils.py       # Visualization utilities
+│       └── coco_utils.py          # COCO format utilities
+├── examples/                      # Example scripts and notebooks
+│   ├── basic_example.py           # Simple usage example
+│   ├── face_mixing_example.ipynb  # Jupyter notebook demo
+│   └── testImages/                # Sample test images
+├── tests/                         # Unit tests
+│   └── test_installation.py       # Installation verification
+├── .github/                       # GitHub Actions workflows
+│   └── workflows/
+│       └── release-pypi.yml       # Automated PyPI publishing
+├── main.py                        # Command-line interface script
+├── setup.py                       # Minimal setup (backward compatibility)
+├── pyproject.toml                 # Modern Python packaging configuration
+├── MANIFEST.in                    # Package manifest for distribution
+├── requirements.txt               # Runtime dependencies
+├── LICENSE                        # MIT License
+└── README.md                      # This documentation
+```
+
+## Detailed Usage
+
+### Command Line Options
+
+**Usage:**
+```bash
+synthetic-face-masks [INPUT_DIR] [OUTPUT_DIR] [OPTIONS]
+```
+
+**Options:**
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `--input_folder` | Path to folder containing face images | Required |
+| `--output_folder` | Path to output folder for generated dataset | Required |
+| `--background_folder` | Path to folder containing random background images | None |
+| `--crop_border` | Number of pixels to crop from image borders | 50 |
+| `--target_width` | Target width for processed images | 320 |
+| `--target_height` | Target height for processed images | 320 |
+| `--mix_probability` | Probability of creating masked vs normal images (0.0-1.0) | 0.5 |
+| `--ellipse_probability` | Probability of using ellipse vs rectangle masks (0.0-1.0) | 0.5 |
+| `--train_split_ratio` | Ratio of images for training set (0.0-1.0) | 0.8 |
+| `--config_file` | Path to JSON configuration file | None |
+| `--validate_only` | Only validate existing dataset without generating new images | False |
+| `--generate_report` | Generate dataset analysis report | False |
+
+### Configuration
+
+You can configure the dataset generation by creating a simple configuration dictionary:
+
+```python
+# Create configuration directly
+config = {
+    "mix_probability": 0.7,
+    "ellipse_probability": 0.6,
+    "train_split_ratio": 0.85,
+    "max_images_per_run": 2000,
+    "target_width": 512,
+    "target_height": 512
+}
+
+# Use with DatasetConfig
+from face_mask.core.dataset_generator import DatasetConfig
+
+dataset_config = DatasetConfig(
+    input_folder="/path/to/input",
+    output_folder="/path/to/output",
+    **config
+)
+
+```
+
+Using a configuration file for reusable settings:
+
+```bash
+# Use configuration file
+python main.py --config_file config.json --input_folder /path/to/faces --output_folder /path/to/output
+```
+
+## Programming Interface
+
+### Basic Example
+
+```python
+from face_mask.core.dataset_generator import DatasetGenerator, DatasetConfig
+
+# Create configuration
+config = DatasetConfig(
+    input_folder="/path/to/faces",
+    output_folder="/path/to/output",
+    background_folder="/path/to/backgrounds",
+    mix_probability=0.7,
+    target_size=(512, 512)
+)
+
+# Generate dataset
+generator = DatasetGenerator(config)
+stats = generator.generate_dataset()
+
+print(f"Generated {stats['total_images']} images")
+```
+
+### Advanced Usage
+
+```python
+from face_mask.core.face_processor import FaceProcessor
+from face_mask.core.mask_generator import MaskGenerator
+from face_mask.core.image_mixer import ImageMixer
+
+# Initialize components
+face_processor = FaceProcessor(min_detection_confidence=0.7)
+mask_generator = MaskGenerator(face_processor)
+image_mixer = ImageMixer(mask_generator)
+
+# Process individual images
+source_data = mask_generator.generate_face_masks("source.jpg", is_ellipse=True)
+target_data = mask_generator.generate_face_masks("target.jpg", is_ellipse=True)
+
+# Apply masks to images
+if source_data and target_data:
+    mask_result = image_mixer.mix_images(
+        source_data, target_data, 
+        mix_eyes=True, mix_mouth=True
+    )
+    
+    # Save results
+    cv2.imwrite("masked_result.jpg", mask_result.mixed_image)
+```
+
+### Output Structure
+
+The generated dataset follows this structure:
+
+```
+output_folder/
+├── images/                     # Generated images
+│   ├── img_000001.png         # Normal image
+│   ├── img_000002-Eye.png     # Eye-masked image
+│   ├── img_000002-EyeBG.png   # Eye-masked with background
+│   ├── img_000002-Mouth.png   # Mouth-masked image
+│   ├── img_000002-MouthBG.png # Mouth-masked with background
+│   ├── img_000002-Both.png    # Both regions masked
+│   └── img_000002-BothBG.png  # Both regions with background
+├── annotations/                # COCO format annotations
+│   ├── annotations.json       # Complete dataset annotations
+│   ├── train.json            # Training set annotations
+│   └── test.json             # Test set annotations
+├── dataset_report.json        # Dataset analysis report
+└── generation_config.json     # Configuration used for generation
+```
+
+### Image Types Generated
+
+1. **Normal Images**: Processed original face images (category_id: 1)
+2. **Eye-Masked Images**: Images with eye regions from different sources (category_id: 2)
+3. **Mouth-Masked Images**: Images with mouth regions from different sources (category_id: 2)
+4. **Both-Masked Images**: Images with both eye and mouth regions masked (category_id: 2)
+5. **Background Variants**: All masked types with random background patterns in mask cutout areas instead of face regions
+
+### Dataset Validation
+
+The tool includes comprehensive dataset validation:
+
+```bash
+# Validate existing dataset
+python main.py --output_folder /path/to/dataset --validate_only
+
+# Generate detailed report
+python main.py --output_folder /path/to/dataset --generate_report
+```
+
+Validation checks include:
+- COCO format compliance
+- Image-annotation consistency
+- File existence verification
+- Category distribution analysis
+
+## Examples and Tutorials
+
+Check the `examples/` directory for:
+- Basic usage scripts
+- Advanced configuration examples
+- Jupyter notebook tutorials
+- Integration examples with ML frameworks
+
+
+## Development
+
+### Setting up Development Environment
+
+1. Clone the repository:
+```bash
+git clone https://github.com/eldhoabraham/synthetic-face-masks.git
+cd synthetic-face-masks
+```
+
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install development dependencies:
+```bash
+pip install -e ".[dev]"
+```
+
+### Building the Package
+
+To build the package locally:
+```bash
+pip install build
+python -m build
+```
+
+This creates distribution files in the `dist/` directory.
+
+## Releasing and Publishing
+
+This project uses **modern Python packaging** with automated GitHub Actions workflows for seamless publishing to PyPI.
+
+### Package Status
+
+- **📦 Available on PyPI**: `pip install synthetic-face-masks`
+- **🔄 Automated Publishing**: GitHub Actions handles building and publishing
+- **✅ Modern Packaging**: Uses `pyproject.toml` with `setuptools` backend
+- **🏷️ Semantic Versioning**: Version tags trigger automatic releases
+
+### How It Works
+
+The GitHub Actions workflow automatically:
+
+### Release Process
+
+1. **Update Version**: The version is automatically managed by `setuptools_scm` based on Git tags.
+
+2. **Create and Push Tag**: 
+```bash
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+3. **Automated Publication**: The GitHub Actions workflow will:
+   - Build the package
+   - Run tests
+   - Publish to PyPI (for version tags)
+   - Create a GitHub release with signed artifacts
+   - Publish to TestPyPI (for main branch pushes)
+
+### Manual Publication
+
+For manual publication (if needed):
+
+1. **TestPyPI** (for testing):
+```bash
+python -m twine upload --repository testpypi dist/*
+```
+
+2. **PyPI** (for production):
+```bash
+python -m twine upload dist/*
+```
+
+### GitHub Environments
+
+The workflow uses GitHub environments for secure publishing:
+- `testpypi`: For TestPyPI publications
+- `pypi`: For PyPI publications
+
+Make sure these environments are configured in your GitHub repository settings with appropriate secrets or trusted publishing.
+
+### Installation from PyPI
+
+Once published, users can install the package:
+```bash
+# From PyPI
+pip install synthetic-face-masks
+
+# From TestPyPI (for testing)
+pip install -i https://test.pypi.org/simple/ synthetic-face-masks
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Citation
+
+If you use this tool in your research, please cite:
+
+```bibtex
+@software{synthetic_face_masks,
+  title = {Synthetic Face Mask Generator},
+  author = {Eldho Abraham},
+  year = {2025},
+  url = {https://github.com/eldhoabraham/synthetic-face-masks}
+}
+```
+
+## Acknowledgments
+
+- [MediaPipe](https://mediapipe.dev/) for robust face detection and landmark extraction
+- [OpenCV](https://opencv.org/) for computer vision operations
+- [imgaug](https://imgaug.readthedocs.io/) for image augmentation capabilities
+- sample images taken from https://thispersondoesnotexist.com/
+
+## Support
+
+For support and questions:
+- Create an issue on GitHub
+- Check the troubleshooting section
+- Review example scripts and documentation
+
+---
+
+**Note**: This tool is designed for research and educational purposes. Please ensure you have appropriate permissions for any face images you process and comply with relevant privacy and data protection regulations.
