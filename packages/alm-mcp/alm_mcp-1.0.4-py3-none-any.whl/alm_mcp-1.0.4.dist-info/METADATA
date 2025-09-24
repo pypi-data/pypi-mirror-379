@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: alm-mcp
+Version: 1.0.4
+Summary: Polarion ALM MCP Server
+Author-email: Your Name <your.email@example.com>
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: mcp>=0.3.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Dynamic: license-file
