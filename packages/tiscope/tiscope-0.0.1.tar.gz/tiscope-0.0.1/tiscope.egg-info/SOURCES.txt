@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+tiscope/__init__.py
+tiscope/function.py
+tiscope/layer.py
+tiscope/model.py
+tiscope/utils.py
+tiscope.egg-info/PKG-INFO
+tiscope.egg-info/SOURCES.txt
+tiscope.egg-info/dependency_links.txt
+tiscope.egg-info/requires.txt
+tiscope.egg-info/top_level.txt
