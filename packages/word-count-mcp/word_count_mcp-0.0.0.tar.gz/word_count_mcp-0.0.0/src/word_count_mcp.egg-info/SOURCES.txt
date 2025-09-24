@@ -1,0 +1,7 @@
+pyproject.toml
+src/word_count_mcp/__init__.py
+src/word_count_mcp/word_count_mcp.py
+src/word_count_mcp.egg-info/PKG-INFO
+src/word_count_mcp.egg-info/SOURCES.txt
+src/word_count_mcp.egg-info/dependency_links.txt
+src/word_count_mcp.egg-info/top_level.txt
