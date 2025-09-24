@@ -1,0 +1,15 @@
+LICENCE
+MANIFEST.in
+README.md
+README_CN.md
+example_usage.ipynb
+pyproject.toml
+fall_detection/__init__.py
+fall_detection/api.py
+fall_detection/detector.py
+fall_detection/models/best.pt
+human_fall_detection.egg-info/PKG-INFO
+human_fall_detection.egg-info/SOURCES.txt
+human_fall_detection.egg-info/dependency_links.txt
+human_fall_detection.egg-info/requires.txt
+human_fall_detection.egg-info/top_level.txt
