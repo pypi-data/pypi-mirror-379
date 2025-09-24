@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: express-love
+Version: 0.0.1
+Summary: A simple package to express love ❤️
+Home-page: https://github.com/yourusername/express-love
+Author: Mahi
+Author-email: mahi@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# express-love ❤️
+
+A simple Python package to express love to anyone 💖.
+
+## Installation
+```bash
+pip install express-love
