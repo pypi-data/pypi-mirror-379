@@ -1,0 +1,16 @@
+sparse_ir/__init__.py,sha256=92Pqf-FNFDfgPdlYGJmtKVPzJlTLO3ULKVwLEqzFKf0,1328
+sparse_ir/_util.py,sha256=vebMrocdQ2dylQSn8HogbpQ3dvghfQWpyasGV3wn648,3022
+sparse_ir/abstract.py,sha256=gNxl0vxRcHavNQRbzdVHQyvVqrUojY1_dCXW8FdCtkU,5715
+sparse_ir/augment.py,sha256=A19XMZLpG36tFHyUDu4XPoKVvBKelZLoVxD54h2fIjU,10532
+sparse_ir/basis.py,sha256=L7es5hkEDmYxMRGRBz9d4PVWzbk8T8NzbPyVqJgJtzU,8798
+sparse_ir/basis_set.py,sha256=z_1vKytdb7haKalyY7oADsOa0LrDw4juqEKkjW8o16U,4850
+sparse_ir/dlr.py,sha256=MJsjJKnh7RZ_M_9g6FmS1WQyfLymX8H0ngPLGsmATDg,7336
+sparse_ir/kernel.py,sha256=BSZucZrERE4eIhbo-H8DfQuCJuig03-kOJdfbpTfWsY,3254
+sparse_ir/poly.py,sha256=Fk0N--kdPaARQ7gnO2bb-xJGZYVhr1VF3vWCqFGfuP0,12675
+sparse_ir/sampling.py,sha256=ErJzI3HXMf9CRfLRcY6FcapH45nFGWfAZ9FW4xAuHyU,12558
+sparse_ir/sve.py,sha256=En1WktMfeUFK-vJpeQh1N2G0jS2_KTBoIIBaRVGLgsg,3566
+sparse_ir-2.0.0a4.dist-info/licenses/LICENSE.txt,sha256=3tGlA0QNYsfjETaQqJO0Ixne5PQ16PNVJiDcGsgHER0,1079
+sparse_ir-2.0.0a4.dist-info/METADATA,sha256=7KJKdYeAN5KPEfqSEJ2570ay_3Ecz2JIO2JwbjqXmsw,927
+sparse_ir-2.0.0a4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sparse_ir-2.0.0a4.dist-info/top_level.txt,sha256=UsscWAzJg7fKo9qmIwW8jnG7CAfhFzWYBOTXVySzuA0,10
+sparse_ir-2.0.0a4.dist-info/RECORD,,
