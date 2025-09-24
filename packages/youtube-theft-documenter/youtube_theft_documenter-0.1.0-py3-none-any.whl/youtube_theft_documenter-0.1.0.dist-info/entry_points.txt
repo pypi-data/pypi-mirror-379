@@ -1,0 +1,2 @@
+[console_scripts]
+document-theft = document_theft:main
