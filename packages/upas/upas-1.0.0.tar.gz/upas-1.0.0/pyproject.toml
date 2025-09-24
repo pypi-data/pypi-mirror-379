@@ -1,0 +1,164 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upas"
+version = "1.0.0"
+description = "Universal Protocol Analysis & Simulation Framework"
+authors = [
+    {name = "BitsDiver Team", email = "contact@bitsdiver.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Telecommunications Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Networking",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Security",
+    "Topic :: System :: Systems Administration",
+]
+keywords = [
+    "protocol analysis",
+    "network simulation", 
+    "reverse engineering",
+    "iot security",
+    "network testing",
+    "packet analysis",
+    "protocol simulation",
+    "industrial protocols",
+]
+dependencies = [
+    # Core dependencies only - minimal installation
+]
+
+[project.optional-dependencies]
+# Development dependencies
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.10.0",
+    "pytest-asyncio>=0.18.0",
+    "black>=21.0.0",
+    "isort>=5.0.0",
+    "pylint>=2.10.0",
+    "mypy>=0.910",
+    "flake8>=3.9.0",
+    "pre-commit>=2.15.0",
+]
+
+# Optional protocol analysis features
+analysis = [
+    "scapy>=2.4.0",  # For PCAP file support in replay.py
+]
+
+# Optional networking features  
+networking = [
+    "netifaces>=0.11.0",  # For network interface detection
+]
+
+# Optional IoT/embedded features
+iot = [
+    "asyncio-mqtt>=0.10.0",  # For MQTT protocol support
+    "pyserial>=3.5",         # For serial/UART protocols
+]
+
+# Optional CLI enhancements
+cli = [
+    "click>=7.0",      # Alternative CLI framework (currently using argparse)
+    "colorama>=0.4.0", # Colored terminal output
+]
+
+# Full installation with all features
+full = [
+    "scapy>=2.4.0",
+    "netifaces>=0.11.0", 
+    "asyncio-mqtt>=0.10.0",
+    "pyserial>=3.5",
+    "click>=7.0",
+    "colorama>=0.4.0",
+]
+
+[project.scripts]
+upas = "upas.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/BitsDiver/upas-cli"
+Documentation = "https://github.com/BitsDiver/upas-cli/blob/main/docs/SPECIFICATIONS.md"
+Repository = "https://github.com/BitsDiver/upas-cli"
+"Bug Tracker" = "https://github.com/BitsDiver/upas-cli/issues"
+Changelog = "https://github.com/BitsDiver/upas-cli/blob/main/MIGRATION_COMPLETE.md"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+upas = [
+    "protocols/*.json",
+    "protocols/**/*.json",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --tb=short --strict-markers"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.coverage.run]
+source = ["src/upas"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+]

@@ -1,0 +1,102 @@
+{
+    "protocol": {
+        "name": "IndustrialLight",
+        "version": "1.0",
+        "description": "Dual-process AFS service with UDP discovery and TCP session"
+    },
+    "variables": {
+        "DEVICE_ID": "ab12cd",
+        "PREFIX": "a0b1c2d3e4f5",
+        "SUFFIX": "ef34ab56",
+        "TCP_PORT": "0"
+    },
+    "processes": {
+        "udp_beacon_process": {
+            "transport": "ethernet",
+            "service": {
+                "type": "udp_unicast",
+                "bind": "192.168.81.254:3777"
+            },
+            "behaviors": {
+                "immediate_beacon": {
+                    "type": "immediate",
+                    "destination": "224.0.10.13:7001",
+                    "payload": [
+                        "[PREFIX:6]",
+                        "00 20 00 00 00 30 00 00 00 00 00 00 00 00 01 08",
+                        "00 00 00 [DEVICE_ID:3] 00 00 00 01 00 00 00 01 00 00",
+                        "00 [SEQUENCE:4:set(1)] 00 00 00 00",
+                        "[SUFFIX:4]"
+                    ]
+                },
+                "periodic_beacon": {
+                    "type": "periodic",
+                    "interval": 1000,
+                    "destination": "224.0.10.13:7001",
+                    "payload": [
+                        "[PREFIX:6]",
+                        "00 20 00 00 00 30 00 00 00 00 00 00 00 00 01 08",
+                        "00 00 00 [DEVICE_ID:3] 00 00 00 01 00 00 00 01 00 00",
+                        "00 [SEQUENCE:4:increment] 00 00 00 00",
+                        "[SUFFIX:4]"
+                    ]
+                },
+                "discovery_responder": {
+                    "type": "reactive",
+                    "trigger": {
+                        "source_pattern": "192.168.81.253:*",
+                        "destination": "192.168.81.254:3777"
+                    },
+                    "actions": [
+                        "respond_discovery_request",
+                        "extract_tcp_port_from_request",
+                        "trigger_tcp_connection"
+                    ]
+                }
+            }
+        },
+        "tcp_session_process": {
+            "transport": "ethernet",
+            "service": {
+                "type": "tcp_server",
+                "bind": "192.168.81.254:0"
+            },
+            "behaviors": {
+                "outbound_connection": {
+                    "type": "triggered",
+                    "trigger": "udp_discovery_complete",
+                    "action": {
+                        "type": "tcp_connect",
+                        "destination": "192.168.81.253:[TCP_PORT:extracted]"
+                    }
+                },
+                "tcp_keepalive": {
+                    "type": "periodic",
+                    "interval": 5000,
+                    "condition": "tcp_connected",
+                    "destination": "192.168.81.253:[TCP_PORT:extracted]",
+                    "payload": [
+                        "[PREFIX:6]",
+                        "00 20 00 00 00 30 08 04 00 00 00 [DEVICE_ID:3] 01 08",
+                        "00 00 00 [DEVICE_ID:3] 00 00 00 0e 00 00 00 21 01 00",
+                        "00 00 01 00 00 00 [SUFFIX:4]"
+                    ]
+                }
+            }
+        }
+    },
+    "data_extraction": {
+        "tcp_port_from_udp": {
+            "source": "udp_discovery_request",
+            "pattern": "payload[46:48]",
+            "conversion": "big_endian_uint16",
+            "storage": "TCP_PORT"
+        }
+    },
+    "transitions": {
+        "udp_discovery_complete": {
+            "condition": "TCP_PORT extracted AND TCP_PORT > 0",
+            "action": "tcp_session_process"
+        }
+    }
+}

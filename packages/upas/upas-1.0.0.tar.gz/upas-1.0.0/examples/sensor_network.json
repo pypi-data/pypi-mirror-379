@@ -1,0 +1,209 @@
+{
+    "protocol": {
+        "name": "Sensor_Network",
+        "version": "2.0",
+        "description": "Wireless sensor network with mesh capabilities"
+    },
+    "variables": {
+        "NODE_ID": "NODE_001",
+        "NETWORK_KEY": "mesh_network_alpha",
+        "PARENT_NODE": "",
+        "CHILDREN_NODES": []
+    },
+    "functions": {
+        "temperature_reading": "lambda: round(random.uniform(18.5, 26.3), 1)",
+        "humidity_reading": "lambda: round(random.uniform(45.0, 75.0), 1)",
+        "battery_voltage": "lambda: round(random.uniform(3.1, 4.2), 2)",
+        "signal_strength": "lambda: random.randint(-80, -30)"
+    },
+    "transports": {
+        "wireless_mesh": {
+            "type": "ethernet",
+            "services": {
+                "mesh_communication": {
+                    "type": "udp_multicast",
+                    "bind": "0.0.0.0:6001",
+                    "multicast_groups": [
+                        "224.2.2.2"
+                    ]
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "sensor_data_report": {
+            "type": "periodic",
+            "interval": 30000,
+            "transport": "wireless_mesh",
+            "destination": "224.2.2.2:6001",
+            "payload": [
+                {
+                    "packet_type": "SENSOR_DATA"
+                },
+                {
+                    "node_id": "[NODE_ID]"
+                },
+                {
+                    "sequence": "[SEQ:4:increment]"
+                },
+                {
+                    "timestamp": "[TIME:8:timestamp]"
+                },
+                {
+                    "temperature": "[TEMP:2:temperature_reading]"
+                },
+                {
+                    "humidity": "[HUMIDITY:2:humidity_reading]"
+                },
+                {
+                    "battery": "[BATTERY:2:battery_voltage]"
+                },
+                {
+                    "rssi": "[RSSI:1:signal_strength]"
+                },
+                {
+                    "parent_node": "[PARENT_NODE]"
+                }
+            ]
+        },
+        "topology_beacon": {
+            "type": "periodic",
+            "interval": 120000,
+            "transport": "wireless_mesh",
+            "destination": "224.2.2.2:6001",
+            "payload": [
+                {
+                    "packet_type": "TOPOLOGY_BEACON"
+                },
+                {
+                    "node_id": "[NODE_ID]"
+                },
+                {
+                    "network_key": "[NETWORK_KEY]"
+                },
+                {
+                    "parent_node": "[PARENT_NODE]"
+                },
+                {
+                    "children_count": "[CHILDREN_COUNT:1]"
+                },
+                {
+                    "hop_count": "[HOPS:1]"
+                },
+                {
+                    "route_quality": "[QUALITY:1]"
+                }
+            ]
+        },
+        "emergency_alert": {
+            "type": "triggered",
+            "trigger_event": "sensor_threshold_exceeded",
+            "priority": "high",
+            "transport": "wireless_mesh",
+            "destination": "224.2.2.2:6001",
+            "payload": [
+                {
+                    "packet_type": "EMERGENCY_ALERT"
+                },
+                {
+                    "node_id": "[NODE_ID]"
+                },
+                {
+                    "alert_type": "[ALERT_TYPE]"
+                },
+                {
+                    "sensor_value": "[SENSOR_VALUE:4]"
+                },
+                {
+                    "threshold": "[THRESHOLD:4]"
+                },
+                {
+                    "timestamp": "[TIME:8:timestamp]"
+                }
+            ]
+        }
+    },
+    "state_machine": {
+        "initial_state": "INITIALIZING",
+        "states": {
+            "INITIALIZING": {
+                "description": "Node startup and network join"
+            },
+            "JOINED": {
+                "description": "Successfully joined mesh network"
+            },
+            "COLLECTING": {
+                "description": "Normal sensor data collection"
+            },
+            "ROUTING": {
+                "description": "Acting as router for other nodes"
+            },
+            "LOW_POWER": {
+                "description": "Battery saving mode"
+            },
+            "EMERGENCY": {
+                "description": "Emergency alert mode"
+            }
+        },
+        "transitions": [
+            {
+                "from": "INITIALIZING",
+                "to": "JOINED",
+                "trigger": "network_joined"
+            },
+            {
+                "from": "JOINED",
+                "to": "COLLECTING",
+                "trigger": "sensors_ready"
+            },
+            {
+                "from": "COLLECTING",
+                "to": "ROUTING",
+                "trigger": "child_nodes_connected"
+            },
+            {
+                "from": "COLLECTING",
+                "to": "LOW_POWER",
+                "trigger": "low_battery"
+            },
+            {
+                "from": "*",
+                "to": "EMERGENCY",
+                "trigger": "emergency_detected"
+            }
+        ]
+    },
+    "orchestration": {
+        "network_operation": {
+            "type": "parallel",
+            "parallel_behaviors": [
+                {
+                    "name": "data_collection",
+                    "behavior": "sensor_data_report",
+                    "active_states": [
+                        "COLLECTING",
+                        "ROUTING"
+                    ]
+                },
+                {
+                    "name": "network_maintenance",
+                    "behavior": "topology_beacon",
+                    "active_states": [
+                        "JOINED",
+                        "COLLECTING",
+                        "ROUTING"
+                    ]
+                },
+                {
+                    "name": "emergency_monitoring",
+                    "behavior": "emergency_alert",
+                    "active_states": [
+                        "COLLECTING",
+                        "ROUTING",
+                        "EMERGENCY"
+                    ]
+                }
+            ]
+        }
+    }
+}

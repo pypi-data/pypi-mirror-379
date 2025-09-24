@@ -1,0 +1,79 @@
+{
+    "behavior": {
+        "name": "TCP_Handshake",
+        "type": "handshake",
+        "description": "Standard TCP three-way handshake establishment"
+    },
+    "handshake_config": {
+        "role": "client",
+        "timeout": 5000,
+        "retries": 3
+    },
+    "connection": {
+        "source_port": 0,
+        "destination_port": 80,
+        "destination_ip": "192.168.1.100",
+        "mss": 1460,
+        "window_scale": 7,
+        "sack_permitted": true,
+        "timestamps": true
+    },
+    "behavior_type": "triggered",
+    "trigger_event": "connect_requested",
+    "variables": {
+        "CLIENT_ISN": 0,
+        "SERVER_ISN": 0,
+        "CONNECTION_STATE": "CLOSED",
+        "SEQUENCE_NUM": 0,
+        "ACK_NUM": 0
+    },
+    "functions": {
+        "random_isn": "lambda: random.randint(0, 0xFFFFFFFF)",
+        "next_seq": "lambda seq: (seq + 1) % 0xFFFFFFFF",
+        "tcp_checksum": "lambda header, data: calculate_tcp_checksum(header, data)"
+    },
+    "syn_packet": {
+        "enabled": true,
+        "payload": [
+            {
+                "ip_version": "4"
+            },
+            {
+                "ip_header_length": "5"
+            },
+            {
+                "ip_dscp": "00"
+            },
+            {
+                "ip_total_length": "003c"
+            },
+            {
+                "ip_identification": "[IP_ID:2]"
+            }
+        ]
+    },
+    "states": {
+        "CLOSED": "No connection",
+        "SYN_SENT": "SYN packet sent",
+        "SYN_RECEIVED": "SYN-ACK received",
+        "ESTABLISHED": "Connection established",
+        "FAILED": "Handshake failed"
+    },
+    "transitions": {
+        "CLOSED -> SYN_SENT": "send_syn",
+        "SYN_SENT -> SYN_RECEIVED": "receive_syn_ack",
+        "SYN_RECEIVED -> ESTABLISHED": "send_ack",
+        "* -> CLOSED": "timeout_or_error"
+    },
+    "error_handling": {
+        "timeout": 5000,
+        "max_retries": 3,
+        "error_codes": {
+            "0x01": "Connection timeout",
+            "0x02": "Connection refused",
+            "0x03": "Network unreachable",
+            "0x04": "Host unreachable",
+            "0x05": "Port unreachable"
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "transport": {
+        "name": "SX1280_GFSK",
+        "type": "sx1280",
+        "description": "Semtech SX1280 2.4GHz GFSK transceiver"
+    },
+    "chip_config": {
+        "frequency": 2440000000,
+        "frequency_range": {
+            "min": 2400000000,
+            "max": 2500000000
+        },
+        "modulation": "GFSK",
+        "bit_rate": 125000,
+        "frequency_deviation": 62500,
+        "bandwidth": 156200,
+        "tx_power": 13,
+        "power_ramp_time": 40,
+        "preamble_length": 8,
+        "sync_word": [
+            193,
+            148,
+            193,
+            0
+        ],
+        "packet_type": "variable_length",
+        "crc_type": "CRC_2_BYTES",
+        "whitening": true
+    },
+    "communication": {
+        "address_filtering": true,
+        "node_address": 1,
+        "broadcast_address": 0,
+        "max_payload_length": 253,
+        "header_type": "explicit",
+        "rx_timeout": 5000,
+        "tx_timeout": 3000,
+        "symbol_timeout": 5
+    },
+    "advanced": {
+        "agc_enabled": true,
+        "dc_free": "whitening",
+        "xtal_frequency": 52000000,
+        "pa_config": {
+            "device_type": "SX1280",
+            "pa_lut": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    "protocol_stack": {
+        "phy": {
+            "modulation": "GFSK",
+            "fec_enabled": false,
+            "interleaving": false
+        },
+        "dll": {
+            "frame_format": "802.15.4_like",
+            "acknowledgments": true,
+            "retransmissions": 3
+        },
+        "network": {
+            "enabled": false,
+            "routing_protocol": "none"
+        }
+    },
+    "performance": {
+        "line_of_sight_range_m": 1000,
+        "indoor_range_m": 100,
+        "tx_current_ma": 50,
+        "rx_current_ma": 25,
+        "sleep_current_ua": 0.5,
+        "supported_bit_rates": [
+            125000,
+            250000,
+            400000,
+            800000,
+            1600000
+        ]
+    },
+    "regulatory": {
+        "region": "GLOBAL_ISM",
+        "duty_cycle_required": false,
+        "max_dwell_time_ms": 400,
+        "frequency_hopping": false
+    }
+}

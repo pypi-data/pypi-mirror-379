@@ -1,0 +1,73 @@
+{
+    "transport": {
+        "name": "LoRa_LPWAN",
+        "type": "lora",
+        "description": "Long Range (LoRa) low-power wide-area network transport"
+    },
+    "radio_config": {
+        "frequency": 868000000,
+        "spreading_factor": 7,
+        "bandwidth": 125000,
+        "coding_rate": 5,
+        "tx_power": 14,
+        "pa_boost": true,
+        "preamble_length": 8,
+        "sync_word": 18,
+        "crc_enabled": true,
+        "implicit_header": false
+    },
+    "lorawan_config": {
+        "enabled": false,
+        "device_eui": "0123456789ABCDEF",
+        "application_eui": "FEDCBA9876543210",
+        "app_key": "2B7E151628AED2A6ABF7158809CF4F3C",
+        "adr_enabled": true,
+        "confirmed_messages": false,
+        "duty_cycle_enabled": true
+    },
+    "modes": {
+        "p2p": {
+            "enabled": true,
+            "address": 1,
+            "network_id": 0
+        },
+        "mesh": {
+            "enabled": false,
+            "node_id": 1,
+            "mesh_key": "ABCDEF0123456789",
+            "max_hops": 3
+        },
+        "broadcast": {
+            "enabled": true,
+            "broadcast_address": 255
+        }
+    },
+    "packet_format": {
+        "max_payload_size": 51,
+        "header_size": 13,
+        "custom_header": {
+            "enabled": true,
+            "source_addr": 1,
+            "dest_addr": 1,
+            "packet_type": 1,
+            "sequence": 1
+        }
+    },
+    "duty_cycle": {
+        "enabled": true,
+        "limit_percent": 1.0,
+        "sub_band_1_percent": 1.0,
+        "sub_band_2_percent": 0.1
+    },
+    "performance": {
+        "urban_range_km": 2,
+        "suburban_range_km": 5,
+        "rural_range_km": 15,
+        "sf7_datarate": 5470,
+        "sf8_datarate": 3125,
+        "sf9_datarate": 1760,
+        "sf10_datarate": 980,
+        "sf11_datarate": 440,
+        "sf12_datarate": 250
+    }
+}

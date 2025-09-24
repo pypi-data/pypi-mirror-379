@@ -1,0 +1,106 @@
+{
+    "protocol": {
+        "name": "Heartbeat_Monitor",
+        "version": "1.0",
+        "description": "Simple heartbeat monitoring protocol"
+    },
+    "variables": {
+        "DEVICE_NAME": "MONITOR_001",
+        "HEARTBEAT_INTERVAL": 5000,
+        "MISSED_THRESHOLD": 3,
+        "MISSED_COUNT": 0
+    },
+    "functions": {
+        "system_uptime": "lambda: int(time.time() - start_time)",
+        "memory_usage": "lambda: random.randint(30, 90)",
+        "cpu_load": "lambda: random.randint(10, 80)"
+    },
+    "transports": {
+        "monitoring": {
+            "type": "ethernet",
+            "services": {
+                "heartbeat_service": {
+                    "type": "udp_unicast",
+                    "bind": "0.0.0.0:8888"
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "send_heartbeat": {
+            "type": "periodic",
+            "interval": "[HEARTBEAT_INTERVAL]",
+            "transport": "monitoring",
+            "destination": "192.168.1.100:8888",
+            "payload": [
+                {
+                    "message_type": "HEARTBEAT"
+                },
+                {
+                    "device_name": "[DEVICE_NAME]"
+                },
+                {
+                    "sequence": "[SEQ:4:increment]"
+                },
+                {
+                    "timestamp": "[TIME:8:timestamp]"
+                },
+                {
+                    "uptime": "[UPTIME:4:system_uptime]"
+                },
+                {
+                    "memory_percent": "[MEM:1:memory_usage]"
+                },
+                {
+                    "cpu_percent": "[CPU:1:cpu_load]"
+                },
+                {
+                    "status": "ALIVE"
+                }
+            ]
+        },
+        "heartbeat_response": {
+            "type": "reactive",
+            "listen_transport": "monitoring",
+            "filter": {
+                "message_type": "HEARTBEAT_REQUEST"
+            },
+            "response_template": [
+                {
+                    "message_type": "HEARTBEAT_RESPONSE"
+                },
+                {
+                    "device_name": "[DEVICE_NAME]"
+                },
+                {
+                    "sequence": "[SEQ:4:increment]"
+                },
+                {
+                    "timestamp": "[TIME:8:timestamp]"
+                },
+                {
+                    "uptime": "[UPTIME:4:system_uptime]"
+                },
+                {
+                    "memory_percent": "[MEM:1:memory_usage]"
+                },
+                {
+                    "cpu_percent": "[CPU:1:cpu_load]"
+                },
+                {
+                    "status": "ALIVE"
+                }
+            ]
+        },
+        "missed_heartbeat_check": {
+            "type": "periodic",
+            "interval": "[HEARTBEAT_INTERVAL]",
+            "enabled": true,
+            "payload": [
+                {
+                    "function": "check_missed_heartbeat"
+                }
+            ]
+        }
+    }
+}

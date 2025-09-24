@@ -1,0 +1,99 @@
+{
+    "behavior": {
+        "name": "ARP_Discovery",
+        "type": "discovery",
+        "description": "Address Resolution Protocol network discovery"
+    },
+    "arp_config": {
+        "operation": "request",
+        "hardware_type": 1,
+        "protocol_type": 2048,
+        "hardware_size": 6,
+        "protocol_size": 4
+    },
+    "discovery": {
+        "scan_range": "192.168.1.0/24",
+        "scan_method": "sequential",
+        "scan_interval": 100,
+        "timeout": 2000,
+        "max_retries": 2
+    },
+    "behavior_type": "periodic",
+    "interval": 1000,
+    "repeat_count": 254,
+    "variables": {
+        "SOURCE_MAC": "00:11:22:33:44:55",
+        "SOURCE_IP": "192.168.1.100",
+        "TARGET_MAC": "00:00:00:00:00:00",
+        "TARGET_IP": "192.168.1.1"
+    },
+    "functions": {
+        "next_ip": "lambda current: increment_ip_address(current)"
+    },
+    "payload": [
+        {
+            "destination_mac": "ff:ff:ff:ff:ff:ff"
+        },
+        {
+            "source_mac": "[SOURCE_MAC:6]"
+        },
+        {
+            "ethertype": "0806"
+        },
+        {
+            "hardware_type": "0001"
+        },
+        {
+            "protocol_type": "0800"
+        },
+        {
+            "hardware_size": "06"
+        },
+        {
+            "protocol_size": "04"
+        },
+        {
+            "operation": "0001"
+        },
+        {
+            "sender_mac": "[SOURCE_MAC:6]"
+        },
+        {
+            "sender_ip": "[SOURCE_IP:4]"
+        },
+        {
+            "target_mac": "[TARGET_MAC:6]"
+        },
+        {
+            "target_ip": "[TARGET_IP:4:next_ip]"
+        }
+    ],
+    "response_handler": {
+        "enabled": true,
+        "filter": {
+            "ethertype": "0806",
+            "arp_operation": "0002"
+        },
+        "on_response": {
+            "action": "log_discovered_host",
+            "extract_fields": [
+                {
+                    "discovered_mac": "sender_mac"
+                },
+                {
+                    "discovered_ip": "sender_ip"
+                }
+            ]
+        }
+    },
+    "results": {
+        "format": "json",
+        "fields": [
+            "timestamp",
+            "discovered_ip",
+            "discovered_mac",
+            "response_time_ms",
+            "vendor_info"
+        ]
+    }
+}

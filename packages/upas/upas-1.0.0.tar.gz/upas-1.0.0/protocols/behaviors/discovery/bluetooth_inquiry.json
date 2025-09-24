@@ -1,0 +1,134 @@
+{
+    "behavior": {
+        "name": "Bluetooth_Inquiry",
+        "type": "discovery",
+        "description": "Bluetooth device discovery through inquiry process"
+    },
+    "inquiry_config": {
+        "inquiry_mode": "general",
+        "inquiry_length": 10240,
+        "max_responses": 255,
+        "cod_filter": {
+            "enabled": false,
+            "major_classes": [
+                "computer",
+                "phone",
+                "audio_video"
+            ],
+            "minor_classes": [
+                "laptop",
+                "smartphone",
+                "headphones"
+            ]
+        }
+    },
+    "behavior_type": "periodic",
+    "interval": 30000,
+    "repeat_count": -1,
+    "variables": {
+        "LOCAL_BD_ADDR": "00:1A:2B:3C:4D:5E",
+        "INQUIRY_COUNT": 0,
+        "DISCOVERED_DEVICES": []
+    },
+    "functions": {
+        "format_bd_addr": "lambda addr: ':'.join([f'{b:02X}' for b in addr])",
+        "increment_count": "lambda x: x + 1"
+    },
+    "payload": [
+        {
+            "packet_type": "01"
+        },
+        {
+            "opcode": "0401"
+        },
+        {
+            "parameter_length": "05"
+        },
+        {
+            "lap": "9E8B33"
+        },
+        {
+            "inquiry_length": "08"
+        },
+        {
+            "num_responses": "00"
+        }
+    ],
+    "response_patterns": {
+        "inquiry_complete": {
+            "packet_type": "04",
+            "event_code": "01",
+            "parameter_length": "01",
+            "status": "00"
+        },
+        "inquiry_result": {
+            "packet_type": "04",
+            "event_code": "02",
+            "extract_fields": [
+                {
+                    "bd_addr": "bytes[3:9]"
+                },
+                {
+                    "cod": "bytes[9:12]"
+                },
+                {
+                    "rssi": "bytes[14]"
+                }
+            ]
+        }
+    },
+    "device_info": {
+        "major_device_classes": {
+            "0": "Miscellaneous",
+            "1": "Computer",
+            "2": "Phone",
+            "3": "LAN/Network Access Point",
+            "4": "Audio/Video",
+            "5": "Peripheral",
+            "6": "Imaging",
+            "7": "Wearable",
+            "8": "Toy",
+            "9": "Health"
+        },
+        "service_classes": {
+            "256": "Information",
+            "512": "Telephony",
+            "1024": "Audio",
+            "2048": "Object Transfer",
+            "4096": "Capturing",
+            "8192": "Rendering",
+            "16384": "Networking",
+            "32768": "Positioning"
+        }
+    },
+    "post_processing": {
+        "name_resolution": {
+            "enabled": true,
+            "timeout": 5000
+        },
+        "service_discovery": {
+            "enabled": false,
+            "protocols": [
+                "SDP",
+                "L2CAP"
+            ]
+        },
+        "storage": {
+            "format": "json",
+            "file_pattern": "bt_discovery_{timestamp}.json"
+        }
+    },
+    "results": {
+        "fields": [
+            "timestamp",
+            "bd_address",
+            "device_name",
+            "class_of_device",
+            "major_class",
+            "minor_class",
+            "service_classes",
+            "rssi",
+            "inquiry_duration"
+        ]
+    }
+}
