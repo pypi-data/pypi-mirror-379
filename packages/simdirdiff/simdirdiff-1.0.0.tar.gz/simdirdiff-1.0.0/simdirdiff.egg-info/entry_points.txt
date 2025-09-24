@@ -1,0 +1,2 @@
+[console_scripts]
+simdirdiff = simdirdiff:main

@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+simdirdiff.py
+simdirdiff.egg-info/PKG-INFO
+simdirdiff.egg-info/SOURCES.txt
+simdirdiff.egg-info/dependency_links.txt
+simdirdiff.egg-info/entry_points.txt
+simdirdiff.egg-info/requires.txt
+simdirdiff.egg-info/top_level.txt
