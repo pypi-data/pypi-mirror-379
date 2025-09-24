@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: graphs_benicioayala
+Version: 0.0.1
+Summary: A small example package containing dijkstras algorithm
+Project-URL: Homepage, https://github.com/benicio-ayala58/graphs_benicioayala
+Project-URL: Bug Tracker, https://github.com/benicio-ayala58/graphs_benicioayala
+Author-email: Benicio Ayala <rayala7@msudenver.edu>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# graphs_benicioayala
+
+This is my python package containing dijkstra's algorithm
+The current package is up to date and may include more graphing algorithms in the future.
+Please stay tuned and check in on my github repository from time to time.
+https://github.com/benicio-ayala58/graphs_benicioayala
