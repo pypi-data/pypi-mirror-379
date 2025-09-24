@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+exclude = [
+    "docs*",
+    "tests*",
+    "dev*",
+    "examples*",
+    "build*",
+    "dist*",
+    "braintools.egg-info*",
+    "braintools/__pycache__*",
+    "braintools/__init__.py"
+]
+
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+
+[project]
+name = "braintools"
+description = "Modeling tools for brain simulation."
+readme = 'README.md'
+license = { text = 'Apache-2.0 license' }
+requires-python = '>=3.10'
+authors = [{ name = 'BrainTools Developers', email = 'chao.brain@qq.com' }]
+classifiers = [
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'License :: OSI Approved :: Apache Software License',
+    'Programming Language :: Python',
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+    'Topic :: Scientific/Engineering :: Mathematics',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Topic :: Software Development :: Libraries',
+]
+
+
+keywords = ["brain dynamics programming", "brain simulation", "brain-inspired computing"]
+
+dependencies = [
+    'numpy',
+    'brainstate>=0.1.0',
+    'brainunit>=0.0.8',
+    'typing_extensions',
+]
+
+dynamic = ['version']
+
+[project.urls]
+homepage = 'http://github.com/chaobrain/braintools'
+repository = 'http://github.com/chaobrain/braintools'
+
+[project.optional-dependencies]
+testing = [
+    'pytest',
+]

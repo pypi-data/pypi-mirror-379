@@ -1,0 +1,7 @@
+numpy
+brainstate>=0.1.0
+brainunit>=0.0.8
+typing_extensions
+
+[testing]
+pytest
