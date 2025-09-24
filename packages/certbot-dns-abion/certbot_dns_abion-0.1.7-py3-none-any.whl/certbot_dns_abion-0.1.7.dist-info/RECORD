@@ -1,0 +1,11 @@
+certbot_dns_abion/__init__.py,sha256=6vTCOaHS8WOl6qLNRG5fNg9PiFXLhKjka2ahfK5254k,1999
+certbot_dns_abion/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_abion/_internal/__init__.py,sha256=InHeCP0mz0fyftGiGb-KHy9oKJ2Rp1tWayaLE5yTdac,72
+certbot_dns_abion/_internal/abion_client.py,sha256=jiCSi9VT5CgK1zcpN-ram_CzjA4_KHQGLJUt_o1QDuA,1405
+certbot_dns_abion/_internal/dns_abion.py,sha256=Qr___fqwFRE03kvg368MnJTwW81JvspO7-4KYO3a4g4,4496
+certbot_dns_abion-0.1.7.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+certbot_dns_abion-0.1.7.dist-info/METADATA,sha256=ws3n8VE868JsKkjU7zFvGrGcl6Js17MjcDHtrhu4_2I,1553
+certbot_dns_abion-0.1.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+certbot_dns_abion-0.1.7.dist-info/entry_points.txt,sha256=tTj2GND2uuVbcokvQBKM6pwztuX1GSSVGyPkcjns-oU,82
+certbot_dns_abion-0.1.7.dist-info/top_level.txt,sha256=33NQV1AyOJnHr4CJYZENK_93izeh_F9UsLzQfMZBU5k,18
+certbot_dns_abion-0.1.7.dist-info/RECORD,,
