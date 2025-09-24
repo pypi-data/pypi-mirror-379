@@ -1,0 +1,3 @@
+[console_scripts]
+snow=openhands.cli.entry:main
+
