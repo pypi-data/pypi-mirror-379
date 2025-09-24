@@ -1,0 +1,68 @@
+# Prava Python SDK
+
+The official Python SDK for Prava's computer automation APIs.
+
+## Installation
+
+```bash
+pip install prava
+```
+
+## Quick Start
+
+```python
+from prava import ControlClient
+
+# Set your API key
+import os
+os.environ["PRAVA_API_KEY"] = "dummy"
+
+# Initialize client
+client = ControlClient()
+
+# Take a screenshot and get an action
+response = client.predict({
+    "model": "prava-af-medium",
+    "instruction": "Click the login button",
+    "image_url": "data:image/png;base64,..."
+})
+
+# Execute the action
+action = response["action"]
+print(f"Action: {action['kind']} at {action.get('coordinate')}")
+```
+
+## Complete Example
+
+```python
+from playwright.sync_api import sync_playwright
+from prava import ControlClient
+
+client = ControlClient()
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=False)
+    page = browser.new_page()
+    page.goto("https://www.google.com")
+
+    # Take screenshot
+    screenshot = page.screenshot()
+    image_url = client.screenshot_to_data_uri(screenshot)
+
+    # Get AI action
+    response = client.predict({
+        "model": "prava-af-medium",
+        "instruction": "Search for 'Prava AI'",
+        "image_url": image_url
+    })
+
+    # Execute action
+    action = response["action"]
+    if action["kind"] == "left_click":
+        coord = action["coordinate"]
+        page.mouse.click(coord["x"], coord["y"])
+
+    browser.close()
+```
+
+See [examples/](examples/) for complete working examples including browser automation, desktop control, and testing frameworks.
