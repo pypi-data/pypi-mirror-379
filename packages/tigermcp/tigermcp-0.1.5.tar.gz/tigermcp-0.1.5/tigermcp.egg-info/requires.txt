@@ -1,0 +1,2 @@
+tigeropen>=3.4.8
+mcp[cli]>=1.13.0
