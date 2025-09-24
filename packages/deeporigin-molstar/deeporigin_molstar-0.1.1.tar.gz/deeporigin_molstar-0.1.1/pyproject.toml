@@ -1,0 +1,27 @@
+
+
+[tool.interrogate]
+fail-under = 100
+# Skip files module coverage for now as it has lots of auto-gen code
+exclude = [
+    "setup.py",
+    "docs",
+    "build",
+    "tests",
+    "variables",
+    "conftest.py",
+    "src/files",
+    "notebooks/*",
+    "scripts/*",
+]
+ignore-init-method = true
+ignore-init-module = true
+ignore-magic = true
+ignore-semiprivate = true
+ignore-private = true
+ignore-property-decorators = true
+ignore-nested-functions = true
+ignore-nested-classes = true
+ignore-setters = false
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+color = true

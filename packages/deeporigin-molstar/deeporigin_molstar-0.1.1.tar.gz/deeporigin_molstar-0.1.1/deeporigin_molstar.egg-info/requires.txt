@@ -1,0 +1,7 @@
+rdkit
+IPython
+
+[test]
+pytest>=7
+ruff
+interrogate
