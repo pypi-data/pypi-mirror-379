@@ -1,0 +1,8 @@
+dist
+docs
+docsforge
+docsmaker
+docsmaker_py
+htmlcov
+site
+tests
