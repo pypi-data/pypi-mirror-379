@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: gpg-keyring
+Version: 0.1.0
+Summary: Simple keyring backend using the file system and GPG to store credentials
+Author: Manuel Huber
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: POSIX :: Linux
+License-File: LICENSE
+Requires-Dist: keyring>=25.6.0
+Requires-Dist: python-gnupg>=0.5.2
+Dynamic: author
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary

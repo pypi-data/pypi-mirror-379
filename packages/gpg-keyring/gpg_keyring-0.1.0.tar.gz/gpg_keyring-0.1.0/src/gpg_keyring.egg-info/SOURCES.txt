@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/gpg_keyring/__init__.py
+src/gpg_keyring.egg-info/PKG-INFO
+src/gpg_keyring.egg-info/SOURCES.txt
+src/gpg_keyring.egg-info/dependency_links.txt
+src/gpg_keyring.egg-info/entry_points.txt
+src/gpg_keyring.egg-info/requires.txt
+src/gpg_keyring.egg-info/top_level.txt
