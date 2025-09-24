@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "iceorb"
+version = "1.1.0"
+description = "Ice Orb multi-agent system for open-ended wargames with large language models"
+license = "Apache-2.0"
+authors = ["Daniel Hogan <6313241+dphogan@users.noreply.github.com>"]
+readme = "README.md"
+homepage = "https://github.com/dphogan/iceorb"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+numpy = "*"
+torch = "*"
+torchvision = "*"
+transformers = "*"
+accelerate = "*"
+tqdm = "*"
+pyyaml = "*"
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+platformdirs = "*"
+langchain = "*"
+openai = "*"
+twine = "*"
+jupyter = "*"
+nicegui = "*"
+markdown2 = "*"
+watchfiles = "*"
+langgraph = "*"
+unstructured = "*"
+langchain-openai = "*"
+langchain-huggingface = "*"
+langchain-chroma = "*"
+langchain-community = "*"
+langchain-text-splitters = "*"
+llama-cpp-python = ">=0.3.8"
+
+[tool.poetry.scripts]
+iceorb_config = "iceorb.scripts:config"
+iceorb_server = "iceorb.scripts:server"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
