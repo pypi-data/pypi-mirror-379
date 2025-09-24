@@ -1,0 +1,2 @@
+[hexdoc]
+hex_ars_link = hexdoc_hex_ars_link._hooks:HexArsLinkerPlugin
