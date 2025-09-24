@@ -1,0 +1,7 @@
+[console_scripts]
+telegram-multi-account-sender = app.cli:main
+telegram-sender = app.cli:main
+
+[gui_scripts]
+telegram-multi-account-sender-gui = app.cli:main
+telegram-sender-gui = app.cli:main
