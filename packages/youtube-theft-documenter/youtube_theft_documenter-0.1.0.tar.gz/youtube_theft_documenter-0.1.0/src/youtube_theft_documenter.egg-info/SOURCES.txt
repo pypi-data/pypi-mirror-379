@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/document_theft/__init__.py
+src/document_theft/main.py
+src/youtube_theft_documenter.egg-info/PKG-INFO
+src/youtube_theft_documenter.egg-info/SOURCES.txt
+src/youtube_theft_documenter.egg-info/dependency_links.txt
+src/youtube_theft_documenter.egg-info/entry_points.txt
+src/youtube_theft_documenter.egg-info/requires.txt
+src/youtube_theft_documenter.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: youtube-theft-documenter
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: rich>=14.1.0
+Requires-Dist: yt-dlp>=2025.9.23
+
+# youtube-theft-documenter
+A tool to help creators document theft on YouTube

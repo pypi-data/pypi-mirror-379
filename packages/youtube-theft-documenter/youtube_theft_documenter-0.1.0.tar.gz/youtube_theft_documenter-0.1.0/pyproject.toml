@@ -1,0 +1,16 @@
+[project]
+name = "youtube-theft-documenter"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "rich>=14.1.0",
+    "yt-dlp>=2025.9.23",
+]
+
+[project.scripts]
+document-theft = "document_theft:main"
+
+[tool.uv]
+package = true
