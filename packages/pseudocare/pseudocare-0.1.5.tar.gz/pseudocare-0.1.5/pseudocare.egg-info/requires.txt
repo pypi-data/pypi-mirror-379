@@ -1,0 +1,5 @@
+edsnlp[ml]>=0.15.0
+faker>=35.2.0
+pylint>=3.3.4
+tqdm>=4.67.1
+unidecode>=1.3.8
