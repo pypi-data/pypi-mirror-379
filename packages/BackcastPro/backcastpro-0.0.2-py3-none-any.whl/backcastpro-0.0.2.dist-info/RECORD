@@ -1,0 +1,13 @@
+BackcastPro/__init__.py,sha256=9EwcZ18OUJC1_D97EEfR7kP69cuNirmeEh7B4uV0_9o,3619
+BackcastPro/_plotting.py,sha256=HVpvAAPf5b4Ycr6uuXO7oZWIYZgY3TsOhtfhNNP8ENc,31815
+BackcastPro/_stats.py,sha256=iyx09L2Mnq5XrKJ8qd1ZfkhTHkkggahg8IZuCOxpdWQ,9838
+BackcastPro/_util.py,sha256=2V7LVirnbbvXBrjkz9svH9d6zOzlqH27_dsgK4X2i3A,10555
+BackcastPro/backtesting.py,sha256=9GZ2oAXm9YBsYnwzmv1YaEFiCx8R0AeA6ln2lgrtyyA,73914
+BackcastPro/lib.py,sha256=nLkateYLDWZUMbEM-ZulTanc4LwddjJBik7xSk36bNo,24600
+BackcastPro/test/__init__.py,sha256=gjyeKUuKcKOUNQ9AifECpb093-y0rD6P5BCF9pcJBuQ,806
+BackcastPro/test/__main__.py,sha256=hbrSCG9X8n5Fhw9bt97C2o1p0r9oSQ_Be9wQL0kyjvY,162
+BackcastPro/test/_test.py,sha256=72z6jqtq3yJY-8QB_2huSJb5qOWDIzByCzPCuuFmDSY,45616
+backcastpro-0.0.2.dist-info/METADATA,sha256=dxHVO5AtxtFcKUgFWdppqaYlEALg9NaYfsc1hqjduSU,1532
+backcastpro-0.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+backcastpro-0.0.2.dist-info/top_level.txt,sha256=GiP-TX_Bc2jjwHS9cx0VCrW27e9JPbhWWnqGxa5B4Fs,12
+backcastpro-0.0.2.dist-info/RECORD,,

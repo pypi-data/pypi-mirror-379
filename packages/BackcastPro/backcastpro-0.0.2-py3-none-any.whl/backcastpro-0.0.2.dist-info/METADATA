@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: BackcastPro
+Version: 0.0.2
+Summary: A small example package
+Author-email: 笹澤ようすけ <yosuke.sasazawa@gmail.com>
+Project-URL: Homepage, https://BackcastPro.github.io/BackcastPro/
+Project-URL: Issues, https://github.com/BackcastPro/BackcastPro/issues
+Project-URL: Logo, https://raw.githubusercontent.com/BackcastPro/BackcastPro/main/docs/img/2.png
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# BackcastPro
+
+A Python backtesting library for trading strategies.
+
+## Installation
+
+### From PyPI (for end users)
+
+```bash
+pip install BackcastPro
+```
+
+### Development Installation
+
+For development, clone the repository and install in development mode:
+
+```bash
+git clone <repository-url>
+cd BackcastPro
+pip install -e .
+```
+
+**開発モードインストール（pip install -e .）を行う**
+- 先ほど実行したpip install -e .により、プロジェクトが開発モードでインストールされています
+- これにより、srcディレクトリが自動的にPythonパスに追加されました
+
+## Usage
+
+```python
+from BackcastPro import Strategy, Backtest
+from BackcastPro.lib import resample_apply
+
+# Your trading strategy implementation here
+```
+
+## Documents
+
+- [How to deploy to PyPI](./docs/How%20to%20deploy%20to%20PyPI.md)
+- [Examples](./docs/examples/)
