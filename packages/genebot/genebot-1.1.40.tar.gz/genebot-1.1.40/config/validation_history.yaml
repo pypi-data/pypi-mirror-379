@@ -1,0 +1,93 @@
+- accounts:
+  - authenticated: true
+    connected: true
+    enabled: true
+    error_message: null
+    exchange_or_broker: binance
+    last_check: '2025-09-23T11:01:29.447993+00:00'
+    latency_ms: 2.59
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T11:01:29.448400+00:00'
+- accounts:
+  - authenticated: false
+    connected: true
+    enabled: true
+    error_message: 'API error: ExchangeException.__init__() got an unexpected keyword
+      argument ''original_exception'' - verify API credentials and permissions'
+    exchange_or_broker: binance
+    last_check: '2025-09-23T11:12:33.569777+00:00'
+    latency_ms: 10031.88
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T11:12:33.573323+00:00'
+- accounts:
+  - authenticated: false
+    connected: true
+    enabled: true
+    error_message: 'API error: ExchangeException.__init__() got an unexpected keyword
+      argument ''original_exception'' - verify API credentials and permissions'
+    exchange_or_broker: binance
+    last_check: '2025-09-23T11:14:53.688181+00:00'
+    latency_ms: 9640.43
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T11:14:53.691111+00:00'
+- accounts:
+  - authenticated: false
+    connected: true
+    enabled: true
+    error_message: 'API error: ExchangeException.__init__() got an unexpected keyword
+      argument ''original_exception'' - verify API credentials and permissions'
+    exchange_or_broker: binance
+    last_check: '2025-09-23T14:27:33.101444+00:00'
+    latency_ms: 10067.07
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T14:27:33.106683+00:00'
+- accounts:
+  - authenticated: true
+    connected: true
+    enabled: false
+    error_message: null
+    exchange_or_broker: binance
+    last_check: '2025-09-23T15:48:58.464743+00:00'
+    latency_ms: 3.09
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T15:48:58.466458+00:00'
+- accounts:
+  - authenticated: true
+    connected: true
+    enabled: false
+    error_message: null
+    exchange_or_broker: binance
+    last_check: '2025-09-23T15:49:57.669332+00:00'
+    latency_ms: 2.61
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T15:49:57.671665+00:00'
+- accounts:
+  - authenticated: false
+    connected: true
+    enabled: false
+    error_message: 'API error: ExchangeException.__init__() got an unexpected keyword
+      argument ''original_exception'' - verify API credentials and permissions'
+    exchange_or_broker: binance
+    last_check: '2025-09-23T15:52:41.083272+00:00'
+    latency_ms: 9603.31
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T15:52:41.090631+00:00'
+- accounts:
+  - authenticated: false
+    connected: true
+    enabled: false
+    error_message: 'API error: ExchangeException.__init__() got an unexpected keyword
+      argument ''original_exception'' - verify API credentials and permissions'
+    exchange_or_broker: binance
+    last_check: '2025-09-23T16:01:06.916758+00:00'
+    latency_ms: 9631.49
+    name: binance-demo
+    type: crypto
+  timestamp: '2025-09-23T16:01:06.924319+00:00'
