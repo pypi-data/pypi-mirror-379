@@ -1,0 +1,11 @@
+passagemath_homfly-10.6.28.dist-info/DELVEWHEEL,sha256=a38CW-ktnFPLmeLgA1ob82E-g8ETRh3OdxX2tusfK_E,438
+passagemath_homfly-10.6.28.dist-info/METADATA,sha256=gBVsk8zCwL0Uow97eYwu9Dqy_U5hF1xqHfsBsJdFj14,5028
+passagemath_homfly-10.6.28.dist-info/RECORD,,
+passagemath_homfly-10.6.28.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_homfly-10.6.28.dist-info/WHEEL,sha256=qV0EIPljj1XC_vuSatRWjn02nZIz3N1t8jsZz7HBr2U,101
+passagemath_homfly.libs/libgc-1-80af4e8a71ad43b392f67722b95315dd.dll,sha256=gK9OinGtQ7OS9nciuVMV3dwJ3HOzsMs9C2W-khzbWj0,717057
+passagemath_homfly.libs/libhomfly-0-c111e6fe85998e52782ba6d331d11507.dll,sha256=Qi9THQNwJ-X2NyRlkohP_-W2DSwk1sZOWMscee4W3k8,182098
+sage/all__sagemath_homfly.py,sha256=3AAC2_WZPnltL-woO9J47F9vVU1f_vBCrs1ivpT_iJo,407
+sage/libs/all__sagemath_homfly.py,sha256=acUGFX0Wx4P0uJwgj5m9ANtfRaZriA7rgY4-VlJE8xc,45
+sage/libs/homfly.cp313-win_amd64.pyd,sha256=AaNgHu_TIEvH9OO7b12zMakY5zfdvx-FD6pSwoPkkuA,29696
+sage/libs/homfly.pyx,sha256=RKaj10MXyfdAIqnDec18931GnQrOSPATo92NsdPNCe8,2988
