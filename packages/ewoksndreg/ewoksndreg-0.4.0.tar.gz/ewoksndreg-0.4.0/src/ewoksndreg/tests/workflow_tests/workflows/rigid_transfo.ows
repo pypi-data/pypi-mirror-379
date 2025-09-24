@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="Intensity-Based Image Registration" description="">
+	<nodes>
+		<node id="0" name="2D Transformation" qualified_name="orangecontrib.ewoksndreg.reg2d_transform.OWReg2DTransform" project_name="ewoksndreg" version="" title="Align (theory)" position="(631.0, 349.0)" />
+		<node id="1" name="2D Transformation" qualified_name="orangecontrib.ewoksndreg.reg2d_transform.OWReg2DTransform" project_name="ewoksndreg" version="" title="Align" position="(635.0, 130.0)" />
+		<node id="2" name="2D Intensity-Based Registration" qualified_name="orangecontrib.ewoksndreg.reg2d_intensities.OWReg2DIntensities" project_name="ewoksndreg" version="" title="2D Intensity-Based Registration" position="(351.0, 130.0)" />
+		<node id="3" name="2D Example Stacks" qualified_name="orangecontrib.ewoksndreg.example2d_stacks.OWExample2DStacks" project_name="ewoksndreg" version="" title="2D Example Stacks" position="(145.0, 283.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="2" sink_node_id="1" source_channel="transformations" sink_channel="transformations" enabled="true" source_channel_id="transformations" sink_channel_id="transformations" />
+		<link id="1" source_node_id="3" sink_node_id="2" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="2" source_node_id="3" sink_node_id="0" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="3" source_node_id="3" sink_node_id="0" source_channel="transformations" sink_channel="transformations" enabled="true" source_channel_id="transformations" sink_channel_id="transformations" />
+		<link id="4" source_node_id="2" sink_node_id="1" source_channel="output_configuration" sink_channel="output_configuration" enabled="true" source_channel_id="output_configuration" sink_channel_id="output_configuration" />
+		<link id="5" source_node_id="2" sink_node_id="1" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_ewoks_default_inputs': {}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01&gt;\x00\x00\x02\x10\x00\x00\x06\x01\x00\x00\x05\x98\x00\x00\x01&gt;\x00\x00\x025\x00\x00\x06\x01\x00\x00\x05\x98\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x01&gt;\x00\x00\x025\x00\x00\x06\x01\x00\x00\x05\x98', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'_ewoks_default_inputs': {'interpolation_order': 0}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\x8f\x00\x00\x01m\x00\x00\x08\xfc\x00\x00\x04\xa6\x00\x00\x04\x8f\x00\x00\x01\x92\x00\x00\x08\xfc\x00\x00\x04\xa6\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04\x8f\x00\x00\x01\x92\x00\x00\x08\xfc\x00\x00\x04\xa6', '__version__': 1}</properties>
+		<properties node_id="2" format="pickle">gASV4wEAAAAAAAB9lCiMFV9ld29rc19kZWZhdWx0X2lucHV0c5R9lCiMBm1hcHBlcpSMFk9wdGlt
+aXphdGlvbi1TaW1wbGVJVEuUjA5tZXRob2Rfb3B0aW9uc5R9lCiMBm1ldHJpY5SMEENyb3NzQ29y
+cmVsYXRpb26UjAlvcHRpbWl6ZXKUjAZMQkZHU0KUjA5weXJhbWlkX2xldmVsc5RLAYwFb3JkZXKU
+SwGMCHNhbXBsaW5nlIwWZXdva3Njb3JlLm1pc3NpbmdfZGF0YZSMC01pc3NpbmdEYXRhlJOUKYGU
+jAlzYW1wbGluZyWURz/gAAAAAAAAdYwTdHJhbnNmb3JtYXRpb25fdHlwZZSMBXJpZ2lklHWMD19l
+d29rc19leGVjaW5mb5R9lIwTX2V3b2tzX3Rhc2tfb3B0aW9uc5R9lIwOX2V3b2tzX3ZhcmluZm+U
+fZSMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjA5kZWZhdWx0X2lucHV0c5R9lIwTc2F2ZWRXaWRnZXRH
+ZW9tZXRyeZRDQgHZ0MsAAwAAAAAFswAAAe0AAAnfAAAFDgAABbMAAAISAAAJ3wAABQ4AAAAAAAAA
+AAoAAAAFswAAAhIAAAnfAAAFDpSMC19fdmVyc2lvbl9flEsBdS4=
+</properties>
+		<properties node_id="3" format="literal">{'_ewoks_default_inputs': {'name': 'camera', 'transformation_type': 'rigid', 'nimages': 3, 'nstacks': 1}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x028\x00\x00\x03\x0e\x00\x00\x04\xb7\x00\x00\x05\x12\x00\x00\x028\x00\x00\x033\x00\x00\x04\xb7\x00\x00\x05\x12\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x028\x00\x00\x033\x00\x00\x04\xb7\x00\x00\x05\x12', '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

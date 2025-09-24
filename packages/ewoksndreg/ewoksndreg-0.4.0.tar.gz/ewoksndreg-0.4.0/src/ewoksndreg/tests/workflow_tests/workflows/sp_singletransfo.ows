@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="2D Intensity-Based Registration" qualified_name="orangecontrib.ewoksndreg.reg2d_intensities.OWReg2DIntensities" project_name="ewoksndreg" version="" title="2D Intensity-Based Registration" position="(617.0, 208.0)" />
+		<node id="1" name="Post-Registration Evaluation" qualified_name="orangecontrib.ewoksndreg.reg2d_posteval.OWReg2DPostEvaluation" project_name="ewoksndreg" version="" title="Post-Registration Evaluation" position="(860.0, 209.0)" />
+		<node id="2" name="2D Transformation" qualified_name="orangecontrib.ewoksndreg.reg2d_transform.OWReg2DTransform" project_name="ewoksndreg" version="" title="Align" position="(1112.0, 215.0)" />
+		<node id="3" name="2D Example Stacks" qualified_name="orangecontrib.ewoksndreg.example2d_stacks.OWExample2DStacks" project_name="ewoksndreg" version="" title="2D Example Stacks" position="(221.0, 208.0)" />
+		<node id="4" name="Pre-Registration Evaluation" qualified_name="orangecontrib.ewoksndreg.reg2d_preeval.OWReg2DPreEvaluation" project_name="ewoksndreg" version="" title="Pre-Registration Evaluation" position="(420.0, 207.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="transformations" sink_channel="transformations" enabled="true" source_channel_id="transformations" sink_channel_id="transformations" />
+		<link id="1" source_node_id="1" sink_node_id="2" source_channel="transformations" sink_channel="transformations" enabled="true" source_channel_id="transformations" sink_channel_id="transformations" />
+		<link id="2" source_node_id="0" sink_node_id="1" source_channel="output_configuration" sink_channel="output_configuration" enabled="true" source_channel_id="output_configuration" sink_channel_id="output_configuration" />
+		<link id="3" source_node_id="1" sink_node_id="2" source_channel="output_configuration" sink_channel="output_configuration" enabled="true" source_channel_id="output_configuration" sink_channel_id="output_configuration" />
+		<link id="4" source_node_id="3" sink_node_id="4" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="5" source_node_id="4" sink_node_id="0" source_channel="output_configuration" sink_channel="output_configuration" enabled="true" source_channel_id="output_configuration" sink_channel_id="output_configuration" />
+		<link id="6" source_node_id="4" sink_node_id="0" source_channel="reference_stack" sink_channel="reference_stack" enabled="true" source_channel_id="reference_stack" sink_channel_id="reference_stack" />
+		<link id="7" source_node_id="4" sink_node_id="0" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="8" source_node_id="0" sink_node_id="1" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="9" source_node_id="1" sink_node_id="2" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_ewoks_default_inputs': {'mapper': 'CrossCorrelation-Numpy', 'method_options': {}, 'transformation_type': 'translation', 'block_size': 1000}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xfd\xff\xff\xff\xf6\x00\x00\x02\xc6\x00\x00\x01\xf6\x00\x00\x00\x00\x00\x00\x00\x14\x00\x00\x02\xc3\x00\x00\x01\xf3\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\x00\x00\x00\x00\x14\x00\x00\x02\xc3\x00\x00\x01\xf3', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'_ewoks_default_inputs': {}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\\\x00\x00\x00\xfe\x00\x00\x06\x06\x00\x00\x03&gt;\x00\x00\x02_\x00\x00\x01\x1c\x00\x00\x06\x03\x00\x00\x03;\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02_\x00\x00\x01\x1c\x00\x00\x06\x03\x00\x00\x03;', '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'_ewoks_default_inputs': {'interpolation_order': 0}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02_\x00\x00\x00\xf7\x00\x00\x04\xde\x00\x00\x02\xfb\x00\x00\x02_\x00\x00\x01\x1c\x00\x00\x04\xde\x00\x00\x02\xfb\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02_\x00\x00\x01\x1c\x00\x00\x04\xde\x00\x00\x02\xfb', '__version__': 1}</properties>
+		<properties node_id="3" format="literal">{'_ewoks_default_inputs': {'name': 'astronaut', 'transformation_type': 'translation', 'nimages': 10, 'nstacks': 7}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02_\x00\x00\x00\xf7\x00\x00\x04\xde\x00\x00\x02\xfb\x00\x00\x02_\x00\x00\x01\x1c\x00\x00\x04\xde\x00\x00\x02\xfb\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02_\x00\x00\x01\x1c\x00\x00\x04\xde\x00\x00\x02\xfb', '__version__': 1}</properties>
+		<properties node_id="4" format="literal">{'_ewoks_default_inputs': {'skip': True}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x025\x00\x00\x00\xe6\x00\x00\x05D\x00\x00\x02\xfa\x00\x00\x028\x00\x00\x01\x04\x00\x00\x05A\x00\x00\x02\xf7\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x028\x00\x00\x01\x04\x00\x00\x05A\x00\x00\x02\xf7', '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

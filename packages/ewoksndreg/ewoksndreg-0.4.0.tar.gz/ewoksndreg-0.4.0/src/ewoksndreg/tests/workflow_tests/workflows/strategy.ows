@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="2D Intensity-Based Registration" qualified_name="orangecontrib.ewoksndreg.reg2d_intensities.OWReg2DIntensities" project_name="ewoksndreg" version="" title="2D Intensity-Based Registration" position="(395.0, 181.0)" />
+		<node id="1" name="2D Transformation" qualified_name="orangecontrib.ewoksndreg.reg2d_transform.OWReg2DTransform" project_name="ewoksndreg" version="" title="Align" position="(679.0, 181.0)" />
+		<node id="2" name="2D Example Stacks" qualified_name="orangecontrib.ewoksndreg.example2d_stacks.OWExample2DStacks" project_name="ewoksndreg" version="" title="2D Example Stacks" position="(188.0, 183.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="transformations" sink_channel="transformations" enabled="true" source_channel_id="transformations" sink_channel_id="transformations" />
+		<link id="1" source_node_id="2" sink_node_id="0" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="2" source_node_id="0" sink_node_id="1" source_channel="output_configuration" sink_channel="output_configuration" enabled="true" source_channel_id="output_configuration" sink_channel_id="output_configuration" />
+		<link id="3" source_node_id="0" sink_node_id="1" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_ewoks_default_inputs': {'mapper': 'CrossCorrelation-SciKitImage', 'transformation_type': 'translation', 'preprocessing_options': {'apply_high_pass': 1.0}}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03Y\x00\x00\x01\xad\x00\x00\x06^\x00\x00\x03\xb1\x00\x00\x03Y\x00\x00\x01\xd2\x00\x00\x06^\x00\x00\x03\xb1\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x03Y\x00\x00\x01\xd2\x00\x00\x06^\x00\x00\x03\xb1', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'_ewoks_default_inputs': {}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\x9c\x00\x00\x01\xad\x00\x00\x08(\x00\x00\x04\xfd\x00\x00\x03\x9c\x00\x00\x01\xd2\x00\x00\x08(\x00\x00\x04\xfd\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x03\x9c\x00\x00\x01\xd2\x00\x00\x08(\x00\x00\x04\xfd', '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'_ewoks_default_inputs': {'name': 'cell', 'transformation_type': 'translation', 'nimages': 60, 'nstacks': 1}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xc4\x00\x00\x01\xf4\x00\x00\x05M\x00\x00\x04\xda\x00\x00\x00\xc4\x00\x00\x02\x19\x00\x00\x05M\x00\x00\x04\xda\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x00\xc4\x00\x00\x02\x19\x00\x00\x05M\x00\x00\x04\xda', '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

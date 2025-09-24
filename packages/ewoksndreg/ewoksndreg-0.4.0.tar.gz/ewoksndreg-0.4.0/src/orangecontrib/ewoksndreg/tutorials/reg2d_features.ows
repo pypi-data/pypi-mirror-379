@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="Feature-Based Image Registration" description="This workflow registers and transforms a stack of 2D images. The registration is done with an feature-based method">
+	<nodes>
+		<node id="0" name="2D Transformation" qualified_name="orangecontrib.ewoksndreg.reg2d_transform.OWReg2DTransform" project_name="ewoksndreg" version="" title="Align (theory)" position="(630.0, 377.0)" />
+		<node id="1" name="2D Feature-Based Registration" qualified_name="orangecontrib.ewoksndreg.reg2d_features.OWReg2DFeatures" project_name="ewoksndreg" version="" title="2D Feature Registration" position="(372.0, 163.0)" />
+		<node id="2" name="2D Transformation" qualified_name="orangecontrib.ewoksndreg.reg2d_transform.OWReg2DTransform" project_name="ewoksndreg" version="" title="Align" position="(629.0, 169.0)" />
+		<node id="3" name="2D Example Stacks" qualified_name="orangecontrib.ewoksndreg.example2d_stacks.OWExample2DStacks" project_name="ewoksndreg" version="" title="2D Example Stacks" position="(114.0, 296.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="1" sink_node_id="2" source_channel="transformations" sink_channel="transformations" enabled="true" source_channel_id="transformations" sink_channel_id="transformations" />
+		<link id="1" source_node_id="3" sink_node_id="1" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="2" source_node_id="3" sink_node_id="0" source_channel="transformations" sink_channel="transformations" enabled="true" source_channel_id="transformations" sink_channel_id="transformations" />
+		<link id="3" source_node_id="3" sink_node_id="0" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+		<link id="4" source_node_id="1" sink_node_id="2" source_channel="output_configuration" sink_channel="output_configuration" enabled="true" source_channel_id="output_configuration" sink_channel_id="output_configuration" />
+		<link id="5" source_node_id="1" sink_node_id="2" source_channel="image_stacks" sink_channel="image_stacks" enabled="true" source_channel_id="image_stacks" sink_channel_id="image_stacks" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_ewoks_default_inputs': {}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x03\x00\x00\x01\x1e\x00\x00\x05\xaf\x00\x00\x036\x00\x00\x02\x03\x00\x00\x01C\x00\x00\x05\xaf\x00\x00\x036\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02\x03\x00\x00\x01C\x00\x00\x05\xaf\x00\x00\x036', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'_ewoks_default_inputs': {'transformation_type': 'translation', 'detector': 'Sift-SciKitImage', 'matcher': 'Descriptor-Silx', 'mapper': 'LstSq-Numpy'}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03&gt;\x00\x00\x01\x96\x00\x00\x06\xf6\x00\x00\x03\xae\x00\x00\x03&gt;\x00\x00\x01\xbb\x00\x00\x06\xf6\x00\x00\x03\xae\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x03&gt;\x00\x00\x01\xbb\x00\x00\x06\xf6\x00\x00\x03\xae', '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'_ewoks_default_inputs': {}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\x96\x00\x00\x01\xad\x00\x00\x06!\x00\x00\x03\xb1\x00\x00\x03\x96\x00\x00\x01\xd2\x00\x00\x06!\x00\x00\x03\xb1\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x03\x96\x00\x00\x01\xd2\x00\x00\x06!\x00\x00\x03\xb1', '__version__': 1}</properties>
+		<properties node_id="3" format="literal">{'_ewoks_default_inputs': {'name': 'astronaut', 'transformation_type': 'translation', 'nimages': 3, 'nstacks': 1}, '_ewoks_execinfo': {}, '_ewoks_task_options': {}, '_ewoks_varinfo': {}, 'controlAreaVisible': True, 'default_inputs': {}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02+\x00\x00\x02\x04\x00\x00\x07V\x00\x00\x05\\\x00\x00\x02+\x00\x00\x02)\x00\x00\x07V\x00\x00\x05\\\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x02+\x00\x00\x02)\x00\x00\x07V\x00\x00\x05\\', '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
