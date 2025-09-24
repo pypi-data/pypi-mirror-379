@@ -1,0 +1,2 @@
+[console_scripts]
+mitoedit = mitoedit.cli:main

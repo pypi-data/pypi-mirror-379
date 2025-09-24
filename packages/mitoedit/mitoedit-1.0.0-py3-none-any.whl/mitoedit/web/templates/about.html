@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MitoEdit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 800px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            margin-bottom: 1.5rem;
+        }
+        .pipeline-section {
+            margin-top: 1.5rem;
+        }
+        .nav-link {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div class="d-flex align-items-center" style="transform: translate(0, 3px);">
+                <img src="/static/logo2.svg" alt="MitoEdit Logo" height="60" class="me-3">
+            </div>
+            <a href="/" class="btn btn-outline-primary">Back to Home</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Project Overview</h2>
+                <p>MitoEdit is a bioinformatics tool designed to facilitate targeted base editing in DNA sequences, with a particular focus on mitochondrial DNA editing. The tool implements various editing pipelines based on published research, allowing researchers to identify optimal target windows for specific base conversions.</p>
+                <p>MitoEdit analyzes DNA sequences to predict target windows for base editing using different editing systems, identifies potential bystander edits, and provides optimal TALE (Transcription Activator-Like Effector) sequences for targeting.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Editing Pipelines</h2>
+                <p>MitoEdit implements the following editing pipelines:</p>
+                
+                <div class="pipeline-section">
+                    <h4>1. Mok2020 G1333</h4>
+                    <p><strong>Purpose:</strong> Predicts target windows for C.G-to-T.A conversions in a 5'-TC context using the G1333 DddA split.</p>
+                    <p>This pipeline identifies 5'-TCs on both DNA strands and generates target windows (14-18bp) with editable cytosines at positions 4-10bp from the 5' end.</p>
+                </div>
+                
+                <div class="pipeline-section">
+                    <h4>2. Mok2020 G1397</h4>
+                    <p><strong>Purpose:</strong> Predicts target windows for C.G-to-T.A conversions in a 5'-TC context using the G1397 DddA split.</p>
+                    <p>This pipeline identifies 5'-TCs on both DNA strands and generates target windows (14-18bp) with target cytosines at positions 4-7bp from the 3' end.</p>
+                </div>
+                
+                <div class="pipeline-section">
+                    <h4>3. Mok2022 G1397 DddA11</h4>
+                    <p><strong>Purpose:</strong> Predicts target windows for C.G-to-T.A conversions in a 5'-HC context (where H = A, C or T) using the modified DddA domain (DddA11).</p>
+                    <p>This pipeline identifies 5'-HCs on both DNA strands and generates target windows (14-18bp) with target cytosines at positions 4-7bp from the 3' end.</p>
+                </div>
+                
+                <div class="pipeline-section">
+                    <h4>4. Cho sTALEDs</h4>
+                    <p><strong>Purpose:</strong> Predicts target windows for A.T-to-G.C conversions in a 5'-AS or 5'-SA context (where S = C or G) using the AD domain.</p>
+                    <p>This pipeline identifies 5'-SA and 5'-AS contexts on both DNA strands and generates target windows (14-18bp) with target adenines at positions 5-12bp from the end to which the AD domain is tethered.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">References</h2>
+                <ul>
+                    <li><a href="https://www.nature.com/articles/s41586-020-2477-4" target="_blank" class="nav-link">Mok2020: Programmable mitochondrial adenine editors for the treatment of mitochondrial diseases</a></li>
+                    <li><a href="https://www.nature.com/articles/s41587-022-01256-8" target="_blank" class="nav-link">Mok2022: A bacterial cytidine deaminase toxin enables CRISPR-free mitochondrial base editing</a></li>
+                    <li><a href="https://pubmed.ncbi.nlm.nih.gov/35472302/" target="_blank" class="nav-link">Cho sTALEDs: Targeted A-to-G base editing in human mitochondrial DNA with programmable deaminases</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
