@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+Dyn4py.egg-info/PKG-INFO
+Dyn4py.egg-info/SOURCES.txt
+Dyn4py.egg-info/dependency_links.txt
+Dyn4py.egg-info/requires.txt
+Dyn4py.egg-info/top_level.txt
