@@ -1,0 +1,47 @@
+# InkDNA Fingerprint (Simple CLI — PDF only)
+
+A lean, Windows-friendly CLI to **stamp** and **verify** PDFs.
+
+## What it does
+- **stamp**: embeds a compact InkDNA payload **inside the PDF** and writes a **sidecar JSON** next to the output (`*_inkdna_signature.json`).
+- **verify**: reads the embedded payload and **recomputes a canonical hash** of the page content streams (ignoring our own payload).  
+  Optionally, pass a sidecar to **cross-check**. Prints **full forensic details** every time.
+
+> No activation, no licensing, no remote calls. Execution-only.
+
+## Install (Windows)
+```bat
+py -m pip install --upgrade pip
+py -m pip install .
+````
+
+This installs the `inkdna` command.
+
+## Usage
+
+### Stamp
+
+```bat
+inkdna stamp input.pdf -o output.pdf --code "ORDER-123"
+```
+
+* Always writes a sidecar: `output_inkdna_signature.json`
+
+### Verify (sidecar optional)
+
+```bat
+inkdna verify output.pdf
+inkdna verify output.pdf --sidecar output_inkdna_signature.json
+```
+
+Verification prints:
+
+* OK/FAIL for canonical hash match
+* Embedded payload (issuer, version, timestamp, code, file type)
+* Canonical SHA256 stored vs recomputed
+* Per-page stream counts and sizes
+* Sidecar cross-check details (if provided)
+
+## Version
+
+`0.1.2`
