@@ -1,0 +1,8 @@
+build
+dist
+docs
+scripts
+tests
+validation
+venv
+xpcs_toolkit
