@@ -1,0 +1,2 @@
+[console_scripts]
+snake-bashar = snake_in_terminal_bashar.cli:main

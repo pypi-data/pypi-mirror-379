@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: snake_in_terminal_bashar
+Version: 0.1.0
+Summary: لعبة ثعبان نصية تعمل في الطرفية (curses)
+Home-page: https://example.com/snake_in_terminal_bashar
+Author: بشار نشوان
+Author-email: bashar@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# snake_in_terminal_bashar
+
+لعبة ثعبان نصية تعمل في الطرفية باستخدام مكتبة curses.
+
+التشغيل محلياً:
+- في لينكس/ماك: python -m snake_in_terminal_bashar
+- في ويندوز: يفضل تشغيل داخل WSL أو تثبيت الحزمة windows-curses ثم تشغيل نفس الأمر.
+
+بعد التثبيت:
+- snake-bashar
+
+المؤلف: بشار نشوان
