@@ -1,0 +1,24 @@
+<div {{ attrs|safe }}>
+    {% if show_label %}
+      <label for="{{ input_id }}" class="{{ dzn_label }}">{{ label }}</label>
+    {% endif %}
+    <textarea
+      id="{{ input_id }}"
+      name="{{ name }}"
+      class="{{ dzn_input }}"
+      {% if required %}required{% endif %}
+      {% if disabled %}disabled{% endif %}
+      {% if readonly %}readonly{% endif %}
+      {% if autocomplete %}autocomplete="{{ autocomplete }}"{% endif %}
+      {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
+      {% for k, v in textarea_attrs.items() %} {{k}}="{{v}}"{% endfor %}
+    >{{ value }}</textarea>
+  
+    {% if hint %}
+      <div class="{{ dzn_hint }}">{{ hint }}</div>
+    {% endif %}
+    {% if error %}
+      <div class="{{ dzn_error }}">{{ error }}</div>
+    {% endif %}
+  </div>
+  

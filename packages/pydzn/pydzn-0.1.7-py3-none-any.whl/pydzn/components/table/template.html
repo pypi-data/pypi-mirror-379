@@ -1,0 +1,127 @@
+<div {{ attrs|safe }}>
+  {% if show_toolbar %}
+  <div class="{{ d_toolbar }}">
+    <div class="flex items-center gap-2">
+      {# bulk/search/export buttons here; use d_btn / d_search_input #}
+    </div>
+
+    <form action="{{ search_action or '' }}" method="get"
+          {% if search_action %}
+            hx-get="{{ search_action }}"
+            hx-target="{{ hx_target or ('#' ~ id) }}"
+            hx-swap="outerHTML"
+            hx-push-url="true"
+          {% endif %}>
+      <input class="{{ d_search_input }}" type="search" name="q" value="{{ search_query }}" placeholder="Search…">
+      <button class="{{ d_btn }}" type="submit">Search</button>
+    </form>
+  </div>
+  {% endif %}
+
+  {# choose '?' or '&' depending on whether sort_url already has a query #}
+  {% set sep = '&' if '?' in (sort_url or '') else '?' %}
+
+  <div class="overflow-auto">
+    <table class="w-[100%]">
+      <thead class="{{ d_thead }}">
+        <tr>
+          {% for col in columns %}
+            <th class="{{ cell_pad_dzn }} {{ d_th }}">
+              {% if col.sortable and sort_url %}
+              <span
+                role="button"
+                tabindex="0"
+                hx-get="{{ sort_url }}{{ sep }}sort={{ col.key }}&dir={{ 'desc' if sort_key==col.key and sort_dir=='asc' else 'asc' }}{% if search_query %}&q={{ search_query|urlencode }}{% endif %}"
+                hx-target="{{ hx_target or ('#' ~ id) }}"
+                hx-swap="outerHTML"
+                hx-push-url="true"
+                hx-trigger="click, keydown.enter"
+                class="cursor-pointer select-none"
+                style="text-decoration:none;"
+              >
+                {{ col.label }}{% if sort_key==col.key %} {{ '▲' if sort_dir=='asc' else '▼' }}{% endif %}
+              </span>
+            {% else %}
+              {{ col.label }}
+            {% endif %}
+            </th>
+          {% endfor %}
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for row in rows %}
+          {# compute the correct separator for the row URL #}
+          {% set sep2 = '&' if '?' in (row_click.url or '') else '?' %}
+          
+          <tr
+            class="{{ d_tr }} {% if striped and loop.index0 % 2 == 1 %} {{ d_tr_alt }} {% endif %}{% if row_click %} cursor-pointer{% endif %}"
+            {% if row_click %}
+              hx-get="{{ row_click.url }}{{ sep2 }}{{ row_click.id_param }}={{ row[row_click.id_key] }}"
+              hx-target="{{ row_click.target }}"
+              hx-swap="{{ row_click.swap or 'innerHTML' }}"
+              hx-push-url="{{ 'true' if row_click.push_url else 'false' }}"
+              hx-trigger="click, keydown.enter"
+              role="button" tabindex="0"
+              data-row-id="{{ row[row_click.id_key] }}"
+              hx-on:click='window.__openDrawer({{ row_click.open_drawer_id|tojson }}, {{ (row_click.title|default("Edit a review"))|tojson }})'
+              hx-on:htmx:beforeRequest='window.__openDrawer({{ row_click.open_drawer_id|tojson }}, {{ (row_click.title|default("Edit a review"))|tojson }})'
+            {% endif %}
+          >
+        
+            {% for col in columns %}
+              {% set val = row.get(col.key, '') %}
+              {% if primary_key and col.key == primary_key %}
+                <td class="{{ cell_pad_dzn }} {{ d_td }}">
+                  <div class="{{ d_primary }}">{{ val|safe }}</div>
+                  {% if row.get(actions_key) %}
+                    <div class="{{ d_row_actions }}">{{ row.get(actions_key)|safe }}</div>
+                  {% endif %}
+                </td>
+              {% else %}
+                <td class="{{ cell_pad_dzn }} {{ d_td }}">{{ val|safe }}</td>
+              {% endif %}
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% if total and pages > 1 %}
+  <div class="{{ d_footer }}">
+    <div>{{ total }} items</div>
+    <div class="flex items-center gap-2">
+      {% set last = pages %}
+      {% set prev = page-1 if page>1 else 1 %}
+      {% set next = page+1 if page<pages else pages %}
+
+      <button class="{{ d_pager }}"
+              hx-get="{{ sort_url }}{{ sep }}page=1&per_page={{ per_page }}&sort={{ sort_key }}&dir={{ sort_dir }}{% if search_query %}&q={{ search_query|urlencode }}{% endif %}"
+              hx-target="{{ hx_target or ('#' ~ id) }}"
+              hx-swap="outerHTML"
+              hx-push-url="true">«</button>
+
+      <button class="{{ d_pager }}"
+              hx-get="{{ sort_url }}{{ sep }}page={{ prev }}&per_page={{ per_page }}&sort={{ sort_key }}&dir={{ sort_dir }}{% if search_query %}&q={{ search_query|urlencode }}{% endif %}"
+              hx-target="{{ hx_target or ('#' ~ id) }}"
+              hx-swap="outerHTML"
+              hx-push-url="true">‹</button>
+
+      <span>Page {{ page }} of {{ pages }}</span>
+
+      <button class="{{ d_pager }}"
+              hx-get="{{ sort_url }}{{ sep }}page={{ next }}&per_page={{ per_page }}&sort={{ sort_key }}&dir={{ sort_dir }}{% if search_query %}&q={{ search_query|urlencode }}{% endif %}"
+              hx-target="{{ hx_target or ('#' ~ id) }}"
+              hx-swap="outerHTML"
+              hx-push-url="true">›</button>
+
+      <button class="{{ d_pager }}"
+              hx-get="{{ sort_url }}{{ sep }}page={{ last }}&per_page={{ per_page }}&sort={{ sort_key }}&dir={{ sort_dir }}{% if search_query %}&q={{ search_query|urlencode }}{% endif %}"
+              hx-target="{{ hx_target or ('#' ~ id) }}"
+              hx-swap="outerHTML"
+              hx-push-url="true">»</button>
+    </div>
+  </div>
+  {% endif %}
+</div>
