@@ -1,0 +1,3195 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="Immutable datatype library for Common Weakness Enumeration (CWE) analysis and validation workflows">
+
+
+        <meta name="author" content="Civic Interconnect">
+
+
+        <link rel="canonical" href="https://civic-interconnect.github.io/civic-transparency-cwe-types/api/schema/">
+
+
+        <link rel="prev" href="../cwe/">
+
+
+        <link rel="next" href="../standards/">
+
+
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+
+
+
+        <title>Schema - Civic Transparency CWE Types</title>
+
+
+
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+
+
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+
+
+
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+
+
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+
+
+        <a href="#schema-types" class="md-skip">
+          Skip to content
+        </a>
+
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+
+
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Civic Transparency CWE Types" class="md-header__button md-logo" aria-label="Civic Transparency CWE Types" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Civic Transparency CWE Types
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+
+              Schema
+
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+        <label class="md-header__button md-icon" for="__search">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="md-header__source">
+        <a href="https://github.com/civic-interconnect/civic-transparency-cwe-types" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+
+  </nav>
+
+</header>
+
+    <div class="md-container" data-md-component="container">
+
+
+
+
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+
+
+
+
+
+
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+
+
+
+
+
+  Home
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+    <li class="md-tabs__item">
+      <a href="../../usage/" class="md-tabs__link">
+
+
+
+
+
+  Usage
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../base/" class="md-tabs__link">
+
+
+
+
+
+  Types
+
+        </a>
+      </li>
+
+
+
+
+    </ul>
+  </div>
+</nav>
+
+
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+
+
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+
+
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Civic Transparency CWE Types" class="md-nav__button md-logo" aria-label="Civic Transparency CWE Types" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Civic Transparency CWE Types
+  </label>
+
+    <div class="md-nav__source">
+      <a href="https://github.com/civic-interconnect/civic-transparency-cwe-types" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+
+  <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Home
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../usage/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Usage
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+
+
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+    Types
+
+  </span>
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../base/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Base
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../common/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Common
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../cwe/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    CWE
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+    Schema
+
+  </span>
+
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <a href="./" class="md-nav__link md-nav__link--active">
+
+
+
+  <span class="md-ellipsis">
+    Schema
+
+  </span>
+
+
+      </a>
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_error_freeze
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_error_freeze">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFileNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaFileNotFoundError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaFreezeError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaHashError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaHashError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaIntegrityError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaIntegrityError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaPermissionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaPermissionError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaRepoDetectionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaRepoDetectionError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaSourceValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaSourceValidationError
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_error_loading
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_error_loading">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaBundleError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaBundleError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaConfigurationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaConfigurationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaLoadingError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaNotFoundError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaParsingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaParsingError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaSearchError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaSearchError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaVersionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaVersionError
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_error_validation
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_error_validation">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.BatchValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BatchValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.DocumentValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      DocumentValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaCompilationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaCompilationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaMetaValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaMetaValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaUnavailableError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaUnavailableError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.ValidationContextError" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValidationContextError
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_result_loading
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_result_loading">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaLoadingResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="SchemaLoadingResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.available_schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      available_schemas
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.has_cwe_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_cwe_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.has_mapping_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_mapping_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.schema_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_count
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.add_failed_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_failed_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.add_loaded_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_loaded_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.add_search_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_search_path
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.get_schema_loading_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema_loading_summary
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.set_catalog_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_catalog_version
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_result_validation
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_result_validation">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaValidationResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="SchemaValidationResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult.document_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      document_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult.has_schema_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_schema_errors
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.add_invalid_document" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_invalid_document
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.add_schema_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_schema_error
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.add_validated_document" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_validated_document
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.get_schema_validation_statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema_validation_statistics
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.set_schema_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_schema_name
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+    </ul>
+
+</nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../standards/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Standards
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+          </ul>
+        </nav>
+
+    </li>
+
+
+
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_error_freeze
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_error_freeze">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFileNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaFileNotFoundError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaFreezeError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaHashError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaHashError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaIntegrityError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaIntegrityError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaPermissionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaPermissionError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaRepoDetectionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaRepoDetectionError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_freeze.SchemaSourceValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaSourceValidationError
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_error_loading
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_error_loading">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaBundleError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaBundleError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaConfigurationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaConfigurationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaLoadingError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaNotFoundError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaParsingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaParsingError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaSearchError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaSearchError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_loading.SchemaVersionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaVersionError
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_error_validation
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_error_validation">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.BatchValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BatchValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.DocumentValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      DocumentValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaCompilationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaCompilationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaMetaValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaMetaValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaUnavailableError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaUnavailableError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaValidationError
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_error_validation.ValidationContextError" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValidationContextError
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_result_loading
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_result_loading">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaLoadingResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="SchemaLoadingResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.available_schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      available_schemas
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.has_cwe_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_cwe_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.has_mapping_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_mapping_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.schema_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_count
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.add_failed_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_failed_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.add_loaded_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_loaded_schema
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.add_search_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_search_path
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.get_schema_loading_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema_loading_summary
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_loading.set_catalog_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_catalog_version
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_result_validation
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="schema_result_validation">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaValidationResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="SchemaValidationResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult.document_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      document_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult.has_schema_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_schema_errors
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.add_invalid_document" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_invalid_document
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.add_schema_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_schema_error
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.add_validated_document" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_validated_document
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.get_schema_validation_statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema_validation_statistics
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.schema_result_validation.set_schema_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_schema_name
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+    </ul>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+
+
+
+
+
+
+
+
+<h1 id="schema-types">Schema Types</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="ci.transparency.cwe.types.schema_error_freeze" class="doc doc-heading">
+            <code>ci.transparency.cwe.types.schema_error_freeze</code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Schema freeze operation error types.</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_freeze.SchemaFileNotFoundError" class="doc doc-heading">
+            <code>SchemaFileNotFoundError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaFreezeError (ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError)" href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError">SchemaFreezeError</a></code></p>
+
+
+        <p>Schema file not found during freeze operation.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError" class="doc doc-heading">
+            <code>SchemaFreezeError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="Exception">Exception</span></code></p>
+
+
+        <p>Base exception for schema freeze operations.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_freeze.SchemaHashError" class="doc doc-heading">
+            <code>SchemaHashError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaFreezeError (ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError)" href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError">SchemaFreezeError</a></code></p>
+
+
+        <p>Error computing schema file hash.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_freeze.SchemaIntegrityError" class="doc doc-heading">
+            <code>SchemaIntegrityError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaFreezeError (ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError)" href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError">SchemaFreezeError</a></code></p>
+
+
+        <p>Schema file integrity check failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_freeze.SchemaPermissionError" class="doc doc-heading">
+            <code>SchemaPermissionError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaFreezeError (ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError)" href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError">SchemaFreezeError</a></code></p>
+
+
+        <p>Permission denied during schema freeze operation.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_freeze.SchemaRepoDetectionError" class="doc doc-heading">
+            <code>SchemaRepoDetectionError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaFreezeError (ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError)" href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError">SchemaFreezeError</a></code></p>
+
+
+        <p>Could not detect repository root.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_freeze.SchemaSourceValidationError" class="doc doc-heading">
+            <code>SchemaSourceValidationError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaFreezeError (ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError)" href="#ci.transparency.cwe.types.schema_error_freeze.SchemaFreezeError">SchemaFreezeError</a></code></p>
+
+
+        <p>Schema source validation failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="ci.transparency.cwe.types.schema_error_loading" class="doc doc-heading">
+            <code>ci.transparency.cwe.types.schema_error_loading</code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Schema loading error types.</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_loading.SchemaBundleError" class="doc doc-heading">
+            <code>SchemaBundleError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaLoadingError (ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError)" href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError">SchemaLoadingError</a></code></p>
+
+
+        <p>Error working with schema bundle.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_loading.SchemaConfigurationError" class="doc doc-heading">
+            <code>SchemaConfigurationError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaLoadingError (ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError)" href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError">SchemaLoadingError</a></code></p>
+
+
+        <p>Schema configuration is invalid.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError" class="doc doc-heading">
+            <code>SchemaLoadingError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="Exception">Exception</span></code></p>
+
+
+        <p>Base exception for schema loading operations.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_loading.SchemaNotFoundError" class="doc doc-heading">
+            <code>SchemaNotFoundError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaLoadingError (ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError)" href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError">SchemaLoadingError</a></code></p>
+
+
+        <p>Schema file could not be found.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_loading.SchemaParsingError" class="doc doc-heading">
+            <code>SchemaParsingError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaLoadingError (ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError)" href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError">SchemaLoadingError</a></code></p>
+
+
+        <p>Schema file could not be parsed as JSON.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_loading.SchemaSearchError" class="doc doc-heading">
+            <code>SchemaSearchError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaLoadingError (ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError)" href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError">SchemaLoadingError</a></code></p>
+
+
+        <p>Error during schema file search.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_loading.SchemaVersionError" class="doc doc-heading">
+            <code>SchemaVersionError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaLoadingError (ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError)" href="#ci.transparency.cwe.types.schema_error_loading.SchemaLoadingError">SchemaLoadingError</a></code></p>
+
+
+        <p>Schema version not supported or invalid.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="ci.transparency.cwe.types.schema_error_validation" class="doc doc-heading">
+            <code>ci.transparency.cwe.types.schema_error_validation</code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Schema validation error types.</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_validation.BatchValidationError" class="doc doc-heading">
+            <code>BatchValidationError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaValidationError (ci.transparency.cwe.types.schema_error_validation.SchemaValidationError)" href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError">SchemaValidationError</a></code></p>
+
+
+        <p>Error during batch validation operation.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_validation.DocumentValidationError" class="doc doc-heading">
+            <code>DocumentValidationError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaValidationError (ci.transparency.cwe.types.schema_error_validation.SchemaValidationError)" href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError">SchemaValidationError</a></code></p>
+
+
+        <p>Document fails schema validation.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_validation.SchemaCompilationError" class="doc doc-heading">
+            <code>SchemaCompilationError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaValidationError (ci.transparency.cwe.types.schema_error_validation.SchemaValidationError)" href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError">SchemaValidationError</a></code></p>
+
+
+        <p>Schema could not be compiled for validation.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_validation.SchemaMetaValidationError" class="doc doc-heading">
+            <code>SchemaMetaValidationError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaValidationError (ci.transparency.cwe.types.schema_error_validation.SchemaValidationError)" href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError">SchemaValidationError</a></code></p>
+
+
+        <p>Schema itself is invalid (meta-validation failed).</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_validation.SchemaUnavailableError" class="doc doc-heading">
+            <code>SchemaUnavailableError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaValidationError (ci.transparency.cwe.types.schema_error_validation.SchemaValidationError)" href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError">SchemaValidationError</a></code></p>
+
+
+        <p>Required schema is not available.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_validation.SchemaValidationError" class="doc doc-heading">
+            <code>SchemaValidationError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="Exception">Exception</span></code></p>
+
+
+        <p>Base exception for schema validation operations.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_error_validation.ValidationContextError" class="doc doc-heading">
+            <code>ValidationContextError</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="SchemaValidationError (ci.transparency.cwe.types.schema_error_validation.SchemaValidationError)" href="#ci.transparency.cwe.types.schema_error_validation.SchemaValidationError">SchemaValidationError</a></code></p>
+
+
+        <p>Error setting up validation context.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="ci.transparency.cwe.types.schema_result_loading" class="doc doc-heading">
+            <code>ci.transparency.cwe.types.schema_result_loading</code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Schema loading result type.</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult" class="doc doc-heading">
+            <code>SchemaLoadingResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseLoadingResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base_result_loading.BaseLoadingResult)" href="../base/#ci.transparency.cwe.types.base_result_loading.BaseLoadingResult">BaseLoadingResult</a></code></p>
+
+
+        <p>Results from schema loading operations.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.available_schemas" class="doc doc-heading">
+            <code class=" language-python"><span class="n">available_schemas</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Names of successfully loaded schemas.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.has_cwe_schema" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_cwe_schema</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if the CWE schema was loaded.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.has_mapping_schema" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_mapping_schema</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if the mapping schema was loaded.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="ci.transparency.cwe.types.schema_result_loading.SchemaLoadingResult.schema_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">schema_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of schemas successfully loaded.</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_loading.add_failed_schema" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_failed_schema</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with a failed schema load recorded.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_loading.add_loaded_schema" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_loaded_schema</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">schema_data</span><span class="p">,</span> <span class="n">source_path</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with a successfully loaded schema added.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_loading.add_search_path" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_search_path</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with a searched path recorded.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_loading.get_schema_loading_summary" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_schema_loading_summary</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Summary of schema loading statistics.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_loading.set_catalog_version" class="doc doc-heading">
+            <code class=" language-python"><span class="n">set_catalog_version</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with the catalog version set.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="ci.transparency.cwe.types.schema_result_validation" class="doc doc-heading">
+            <code>ci.transparency.cwe.types.schema_result_validation</code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Schema validation result type.</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult" class="doc doc-heading">
+            <code>SchemaValidationResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseValidationResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base_result_validation.BaseValidationResult)" href="../base/#ci.transparency.cwe.types.base_result_validation.BaseValidationResult">BaseValidationResult</a></code></p>
+
+
+        <p>Results from schema validation operations.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult.document_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">document_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Total number of documents validated.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="ci.transparency.cwe.types.schema_result_validation.SchemaValidationResult.has_schema_errors" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_schema_errors</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if schema-level errors occurred.</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_validation.add_invalid_document" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_invalid_document</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">document_path</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with an invalid document and error details recorded.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_validation.add_schema_error" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_schema_error</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with a schema-level error recorded.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_validation.add_validated_document" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_validated_document</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">document_path</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with a successfully validated document added.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_validation.get_schema_validation_statistics" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_schema_validation_statistics</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Summary of schema validation statistics.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.schema_result_validation.set_schema_name" class="doc doc-heading">
+            <code class=" language-python"><span class="n">set_schema_name</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with the schema name set.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <aside class="md-source-file">
+
+
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 24, 2025 02:02:53 UTC">2025-09-24</span>
+  </span>
+
+
+
+
+
+  </aside>
+
+
+
+
+
+
+              </article>
+            </div>
+
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+
+
+
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.footer", "navigation.tabs", "navigation.top", "navigation.expand", "navigation.sections", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+
+
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+
+
+  </body>
+</html>
