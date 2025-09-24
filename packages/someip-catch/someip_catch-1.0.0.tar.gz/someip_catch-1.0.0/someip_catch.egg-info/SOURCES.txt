@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+README_someip.md
+pyproject.toml
+setup.py
+setup_someip.py
+someip_catch/__init__.py
+someip_catch.egg-info/PKG-INFO
+someip_catch.egg-info/SOURCES.txt
+someip_catch.egg-info/dependency_links.txt
+someip_catch.egg-info/top_level.txt
+someip_catch/data/document.7z
