@@ -1,0 +1,3 @@
+[console_scripts]
+rbf=rbf_lang:cli.main
+
