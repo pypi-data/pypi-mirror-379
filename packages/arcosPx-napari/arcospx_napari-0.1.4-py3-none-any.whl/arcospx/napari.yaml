@@ -1,0 +1,48 @@
+name: arcosPx-napari
+display_name: arcosPx
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+categories: ["Segmentation", "Image Processing"]
+contributions:
+  commands:
+    - id: arcosPx-napari.remove_background
+      python_name: arcospx._widget:remove_background
+      title: Remove Background
+    - id: arcosPx-napari.track_events
+      python_name: arcospx._widget:track_events
+      title: Track Events
+    - id: arcosPx-napari.simple_thresholder
+      python_name: arcospx._widget:thresholder
+      title: Thresholding
+    - id: arcosPx-napari.sample_data_circles
+      python_name: arcospx.cellular_automaton:sim_circles
+      title: Circles
+    - id: arcosPx-napari.sample_data_target
+      python_name: arcospx.cellular_automaton:sim_target_pattern
+      title: Target Pattern
+    - id: arcosPx-napari.sample_data_directional
+      python_name: arcospx.cellular_automaton:sim_directional
+      title: Directional Waves
+    - id: arcosPx-napari.sample_data_chaotic
+      python_name: arcospx.cellular_automaton:sim_chaotic
+      title: Chaotic Waves
+  widgets:
+    - command: arcosPx-napari.remove_background
+      display_name: Remove Background
+    - command: arcosPx-napari.simple_thresholder
+      display_name: Thresholding
+    - command: arcosPx-napari.track_events
+      display_name: Track Events
+  sample_data:
+  - command: arcosPx-napari.sample_data_circles
+    key: circles
+    display_name: Circles (can take a few seconds to load)
+  - command: arcosPx-napari.sample_data_target
+    key: target
+    display_name: Target Pattern (can take a few seconds to load)
+  - command: arcosPx-napari.sample_data_directional
+    key: directional
+    display_name: Directional Waves (can take a few seconds to load)
+  - command: arcosPx-napari.sample_data_chaotic
+    key: chaotic
+    display_name: Chaotic Waves (can take a few seconds to load)
