@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: laflammscape
+Version: 0.1.0
+Summary: A short description of the laflammscape package.
+Author-email: Your Name <you@example.com>
+Project-URL: Homepage, https://github.com/yourusername/laflammscape
+Project-URL: Bug Tracker, https://github.com/yourusername/laflammscape/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# laflammscape
+
+TODO: Write a proper description of your project here.
+
+## Installation
+
+```bash
+pip install laflammscape
+```
+
+Or for development:
+
+```bash
+git clone https://github.com/yourusername/laflammscape # TODO: Update URL
+cd laflammscape
+pip install -e .[dev] # Assuming you add a dev extra in pyproject.toml
+```
+
+## Usage
+
+TODO: Add usage examples.
+
+```python
+import laflammscape
+
+# Example usage
+``` 
