@@ -1,0 +1,8 @@
+rapporteur/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rapporteur/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rapporteur/report.py,sha256=4or0y2wNRtidVw1Wlz-iwpUWq5JtypzUGQp_WUfvBnU,1584
+rapporteur/slack.py,sha256=uHe-G9jv9h6zFbacfyq27foVRtG31A8chW-N6V7jlOY,2851
+rapporteur/utils.py,sha256=P8l3wzr_gTMIsbStW-aAvZRDiKx9RIcmAjnXy_0a-XU,960
+rapporteur-0.1.0.dist-info/WHEEL,sha256=9sngUSrBGcqa7Cqf5vlj5tQYMBt8bCfIU4h7UcwAFM0,79
+rapporteur-0.1.0.dist-info/METADATA,sha256=SsYmvqs7ovBl_JHgn6DUsbUJ_mSU_qJkMfmuMn73rkM,2578
+rapporteur-0.1.0.dist-info/RECORD,,
