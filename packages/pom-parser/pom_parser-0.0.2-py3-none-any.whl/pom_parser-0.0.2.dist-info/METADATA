@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: pom_parser
+Version: 0.0.2
+Summary: A parser for the POM configuration language
+Project-URL: Homepage, https://pom.computer
+Project-URL: Repository, https://github.com/pommicket/pom-py
+Project-URL: Issues, https://github.com/pommicket/pom-py/issues
+Author-email: pommicket <pommicket@gmail.com>
+License-Expression: 0BSD
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# pom-parser
+
+Python library for parsing [POM configuration files](https://pom.computer).
+
+## Changelog
+
+- `0.0.2` - Link to GitHub repository from PyPI page.
+- `0.0.1` - Initial release.
