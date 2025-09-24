@@ -1,0 +1,44 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: dockerfile
+    container_name: chat-api
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - DB_USER=user
+      - DB_PASSWORD=${PGPASSWORD}
+      - DB_HOST=host.docker.internal
+      - DB_PORT=5432
+      - MAIN_DATABASE_URL=postgresql://${DB_USER}:${PGPASSWORD}@${DB_HOST}:${DB_PORT}/maindb
+      - CHATBOT_DATABASE_URL=postgresql://${DB_USER}:${PGPASSWORD}@${DB_HOST}:${DB_PORT}/chatbot
+      - CONTEXT_DATABASE_URL=postgresql://${DB_USER}:${PGPASSWORD}@${DB_HOST}:${DB_PORT}/chatbot-context
+      - SECRET_KEY=${SECRET_KEY}
+      - API_KEY=${API_KEY}
+    networks:
+      - chat-network
+    restart: unless-stopped
+
+  front:
+    build:
+      context: ./app
+      dockerfile: dockerfile
+      args:
+        VITE_API_URL: http://localhost:5000
+    container_name: chat-front
+    ports:
+      - "5173:5173"
+    environment:
+      - PORT=5173
+    networks:
+      - chat-network
+    depends_on:
+      - api
+    restart: unless-stopped
+
+networks:
+  chat-network:
+    driver: bridge
+    name: chat-network

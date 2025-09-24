@@ -1,0 +1,53 @@
+FROM python:3.10-alpine
+
+# Variables de entorno para que Poetry instale en el entorno global y no interactúe
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    POETRY_VIRTUALENVS_CREATE=false \
+    POETRY_NO_INTERACTION=1 \    
+    PYTHONUNBUFFERED=1 \
+    PATH="/root/.local/bin:${PATH}" \    
+    PIP_NO_CACHE_DIR=off \
+    PIP_DISABLE_PIP_VERSION_CHECK=on \
+    PIP_DEFAULT_TIMEOUT=100 \
+    VIRTUAL_ENV=/usr/local \
+    TZ="Europe/Madrid"    
+
+# Instala dependencias del sistema, SSH y herramientas necesarias
+RUN apk add --no-cache \
+        build-base \
+        libffi-dev \
+        openssl-dev \
+        dialog \
+        openssh \
+        bash \
+        curl
+
+# Configurar password de root y generar claves SSH
+RUN echo "root:Docker!" | chpasswd \
+    && ssh-keygen -A
+
+# Instalar Poetry
+RUN curl -sSL https://install.python-poetry.org | python3 -
+
+WORKDIR /app
+
+# Copiar metadatos del proyecto e instalar dependencias (sin build)
+COPY pyproject.toml poetry.lock ./
+RUN poetry install --no-root --only main
+
+# Copiar configuración SSH personalizada si la tienes
+# Debe existir en el contexto de build un archivo llamado sshd_config
+COPY sshd_config /etc/ssh/
+
+# Copiar el código de la aplicación
+COPY api ./api
+
+# Exponer puerto (Azure usa la variable PORT en runtime)
+EXPOSE 80 5000
+
+# Copiar y usar el entrypoint que arranca sshd + uvicorn
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+CMD ["/entrypoint.sh"]
