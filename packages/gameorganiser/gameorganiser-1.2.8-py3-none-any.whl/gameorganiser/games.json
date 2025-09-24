@@ -1,0 +1,22 @@
+{
+    "games": [
+        {
+            "name": "uno",
+            "type": "card",
+            "row": 1,
+            "col": 1
+        },
+        {
+            "name": "mistborn",
+            "type": "board",
+            "row": 1,
+            "col": 2
+        },
+        {
+            "name": "catan",
+            "type": "board",
+            "row": 3,
+            "col": 5
+        }
+    ]
+}
