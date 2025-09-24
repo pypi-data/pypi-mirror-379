@@ -1,0 +1,12 @@
+axmp_ai_agent_spec/__init__.py,sha256=K3WA8ze6s9RLcswSEpdaO2DCh9i9dyb_KdEHm_YyXbg,2994
+axmp_ai_agent_spec/profile_base.py,sha256=R0H64xIWVSY0HKcUqPflc610to2kGyd2-piq0HM_Y9c,7260
+axmp_ai_agent_spec/profile_node_data.py,sha256=A32bbH3EZ_WtFvMCgFCf3QO2WJ7jDodVObmiiTSwWts,7093
+axmp_ai_agent_spec/types.py,sha256=Lru-RYkiY5JRqXYJ9lgHDRCUHw7I6yG5LAOmpeC2zZ4,2490
+axmp_ai_agent_spec/profiles/a2a_host_agent_profile.py,sha256=Dkk47CBMDUsSpDdZGqV2iX6mBrAYmcFJqOUsDDW3p90,4627
+axmp_ai_agent_spec/profiles/single_agent_profile.py,sha256=zSYcSM_-Th16EHQTAC0H5PVguIPtrpNZWXgBjm1lHVs,4599
+axmp_ai_agent_spec/profiles/workflow_agent_profile.py,sha256=dlaHjX8YrEdMiOZWyOdz1p6o3GcNNiSOqvnEw1pysWM,3737
+axmp_ai_agent_spec-0.1.1.dist-info/METADATA,sha256=NiHxADNki5FSNqMxroNSPHFa-WFQrIba91Nafphbv2s,10617
+axmp_ai_agent_spec-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+axmp_ai_agent_spec-0.1.1.dist-info/entry_points.txt,sha256=z4PhDSl6ELM_utmjyHtYOmY8rQdzvGOfh3wloEmGG2M,63
+axmp_ai_agent_spec-0.1.1.dist-info/licenses/LICENSE,sha256=iy_FKqyQx72lgsiI3Ye_dcrlDtOJnGOQR49dei4Ihys,1061
+axmp_ai_agent_spec-0.1.1.dist-info/RECORD,,
