@@ -1,0 +1,2 @@
+[console_scripts]
+text2qna = text2qna.cli:main

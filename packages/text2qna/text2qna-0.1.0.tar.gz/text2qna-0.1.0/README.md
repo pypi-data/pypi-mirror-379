@@ -1,0 +1,511 @@
+# text2qna
+
+[![PyPI](https://img.shields.io/pypi/v/text2qna)](https://pypi.org/project/text2qna/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/text2qna)](https://pypi.org/project/text2qna/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+**text2qna** is a Python toolkit and CLI for turning raw documents into **instruction-style Q\&A datasets** for LLM fine-tuning.
+
+* 📑 **Chunk** PDFs / TXT / HTML / MD into **semantically split Markdown** (sentence-aware or word-windowed).
+* ❓ **Generate Q\&A pairs** per section (supports **positive** and **negative**/trick pairs).
+* 🎛 **Steer style/coverage** with `--num-pairs`, `--negative-ratio`, and `--extra-prompt`.
+
+Where many tools stop at chunking, **text2qna** goes further: it systematically distills as many Q\&A pairs as you need from each section, helping you build robust instruction datasets quickly.
+
+---
+
+## Table of contents
+
+* [Quick start](#quick-start)
+* [Installation](#installation)
+* [Why text2qna?](#why-text2qna)
+* [How it works](#how-it-works)
+* [CLI reference](#cli-reference)
+
+  * [`chunk` — semantic chunking](#chunk--semantic-chunking)
+  * [`qna` — dataset-generation](#qna--dataset-generation)
+  * [Global flags](#global-flags)
+* [Environment variables](#environment-variables)
+* [Embedding backends](#embedding-backends)
+* [Programmatic usage](#programmatic-usage)
+* [Recipes](#recipes)
+* [Performance & quality tips](#performance--quality-tips)
+* [Troubleshooting](#troubleshooting)
+* [FAQ](#faq)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+
+---
+
+## Quick start
+
+**1) Chunk a document to Markdown**
+
+```bash
+text2qna chunk ./paper.pdf \
+  --backend local \                         # Embedding backend: local | openai | ollama
+  --embed-model nomic-embed-text \          # Embedding model name
+  --api-key ollama                          # OpenAI-compatible API key
+  --embeddings-url http://localhost:11434/api/embeddings \ # Only for Ollama backend
+  --window 500 \                            # Word window size
+  --step 400 \                              # Word stride / overlap
+  --threshold 0.7 \                         # Cosine similarity threshold for breaks
+  --sentence-split false \                  # Use sentence splitting (requires nltk)
+  --output ./chunks.md                      # Output file
+```
+
+**2) Generate a Q\&A dataset from the sections**
+
+```bash
+# Environment defaults (optional but convenient)
+export TEXT2QNA_API_KEY=your-api-key                   # OpenAI-compatible API key
+export TEXT2QNA_BASE_URL=https://api.openai.com/v1     # or http://localhost:11434/v1 (Ollama/other)
+export TEXT2QNA_MODEL=llama3.2
+
+# Command with all commonly used flags
+text2qna qna ./chunks.md \
+  --model llama3.2 \                                   # Chat model (overrides TEXT2QNA_MODEL)
+  --num-pairs 5 \                                      # Q&A pairs per section
+  --negative-ratio 0.3 \                               # 30% of pairs are negative/trick
+  --extra-prompt "Keep questions concise; answers ≤3 sentences." \  # Style/constraints
+  --output ./dataset.jsonl \                           # Output JSONL path
+  --api-key "$TEXT2QNA_API_KEY" \                      # Explicit API key (overrides env)
+  --base-url "$TEXT2QNA_BASE_URL"                      # Explicit endpoint (overrides env)
+```
+
+**Output (`dataset.jsonl`)**
+
+```json
+{"prompt":"What is X...?", "response":"X is ..."}
+{"prompt":"Is Mars the closest planet to the Sun?", "response":"No. Mars is fourth; Mercury is closest."}
+```
+
+---
+
+## Installation
+
+### PyPI (recommended)
+
+```bash
+pip install text2qna
+```
+
+### From source
+
+```bash
+git clone https://github.com/nikosgiov/text2qna.git
+cd text2qna
+pip install -e .
+```
+
+### Optional extras
+
+```bash
+pip install "text2qna[pdf]"    # PDF text extraction (pdfplumber)
+pip install "text2qna[local]"  # Local sentence-transformers backend
+pip install "text2qna[nltk]"   # Sentence tokenization (punkt data)
+```
+
+Combine as needed, e.g.:
+
+```bash
+pip install "text2qna[pdf,local,nltk]"
+```
+
+> **Python**: 3.9–3.12 supported.
+
+### Docker
+
+You can run text2qna using Docker. We provide two versions of the Docker image:
+
+1. **Full image** (`nikosgiov/text2qna`): Includes all dependencies (PDF support, local embeddings, NLTK)
+2. **Lite image** (`nikosgiov/text2qna-lite`): Lightweight version with PDF support but without local embeddings and NLTK. Perfect for API-based usage.
+
+You can find the pre-built Docker images on Docker Hub:
+- Full version: [nikosgiov/text2qna](https://hub.docker.com/r/nikosgiov/text2qna)
+- Lite version: [nikosgiov/text2qna-lite](https://hub.docker.com/r/nikosgiov/text2qna-lite)
+
+#### Using pre-built images:
+```bash
+# Pull and use the full version
+docker pull nikosgiov/text2qna:latest
+
+# Or pull and use the lite version
+docker pull nikosgiov/text2qna-lite:latest
+```
+
+#### Building locally:
+```bash
+# Build the full version
+docker build -t text2qna:local .
+
+# Build the lite version
+docker build -f Dockerfile.lite -t text2qna:local-lite .
+```
+
+#### Run commands:
+
+Create input/output directories in your current directory and place your input files in the input directory:
+```bash
+mkdir -p input output
+```
+
+**Examples:**
+
+Running the chunking functionality:
+```bash
+docker run --rm \
+  -v "$(pwd)/input:/app/input" \
+  -v "$(pwd)/output:/app/output" \
+  nikosgiov/text2qna \
+  chunk /app/input/sample.txt \
+    --backend ollama \
+    --embed-model nomic-embed-text \
+    --embeddings-url http://host.docker.internal:11434/api/embeddings \
+    --output /app/output/chunks.md
+```
+
+Running the Q&A generation:
+```bash
+docker run --rm \
+  -v "$(pwd)/input:/app/input" \
+  -v "$(pwd)/output:/app/output" \
+  -e TEXT2QNA_API_KEY=your-api-key \
+  -e TEXT2QNA_BASE_URL=https://api.openai.com/v1 \
+  text2qna:local \
+  qna /app/input/chunks.md \
+    --model gpt-4 \
+    --output /app/output/dataset.jsonl
+```
+
+The Docker setup includes:
+- All optional dependencies (pdf, local, nltk)
+- Volume mounts for input/output files
+- Environment variable passing for API keys and URLs
+
+#### Using with Ollama
+
+If you want to use Ollama's API instead of OpenAI, you'll need to:
+
+1. **Start Ollama separately**:
+
+```bash
+ollama serve
+```
+
+2. **Run text2qna with Ollama configuration**:
+   Just change the URLs to point at your Ollama server. For example:
+
+* Embeddings: `--embeddings-url http://host.docker.internal:11434/api/embeddings`
+* Q\&A: `--base-url http://host.docker.internal:11434/v1`
+
+> Note: There are two ways to connect to Ollama from the Docker container:
+>
+> 1. Using `host.docker.internal` (works on Docker Desktop for Windows/Mac by default)
+> 2. Using `localhost` with the `--network host` flag
+>
+> For Q\&A with Ollama, you must also set a dummy API key (e.g. `--api-key ollama`) since the OpenAI client requires one.
+
+---
+
+## text2qna features
+
+* **End-to-end**: Go from raw documents → structured sections → instruction-style Q\&A.
+* **Robustness**: Support for **negative pairs** (misleading questions with corrective answers) helps fine-tuning resist falsehoods.
+* **Flexible embeddings**: Choose **local** (sentence-transformers), **OpenAI**, or **Ollama** backends for chunking.
+* **Configurable**: Tune chunk size, overlap, and break sensitivity; steer Q\&A tone and constraints with `--extra-prompt`.
+* **CLI + API**: Use in pipelines or as a library.
+
+---
+
+## How it works
+
+### Chunking (semantic\_split\_markdown)
+
+* Input is normalized to Markdown.
+* Text is split into **word windows** (`window`, `step`) or **sentence groups** (`--sentence-split true`, requires NLTK).
+* Each adjacent pair of windows is embedded; **cosine similarity** determines section boundaries.
+
+  * **Break when** `similarity < threshold`.
+  * **Higher `threshold` ⇒ more breaks (smaller sections)**.
+* Very short sections are merged forward to avoid tiny fragments.
+
+> Defaults: `window=500`, `step=400`, `threshold=0.70`.
+> Implementation detail: `min_section_words=60` prevents tiny sections (configurable in code).
+
+### Q\&A generation
+
+* Markdown → HTML → sections (by `h1`/`h2`/`h3`).
+* For each section:
+
+  * Generate **N positive** Q\&A pairs (covering uncaptured aspects).
+  * Optionally generate **M negative** pairs (plausible but wrong questions; correct answers explain the error).
+* Duplicate question texts are filtered out; basic retry logic included.
+* Output is **JSONL**: `{"prompt": "...", "response": "..."}` per line.
+
+**Section boundaries**  
+When generating Q&A, `text2qna` treats each Markdown heading (`#`, `##`, `###`) as the start of a new section.  
+A section consists of the heading text plus all following content, stopping just before the next heading of equal or higher level.  
+Child subsections are not merged into their parent — each heading defines its own independent section.
+
+---
+
+## CLI reference
+
+All commands support `--quiet` / `--verbose` for logging.
+
+### `chunk` — semantic chunking
+
+Convert raw input to Markdown and split into semantically coherent sections.
+
+**Usage**
+
+```bash
+text2qna [--quiet|--verbose] chunk <input> [options]
+```
+
+**Key options**
+
+* `--output <path>`: Output Markdown (default: `<input>.md`)
+* `--backend <local|openai|ollama>`: Embedding backend (default: `local`)
+* `--embed-model <name>`: Embedding model (backend-specific)
+* `--embeddings-url <url>`: Custom embeddings endpoint (Ollama; default `/api/embeddings`)
+* `--window <int>`: Word window size (default: `500`)
+* `--step <int>`: Word stride/overlap (default: `400`)
+* `--threshold <float>`: Break when adjacent similarity `< threshold` (default: `0.70`)
+* `--sentence-split <true|false>`: Group by sentences (requires `nltk` punkt)
+
+**Notes**
+
+* **Units** for `window`/`step` are **words**, not characters.
+* **Higher `threshold`** → more, smaller sections; **lower `threshold`** → fewer, larger sections.
+* PDF parsing uses `pdfplumber`; image-only PDFs may need OCR beforehand.
+
+---
+
+### `qna` — dataset-generation
+
+Create Q\&A pairs per Markdown section using an OpenAI-compatible chat API.
+
+**Usage**
+
+```bash
+text2qna [--quiet|--verbose] qna <markdown> [options]
+```
+
+**Key options**
+
+* `--output <path>`: JSONL output (default: `dataset.jsonl`)
+* `--model <name>`: Chat model (e.g., `gpt-4o-mini`, `llama3.2`)
+* `--base-url <url>`: OpenAI-compatible base URL (e.g., `http://localhost:11434/v1`)
+* `--api-key <key>`: API key (or set `TEXT2QNA_API_KEY`)
+* `--num-pairs <int>`: Pairs per section (default: `3`)
+* `--negative-ratio <float>`: Fraction of negative/trick pairs (e.g., `0.3`)
+* `--extra-prompt <text>`: Style/constraints (tone, length caps, etc.)
+
+---
+
+### Global flags
+
+* `--quiet` / `--verbose`: Adjust logging.
+* `-h`, `--help`: Command help.
+
+> Version helper:
+>
+> ```bash
+> python -c "import text2qna; print(text2qna.__version__)"
+> ```
+
+---
+
+## Environment variables
+
+Everything has CLI flags; env vars provide convenient defaults.
+
+* `TEXT2QNA_API_KEY` — API key for any OpenAI-compatible API (OpenAI, Claude, local models)
+* `TEXT2QNA_BASE_URL` — Base URL for OpenAI-compatible API endpoint
+* `TEXT2QNA_MODEL` — Default chat model for Q\&A (default: `llama3.2`)
+* `TEXT2QNA_EMBED_BACKEND` — `openai` | `ollama` | `local` (default: `local`)
+* `TEXT2QNA_EMBED_MODEL` — Embedding model for the chosen backend
+* `TEXT2QNA_EMBED_URL` — Embeddings URL for `ollama` (e.g., `http://localhost:11434/api/embeddings`)
+* `TEXT2QNA_DEVICE` — Device for local embeddings (`cpu` | `cuda` | `mps`)
+
+> Note: For backward compatibility, `OPENAI_API_KEY` and `OPENAI_BASE_URL` are also supported but `TEXT2QNA_API_KEY` and `TEXT2QNA_BASE_URL` are preferred as they better reflect that any OpenAI-compatible API can be used (OpenAI, Claude, local models, etc).
+
+---
+
+## Embedding backends
+
+* **local (default)** — `sentence-transformers` models on your machine.
+  Install: `pip install "text2qna[local]"`
+
+* **openai** — Uses the official `openai` SDK’s embeddings endpoint.
+  Requires `OPENAI_API_KEY` and optionally `OPENAI_BASE_URL`.
+
+* **ollama** — Calls a local **/api/embeddings** endpoint (JSON body: `{"model": "...", "prompt": "..."}`).
+  Example: `http://localhost:11434/api/embeddings`
+
+---
+
+## Programmatic usage
+
+### Chunking
+
+```python
+from text2qna.chunker import load_file, to_markdown, semantic_split_markdown
+from text2qna.embeddings import OllamaEmbeddings
+
+raw = load_file("./paper.pdf")
+md_text = to_markdown(raw)
+
+embedder = OllamaEmbeddings(
+    model="mxbai-embed-large",
+    base_url="http://localhost:11434/api/embeddings",
+)
+
+chunks_md = semantic_split_markdown(
+    md_text,
+    embedder=embedder,
+    window=500,
+    step=400,
+    threshold=0.7,
+    sentence_split=False,
+)
+
+with open("chunks.md", "w", encoding="utf-8") as f:
+    f.write(chunks_md)
+```
+
+### Q\&A dataset generation
+
+```python
+from text2qna.qna import create_dataset_from_markdown, save_dataset_jsonl
+from openai import OpenAI
+
+client = OpenAI(api_key="sk-...", base_url="http://localhost:11434/v1")
+md = open("chunks.md", "r", encoding="utf-8").read()
+
+dataset = create_dataset_from_markdown(
+    md_text=md,
+    client=client,
+    model="llama3.2",
+    num_pairs_per_section=5,
+    negative_ratio=0.3,
+    extra_prompt="Keep questions concise and answers under 3 sentences.",
+)
+
+save_dataset_jsonl(dataset, "dataset.jsonl")
+```
+
+---
+
+## Recipes
+
+**Rick & Morty tone**
+
+```
+Respond exactly like Rick from Rick and Morty: be rude, impatient, sarcastic, and brutally honest.
+Keep content factually correct; use informal, unfiltered tone.
+```
+
+Use via `--extra-prompt` or the `extra_prompt` parameter.
+
+**OpenAI embeddings**
+
+```bash
+export TEXT2QNA_API_KEY=your-api-key
+text2qna chunk notes.txt \
+  --backend openai \
+  --embed-model text-embedding-3-small
+```
+
+**Ollama embeddings**
+
+```bash
+ollama pull mxbai-embed-large
+text2qna chunk page.html \
+  --backend ollama \
+  --embed-model mxbai-embed-large \
+  --embeddings-url http://localhost:11434/api/embeddings
+```
+
+**Local sentence-transformers**
+
+```bash
+pip install "text2qna[local]"
+text2qna chunk notes.md \
+  --backend local \
+  --embed-model sentence-transformers/all-MiniLM-L6-v2 \
+  --device cpu
+```
+
+---
+
+## Performance & quality tips
+
+* **Start simple**: `window=500`, `step=400`, `threshold=0.7`.
+* **Smaller sections** (for dense/varied content): increase `threshold` (e.g., `0.8–0.9`) or reduce `window`.
+* **Larger sections** (for long uniform prose): decrease `threshold` (e.g., `0.5–0.6`) or increase `window`.
+* **Sentence alignment**: `--sentence-split true` can improve boundaries; requires `nltk` + `punkt` data.
+* **PDFs**: Image-only or messy PDFs benefit from OCR first; `pdfplumber` reads text layers only.
+* **Style control**: Use `--extra-prompt` to enforce tone, length caps, format (bullets, JSON, etc.).
+
+---
+
+## Troubleshooting
+
+* **NLTK sentence splitting error**
+
+  ```bash
+  python -c "import nltk; nltk.download('punkt')"
+  ```
+* **Ollama embeddings not found**: Pull the model locally (e.g., `ollama pull mxbai-embed-large`) and ensure you use the **/api/embeddings** route.
+* **Poor PDF text**: Run OCR; bad text layers cause garbage input.
+* **Missing deps**: If you skipped extras, install what you need: `pip install "text2qna[pdf,local,nltk]"`.
+* **No Q\&A output**: Ensure your model name and `--base-url` are correct and accessible; check `--verbose` logs.
+
+---
+
+## FAQ
+
+**How do `window`, `step`, and `threshold` interact?**
+`window`/`step` slide over **words** to make adjacent spans, which are embedded and compared. A **break** occurs when `cosine_similarity(span_i, span_{i+1}) < threshold`. Thus, **higher `threshold` ⇒ more breaks (smaller chunks)**; **lower ⇒ fewer breaks**.
+
+**Does the tool require OpenAI?**
+No. You can chunk with **local** or **Ollama** embeddings. Q\&A generation does require an **OpenAI-compatible** chat API, which can be local (e.g., an Ollama-compatible server) if it matches the API.
+
+**What’s in the JSONL?**
+Lines like `{"prompt": "...", "response": "..."}`. Internal fields (e.g., `is_negative`) are stripped before writing.
+
+**How do I get the version?**
+
+```bash
+python -c "import text2qna; print(text2qna.__version__)"
+```
+
+---
+
+## Contributing
+
+Contributions are welcome!
+
+1. Fork & create a feature branch
+2. `pip install -e ".[pdf,local,nltk]"`
+3. Add tests (if applicable)
+4. Open a PR with a clear description and examples
+
+Bug reports & feature requests: [Issues](https://github.com/nikosgiov/text2qna/issues)
+
+---
+
+## License
+
+MIT © Nikolaos Giovanopoulos
+
+---
+
+### Security & privacy
+
+* Keep your API keys secret. Prefer environment variables over hardcoding.
+* Review your documents for sensitive information before generating datasets.
