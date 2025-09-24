@@ -1,0 +1,22 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "setuptools_scm[toml]>=6.0",
+    "wheel",
+    "build"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "matrixutils_example_pkg"      # your distribution name on PyPI
+description = "Matrix utilities example package"
+readme = "README.md"
+requires-python = ">=3.8"
+# Tell PEP621 that version is dynamic (set by setuptools_scm)
+dynamic = ["version"]
+
+[tool.setuptools_scm]
+# write a small file with the version into your package during build
+write_to = "src/matrixutils/_version.py"
+# If your tags are of the form v0.0.3, keep tag = "v", else set to "".
+tag_regex = "v?(?P<version>.*)"   # flexible: accepts "v1.2.3" or "1.2.3"
