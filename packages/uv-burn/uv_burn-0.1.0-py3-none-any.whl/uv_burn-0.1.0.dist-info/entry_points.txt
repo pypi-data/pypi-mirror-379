@@ -1,0 +1,3 @@
+[console_scripts]
+uv-burn = uv_burn:main.cli
+
