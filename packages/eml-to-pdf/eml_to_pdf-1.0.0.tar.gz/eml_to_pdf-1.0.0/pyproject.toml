@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eml-to-pdf"
+version = "1.0.0"
+description = "A professional Python package for converting EML email files to PDF format"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Abdullah Zaki", email = "zakiapdu10@gmail.com"}
+]
+maintainers = [
+    {name = "Abdullah Zaki", email = "zakiapdu10@gmail.com"}
+]
+keywords = ["eml", "email", "pdf", "conversion", "html", "weasyprint"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Email",
+    "Topic :: Office/Business",
+    "Topic :: Text Processing :: Markup :: HTML",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "weasyprint>=60.0",
+    "PyPDF2>=3.0.0",
+    "Pillow>=9.0.0",
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "mypy>=0.900",
+    "pre-commit>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/AlienZaki/eml-to-pdf"
+Documentation = "https://github.com/AlienZaki/eml-to-pdf#readme"
+Repository = "https://github.com/AlienZaki/eml-to-pdf.git"
+"Bug Tracker" = "https://github.com/AlienZaki/eml-to-pdf/issues"
+
+[project.scripts]
+eml-to-pdf = "eml_to_pdf.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
