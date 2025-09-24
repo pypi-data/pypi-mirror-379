@@ -1,0 +1,11 @@
+appwindows-1.0.9.dist-info/METADATA,sha256=1ad9Ot7zNEtMnUKkirNEX0wlBJ2qB54dGsRbH9Osmd4,1503
+appwindows-1.0.9.dist-info/WHEEL,sha256=suq8ARrxbiI7iLH3BgK-82uzxQ-4Hm-m8w01oCokrtA,85
+appwindows-1.0.9.dist-info/licenses/LICENSE.md,sha256=d__yiY7Z1ztKgNxvFEBFmPOAoYTJ0GjH64DcR-Vbh7U,1517
+appwindows/appwindows.cp313-win_amd64.pyd,sha256=OKAVb0Jr9E8kTs8oYskOlt3D1z-qsWjhhCLTEDTb6qM,3366617
+appwindows/appwindows.cp313-win_amd64.dll.a,sha256=ylc2NuARv-hU-es4NoXX6kOFkw4mPSY7PHEiIbFjB0s,1580
+appwindows/geometry.cp313-win_amd64.pyd,sha256=K7idoklxxauYNePHZSWUVfxAUUA0eSWq0ToFPliu_o0,1060519
+appwindows/geometry.cp313-win_amd64.dll.a,sha256=eO619RfvK1qM_CulE616E8TgnFOsJFmZJrHltokhPVc,1560
+appwindows/exceptions.cp313-win_amd64.pyd,sha256=NlbIreWoL6QFQc3ePEVTulPfQjl9oF8-JthVhgyD1-s,981198
+appwindows/exceptions.cp313-win_amd64.dll.a,sha256=pN7FxZ02nuhE6sQ_ubAi_KbjrHfZRRt0VtfFEmQKSwo,1580
+appwindows/__init__.py,sha256=7hCBnl3bEAMDgf9HbcHQe_xmygOpvpAPzMYiaiu7S8g,103
+appwindows-1.0.9.dist-info/RECORD,,
