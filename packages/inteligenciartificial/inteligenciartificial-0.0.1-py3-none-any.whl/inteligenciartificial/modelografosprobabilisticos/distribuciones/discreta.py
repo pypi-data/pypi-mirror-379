@@ -1,0 +1,4 @@
+class DistribucionDiscreta: pass
+class DistribucionMarginalDiscreta(DistribucionDiscreta): pass
+class DistribucionConjuntaDiscreta(DistribucionDiscreta): pass
+class DistribucionCondicionalDiscreta(DistribucionDiscreta): pass

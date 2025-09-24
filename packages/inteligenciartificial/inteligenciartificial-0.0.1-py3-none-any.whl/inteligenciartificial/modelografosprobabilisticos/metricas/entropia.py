@@ -1,0 +1,2 @@
+class Entropia:
+    pass
