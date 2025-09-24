@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: inteligenciartificial
+Version: 0.0.3
+Summary: Librería de algoritmos de Inteligencia Artificial en Python.
+Author-email: Pedro Shiguihara <p.shiguihara@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=1.5
+
+# Paquete Inteligencia Artificial
+
+Paquete de algoritmos de Inteligencia Artificial.
+
+## Instalación
+```bash
+pip install inteligenciartificial
+```
