@@ -1,0 +1,26 @@
+[project]
+name = "hydron"
+version = "0.0.6"
+description = "Python interface for launching and post-processing SWMF magnetohydrodynamic simulations"
+authors = [{name = "Sujay Shankar", email = "sujays2001@gmail.com"}]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Development Status :: 3 - Alpha",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+docs = ["mystmd"]
+
+[project.urls]
+Repository = "https://github.com/Sujay-Shankar/hydron"
+Issues = "https://github.com/Sujay-Shankar/hydron/issues"
+Documentation = "https://sujay-shankar.github.io/hydron"
+"Releases" = "https://github.com/Sujay-Shankar/hydron/releases"
