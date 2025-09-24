@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: tokencut
+Version: 0.1.4
+Summary: Python SDK for TokenCut API
+Author-email: Akshat Kannan <akshatk2@stanford.edu>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
