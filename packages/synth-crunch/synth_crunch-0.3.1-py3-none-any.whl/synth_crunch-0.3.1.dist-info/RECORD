@@ -1,0 +1,11 @@
+synth_crunch/__init__.py,sha256=pfM8U-aUuwpbUpLoJ8yDzNEolJwUzeVEcEf6jJ9kyBE,441
+synth_crunch/__version__.py,sha256=ohxTxoc8RD-CFcWZPn5mIzkJ7e2D5cTd0PeJWgv-3KY,270
+synth_crunch/backtest.py,sha256=fYL74Gvz4celCNB3F_HwDnu2xWOj3mk5jHD5JOrf83s,8439
+synth_crunch/baseline.py,sha256=h4wwJmBC-LSVGQK3Wd7sXWuBfP76iRSO5igYpPjxuJI,9690
+synth_crunch/data.py,sha256=k4zeJDXiD6ZN7JkmZUtOjtFUx9LAKDP7RPTiJB5Fnkc,5657
+synth_crunch/interface.py,sha256=Epdvhmm3MUJHa1u7gPXvh9xyORUR3YUFo8NZvjWs0wI,1024
+synth_crunch/test.py,sha256=p3z86snid8KDB5rteOJkSYhpBXV1uZivTnACUVCLTSU,15451
+synth_crunch-0.3.1.dist-info/METADATA,sha256=GzAcDn4QPmrJMX_3k5CYyt5WQ-N1lDmYyIUwZNVYx6k,11354
+synth_crunch-0.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+synth_crunch-0.3.1.dist-info/top_level.txt,sha256=uQGtLX932YHz9ZBCMoqhTfkqPiufzZJB6wYMLJUMZLs,13
+synth_crunch-0.3.1.dist-info/RECORD,,
