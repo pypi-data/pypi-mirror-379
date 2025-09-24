@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: energy_reports_pkg
+Version: 0.7.14
+Summary: A library used to generating the mindsett energy reports.
+Author-email: Cody Xiaozhan Yang <x.yang@cloudfmgroup.com>
+Keywords: mindsett,energy,report,pdf
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: fpdf2
+Requires-Dist: sqlalchemy<1.5,>=1.4.16
+Requires-Dist: psycopg2-binary
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: jinja2
+Requires-Dist: openpyxl
+Requires-Dist: pandas==1.5.3
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: Office365-REST-Python-Client
