@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+pyth4mini/__init__.py
+pyth4mini/core.py
+python4mini.egg-info/PKG-INFO
+python4mini.egg-info/SOURCES.txt
+python4mini.egg-info/dependency_links.txt
+python4mini.egg-info/top_level.txt
