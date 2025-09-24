@@ -1,0 +1,179 @@
+# AfroMessage Python SDK
+
+A complete Python SDK for the [AfroMessage](https://afromessage.com) SMS and OTP API.  
+This package makes it easy to send **single SMS**, **bulk SMS**, and handle **OTP challenges** with minimal setup.
+
+---
+
+## 🚀 Installation
+
+Install the package via **pip**:
+
+```bash
+pip install afromessage
+```
+# Or from source:
+```bash
+git clone https://github.com/yourusername/afromessage-python.git
+cd afromessage-python
+pip install -e .
+```
+# 🔑 Quick Start
+```bash
+from afromessage import AfroMessage
+
+# Initialize with your API token
+sdk = AfroMessage(token="your_api_token_here")
+
+# --- Single SMS ---
+response = sdk.sms.send(
+    request={
+        "to": "+xxxxxxxxxxxx",
+        "message": "Hello from AfroMessage!",
+        "from_": "MySender",  # Max 11 characters
+        "sender": "MyBrand"
+    }
+)
+print(response)
+
+# --- Bulk SMS ---
+bulk_response = sdk.sms.bulk_send(
+    request={
+        "to": ["+xxxxxxxxxxxx", "+xxxxxxxxxxxx"],
+        "message": "Hello, bulk users!",
+        "from_": "MySender",  # Max 11 characters
+        "sender": "MyBrand",
+        "campaign": "MyCampaign"
+    }
+)
+print(bulk_response)
+
+# --- OTP Challenge ---
+otp_response = sdk.otp.send(
+    request={
+        "to": "+xxxxxxxxxxxx",
+        "pr": "Your code",  # Max 11 characters
+        "len_": 6
+    }
+)
+print(otp_response)
+
+# --- Verify OTP ---
+verify_response = sdk.otp.verify(
+    request={
+        "to": "+xxxxxxxxxxxx",
+        "code": "123456"
+    }
+)
+print(verify_response)
+```
+## 📦 Features
+
+## ✅ Send single SMS
+## ✅ Send bulk SMS campaigns
+## ✅ Generate OTP challenges
+## ✅ Verify OTP codes
+## ✅ Built-in error handling
+## ✅ Request/response logging for debugging
+# ⚡ API Reference
+## Single SMS
+```bash
+sdk.sms.send(
+    request={
+        "to": "+xxxxxxxxxxxx",
+        "message": "Hello!",
+        "from_": "MySender",  # Max 11 characters
+        "sender": "MyBrand",
+        "callback": "https://myapp.com/callback"
+    }
+)
+```
+##  Bulk SMS
+```bash
+sdk.sms.bulk_send(
+    request={
+        "to": ["+xxxxxxxxxxxx", "+xxxxxxxxxxxx"],
+        "message": "Hello, group!",
+        "from_": "MySender",  # Max 11 characters
+        "sender": "MyBrand",
+        "campaign": "MyCampaign"
+    }
+)
+```
+## OTP Challenge
+```bash
+sdk.otp.send(
+    request={
+        "to": "+xxxxxxxxxxxx",
+        "pr": "Your code",  # Max 11 characters
+        "len_": 6,
+        "ttl": 300  # time-to-live in seconds
+    }
+)
+```
+## OTP Verification
+```bash
+sdk.otp.verify(
+    request={
+        "to": "+xxxxxxxxxxxx",
+        "code": "123456"
+    }
+)
+```
+# 🛠 Error Handling
+## All errors are wrapped and logged automatically:
+```bash 
+try:
+    response = sdk.sms.send(
+        request={
+            "to": "+xxxxxxxxxxxx",
+            "message": "Hello!"
+        }
+    )
+except Exception as e:
+    print("Error:", str(e))
+```
+### Errors include:
+
+### API errors (invalid request, auth failure, etc.)
+
+### Network errors (timeout, connection issues)
+# 📑 Logging
+## Requests and responses are logged automatically. Example log:
+```bash
+📤 [POST] Request to: send
+   Payload: {
+     "to": "+xxxxxxxxxxxx",
+     "message": "Hello!"
+   }
+
+📥 Response from: send
+   Data: {
+     "acknowledge": "success",
+     "response": { "code": "202", "to": "+xxxxxxxxxxxx" }
+   }
+```
+# 🤝 Contributing
+## Contributions are welcome! To contribute:
+
+##    1. Fork the repo
+
+##    2. Create your feature branch (git checkout -b feature/my-feature)
+
+##    3. Commit your changes (git commit -m 'Add my feature')
+
+##    4. Push to the branch (git push origin feature/my-feature)
+
+##    5. Open a Pull Request
+
+## Run tests before submitting:
+```bash
+pytest
+```
+# 📜 License
+## This project is licensed under the MIT License.
+## See LICENSE
+## for details.
+# 🙋 Support
+## For issues or feature requests, open a GitHub Issue
+
