@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: genvm-linter
+Version: 0.0.1
+Summary: GenVM Linter - placeholder package
+Home-page: https://github.com/yourusername/genvm-linter
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# genvm-linter
+
+GenVM Linter - Implementation coming soon.
+
+This is a placeholder package. The actual linter implementation will be published shortly.
