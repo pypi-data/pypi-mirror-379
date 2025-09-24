@@ -1,0 +1,11 @@
+nonebot_plugin_mcmotd/__init__.py,sha256=h_k7X9NK25Idcdb1E2gTyD6hVQ9cq9_NREId9s4Dlm4,1440
+nonebot_plugin_mcmotd/commands.py,sha256=LBz6ptD5bTjjpHZsm_kosO7MrTcrxS3BWDAsOzEQ2bU,8703
+nonebot_plugin_mcmotd/config.py,sha256=VJ_FogsoeWl25Zf4zf9b5BUwUeCcU1xa5t81cmeZefY,1359
+nonebot_plugin_mcmotd/draw_pic.py,sha256=4NYGpGE9XXnisM_hAJiUXV9KSUrD5Gza8FyKbuSbJek,27354
+nonebot_plugin_mcmotd/get_motd.py,sha256=PWyGdPTdvjZqXk3UG9SPQVYoX4dLsjk0eJp3cBZIm84,14108
+nonebot_plugin_mcmotd/manager_ip.py,sha256=nk_C7BlodF0vkKtjPaS-9Hpkg6YSSm2LQZgFjFk_oVU,6878
+nonebot_plugin_mcmotd/permission.py,sha256=by4LW4MkEnfCKJf4PsBQzWUPVzJe_3b_hsoozZlqt2o,1119
+nonebot_plugin_mcmotd-1.0.4.dist-info/METADATA,sha256=8XpJ2X8G8U--rVrLaCMtoJjNSLlpy9K-sz7I4JwRZGQ,3706
+nonebot_plugin_mcmotd-1.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nonebot_plugin_mcmotd-1.0.4.dist-info/licenses/LICENSE,sha256=xd16bp3e0a9ysDinqlZRk-FlxvYzhr6zpFHjYJlkvVE,1084
+nonebot_plugin_mcmotd-1.0.4.dist-info/RECORD,,
