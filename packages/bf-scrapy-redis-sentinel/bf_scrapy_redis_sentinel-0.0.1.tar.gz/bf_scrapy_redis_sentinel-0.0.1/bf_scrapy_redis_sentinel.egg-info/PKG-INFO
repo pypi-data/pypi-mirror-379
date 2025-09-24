@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: bf_scrapy_redis_sentinel
+Version: 0.0.1
+Summary: this is a class from scrapy. 日志优化
+Home-page: https://github.com/pypa/sampleproject
+Author: Gie Gie
+Author-email: 593443714@qq.com
+License: MIT
+Keywords: utils
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
