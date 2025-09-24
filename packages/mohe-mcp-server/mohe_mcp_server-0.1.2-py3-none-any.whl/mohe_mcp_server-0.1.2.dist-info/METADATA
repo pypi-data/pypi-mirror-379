@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: mohe-mcp-server
+Version: 0.1.2
+Summary: test mcp server
+Requires-Python: >=3.13
+Requires-Dist: build>=1.3.0
+Requires-Dist: fastmcp>=2.12.3
+Requires-Dist: hatchling>=1.27.0
+Requires-Dist: mcp[cli]>=1.14.1
+Requires-Dist: twine>=6.2.0
