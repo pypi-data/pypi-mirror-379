@@ -1,0 +1,15 @@
+praasper/__init__.py,sha256=iKVBmdlJ9qzQ9osgpVZ_7Ewueq2saDbzRuZwomr2P34,2220
+praasper/cvt.py,sha256=YZR2DQmqp0IZsR_jF7McssoeGVDOWq6g3ZIhpYOJV6o,3527
+praasper/phon_boundary.py,sha256=5m2RT7ZZfEYJ68fr_5E7X4FgzAU7mUajoQ28BaTOw-E,890
+praasper/process.py,sha256=IIkCZuuEP8bm-iwPXcyugCCCOOcKi1haPa9-e8WcnVA,23591
+praasper/tool.py,sha256=DxPq-mN68RzTuhzd_mcLZchSFfdvuF9TxTNITbuAqdQ,1875
+praasper/utils.py,sha256=19RFki7aCR1fN6MHaDgDTeF9CEw92xMe8bE0BJxXpn4,1659
+praasper/word_boundary.py,sha256=HEfqPJeHMTlWejkknT55MS0djRQ6ea0l5Kxx-lMwW-c,19319
+praasper/VAD/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+praasper/VAD/core_auto.py,sha256=RNQPahZNASzDaKDBxYEVZeyyCIgbjf-lR7rAYqbUUHk,14266
+praasper/VAD/tool_auto.py,sha256=dNa00RsFcKsFDv5FI4vLp35LfZ-gLy2EVVn3VQYZ1bk,6294
+praasper-0.2.1.dist-info/LICENSE,sha256=nzbs86NAZHQzLd0h0zEZ7Nn8bM8R6pFwsBTl1rLEHL0,1086
+praasper-0.2.1.dist-info/METADATA,sha256=cZHlukZmUH3JNUkC8HCkRsIW00oWWHxHbN4ag-khq0k,5887
+praasper-0.2.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+praasper-0.2.1.dist-info/top_level.txt,sha256=tf8oCgASNclwEGkbwu38ajsUw9U85gQgG_JWDRBImJk,9
+praasper-0.2.1.dist-info/RECORD,,
