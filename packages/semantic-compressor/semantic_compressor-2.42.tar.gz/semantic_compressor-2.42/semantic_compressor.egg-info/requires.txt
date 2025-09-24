@@ -1,0 +1,6 @@
+numpy<2
+nltk
+scikit-learn
+lingua-language-detector
+model2vec
+pyspellchecker
