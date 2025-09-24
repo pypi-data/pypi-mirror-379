@@ -1,0 +1,2 @@
+[console_scripts]
+mohe_mcp_server = mohe_mcp_server:main
