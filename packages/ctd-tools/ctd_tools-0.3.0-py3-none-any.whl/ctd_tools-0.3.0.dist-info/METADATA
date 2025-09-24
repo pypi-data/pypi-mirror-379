@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: ctd-tools
+Version: 0.3.0
+Summary: DEPRECATED: Package has been renamed to 'seasenselib'. Please install 'seasenselib'.
+Author: Eleanor Frajka-Williams, Isabelle Schmitz, Yves Sorge
+Maintainer-email: Yves Sorge <yves.sorge@uni-hamburg.de>
+License-Expression: AGPL-3.0-only
+Project-URL: Homepage, https://github.com/ocean-uhh/seasenselib
+Project-URL: Documentation, https://ocean-uhh.github.io/seasenselib/
+Project-URL: New package (PyPI), https://pypi.org/project/seasenselib/
+Classifier: Development Status :: 7 - Inactive
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Oceanography
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: seasenselib>=0.3.0
+
+# DEPRECATED: `ctd-tools` → `seasenselib`
+
+This package is deprecated and has been **renamed to `seasenselib`**.
+
+**Please switch to:**
+```bash
+pip install seasenselib
+# then:
+# from seasenselib import ...
