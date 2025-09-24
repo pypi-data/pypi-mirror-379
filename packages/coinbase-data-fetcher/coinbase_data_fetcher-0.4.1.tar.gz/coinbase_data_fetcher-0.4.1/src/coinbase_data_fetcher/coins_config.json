@@ -1,0 +1,571 @@
+{
+  "coins": [
+    {
+      "id": "litecoin",
+      "symbol": "LTC-USD",
+      "start_date": "2017-05-03",
+      "category": "Bitcoin forks & Classic",
+      "logo": "https://coin-images.coingecko.com/coins/images/2/large/litecoin.png?1696501400"
+    },
+    {
+      "id": "bitcoin",
+      "symbol": "BTC-USD",
+      "start_date": "2015-07-20",
+      "category": "Major cryptocurrencies",
+      "logo": "https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400"
+    },
+    {
+      "id": "ethereum",
+      "symbol": "ETH-USD",
+      "start_date": "2016-07-21",
+      "category": "Major cryptocurrencies",
+      "logo": "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628"
+    },
+    {
+      "id": "morpho",
+      "symbol": "MORPHO-USD",
+      "start_date": "2025-09-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/29837/large/Morpho-token-icon.png?1726771230"
+    },
+    {
+      "id": "vechain",
+      "symbol": "VET-USD",
+      "start_date": "2025-08-03",
+      "category": "Layer 1 & Layer 2",
+      "logo": "https://coin-images.coingecko.com/coins/images/1167/large/VET.png?1742383283"
+    },
+    {
+      "id": "quant-network",
+      "symbol": "QNT-USD",
+      "start_date": "2025-08-02",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/3370/large/5ZOu7brX_400x400.jpg?1696504070"
+    },
+    {
+      "id": "venice-token",
+      "symbol": "VVV-USD",
+      "start_date": "2025-07-06",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/54023/large/VVV_Token_Transparent.png?1741856877"
+    },
+    {
+      "id": "mkr",
+      "symbol": "MKR-USD",
+      "start_date": "2020-11-01",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "render-token",
+      "symbol": "RENDER-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/11636/large/rndr.png?1696511529"
+    },
+    {
+      "id": "stader",
+      "symbol": "SD-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "numeraire",
+      "symbol": "NMR-USD",
+      "start_date": "2023-05-30",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/752/large/numeraire.png?1696501906"
+    },
+    {
+      "id": "axelar",
+      "symbol": "AXL-USD",
+      "start_date": "2025-03-07",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/27277/large/V-65_xQ1_400x400.jpeg?1696526329"
+    },
+    {
+      "id": "chain-2",
+      "symbol": "XCN-USD",
+      "start_date": "2025-07-31",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/24210/large/onyxlogo.jpg?1696523397"
+    },
+    {
+      "id": "blz",
+      "symbol": "BLZ-USD",
+      "start_date": "2025-08-17",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "math",
+      "symbol": "MATH-USD",
+      "start_date": "2025-05-27",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "dash",
+      "symbol": "DASH-USD",
+      "start_date": "2024-08-20",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/19/large/dash-logo.png?1696501423"
+    },
+    {
+      "id": "algorand",
+      "symbol": "ALGO-USD",
+      "start_date": "2025-09-14",
+      "category": "Layer 1 & Layer 2",
+      "logo": "https://coin-images.coingecko.com/coins/images/4380/large/download.png?1696504978"
+    },
+    {
+      "id": "big-time",
+      "symbol": "BIGTIME-USD",
+      "start_date": "2024-05-06",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/32251/large/-6136155493475923781_121.jpg?1696998691"
+    },
+    {
+      "id": "towns",
+      "symbol": "TOWNS-USD",
+      "start_date": "2025-08-16",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "worldcoin-wld",
+      "symbol": "WLD-USD",
+      "start_date": "2025-07-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696529903"
+    },
+    {
+      "id": "ondo-finance",
+      "symbol": "ONDO-USD",
+      "start_date": "2025-07-24",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/26580/large/ONDO.png?1696525656"
+    },
+    {
+      "id": "ankr",
+      "symbol": "ANKR-USD",
+      "start_date": "2021-05-13",
+      "category": "Infrastructure & Web3",
+      "logo": "https://coin-images.coingecko.com/coins/images/4324/large/Ankr_Blue_Symbol.png?1754623142"
+    },
+    {
+      "id": "pyr",
+      "symbol": "PYR-USD",
+      "start_date": "2023-03-29",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "livepeer",
+      "symbol": "LPT-USD",
+      "start_date": "2025-02-09",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/7137/large/badge-logo-circuit-green.png?1719357686"
+    },
+    {
+      "id": "mog-coin",
+      "symbol": "MOG-USD",
+      "start_date": "2025-02-04",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/31059/large/MOG_LOGO_200x200.png?1696529893"
+    },
+    {
+      "id": "btrst",
+      "symbol": "BTRST-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "gods-unchained",
+      "symbol": "GODS-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "layerzero",
+      "symbol": "ZRO-USD",
+      "start_date": "2024-07-01",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/28206/large/ftxG9_TJ_400x400.jpeg?1696527208"
+    },
+    {
+      "id": "ethereum-name-service",
+      "symbol": "ENS-USD",
+      "start_date": "2025-07-10",
+      "category": "Gaming & Metaverse",
+      "logo": "https://coin-images.coingecko.com/coins/images/19785/large/ENS.jpg?1727872989"
+    },
+    {
+      "id": "official-trump",
+      "symbol": "TRUMP-USD",
+      "start_date": "2025-03-06",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/53746/large/trump.png?1737171561"
+    },
+    {
+      "id": "lcx",
+      "symbol": "LCX-USD",
+      "start_date": "2025-02-21",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/9985/large/zRPSu_0o_400x400.jpg?1696510023"
+    },
+    {
+      "id": "researchcoin",
+      "symbol": "RSC-USD",
+      "start_date": "2025-08-28",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/28146/large/RH_BOTTLE_CLEAN_Aug_2024_1.png?1732742001"
+    },
+    {
+      "id": "mantle",
+      "symbol": "MANTLE-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/30980/large/Mantle-Logo-mark.png?1739213200"
+    },
+    {
+      "id": "succinct",
+      "symbol": "PROVE-USD",
+      "start_date": "2025-09-21",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/67905/large/succinct-logo.png?1754228574"
+    },
+    {
+      "id": "zetachain",
+      "symbol": "ZETA-USD",
+      "start_date": "2025-01-04",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/26718/large/Twitter_icon.png?1696525788"
+    },
+    {
+      "id": "prcl",
+      "symbol": "PRCL-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "spa",
+      "symbol": "SPA-USD",
+      "start_date": "2025-08-22",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "convex-finance",
+      "symbol": "CVX-USD",
+      "start_date": "2024-07-14",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/15585/large/convex.png?1696515221"
+    },
+    {
+      "id": "audius",
+      "symbol": "AUDIO-USD",
+      "start_date": "2023-02-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/12913/large/audio-token-asset_2x.png?1747243328"
+    },
+    {
+      "id": "oxt",
+      "symbol": "OXT-USD",
+      "start_date": "2025-09-21",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "apecoin",
+      "symbol": "APE-USD",
+      "start_date": "2023-07-09",
+      "category": "Gaming & Metaverse",
+      "logo": "https://coin-images.coingecko.com/coins/images/24383/large/APECOIN.png?1756551529"
+    },
+    {
+      "id": "bankercoin-2",
+      "symbol": "BNKR-USD",
+      "start_date": "2025-09-14",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "syrup",
+      "symbol": "SYRUP-USD",
+      "start_date": "2025-07-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/51232/large/_syrup_token_logo.png?1747292046"
+    },
+    {
+      "id": "shping",
+      "symbol": "SHPING-USD",
+      "start_date": "2023-07-06",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "bio-protocol",
+      "symbol": "BIO-USD",
+      "start_date": "2025-09-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/53022/large/bio.jpg?1735011002"
+    },
+    {
+      "id": "aleo",
+      "symbol": "ALEO-USD",
+      "start_date": "2024-11-26",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/27916/large/secondary-icon-dark.png?1726770428"
+    },
+    {
+      "id": "polkadot",
+      "symbol": "DOT-USD",
+      "start_date": "2025-07-31",
+      "category": "Layer 1 & Layer 2",
+      "logo": "https://coin-images.coingecko.com/coins/images/12171/large/polkadot.png?1696512008"
+    },
+    {
+      "id": "polyswarm",
+      "symbol": "NCT-USD",
+      "start_date": "2024-08-15",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "kernel-2",
+      "symbol": "KERNEL-USD",
+      "start_date": "2025-06-02",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "fox",
+      "symbol": "FOX-USD",
+      "start_date": "2025-09-16",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "sky",
+      "symbol": "SKY-USD",
+      "start_date": "2025-09-07",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/39925/large/sky.jpg?1724827980"
+    },
+    {
+      "id": "velo",
+      "symbol": "VELO-USD",
+      "start_date": "2024-07-26",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/12538/large/Logo_200x_200.png?1696512350"
+    },
+    {
+      "id": "pancakeswap-token",
+      "symbol": "CAKE-USD",
+      "start_date": "2025-08-03",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/12632/large/pancakeswap-cake-logo_%281%29.png?1696512440"
+    },
+    {
+      "id": "pax-gold",
+      "symbol": "PAXG-USD",
+      "start_date": "2025-06-07",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/9519/large/paxgold.png?1696509604"
+    },
+    {
+      "id": "vara",
+      "symbol": "VARA-USD",
+      "start_date": "2025-06-08",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "neon",
+      "symbol": "NEON-USD",
+      "start_date": "2025-02-10",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "turbo",
+      "symbol": "TURBO-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/30117/large/TurboMark-QL_200.png?1708079597"
+    },
+    {
+      "id": "immutable-x",
+      "symbol": "IMX-USD",
+      "start_date": "2023-07-05",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/17233/large/immutableX-symbol-BLK-RGB.png?1696516787"
+    },
+    {
+      "id": "idex",
+      "symbol": "IDEX-USD",
+      "start_date": "2025-08-22",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "doginme",
+      "symbol": "DOGINME-USD",
+      "start_date": "2025-04-26",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "origintrail",
+      "symbol": "TRAC-USD",
+      "start_date": "2025-02-26",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/1877/large/TRAC.jpg?1696502873"
+    },
+    {
+      "id": "wrapped-centrifuge",
+      "symbol": "WCFG-USD",
+      "start_date": "2024-07-29",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/17106/large/WCFG.jpg?1696516667"
+    },
+    {
+      "id": "ocean-protocol",
+      "symbol": "OCEAN-USD",
+      "start_date": "2023-05-03",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "seam",
+      "symbol": "SEAM-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "echelon-prime",
+      "symbol": "PRIME-USD",
+      "start_date": "2024-08-20",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/29053/large/prime-logo-small-border_%282%29.png?1696528020"
+    },
+    {
+      "id": "dolomite",
+      "symbol": "DOLO-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "0x",
+      "symbol": "ZRX-USD",
+      "start_date": "2020-01-13",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/863/large/0x.png?1696501996"
+    },
+    {
+      "id": "origin-protocol",
+      "symbol": "OGN-USD",
+      "start_date": "2021-05-11",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "gtc",
+      "symbol": "GTC-USD",
+      "start_date": "2025-03-07",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "blur",
+      "symbol": "BLUR-USD",
+      "start_date": "2025-08-03",
+      "category": "Gaming & Metaverse",
+      "logo": "https://coin-images.coingecko.com/coins/images/28453/large/blur.png?1696527448"
+    },
+    {
+      "id": "rari",
+      "symbol": "RARI-USD",
+      "start_date": "2024-01-09",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "api3",
+      "symbol": "API3-USD",
+      "start_date": "2025-03-04",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/13256/large/Api3-Token.png?1742439807"
+    },
+    {
+      "id": "uma",
+      "symbol": "UMA-USD",
+      "start_date": "2022-12-14",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/10951/large/UMA.png?1696510900"
+    },
+    {
+      "id": "power-ledger",
+      "symbol": "POWR-USD",
+      "start_date": "2025-01-16",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/1104/large/Powerledger_Token_logo_%281%29.png?1741750417"
+    },
+    {
+      "id": "ripple",
+      "symbol": "XRP-USD",
+      "start_date": "2023-07-19",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1696501442"
+    },
+    {
+      "id": "mdt",
+      "symbol": "MDT-USD",
+      "start_date": "2025-08-17",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "home",
+      "symbol": "HOME-USD",
+      "start_date": "2025-08-28",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/54873/large/defi-app.png?1742235743"
+    },
+    {
+      "id": "metaplex",
+      "symbol": "MPLX-USD",
+      "start_date": "2025-09-16",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/27344/large/mplx.png?1696526391"
+    },
+    {
+      "id": "dextools",
+      "symbol": "DEXT-USD",
+      "start_date": "2023-07-06",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "story-2",
+      "symbol": "IP-USD",
+      "start_date": "2025-09-13",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/54035/large/Transparent_bg.png?1738075331"
+    },
+    {
+      "id": "peanut-the-squirrel",
+      "symbol": "PNUT-USD",
+      "start_date": "2025-07-27",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/51301/large/Peanut_the_Squirrel.png?1734941241"
+    }
+  ]
+}
