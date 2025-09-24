@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pypi.README.md
+pyproject.toml
+src/django_gauth/__init__.py
+src/django_gauth/admin.py
+src/django_gauth/apps.py
+src/django_gauth/defaults.py
+src/django_gauth/py.typed
+src/django_gauth/urls.py
+src/django_gauth/utilities.py
+src/django_gauth/views.py
+src/django_gauth.egg-info/PKG-INFO
+src/django_gauth.egg-info/SOURCES.txt
+src/django_gauth.egg-info/dependency_links.txt
+src/django_gauth.egg-info/requires.txt
+src/django_gauth.egg-info/top_level.txt
