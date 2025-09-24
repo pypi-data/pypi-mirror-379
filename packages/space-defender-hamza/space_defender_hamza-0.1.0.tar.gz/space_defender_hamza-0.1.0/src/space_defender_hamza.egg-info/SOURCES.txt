@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/space_defender_hamza.egg-info/PKG-INFO
+src/space_defender_hamza.egg-info/SOURCES.txt
+src/space_defender_hamza.egg-info/dependency_links.txt
+src/space_defender_hamza.egg-info/entry_points.txt
+src/space_defender_hamza.egg-info/top_level.txt
