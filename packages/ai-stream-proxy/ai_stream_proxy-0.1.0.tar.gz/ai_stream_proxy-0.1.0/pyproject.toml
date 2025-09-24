@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai_stream_proxy"
+version = "0.1.0"
+authors = [
+    { name = "有害猫猫拳", email = "637450802@qq.com" },
+]
+description = "Client SDK for ai-stream-proxy."
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "httpx",
+    "asyncio",
+    "tenacity"
+]
