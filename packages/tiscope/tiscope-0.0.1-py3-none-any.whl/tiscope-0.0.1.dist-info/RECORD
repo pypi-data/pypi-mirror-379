@@ -1,0 +1,10 @@
+tiscope/__init__.py,sha256=hE50T6L52phDIWkNYgOIWRNPZCidv8dIJacoXfXyv2s,112
+tiscope/function.py,sha256=byzE-l8tGeHTyTnXOu4QJ-ddjajv8OMWVSJKWYRSuow,24372
+tiscope/layer.py,sha256=B8jxoBKsRTPDWIR92lHgP8wq6szG5fSwuw4UErxrf48,7851
+tiscope/model.py,sha256=mhsuoH8sZQkIFnNmmDOrMzsukpaqdrQOnffGyuAtLYw,7722
+tiscope/utils.py,sha256=HA8OGBvvbj415ftQCppIvlqDFdCZoB3361m3zaIoKfE,2237
+tiscope-0.0.1.dist-info/licenses/LICENSE,sha256=Yk_1F_tnUuzw58HFCMKVbOcb4eIe_hPInLSgN4Zocp4,1065
+tiscope-0.0.1.dist-info/METADATA,sha256=eKRXwwHcUTX2cMH5isEicibKqEfEA-82KMaDm8MxcTc,2954
+tiscope-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tiscope-0.0.1.dist-info/top_level.txt,sha256=YveWkzApugEpA7WQYVuL9Cmg4oal8XFLBo_aT1hwuTI,8
+tiscope-0.0.1.dist-info/RECORD,,
