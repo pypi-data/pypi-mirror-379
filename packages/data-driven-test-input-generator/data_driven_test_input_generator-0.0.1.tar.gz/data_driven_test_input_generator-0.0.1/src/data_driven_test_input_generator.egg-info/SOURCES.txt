@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/data_driven_test_input_generator.egg-info/PKG-INFO
+src/data_driven_test_input_generator.egg-info/SOURCES.txt
+src/data_driven_test_input_generator.egg-info/dependency_links.txt
+src/data_driven_test_input_generator.egg-info/requires.txt
+src/data_driven_test_input_generator.egg-info/top_level.txt
+src/ddtig/__init__.py
