@@ -1,0 +1,2 @@
+[console_scripts]
+locallib = cli:main
