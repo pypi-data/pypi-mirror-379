@@ -1,0 +1,102 @@
+Metadata-Version: 2.4
+Name: fast-mu-builder
+Version: 0.1.0.4
+Summary: FastAPI Builder with Tortoise ORM support for MU
+Home-page: https://bitbucket.org/external-dev-mzumbe/fast-mu-builder
+Author: Japhary Juma Hamisi
+Author-email: Japhary Juma Hamisi <japharyjuma@gmail.com>, Shija Ntula <abuukauthar13@gmail.com>, Juma Ludanga <ludangajn@gmail.com>
+License: Other License
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi==0.116.1
+Requires-Dist: tortoise-orm[asyncpg]==0.20.1
+Requires-Dist: pydantic==2.11.7
+Requires-Dist: httpx==0.28.1
+Requires-Dist: strawberry-graphql[fastapi]==0.278.1
+Requires-Dist: jinja2==3.1.6
+Requires-Dist: pluralize==20240519.3
+Requires-Dist: PyJWT==2.10.1
+Requires-Dist: redis==5.2.1
+Requires-Dist: minio==7.2.16
+Requires-Dist: aiofiles==24.1.0
+Requires-Dist: bullmq==2.15.0
+Requires-Dist: sentry_sdk==2.34.1
+Requires-Dist: cryptography==45.0.6
+Requires-Dist: python-decouple==3.8
+Requires-Dist: celery[redis]==5.5.3
+Requires-Dist: xlsxwriter==3.2.5
+Requires-Dist: fpdf2==2.8.3
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+Building The package:
+
+python setup.py sdist bdist_wheel
+
+install the package to your app:
+
+pip install path/to/wheel file
+
+generating Graphql schemas
+
+graphql gen:crud-api <module-name> --model Model1,Model2,Model3
+
+generating graphql schemas with attachments
+
+graphql gen:crud-api <module-name> --model ModelName --with-attachment
+
+for attachments you must have minio server and these .env configs:
+
+MINIO_SERVER=ip_address:api_port
+MINIO_BUCKET=backet-name
+MINIO_ACCESS_KEY=minio-username
+MINIO_SECRETE_KEY=minio-password
+MINIO_SECURE=False
+
+You must initialize the MinioService before using it by:
+
+@app.on_event("startup")
+async def startup_event():
+    # Run the init_minio_service in the background without blocking the app startup
+    asyncio.create_task(init_minio_service())
+
+async def init_minio_service():
+    minio_service = MinioService()
+    try:
+        await minio_service.init(
+            server=config('MINIO_SERVER'),
+            access_key=config('MINIO_ACCESS_KEY'),
+            secret_key=config('MINIO_SECRETE_KEY'),
+            bucket_name=config('MINIO_BUCKET'),
+            secure=config('MINIO_SECURE', cast=bool)
+        )
+    except Exception as e:
+        print(f"Error initializing MinIO service: {e}")
+
+Making it async will easy your app booting process.
+
+If you need to use the service out of generated crud apis yo do:
+
+For uploading:
+
+file_location, upload_error = await MinioService.get_instance().upload_file(
+    file_name=f"path/to/file.extension",
+    file_data=base64_decoded_file,
+    content_type=attachment.file.content_type
+)
+
+For downloading:
+
+base64_content = await MinioService.get_instance().download_file("path/to/file.extension")
+
+For deleting:
+
+result = MinioService.get_instance().delete_file("path/to/file.extension")
+
