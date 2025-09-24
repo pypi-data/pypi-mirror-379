@@ -1,0 +1,2 @@
+[console_scripts]
+install-asset = fashion_mnist_ore.install_asset:main
