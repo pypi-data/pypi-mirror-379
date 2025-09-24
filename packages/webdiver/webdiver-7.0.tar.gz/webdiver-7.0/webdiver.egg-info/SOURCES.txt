@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+web_diver/__init__.py
+web_diver/examples/__init__.py
+webdiver.egg-info/PKG-INFO
+webdiver.egg-info/SOURCES.txt
+webdiver.egg-info/dependency_links.txt
+webdiver.egg-info/requires.txt
+webdiver.egg-info/top_level.txt
