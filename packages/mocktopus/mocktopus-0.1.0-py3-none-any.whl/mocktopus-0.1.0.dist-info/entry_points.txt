@@ -1,0 +1,2 @@
+[console_scripts]
+mocktopus = mocktopus.cli:main
