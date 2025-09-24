@@ -1,0 +1,417 @@
+Metadata-Version: 2.4
+Name: jhlogger
+Version: 1.0.1
+Summary: A feature-rich, configurable logging module with structured JSON output
+Home-page: https://github.com/Jacaranda-Health/jhlogger
+Author: JH Dev
+Author-email: JH Dev <dev@jacarandahealth.org>
+License: MIT
+Project-URL: Homepage, https://github.com/Jacaranda-Health/jhlogger
+Project-URL: Bug Tracker, https://github.com/Jacaranda-Health/jhlogger/issues
+Project-URL: Documentation, https://github.com/Jacaranda-Health/jhlogger/blob/main/README.md
+Project-URL: Source Code, https://github.com/Jacaranda-Health/jhlogger
+Keywords: logging,json,structured,cloudwatch,sentry,configurable,traceback,debug,monitoring
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Logging
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: structlog>=23.0.0
+Requires-Dist: watchtower>=3.0.0
+Requires-Dist: sentry-sdk>=1.0.0
+Provides-Extra: dev
+Requires-Dist: black>=24.8.0; extra == "dev"
+Requires-Dist: flake8>=5.0.4; extra == "dev"
+Requires-Dist: flake8-simplify>=0.22.0; extra == "dev"
+Requires-Dist: isort>=5.13.2; extra == "dev"
+Requires-Dist: pre-commit>=3.5.0; extra == "dev"
+Requires-Dist: pytest>=8.3.5; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=1.14.1; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# JH Logger
+
+[![Python Support](https://img.shields.io/badge/python-3.8%2B-blue)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+A feature-rich, configurable logging module that provides structured JSON output with comprehensive error tracking, third-party service integration, and enhanced security features. Built for Jacaranda Health's microservices ecosystem.
+
+## 🌟 Features
+
+### ✅ **Configurable Log Levels**
+
+- Support for all standard log levels: DEBUG, INFO, WARNING, ERROR, CRITICAL
+- Dynamic log level changes at runtime
+- Enum-based level specification for type safety
+
+### ✅ **Enhanced Error Information**
+
+- **DEBUG Level**: Shows full traceback for detailed debugging
+- **ERROR Level**: Captures exception details (type, message, traceback)
+- **File Context**: Automatically captures filename, function name, class name, and line number
+- **Module Information**: Includes module path and calling context
+- **Security**: Uses relative file paths instead of full absolute paths to avoid exposing system information
+
+### ✅ **Structured JSON Output**
+
+- All logs are formatted as JSON with 4-space indentation for readability
+- Consistent structure across all log entries with sorted keys
+- Support for arbitrary data fields
+
+### ✅ **Third-Party Service Integration**
+
+- **CloudWatch**: Automatic CloudWatch logging in non-development environments
+- **Sentry**: Exception capturing and monitoring for ERROR/CRITICAL levels
+- Environment-aware configuration
+
+### ✅ **Rich Context Information**
+
+- System information (country, environment, service name, process ID)
+- UTC timestamp in ISO format
+- Caller information (filename, function, class, line number)
+- Custom data fields support
+
+## 📦 Installation
+
+### Development Installation
+
+```bash
+git clone https://github.com/Jacaranda-Health/jhlogger.git
+cd jhlogger
+uv sync --all-extras
+```
+
+### With UV (recommended)
+
+```bash
+# Create virtual environment and install dependencies
+uv sync
+
+# For development with all extras
+uv sync --all-extras
+```
+
+### With Pip
+
+```bash
+# Basic installation
+pip install -e .
+
+# With development dependencies
+pip install -e .[dev]
+
+# With documentation dependencies
+pip install -e .[docs]
+
+# All extras
+pip install -e .[dev,docs]
+```
+
+## 🚀 Quick Start
+
+### Basic Usage
+
+```python
+from jhlogger import info, error, debug, ConfigurableLogger
+
+# Simple logging
+info("Application started successfully")
+error("Something went wrong", data={"error_code": "E001"})
+
+# With exception
+try:
+    result = 10 / 0
+except Exception as e:
+    error("Division failed", exception=e, data={"operation": "10/0"})
+
+# Debug with full traceback
+debug("Debug information", data={"step": "initialization"})
+```
+
+### Custom Logger Instance
+
+```python
+from jhlogger import ConfigurableLogger, LogLevel
+
+logger = ConfigurableLogger(
+    name="my-service",
+    log_level=LogLevel.DEBUG,
+    enable_cloudwatch=True,
+    include_system_info=True
+)
+
+logger.info("Custom logger initialized")
+```
+
+### Class-Based Usage
+
+```python
+from jhlogger import create_logger
+
+class UserService:
+    def __init__(self):
+        self.logger = create_logger(name="user-service")
+
+    def create_user(self, username, email):
+        self.logger.info("Creating user", data={
+            "username": username,
+            "email": email
+        })
+
+        try:
+            # Your logic here
+            self.logger.info("User created successfully")
+        except Exception as e:
+            self.logger.error("Failed to create user", exception=e)
+```
+
+## 📊 Log Output Format
+
+### Standard Log Entry
+
+```json
+{
+  "class": "UserService",
+  "country": "KE",
+  "data": {
+    "ip_address": "192.168.1.100",
+    "user_id": "12345",
+    "username": "john_doe"
+  },
+  "environment": "production",
+  "event": "User logged in successfully",
+  "filename": "user_service.py",
+  "file_path": "app/services/user_service.py",
+  "function": "login_user",
+  "level": "info",
+  "line_number": 45,
+  "module": "services.user_service",
+  "process_id": 1234,
+  "service": "rapid-pro-service",
+  "timestamp": "2025-09-18T10:30:00.123456Z",
+  "timestamp_utc": "2025-09-18T10:30:00.123456+00:00"
+}
+```
+
+### DEBUG Level (includes traceback)
+
+```json
+{
+  "event": "Debug information",
+  "level": "debug",
+  "timestamp": "2025-09-18T10:30:00.123456Z",
+  "traceback": [
+    "  File \"main.py\", line 10, in <module>",
+    "    debug_function()",
+    "  File \"main.py\", line 5, in debug_function",
+    "    logger.debug(\"Debug info\")"
+  ]
+}
+```
+
+### ERROR Level (includes exception details)
+
+```json
+{
+  "event": "Database connection failed",
+  "exception": {
+    "args": ["Unable to connect to database"],
+    "message": "Unable to connect to database",
+    "traceback": [
+      "Traceback (most recent call last):",
+      "  File \"app.py\", line 25, in connect_db",
+      "    conn = database.connect()",
+      "ConnectionError: Unable to connect to database"
+    ],
+    "type": "ConnectionError"
+  },
+  "level": "error",
+  "timestamp": "2025-09-18T10:30:00.123456Z"
+}
+```
+
+## ⚙️ Configuration
+
+### Environment Variables
+
+The logger respects these environment variables:
+
+- `APP_ENV` or `FLASK_ENV`: Application environment (development, staging, production)
+- `COUNTRY`: Country code for log grouping (defaults to system locale)
+
+### ConfigurableLogger Parameters
+
+```python
+ConfigurableLogger(
+    name="service-name",                    # Logger name
+    log_level=LogLevel.INFO,                # Minimum log level
+    enable_cloudwatch=True,                 # Enable CloudWatch logging
+    enable_sentry=True,                     # Enable Sentry integration
+    enable_bugsnag=True,                    # Enable Bugsnag integration (deprecated)
+    cloudwatch_log_group="custom-group",    # Custom CloudWatch group
+    include_system_info=True,               # Include system information
+    custom_processors=[]                    # Additional structlog processors
+)
+```
+
+## 🔧 Advanced Usage
+
+### Bound Context Logging
+
+```python
+# Bind context that applies to all subsequent logs
+bound_logger = logger.bind(
+    request_id="req_123",
+    session_id="sess_456"
+)
+
+bound_logger.info("Processing request")  # Includes bound context
+bound_logger.warning("Rate limit approaching")  # Also includes context
+```
+
+### Dynamic Log Level Changes
+
+```python
+logger = ConfigurableLogger(log_level=LogLevel.WARNING)
+
+logger.info("This won't show")  # Below WARNING level
+logger.set_level(LogLevel.DEBUG)
+logger.info("Now this will show")  # Now visible
+```
+
+### Structured Data Logging
+
+```python
+complex_data = {
+    "user_profile": {
+        "id": "usr_123",
+        "name": "Jane Doe",
+        "roles": ["admin", "user"]
+    },
+    "request_info": {
+        "method": "POST",
+        "endpoint": "/api/users",
+        "duration_ms": 156
+    }
+}
+
+logger.info("User operation completed", data=complex_data)
+```
+
+## 🔒 Security Features
+
+- **Relative File Paths**: Uses relative paths instead of absolute paths to prevent system information exposure
+- **Sanitized Output**: Avoids leaking sensitive system details in logs
+- **Configurable Information**: Control what system information is included
+- **Context Suppression**: Uses `contextlib.suppress` for robust error handling
+
+## 🧪 Development & Testing
+
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/Jacaranda-Health/jhlogger.git
+cd jhlogger
+
+# Install with UV (recommended)
+uv sync --all-extras
+
+# Or with pip
+pip install -e .[dev]
+
+# Install pre-commit hooks
+pre-commit install
+```
+
+### Available Commands
+
+```bash
+# Format code
+make format
+
+# Run linting
+make lint
+
+# Run tests
+make test
+
+# Run tests with coverage
+make test-cov
+
+# Clean build artifacts
+make clean
+```
+
+### Running Tests
+
+```bash
+# Run all tests with coverage
+make test
+
+# Run tests with detailed coverage report
+make test-cov
+
+# View coverage report
+open htmlcov/index.html
+```
+
+Current test coverage: **87%** (173 statements, 22 missing)
+
+## 📋 Development Standards
+
+- **Code Formatting**: Black (100 character line length)
+- **Import Sorting**: isort (Black-compatible profile)
+- **Linting**: flake8 with flake8-simplify
+- **Type Checking**: mypy (when available)
+- **Testing**: pytest with coverage reporting
+- **Pre-commit Hooks**: Automated formatting and linting
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Support
+
+- 📫 **Issues**: [GitHub Issues](https://github.com/Jacaranda-Health/jhlogger/issues)
+- 📖 **Documentation**: [README.md](https://github.com/Jacaranda-Health/jhlogger/blob/main/README.md)
+- 🔗 **Repository**: [GitHub Repository](https://github.com/Jacaranda-Health/jhlogger)
+
+## 🏷️ Changelog
+
+### v1.0.0 (Initial Release)
+
+- ✅ Configurable log levels with dynamic changes
+- ✅ Structured JSON output with 4-space indentation and 100-char line length
+- ✅ Full traceback for DEBUG, exception details for ERROR/CRITICAL
+- ✅ Automatic caller information detection (file, function, class, line)
+- ✅ Third-party service integration (CloudWatch, Sentry)
+- ✅ Relative file paths for security
+- ✅ Environment-aware configuration
+- ✅ Comprehensive test suite (87% coverage, 36 tests)
+- ✅ Pre-commit hooks for code quality
+- ✅ Modern Python packaging with pyproject.toml
+- ✅ UV-compatible dependency management
+- ✅ Updated datetime handling (Python 3.13 compatible)
+
+---
+
+**Made with ❤️ for Jacaranda Health's logging needs**
