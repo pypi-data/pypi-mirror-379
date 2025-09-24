@@ -1,0 +1,79 @@
+📦 mongodb-url-checker
+
+Validate your MongoDB connection URL easily and safely.
+
+
+---
+
+🚀 Installation
+
+Install the package from PyPI:
+
+pip install mongodb-url-validator
+
+
+---
+
+🖥️ Usage
+
+If the CLI command mongodb-url-validator doesn’t work in your terminal, you can use the included runner file.
+
+1. Create a file called mongodb_checker.py with this content:
+
+
+
+from mongodb_url_validator import main
+
+if __name__ == "__main__":
+    main()
+
+2. Run it with:
+
+
+
+python mongodb_checker.py
+
+
+---
+
+📌 Example
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MongoDB URL Validator
+Made by Syntax Development | https://discord.gg/vMTDMVYE74
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Enter your MongoDB URL to check: xxxxxxxxxxxx
+[✓] MongoDB URL is valid and connected successfully!
+
+If invalid:
+
+Enter your MongoDB URL to check: xxxxxxxxxxxx
+[✗] Invalid MongoDB URL or connection failed!
+Error: ...
+
+
+---
+
+⚡ Features
+
+Works with standard MongoDB URIs and MongoDB Atlas URIs
+
+Shows clear ✅ valid / ❌ invalid messages
+
+Lightweight (only depends on pymongo)
+
+Cross-platform (Windows, macOS, Linux)
+
+
+
+---
+
+🔗 Links
+
+PyPI: [mongodb-url-validator](https://pypi.org/project/mongodb-url-validator/)
+
+Discord Support: [Syntax Development](https://discord.gg/vMTDMVYE74)
+
+
+
+---

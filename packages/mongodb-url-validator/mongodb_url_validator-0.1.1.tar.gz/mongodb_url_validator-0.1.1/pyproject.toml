@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mongodb-url-validator"
+version = "0.1.1"
+description = "A simple MongoDB URL validator"
+authors = [{ name = "Stark" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["pymongo"]
+
+[project.scripts]
+mongodb-url-validator = "mongodb_url_validator:main"

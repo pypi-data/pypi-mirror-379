@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+mongodb_url_validator/__init__.py
+mongodb_url_validator.egg-info/PKG-INFO
+mongodb_url_validator.egg-info/SOURCES.txt
+mongodb_url_validator.egg-info/dependency_links.txt
+mongodb_url_validator.egg-info/entry_points.txt
+mongodb_url_validator.egg-info/requires.txt
+mongodb_url_validator.egg-info/top_level.txt
