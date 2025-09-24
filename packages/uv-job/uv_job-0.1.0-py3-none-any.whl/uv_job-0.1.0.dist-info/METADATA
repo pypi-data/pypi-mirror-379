@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: uv-job
+Version: 0.1.0
+Summary: Simple task runner for uv
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: tomli>=1.2.0; python_version < "3.11"
+
+# uv-job
+
+Simple task runner for uv.
+
+## Installation
+
+```bash
+uv add --dev uv-job
+```
+
+## Configuration
+
+```toml
+# pyproject.toml
+# ...
+
+[tool.jobs]
+test = "pytest -v"
+```
+
+## Usage
+
+```bash
+uv run job test
+```
