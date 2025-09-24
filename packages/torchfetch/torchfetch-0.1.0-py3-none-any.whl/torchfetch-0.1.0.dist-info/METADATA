@@ -1,0 +1,9 @@
+Metadata-Version: 2.3
+Name: torchfetch
+Version: 0.1.0
+Summary: A Cmdline tools to show PyTorch/CUDA/Nvidia GPU info
+Requires-Dist: rich
+Requires-Dist: typer
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
