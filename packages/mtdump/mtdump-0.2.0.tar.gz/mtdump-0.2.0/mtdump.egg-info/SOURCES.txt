@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.dev.txt
+requirements.txt
+.github/workflows/python-publish.yml
+mtdump/__init__.py
+mtdump/_v1.py
+mtdump/common.py
+mtdump.egg-info/PKG-INFO
+mtdump.egg-info/SOURCES.txt
+mtdump.egg-info/dependency_links.txt
+mtdump.egg-info/requires.txt
+mtdump.egg-info/top_level.txt
+tests/test_mtdump.py

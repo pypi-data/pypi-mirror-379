@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtdump"
+dynamic = ["version"]
+authors = [
+  { name="chentl", email="mtdump@chen.tl" },
+]
+description = "A robust object serialization format with compression, encryption, checksum validation, and diagnostics metadata."
+readme = "README.md"
+license = { file = "LICENSE" }
+
+dependencies = [
+  "cryptography",
+  "zstandard",
+]
+
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Security :: Cryptography",
+]
+keywords = [
+  "serialization", "pickle", "dill", "encryption", "zstd", "checksum", "compatibility", "debugging"
+]
+
+[tool.setuptools]
+
+[tool.setuptools_scm]
+fallback_version = "0.0.0"
+
+[tool.setuptools.packages.find]
+include = ["mtdump"]
+
+[project.optional-dependencies]
+dill = [
+  "dill",
+]
+

@@ -1,0 +1,10 @@
+build
+wheel
+setuptools>=61
+setuptools-scm[toml]>=6.2
+pytest
+pytest-cov
+twine
+ruff
+mypy
+dill
