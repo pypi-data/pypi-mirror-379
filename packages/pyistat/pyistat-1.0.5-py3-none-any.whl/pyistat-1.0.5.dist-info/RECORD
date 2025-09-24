@@ -1,0 +1,8 @@
+pyistat/__init__.py,sha256=Xi_uaPOD1Ui0TKjTxIePXWl2XUR0S2NHq87YYWhqVXQ,279
+pyistat/errors.py,sha256=ClS-EsPN-zE7gy4JpJL-do8JeKzEs1QSXJr22mQHB8w,3935
+pyistat/get.py,sha256=OLyQNwU0KJpjZTBC7TQeAguYtv1tH8FlLitC_fGGKzw,14750
+pyistat/search.py,sha256=Klsi4fp2uE4VsVDLEelOXZgQtjK9wtStePX-eAAHRwE,8998
+pyistat-1.0.5.dist-info/LICENSE,sha256=kiHC-TYVm4RG0ykkn7TA8lvlEPRHODoPEzNqx5hWaKM,17099
+pyistat-1.0.5.dist-info/METADATA,sha256=r7ljQsXuh9EaaOgMx0AHl80giEWbGXw8wMMbq0PQzT0,7277
+pyistat-1.0.5.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pyistat-1.0.5.dist-info/RECORD,,
