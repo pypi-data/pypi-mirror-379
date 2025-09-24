@@ -1,0 +1,45 @@
+[project]
+name = "numyra-gateway"
+version = "0.1.0"
+description = "A proxy gateway for intercepting and analyzing Anthropic Claude API streaming responses"
+readme = "README.md"
+authors = [
+    { name = "simone", email = "simone.giacomelli@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.13"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: Proxy Servers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["anthropic", "claude", "proxy", "streaming", "sse", "mitmproxy"]
+dependencies = [
+    "mitmproxy>=12.1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/numyra-gateway"
+Repository = "https://github.com/your-username/numyra-gateway.git"
+Issues = "https://github.com/your-username/numyra-gateway/issues"
+
+[project.scripts]
+numyra-gateway = "numyra_gateway:main"
+
+[build-system]
+requires = ["uv_build>=0.8.5,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
