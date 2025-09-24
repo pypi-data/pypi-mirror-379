@@ -1,0 +1,15 @@
+__pycache__/**
+.ipynb_checkpoints/**
+**/*.pyc
+**/*.ipynb_checkpoints/**
+.vscode/**
+icenode-env/**
+.idea/**
+**/*.env
+**/*.log
+**/*.log.csv
+**/*.log.csv.gz
+.cursorignore
+.cursor/
+.voidrules
+site

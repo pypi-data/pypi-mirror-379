@@ -1,0 +1,2 @@
+select distinct gender as {gender} from mimiciv_hosp.patients
+where gender is not null
