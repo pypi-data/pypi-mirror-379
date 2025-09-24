@@ -1,0 +1,2 @@
+[console_scripts]
+fssg = fssg.cli:main

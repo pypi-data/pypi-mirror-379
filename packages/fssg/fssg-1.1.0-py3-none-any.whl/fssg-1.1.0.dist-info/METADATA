@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: fssg
+Version: 1.1.0
+Summary: FACET Static Site Generator - Production-grade static site generator built on deterministic principles
+Author-email: Emil Rokossovskiy <ecsiar@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/rokoss21/fssg
+Project-URL: Repository, https://github.com/rokoss21/fssg
+Project-URL: Issue Tracker, https://github.com/rokoss21/fssg/issues
+Keywords: FACET,static-site-generator,deterministic,ssg,jamstack
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: facet-lang>=0.0.2
+Requires-Dist: jinja2>=3.1.0
+Requires-Dist: markdown>=3.5.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: watchdog>=3.0.0
+Requires-Dist: click>=8.1.0
+Requires-Dist: rich>=13.0.0
