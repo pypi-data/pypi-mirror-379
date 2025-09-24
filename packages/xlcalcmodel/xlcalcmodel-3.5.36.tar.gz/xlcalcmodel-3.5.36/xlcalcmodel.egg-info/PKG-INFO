@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: xlcalcmodel
+Version: 3.5.36
+Summary: A Python-based Excel calculation engine with advanced function support
+Home-page: https://github.com/mustseetv314/xlcalcmodel
+Author: Derek Pierson
+Author-email: derek.r.pierson@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jsonpickle
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: numpy-financial
+Requires-Dist: mock
+Requires-Dist: scipy
+Requires-Dist: requests
+Requires-Dist: xlwings
+Requires-Dist: yearfrac
+Requires-Dist: python-dateutil
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# xlcalcmodel
+
+TBD

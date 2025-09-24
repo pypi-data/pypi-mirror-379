@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+xlcalcmodel.egg-info/PKG-INFO
+xlcalcmodel.egg-info/SOURCES.txt
+xlcalcmodel.egg-info/dependency_links.txt
+xlcalcmodel.egg-info/requires.txt
+xlcalcmodel.egg-info/top_level.txt
