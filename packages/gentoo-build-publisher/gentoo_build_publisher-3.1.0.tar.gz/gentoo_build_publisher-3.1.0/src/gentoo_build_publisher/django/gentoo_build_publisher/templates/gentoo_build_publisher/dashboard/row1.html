@@ -1,0 +1,10 @@
+{% load gbp %}
+<div class="container">
+  <div class="row metrics">
+    {% block dashboard_metrics %}
+    {% metric machines|length "Machines" %}
+    {% metric build_count "Builds" %}
+    {% metric package_count "Packages" %}
+    {% endblock %}
+  </div>
+</div>
