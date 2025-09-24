@@ -1,0 +1,1 @@
+{"key":"build_command","value":["latexmk","-pdf","-f","-g","-bibtex","-deps","-synctex=1","-interaction=nonstopmode","-output-directory=/tmp/975be3dc20c89ef39d7043746ebcbe6b19abbbf3","bridge_tmd_dmp.tex"]}
