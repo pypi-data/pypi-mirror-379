@@ -1,0 +1,3 @@
+[console_scripts]
+camsniff-cli = python_core.cli:main
+camsniff-web = python_core.web_backend:main
