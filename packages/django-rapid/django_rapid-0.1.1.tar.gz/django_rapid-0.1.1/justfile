@@ -1,0 +1,83 @@
+# Django-msgspec development commands
+
+# Default command - show available commands
+default:
+    @just --list
+
+# Install dependencies
+install:
+    uv sync
+    uv pip install -e ".[dev]"
+
+# Run all tests
+test:
+    PYTHONPATH=.:src DJANGO_SETTINGS_MODULE=tests.settings uv run pytest tests/ -xvs
+
+# Run tests with coverage
+test-cov:
+    PYTHONPATH=.:src DJANGO_SETTINGS_MODULE=tests.settings uv run pytest tests/ --cov=src/rapid --cov-report=term-missing
+
+# Run specific test file or class
+test-specific pattern:
+    PYTHONPATH=.:src DJANGO_SETTINGS_MODULE=tests.settings uv run pytest tests/ -xvs -k "{{pattern}}"
+
+# Run linting
+lint:
+    uv run ruff check src/ tests/
+
+# Format code
+format:
+    uv run ruff format src/ tests/
+
+# Type check with mypy
+typecheck:
+    uv run mypy src/rapid
+
+# Clean build artifacts
+clean:
+    rm -rf build/
+    rm -rf dist/
+    rm -rf *.egg-info
+    rm -rf .pytest_cache
+    rm -rf .ruff_cache
+    rm -rf .mypy_cache
+    find . -type d -name __pycache__ -exec rm -rf {} +
+    find . -type f -name "*.pyc" -delete
+
+# Build package
+build: clean
+    uv build
+
+# Publish to PyPI (requires API token)
+publish: build
+    uv publish
+
+# Development install
+dev:
+    uv pip install -e .
+
+# Run quick test suite (no verbose)
+quick:
+    @PYTHONPATH=.:src DJANGO_SETTINGS_MODULE=tests.settings uv run pytest tests/ -q
+
+# Watch tests (requires pytest-watch)
+watch:
+    uv pip install pytest-watch
+    PYTHONPATH=.:src DJANGO_SETTINGS_MODULE=tests.settings uv run ptw tests/ -- -xvs
+
+# Create a new test file
+new-test name:
+    touch tests/test_{{name}}.py
+    echo '"""Tests for {{name}} functionality."""\n\nimport pytest\nfrom django.test import TestCase\n\n\nclass Test{{name}}(TestCase):\n    """Test {{name}}."""\n    \n    def test_example(self):\n        """Test example."""\n        assert True' > tests/test_{{name}}.py
+
+# Run Django shell with package loaded
+shell:
+    PYTHONPATH=.:src DJANGO_SETTINGS_MODULE=tests.settings uv run python -c "import django; django.setup(); import code; code.interact(local=locals())"
+
+# Show package version
+version:
+    @grep "version" pyproject.toml | head -1 | cut -d'"' -f2
+
+# Run benchmark - tests servers sequentially for accurate performance comparison
+bench:
+    cd benchmark && python run_bench_ab.py
