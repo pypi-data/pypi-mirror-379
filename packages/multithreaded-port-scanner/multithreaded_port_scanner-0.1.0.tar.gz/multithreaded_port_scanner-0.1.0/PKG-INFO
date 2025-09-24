@@ -1,0 +1,95 @@
+Metadata-Version: 2.4
+Name: multithreaded-port-scanner
+Version: 0.1.0
+Summary: A simple, multi-threaded port scanner.
+Project-URL: Homepage, https://github.com/Mohd-Yasir/Multithreaded-Port-Scanner
+Author-email: Mohd Yasir <mohdxyasir@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Mohd Yasir
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: network,port scanner,security
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Multithreaded Port Scanner
+
+A **simple, multi-threaded port scanner** built in Python for **educational purposes**.  
+This tool is intended to help learn Python sockets, threading, and CLI design. **Do not use it on networks you do not own or have explicit permission to scan.**
+
+## Features
+- Scan a range of ports on localhost or private networks.
+- Multi-threaded scanning for faster results.
+- Ethical check to warn users before scanning public IPs.
+
+## Installation
+
+### 1) From PyPI (after publishing)
+```bash
+pip install multithreaded-port-scanner
+```
+
+### 2) Directly from GitHub
+You can clone the repo and install locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Mohd-Yasir/Multithreaded-Port-Scanner
+cd multithreaded-port-scanner
+
+# Install using pip
+pip install .
+```
+
+After installation, the CLI command `scanner` will be available:
+
+```bash
+scanner --help
+```
+
+## Usage Example
+
+Scan localhost ports 1-100:
+
+```bash
+scanner localhost -p 1-100
+```
+
+Warning prompt will appear if you try to scan a public IP:
+
+```text
+Warning! You are about to scan a public host: <IP>. Do you have explicit permission to do this? (yes/no):
+```
+
+## Legal & Ethical Notice
+
+This tool is for **educational use only**.
+
+- Only scan machines you own or have explicit permission to scan.
+- The author is not responsible for misuse.
+- Do not share this tool for illegal activities.
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.

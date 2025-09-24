@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+venv/
+.env
+.env.*
+.pip-wheel-metadata/
+*.egg
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Sensitive files (ensure you don't commit API keys)
+*.key
+*.pem
+*.crt
