@@ -1,0 +1,12 @@
+README.md
+setup.py
+a2a_reg_sdk/__init__.py
+a2a_reg_sdk/client.py
+a2a_reg_sdk/exceptions.py
+a2a_reg_sdk/models.py
+a2a_reg_sdk/publisher.py
+a2a_reg_sdk.egg-info/PKG-INFO
+a2a_reg_sdk.egg-info/SOURCES.txt
+a2a_reg_sdk.egg-info/dependency_links.txt
+a2a_reg_sdk.egg-info/requires.txt
+a2a_reg_sdk.egg-info/top_level.txt
