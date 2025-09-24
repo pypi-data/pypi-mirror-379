@@ -1,0 +1,10 @@
+perforatedai/globals_perforatedai.cpython-310-x86_64-linux-gnu.so,sha256=Wda2V6TeBvxNJQn0VtFAkZ2dkSOq_m_M5BP-d25EFYU,2253664
+perforatedai/tracker_perforatedai.cpython-310-x86_64-linux-gnu.so,sha256=Jw7zfgE5tUwjaPokpHolcWIC-9tcKGG3Brx0YYC9wwg,8558432
+perforatedai/__init__.cpython-310-x86_64-linux-gnu.so,sha256=eagNM4Tg3spgi6xz8qPafmCGUs0LM4feCpLePS0weTs,67088
+perforatedai/modules_perforatedai.cpython-310-x86_64-linux-gnu.so,sha256=C7cxbrewCPcOqTcHetK1_wSQZXLAQlBcz8TV64MHhTM,3698464
+perforatedai/library_classes.cpython-310-x86_64-linux-gnu.so,sha256=h_ZztNI8_zItuYjH9aYHnrKw90TswVEjcAd4A7RHO9A,827928
+perforatedai/utils_perforatedai.cpython-310-x86_64-linux-gnu.so,sha256=KpXkx3qgfdEw1gWqf9Ghe3SEAAz7lD8MrYLnv7m7fKU,3417760
+perforatedai-2.0.0.dist-info/METADATA,sha256=qh65xM3YtmW71oSOef18i-eSwgkf1jK9C9lB8x6hVk8,365
+perforatedai-2.0.0.dist-info/top_level.txt,sha256=aN-RVGd9_0L1QRPEzUSfJ-EKxXmsNTx-bmWXqby6zro,13
+perforatedai-2.0.0.dist-info/WHEEL,sha256=OwK4vrUO2n3qJi8MyWS54SFNf2JjP2GzIJvHAkOFlRA,152
+perforatedai-2.0.0.dist-info/RECORD,,
