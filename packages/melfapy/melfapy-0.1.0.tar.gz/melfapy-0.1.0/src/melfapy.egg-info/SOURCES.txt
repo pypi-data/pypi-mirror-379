@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/melfapy/Melfa.py
+src/melfapy/__init__.py
+src/melfapy.egg-info/PKG-INFO
+src/melfapy.egg-info/SOURCES.txt
+src/melfapy.egg-info/dependency_links.txt
+src/melfapy.egg-info/requires.txt
+src/melfapy.egg-info/top_level.txt
+src/melfapy/utils/__init__.py
+src/melfapy/utils/advanced_S_curve_acceleration.py
