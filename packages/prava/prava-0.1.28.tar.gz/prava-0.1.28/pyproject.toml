@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prava"
+version = "0.1.28"
+description = "Prava Python SDK for computer-use automation"
+readme = "../README.md"
+requires-python = ">=3.8,<3.13"
+license = { text = "MIT" }
+authors = [ { name = "Prava AI" } ]
+keywords = ["prava", "automation", "computer-use", "sdk", "api"]
+dependencies = [
+  "requests>=2.27.0"
+]
+
+[project.urls]
+Homepage = "https://prava.co"
+Repository = "https://github.com/pravaco/prava-sdk"
+
+[tool.hatch.build]
+include = [
+  "prava/**"
+]
+
