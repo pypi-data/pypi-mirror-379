@@ -1,0 +1,2 @@
+[console_scripts]
+blog-uploader = blog_uploader.main:cli
