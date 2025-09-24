@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: meteoplots
+Version: 0.1.0
+Summary: Funções para plotagem meteorológica
+Author: Jose Flores
+Requires-Dist: xarray
+Requires-Dist: matplotlib
+Requires-Dist: cartopy==0.24.1
+Requires-Dist: numpy==1.26.4
+Requires-Dist: netcdf4
+Requires-Dist: eccodes
+Requires-Dist: geopandas==0.13.2
+Requires-Dist: pandas
+Requires-Dist: regionmask==0.9.0
+Requires-Dist: Shapely==1.8.5.post1
+Requires-Dist: fiona==1.9.6
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: pytest-mock>=3.10.0; extra == "test"
+Requires-Dist: Pillow>=9.0.0; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0; extra == "dev"
+Requires-Dist: Pillow>=9.0.0; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
