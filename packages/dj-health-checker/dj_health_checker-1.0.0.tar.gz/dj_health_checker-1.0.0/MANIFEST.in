@@ -1,0 +1,13 @@
+include README.md
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+recursive-include dj_health_checker *.py
+recursive-include dj_health_checker/templates *.html
+recursive-include dj_health_checker/static *.css *.js *.png *.jpg *.gif *.ico
+recursive-include dj_health_checker/locale *.po *.mo
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude *.egg-info
