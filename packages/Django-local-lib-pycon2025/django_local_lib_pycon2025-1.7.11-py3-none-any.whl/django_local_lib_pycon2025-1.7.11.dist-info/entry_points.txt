@@ -1,0 +1,2 @@
+[console_scripts]
+locallib = __main__:main
