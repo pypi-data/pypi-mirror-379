@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mitoedit"
+version = "1.0.2"
+authors = [
+    {name = "Xun Zhu", email = "Xun.Zhu@stjude.org"},
+    {name = "Devansh Shah", email = "Devansh.Shah@stjude.org"},
+]
+description = "A tool for targeted mitochondrial base editing"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+keywords = ["bioinformatics", "mitochondrial", "dna", "base editing", "crispr", "tale"]
+dependencies = [
+    "pandas>=2.0.0",
+]
+
+[project.optional-dependencies]
+web = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "python-multipart>=0.0.5",
+    "jinja2>=3.0.0",
+]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=22.0",
+    "flake8>=4.0",
+]
+
+[project.urls]
+homepage = "https://github.com/xz-stjude/MitoEdit"
+"Bug Reports" = "https://github.com/xz-stjude/MitoEdit/issues"
+"Source" = "https://github.com/xz-stjude/MitoEdit"
+"Documentation" = "https://github.com/xz-stjude/MitoEdit/blob/main/README.md"
+
+[project.scripts]
+mitoedit = "mitoedit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mitoedit*"]
+
+[tool.setuptools.package-data]
+mitoedit = [
+    "*.yml", "*.txt", "*.md", "*.png", "*.html", "*.css", "*.js",
+    "pipelines/*.py",
+    "talent_tools/*.py", "talent_tools/re_dict_dump", "talent_tools/sequence_versions_dump",
+    "web/templates/*.html", "web/static/*",
+    "resources/*.txt"
+]
+
+[tool.yapf]
+based_on_style = "pep8"
+column_limit = 120
