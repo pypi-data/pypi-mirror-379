@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/zeppybot/__init__.py
+src/zeppybot/py.typed
+src/zeppybot.egg-info/PKG-INFO
+src/zeppybot.egg-info/SOURCES.txt
+src/zeppybot.egg-info/dependency_links.txt
+src/zeppybot.egg-info/requires.txt
+src/zeppybot.egg-info/top_level.txt

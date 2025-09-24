@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zeppybot"
+version = "0.1.0"
+description = "Threaded Selenium bot for Zeppy chat automation"
+readme = "README.md"
+authors = [{ name = "Deck", email = "you@example.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "selenium>=4.0",
+    "beautifulsoup4>=4.12",
+]
+license = { text = "All rights reserved." }
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourname/zeppybot"
+"Source" = "https://github.com/yourname/zeppybot"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+zeppybot = ["py.typed"]
