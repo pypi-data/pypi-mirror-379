@@ -1,0 +1,10 @@
+manage.py,sha256=H-uxvPS3jMwOVteeWodEfcAvvWOt3Qwp3Pe2tjZpqqY,4992
+mezmorize/__init__.py,sha256=SWFW5Pm8kDBkDUVhi4cu62IKK5P_5rW7McCE0GOnqHM,24138
+mezmorize/backends.py,sha256=s76ifq3cgOIGCwSloB5fF8tQIwtz3GRqeauh2WS31eE,7394
+mezmorize/utils.py,sha256=_RPrQ0OWHBHdecviL7FT269imDmdFjV3DVT9f3x28Zo,6771
+mezmorize-0.29.1.dist-info/licenses/LICENSE,sha256=cnz02VLLALlzSNjfg3cflLY04PFrUuS_zwnuW7qzRJM,1471
+mezmorize-0.29.1.dist-info/METADATA,sha256=6jpo0urdEo5_EHIdbrI30Y928nBuFz4V60eHtLAFDp0,4830
+mezmorize-0.29.1.dist-info/WHEEL,sha256=JNWh1Fm1UdwIQV075glCn4MVuCRs0sotJIq-J6rbxCU,109
+mezmorize-0.29.1.dist-info/entry_points.txt,sha256=3hRkbMccEeh8V3x3V-elK94Q8z39poEAgSLIAvYF3ew,42
+mezmorize-0.29.1.dist-info/top_level.txt,sha256=hp8tqNaqc1YJIsJ3HxbqiLaqe5MmfdwdnN5Esky_o4I,17
+mezmorize-0.29.1.dist-info/RECORD,,
