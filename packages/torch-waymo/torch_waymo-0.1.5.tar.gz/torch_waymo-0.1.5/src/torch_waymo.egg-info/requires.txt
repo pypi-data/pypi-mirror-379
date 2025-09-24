@@ -1,0 +1,9 @@
+tqdm
+torch
+numpy
+
+[waymo]
+waymo-open-dataset-tf-2-11-0
+protobuf
+tensorflow[and-cuda]
+numpy<2
