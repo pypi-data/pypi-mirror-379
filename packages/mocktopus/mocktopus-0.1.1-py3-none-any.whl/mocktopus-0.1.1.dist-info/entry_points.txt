@@ -1,0 +1,5 @@
+[console_scripts]
+mocktopus = mocktopus.cli:main
+
+[pytest11]
+mocktopus = mocktopus.pytest_plugin
