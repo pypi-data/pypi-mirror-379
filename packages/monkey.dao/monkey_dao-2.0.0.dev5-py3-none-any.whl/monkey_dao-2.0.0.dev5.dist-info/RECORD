@@ -1,0 +1,9 @@
+monkey/dao/dao.py,sha256=EEVQxJtfreLcoXy35sbEvcEg3PofIKyVI7jkMuL5UzU,17171
+monkey/dao/errors.py,sha256=HCxoPGhiLayGKXhL_kbgNh6IFoEmCV487hOyXZEpxqs,2926
+monkey/dao/results.py,sha256=hnvJIRHhvQuWw9L__-tyg7y5irQetEZZy2FcbmZlGlA,6731
+monkey/dao/util.py,sha256=FVGL7msQGkpcWPAybNwHw4nzg-N6KRLS0qIGHdfbnXU,1162
+monkey_dao-2.0.0.dev5.dist-info/licenses/LICENSE,sha256=zbqqesTY3HbCyNSGGaLSB3dWvt0m7Xy5cNgeN_Ymofs,561
+monkey_dao-2.0.0.dev5.dist-info/METADATA,sha256=IoIK_2x6pkqFBmHx6QyIKAdJopSlBbDDzdMv3xlyCZM,1088
+monkey_dao-2.0.0.dev5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+monkey_dao-2.0.0.dev5.dist-info/top_level.txt,sha256=Wm5IEF_qdczMxmoDgxjzmMQnYUldc4eG3IptQxeaoWo,7
+monkey_dao-2.0.0.dev5.dist-info/RECORD,,
