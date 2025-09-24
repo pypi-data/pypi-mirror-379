@@ -1,0 +1,4 @@
+[console_scripts]
+rlooper-grapher = rlooper_sim_python.grapher:main
+rlooper-sim = rlooper_sim_python.cli:main
+rlooper-workflow = rlooper_sim_python.workflow:main
