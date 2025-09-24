@@ -1,0 +1,2 @@
+include src/rwkv_emb/cuda/*
+include src/rwkv_emb/*.txt

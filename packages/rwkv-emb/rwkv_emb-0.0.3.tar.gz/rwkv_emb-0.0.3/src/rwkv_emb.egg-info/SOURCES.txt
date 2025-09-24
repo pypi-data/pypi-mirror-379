@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/rwkv_emb/__init__.py
+src/rwkv_emb/model.py
+src/rwkv_emb/rwkv_tokenizer.py
+src/rwkv_emb/rwkv_vocab_v20230424.txt
+src/rwkv_emb.egg-info/PKG-INFO
+src/rwkv_emb.egg-info/SOURCES.txt
+src/rwkv_emb.egg-info/dependency_links.txt
+src/rwkv_emb.egg-info/top_level.txt
+src/rwkv_emb/cuda/gemm_fp16_cublas.cpp
+src/rwkv_emb/cuda/operators.cu
+src/rwkv_emb/cuda/rwkv7.cu
+src/rwkv_emb/cuda/rwkv7_op.cpp
+src/rwkv_emb/cuda/wrapper.cpp
