@@ -1,0 +1,3 @@
+[console_scripts]
+rlooper-sim = rlooper_sim_python.cli:main
+rlooper-workflow = rlooper_sim_python.workflow:main
