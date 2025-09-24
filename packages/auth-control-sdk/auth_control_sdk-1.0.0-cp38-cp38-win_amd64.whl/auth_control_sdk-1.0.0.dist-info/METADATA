@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: auth-control-sdk
+Version: 1.0.0
+Summary: Intelligent authorization and access control using adaptive scoring
+Home-page: https://github.com/jaimeajl/auth-control
+Author: Jaime Jimenez
+Author-email: jaimeajl@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Provides-Extra: optimized
+Requires-Dist: cython>=0.29.0; extra == "optimized"
+Requires-Dist: numpy>=1.19.0; extra == "optimized"
+
+Authorization Control SDK - Granular and flexible access control
+
+

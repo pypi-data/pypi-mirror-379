@@ -1,0 +1,13 @@
+auth_control/__init__.py,sha256=zG9l49STIBvyOT6XWo4lwcCuFk6juVDVGg6Dl2mSKkk,1050
+auth_control/core.cp38-win_amd64.pyd,sha256=o-ypbIHg53MmJlxI1FRugGn5PfKQ2VnkOUbd2AvvBts,146432
+auth_control/core.cpp,sha256=wFLOMB8eF46yQ06LAm5OylUovesm1yfvH5nSOlVkoxE,868741
+auth_control/core.pyx,sha256=91uZzxJoKwaDommWzpcXct5_oXLDx1ZrQXqouA2dy6g,14691
+auth_control/core_py.py,sha256=r5sNyUdgyLRIUOVNsiw3Z6rnrnxiYIgs0-EE_hP9N5Q,13769
+auth_control/license_validator.py,sha256=CarxCsXe9vqg7kGcs1tZb1xynYl9a-YPndlV5hFLhNw,1359
+auth_control/models.py,sha256=X_CY40tcAPvmR-OHBB-gtDGlweEoIk9bSOVwVauXsWc,4421
+auth_control/permission.py,sha256=q45ZRmUgCSlyaY7fkoMOIzlWfjKcMRmv9i4Eo8C-4xI,1474
+auth_control/policies.py,sha256=xwjE1jW2O0UgZqWrTn2yIuFnJKkz0hMjtWME06qNU8I,842
+auth_control_sdk-1.0.0.dist-info/METADATA,sha256=KKPT2cvb-0hPhOR_z9RoOM8Odo4NEmZKKEzQCKXAnzc,1280
+auth_control_sdk-1.0.0.dist-info/WHEEL,sha256=N6sQ21sT3WcdJJLEJNx13ERof8WaAHD2AD1HUbWJ67E,100
+auth_control_sdk-1.0.0.dist-info/top_level.txt,sha256=WNzoHfp0dtfGSgsKkczo-CAS6jQx-lwgqMcQHWI_boE,13
+auth_control_sdk-1.0.0.dist-info/RECORD,,
