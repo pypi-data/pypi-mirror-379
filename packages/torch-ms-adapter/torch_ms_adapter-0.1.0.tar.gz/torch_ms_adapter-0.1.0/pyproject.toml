@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torch-ms-adapter"
+version = "0.1.0"
+description = "PyTorch-style API adapter for MindSpore"
+authors = [
+  { name="Your Name", email="you@example.com" }
+]
+dependencies = [
+    "mindspore",
+    "numpy<2.0",
+    "scikit-learn"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/yourname/torch-ms-adapter"

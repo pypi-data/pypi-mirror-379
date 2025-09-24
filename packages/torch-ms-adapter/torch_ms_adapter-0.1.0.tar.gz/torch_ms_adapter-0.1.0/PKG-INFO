@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: torch-ms-adapter
+Version: 0.1.0
+Summary: PyTorch-style API adapter for MindSpore
+Author: Your Name
+Author-email: Your Name <you@example.com>
+Project-URL: Homepage, https://github.com/yourname/torch-ms-adapter
+Requires-Python: >=3.8
+Requires-Dist: mindspore
+Requires-Dist: numpy<2.0
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: requires-python
