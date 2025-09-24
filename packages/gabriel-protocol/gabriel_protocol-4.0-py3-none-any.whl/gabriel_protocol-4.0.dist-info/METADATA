@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: gabriel-protocol
+Version: 4.0
+Summary: Protocol for the Gabriel framework
+Home-page: http://gabriel.cs.cmu.edu
+Author: Aditya Chanana
+Author-email: achanana@cs.cmu.edu
+Maintainer: CMU Satyalab
+Maintainer-email: gabriel@cmusatyalab.org
+License: Apache
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: protobuf>=3.12
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
