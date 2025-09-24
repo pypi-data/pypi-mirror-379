@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+kiras/__init__.py
+kiras/exact_code_strings.py
+kiras/exact_prac1.py
+kiras/exact_prac3.py
+kiras/exact_prac4.py
+kiras/exact_prac5.py
+kiras/exact_prac7.py
+kiras/exact_prac8.py
+kiras.egg-info/PKG-INFO
+kiras.egg-info/SOURCES.txt
+kiras.egg-info/dependency_links.txt
+kiras.egg-info/requires.txt
+kiras.egg-info/top_level.txt
