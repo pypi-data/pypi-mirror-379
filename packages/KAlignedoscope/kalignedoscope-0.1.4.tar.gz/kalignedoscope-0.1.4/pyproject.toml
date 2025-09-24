@@ -1,0 +1,25 @@
+[project]
+name = "KAlignedoscope"
+version = "0.1.4"
+description = "Interactive Visualization Tool for Clustering Alignment"
+authors = [
+    {name = "Avery Guo,  Xiran Liu",email = "avery_guo@brown.edu"}
+]
+license = {text = "MIT License"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+include = [
+  "kalignedoscope/default_palette.txt"
+]
+
+dependencies = [
+    "requests (>=2.32.5,<3.0.0)"
+]
+
+
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
