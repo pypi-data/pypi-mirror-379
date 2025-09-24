@@ -1,0 +1,46 @@
+ros2_pkg_create/__init__.py,sha256=89h34VVy7tx34tBLA6DzDBw6l7XikLIpRu_5JUQ0Ios,51
+ros2_pkg_create/__main__.py,sha256=yGyK0nmREc2G076-MtG3rkG9HqV9BTGplOfw_Qgho4M,5648
+ros2_pkg_create/copier.yml,sha256=22gPppFwEwk2UsPJ7Ak_OseKFZ6JdjMKyzSfglozacA,4171
+ros2_pkg_create/templates/ros2_cpp_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/CMakeLists.txt.jinja,sha256=_M9yaF9oOpv5-CjebpDTzKX4JNMXFd7T8q28qebozh8,265
+ros2_pkg_create/templates/ros2_cpp_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/README.md.jinja,sha256=Bem-WJnHzApzSUwbsdCGVSJ2-vFq0jbD_246IlQo-bw,262
+ros2_pkg_create/templates/ros2_cpp_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/package.xml.jinja,sha256=yIh2d-v7PeXp5whLOKE2HkOLZO1cBNSLZjiCzzwMwhc,787
+ros2_pkg_create/templates/ros2_cpp_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/action/Fibonacci.action,sha256=lomAG7iZyBe0eIulP0RKhZJRxwIndtq4_37o-Q-qP90,62
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/CMakeLists.txt.jinja,sha256=SeGEVysXj-aIMSZjhhYkcJ73iWChJ8ZtCAbrOVWS2Ps,2078
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/README.md.jinja,sha256=61m7FKAO1unOhXRp04CaOPjC4--bQ6Zp__FxQ8TfJTE,671
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/package.xml.jinja,sha256=jP97WZu-z9VQWhAaCPzVHkt-xG2qTRBl_FJW42ht0_c,996
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/{% if has_docker_ros and docker_ros_type == 'gitlab' %}.gitlab-ci.yml{% endif %}.jinja,sha256=Zxh0_1CxLXbqdyZ99tD_XvKeIkBhN5o05V01orQKjsQ,256
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/include/{{ package_name }}/{{ node_name }}.hpp.jinja,sha256=DfTMGwaotKjqr7KC_3RkTWInS_pFQlnUEYc17S-riYE,8275
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/src/{{ node_name }}.cpp.jinja,sha256=694QYVjOXNe89Arja8JU8VGOG1xw2esMM8PawDSfmEI,16868
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/{% if has_docker_ros and docker_ros_type == 'github' %}.github{% endif %}/workflows/docker-ros.yml.jinja,sha256=DFQdq6-3TOmv46t2BmUvu4NXHb1zWP_yNehif_0pTIk,297
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/{% if has_launch_file %}launch{% endif %}/{% if launch_file_type == 'py' %}{{ node_name }}_launch.py{% endif %}.jinja,sha256=9kg3KPK2-JgTGoT9mbmuWsv_NXiLTAlOTEPRKpbRe70,4346
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/{% if has_launch_file %}launch{% endif %}/{% if launch_file_type == 'xml' %}{{ node_name }}_launch.xml{% endif %}.jinja,sha256=RqHXsYWjh0AQwQrqE3PTzAl4YNH9epWBtBhXFsnIhkU,485
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/{% if has_launch_file %}launch{% endif %}/{% if launch_file_type == 'yml' %}{{ node_name }}_launch.yml{% endif %}.jinja,sha256=SX0IU9qfAkUhKnmLY_XxjAlyLGEzO1aCIUC_5nCd2mg,416
+ros2_pkg_create/templates/ros2_cpp_pkg/{{ package_name }}/{% if has_params %}config{% endif %}/params.yml.jinja,sha256=v_b93hg1Ud7cqCY9f_Lye47cXMydCefchskNfAYhp6U,41
+ros2_pkg_create/templates/ros2_interfaces_pkg/{{ package_name }}/CMakeLists.txt.jinja,sha256=-EMA03vmjT3gL-OYQw9mocCRpJblkqbIJ6_J4P2p-7U,468
+ros2_pkg_create/templates/ros2_interfaces_pkg/{{ package_name }}/README.md.jinja,sha256=2xHMpwFTR-YWGxCoq0XNg7MgmZ3E70fOVC4stmPcoRQ,220
+ros2_pkg_create/templates/ros2_interfaces_pkg/{{ package_name }}/package.xml.jinja,sha256=SuoQbzHejjFZT0R5cb05hQg9ZO0kmbkUazslwIxAn24,745
+ros2_pkg_create/templates/ros2_interfaces_pkg/{{ package_name }}/{% if 'action' in interface_types %}action{% endif %}/{{ action_name }}.action,sha256=fJpGIiCJSSdlwtYmdWoHTLG-9mpDYKaTeen1nWQSLao,47
+ros2_pkg_create/templates/ros2_interfaces_pkg/{{ package_name }}/{% if 'msg' in interface_types %}msg{% endif %}/{{ msg_name }}.msg,sha256=XINUH0Xb9uaIs_OtCyuMx-VnDza1yB6ru_eV7yFkReY,11
+ros2_pkg_create/templates/ros2_interfaces_pkg/{{ package_name }}/{% if 'srv' in interface_types %}srv{% endif %}/{{ srv_name }}.srv,sha256=Ada1EMLHoIP4t2gjl-qMHtbZJjJrsOS1vgUa9TnWvpE,33
+ros2_pkg_create/templates/ros2_python_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/CMakeLists.txt.jinja,sha256=_M9yaF9oOpv5-CjebpDTzKX4JNMXFd7T8q28qebozh8,265
+ros2_pkg_create/templates/ros2_python_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/README.md.jinja,sha256=Bem-WJnHzApzSUwbsdCGVSJ2-vFq0jbD_246IlQo-bw,262
+ros2_pkg_create/templates/ros2_python_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/package.xml.jinja,sha256=yIh2d-v7PeXp5whLOKE2HkOLZO1cBNSLZjiCzzwMwhc,787
+ros2_pkg_create/templates/ros2_python_pkg/{% if has_action_server %}{{ package_name }}_interfaces{% endif %}/action/Fibonacci.action,sha256=lomAG7iZyBe0eIulP0RKhZJRxwIndtq4_37o-Q-qP90,62
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/README.md.jinja,sha256=61m7FKAO1unOhXRp04CaOPjC4--bQ6Zp__FxQ8TfJTE,671
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/package.xml.jinja,sha256=lr9Ql0raBqag9N38GTHBuWVzQiYJt9wLms46T9V9wAw,731
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/setup.cfg.jinja,sha256=ghhYHAmcAkfo_QLD4GpR7nnZKG0aXtXiiV4RqM3x1rs,105
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/setup.py.jinja,sha256=use6CqHPCa5-fVthUIF62Q9rNzADR7FMAOHRUD5UPBk,966
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{% if has_docker_ros and docker_ros_type == 'gitlab' %}.gitlab-ci.yml{% endif %}.jinja,sha256=Zxh0_1CxLXbqdyZ99tD_XvKeIkBhN5o05V01orQKjsQ,256
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/resource/{{ package_name }}.jinja,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{% if has_docker_ros and docker_ros_type == 'github' %}.github{% endif %}/workflows/docker-ros.yml.jinja,sha256=DFQdq6-3TOmv46t2BmUvu4NXHb1zWP_yNehif_0pTIk,297
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{% if has_launch_file %}launch{% endif %}/{% if launch_file_type == 'py' %}{{ node_name }}_launch.py{% endif %}.jinja,sha256=zS7ZzpkkP4HqP2AT4QEF6kY0GsK--fMipx6ZDRCchac,1985
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{% if has_launch_file %}launch{% endif %}/{% if launch_file_type == 'xml' %}{{ node_name }}_launch.xml{% endif %}.jinja,sha256=RqHXsYWjh0AQwQrqE3PTzAl4YNH9epWBtBhXFsnIhkU,485
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{% if has_launch_file %}launch{% endif %}/{% if launch_file_type == 'yml' %}{{ node_name }}_launch.yml{% endif %}.jinja,sha256=SX0IU9qfAkUhKnmLY_XxjAlyLGEzO1aCIUC_5nCd2mg,416
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{% if has_params %}config{% endif %}/params.yml.jinja,sha256=v_b93hg1Ud7cqCY9f_Lye47cXMydCefchskNfAYhp6U,41
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{{ package_name }}/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ros2_pkg_create/templates/ros2_python_pkg/{{ package_name }}/{{ package_name }}/{{ node_name }}.py.jinja,sha256=juimAL5gCxqC3Nvy6N8FxrVLnR9UYGU4XKsi9I8Kjgs,11590
+ros2_pkg_create-1.2.0.dist-info/METADATA,sha256=p7qkdg5rqmsO7NqnVU99hDgIuv-RPeqALaQCjNFk3a4,9915
+ros2_pkg_create-1.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ros2_pkg_create-1.2.0.dist-info/entry_points.txt,sha256=ozqVlfQukKSdGhrMjtvGkYzEWUKG7KDpZ6AHY9vZkG4,66
+ros2_pkg_create-1.2.0.dist-info/top_level.txt,sha256=wPGbI-pKhWK1bNrOmTLna3VPz0YXQ_8M0hgCw93j9y4,16
+ros2_pkg_create-1.2.0.dist-info/RECORD,,
