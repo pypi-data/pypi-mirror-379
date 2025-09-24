@@ -1,0 +1,9 @@
+README.md
+setup.py
+LiGrad/__init__.py
+LiGrad/main.py
+LiGrad.egg-info/PKG-INFO
+LiGrad.egg-info/SOURCES.txt
+LiGrad.egg-info/dependency_links.txt
+LiGrad.egg-info/requires.txt
+LiGrad.egg-info/top_level.txt
