@@ -1,0 +1,12 @@
+include/xlsxcsv/core.hpp,sha256=aHBy5pynFqrTYFKA9EfVFBY0Eerho14hlRh8SHR2hzI,14396
+include/xlsxcsv.hpp,sha256=lylZ0dYe7O_lNBixrrP2KN-LjcSzfvMlcdauH0yRdIo,4682
+lib/cmake/turboxl/turboxlConfig.cmake,sha256=xk45-taAcvfHtTjEWGc3y-2ascXrndk9_YWdqjeCD9A,101
+lib/cmake/turboxl/turboxlConfigVersion.cmake,sha256=dS_xFl4fmgJqwEklYltvv-HPpMr8kRXhOzdV2GECCjM,1904
+lib/cmake/turboxl/turboxlTargets-release.cmake,sha256=KpVUBxUnhnc4ne3r4MVWun-0BP22trRAJUjHcMGkLjE,907
+lib/cmake/turboxl/turboxlTargets.cmake,sha256=dTVpMvT2yJMMJ6XgrNQnhytWk1K6ykFAduBk_O6pe0M,4433
+lib/turboxl_core.lib,sha256=GOVq_k9lCM1AkrxweeF87VLNtXe2Kt32jvV6mjeRGAw,1989830
+turboxl.cp311-win_amd64.pyd,sha256=I5EC7H4ltpIx676aGgXwvY7nku2Wl1e2SlIkMcj982M,1150976
+turboxl-0.1.44.dist-info/METADATA,sha256=Nr103Gg-jiNLb3q0N7zvp6cIlK4bc-k4lVluSeMT1fg,6647
+turboxl-0.1.44.dist-info/WHEEL,sha256=oXhHG6ewLm-FNdEna2zwgy-K0KEl4claZ1ztR4VTx0I,106
+turboxl-0.1.44.dist-info/licenses/LICENSE,sha256=Gtc8Q0bRfkyHgO_GJliivR8hosnyuCAC_f6ftis1Iwg,1106
+turboxl-0.1.44.dist-info/RECORD,,
