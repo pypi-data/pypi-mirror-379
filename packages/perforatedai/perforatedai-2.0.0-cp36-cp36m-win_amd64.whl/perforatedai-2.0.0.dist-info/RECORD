@@ -1,0 +1,16 @@
+perforatedai/__init__.cp36-win_amd64.pyd,sha256=Gufu1Tt827oURx79nHr0CF7RmHReBAltwTrnbcShRVo,33792
+perforatedai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+perforatedai/globals_perforatedai.cp36-win_amd64.pyd,sha256=__aENWTEPJwsGPvbkzKktYCgaJ_1CT0WnACC92VlNEA,286208
+perforatedai/globals_perforatedai.py,sha256=pFZGhNbL2nrfaodCypmVomjifiO5RFkEeu77LjRSq0g,22565
+perforatedai/library_classes.cp36-win_amd64.pyd,sha256=FyKFZzFwU4xSJ_1FhqQViOnUx3fEzdwRVNmhFCvBdHQ,108544
+perforatedai/library_classes.py,sha256=mcgTdleELhE7CJ3LMbA9p9JIv_sOfHTVeQcmw2iomUs,7884
+perforatedai/modules_perforatedai.cp36-win_amd64.pyd,sha256=oJKnXtkWcv-fsCD4JBIFuwthzONwMoiUTVumDCSZysg,366080
+perforatedai/modules_perforatedai.py,sha256=7vk-0S2oy-CdR2SPF9J85L7_5Ek2LY-wa-svEoL7I2U,38218
+perforatedai/tracker_perforatedai.cp36-win_amd64.pyd,sha256=KN3p1uW9S1JdO5w9FuLPjE1o8swBy6XO18OybGV0gY4,792576
+perforatedai/tracker_perforatedai.py,sha256=nwQisdY7QMBWfcWOmD5gg8aqe-Mj4jnHFHEnX5VdVZc,111006
+perforatedai/utils_perforatedai.cp36-win_amd64.pyd,sha256=XDG47ASqacGUdlyZsEWywy7ctZRomvJiEYWLmtpqOWE,329728
+perforatedai/utils_perforatedai.py,sha256=12L3sQSJaKJN_IPX1-t91rm3SDAmHAnkZIrCKrHaB2c,35390
+perforatedai-2.0.0.dist-info/METADATA,sha256=zMMTC7URn-bAJHkKn-FU0mkssJmnJlTQLlxd4OpRxIo,412
+perforatedai-2.0.0.dist-info/WHEEL,sha256=zukbZftcRdNfJ55Q_RYV9JZ3uVyqWKyq-wDJbmszs_U,101
+perforatedai-2.0.0.dist-info/top_level.txt,sha256=aN-RVGd9_0L1QRPEzUSfJ-EKxXmsNTx-bmWXqby6zro,13
+perforatedai-2.0.0.dist-info/RECORD,,
