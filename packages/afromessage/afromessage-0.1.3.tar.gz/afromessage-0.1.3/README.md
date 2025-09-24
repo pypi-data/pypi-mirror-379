@@ -1,0 +1,258 @@
+# AfroMessage Python SDK
+
+A complete Python SDK for the [AfroMessage](https://afromessage.com) SMS and OTP API.  
+This package makes it easy to send **single SMS**, **bulk SMS**, and handle **OTP challenges** with minimal setup.
+
+---
+
+## 🚀 Installation
+
+Install the package via **pip**:
+
+```bash
+pip install afromessage
+```
+# Or from source:
+```bash
+git clone https://github.com/yonas8989/afromessage-python.git
+cd afromessage-python
+pip install -e .
+```
+# 🔑 Quick Start
+## Create a .env file in your project root:
+```bash
+AFROMESSAGE_TOKEN=your_api_token_here
+```
+# Then in Python:
+```bash
+import os
+from dotenv import load_dotenv
+from afromessage import AfroMessage
+from afromessage.models.sms_models import SendSMSRequest, BulkSMSRequest
+from afromessage.models.otp_models import SendOTPRequest, VerifyOTPRequest
+
+# Load environment variables
+load_dotenv()
+token = os.getenv("AFROMESSAGE_TOKEN")
+
+if not token:
+    raise ValueError("⚠️ Set AFROMESSAGE_TOKEN in your .env file!")
+
+# Initialize the SDK
+sdk = AfroMessage(token=token)
+
+# --- Single SMS ---
+sms_request = SendSMSRequest(
+    to="+2519xxxxxxx",
+    message="Hello from AfroMessage SDK!",
+    from_="MySender",
+    sender="MyBrand"
+)
+response = sdk.sms.send(sms_request)
+print("✅ Single SMS:", response)
+
+# --- Bulk SMS ---
+bulk_request = BulkSMSRequest(
+    to=["+2519xxxxxxx", "+2519yyyyyyy"],
+    message="Hello, bulk users!",
+    from_="MySender",
+    sender="MyBrand",
+    campaign="MyCampaign"
+)
+bulk_response = sdk.sms.bulk_send(bulk_request)
+print("✅ Bulk SMS:", bulk_response)
+
+#---  Personalized Bulk request ---
+
+personalized_request = BulkSMSRequest(
+    to=[
+        BulkRecipient(to="+2519xxxxxxx", message="Hi Yonas!"),
+        BulkRecipient(to="+2519yyyyyyy", message="Hi Eshetu!")
+    ],
+    from_="MySender",
+    sender="MyBrand",
+    campaign="PersonalizedCampaign"
+)
+
+response = sdk.sms.bulk_send(personalized_request)
+
+
+
+# --- OTP Challenge ---
+otp_request = SendOTPRequest(
+    to="+2519xxxxxxx",
+    pr="Your code",
+    len_=6
+)
+otp_response = sdk.otp.send(otp_request)
+print("✅ OTP Challenge:", otp_response)
+
+# --- Verify OTP ---
+verify_request = VerifyOTPRequest(
+    to="+2519xxxxxxx",
+    code="123456"
+)
+verify_response = sdk.otp.verify(verify_request)
+print("✅ OTP Verify:", verify_response)
+```
+## 📦 Features
+
+## ✅ Send single SMS
+## ✅ Send bulk SMS campaigns
+## ✅ Generate OTP challenges
+## ✅ Verify OTP codes
+## ✅ Built-in error handling
+## ✅ Request/response logging for debugging
+
+
+# ⚡ API Reference
+
+## Single SMS
+```bash
+from afromessage.models.sms_models import SendSMSRequest
+
+sms_request = SendSMSRequest(
+    to="+2519xxxxxxx",
+    message="Hello from AfroMessage!",
+    from_="MySender",
+    sender="MyBrand",
+    callback="https://myapp.com/callback"  # optional
+)
+
+response = sdk.sms.send(sms_request)
+```
+## Single SMS (GET request)
+```bash
+response = sdk.sms.send_get(sms_request)
+```
+## Bulk SMS
+```bash
+from afromessage.models.sms_models import BulkSMSRequest
+
+bulk_request = BulkSMSRequest(
+    to=["+2519xxxxxxx", "+2519yyyyyyy"],
+    message="Hello, everyone!",
+    from_="MySender",
+    sender="MyBrand",
+    campaign="MyCampaign"
+)
+
+response = sdk.sms.bulk_send(bulk_request)
+```
+## Bulk SMS (Personalized messages)
+```bash
+from afromessage.models.sms_models import BulkRecipient, BulkSMSRequest
+
+personalized_request = BulkSMSRequest(
+    to=[
+        BulkRecipient(to="+2519xxxxxxx", message="Hi Yonas!"),
+        BulkRecipient(to="+2519yyyyyyy", message="Hi Eshetu!")
+    ],
+    from_="MySender",
+    sender="MyBrand",
+    campaign="PersonalizedCampaign"
+)
+
+response = sdk.sms.bulk_send(personalized_request)
+```
+## OTP Challenge
+```bash
+from afromessage.models.otp_models import SendOTPRequest
+
+otp_request = SendOTPRequest(
+    to="+2519xxxxxxx",
+    pr="Your code",
+    len_=6,
+    ttl=300  # time-to-live in seconds (optional)
+)
+
+response = sdk.otp.send(otp_request)
+```
+## Verify OTP
+```bash
+from afromessage.models.otp_models import VerifyOTPRequest
+
+verify_request = VerifyOTPRequest(
+    to="+2519xxxxxxx",
+    code="123456"
+)
+
+response = sdk.otp.verify(verify_request)
+```
+# 🛠 Error Handling
+## All errors are wrapped and logged automatically.
+## Example:
+```bash
+try:
+    response = sdk.sms.send(sms_request)
+    print("✅ Success:", response)
+except Exception as e:
+    print("❌ Error:", str(e))
+```
+## Errors include:
+
+#     API errors (invalid request, authentication failure, etc.)
+
+#     Network errors (timeouts, connection issues)
+
+# 📑 Logging
+## Requests and responses are logged automatically. Example:
+```bash
+📤 [POST] Request to: send
+   Payload: {
+     "to": "+2519xxxxxxx",
+     "message": "Hello!"
+   }
+
+📥 Response from: send
+   Data: {
+     "acknowledge": "success",
+     "response": { "code": "202", "to": "+2519xxxxxxx" }
+   }
+```
+
+# 🧪 Advanced Example (Real Test)
+
+## We provide a full interactive test script in [usag/test_real.py](https://githubrepo.com)
+.
+## It shows how to send SMS, bulk SMS, and run OTP challenge + verification with .env loading.
+## Run it with:
+```bash
+python usage/test_real.py
+```
+## ⚠️ Note: Running this will send real SMS/OTP messages and may incur costs.
+
+# 🤝 Contributing
+
+## Contributions are welcome! To contribute:
+
+##    1. Fork the repo
+
+##    2. Create your feature branch (git checkout -b feature/my-feature)
+
+##    3. Commit your changes (git commit -m 'Add my feature')
+
+##    4. Push to the branch (git push origin feature/my-feature)
+
+##    5. Open a Pull Request
+
+## Run tests before submitting:
+```bash
+pytest
+```
+
+# 📜 License
+
+## This project is licensed under the MIT License.
+## See LICENSE
+## for details.
+
+
+# 🙋 Support
+## For issues or feature requests, open a GitHub Issue
+
+
+
+
+
+
