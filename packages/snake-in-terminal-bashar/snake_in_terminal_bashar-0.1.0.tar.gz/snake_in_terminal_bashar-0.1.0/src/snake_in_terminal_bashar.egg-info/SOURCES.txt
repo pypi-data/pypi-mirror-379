@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/snake_in_terminal_bashar.egg-info/PKG-INFO
+src/snake_in_terminal_bashar.egg-info/SOURCES.txt
+src/snake_in_terminal_bashar.egg-info/dependency_links.txt
+src/snake_in_terminal_bashar.egg-info/entry_points.txt
+src/snake_in_terminal_bashar.egg-info/top_level.txt
