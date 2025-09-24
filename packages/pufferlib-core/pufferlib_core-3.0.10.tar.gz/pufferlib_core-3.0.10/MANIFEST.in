@@ -1,0 +1,7 @@
+include README.md
+include pyproject.toml
+include setup.py
+recursive-include pufferlib *.py *.cpp *.cu *.h *.hpp
+exclude pufferlib/*.so
+exclude pufferlib/*.pyd
+exclude pufferlib/_C.*.so
