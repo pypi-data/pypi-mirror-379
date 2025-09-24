@@ -1,0 +1,10 @@
+wikipedia_async/__init__.py,sha256=DwFUMeVEFnaIDw5UsgnhYzfmYcbxqTuE6djnL0mVeYg,875
+wikipedia_async/cache.py,sha256=SrbGRh7AoSYbaEUvO1bYn8CfQqscUMhq34Pu9lm9G7Q,15708
+wikipedia_async/client.py,sha256=5tJIX7FnVPmXBJfKAYTJ-YzdPY799VflMqiTs9HCw9w,23607
+wikipedia_async/config.py,sha256=_6caOJlSfWbv5MQmH_2dizYX22pHrmKOM5OmDgD9U2k,4042
+wikipedia_async/exceptions.py,sha256=2tk-P9BjJb8XYYrz6nVvecC5sIvD7gawhlmCE4GdHBA,2790
+wikipedia_async/models.py,sha256=ViEouH3godE9zVmq4bdNdo0B1R6w0j_uO8jL6k2gWdM,6535
+wikipedia_async-0.3.0.dist-info/METADATA,sha256=6dDWcok4Np6inecbEoj8TzyN9f09XQhfwofdIy-UWS8,2762
+wikipedia_async-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wikipedia_async-0.3.0.dist-info/licenses/LICENSE,sha256=vp-WgHb7Wx_QdL34-YuyxEIj24vBGcQmRCaF51zzNjc,1064
+wikipedia_async-0.3.0.dist-info/RECORD,,
