@@ -1,0 +1,29 @@
+abstract: "A video clipper, cutter, and splicer."
+authors:
+- family-names: "Winecki"
+  given-names: "Dominik"
+  orcid: "https://orcid.org/0009-0009-8632-3102"
+cff-version: 1.2.0
+date-released: "2025-09-23"
+identifiers:
+  - description: "The GitHub release URL of tag v1.0.0."
+    type: url
+    value: "https://github.com/Imageomics/cliparoo/releases/tag/v1.0.0"
+  - description: "The GitHub URL of the commit tagged with v1.0.0."
+    type: url
+    value: "https://github.com/Imageomics/cliparoo/tree/<PLACEHOLDER>"
+keywords:
+  - video
+  - editing
+  - clipper
+  - splicer
+  - imageomics
+  - python
+  - "command line"
+license: Apache-2.0
+message: "If you use this software, please cite it using the metadata from this file."
+repository-code: "https://github.com/Imageomics/cliparoo"
+title: "cliparoo"
+version: "1.0.0"
+# doi: "<PLACEHOLDER>"
+type: software

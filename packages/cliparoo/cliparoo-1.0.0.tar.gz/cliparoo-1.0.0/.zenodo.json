@@ -1,0 +1,29 @@
+{
+  "creators": [
+    {
+      "name": "Winecki, Dominik",
+      "orcid": "0009-0009-8632-3102"
+    }
+  ],
+  "description": "A video clipper, cutter, and splicer.",
+  "keywords": [
+    "video",
+    "editing",
+    "clipper",
+    "splicer",
+    "imageomics",
+    "python",
+    "command line"
+  ],
+  "license": {
+    "id": "Apache-2.0"
+  },
+  "publication_date": "2025-09-16",
+  "title": "cliparoo",
+  "version": "1.0.0",
+  "grants": [
+    {
+      "id": "021nxhr62::2118240"
+    }
+  ]
+}
