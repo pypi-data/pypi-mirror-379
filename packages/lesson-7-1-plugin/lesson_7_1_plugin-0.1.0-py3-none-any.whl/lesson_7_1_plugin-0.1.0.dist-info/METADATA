@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: lesson-7-1-plugin
+Version: 0.1.0
+Summary: 
+Author: Алексей Романов
+Author-email: romanovaleks@ozon.ru
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytest (>=8.4.2,<9.0.0)
+Description-Content-Type: text/markdown
+
+
