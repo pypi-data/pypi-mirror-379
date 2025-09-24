@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: sardana_icepap
+Version: 4.0.1
+Summary: IcePAP Sardana controller.
+License-File: LICENSE
+Requires-Dist: sardana
+Requires-Dist: icepap
+Requires-Dist: setuptools
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
