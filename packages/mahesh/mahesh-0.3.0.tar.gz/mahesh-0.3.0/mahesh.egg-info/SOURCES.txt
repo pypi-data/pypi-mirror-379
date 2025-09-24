@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+mahesh/__init__.py
+mahesh/maheshg.py
+mahesh.egg-info/PKG-INFO
+mahesh.egg-info/SOURCES.txt
+mahesh.egg-info/dependency_links.txt
+mahesh.egg-info/entry_points.txt
+mahesh.egg-info/requires.txt
+mahesh.egg-info/top_level.txt
