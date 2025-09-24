@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/notipy/__init__.py
+src/notipy/messaging.py
+src/notipy_line/__init__.py
+src/notipy_line/py.typed
+src/notipy_line.egg-info/PKG-INFO
+src/notipy_line.egg-info/SOURCES.txt
+src/notipy_line.egg-info/dependency_links.txt
+src/notipy_line.egg-info/requires.txt
+src/notipy_line.egg-info/top_level.txt
