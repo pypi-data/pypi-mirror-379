@@ -1,0 +1,8 @@
+pyproject.toml
+StrictTypePython/__init__.py
+StrictTypePython/types.py
+StrictTypePython.egg-info/PKG-INFO
+StrictTypePython.egg-info/SOURCES.txt
+StrictTypePython.egg-info/dependency_links.txt
+StrictTypePython.egg-info/top_level.txt
+tests/test_tests.py

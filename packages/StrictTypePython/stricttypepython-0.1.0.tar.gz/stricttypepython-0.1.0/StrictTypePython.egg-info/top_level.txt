@@ -1,0 +1,3 @@
+StrictTypePython
+dist
+tests
