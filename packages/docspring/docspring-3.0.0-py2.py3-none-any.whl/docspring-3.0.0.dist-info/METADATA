@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: docspring
+Version: 3.0.0
+Summary: DocSpring API
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: team@openapitools.org
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,DocSpring API
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: urllib3 (<3.0.0,>=2.1.0)
+Requires-Dist: python-dateutil (>=2.8.2)
+Requires-Dist: pydantic (>=2)
+Requires-Dist: typing-extensions (>=4.7.1)
+Requires-Dist: lazy-imports (<2,>=1)
+
+    Use DocSpring&#39;s API to programmatically fill out PDF forms, convert HTML to PDFs, merge PDFs, or request legally binding e-signatures.
+    
+
