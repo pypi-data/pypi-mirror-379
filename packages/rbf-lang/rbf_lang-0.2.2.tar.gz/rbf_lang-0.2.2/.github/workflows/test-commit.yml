@@ -1,0 +1,39 @@
+name: test-commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install flit and uv
+        run: |
+          pip install flit uv
+          uv sync
+
+      - name: Flit install
+        run: flit install
+
+      - name: Check with black
+        run: uv run ruff format --check .
+
+      - name: Check with mypy
+        run: uv run mypy
+
+      - name: Run tests
+        run: uv run pytest

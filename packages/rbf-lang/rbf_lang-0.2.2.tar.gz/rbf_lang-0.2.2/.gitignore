@@ -1,0 +1,23 @@
+# build directory
+build/
+
+# vscode
+.vscode/
+__pycache__/
+
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+test-output.xml
+.coverage
+htmlcov
+.python-version
+dist
+
+.venv
+.tox
+
+*.snap
+
+uv.lock
