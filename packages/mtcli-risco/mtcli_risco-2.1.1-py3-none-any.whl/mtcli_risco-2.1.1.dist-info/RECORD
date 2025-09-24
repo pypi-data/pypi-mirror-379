@@ -1,0 +1,16 @@
+mtcli_risco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mtcli_risco/commands/__init__.py,sha256=0AvTSqwccXKX8r9CXkEaPWQ4bj87Bo8y1BFGpMhR9hk,60
+mtcli_risco/commands/checar.py,sha256=GsOJ8jT8hZiLi0qNqUybH7T0bvuoaV1PRjgCyBLTK4o,1806
+mtcli_risco/commands/lucro.py,sha256=rDrAjTpcieU1lBfglnDxgsclPk2Nhgsk3NROo7MsKM4,1256
+mtcli_risco/commands/monitorar.py,sha256=DyKq9GRtvGH1F75Cqbq0ZO0MAeKp5ltBZYpfV7s0VBg,1784
+mtcli_risco/conf.py,sha256=5T82aUS9k9zB1I94RGL5xud-0B4iYI6CwXJoUNDotAQ,365
+mtcli_risco/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mtcli_risco/models/lucro.py,sha256=jjWgl1HXmC0Q6hqMQSW5RvUtLUFNPz7TILBFcQ8_gUs,1617
+mtcli_risco/models/risco.py,sha256=29PuQrqyXI_-8waO_5Npe_2AHnnzueoUT6f-RwSAmsw,3060
+mtcli_risco/mt5_context.py,sha256=lA5ZppfRsCvzrxf0Jce1ewZtt2xFln5xnZ1sArk1P4k,190
+mtcli_risco/plugin.py,sha256=ykFXflYFVDVoxTuhdqfxDLQpd8J9_SM9VE_Jxgt-A2Y,506
+mtcli_risco-2.1.1.dist-info/entry_points.txt,sha256=pPmBNOystUidnZ4FoPta9-6sM9u7FCneA-4Cm2RMq4s,52
+mtcli_risco-2.1.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+mtcli_risco-2.1.1.dist-info/METADATA,sha256=u0nN-McBplnwC2CYpmMMToMLYAbmgzcusCiQubsrEfE,2482
+mtcli_risco-2.1.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+mtcli_risco-2.1.1.dist-info/RECORD,,
