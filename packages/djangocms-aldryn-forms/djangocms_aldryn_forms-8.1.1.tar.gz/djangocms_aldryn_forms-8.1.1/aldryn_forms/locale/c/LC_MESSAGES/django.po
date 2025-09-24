@@ -1,0 +1,742 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-23 17:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Save to site administration and send email"
+msgstr ""
+
+msgid "Only send email"
+msgstr ""
+
+msgid "No action"
+msgstr ""
+
+msgid "form name"
+msgstr ""
+
+msgid "form language"
+msgstr ""
+
+msgid "sent at"
+msgstr ""
+
+msgid "form data"
+msgstr ""
+
+msgid "users notified"
+msgstr ""
+
+msgid "data"
+msgstr ""
+
+msgid "people notified"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Is spam"
+msgstr ""
+
+msgid "Ready"
+msgstr ""
+
+msgid "Data sending completed."
+msgstr ""
+
+msgid "Missing items for processing."
+msgstr ""
+
+msgid "Export data via webhook"
+msgstr ""
+
+msgid "Send data via webhook"
+msgstr ""
+
+msgid "Set as spam"
+msgstr ""
+
+msgid "Set not to spam"
+msgstr ""
+
+msgid "from date"
+msgstr ""
+
+msgid "to date"
+msgstr ""
+
+msgid "language"
+msgstr ""
+
+msgid ""
+"Export failed! More than 65,536 entries found, exceeded Excel limitation!"
+msgstr ""
+
+msgid "Please select at least one field to export."
+msgstr ""
+
+msgid "No records found"
+msgstr ""
+
+msgid "Forms"
+msgstr ""
+
+msgid "Form"
+msgstr ""
+
+msgid "Form types"
+msgstr ""
+
+msgid "Advanced Settings"
+msgstr ""
+
+msgid ""
+"The form could not be submitted. Please check that all form fields are "
+"filled in correctly."
+msgstr ""
+
+msgid "Form with Ident field"
+msgstr ""
+
+msgid "Fieldset"
+msgstr ""
+
+msgid "Form fields"
+msgstr ""
+
+msgid "Text Field"
+msgstr ""
+
+msgid "Honeypot Field"
+msgstr ""
+
+msgid "Text Area Field"
+msgstr ""
+
+msgid "Hidden Field"
+msgstr ""
+
+msgid "Phone Field"
+msgstr ""
+
+msgid "Date Field"
+msgstr ""
+
+msgid "Datetime local Field"
+msgstr ""
+
+msgid "Time Field"
+msgstr ""
+
+msgid "Number Field"
+msgstr ""
+
+msgid "Email Field"
+msgstr ""
+
+msgid "File upload field"
+msgstr ""
+
+msgid "Multiple files upload field"
+msgstr ""
+
+msgid "Image upload field"
+msgstr ""
+
+msgid "Yes/No Field"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Select Field"
+msgstr ""
+
+msgid "Multiple Select Field"
+msgstr ""
+
+msgid "Multiple Checkbox Field"
+msgstr ""
+
+msgid "Radio Select Field"
+msgstr ""
+
+msgid "URL Field"
+msgstr ""
+
+msgid "Captcha Field"
+msgstr ""
+
+msgid "Submit Button"
+msgstr ""
+
+msgid "Hide content after submitting a form"
+msgstr ""
+
+msgid "new email notification"
+msgstr ""
+
+msgid "new email notifications"
+msgstr ""
+
+msgid "Recipients"
+msgstr ""
+
+msgid ""
+"the variables can be used within the email body, email sender,and other "
+"notification fields"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "available text variables"
+msgstr ""
+
+msgid "Form (Advanced)"
+msgstr ""
+
+msgid "default"
+msgstr ""
+
+msgid "Email notification"
+msgstr ""
+
+msgid "Email notifications"
+msgstr ""
+
+msgid "theme"
+msgstr ""
+
+msgid "Provides the base theme for the email."
+msgstr ""
+
+msgid "to name"
+msgstr ""
+
+msgid "to email"
+msgstr ""
+
+msgid "to user"
+msgstr ""
+
+msgid "from name"
+msgstr ""
+
+msgid "from email"
+msgstr ""
+
+msgid "reply to email"
+msgstr ""
+
+msgid "subject"
+msgstr ""
+
+msgid "email body (txt)"
+msgstr ""
+
+msgid "used when rendering the email in text only mode."
+msgstr ""
+
+msgid "email body (html)"
+msgstr ""
+
+msgid "used when rendering the email in html."
+msgstr ""
+
+msgid "Please provide a recipient."
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+#, python-format
+msgid "\"%(file_name)s\" is not of accepted file type."
+msgstr ""
+
+msgid "Accepted file types are"
+msgstr ""
+
+#, python-format
+msgid "The total file size has exceeded the specified limit %(size)s."
+msgstr ""
+
+#, python-format
+msgid "File size exceeded the specified limit %(size)s."
+msgstr ""
+
+#, python-format
+msgid "The number of uploaded files exceeded the set limit of %(limit)s."
+msgstr ""
+
+#, python-format
+msgid ""
+"Image width must be under %(max_size)s pixels. Current width is "
+"%(actual_size)s pixels."
+msgstr ""
+
+#, python-format
+msgid ""
+"Image height must be under %(max_size)s pixels. Current height is "
+"%(actual_size)s pixels."
+msgstr ""
+
+msgid "This email is unavailable."
+msgstr ""
+
+msgid "Min value can not be greater than max value."
+msgstr ""
+
+msgid ""
+"If checkbox \"Field is required\" is set, \"Min choices\" must be at least 1."
+msgstr ""
+
+msgid "Min length"
+msgstr ""
+
+msgid "Required number of characters to type."
+msgstr ""
+
+msgid "Max length"
+msgstr ""
+
+msgid "Maximum number of characters to type."
+msgstr ""
+
+msgid ""
+"Explanatory text displayed next to input field. Just like this one. You can "
+"use MAXSIZE as a placeholder for the maximum size configured below."
+msgstr ""
+
+msgid ""
+"Explanatory text displayed next to input field. Just like this one. You can "
+"use MAXSIZE, MAXWIDTH, MAXHEIGHT as a placeholders for the maximum file size "
+"and dimensions configured below."
+msgstr ""
+
+msgid "Min choices"
+msgstr ""
+
+msgid "Required amount of elements to chose."
+msgstr ""
+
+msgid "Max choices"
+msgstr ""
+
+msgid "Maximum amount of elements to chose."
+msgstr ""
+
+msgid "Webhook URL"
+msgstr ""
+
+msgid "Data transfer method"
+msgstr ""
+
+msgid "Data transform"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Used to filter out form submissions."
+msgstr ""
+
+msgid "Error message"
+msgstr ""
+
+msgid "An error message that will be displayed if the form doesn't validate."
+msgstr ""
+
+msgid "Success message"
+msgstr ""
+
+msgid "An success message that will be displayed."
+msgstr ""
+
+msgid "Redirect to"
+msgstr ""
+
+msgid "custom css classes"
+msgstr ""
+
+msgid "form template"
+msgstr ""
+
+msgid "People who will get the form content via e-mail."
+msgstr ""
+
+msgid "Action backend"
+msgstr ""
+
+msgid "Attributes"
+msgstr ""
+
+msgid "Enable autofill from url parameters"
+msgstr ""
+
+msgid ""
+"Eg if you open the form with a url that contains parameters as 'https://"
+"example.com/sub-page/?email=hello@example.com&name=Alex', then the fields "
+"'email' and 'name' are going to to be filled in automatically."
+msgstr ""
+
+msgid "Form action attribute"
+msgstr ""
+
+msgid "Use the URL or CMS Page in the form attribute \"action\"."
+msgstr ""
+
+msgid "Legend"
+msgstr ""
+
+msgid "Used to set the field name"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Field is required"
+msgstr ""
+
+msgid ""
+"Error message displayed if the required field is left empty. Default: \"This "
+"field is required\"."
+msgstr ""
+
+msgid "Placeholder text"
+msgstr ""
+
+msgid ""
+"Default text in a form. Disappears when user starts typing. Example: "
+"\"email@example.com\""
+msgstr ""
+
+msgid "Help text"
+msgstr ""
+
+msgid "Explanatory text displayed next to input field. Just like this one."
+msgstr ""
+
+msgid "Min value"
+msgstr ""
+
+msgid "Max value"
+msgstr ""
+
+msgid "Initial value"
+msgstr ""
+
+msgid "Default value of field."
+msgstr ""
+
+msgid "The \"name\" field cannot contain spaces."
+msgstr ""
+
+msgid "columns"
+msgstr ""
+
+msgid "rows"
+msgstr ""
+
+msgid "send notification when form is submitted"
+msgstr ""
+
+msgid ""
+"When checked, the value of this field will be used to send an email "
+"notification."
+msgstr ""
+
+msgid "email subject"
+msgstr ""
+
+msgid "Used as the email subject when email_send_notification is checked."
+msgstr ""
+
+msgid "Additional email body"
+msgstr ""
+
+msgid "Additional body text used when email notifications are active."
+msgstr ""
+
+msgid "Upload files to"
+msgstr ""
+
+msgid ""
+"Select a folder to which all files submitted through this field will be "
+"uploaded to."
+msgstr ""
+
+msgid "Maximum files size"
+msgstr ""
+
+msgid ""
+"The maximum size of all files to upload, in bytes. You can use common size "
+"suffixes (kB, MB, GB, ...)."
+msgstr ""
+
+msgid "Enable js"
+msgstr ""
+
+msgid "Enable javascript to view files for upload."
+msgstr ""
+
+#, python-format
+msgid "%(value)s is not extension."
+msgstr ""
+
+#, python-format
+msgid "%(value)s is not mimetype."
+msgstr ""
+
+msgid "Accepted types"
+msgstr ""
+
+msgid ""
+"The list of accepted types. E.g. \".pdf .jpg .png text/plain application/"
+"msword image/*\"."
+msgstr ""
+
+msgid "Max. files"
+msgstr ""
+
+msgid "Maximum number of uploaded files."
+msgstr ""
+
+msgid "Maximum image width"
+msgstr ""
+
+msgid "The maximum width of the uploaded image, in pixels."
+msgstr ""
+
+msgid "Maximum image height"
+msgstr ""
+
+msgid "The maximum height of the uploaded image, in pixels."
+msgstr ""
+
+msgid "Earliest date"
+msgstr ""
+
+msgid "The earliest date to accept."
+msgstr ""
+
+msgid "Latest date"
+msgstr ""
+
+msgid "The latest date to accept."
+msgstr ""
+
+msgid "Step"
+msgstr ""
+
+msgid "The granularity numnber."
+msgstr ""
+
+msgid "Earliest datetime"
+msgstr ""
+
+msgid "The earliest datetime to accept."
+msgstr ""
+
+msgid "Latest datetime"
+msgstr ""
+
+msgid "The latest datetime to accept."
+msgstr ""
+
+msgid "Earliest time"
+msgstr ""
+
+msgid "The earliest time to accept."
+msgstr ""
+
+msgid "Latest time"
+msgstr ""
+
+msgid "The latest time to accept."
+msgstr ""
+
+msgid "Datalist"
+msgstr ""
+
+msgid "Datalist id of html element datalist with options."
+msgstr ""
+
+msgid "Read only"
+msgstr ""
+
+msgid "The field cannot be edited by the user."
+msgstr ""
+
+msgid "List of urls"
+msgstr ""
+
+msgid ""
+"A list of predefined url values. Each url is on a separate line. The first "
+"word is the url. The next (optional) words are a description for the url."
+msgstr ""
+
+msgid "Pattern"
+msgstr ""
+
+msgid ""
+"A regular expression to match for the value. It must be a valid JavaScript "
+"regular expression."
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid ""
+"How many characters wide the input field should be. The default value is 20."
+msgstr ""
+
+msgid "Spellcheck"
+msgstr ""
+
+msgid "To enable spell-checking for an element."
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Option"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "People who got a notification when form was submitted."
+msgstr ""
+
+msgid "form url"
+msgstr ""
+
+msgid "Form submission"
+msgstr ""
+
+msgid "Form submissions"
+msgstr ""
+
+msgid "Submitted form to be sent"
+msgstr ""
+
+msgid "Submitted forms to be sent"
+msgstr ""
+
+msgid "Incorrect file size format."
+msgstr ""
+
+#, python-format
+msgid "Size '%s' has incorrect format"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Export form submissions"
+msgstr ""
+
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Export Form Entries"
+msgstr ""
+
+msgid "Number of items"
+msgstr ""
+
+#, python-format
+msgid "Form name: %(form_name)s"
+msgstr ""
+
+#, python-format
+msgid "[Form submission] %(form_name)s"
+msgstr ""
+
+msgid "Required field"
+msgstr ""
+
+#, python-format
+msgid "You will be <a href=\"%(form_success_url)s\">redirected shortly</a>."
+msgstr ""
+
+msgid "Thank you for submitting your information."
+msgstr ""
+
+#, python-format
+msgid ""
+"You have to choose at least %(limit_value)d options (chosen %(show_value)d)."
+msgstr ""
+
+#, python-format
+msgid ""
+"You can't choose more than %(limit_value)d options (chosen %(show_value)d)."
+msgstr ""
+
+msgid "Internal link"
+msgstr ""
+
+msgid "External link/anchor"
+msgstr ""
+
+msgid "No destination selected. Use the dropdown to select a destination."
+msgstr ""
+
+msgid "https://example.com or #anchor"
+msgstr ""
+
+msgid ""
+"Provide a link to an external URL, including the schema such as 'https://'. "
+"Optionally, add an #anchor (including the #) to scroll to."
+msgstr ""
+
+msgid ""
+"Select from available internal destinations. Optionally, add an anchor to "
+"scroll to."
+msgstr ""
+
+msgid "Select internal destination"
+msgstr ""
+
+msgid "#anchor"
+msgstr ""
+
+msgid "Provide an anchor to scroll to."
+msgstr ""
+
+msgid "Select site"
+msgstr ""
