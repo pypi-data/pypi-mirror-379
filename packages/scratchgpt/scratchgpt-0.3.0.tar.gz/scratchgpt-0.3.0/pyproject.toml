@@ -1,0 +1,103 @@
+[project]
+name = "scratchgpt"
+version = "0.3.0"
+description = "A small-scale transformer-based language model implemented from scratch in Python."
+authors = [
+  { name = "Aleksandr Yeganov", email = "ayeganov@gmail.com"},
+  { name = "Dario Cazzani", email ="dariocazzani@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+keywords = ["transformer", "language-model", "deep-learning", "pytorch", "gpt", "tokenizer"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Development Status :: 3 - Alpha",  # or 4 - Beta, 5 - Production/Stable
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+license = {file = "LICENSE"}
+
+dependencies = [
+    "numpy>=2.3.2",
+    "ptflops>=0.7.5",
+    "pydantic-settings>=2.10.1",
+    "pydantic-yaml>=1.6.0",
+    "torch>=2.8.0",
+    "tqdm>=4.67.1",
+    "types-tqdm>=4.67.0.20250809",
+]
+
+[project.urls]
+Homepage = "https://github.com/LabStrangeLoop/scratchgpt"
+Repository = "https://github.com/LabStrangeLoop/scratchgpt"
+
+[project.optional-dependencies]
+hf-tokenizers = [
+  "tokenizers>=0.19.0",
+  "huggingface-hub>=0.34.4",
+]
+
+
+[dependency-groups]
+dev = [
+    "bandit>=1.8.6",
+    "mypy>=1.17.1",
+    "pytest>=8.4.1",
+    "ruff>=0.1.0",
+    "tokenizers>=0.19.0",
+    "huggingface-hub>=0.34.4",
+]
+
+[tool.pytest.ini_options]
+
+[tool.mypy]
+python_version = "3.12"
+warn_unused_configs = true
+files = ["scratchgpt/"]
+ignore_missing_imports = false
+check_untyped_defs = true
+explicit_package_bases = true
+warn_unreachable = true
+warn_redundant_casts = true
+strict = true
+exclude = [".venv"]
+
+[[tool.mypy.overrides]]
+module = ["ptflops", "tokenizers.*", "huggingface_hub.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+  "F",      # Pyflakes
+  "E",      # pycodestyle errors
+  "W",      # pycodestyle warnings
+  "I",      # isort
+  "N",      # pep8-naming
+  "UP",     # pyupgrade
+  "B",      # flake8-bugbear (catches common bugs)
+  "C4",     # flake8-comprehensions
+  "PIE",    # flake8-pie
+  "SIM",    # flake8-simplify
+]
+ignore = ["N812", "N806"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # Allow unused imports in __init__.py
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+train = "scratchgpt.train:main"
+infer = "scratchgpt.infer:main"
