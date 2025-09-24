@@ -1,0 +1,10 @@
+databeam_mcap_reader/__init__.py,sha256=QHIBD1BWj_i6bUaiU9XkU3aFiMbqFDPsC4Mr4rQrIRg,422
+databeam_mcap_reader/__init__.pyi,sha256=5c9ZuezScODqDxy5mliSZXh9xpjsDjEzpy6LbNjmuIg,416
+databeam_mcap_reader/_core.cpython-312-x86_64-linux-gnu.so,sha256=NCkxbVt1EUeTtJxOUvQGG0h7eBv2p-1CNWOTfqcxG-g,948632
+databeam_mcap_reader/collector.py,sha256=aotSBz9fWvKSDC7b5KhxhroHtCcDwzRFF1Bp51esPKo,7130
+databeam_mcap_reader/mcap_cli,sha256=MxsZd4c_5GNBno3dugZtauB8ptzgiOPP0jwP8AnfqR4,19419792
+databeam_mcap_reader/reader.py,sha256=l_Oz5r3BD7tfO_ZeTP3uNoO3nF51vHlI3ZoE1aLTCJ4,23461
+databeam_mcap_reader-0.4.0.dist-info/METADATA,sha256=JuNwWVOWMmjsLbEUZwzizmZyl-ZAwDvqgpaFDHwy71A,5916
+databeam_mcap_reader-0.4.0.dist-info/WHEEL,sha256=1W6gwlBE6jZvNVWoOJMr8mcqGAxw9_fPGW8_C-8-gfA,118
+databeam_mcap_reader-0.4.0.dist-info/RECORD,,
+databeam_mcap_reader-0.4.0.dist-info/licenses/LICENSE.txt,sha256=ygifqAo-bI0pMa2YBTw-hYPzDtRCTz0snGxTsss3K60,1086
