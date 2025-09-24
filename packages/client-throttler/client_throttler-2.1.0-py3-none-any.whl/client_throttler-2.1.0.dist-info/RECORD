@@ -1,0 +1,13 @@
+client_throttler/__init__.py,sha256=9fW4_NLj7R0gbhovw6B1rHXslTS_mqEFLxVX0UC5fX4,1437
+client_throttler/configs.py,sha256=e-HwvZp_hxwke8inZUD4Xb2YdtUSDPbE7H30QrehVy4,5214
+client_throttler/constants.py,sha256=L30FjmzsSPQ4Fx4x2xwOuAA7pwQLz7-v4kVUkqkZ1Zs,2538
+client_throttler/decorators.py,sha256=KtY1B9fY6JPmJWF8V6VONyqhwQYvKsRBe98z5KjUdiI,1498
+client_throttler/exceptions.py,sha256=nZwMqTr9BqocuSEFKq8Gw8OTKfcQrxYSb59ZP29_Se0,3175
+client_throttler/metrics.py,sha256=4CpovvCnLU3-Dne5rWjEVhozURbV-7cv4Gqh3q3xvGQ,4107
+client_throttler/redis.py,sha256=NrcRRUYGvzgBeFA_TgwjeYILFAGIf0yZafltlimZacE,2606
+client_throttler/throttler.py,sha256=Cz-LLxpu58_i0cQbz5BSoBwJvYl4CSZ2YCD-69pvdwk,7194
+client_throttler-2.1.0.dist-info/licenses/LICENSE,sha256=iBQnbn5wE2hfvXAJsRm7P6d3yg9F078ILGFUlfy1r74,1065
+client_throttler-2.1.0.dist-info/METADATA,sha256=imFHtGvy1wA4A46E13gqedZ03JRhpJr0pcqoP1RUvI4,3962
+client_throttler-2.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+client_throttler-2.1.0.dist-info/top_level.txt,sha256=FkxrOHzXGB6oRysLIdk_Nz9ALJQ_tJG0dqRbGbF051E,17
+client_throttler-2.1.0.dist-info/RECORD,,
