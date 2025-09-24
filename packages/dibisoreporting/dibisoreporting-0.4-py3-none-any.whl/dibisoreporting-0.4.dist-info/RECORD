@@ -1,0 +1,11 @@
+dibisoreporting/__init__.py,sha256=aJIxB3lPw5eNuRgo9hQSafxc2Ps1LLiC1vi9IWGNGyE,219
+dibisoreporting/_version.py,sha256=dDgE4K0XJL3CwLifExx3hENN-ExPAVJyiSkmRWLHdV4,19
+dibisoreporting/dibisoreporting.py,sha256=nF308GPce5vW_lHvKqxn3375mt6FRso7Et4iFTPl59Y,28305
+dibisoreporting/utils.py,sha256=ZylxZbUorCV16LdetH69J8yPtgmqZHBr09ExxNcLBiE,1295
+dibisoreporting/biso/__init__.py,sha256=MgvgNigx7KHlD9JEhJ9agB_dPzJzfdJS0Z635lF1xDM,71
+dibisoreporting/biso/biso.py,sha256=BQzmbFu_HVkKZFQhnA6pfFTZ9i4uErA8zlIW1-Otdxc,11071
+dibisoreporting-0.4.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dibisoreporting-0.4.dist-info/METADATA,sha256=l8ICBqvjBfffsA5fkOEngeQY7LdgmuhKO3tB8LBqz2E,1709
+dibisoreporting-0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dibisoreporting-0.4.dist-info/top_level.txt,sha256=Y1odek00oMmgrY_T7uLKACxm35gdoGaSbtFOmcxpfqU,16
+dibisoreporting-0.4.dist-info/RECORD,,
