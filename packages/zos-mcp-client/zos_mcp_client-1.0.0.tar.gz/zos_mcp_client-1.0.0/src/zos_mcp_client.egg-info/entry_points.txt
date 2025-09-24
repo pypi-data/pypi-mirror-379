@@ -1,0 +1,2 @@
+[console_scripts]
+zos-mcp-client = zos_mcp_client.main:main

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zos-mcp-client"
+version = "1.0.0"
+description = "MCP client for z/OS mainframe operations with Amazon Q CLI"
+readme = "README.md"
+authors = [{name = "Souma S Ghosh"}]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["mcp", "mainframe", "zos", "amazon-q", "cli"]
+dependencies = [
+    "websockets>=11.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/zos-mcp-client"
+Repository = "https://github.com/yourusername/zos-mcp-client"
+Issues = "https://github.com/yourusername/zos-mcp-client/issues"
+
+[project.scripts]
+zos-mcp-client = "zos_mcp_client.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

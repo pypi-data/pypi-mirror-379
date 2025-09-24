@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/zos_mcp_client/__init__.py
+src/zos_mcp_client/main.py
+src/zos_mcp_client.egg-info/PKG-INFO
+src/zos_mcp_client.egg-info/SOURCES.txt
+src/zos_mcp_client.egg-info/dependency_links.txt
+src/zos_mcp_client.egg-info/entry_points.txt
+src/zos_mcp_client.egg-info/requires.txt
+src/zos_mcp_client.egg-info/top_level.txt
