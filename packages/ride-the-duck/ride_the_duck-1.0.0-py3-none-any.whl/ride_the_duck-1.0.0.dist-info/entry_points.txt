@@ -1,0 +1,2 @@
+[console_scripts]
+ride-the-duck = ride_the_duck.main:main
