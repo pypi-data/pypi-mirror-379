@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vserial"
+version = "0.1.2"
+dependencies = [
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Sean Fish", email = "seantfish@gmail.com"},
+]
+description = "Virtual serial device library"
+readme = "README.md"
+
+[project.optional-dependencies]
+
+[project.urls]
+Repository = "https://github.com/seantfish/vserial.git"
+
+[project.scripts]
+
