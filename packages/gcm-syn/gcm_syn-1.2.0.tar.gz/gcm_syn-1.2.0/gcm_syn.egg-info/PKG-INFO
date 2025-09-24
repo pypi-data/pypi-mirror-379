@@ -1,0 +1,256 @@
+Metadata-Version: 2.4
+Name: gcm-syn
+Version: 1.2.0
+Summary: A package for generating synthetic data with preserved correlation structures.
+Author: Jens E. d'Hondt
+Author-email: "Jens E. d'Hondt" <jensdhondt7@gmail.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/JdHondt/gcm
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+Requires-Dist: pytest-cov>=2.0; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Dynamic: author
+Dynamic: license-file
+
+# Generative Correlation Manifolds (GCM)
+
+This Python package provides an implementation of the Generative Correlation Manifolds (GCM) method for generating synthetic data. The primary purpose of GCM is to generate data that either mimics the correlation structure of an existing dataset or adheres to a predefined correlation matrix. As described in the accompanying whitepaper, GCM is a computationally efficient method that is mathematically guaranteed to preserve the entire Pearson correlation structure of a z-normalized source dataset.
+
+For a detailed description of the method and its mathematical foundations, please refer to the [whitepaper](whitepaper.pdf).
+
+This makes it an ideal tool for a variety of tasks, including:
+
+* Privacy-preserving data sharing
+* Robust model augmentation
+* High-fidelity simulation
+* Algorithmic fairness and auditing
+
+## Installation
+
+To install the package though pip, use:
+
+```bash
+pip install gcm-syn
+```
+
+## Usage
+
+The `GCM` class can be used in two main ways:
+
+1. **Mimicking an Existing Dataset**: If you have a dataset and you want to generate more data with the same correlation structure.
+2. **Creating a Dataset with a Specific Correlation Structure**: If you want to generate a dataset that has a correlation matrix you define.
+
+### Parameters
+
+The `GCM` class constructor accepts the following parameter:
+
+* `preserve_stats` (bool, default=True): Whether to preserve the mean and standard deviation of the original data in the generated samples. When `True`, the synthetic data will have the same mean and standard deviation as the source data for each feature. When `False`, the generated data will be standardized (mean=0, std=1).
+
+### Example 1: Mimicking an Existing Dataset
+
+```python
+import numpy as np
+from gcm import GCM
+
+# Assume `source_data` is a pre-existing dataset loaded into a numpy array
+# For demonstration, we'll create a sample one:
+mean = [0, 0, 0]
+cov = [[1.0, 0.8, 0.3],
+       [0.8, 1.0, 0.6],
+       [0.3, 0.6, 1.0]]
+source_data = np.random.multivariate_normal(mean, cov, 1000)
+
+# 1. Initialize the GCM model (preserve_stats=True by default)
+gcm = GCM()
+gcm.fit(source_data)
+
+# 2. Generate synthetic samples
+synthetic_data = gcm.sample(num_samples=500)
+
+# 3. Verify that the correlation structure is preserved
+print("Source Correlation Matrix:")
+print(np.corrcoef(source_data, rowvar=False))
+print("\nSynthetic Correlation Matrix:")
+print(np.corrcoef(synthetic_data, rowvar=False))
+
+# 4. Verify that mean and standard deviation are preserved
+print("\nSource Mean and Std:")
+print(f"Mean: {np.mean(source_data, axis=0)}")
+print(f"Std: {np.std(source_data, axis=0, ddof=1)}")
+print("\nSynthetic Mean and Std:")
+print(f"Mean: {np.mean(synthetic_data, axis=0)}")
+print(f"Std: {np.std(synthetic_data, axis=0, ddof=1)}")
+```
+
+### Example 2: Creating a Dataset with a Specific Correlation Structure
+
+To generate data with a specific correlation structure, you can now directly fit the GCM model with your target correlation matrix.
+
+```python
+import numpy as np
+from gcm import GCM
+
+# 1. Define your desired correlation structure
+target_corr = np.array([[1.0, 0.8, 0.3],
+                        [0.8, 1.0, 0.6],
+                        [0.3, 0.6, 1.0]])
+
+# 2. Initialize the GCM model and fit it to the correlation matrix.
+gcm = GCM()
+gcm.fit_from_correlation(target_corr)
+
+# 3. Generate synthetic samples with the target correlation structure
+synthetic_data = gcm.sample(num_samples=500)
+
+# 4. Verify that the correlation structure matches the target
+print("Target Correlation Matrix:")
+print(target_corr)
+print("\nSynthetic Correlation Matrix:")
+print(np.corrcoef(synthetic_data, rowvar=False))
+```
+
+### Example 3: Generating Standardized Data
+
+If you want to generate data with standardized values (mean=0, std=1) while preserving correlation structure:
+
+```python
+import numpy as np
+from gcm import GCM
+
+# Create some source data
+mean = [10, 20, 30]
+cov = [[4.0, 3.2, 1.2],
+       [3.2, 9.0, 5.4],
+       [1.2, 5.4, 16.0]]
+source_data = np.random.multivariate_normal(mean, cov, 1000)
+
+# Initialize GCM with preserve_stats=False for standardized output
+gcm = GCM(preserve_stats=False)
+gcm.fit(source_data)
+
+# Generate standardized synthetic samples
+synthetic_data = gcm.sample(num_samples=500)
+
+print("Synthetic data statistics (should be ~0 mean, ~1 std):")
+print(f"Mean: {np.mean(synthetic_data, axis=0)}")
+print(f"Std: {np.std(synthetic_data, axis=0, ddof=1)}")
+print("\nCorrelation structure is still preserved:")
+print(np.corrcoef(synthetic_data, rowvar=False))
+```
+
+## Development and Testing
+
+### Running Tests
+
+The package includes a comprehensive test suite that verifies correlation preservation, statistics handling, and edge cases. 
+
+#### Quick Start
+```bash
+# Run all tests
+make test
+
+# Run tests with verbose output
+make test-verbose
+
+# Run tests with coverage (if pytest-cov is installed)
+make test-coverage
+```
+
+#### Alternative Methods
+```bash
+# Using pytest (recommended)
+python -m pytest tests/ -v
+
+# Using unittest
+python -m unittest discover tests -v
+
+# Run specific test method
+python -m unittest tests.test_gcm.TestGCM.test_correlation_preservation -v
+```
+
+### Project Structure
+```
+gcm-syn/
+├── gcm/                 # Main package
+│   ├── __init__.py
+│   └── gcm.py          # Core GCM implementation
+├── tests/              # Test suite
+│   ├── __init__.py
+│   ├── README.md       # Test documentation
+│   └── test_gcm.py     # Comprehensive unit tests
+├── pyproject.toml      # Project configuration
+├── Makefile           # Development commands
+└── README.md          # This file
+```
+
+### Installing for Development
+```bash
+# Install in development mode
+pip install -e .
+
+# Install with development dependencies  
+pip install -e ".[dev]"
+```
+
+## Development
+
+This project uses Make for common development tasks:
+
+```bash
+# Run tests
+make test
+make test-coverage
+
+# Build package
+make build
+
+# Check current version and get suggestions for next version
+make version
+
+# Publish a new version to PyPI
+make publish VERSION=x.y.z
+```
+
+### Publishing Workflow
+
+The publishing process is automated and includes several safety checks:
+
+1. **Check current version**: Use `make version` to see the current version and suggested next versions
+2. **Publish**: Use `make publish VERSION=x.y.z` where x.y.z is the desired version number
+
+The publish process will:
+
+* Validate the version format (must be semver: x.y.z)
+* Check if the version already exists in pyproject.toml (only updates if different)
+* Verify that the git tag doesn't already exist
+* Clean and build the package
+* Upload to PyPI
+* Commit version changes (if any) and create git tag
+* Push changes and tags to the repository
+
+Example:
+
+```bash
+# Check what versions are available
+make version
+
+# Publish a patch release
+make publish VERSION=1.2.1
+
+# Publish a minor release
+make publish VERSION=1.3.0
+```
+
+The system prevents duplicate publications and ensures version consistency across pyproject.toml and git tags.

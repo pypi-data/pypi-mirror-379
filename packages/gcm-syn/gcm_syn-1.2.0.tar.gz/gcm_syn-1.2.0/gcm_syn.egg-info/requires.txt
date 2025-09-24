@@ -1,0 +1,12 @@
+numpy
+scipy
+
+[dev]
+pytest>=6.0
+pytest-cov>=2.0
+black
+flake8
+
+[test]
+pytest>=6.0
+pytest-cov>=2.0
