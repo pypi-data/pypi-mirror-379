@@ -1,0 +1,15 @@
+arcadedb_python/__init__.py,sha256=6-BPsUri3JRaGMQgPPz-jM-McwBxy55dyYsIQin2Wz4,1784
+arcadedb_python/exceptions.py,sha256=f6NPZ8mYw1PTjZqSumqtDNgc-udTMs0YwM4aky1LYO4,5697
+arcadedb_python/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arcadedb_python/api/client.py,sha256=dT0LUco-T9n-8tPnS_VVLpkPVOtSR_rJ87mm205vR_g,3045
+arcadedb_python/api/config.py,sha256=sjaGuf3xS516e3nTA1oNzJ2ybvJCC0KYyk4q01BSSls,1078
+arcadedb_python/api/sync.py,sha256=3uTDhdtmMykmw4fT82N4ZLy4k7GMs8l-fgkFI5ucPoo,4757
+arcadedb_python/dao/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arcadedb_python/dao/database.py,sha256=Fg3GPcFoez8amD1Dqoym6gAKykenzXhg1ysycU5P8e8,55818
+arcadedb_python/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arcadedb_python/model/database.py,sha256=XI24QKmTlYjd8jLZan-RMeo-KZf86niVCW_lp3L9ZEY,101
+arcadedb_python/model/request.py,sha256=qpnPmx2f3BAro0MMT9MWSvKC1OXnfeG2bbOY78J982Q,395
+arcadedb_python-0.3.0.dist-info/METADATA,sha256=Ca6jJLwYNFPLnN9rDDwlQP8JBTqZCPbZIMuF4bPiN-E,10106
+arcadedb_python-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+arcadedb_python-0.3.0.dist-info/licenses/LICENSE,sha256=F96EzotgWhhpnQTW2TcdoqrMDir1jyEo6H915tGQ-QE,11524
+arcadedb_python-0.3.0.dist-info/RECORD,,
