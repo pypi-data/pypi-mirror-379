@@ -1,0 +1,9 @@
+tabsearch/__init__.py,sha256=jXN7W3UFuq_Ey8I89n3KtM1BCLvORX5XpXX76zWwB5A,466
+tabsearch/core.py,sha256=F_hx0TGtoNRglfNzDW2SHbdc0QF2rmZWt0hGvHA_KFA,39862
+tabsearch/datasets.py,sha256=bBSdkyFeu4ayTAV4xtKTM7y5WYtTFNK0dTzfS6suS2g,912
+tabsearch/exceptions.py,sha256=SEN6zj9UiI3xlgxpI1x5BTBkyZopJxWeMad6eZvzUMU,799
+tabsearch-0.1.3.dist-info/licenses/LICENSE.txt,sha256=osCE7q98ls0QNJz8CtssN7ppRJvrKOmVpPHqMLlGlqA,11305
+tabsearch-0.1.3.dist-info/METADATA,sha256=i3mFFNPOKdEhkM_iLRSroaH1LbCS67X49orO_dhvv7M,13436
+tabsearch-0.1.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tabsearch-0.1.3.dist-info/top_level.txt,sha256=h4lHt5eTIqh1k-7mCgyu1qHWvyYqwfhNl0uMHdVx2Ts,10
+tabsearch-0.1.3.dist-info/RECORD,,
