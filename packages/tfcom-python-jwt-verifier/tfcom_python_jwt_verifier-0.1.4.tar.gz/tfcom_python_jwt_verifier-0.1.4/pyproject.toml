@@ -1,0 +1,7 @@
+[project]
+name = "tfcom-python-jwt-verifier"
+version = "0.1.4"
+description = "Dummy package for testing stuff."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []

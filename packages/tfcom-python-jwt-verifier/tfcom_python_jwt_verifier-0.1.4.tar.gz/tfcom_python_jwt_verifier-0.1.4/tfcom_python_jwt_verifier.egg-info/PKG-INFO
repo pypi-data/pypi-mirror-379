@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: tfcom-python-jwt-verifier
+Version: 0.1.4
+Summary: Dummy package for testing stuff.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown

@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+tfcom_python_jwt_verifier.egg-info/PKG-INFO
+tfcom_python_jwt_verifier.egg-info/SOURCES.txt
+tfcom_python_jwt_verifier.egg-info/dependency_links.txt
+tfcom_python_jwt_verifier.egg-info/top_level.txt
