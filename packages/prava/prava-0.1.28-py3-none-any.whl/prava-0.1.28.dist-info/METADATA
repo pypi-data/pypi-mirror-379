@@ -1,0 +1,179 @@
+Metadata-Version: 2.4
+Name: prava
+Version: 0.1.28
+Summary: Prava Python SDK for computer-use automation
+Project-URL: Homepage, https://prava.co
+Project-URL: Repository, https://github.com/pravaco/prava-sdk
+Author: Prava AI
+License: MIT
+Keywords: api,automation,computer-use,prava,sdk
+Requires-Python: <3.13,>=3.8
+Requires-Dist: requests>=2.27.0
+Description-Content-Type: text/markdown
+
+# Prava SDK
+
+Prava is an API for Labor. We're a ML lab training computer-use models to do digital labor and our Controls API is a way to interact with them.
+
+## Installation
+
+```bash
+pip install prava  # or: npm install prava
+```
+
+## Quick Start
+
+```python
+from prava import ControlClient
+
+client = ControlClient()
+
+response = client.predict({
+    "model": "prava-af-medium",
+    "instruction": "Click the submit button",
+    "image_url": "data:image/png;base64,..."
+})
+
+action = response["action"]
+# {"kind": "left_click", "coordinate": {"x": 245, "y": 67}}
+```
+
+## How It Works
+
+Similar to Claude CUA and OpenAI's ChatGPT Agent, this API is intended to be used in a loop which starts off with a screenshot provided by the user, we then propose an action, the user executes it, we initiate a screenshot, and then predicts the next action. The loop keeps going until we stop.
+
+## Models
+
+| Model | Use Case |
+|-------|----------|
+| `prava-af-medium` | General automation |
+| `prava-quick-click` | Simple, fast automation |
+
+## Action Types
+
+| Action | Example |
+|--------|---------|
+| `left_click` | `{"kind": "left_click", "coordinate": {"x": 245, "y": 67}}` |
+| `type` | `{"kind": "type", "text": "hello@example.com"}` |
+| `key` | `{"kind": "key", "keys": ["Enter"]}` |
+| `scroll` | `{"kind": "scroll", "delta_y": -100}` |
+| `wait` | `{"kind": "wait", "duration_ms": 1000}` |
+| `stop` | `{"kind": "stop"}` |
+
+## Playwright Example
+
+```python
+from playwright.sync_api import sync_playwright
+from prava import ControlClient
+
+client = ControlClient()
+
+with sync_playwright() as p:
+    browser = p.chromium.launch()
+    page = browser.new_page()
+    page.goto("https://www.google.com")
+
+    previous_actions = []
+
+    for step in range(5):
+        screenshot = page.screenshot()
+        image_url = client.screenshot_to_data_uri(screenshot)
+
+        response = client.predict({
+            "model": "prava-af-medium",
+            "instruction": "Search for 'Prava AI'",
+            "image_url": image_url,
+            "previous_actions": previous_actions
+        })
+
+        action = response["action"]
+        if action["kind"] == "stop":
+            break
+
+        if action["kind"] == "left_click":
+            coord = action["coordinate"]
+            page.mouse.click(coord["x"], coord["y"])
+        elif action["kind"] == "type":
+            page.keyboard.type(action["text"])
+
+        previous_actions.append(action)
+
+    browser.close()
+```
+
+## PyAutoGUI Example
+
+```python
+import pyautogui
+from prava import ControlClient
+
+client = ControlClient()
+
+# Take desktop screenshot
+screenshot = pyautogui.screenshot()
+import io
+img_bytes = io.BytesIO()
+screenshot.save(img_bytes, format='PNG')
+image_url = client.screenshot_to_data_uri(img_bytes.getvalue())
+
+# Get action
+response = client.predict({
+    "model": "prava-af-medium",
+    "instruction": "Open the calculator app",
+    "image_url": image_url
+})
+
+# Execute action
+action = response["action"]
+if action["kind"] == "left_click":
+    coord = action["coordinate"]
+    pyautogui.click(coord["x"], coord["y"])
+```
+
+## TypeScript
+
+```typescript
+import { ControlClient } from 'prava';
+import { chromium } from 'playwright';
+
+const client = new ControlClient();
+
+const browser = await chromium.launch();
+const page = await browser.newPage();
+await page.goto('https://www.google.com');
+
+const screenshot = await page.screenshot();
+const imageUrl = client.screenshotToDataUri(new Uint8Array(screenshot));
+
+const response = await client.predict({
+  model: 'prava-af-medium',
+  instruction: 'Search for "Prava AI"',
+  image_url: imageUrl
+});
+
+const action = response.action;
+if (action?.kind === 'left_click' && action.coordinate) {
+  await page.mouse.click(action.coordinate.x, action.coordinate.y);
+}
+
+await browser.close();
+```
+
+## API Keys
+
+```python
+from prava import ControlClient
+
+# Pass API key directly
+client = ControlClient(api_key="prava_sk_...")
+
+# Or use environment variable
+import os
+os.environ["PRAVA_API_KEY"] = "prava_sk_..."
+client = ControlClient()
+```
+
+## Examples
+
+- [`examples/playwright_example.py`](examples/playwright_example.py) - Browser automation
+- [`examples/pyautogui_example.py`](examples/pyautogui_example.py) - Desktop automation
