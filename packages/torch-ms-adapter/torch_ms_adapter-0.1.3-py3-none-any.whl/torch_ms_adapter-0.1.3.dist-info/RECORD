@@ -1,0 +1,13 @@
+torch_ms_adapter/__init__.py,sha256=sBLESnUav6Z8VmKu4ZhRezkVOQy3IbeqoWbxlYuELPg,1299
+torch_ms_adapter/autograd.py,sha256=kkOQqTVW1CPdCD-njVTuQQdBKuTHHNOcN9ak5CVB42Y,957
+torch_ms_adapter/data.py,sha256=6pkcmeOJwW2QnsvZUE0zlHkEZzyX9uqoqyubS1BGqaQ,3029
+torch_ms_adapter/functional.py,sha256=v0fX8-i1_IqdM2i2Wm9a3ModwNkit4Cm9-CWi0LRbms,66
+torch_ms_adapter/optim.py,sha256=D9kP1EImOZAXOl4saEtBFV5kjFwQLqqzxZq1BYWjT2c,442
+torch_ms_adapter/tensor.py,sha256=Sya6KThXZsh8NFGCO_uTN3wDyI3wOoYxogujRkT9dhw,147
+torch_ms_adapter/training.py,sha256=3m8fdkJr9yGXAyjMpU4LNylQmZZTZYPCi4R7vv7PKu4,555
+torch_ms_adapter/nn/__init__.py,sha256=kDwttF37s73Ri9btbGLB9JDSaNatRtthJPKyPtyUOfg,2470
+torch_ms_adapter/nn/functional.py,sha256=1llf5Xo3Vyosqh9ETqAdlnDV_dA-M71KhiEpjTAFsKA,150
+torch_ms_adapter-0.1.3.dist-info/METADATA,sha256=J51cXg3L5nNiyHMiusbXACNOKWRvY9wIxIzwhm-HpPs,2078
+torch_ms_adapter-0.1.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+torch_ms_adapter-0.1.3.dist-info/top_level.txt,sha256=8Ju1R-81hMCQHOJJ631xx_N3Qirx0kIjJoqio3v2nLw,17
+torch_ms_adapter-0.1.3.dist-info/RECORD,,
