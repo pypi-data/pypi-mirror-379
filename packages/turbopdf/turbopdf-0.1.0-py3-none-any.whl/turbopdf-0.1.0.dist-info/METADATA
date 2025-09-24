@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: turbopdf
+Version: 0.1.0
+Summary: Generador de PDFs simples y rápidos para Python, ideal para entornos educativos y gubernamentales.
+Home-page: https://example.com/no-publicado-ainda
+Author: Ecosistema UNP
+Author-email: EcosistemaUNP <ecosistema@unp.edu.pe>
+License: MIT
+Project-URL: Homepage, https://github.com/EcosistemaUNP/python-ecosistema-turbopdf
+Project-URL: Repository, https://github.com/EcosistemaUNP/python-ecosistema-turbopdf
+Project-URL: Documentation, https://github.com/EcosistemaUNP/python-ecosistema-turbopdf#readme
+Project-URL: Changelog, https://github.com/EcosistemaUNP/python-ecosistema-turbopdf/releases
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: LaTeX
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: reportlab>=4.0.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# 🚀 ecosistema-turbopdf
+
+**Generador de PDFs en Django con componentes modulares y estilo profesional.**
+
+Construye documentos PDF personalizados usando plantillas HTML reutilizables (componentes) y `wkhtmltopdf`. Ideal para formularios, contratos, informes y procesos documentales.
+
+> ✨ Potente, modular y fácil de integrar en cualquier proyecto Django.
+
+---
+
+## 🔧 Instalación
+
+Esta librería no está en PyPI, por lo que debe instalarse directamente desde GitHub.
+
+### Desde repositorio privado o público
+
+```bash
+pip install git+https://github.com/EcosistemaUNP/python-ecosistema-turbopdf
+ 
