@@ -1,0 +1,7 @@
+drf_response_wrapper/__init__.py,sha256=GNUmROpvHE-QUkttZOmIj39ZVM798Twc1wCf1TGmiVk,149
+drf_response_wrapper/middleware.py,sha256=BdJ3gV3hEPkwxMmKppLQ2wkt4PdIFKD3UdR3dc5Cgg8,5416
+drf_response_wrapper/version.py,sha256=XkPvsvM_WVEZPlWyuBSRE8x661h83IokHn3gjjjcxjk,30
+drf_response_wrapper-1.2.3.dist-info/METADATA,sha256=G2w0fjAZ3oDqUi4p4ZTZdUJ-QCg2BJXm-mxoMkEZBY0,2361
+drf_response_wrapper-1.2.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+drf_response_wrapper-1.2.3.dist-info/top_level.txt,sha256=85Qj0MdobFgHPbBYrjdmF1eEAXDaouy0ceepu4iXkUY,21
+drf_response_wrapper-1.2.3.dist-info/RECORD,,
