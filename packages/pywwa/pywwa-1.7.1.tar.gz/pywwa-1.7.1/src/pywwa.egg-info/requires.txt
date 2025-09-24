@@ -1,0 +1,17 @@
+click
+geopandas
+metar>=1.7
+metpy
+netcdf4
+numpy
+pandas
+pint
+psycopg
+pybufrkit
+pyiem
+pymemcache
+pyproj
+shapely
+sqlalchemy
+treq
+twisted

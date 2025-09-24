@@ -1,0 +1,67 @@
+# This is lame, since we are pip installing pyIEM and want to have
+# all its dependencies fullfilled by conda
+dependencies:
+ - affine
+ - cartopy>=0.18
+ - codecov
+ - cython
+ - descartes
+ - fiona
+ # need to pin for comparables
+ - freetype>=2.10
+ - gdal
+ - geojson
+ - geopandas
+ # talk to google
+ - google-api-python-client
+ # util scripts
+ - httpx
+ - imagemagick
+ # templating
+ - jinja2
+ - matplotlib>=3.3.0
+ - metpy
+ - metar>=1.7.0
+ - mock
+ # needed for fiona?
+ - ncurses
+ - netCDF4
+ - numpy
+ - pandas
+ # geoplot usage
+ - pillow
+ - pint
+ - pip
+ - psycopg
+ # Transient via pyIEM
+ - pyarrow
+ # I'm lame
+ # - pyiem
+ # BUFR processing
+ - pybufrkit
+ # Models
+ - pydantic
+ # Used by wpc_ero_geojson
+ - pyogrio
+ # gini reader
+ - pyproj
+ - pytest
+ - pytest-cov
+ - pytest-mpl
+ - pytest-runner
+ # For testing
+ - pytest-twisted
+ - rasterstats
+ # interpolation
+ - scipy
+ # build
+ - setuptools
+ - setuptools_scm
+ - shapely
+ - sqlalchemy
+ - tqdm
+ # vtec_parser
+ - treq
+ - twisted
+ - xarray
+ 
