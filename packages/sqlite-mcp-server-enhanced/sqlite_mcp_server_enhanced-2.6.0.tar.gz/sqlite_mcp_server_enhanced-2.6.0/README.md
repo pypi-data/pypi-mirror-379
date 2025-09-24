@@ -1,0 +1,413 @@
+# SQLite MCP Server
+
+*Last Updated: September 22, 2025 2:04 AM EST*
+
+*Enterprise-grade SQLite with AI-native JSON operations & intelligent workflow automation – v2.6.0*
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/writenotenow/sqlite-mcp-server)](https://hub.docker.com/r/writenotenow/sqlite-mcp-server)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Version](https://img.shields.io/badge/version-v2.6.0-green)
+
+Transform SQLite into a powerful, AI-ready database engine with **73 specialized tools** for advanced analytics, JSON operations, text processing, vector search, geospatial operations, and intelligent workflow automation.
+
+<!-- mcp-name: io.github.neverinfamous/sqlite-mcp-server -->
+
+---
+
+## 📋 Table of Contents
+
+### Quick Start
+- [✅ Quick Test - Verify Everything Works](#-quick-test---verify-everything-works)
+- [🚀 Quick Start](#-quick-start)
+- [🔥 Core Capabilities](#-core-capabilities)
+- [🏢 Enterprise Features](#-enterprise-features)
+
+### Configuration & Usage
+- [📚 MCP Client Configuration](#-mcp-client-configuration)
+- [🎨 Usage Examples](#-usage-examples)
+- [📊 Tool Categories](#-tool-categories)
+
+### Resources & Information
+- [🏆 Why Choose SQLite MCP Server?](#-why-choose-sqlite-mcp-server)
+- [📚 Complete Documentation](#-complete-documentation)
+- [🔗 Additional Resources](#-additional-resources)
+- [🚀 Quick Links](#-quick-links)
+- [📈 Project Stats](#-project-stats)
+
+---
+
+## ✅ **Quick Test - Verify Everything Works**
+
+**Test all 73 tools in 30 seconds!**
+
+```bash
+# Quick smoke test
+python test_runner.py --quick
+
+# Standard comprehensive test (recommended)
+python test_runner.py --standard
+
+# Full test suite with edge cases
+python test_runner.py --full
+```
+
+**Expected output:**
+```
+🚀 SQLite MCP Server Comprehensive Test Suite v2.6.0
+================================================================
+
+🔍 Environment Detection:
+  ✅ SQLite 3.50.4 (JSONB supported)
+  ✅ Python 3.12.11  
+  ✅ MCP 1.14.0
+
+📊 Testing 73 Tools across 14 categories...
+
+✅ Core Database Operations (8/8 passed)
+✅ JSON Helper Tools (6/6 passed)  
+✅ JSON Operations (12/12 passed)  
+✅ Text Processing (8/8 passed)
+🎉 SUCCESS: All 73 tools tested successfully!
+```
+
+### 🛡️ **Security Testing**
+
+**NEW: Comprehensive SQL injection protection testing**
+
+```bash
+# Test SQL injection protection (from tests directory)
+cd tests && python test_sql_injection.py
+
+# Expected result: 🛡️ Overall security posture: STRONG
+```
+
+**What it tests:**
+- Protection against the SQL injection vulnerability found in original Anthropic SQLite MCP server
+- 11 different attack vectors including multiple statements, UNION injection, blind injection
+- Parameter binding protection with malicious payloads
+- Stacked queries and comment-based injection attempts
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 🚀 **Quick Start**
+
+### **Option 1: Docker (Recommended)**
+```bash
+# Pull and run instantly
+docker pull writenotenow/sqlite-mcp-server:latest
+
+docker run -i --rm \
+  -v $(pwd):/workspace \
+  writenotenow/sqlite-mcp-server:latest \
+  --db-path /workspace/database.db
+```
+
+### **Option 2: Python Installation**
+```bash
+# Install from PyPI
+pip install mcp-server-sqlite
+
+# Or install from source
+git clone https://github.com/neverinfamous/sqlite-mcp-server.git
+cd sqlite-mcp-server
+pip install -r requirements.txt
+
+# Run the server
+python start_sqlite_mcp.py --db-path ./database.db
+```
+
+### **Option 3: Test in 30 Seconds**
+```bash
+git clone https://github.com/neverinfamous/sqlite-mcp-server.git
+cd sqlite-mcp-server
+python test_runner.py --quick
+```
+
+### **🆕 NEW in v2.6.0: Complete JSON Operations Suite**
+
+**5 Major Improvements in this release:**
+- 🎯 **JSON Helper Tools** - 6 specialized tools for simplified JSON operations with path validation and merging
+- 🤖 **JSON Auto-Normalization** - Automatically fixes Python-style JSON with configurable strict mode  
+- 🛡️ **Parameter Binding Interface** - Enhanced MCP tools with SQL injection prevention
+- 📦 **Automatic Parameter Serialization** - Direct object/array parameters, no manual JSON.stringify()
+- 🧠 **Enhanced JSON Error Diagnostics** - Intelligent error categorization with contextual guidance
+
+### **🔥 Core Capabilities**
+- 📊 **Statistical Analysis** - Descriptive stats, percentiles, time series analysis
+- 🔍 **Advanced Text Processing** - Regex, fuzzy matching, phonetic search, similarity
+- 🧠 **Vector/Semantic Search** - AI-native embeddings, cosine similarity, hybrid search
+- 🗺️ **SpatiaLite Geospatial** - Enterprise GIS with spatial indexing and operations
+- 🔐 **Transaction Safety** - Auto-wrapped transactions with rollback protection
+- 🎛️ **73 Specialized Tools** - Complete database administration and analytics suite
+
+### **🏢 Enterprise Features**
+- 📈 **Business Intelligence** - Integrated insights memo and workflow automation
+- 🔄 **Backup/Restore** - Enterprise-grade operations with integrity verification
+- 🎯 **Full-Text Search (FTS5)** - Advanced search with BM25 ranking and snippets
+- 🏗️ **Virtual Tables** - Smart CSV/JSON import with automatic type inference
+- ⚙️ **Advanced PRAGMA** - Complete SQLite configuration and optimization
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 📚 **MCP Client Configuration**
+
+### **Claude Desktop**
+```json
+{
+  "mcpServers": {
+    "sqlite-mcp-server": {
+      "command": "python",
+      "args": ["/path/to/sqlite-mcp-server/start_sqlite_mcp.py", "--db-path", "/path/to/database.db"]
+    }
+  }
+}
+```
+
+### **Docker with Claude Desktop**
+```json
+{
+  "mcpServers": {
+    "sqlite-mcp-server": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-v", "/path/to/project:/workspace", "writenotenow/sqlite-mcp-server:latest", "--db-path", "/workspace/database.db"]
+    }
+  }
+}
+```
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 🎨 **Usage Examples**
+
+### **Data Analysis Workflow**
+```bash
+# 1. Quick validation
+python test_runner.py --quick
+
+# 2. Start with your data
+python start_sqlite_mcp.py --db-path ./sales_data.db
+
+# 3. Use with Claude/Cursor for:
+#    - Statistical analysis of your datasets
+#    - Text processing and pattern extraction  
+#    - Vector similarity search
+#    - Geospatial analysis and mapping
+#    - Business intelligence insights
+```
+
+### **Docker Development**
+```bash
+# Development with live reload
+docker run -i --rm \
+  -v $(pwd):/workspace \
+  -e SQLITE_DEBUG=true \
+  writenotenow/sqlite-mcp-server:latest \
+  --db-path /workspace/dev.db
+```
+
+### **🎯 JSON Helper Tools - Simplified JSON Operations**
+
+**NEW in v2.6.0:** Six powerful JSON helper tools that make complex JSON operations simple:
+
+```javascript
+// ✅ Insert JSON with auto-normalization
+json_insert({
+  "table": "products",
+  "column": "metadata", 
+  "data": {'name': 'Product', 'active': True, 'price': None}
+})
+
+// ✅ Update JSON by path
+json_update({
+  "table": "products",
+  "column": "metadata",
+  "path": "$.price",
+  "value": 29.99,
+  "where_clause": "id = 1"
+})
+
+// ✅ Query JSON with complex filtering
+json_query({
+  "table": "products",
+  "column": "metadata",
+  "filter_paths": {"$.category": "electronics"},
+  "select_paths": ["$.name", "$.price"]
+})
+```
+
+**JSON Helper Tools:**
+- 🎯 **json_insert** - Insert JSON data with auto-normalization
+- 🔄 **json_update** - Update JSON by path with creation support  
+- 🔍 **json_select** - Extract JSON data with multiple output formats
+- 🔎 **json_query** - Complex JSON filtering and aggregation
+- ✅ **json_validate_path** - Validate JSON paths with security checks
+- 🔗 **json_merge** - Merge JSON objects with conflict resolution
+
+**Auto-normalization still works:**
+- 🔧 Single quotes → Double quotes  
+- 🔧 Python `True`/`False` → JSON `true`/`false`
+- 🔧 Python `None` → JSON `null`
+- 🔧 Trailing commas removed
+- 🛡️ Security validation prevents malicious input
+
+### **🧠 Enhanced JSON Error Diagnostics**
+
+**Enhanced in v2.6.0:** When JSON validation fails, get intelligent, contextual error messages with specific guidance:
+
+```javascript
+// ❌ Invalid JSON input:
+validate_json('{key_without_quotes: "value"}')
+
+// ✅ Enhanced error response:
+{
+  "valid": false,
+  "error": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+  "enhanced_message": "JSON validation failed (structural_syntax): Expecting property name...",
+  "error_context": {
+    "error_type": "structural_syntax",
+    "security_concern": false,
+    "suggestions": [
+      "Ensure all object keys are properly quoted strings",
+      "Check for missing colons (:) between keys and values",
+      "Verify proper key-value pair structure: \"key\": \"value\""
+    ]
+  }
+}
+```
+
+**Enhanced Error Categories:**
+- 🔧 **Structural Issues** - Missing quotes, colons, brackets with specific fix suggestions
+- 🛡️ **Security Warnings** - Detects potential SQL injection patterns in JSON strings  
+- 📝 **Encoding Problems** - Character encoding and escape sequence guidance
+- 🎯 **Context-Aware Tips** - Line/column position with targeted recommendations
+
+### **🛡️ Enhanced Parameter Binding + Auto-Serialization**
+
+**NEW in v2.6.0:** Built-in SQL injection protection with automatic JSON serialization:
+
+```javascript
+// ✅ SECURE: Parameter binding prevents injection
+read_query({
+  "query": "SELECT * FROM users WHERE name = ? AND age > ?",
+  "params": ["John", 25]
+})
+
+// ✅ NEW: Direct object/array parameters (auto-serialized)
+write_query({
+  "query": "INSERT INTO products (metadata, tags) VALUES (?, ?)",
+  "params": [
+    {"name": "Product", "price": 29.99, "active": true},  // Auto-serialized to JSON
+    ["electronics", "featured", "new"]                    // Auto-serialized to JSON
+  ]
+})
+
+// ✅ SIMPLIFIED: No more manual JSON.stringify()
+// Before v2.6.0:
+write_query({
+  "query": "INSERT INTO table (data) VALUES (?)",
+  "params": [JSON.stringify({"key": "value"})]  // Manual serialization required
+})
+
+// After v2.6.0:
+write_query({
+  "query": "INSERT INTO table (data) VALUES (?)",
+  "params": [{"key": "value"}]  // Automatic serialization!
+})
+```
+
+**v2.6.0 Benefits:**
+- 🛡️ **SQL Injection Prevention** - Parameter binding treats malicious input as literal data
+- 📦 **Auto-Serialization** - Objects and arrays automatically converted to JSON strings  
+- 🔄 **Backward Compatible** - Existing queries continue to work unchanged
+- ⚡ **Better Performance** - Query plan caching and parameter optimization
+- 📝 **Cleaner API** - No manual JSON.stringify() or parameter preparation needed
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 📊 **Tool Categories**
+
+The SQLite MCP Server provides **73 specialized tools** across **14 categories**:
+
+> 💡 **Want the complete tool list?** See the [**detailed tool reference**](./docs/FULL-README.md#-available-tools-resources--prompts) with descriptions for all 73 tools, 7 resources, and 7 prompts.
+
+| Category | Tool Count | Description |
+|----------|------------|-------------|
+| **[Core Database](./docs/FULL-README.md#core-database-tools-15-tools)** | 15 | CRUD operations, schema management, transactions |
+| **[JSON Helper Tools](./docs/FULL-README.md#json-helper-tools-6-tools)** | 6 | Simplified JSON operations, path validation, merging |
+| **[Text Processing](./docs/FULL-README.md#text-processing--advanced-search-9-tools)** | 9 | Regex, fuzzy matching, phonetic search, similarity |
+| **[Statistical Analysis](./docs/FULL-README.md#statistical-analysis-8-tools)** | 8 | Descriptive stats, percentiles, time series |
+| **[Virtual Tables](./docs/FULL-README.md#virtual-table-management-8-tools)** | 8 | CSV, R-Tree, series generation |
+| **[Semantic Search](./docs/FULL-README.md#semantic-search--embeddings-8-tools)** | 8 | Embeddings, similarity, hybrid search |
+| **[Geospatial](./docs/FULL-README.md#geospatial-spatialite-7-tools)** | 7 | Spatial indexing, geometric operations |
+| **[PRAGMA Operations](./docs/FULL-README.md#advanced-pragma-operations-5-tools)** | 5 | Configuration, optimization, introspection |
+| **[Full-Text Search](./docs/FULL-README.md#full-text-search-fts5-3-tools)** | 3 | FTS5 creation, indexing, BM25 ranking |
+| **[Vector Optimization](./docs/FULL-README.md#vector-index-optimization-2-tools)** | 2 | ANN search, clustering, performance |
+| **[Data Analysis](./docs/FULL-README.md#data-analysis--schema-tools-2-tools)** | 2 | Smart CSV/JSON import with type inference |
+| **[Resources](./docs/FULL-README.md#-mcp-resources-7-resources)** | 7 | Database meta-awareness, performance insights |
+| **[Prompts](./docs/FULL-README.md#-mcp-prompts-7-prompts)** | 7 | Guided workflows, optimization recipes |
+
+> 💡 **Cursor Users:** You can enable only the categories you need in your MCP client settings to reduce tool noise and improve stability. Each number above shows the **count of tools** in that category.
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 🏆 **Why Choose SQLite MCP Server?**
+
+✅ **AI-Friendly** - JSON auto-normalization and intelligent error messages reduce debugging time  
+✅ **Just Works** - Built-in security and parameter binding with zero configuration  
+✅ **Smart Diagnostics** - Enhanced error context provides actionable guidance when issues occur
+✅ **Instantly Testable** - Validate all 73 tools in 30 seconds  
+✅ **Production Ready** - Enterprise-grade testing and validation  
+✅ **Comprehensive** - Everything you need in one package  
+✅ **Docker Ready** - Containerized for easy deployment  
+✅ **Zero Breaking Changes** - All existing code continues to work
+
+[⬆️ Back to Table of Contents](#-table-of-contents)  
+
+## 📚 **Complete Documentation**
+
+**[→ Full Documentation & Examples](./docs/FULL-README.md)**
+
+Comprehensive documentation including:
+- **Detailed tool reference** - All 73 tools with examples
+- **Advanced configuration** - Performance tuning and optimization
+- **Integration guides** - MCP clients, Docker, CI/CD
+- **Feature deep-dives** - Text processing, vector search, geospatial
+- **Best practices** - Query patterns, troubleshooting, workflows
+- **API reference** - Complete tool schemas and parameters
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 🔗 **Additional Resources**
+
+- **[Testing Guide](./tests/README.md)** - Comprehensive testing documentation
+- **[Contributing](./CONTRIBUTING.md)** - How to contribute to the project
+- **[Security Policy](./SECURITY.md)** - Security guidelines and reporting
+- **[Code of Conduct](./CODE_OF_CONDUCT.md)** - Community guidelines
+- **[Docker Hub](https://hub.docker.com/r/writenotenow/sqlite-mcp-server)** - Container images
+- **[GitHub Releases](https://github.com/neverinfamous/sqlite-mcp-server/releases)** - Version history
+- **[Adamic Support Blog](https://adamic.tech/)** - Project announcements and releases
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 🚀 **Quick Links**
+
+| Action | Command |
+|--------|---------|
+| **Test Everything** | `python test_runner.py --standard` |
+| **Docker Quick Start** | `docker run -i --rm -v $(pwd):/workspace writenotenow/sqlite-mcp-server:latest` |
+| **Install from PyPI** | `pip install mcp-server-sqlite` |
+| **View Full Docs** | [docs/FULL-README.md](./docs/FULL-README.md) |
+| **Report Issues** | [GitHub Issues](https://github.com/neverinfamous/sqlite-mcp-server/issues) |
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
+
+## 📈 **Project Stats**
+
+- **73 Tools** across 14 categories
+- **2,000+ lines** of comprehensive documentation  
+- **Multi-platform** support (Windows, Linux, macOS)
+- **Docker images** for amd64 and arm64
+- **Enterprise testing** with comprehensive validation
+- **Active development** with regular updates
+
+[⬆️ Back to Table of Contents](#-table-of-contents)
