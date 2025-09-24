@@ -1,0 +1,12 @@
+img2ico/__init__.py,sha256=3xFzmGXtE-f2tgkWnSqUaYCq_cg6Q4j-Hc4ACDasYxY,789
+img2ico/__main__.py,sha256=vtEoXd6Z9I5Kh4L7rUDB9zIIeqaPiu22Y1MYMu-iNCM,3651
+img2ico/logging/__init__.py,sha256=1GeY-U691DZJKFvtQY7qUdsPSg9w0nAGDxCux4IEYik,835
+img2ico/logging/_logging.py,sha256=OcM_XTYCmjNXEHPnNamVgwrn3ZKqzKbEwFc6_a6q9Rw,7415
+img2ico/utils/__init__.py,sha256=GUFkwnZXqflSh7hjpjAnTqhvl6E2d7kMX3fvr-NEJn0,746
+img2ico/utils/_utils.py,sha256=CvY2unw-hfiPQditvTO8pP9oO0C3CqnhNwEuTyky4dI,3445
+img2ico-0.1.0rc0.dist-info/licenses/LICENSE,sha256=a4EiULMcEyW7xIrlxkSWdPyFEck5vBNN5oxkcasmdNc,1063
+img2ico-0.1.0rc0.dist-info/METADATA,sha256=IchbAYxj-60znziAm7ew_V5cUkHAeh3kgxawblQZJj4,5954
+img2ico-0.1.0rc0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+img2ico-0.1.0rc0.dist-info/entry_points.txt,sha256=RFtF9rjwo9fS99SEQJ2KF8yzCLb-up7MnDbxNeX-pSo,56
+img2ico-0.1.0rc0.dist-info/top_level.txt,sha256=W-r0Qv88M-uYN2OxkONwnkyaNgYFsoyiubae9FgvwRc,8
+img2ico-0.1.0rc0.dist-info/RECORD,,
