@@ -1,0 +1,105 @@
+Metadata-Version: 2.3
+Name: couleuvre
+Version: 0.0.1
+Summary: Vyper Language Server
+Keywords: vyper,language-server,lsp
+Author: trocher
+Author-email: trocher <tanguy.rocher@chainsecurity.com>
+License: MIT License
+         
+         Copyright (c) 2025 trocher
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+Requires-Dist: lsprotocol>=2023.0.1
+Requires-Dist: pygls>=1.3.1
+Requires-Dist: uv>=0.7.7
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Couleuvre
+
+A lightweight Language Server for Vyper. It parses Vyper modules, extracts symbols, and supports basic navigation such as go-to-definition (including across imports), works with any Vyper versions, and doesn't require Vyper to be installed.
+
+## Features
+
+
+| Feature                       | Status       |
+| ----------------------------- | ------------ |
+| Syntax Highlighting           | ❌ Planned   |
+| Go to Definition              | ⚠️ Alpha     |
+| Go to Modules                 | ⚠️ Alpha     |
+| Document Symbols              | ✅ Supported |
+| Workspace Symbols             | ❌ Planned   |
+| References                    | ❌ Planned   |
+| Hover Information             | ❌ Planned   |
+| Diagnostics (Errors/Warnings) | ❌ Planned   |
+| Code Completion               | ❌ Planned   |
+| Document Formatting           | ❌ Planned   |
+
+- Automatic environment handling:
+  - If the current environment already has the requested `vyper` version, use it directly
+  - Otherwise, spin up and cache a dedicated `uv`-managed venv with the required `vyper` version
+
+
+## Requirements
+
+- Python >= 3.10
+- `uv` (https://github.com/astral-sh/uv)
+
+## Installation
+
+```bash
+uv sync
+```
+
+## Usage
+
+- As an LSP server (from source):
+
+```bash
+uv run -m couleuvre
+```
+
+- Through the [VScode extension](https://github.com/trocher/vscode-vyper-lsp)
+
+## How Vyper version is selected
+
+- Contracts can specify the compiler version via a pragma or annotation in the source.
+- If no version is found, a default can be provided by the server or it will error.
+- Environment usage:
+  - If the running environment's `vyper` matches the contract's version, it is used directly. This allows for resolving imports by using the current environment's search paths (e.g. snekmate)
+  - Otherwise, Couleuvre creates/uses a cached virtualenv (via `uv`) for that version and runs Vyper with that interpreter. In this case, external imports are not resolved.
+
+
+
+Your editor should connect to the server via stdio (pygls). Point your client configuration to the above command.
+
+## Testing
+
+```bash
+uv run pytest
+```
+
+## Alternatives
+
+- The official Vyper Language Server (https://github.com/vyperlang/vyper-lsp) is more feature-complete but only supports Vyper >= 0.4.1 and requires Vyper to be installed in the environment.
+
+## Disclaimer
+
+Couleuvre is in early development, use at your own risk. Couleuvre is not affiliated with the Vyper project.
