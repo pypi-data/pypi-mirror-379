@@ -1,0 +1,17 @@
+py_termio/__init__.py,sha256=eLHXijmTTe_F-9pplD7cojjb4_lUV3Y40gT9I6kfCSk,104
+py_termio/_consts.py,sha256=gE_rcPaJYJatlFwL8bX_TuV3h0rdOSwRe9R7FxOJZC8,125
+py_termio/_read.py,sha256=J5dtkAwLnZhlrM5qJluHJFZTCmY38ZrV4Wdue4KC--Q,2243
+py_termio/consts.py,sha256=ikV3V6jV2Ws7NGbN7b-nBqS7HSupwI6WT2uGBBGSA0M,927
+py_termio/exceptions.py,sha256=5xC2BFPwZ4oftPvtGGMT5TP-MwQrMwekouCxIVEQEs0,93
+py_termio/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_termio/types.py,sha256=587C4FJXzblnHUsCp7legKABmUiwhCwiaBiYXJvt4Fc,661
+py_termio/utils.py,sha256=m_5wpKHGo7-zaD0j-iVTDBRAAiS5itwFCt3KTVW3eKc,961
+py_termio/_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_termio/_utils/_unix_utils.py,sha256=LUNtdNxS5MDoUDa6jxYcM9RtpM_Si3XQypH0VMotXV0,1394
+py_termio/_utils/_utils.py,sha256=d7o5o-uhf3TjSoI6mQau3mdAicA093s13vRyLOZoeZw,1380
+py_termio/_utils/_win_utils.py,sha256=CfvXs_89A6pvn78qe02Lte6Uveq5nl5xRNNzpPugFvo,2635
+py_termio-0.1.0.dist-info/licenses/LICENSE.txt,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+py_termio-0.1.0.dist-info/METADATA,sha256=hrTC0098-fHP6vtbbDQNQQNtd1ghVdesjgDGjZakpSY,9881
+py_termio-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+py_termio-0.1.0.dist-info/top_level.txt,sha256=fM8i2gpyH_x6kx7Q-ZBQ_uWgJxpkfG847gwjG7UqRSo,10
+py_termio-0.1.0.dist-info/RECORD,,
