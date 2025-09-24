@@ -1,0 +1,4 @@
+[console_scripts]
+tashan-scispark = tashan_scispark.cli:main
+tashan-scispark-mcp = tashan_scispark.mcp_server:main
+tashan-scispark-worker = tashan_scispark.celery_worker:main
