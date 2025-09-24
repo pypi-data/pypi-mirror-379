@@ -1,0 +1,22 @@
+[project]
+name = "pysvg2csv"
+version = "2025.9.24"
+description = "Package to convert SVG paths to CSV data and LaTeX commands"
+authors = [
+    { name = "Amit Manohar Manthanwar", email = "manthanwar@hotmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+[project.urls]
+repository = "https://github.com/manthanwar/pysvg2csv"
+
+[dependency-groups]
+test = ["pytest == 8.4.1", "pytest-cov == 7.0.0"]
+
+
+[tool.pysvg2csv_metadata]
+version = "1.0.0"
+created = { year = "2025", month = "09", date = "23" }
+made_in = [{ city = "Pune", country = "India" }]
+test_command = "pytest && ./tests/clean_cache.py"
