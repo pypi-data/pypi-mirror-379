@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphs_wendyhielo"
+version = "0.1.0"
+description = "Graph algorithms package featuring Dijkstra's shortest path"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "wendyhielo" }]
+
+[tool.setuptools.packages.find]
+where = ["src"]

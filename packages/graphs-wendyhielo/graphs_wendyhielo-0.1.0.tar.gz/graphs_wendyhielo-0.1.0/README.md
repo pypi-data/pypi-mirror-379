@@ -1,0 +1,19 @@
+## graphs_wendyhielo
+
+    A lightweight Python package for working with weighted graphs, centered on Dijkstra's shortest path. 
+
+# What it does:
+    * computes single-source shortest paths on weighted, directed graphs (non-negative weights) using a min-heap-based Dijkstra implementation. 
+    * Returns a distance list with the minimum cost from the source to each vertex and a path map that lets you reconstruct shortest paths. 
+
+# How it works:
+    *The graph is represented as an adjacency map (each vertex maps to a dictionary of neighbors → edge weights).
+    *A min-heap stores candidate vertices keyed by their best-known distance from the source.
+    *Distances initialize to “infinity” except the source (zero). The algorithm relaxes edges until the heap is empty.
+
+# Installation (no code)
+    1. Clone this public repository to your machine.
+
+    2. From the project root, install the package with your standard Python package manager (e.g., pip).
+    
+    3. After installation, the package is importable as graphs_wendyhielo, and the shortest-path functions are available in its sp module.
