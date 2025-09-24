@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+tests/__init__.py
+tests/test_core.py
+tf_ai_agents/__init__.py
+tf_ai_agents/core.py
+tf_ai_agents.egg-info/PKG-INFO
+tf_ai_agents.egg-info/SOURCES.txt
+tf_ai_agents.egg-info/dependency_links.txt
+tf_ai_agents.egg-info/not-zip-safe
+tf_ai_agents.egg-info/requires.txt
+tf_ai_agents.egg-info/top_level.txt
