@@ -1,0 +1,3 @@
+[console_scripts]
+pmotools-python = pmotools.cli:main
+
