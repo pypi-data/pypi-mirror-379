@@ -1,0 +1,23 @@
+# Template Catalog
+
+Copy files from this directory into `.spec-dev/active-dev/` or `.spec-dev/active-memories/`
+as needed.
+
+## Active Cycle Templates (`active/`)
+| Template | Copy To | Purpose |
+|----------|---------|---------|
+| `plan-template.md` | `active-plan.md` | Seed for Plan & Intent phase.
+| `tasks-template.md` | `active-tasks.md` | Seed for Tasks board.
+| `implementation-log-template.md` | `active-implementation.md` | Seed for implementation log.
+
+## Session Templates (`memories/`)
+| Template | Purpose |
+|----------|---------|
+| `session-summary-template.md` | Scaffold for agent hand-off summaries (`session-###.md`). |
+
+Guidelines:
+1. Copy the template, rename to the canonical filename, and update header metadata.
+2. Drop active templates into `.spec-dev/active-dev/` and session summaries into `.spec-dev/active-memories/`.
+3. Keep the Backlog/In Progress/Done sections intact; move cards with the CLI helpers instead of deleting them.
+4. Remove instructional comments as you fill in real content.
+5. Leave templates untouched so future cycles start with a clean slate.
