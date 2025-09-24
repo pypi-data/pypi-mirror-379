@@ -1,0 +1,5 @@
+rust_add_pyo3-0.1.0.dist-info/METADATA,sha256=OsQ1CL0n6L8mGOedS_OSFluOupP5QEi4VIIcTu5VmgY,133
+rust_add_pyo3-0.1.0.dist-info/WHEEL,sha256=7bfl5v0wbVhXZba613g0x-n2obNNfpQuN8I1cQ4oaU8,94
+rust_add_pyo3/__init__.py,sha256=RnBIyOtrP78sULNQC6Wqf57Oo5RzpBKh7AID_S5ZgFc,135
+rust_add_pyo3/rust_add_pyo3.pyd,sha256=JO8hwvLFO--TlCmUe6KZyCyHtnaiI7EiuTtMNLcWCm0,207872
+rust_add_pyo3-0.1.0.dist-info/RECORD,,
