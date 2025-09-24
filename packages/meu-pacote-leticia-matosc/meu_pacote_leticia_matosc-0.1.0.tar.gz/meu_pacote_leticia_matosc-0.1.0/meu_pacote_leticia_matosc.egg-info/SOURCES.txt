@@ -1,0 +1,6 @@
+README.md
+setup.py
+meu_pacote_leticia_matosc.egg-info/PKG-INFO
+meu_pacote_leticia_matosc.egg-info/SOURCES.txt
+meu_pacote_leticia_matosc.egg-info/dependency_links.txt
+meu_pacote_leticia_matosc.egg-info/top_level.txt
