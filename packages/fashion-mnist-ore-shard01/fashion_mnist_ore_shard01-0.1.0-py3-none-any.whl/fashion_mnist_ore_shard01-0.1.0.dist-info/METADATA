@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: fashion-mnist-ore-shard01
+Version: 0.1.0
+Summary: Shard 01 for fashion-mnist-ore
+Author: OREYH
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# fashion-mnist-ore-shard01
+Part 01 of fashion-mnist-ore 0.1.0
