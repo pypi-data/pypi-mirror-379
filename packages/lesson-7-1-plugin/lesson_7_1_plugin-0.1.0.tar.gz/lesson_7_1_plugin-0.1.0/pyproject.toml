@@ -1,0 +1,25 @@
+[project]
+name = "lesson-7-1-plugin"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Алексей Романов",email = "romanovaleks@ozon.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest (>=8.4.2,<9.0.0)"
+]
+
+[tool.poetry.plugins.pytest11]
+    route256_7_1_plugin = "lesson-7-1-plugin.plugin"
+
+[tool.poetry]
+    packages = [
+        { include = "src/lesson-7-1-plugin" },
+        # { include = "lesson-7-1-plugin/**/*.py" },
+    ]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
