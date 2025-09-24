@@ -1,0 +1,16 @@
+[project]
+name = "asv-rich-api-flask"
+version = "0.1.0a2"
+description = "Base elements for an enriched API using flask"
+authors = [{ name="Alejandro Sanchez Vega", email="m.a.sanchez.vega@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+    "flask",
+    "d20-orm"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
