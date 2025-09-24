@@ -1,0 +1,8 @@
+rapid/__init__.py,sha256=zjBSgg5OAWbfiQzJBXhlUWGmHsPWhKXYD9F5owcYvTw,586
+rapid/core.py,sha256=bori2pa8rvHlKoK59hc7HzEifM4iLt2ree_mrgvT2Qg,5799
+rapid/decorators.py,sha256=gnzUgehK06fbyQb5a0NLdVZFjOi4LLTuCOk9bY97Ty8,4119
+rapid/schemas.py,sha256=kf59HzSxUNGeh1cVnjwPjfiaGAwfUKmTDinBN8vdQu8,290
+rapid/views.py,sha256=ULNOo0QNxbI10LXEB5TjWxed7yo2dgnrm1p7hjSB-z4,7039
+django_rapid-0.1.1.dist-info/METADATA,sha256=va16_lmUzajwlKgRi-6JJmMvtcvjC0Nzkho3oxY5bW8,6848
+django_rapid-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_rapid-0.1.1.dist-info/RECORD,,
