@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: yta-programming-dependencies
+Version: 0.0.2
+Summary: Youtube Autonomous Programming Dependencies Module
+License-File: LICENSE
+Author: danialcala94
+Author-email: danielalcalavalera@gmail.com
+Requires-Python: ==3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: yta_file (>=0.0.1,<1.0.0)
+Requires-Dist: yta_programming_path (>=0.0.1,<1.0.0)
+Requires-Dist: yta_temp (>=0.0.1,<1.0.0)
+Requires-Dist: yta_validation (>=0.0.1,<1.0.0)
+Description-Content-Type: text/markdown
+
+# Youtube Autonomous Programming Dependencies add-on
+
+The way to work internally with some of the functionalities we need related to handling dependencies.
