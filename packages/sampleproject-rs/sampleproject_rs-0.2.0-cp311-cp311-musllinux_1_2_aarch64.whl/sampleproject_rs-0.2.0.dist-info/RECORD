@@ -1,0 +1,8 @@
+sample.libs/libgcc_s-39080030.so.1,sha256=fIO6GHOh8Ft9CR0Geu7wSUb9Xnl122iTtrxQQ9TAkTQ,789673
+sample/__init__.py,sha256=pVDZzrgcrgQx-QIOgscQnR9t4YUawX1Ko4XjZ2Degvk,107
+sample/sample.cpython-311-aarch64-linux-musl.so,sha256=fHb0wAFdBrS-BFGFbfPXd1AD_92dp91mKs8ShhiWxPg,657641
+sampleproject_rs-0.2.0.dist-info/METADATA,sha256=KuitAUvdFRvTjsOw6h1IN8BUIXF3JTAB67rwQhQ1vyY,2228
+sampleproject_rs-0.2.0.dist-info/WHEEL,sha256=xgMGzswzbwKwgKUg-kB8HNicNIzQYqJzMcClthXR1Y0,108
+sampleproject_rs-0.2.0.dist-info/entry_points.txt,sha256=omMvnPmB3z8l2mJs_yUf9ef0iMjLaY353gJMEfbjMY8,37
+sampleproject_rs-0.2.0.dist-info/licenses/LICENSE,sha256=KkcnYlzXOSv9r5vZOx9y_VY3PCcQxLhX8zy83xtkaOs,1063
+sampleproject_rs-0.2.0.dist-info/RECORD,,
