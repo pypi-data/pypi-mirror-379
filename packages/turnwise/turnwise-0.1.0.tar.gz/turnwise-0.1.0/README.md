@@ -1,0 +1,399 @@
+# Turnwise
+
+A modern Python library for evaluating multi-turn chatbot conversations. Turnwise provides a declarative and lightweight approach to testing conversational AI systems with composable metrics and structured evaluation results.
+
+## Features
+
+- **Multi-turn Conversation Support**: Evaluate complete conversation flows, not just single interactions
+- **Composable Metrics**: Mix and match evaluation metrics to create custom evaluation suites
+- **Declarative API**: Define conversations and metrics, then evaluate with a simple function call
+- **Structured Results**: Get detailed, structured evaluation reports with scores and pass/fail status
+- **Batch Evaluation**: Evaluate multiple conversations at once with summary statistics
+- **Dataset Management**: Organize and filter conversation datasets for evaluation
+- **CLI Interface**: Run evaluations from the command line
+- **LLM-based Metrics**: Use OpenAI API for advanced evaluation metrics
+- **Extensible**: Easy to create custom metrics for specific use cases
+- **Parallel Processing**: Fast evaluation with configurable parallel execution
+
+## Installation
+
+```bash
+pip install turnwise
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/0xHericles/turnwise.git
+cd turnwise
+pip install -e .
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+from turnwise import (
+    Turn, Conversation, Role,
+    ConversationLengthMetric, ResponseRelevanceMetric, 
+    ConversationCoherenceMetric, evaluate
+)
+
+# Create a conversation
+conversation = Conversation(
+    turns=[
+        Turn(role=Role.USER, content="What is machine learning?"),
+        Turn(role=Role.ASSISTANT, content="Machine learning is a subset of AI that enables computers to learn from data."),
+        Turn(role=Role.USER, content="Can you give me an example?"),
+        Turn(role=Role.ASSISTANT, content="Sure! Image recognition is a common example of machine learning.")
+    ]
+)
+
+# Create evaluator with metrics
+evaluator = Evaluator(metrics=[
+    ConversationLengthMetric(min_turns=2, max_turns=10),
+    ResponseRelevanceMetric(threshold=0.6),
+    ConversationCoherenceMetric(threshold=0.7)
+])
+
+# Run evaluation
+report = evaluator.run(conversation)
+
+print(f"Overall Score: {report.overall_score:.3f}")
+print(f"Status: {'PASSED' if report.passed else 'FAILED'}")
+
+for result in report.results:
+    status = "✓" if result.passed else "✗"
+    print(f"{status} {result.metric_name}: {result.score:.3f}")
+```
+
+### Batch Evaluation
+
+```python
+from turnwise import Evaluator, create_summary_report, ConversationDataset
+
+# Create dataset from conversation data
+conversation_data = [
+    {
+        "turns": [
+            {"role": "user", "content": "Hello"},
+            {"role": "assistant", "content": "Hi there!"}
+        ],
+        "metadata": {"session_id": "001"}
+    }
+]
+
+dataset = ConversationDataset(conversation_data)
+
+# Create evaluator with metrics
+evaluator = Evaluator(metrics=[
+    ConversationLengthMetric(min_turns=1, max_turns=10),
+    ResponseRelevanceMetric(threshold=0.6)
+])
+
+# Run batch evaluation
+reports = evaluator.batch(dataset)
+
+# Create summary report
+summary = create_summary_report(reports)
+print(f"Overall Pass Rate: {summary['overall_pass_rate']:.1%}")
+print(f"Average Score: {summary['average_overall_score']:.3f}")
+```
+
+### LLM-based Evaluation
+
+```python
+from turnwise import Evaluator, HelpfulnessMetric, QualityMetric, SafetyMetric
+
+# Create evaluator with LLM-based metrics and API key
+evaluator = Evaluator(
+    metrics=[
+        HelpfulnessMetric(),
+        QualityMetric(),
+        SafetyMetric()
+    ],
+    openai_api_key="your-api-key"
+)
+report = evaluator.run(conversation)
+```
+
+## Built-in Metrics
+
+### Conversation Metrics
+
+#### ConversationLengthMetric
+Evaluates if conversations have appropriate length.
+
+```python
+ConversationLengthMetric(min_turns=1, max_turns=20, threshold=0.5)
+```
+
+#### ConversationCoherenceMetric
+Evaluates overall conversation coherence and flow.
+
+```python
+ConversationCoherenceMetric(threshold=0.7)
+```
+
+### Response Metrics
+
+#### ResponseRelevanceMetric
+Evaluates if assistant responses are relevant to user inputs.
+
+```python
+ResponseRelevanceMetric(threshold=0.6)
+```
+
+### LLM-based Metrics
+
+#### HelpfulnessMetric
+Uses OpenAI API to evaluate how helpful assistant responses are.
+
+```python
+HelpfulnessMetric(threshold=0.7)  # API key configured at evaluation level
+```
+
+#### QualityMetric
+Evaluates overall conversation quality using LLM.
+
+```python
+QualityMetric(threshold=0.8)  # API key configured at evaluation level
+```
+
+#### SafetyMetric
+Assesses conversation safety and identifies potential concerns.
+
+```python
+SafetyMetric(threshold=0.9)  # API key configured at evaluation level
+```
+
+## Command Line Interface
+
+### Install the CLI
+
+```bash
+pip install turnwise
+```
+
+### Evaluate a single conversation
+
+```bash
+turnwise evaluate examples/sample_conversation.json -m length -m relevance
+```
+
+### Batch evaluate multiple conversations
+
+```bash
+turnwise batch-evaluate examples/ -m length -m coherence -o results.json
+```
+
+### List available metrics
+
+```bash
+turnwise list-metrics
+```
+
+### Conversation JSON format
+
+```json
+{
+  "turns": [
+    {"role": "user", "content": "Hello"},
+    {"role": "assistant", "content": "Hi there!"}
+  ],
+  "metadata": {"session_id": "001"}
+}
+```
+
+For batch evaluation, use an array of conversation objects:
+
+```json
+[
+  {
+    "turns": [{"role": "user", "content": "Hello"}],
+    "metadata": {"session_id": "001"}
+  },
+  {
+    "turns": [{"role": "user", "content": "Hi"}],
+    "metadata": {"session_id": "002"}
+  }
+]
+```
+
+## Dataset Management
+
+```python
+from turnwise import ConversationDataset
+
+# Create dataset
+dataset = ConversationDataset(conversation_data)
+
+# Filter conversations by length
+short_conversations = dataset.filter_length(min_turns=1, max_turns=3)
+
+# Filter by user turn ratio
+balanced_conversations = dataset.filter_ratio(min_user_ratio=0.3, max_user_ratio=0.7)
+
+# Get dataset statistics
+stats = dataset.stats()
+print(f"Total conversations: {stats['total_conversations']}")
+print(f"Average turns: {stats['average_turns_per_conversation']:.1f}")
+```
+
+## Creating Custom Metrics
+
+```python
+from turnwise import Metric, EvaluationResult
+
+class CustomMetric(Metric):
+    def __init__(self, name="custom_metric", threshold=0.5):
+        super().__init__(name, threshold)
+    
+    def evaluate(self, conversation):
+        # Your evaluation logic here
+        score = 0.8  # Calculate your score
+        details = {"custom_info": "value"}
+        
+        return self._create_result(score, details)
+```
+
+## Examples
+
+See the `examples/` directory for complete examples:
+
+- `basic_usage.py` - Simple conversation evaluation
+- `advanced_usage.py` - Advanced features and custom metrics
+- `batch_evaluation.py` - Batch evaluation with summary reports
+- `cli_usage.py` - CLI usage examples
+- `dataframe_like_api.py` - DataFrame-like API usage
+- `llm_evaluation.py` - LLM-based evaluation example
+
+## Configuration
+
+### API Key Management
+
+API keys are configured at the evaluation level, not per metric. This provides better security and easier management.
+
+#### Environment Variables (Recommended)
+
+Set your API keys as environment variables:
+
+```bash
+export OPENAI_API_KEY="your-openai-api-key"
+export ANTHROPIC_API_KEY="your-anthropic-api-key"
+```
+
+Or create a `.env` file:
+
+```
+OPENAI_API_KEY=your-openai-api-key
+ANTHROPIC_API_KEY=your-anthropic-api-key
+```
+
+#### Programmatic Configuration
+
+Pass API keys directly to the Evaluator:
+
+```python
+from turnwise import Evaluator, HelpfulnessMetric, QualityMetric
+
+# Create evaluator with metrics and API keys
+evaluator = Evaluator(
+    metrics=[HelpfulnessMetric(), QualityMetric()],
+    openai_api_key="your-key",
+    anthropic_api_key="your-key"
+)
+
+# Single evaluation
+report = evaluator.run(conversation)
+
+# Batch evaluation
+reports = evaluator.batch(conversations)
+```
+
+### Configuration File
+
+Create a `turnwise.yaml` configuration file:
+
+```yaml
+evaluation:
+  max_workers: 4
+  parallel: true
+
+metrics:
+  length:
+    min_turns: 1
+    max_turns: 20
+  relevance:
+    threshold: 0.6
+  coherence:
+    threshold: 0.7
+
+llm:
+  api_key: ${OPENAI_API_KEY}
+  model: gpt-3.5-turbo
+  temperature: 0.0
+```
+
+## Development
+
+### Setup
+
+```bash
+git clone https://github.com/your-username/turnwise.git
+cd turnwise
+uv sync
+```
+
+### Running Tests
+
+```bash
+make test
+# or
+uv run pytest
+```
+
+### Code Quality
+
+```bash
+make lint
+make format
+# or
+uv run ruff check .
+uv run ruff format .
+uv run mypy src/
+```
+
+### Available Make Commands
+
+```bash
+make help          # Show all available commands
+make install       # Install dependencies
+make test          # Run tests
+make lint          # Run linter
+make format        # Format code
+make clean         # Clean build artifacts
+make run-example   # Run basic example
+make run-llm-example # Run LLM evaluation example
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with [Pydantic AI](https://github.com/pydantic/pydantic-ai) for LLM integration
+- Uses [Ruff](https://github.com/astral-sh/ruff) for fast linting and formatting
+- Inspired by modern evaluation frameworks for conversational AI
