@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: SpatialPerturb
+Version: 0.1.0
+Summary: Spatial transcriptomics × Perturb-seq toolkit: signatures, label transfer, spatial scoring, and graph-based modeling.
+Author: Taobo Hu
+License: MIT
+Project-URL: Homepage, https://github.com/yourname/SpatialPerturb
+Project-URL: Issues, https://github.com/yourname/SpatialPerturb/issues
+Keywords: spatial transcriptomics,perturb-seq,xenium,scanpy,gnn
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.22
+Requires-Dist: pandas>=1.5
+Requires-Dist: scipy>=1.9
+Requires-Dist: anndata>=0.10
+Requires-Dist: scanpy>=1.9
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: matplotlib>=3.6
+Requires-Dist: seaborn>=0.12
+Requires-Dist: networkx>=3.0
+Requires-Dist: tqdm>=4.64
+Requires-Dist: typer>=0.9
+Provides-Extra: gnn
+Requires-Dist: torch>=2.1; extra == "gnn"
+Requires-Dist: torch-geometric>=2.5; extra == "gnn"
+Dynamic: license-file
+
+# SpatialPerturb
+
+Toolkit for combining **Spatial Transcriptomics** with **Perturb-seq** workflows — signatures, label transfer, spatial scoring, and graph/structure analysis.
+
+## Install
+
+```bash
+pip install SpatialPerturb
+# or with GNN extras:
+pip install 'SpatialPerturb[gnn]'
+```
+
+## Quick start
+
+```python
+import spatialperturb as sp
+
+print(sp.__version__)
+```
+
+CLI:
+```bash
+SpatialPerturb version
+```
+
+## Development
+
+```bash
+python -m pip install --upgrade build twine
+python -m build
+twine upload --repository testpypi dist/*
+```
+
+## Citation
+
+Please cite the package if you find it useful. See `CITATION.cff`.
