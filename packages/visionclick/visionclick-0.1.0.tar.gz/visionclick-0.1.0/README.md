@@ -1,0 +1,453 @@
+# VisionClick
+
+A powerful Python library for GUI automation with image recognition and visual feedback capabilities.
+
+## Features
+
+- **Image Recognition**: Find and interact with UI elements using screenshots
+- **Visual Feedback**: Highlight elements before interaction for better visibility
+- **Mouse & Keyboard Control**: Full control over mouse and keyboard actions
+- **Flexible API**: Simple and intuitive method chaining
+- **Cross-Platform**: Works on Windows, macOS, and Linux
+
+## 🔧 Installation
+
+1. Clone the repository:
+   ```bash
+git clone https://github.com/yourusername/VisionClick.git
+cd VisionClick
+```
+   git clone https://github.com/yourusername/VisionClick.git
+   cd VisionClick
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 🚀 Quick Start
+
+```python
+from visionclick import VisionClick
+
+# Initialize with visual feedback enabled
+with VisionClick(highlight_enabled=True) as vc:
+    # Click on an image with visual highlight
+    vc.click("button.png")
+    
+    # Type some text
+    vc.type("Hello, VisionClick!")
+```
+
+## ✨ Visual Highlighting
+
+VisionClick can highlight UI elements before interacting with them, making automation more visible and debuggable.
+
+### Basic Usage
+
+```python
+# Enable highlighting for all clicks
+vc = VisionClick(highlight_enabled=True, highlight_duration=2.0, highlight_color="yellow")
+
+# Or enable/disable it later
+vc.enable_highlight(True)  # Enable
+vc.enable_highlight(False)  # Disable
+
+# Change highlight settings
+vc.enable_highlight(
+    enabled=True,
+    duration=1.5,  # seconds
+    color="#FF5733"  # any valid color
+)
+```
+
+### Highlight Modes
+
+1. **Image Highlighting**: When clicking on an image, VisionClick will draw a rectangle around the matched region
+2. **Coordinate Highlighting**: When clicking on coordinates, it will show a small marker at the target position
+
+## 📚 Core Features
+
+### Mouse Control
+
+```python
+# Click at coordinates or on an image
+vc.click((x, y))  # Coordinates
+vc.click("button.png")  # Image
+
+# Right click
+vc.click("button.png", button="right")
+
+# Double click
+vc.double_click("icon.png")
+
+# Drag and drop
+vc.drag("item.png", (x, y))
+```
+
+### Keyboard Control
+
+```python
+# Type text
+vc.type("Hello, World!")
+
+# Press keys
+vc.press("enter")
+vc.hotkey("ctrl", "c")  # Copy
+```
+
+### Image Recognition
+
+```python
+# Check if image exists on screen
+if vc.exists("button.png"):
+    print("Button found!")
+
+# Wait for image to appear
+vc.wait_image("loading.png", timeout=10)
+
+# Get image position
+position = vc.locate("icon.png")
+if position:
+    print(f"Found at: {position['x']}, {position['y']}")
+```
+
+## 🛠 Advanced Usage
+
+### Conditional Actions
+
+```python
+# Click only if image exists
+vc.if_exists("popup.png", lambda: vc.click("close.png"))
+
+# Repeat until image appears
+vc.repeat_until(
+    lambda: vc.click("next_page.png"),
+    condition=lambda: vc.exists("last_page.png"),
+    max_attempts=5
+)
+```
+
+### Debugging
+
+```python
+# Enable debug logging
+vc.enable_logs(True, "DEBUG")
+
+# Take a screenshot
+vc.screenshot("debug.png")
+
+# Get the last screenshot
+last_screenshot = vc.get_last_screenshot()
+```
+
+## 📝 Examples
+
+### Basic Automation
+
+```python
+from visionclick import VisionClick
+
+def test_automation():
+    with VisionClick(highlight_enabled=True) as vc:
+        # Open application (example: Notepad)
+        vc.press("win")
+        vc.type("notepad")
+        vc.press("enter")
+        
+        # Type some text
+        vc.type("Hello from VisionClick!")
+        
+        # Save the file
+        vc.hotkey("ctrl", "s")
+        vc.type("test.txt")
+        vc.press("enter")
+```
+
+### Web Automation
+
+```python
+from visionclick import VisionClick
+import time
+
+def test_web():
+    with VisionClick(highlight_duration=1.5) as vc:
+        # Open browser and navigate to a website
+        vc.press("win")
+        vc.type("chrome")
+        vc.press("enter")
+        time.sleep(2)  # Wait for browser to open
+        
+        # Search in Google
+        vc.type("VisionClick GitHub")
+        vc.press("enter")
+        
+        # Click on first result (simplified example)
+        vc.wait_image("search_result.png", timeout=10)
+        vc.click("search_result.png")
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Requirements
+- Python 3.6+
+- OpenCV
+- PyAutoGUI
+- Pynput
+- Pillow
+- NumPy
+- Colorama (for colored output)
+
+## Basic Usage
+
+```python
+from visionclick import VisionClick
+
+# Initialize with context manager (recommended)
+with VisionClick() as vc:
+    vc.enable_logs(True, "INFO")  # Enable logging
+    
+    # Your automation code here
+    vc.click((100, 100))
+    vc.type("Hello, World!")
+```
+
+## Core Functionality
+
+### Mouse Control
+
+#### `click(target, button="left", clicks=1)`
+Click at specified coordinates or on an image.
+
+```python
+# Click at coordinates (x=100, y=200)
+vc.click((100, 200))
+
+# Right click on an image
+vc.click("button.png", button="right")
+
+# Double click
+vc.click("icon.png", clicks=2)
+```
+
+#### `double_click(target, button="left")`
+Double click at specified coordinates or on an image.
+
+```python
+vc.double_click("file_icon.png")
+```
+
+#### `long_click(target, duration=1.0)`
+Click and hold for a specified duration.
+
+```python
+# Click and hold for 2 seconds
+vc.long_click("slider_handle.png", duration=2.0)
+```
+
+#### `drag(start, end, duration=1.0, button="left")`
+Drag from start to end position.
+
+```python
+# Drag from (100,200) to (300,400) over 1 second
+vc.drag((100, 200), (300, 400))
+
+# Drag from one image to another
+vc.drag("file.png", "trash_icon.png")
+```
+
+### Keyboard Control
+
+#### `type(text, interval=0.1)`
+Type text with specified interval between keystrokes.
+
+```python
+vc.type("Hello, World!")
+vc.type("password123", interval=0.05)  # Faster typing
+```
+
+#### `press(key, presses=1, interval=0.1)`
+Press a key one or more times.
+
+```python
+# Press Enter
+vc.press("enter")
+
+# Press Tab 3 times quickly
+vc.press("tab", presses=3, interval=0.05)
+```
+
+### Image Recognition
+
+#### `exists(image, confidence=0.8, log_not_found=True)`
+Check if an image exists on screen.
+
+```python
+if vc.exists("login_button.png"):
+    vc.click("login_button.png")
+else:
+    print("Login button not found!")
+```
+
+#### `locate(image, confidence=0.8)`
+Find the center coordinates of an image on screen.
+
+```python
+position = vc.locate("icon.png")
+if position:
+    x, y = position
+    print(f"Found icon at {x}, {y}")
+```
+
+#### `wait_image(image, timeout=5.0, interval=0.5, confidence=0.8)`
+Wait for an image to appear on screen.
+
+```python
+# Wait for loading to complete (max 10 seconds)
+if vc.wait_image("loading_complete.png", timeout=10):
+    print("Loading complete!")
+```
+
+#### `wait_image_vanish(image, timeout=5.0, interval=0.5, confidence=0.8)`
+Wait for an image to disappear from the screen.
+
+```python
+# Wait for loading spinner to disappear
+if vc.wait_image_vanish("loading_spinner.png"):
+    print("Loading finished!")
+```
+
+### Conditional Actions
+
+#### `if_exists(image, action, *args, confidence=0.8, **kwargs)`
+Execute an action if the specified image exists.
+
+```python
+def click_ok():
+    vc.click("ok_button.png")
+
+vc.if_exists("error_message.png", click_ok)
+```
+
+#### `repeat_until(condition_image, action, max_attempts=10, interval=1.0, confidence=0.8, *args, **kwargs)`
+Repeat an action until a condition is met.
+
+```python
+def click_next():
+    vc.click("next_button.png")
+    time.sleep(1)  # Wait for page to load
+
+# Keep clicking next until we see the last page
+vc.repeat_until("last_page.png", click_next, max_attempts=5)
+```
+
+### Utility Methods
+
+#### `move_to(target, duration=0.5)`
+Move mouse to coordinates or image.
+
+```python
+vc.move_to("menu_item.png")
+vc.move_to((500, 300), duration=1.0)  # Smooth movement over 1 second
+```
+
+#### `scroll(clicks, direction="down")`
+Scroll the mouse wheel.
+
+```python
+# Scroll down 5 clicks
+vc.scroll(5, "down")
+
+# Scroll up 3 clicks
+vc.scroll(3, "up")
+```
+
+#### `screenshot(region=None, filename=None, log=True)`
+Take a screenshot.
+
+```python
+# Full screen screenshot
+vc.screenshot("fullscreen.png")
+
+# Region screenshot (left, top, width, height)
+vc.screenshot(region=(100, 100, 300, 200), filename="region.png")
+```
+
+## Advanced Features
+
+### Debugging
+
+```python
+# Enable debug logging
+vc.enable_logs(True, "DEBUG")
+
+# Take a screenshot of the current state
+vc.screenshot("debug_state.png")
+
+# Get the last taken screenshot path
+print(f"Last screenshot: {vc._last_screenshot}")
+```
+
+### Error Handling
+
+```python
+try:
+    vc.click("unreliable_button.png")
+except Exception as e:
+    print(f"Error: {e}")
+    # Screenshot is automatically taken on error when debug is enabled
+```
+
+## Best Practices
+
+1. **Use context manager** to ensure proper cleanup:
+   ```python
+   with VisionClick() as vc:
+       # Your code here
+   ```
+
+2. **Enable logging** during development:
+   ```python
+   vc.enable_logs(True, "DEBUG")
+   ```
+
+3. **Use relative paths** for image files:
+   ```python
+   vc.click("images/button.png")
+   ```
+
+4. **Handle timeouts** appropriately:
+   ```python
+   if not vc.wait_image("loading.png", timeout=10):
+       print("Operation timed out!")
+   ```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Image not found**
+   - Check the image path is correct
+   - Ensure the image is visible on screen
+   - Try adjusting the confidence level: `vc.exists("image.png", confidence=0.7)`
+
+2. **Slow performance**
+   - Reduce screenshot resolution if possible
+   - Increase intervals between actions
+   - Use smaller image templates
+
+3. **Incorrect clicks**
+   - Add small delays between actions
+   - Verify screen resolution matches your coordinates
+   - Check for multiple matches of the same image
+
+## License
+
+MIT License - Feel free to use and modify as needed.

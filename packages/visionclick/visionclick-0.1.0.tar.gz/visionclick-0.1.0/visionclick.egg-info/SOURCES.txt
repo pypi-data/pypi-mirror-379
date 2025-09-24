@@ -1,0 +1,9 @@
+README.md
+setup.py
+visionclick/__init__.py
+visionclick.egg-info/PKG-INFO
+visionclick.egg-info/SOURCES.txt
+visionclick.egg-info/dependency_links.txt
+visionclick.egg-info/entry_points.txt
+visionclick.egg-info/requires.txt
+visionclick.egg-info/top_level.txt
