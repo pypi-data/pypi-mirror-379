@@ -1,0 +1,3 @@
+Sphinx>=2.1
+jira>=3.10.5
+mlx.traceability>=11.0.0
