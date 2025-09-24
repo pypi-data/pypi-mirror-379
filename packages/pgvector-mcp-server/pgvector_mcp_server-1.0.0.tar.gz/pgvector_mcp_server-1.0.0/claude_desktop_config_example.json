@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "pgvector-mcp-server": {
+      "command": "uv",
+      "args": ["run", "pgvector-mcp-server"],
+      "cwd": "/absolute/path/to/your/FastAI/project",
+      "env": {
+        "DATABASE_URL": "postgresql://username:password@localhost:5432/database_name",
+        "DASHSCOPE_API_KEY": "your_dashscope_api_key_here",
+        "DEBUG": "false"
+      }
+    }
+  }
+}
