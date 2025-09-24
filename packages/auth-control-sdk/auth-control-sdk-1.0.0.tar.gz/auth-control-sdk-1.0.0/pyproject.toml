@@ -1,0 +1,22 @@
+[build-system]
+# Esto está bien. Declara las herramientas necesarias para construir el paquete.
+requires = ["setuptools>=45", "wheel", "cython", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# --- CAMBIOS DE IDENTIDAD DEL PROYECTO ---
+name = "auth-control-sdk"
+version = "1.0.0"
+description = "Intelligent authorization and access control using adaptive scoring"
+readme = "README.md"
+requires-python = ">=3.8" # Ajustado para coincidir con setup.py
+license = {text = "MIT"}
+authors = [{name = "Jaime Jimenez", email = "jaimeajl@hotmail.com"}]
+keywords = ["authorization", "access-control", "permissions", "security", "rbac", "abac"]
+
+[tool.cibuildwheel]
+# Esta sección es para CI/CD (construcción automática de wheels).
+# Es una excelente práctica tenerla. Puedes dejarla tal cual para el futuro.
+build = "cp38-* cp39-* cp310-* cp311-* cp312-*"
+skip = "*-win32 *-musllinux_* *i686"
+before-build = "pip install cython numpy"
