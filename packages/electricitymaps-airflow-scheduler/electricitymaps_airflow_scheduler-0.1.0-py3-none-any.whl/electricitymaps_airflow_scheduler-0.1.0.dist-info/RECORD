@@ -1,0 +1,12 @@
+electricitymaps_airflow_scheduler-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/scheduled_workflow.py,sha256=8t4jZiSPVZY2yAz5vQY-Eolg4E5YWMNeBO-lxlHy7mY,1400
+src/electricitymaps_airflow_scheduler/__init__.py,sha256=6rf6k6ZdusJvlLC2hGZgeWGIqvSXIPWWTBG5aL0uqMI,482
+src/electricitymaps_airflow_scheduler/scheduler.py,sha256=vJUrtjVcTOR0P_P1ne4rzqALOb6EAtfTzcG_EfLYE4U,2488
+src/electricitymaps_airflow_scheduler/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/electricitymaps_airflow_scheduler/lib/electricitymaps.py,sha256=x1wKuumlAh2XVSuNcHe7h8WjhSjgDYzwadXXtsh2oI8,3106
+electricitymaps_airflow_scheduler-0.1.0.dist-info/METADATA,sha256=kDNST6xAq6KdKT0YcKio92rpwdu0zdb1l3HELIcvll4,979
+electricitymaps_airflow_scheduler-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+electricitymaps_airflow_scheduler-0.1.0.dist-info/entry_points.txt,sha256=xk0NfZ51l2cGRmYAmyoC_qHszNMZHVID6OnoP82-Hjk,107
+electricitymaps_airflow_scheduler-0.1.0.dist-info/top_level.txt,sha256=p0TAvVSQrXQSZqgu4dBGfvofHVeNuBkv1zoe7xta_Rg,13
+electricitymaps_airflow_scheduler-0.1.0.dist-info/RECORD,,
