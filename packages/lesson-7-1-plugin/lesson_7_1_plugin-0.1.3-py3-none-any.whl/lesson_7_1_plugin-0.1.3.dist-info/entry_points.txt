@@ -1,0 +1,3 @@
+[pytest11]
+lesson-7-1-plugin=lesson-7-1-plugin.plugin
+
