@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pkrd"
+version = "0.0.1"
+description = "PKRD.AI Official Lib"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+  {name="PKRD, LLC", email="contact@pkrd.ai"}
+]

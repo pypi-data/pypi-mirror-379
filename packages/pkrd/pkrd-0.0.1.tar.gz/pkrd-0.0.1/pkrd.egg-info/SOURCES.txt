@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+pkrd/__init__.py
+pkrd.egg-info/PKG-INFO
+pkrd.egg-info/SOURCES.txt
+pkrd.egg-info/dependency_links.txt
+pkrd.egg-info/top_level.txt
