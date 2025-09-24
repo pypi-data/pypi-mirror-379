@@ -1,0 +1,2 @@
+[console_scripts]
+nanoprepro = NanoPrePro.__main__:main
