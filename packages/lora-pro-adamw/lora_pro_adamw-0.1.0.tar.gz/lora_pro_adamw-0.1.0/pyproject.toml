@@ -1,0 +1,41 @@
+[project]
+name = "lora-pro-adamw"
+version = "0.1.0"
+description = "LoRA-Pro gradient-corrected AdamW optimizer for PyTorch and PEFT"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Daisuke", url = "https://github.com/bamps53"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["LoRA", "optimizer", "pytorch", "lora-pro"]
+dependencies = [
+    "peft>=0.17.1",
+    "torch>=2.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.2",
+    "hatch>=1.9.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/bamps53/lora-pro-adamw"
+Repository = "https://github.com/bamps53/lora-pro-adamw"
+Issues = "https://github.com/bamps53/lora-pro-adamw/issues"
+
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lora_pro"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["reference"]
