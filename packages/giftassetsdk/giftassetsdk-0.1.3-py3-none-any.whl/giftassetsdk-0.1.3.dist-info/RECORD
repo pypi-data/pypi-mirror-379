@@ -1,0 +1,14 @@
+giftasset_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+giftasset_sdk/data.py,sha256=Hg1uE26qzOuQKKsHpRMDrGavXOPjsWBu-XJZqUZ1KWw,395
+giftasset_sdk/dependencies.py,sha256=4SOa4SzeS06jzezCBBc1zJgg9hoyQeMQbKcDww3g87I,75
+giftasset_sdk/giftasset_sdk.py,sha256=g3Wgp6u6iuAR8nGzEGKvT6QUs2yZ4zVtJW_XfsnuS3E,608
+giftasset_sdk/rest_side.py,sha256=q1wifcBrtqmdHdebdGQaBjTh5BZOs7JhujG57jxI8a0,564
+giftasset_sdk/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+giftasset_sdk/modules/analytics.py,sha256=6bltvjFJjj4slloRTB1zZSokpqiwwUpi9QIG2i5hpUo,2218
+giftasset_sdk/modules/metadata.py,sha256=g9mwj30OFXnX-KFlfoQgR_JY3X6KGfJ9CZ4tHSJEVBE,505
+giftasset_sdk/modules/providers.py,sha256=-_fj0VeLaqTR98xYNnNgGKtb8pTCL8CpJ-PMy8uVaj0,3352
+giftasset_sdk/modules/user_data.py,sha256=O6AE_NaMH5nZ5sm4ofDN11TIXQwNFr6q19kWnO8bRns,1669
+giftassetsdk-0.1.3.dist-info/METADATA,sha256=4A3FpfgQLdMNw35qIwpXho1jSZ4lhxp8Z-4zU6FKgNw,1107
+giftassetsdk-0.1.3.dist-info/WHEEL,sha256=Mdi9PDNwEZptOjTlUcAth7XJDFtKrHYaQMPulZeBCiQ,91
+giftassetsdk-0.1.3.dist-info/top_level.txt,sha256=RZL1XRyIXh4rICP1fBvAWX47oGD31whpVhZ5_xgY7Uw,14
+giftassetsdk-0.1.3.dist-info/RECORD,,
