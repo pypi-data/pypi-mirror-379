@@ -1,0 +1,3 @@
+[console_scripts]
+beancount-balexpr = beancount_balexpr:main
+
