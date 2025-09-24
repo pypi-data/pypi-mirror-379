@@ -1,0 +1,26 @@
+[CDF-25715] ⏭Replace requests with httpx (#1993)
+
+# Description
+
+Replacing `requests` with `httpx` in the Toolkit `HTTPClient`. 
+
+* This will be done in the `cognite-sdk` `v8`.
+* Httpx is faster 
+* Has async support
+
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Improved
+
+- Adding `httpx` as a dependency. This will do the requests in
+purge/download/upload/migrate commands.
+
+## templates
+
+No changes.
