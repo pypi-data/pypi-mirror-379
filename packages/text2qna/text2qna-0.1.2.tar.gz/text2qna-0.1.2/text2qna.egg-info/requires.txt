@@ -1,0 +1,27 @@
+openai>=1.95.1
+markdown>=3.8.2
+beautifulsoup4>=4.13.4
+markdownify>=1.2.0
+requests>=2.32.4
+
+[:python_version < "3.10"]
+numpy<2.0
+scikit-learn<1.7,>=1.6.1
+
+[:python_version >= "3.10"]
+scikit-learn>=1.7.2
+
+[:python_version >= "3.10" and python_version < "3.11"]
+numpy<2.3,>=2.0
+
+[:python_version >= "3.11"]
+numpy>=2.3
+
+[local]
+sentence-transformers>=5.1.0
+
+[nltk]
+nltk>=3.9.1
+
+[pdf]
+pdfplumber>=0.11.7

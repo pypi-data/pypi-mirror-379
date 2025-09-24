@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=80.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text2qna"
+version = "0.1.2"
+description = "Command-line tool to split documents into chunks and automatically generate question–answer datasets, designed for preparing data to fine-tune large language models (LLMs)."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Nikolaos Giovanopoulos" }]
+keywords = ["qna", "chunking", "embeddings", "llm", "markdown", "dataset"]
+dependencies = [
+  "openai>=1.95.1",
+  "markdown>=3.8.2",
+  "beautifulsoup4>=4.13.4",
+  "markdownify>=1.2.0",
+  "requests>=2.32.4",
+  'numpy<2.0; python_version < "3.10"',
+  'numpy>=2.0,<2.3; python_version >= "3.10" and python_version < "3.11"',
+  'numpy>=2.3; python_version >= "3.11"',
+  'scikit-learn>=1.6.1,<1.7; python_version < "3.10"',
+  'scikit-learn>=1.7.2; python_version >= "3.10"',
+]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/nikosgiov/text2qna"
+Repository = "https://github.com/nikosgiov/text2qna"
+Issues = "https://github.com/nikosgiov/text2qna/issues"
+Changelog = "https://github.com/nikosgiov/text2qna/releases"
+
+[project.scripts]
+text2qna = "text2qna.cli:main"
+
+[project.optional-dependencies]
+pdf = ["pdfplumber>=0.11.7"]
+local = ["sentence-transformers>=5.1.0"]
+nltk = ["nltk>=3.9.1"]
+
+# ---- Setuptools config ----
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+text2qna = ["py.typed"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["text2qna*"]
