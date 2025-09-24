@@ -1,0 +1,17 @@
+cysignals-1.12.5.dist-info/METADATA,sha256=1MFhOfxWNQWermdqomRxT22nnGske0wBlzCwlMrm3-8,12778
+cysignals-1.12.5.dist-info/WHEEL,sha256=50PeAbplA6PkI0hYOYoeacB9US1R6EguyfOnsccH0WU,85
+cysignals-1.12.5.dist-info/entry_points.txt,sha256=rQ8b3fieBgxiR4QJucB9k4vHQ7amfRDGZlYJloxtuHo,36
+cysignals-1.12.5.dist-info/LICENSE,sha256=6n0EnHcF3BOvwgLdGOGCfzSE-CEv0_p7gvxKDDY0Msk,7816
+cysignals/signals.cp312-win_amd64.pyd,sha256=Lws9ym_zXUGAqCCgnptW7Hzsc_WNDyOrSZiHtg451fM,68608
+cysignals/signals.cp312-win_amd64.lib,sha256=3zj_W0DS9FO998Obk0wpbjqoSspxgSEtqpp-hcy9xj4,2012
+cysignals/cysignals_config.h,sha256=ZgXF2fvQDoJiOiybAt8PdBtpFAZNHP6uUAJRT5FWOdQ,752
+cysignals/__init__.py,sha256=a-GOhhvb2siCoJBRYJYukbfhjaSsFv8rfcaxQJk0nLY,94
+cysignals/cysignals.pc,sha256=WSjLVs-VZLveghbnx3NujnVLkZ3-BAr6-evg1Uu_3yg,117
+cysignals/cysignals-CSI-helper.py,sha256=1L0_ViNsWGqbnlqKfCy-1sFoCm4x4uK94JScVtEKsXA,5111
+cysignals/memory.pxd,sha256=l2CBu6DIZyaHpaNPMwRTCOgfI8zFBFmnqKuaTMEm_AY,4716
+cysignals/pysignals.pxd,sha256=_bpbBH3wqtqEVNhwQPDpSSTcQR2VP3N8I_i9i39_wdg,90
+cysignals/signals.pxd,sha256=Ng6uTXHw_FRdlBxt9ZjndM7oWAsV9kPg4J55QKcw92I,4022
+cysignals/struct_signals.h,sha256=E3YyW8JoL0sXo6N8Dp03SFWCpuuGZIWvLa1WYVrSVjo,4034
+cysignals/macros.h,sha256=IhcjWSxi03VDe8jtLPje2QaTxegUIG2OYCNtukhybgQ,10953
+cysignals-1.12.5.data/scripts/cysignals-CSI,sha256=fVyBXhSoThxHG3a_qYGXA_NVmGaEZQ-0hd_lZrnpy-c,7129
+cysignals-1.12.5.dist-info/RECORD,,
