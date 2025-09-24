@@ -1,0 +1,12 @@
+onfleet/__init__.py,sha256=TvNYOcLLrhCz428xH8OpCfGN7RDcO7-Kama1XafUR4g,232
+onfleet/_meta.py,sha256=XyInpe-Rlf1hgwkiRXtR0uPYm4ZwRFpgchjcpZZ9Pms,21
+onfleet/config.py,sha256=eeLiwruchKjaPdqPBvye3y0hzKxXcUVAwEswmGLTXdM,92
+onfleet/endpoint.py,sha256=BQ92jg9BHoKcNHSanNIxZY7Bwj8OVwy90Ff-UOYiqTw,877
+onfleet/error.py,sha256=79IlbTWqLPgD7auu4QjWItBzUNSiI8JDvRHJ-pblAI0,540
+onfleet/onfleet.py,sha256=1WFyDdzVGPXthOzWzHE2CjdgYTU0SQwziv1R2XSKC_0,4202
+onfleet/request.py,sha256=VUab3vzwf7C-diAQDwsYhHmsEh-EAenXPeezkDpWtmQ,5388
+pyonfleet-1.5.0.dist-info/licenses/LICENSE,sha256=TaBPhHnqCeTTHqAQl8nyasmjsHPxROEHh9jev1h4O50,1070
+pyonfleet-1.5.0.dist-info/METADATA,sha256=8_MQgeKZFcf_xGGEssw_3NJCJxzaLqh6F2CajNnA0E4,10891
+pyonfleet-1.5.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyonfleet-1.5.0.dist-info/top_level.txt,sha256=ghQEBqrXv9TcPuVbi7YoOi_lthZAxFVGF1b_Jld5qfU,8
+pyonfleet-1.5.0.dist-info/RECORD,,
