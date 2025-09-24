@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/turbopdf/__init__.py
+src/turbopdf/core.py
+src/turbopdf.egg-info/PKG-INFO
+src/turbopdf.egg-info/SOURCES.txt
+src/turbopdf.egg-info/dependency_links.txt
+src/turbopdf.egg-info/requires.txt
+src/turbopdf.egg-info/top_level.txt
