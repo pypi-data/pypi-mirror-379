@@ -1,0 +1,12 @@
+studenttmixture/__init__.py,sha256=fepZZJmk7CX_3eRRoVspXP2eGRcL9qo6bF7lcViQw28,116
+studenttmixture/em_student_mixture.py,sha256=BArVTkRlPX3ATF0Ds52c_vPiIDQSHPBYpB1ubfF8wzs,24216
+studenttmixture/mixture_base_class.py,sha256=_8U0bKaPZxKLtaQ5DSdGc9Qu2fd181g4VXiLLtFOFDQ,18016
+studenttmixture/parameter_bundle.py,sha256=Dcme-Fa3bBGuwtPpl2xC-0ctueAk2-NjMzqRxa_6q0A,9152
+studenttmixture/utilities.py,sha256=GElzjq38S1CFZBmTo_EaAlkutmEiKCjpBz4eW4MfOYw,1537
+studenttmixture/variational_hyperparams.py,sha256=GbohtxaI0Dy9Mtn4m2DhC30ayrm-dJpCknSMIjw72Ac,4862
+studenttmixture/variational_student_mixture.py,sha256=Zwra418gxpDCEoAJ02rsURahZu_yfyGgkRbZ73AG3rI,40361
+studenttmixture-1.11.dist-info/licenses/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+studenttmixture-1.11.dist-info/METADATA,sha256=YJHH-HmOLTRKJOpa62O1jCtx3aDCy85-GvhhtRE2f1Y,3205
+studenttmixture-1.11.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+studenttmixture-1.11.dist-info/top_level.txt,sha256=m-TooD1wNhk3QT1VMrSgIVfbyXisyFJrTSc8ZVaed6k,16
+studenttmixture-1.11.dist-info/RECORD,,
