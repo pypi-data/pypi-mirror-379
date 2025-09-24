@@ -1,0 +1,41 @@
+[project]
+name = "pyoncoprint"
+version = "0.2.6"
+description = "PyOncoPrint"
+readme = "README.rst"
+requires-python = ">=3.7"
+license = {text = "BSD-2-Clause"}
+authors = [
+    {name = "Jeongbin Park", email = "jeongbin.park@pusan.ac.kr"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: POSIX",
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+]
+
+[project.urls]
+Homepage = "https://pnucolab.com"
+Repository = "https://github.com/pnucolab/pyoncoprint"
+
+[tool.setuptools]
+packages = ["pyoncoprint"]
+
+[tool.setuptools.package-data]
+"*" = ["*.tsv", "*.ipynb"]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-napoleon",
+]
