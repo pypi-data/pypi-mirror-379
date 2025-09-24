@@ -1,0 +1,6 @@
+bs4>=0.0.2
+langchain-community>=0.3.29
+requests>=2.32.5
+rich>=14.1.0
+structlog>=25.4.0
+typer>=0.19.2
