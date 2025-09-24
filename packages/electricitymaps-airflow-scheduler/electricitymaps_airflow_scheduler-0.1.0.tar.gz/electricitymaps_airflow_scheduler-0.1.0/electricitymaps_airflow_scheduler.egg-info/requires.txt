@@ -1,0 +1,1 @@
+apache-airflow<4.0.0,>=3.0.6

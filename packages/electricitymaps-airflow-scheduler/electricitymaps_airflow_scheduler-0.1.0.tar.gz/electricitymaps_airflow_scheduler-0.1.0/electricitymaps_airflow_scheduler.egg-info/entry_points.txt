@@ -1,0 +1,2 @@
+[apache_airflow_provider]
+provider_info = src.electricitymaps_airflow_scheduler.__init__:get_provider_info
