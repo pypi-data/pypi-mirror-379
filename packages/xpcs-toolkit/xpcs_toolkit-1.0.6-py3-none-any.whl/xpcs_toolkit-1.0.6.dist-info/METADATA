@@ -1,0 +1,278 @@
+Metadata-Version: 2.4
+Name: xpcs-toolkit
+Version: 1.0.6
+Summary: XPCS Toolkit: A python-based interactive tool to visualize and model XPCS dataset
+Author-email: Miaoqi Chu <mqichu@anl.gov>
+Maintainer-email: Miaoqi Chu <mqichu@anl.gov>
+License: MIT
+Project-URL: bugs, https://github.com/imewei/XPCS-Toolkit/issues
+Project-URL: changelog, https://github.com/imewei/XPCS-Toolkit/blob/master/HISTORY.rst
+Project-URL: homepage, https://github.com/imewei/XPCS-Toolkit
+Project-URL: repository, https://github.com/imewei/XPCS-Toolkit.git
+Project-URL: documentation, https://github.com/imewei/XPCS-Toolkit/tree/master/docs
+Keywords: XPCS,X-ray,photon correlation spectroscopy,synchrotron,visualization,science
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Requires-Python: >=3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: pyside6>=6.8.1
+Requires-Dist: numpy>=2.2.0
+Requires-Dist: scipy>=1.15.0
+Requires-Dist: h5py>=3.12.1
+Requires-Dist: matplotlib>=3.9.3
+Requires-Dist: pyqtgraph>=0.13.7
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: scikit-learn>=1.6.0
+Requires-Dist: joblib>=1.4.2
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: psutil>=6.1.1
+Requires-Dist: hdf5plugin>=4.5.0
+Provides-Extra: dev
+Requires-Dist: coverage[toml]>=7.6.9; extra == "dev"
+Requires-Dist: pytest>=8.3.4; extra == "dev"
+Requires-Dist: pytest-cov>=6.0.0; extra == "dev"
+Requires-Dist: pytest-xdist[psutil]>=3.6.1; extra == "dev"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.14.0; extra == "dev"
+Requires-Dist: pytest-timeout>=2.3.1; extra == "dev"
+Requires-Dist: pytest-sugar>=1.0.0; extra == "dev"
+Requires-Dist: pytest-html>=4.1.1; extra == "dev"
+Requires-Dist: pytest-qt>=4.4.0; extra == "dev"
+Requires-Dist: hypothesis>=6.115.6; extra == "dev"
+Requires-Dist: mypy>=1.13.0; extra == "dev"
+Requires-Dist: ruff>=0.8.4; extra == "dev"
+Requires-Dist: bandit[toml]>=1.8.0; extra == "dev"
+Requires-Dist: pre-commit>=4.0.1; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=8.1.3; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=3.0.2; extra == "docs"
+Requires-Dist: myst-parser>=4.0.0; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=2.4.4; extra == "docs"
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == "docs"
+Provides-Extra: validation
+Requires-Dist: memory-profiler>=0.61.0; extra == "validation"
+Requires-Dist: line-profiler>=4.1.0; extra == "validation"
+Requires-Dist: py-spy>=0.3.0; extra == "validation"
+Provides-Extra: performance
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "performance"
+Requires-Dist: memory-profiler>=0.61.0; extra == "performance"
+Requires-Dist: pympler>=0.9.0; extra == "performance"
+Provides-Extra: all
+Requires-Dist: coverage[toml]>=7.6.9; extra == "all"
+Requires-Dist: pytest>=8.3.4; extra == "all"
+Requires-Dist: pytest-cov>=6.0.0; extra == "all"
+Requires-Dist: pytest-xdist[psutil]>=3.6.1; extra == "all"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "all"
+Requires-Dist: pytest-mock>=3.14.0; extra == "all"
+Requires-Dist: pytest-timeout>=2.3.1; extra == "all"
+Requires-Dist: pytest-sugar>=1.0.0; extra == "all"
+Requires-Dist: pytest-html>=4.1.1; extra == "all"
+Requires-Dist: pytest-qt>=4.4.0; extra == "all"
+Requires-Dist: hypothesis>=6.115.6; extra == "all"
+Requires-Dist: mypy>=1.13.0; extra == "all"
+Requires-Dist: ruff>=0.8.4; extra == "all"
+Requires-Dist: bandit[toml]>=1.8.0; extra == "all"
+Requires-Dist: pre-commit>=4.0.1; extra == "all"
+Requires-Dist: sphinx>=8.1.3; extra == "all"
+Requires-Dist: sphinx-rtd-theme>=3.0.2; extra == "all"
+Requires-Dist: myst-parser>=4.0.0; extra == "all"
+Requires-Dist: sphinx-autodoc-typehints>=2.4.4; extra == "all"
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == "all"
+Requires-Dist: memory-profiler>=0.61.0; extra == "all"
+Requires-Dist: line-profiler>=4.1.0; extra == "all"
+Requires-Dist: py-spy>=0.3.0; extra == "all"
+Requires-Dist: pympler>=0.9.0; extra == "all"
+Dynamic: license-file
+
+============
+XPCS Toolkit
+============
+
+Python-based XPCS data analysis and visualization tool.
+
+.. image:: https://img.shields.io/badge/python-3.12%2B-blue.svg
+   :target: https://python.org
+   :alt: Python Version
+
+.. image:: https://img.shields.io/badge/license-MIT-green.svg
+   :target: LICENSE
+   :alt: License
+
+**Features:**
+
+* G2 correlation analysis with fitting
+* SAXS 1D/2D visualization
+* Two-time correlation analysis
+* HDF5 data support (NeXus format)
+* PySide6 GUI interface
+* Performance optimizations
+
+Installation
+------------
+
+**Requirements:** Python 3.12+
+
+.. code-block:: bash
+
+   # Basic installation
+   pip install xpcs-toolkit
+
+   # Complete installation with all features and tools
+   pip install xpcs-toolkit[all]
+
+   # Install with specific optional dependencies
+   pip install xpcs-toolkit[dev]        # Development tools
+   pip install xpcs-toolkit[docs]       # Documentation building
+   pip install xpcs-toolkit[validation] # Profiling and validation tools
+   pip install xpcs-toolkit[performance] # Performance analysis tools
+
+Usage
+-----
+
+.. code-block:: bash
+
+   # Launch GUI
+   xpcs-toolkit path_to_hdf_directory
+
+   # Launch from current directory
+   xpcs-toolkit
+
+Citation
+--------
+
+Chu et al., *"pyXPCSviewer: an open-source interactive tool for X-ray photon correlation spectroscopy visualization and analysis"*, Journal of Synchrotron Radiation, (2022) 29, 1122–1129.
+
+Development
+-----------
+
+.. code-block:: bash
+
+   # Clone and install
+   git clone https://github.com/imewei/XPCS-Toolkit.git
+   cd XPCS-Toolkit
+   pip install -e .[dev]
+
+   # Run tests
+   make test
+
+   # Build docs
+   make docs
+
+Data Formats
+------------
+
+* NeXus HDF5 (APS-8IDI beamline)
+* SAXS 2D/1D data
+* G2 correlation functions
+* Time series data
+
+Testing
+-------
+
+.. code-block:: bash
+
+   make test              # Run tests
+   make test-unit         # Unit tests
+   make test-integration  # Integration tests
+   make coverage          # Coverage report
+
+Documentation
+-------------
+
+.. code-block:: bash
+
+   make docs              # Build docs
+   make docs-autobuild    # Live reload docs
+
+Project Structure
+-----------------
+
+.. code-block::
+
+   xpcs_toolkit/
+   ├── module/            # Analysis modules
+   ├── fileIO/            # HDF5 I/O
+   ├── gui/               # PySide6 GUI
+   ├── plothandler/       # Plotting
+   ├── threading/         # Async workers
+   ├── utils/             # Utilities
+   └── xpcs_file.py       # Core data class
+
+Analysis Features
+-----------------
+
+* Multi-tau G2 correlation with fitting
+* Two-time correlation analysis
+* SAXS 2D pattern visualization
+* SAXS 1D radial averaging
+* Sample stability monitoring
+* File averaging tools
+
+Gallery
+-------
+
+**Analysis Modules Showcase**
+
+1. **Integrated 2D Scattering Pattern**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/saxs2d.png
+      :alt: 2D SAXS pattern visualization
+
+2. **1D SAXS Reduction and Analysis**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/saxs1d.png
+      :alt: Radially averaged 1D SAXS data
+
+3. **Sample Stability Assessment**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/stability.png
+      :alt: Temporal stability analysis across 10 time sections
+
+4. **Intensity vs Time Series**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/intt.png
+      :alt: Intensity fluctuation monitoring
+
+5. **File Averaging Toolbox**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/average.png
+      :alt: Advanced file averaging capabilities
+
+6. **G2 Correlation Analysis**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/g2mod.png
+      :alt: Multi-tau correlation function fitting
+
+7. **Diffusion Characterization**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/diffusion.png
+      :alt: τ vs q analysis for diffusion coefficients
+
+8. **Two-time Correlation Maps**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/twotime.png
+      :alt: Interactive two-time correlation analysis
+
+9. **HDF5 Metadata Explorer**
+
+   .. image:: https://raw.githubusercontent.com/imewei/XPCS-Toolkit/master/docs/images/hdf_info.png
+      :alt: File structure and metadata viewer
+
+License
+-------
+
+MIT License. See `CONTRIBUTING.rst <CONTRIBUTING.rst>`_ for development guidelines.
