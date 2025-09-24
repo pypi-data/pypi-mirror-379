@@ -1,0 +1,10 @@
+easyscript/__init__.py,sha256=VyKXmJEhD-JI7Gu2jnmeaC6AoY2QcRZGyT4qf4URAJA,349
+easyscript/__main__.py,sha256=LE7bR1F6RNQvxR5I01K9GmMtEsqDquOu5iW91TQDK-c,3128
+easyscript/easyscript.py,sha256=7ocVZnQnoZ4DVox6Naay-WujkrYcGPxA3HZVyYNkLo0,46980
+easyscript/repl.py,sha256=9aAjg6GB-ZxXJpGfoYLgrD5D9u2ew3_pmnljGLRFyjE,4670
+easyscript-0.6.6.dist-info/licenses/LICENSE,sha256=y2ZFV0ri6w5CtWFoK-1vTGVtYQAmViHcXnoRbGvdkAU,1066
+easyscript-0.6.6.dist-info/METADATA,sha256=GoztCAJQ5LA2hC2QT7T4mNa3QalJYAKy8qaAefP1BsM,12455
+easyscript-0.6.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+easyscript-0.6.6.dist-info/entry_points.txt,sha256=s7WyNgl-mi-B6figDXiBcUHIgZZzbxq-gqzcBJ3e_IE,56
+easyscript-0.6.6.dist-info/top_level.txt,sha256=FwaDkaI52bBIjtI_8OyZStD0JbuZf7Y9mW7Jf46R2ZU,11
+easyscript-0.6.6.dist-info/RECORD,,
