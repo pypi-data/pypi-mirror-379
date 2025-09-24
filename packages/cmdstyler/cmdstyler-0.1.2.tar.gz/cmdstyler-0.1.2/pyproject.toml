@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmdstyler"
+version = "0.1.2"
+description = "Better CMD text utilities, uses the pdat file format"
+authors = [{ name = "Philipp Vukovic", email = "philovic@outlook.de" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+    "sty>=1.0.5",]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Terminals",
+    "Topic :: Utilities"
+]
+

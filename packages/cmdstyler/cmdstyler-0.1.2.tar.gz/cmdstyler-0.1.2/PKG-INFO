@@ -1,0 +1,96 @@
+Metadata-Version: 2.4
+Name: cmdstyler
+Version: 0.1.2
+Summary: Better CMD text utilities, uses the pdat file format
+Author-email: Philipp Vukovic <philovic@outlook.de>
+License: MIT License
+        
+        Copyright (c) 2025 Philipp Vukovic
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sty>=1.0.5
+Dynamic: license-file
+
+# cmdstyler
+
+Easily style your CMD/terminal output with headers, colors, and more.  
+Supports `.pdat` files for larger projects to keep your code clean.
+
+## ✨ Features
+- ASCII art headers
+- 8-bit text coloring
+- Empty line spacing
+- `.pdat` file support (optional)
+
+Planned:
+- Background colors
+- Easier custom header fonts
+- 24-bit (truecolor) support
+- Progress bars
+- Centered text
+
+## 📦 Installation
+
+```bash
+pip install cmdstyler
+```
+
+## Usage
+How to use cmdstyler:
+```python
+import cmdstyler as cs
+
+# Print a header
+cs.header("Hello World")
+
+# Add empty lines
+cs.empty(2)
+
+# Print colored text (8-bit)
+cs.color("34;This is blue text")
+
+# Load from a .pdat file
+cs.beautify("example.pdat")
+```
+### PDAT file syntax
+```bash
+{header : Hello Guys!}.
+# The first word is the function name
+# The : separates the function from its argument
+# Everything after that is the output
+
+{empty : 2}.
+# Creates 2 empty lines
+
+{color : 161 ; This text is red}.
+# Prints a colored line with the specified 8-bit color
+
+{textblock : Hallo Welt}.
+# Prints a simple line of text
+```

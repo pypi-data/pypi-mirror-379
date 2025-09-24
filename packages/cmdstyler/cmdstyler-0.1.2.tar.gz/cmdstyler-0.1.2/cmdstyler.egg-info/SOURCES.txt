@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cmdstyler/__init__.py
+cmdstyler/core.py
+cmdstyler.egg-info/PKG-INFO
+cmdstyler.egg-info/SOURCES.txt
+cmdstyler.egg-info/dependency_links.txt
+cmdstyler.egg-info/requires.txt
+cmdstyler.egg-info/top_level.txt
