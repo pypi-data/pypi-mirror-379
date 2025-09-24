@@ -1,0 +1,14 @@
+bible9000/__init__.py,sha256=hTHPDlS2vA7n4j0sJPaZ1zvk7ktd91ohkpeFZGZjeuI,318
+bible9000/admin_ops.py,sha256=2Npw7aydfRwq_yt0B9VdC_sMNd-xcJvvs1N5-DyLI8w,3378
+bible9000/biblia.sqlt3,sha256=QKscp9ISDKecA98S9GwxvepQ4gcwESRWx5XRwZJM0nQ,6361088
+bible9000/main.py,sha256=nj6vl6BAnTrCldjtSrHzNeXUQU9zXLNoGUFWH3183kg,8282
+bible9000/pannel.py,sha256=Lf0AATZQclvq7BqsT-9SLBkHi8EB8Gati_nrvpf8Fkw,773
+bible9000/sierra_dao.py,sha256=VkshngNyBSr4Mfq2poSL9coAPuBBiyNeTclCO2WHsx0,5508
+bible9000/sierra_fav.py,sha256=D5CnkI_XCKYzS80rquenlIH8b7Uir5SM7zr8EXHBLz4,2323
+bible9000/sierra_note.py,sha256=qA9fA8DPL4avxuBTjSzJIhlBwYJKAAi27trwASBgGK4,3176
+bible9000/tui.py,sha256=5-3flzyqp97GNW6c7Nxbn1YzmpW_ewq-Kxi-9bRGcpA,4042
+bible9000-2025.9.23.data/data/bible9000/biblia.sqlt3,sha256=QKscp9ISDKecA98S9GwxvepQ4gcwESRWx5XRwZJM0nQ,6361088
+bible9000-2025.9.23.dist-info/METADATA,sha256=_8WyrWl6oeKhIo05ab_tYboa3pMIFE-MDwqDFZGy2w8,1945
+bible9000-2025.9.23.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bible9000-2025.9.23.dist-info/top_level.txt,sha256=7wV_bQMB8L_N7nEHGst1x9aR5zcKmyLrqUQ6qHMadvo,10
+bible9000-2025.9.23.dist-info/RECORD,,
