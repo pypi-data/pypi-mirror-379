@@ -1,0 +1,14 @@
+pump_fun_self-1.0.1.dist-info/licenses/LICENCE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+pump_self_melon/__init__.py,sha256=APzLpNzODdriXxdAtJ7qyIlbEI2HPQeptO0kLP7cuyk,141
+pump_self_melon/client.py,sha256=lxkf3KYfAtrqghD6OdIW_aF0ZmWJy3MDKszAO71WIQ4,10977
+pump_self_melon/main.py,sha256=oZFhbLj3gRXLrneb_BT8lNo6ZWa0llABS01afbSC5ak,1542
+pump_self_melon/models.py,sha256=GSEKAYq6GG4xDVRPZsqRmsBcCQWjBYbgAe2Lh_nZ62I,1273
+pump_self_melon/core/__init__.py,sha256=wRc-qRN2ngF18ln_cwHBmjR-F4rH9dwNqgdoBrCEV54,89
+pump_self_melon/core/utils.py,sha256=X45Y2VZg5ICknfxtdpW8FCimu6gxVMi3nReEruOEsrM,1933
+pump_self_melon/core/ws.py,sha256=BIyrUJBgtLIuvDCjHGvZ0BuMcPROA_2Q3AMY70T4DAo,7967
+pump_self_melon/utils/__init__.py,sha256=H2nMPYiOvywof7ywwDSrAHTZgyHPYc17X3vFhTAAtFk,93
+pump_self_melon/utils/req.py,sha256=CF7XcU-W2xG3mZrRDpcVzEZM31kcbN2eXOzk3bEHMD0,1907
+pump_fun_self-1.0.1.dist-info/METADATA,sha256=hBr7vRBSgie-0uhuAR-mLWLIGZAne6nD39sctFw4I0A,10717
+pump_fun_self-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pump_fun_self-1.0.1.dist-info/top_level.txt,sha256=dQbs3FFhHqWKPtYBU7iTnC9HSsumH4JFm-_JF1rsLRk,16
+pump_fun_self-1.0.1.dist-info/RECORD,,
