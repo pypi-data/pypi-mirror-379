@@ -1,0 +1,2 @@
+[console_scripts]
+vexy-markliff = vexy_markliff.cli:main
