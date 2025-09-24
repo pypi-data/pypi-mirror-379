@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: xarray-katdal
+Version: 0.0.3
+Summary: Add your description here
+Author: Simon Perkins
+Author-email: Simon Perkins <simon.perkins@gmail.com>
+Requires-Dist: katdal>=0.23
+Requires-Dist: xarray>=2024.7.0
+Requires-Dist: pytest>=8.4.2 ; extra == 'testing'
+Requires-Dist: zarr>=2.18.3 ; extra == 'testing'
+Requires-Python: >=3.10
+Provides-Extra: testing
+Description-Content-Type: text/x-rst
+
+xarray views over the MeerKAT archive
+=====================================
+
+
+.. code-block:: bash
+
+  $ pip install xarray-katdal zarr
+
+.. code-block:: python
+
+  import xarray_katdal
+  import xarray
+
+  cbid = 1234567890
+  token = "eYabcdefgh"
+  url = f"https://archive-gw-1.kat.ac.za/{cb_id}/{cb_id}_sdp_l0.full.rdb?token={token}"
+  dt = xarray.open_datatree(url)
+  dt.to_zarr("/path/to/dataset.zarr", compute=True)
+  dt2 = xarray.open_datatree("/path/to/dataset.zarr")
+  assert dt.identical(dt2)
