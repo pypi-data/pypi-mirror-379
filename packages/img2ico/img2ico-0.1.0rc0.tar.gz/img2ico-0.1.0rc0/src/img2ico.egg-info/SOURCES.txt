@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/img2ico/__init__.py
+src/img2ico/__main__.py
+src/img2ico.egg-info/PKG-INFO
+src/img2ico.egg-info/SOURCES.txt
+src/img2ico.egg-info/dependency_links.txt
+src/img2ico.egg-info/entry_points.txt
+src/img2ico.egg-info/requires.txt
+src/img2ico.egg-info/top_level.txt
+src/img2ico/logging/__init__.py
+src/img2ico/logging/_logging.py
+src/img2ico/utils/__init__.py
+src/img2ico/utils/_utils.py
+tests/test_import.py
