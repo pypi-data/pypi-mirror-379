@@ -1,0 +1,47 @@
+[project]
+name = "fssg"
+version = "1.1.0"
+requires-python = ">=3.9"
+description = "FACET Static Site Generator - Production-grade static site generator built on deterministic principles"
+authors = [{name="Emil Rokossovskiy", email="ecsiar@gmail.com"}]
+readme = "README.md"
+license = "MIT"
+keywords = ["FACET", "static-site-generator", "deterministic", "ssg", "jamstack"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP :: Site Management",
+  "Topic :: Software Development :: Build Tools",
+]
+
+dependencies = [
+    "facet-lang>=0.0.2",
+    "jinja2>=3.1.0",
+    "markdown>=3.5.0",
+    "pyyaml>=6.0",
+    "watchdog>=3.0.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/rokoss21/fssg"
+Repository = "https://github.com/rokoss21/fssg"
+"Issue Tracker" = "https://github.com/rokoss21/fssg/issues"
+
+[project.scripts]
+fssg = "fssg.cli:main"
+
+[build-system]
+requires = ["setuptools>=77.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["fssg*"]
+exclude = ["tests*", "examples*"]

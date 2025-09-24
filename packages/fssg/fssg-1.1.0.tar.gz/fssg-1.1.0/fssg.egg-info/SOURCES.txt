@@ -1,0 +1,13 @@
+pyproject.toml
+fssg/__init__.py
+fssg/cli.py
+fssg/config.py
+fssg/core.py
+fssg/errors.py
+fssg/renderer.py
+fssg.egg-info/PKG-INFO
+fssg.egg-info/SOURCES.txt
+fssg.egg-info/dependency_links.txt
+fssg.egg-info/entry_points.txt
+fssg.egg-info/requires.txt
+fssg.egg-info/top_level.txt
