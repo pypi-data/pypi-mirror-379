@@ -1,0 +1,3 @@
+config
+kria_cross_comp
+movex
