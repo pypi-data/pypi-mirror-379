@@ -1,0 +1,1463 @@
+Variable,Description
+acceli42,pers eligible for access supplement-r4/2
+actdty31,military full-time active duty - r3/1
+actdty42,military full-time active duty - r4/2
+actdty53,military full-time active duty - r5/3
+actlim31,any limitation work/housewrk/schl-rd 3/1
+actlim53,any limitation work/housewrk/schl - rd 5/3
+adacls42,saq 4wks:accmp less b/c phy prbs vr-12
+adage42,saq: survey age
+adapptrt42,saq 12 mths: counsel trtment teleph app
+adblds42,saq 12 mths: at home blood stool test
+adbmi42,adult body mass index (> 17) - rd 4/2
+adbndn42,saq: bone density scan
+adbpck42,saq 24 mths: dr check blood pressure
+adbrst42,saq: have brst cancer\brst removed
+adbrtc42,"saq 12 mths: birth control counseling or
+info"
+adchlc42,saq 5 yrs: dr check cholesterol
+adclim42,saq: hlth limits climbing stairs vr-12
+adclns42,saq 10 yrs: had colonoscopy
+adcmpm42,saq: date completed - month
+adcmpy42,saq: date completed - year
+adcoln42,saq: had colon cancer/colon removed
+addaya42,saq: hlth limits mod activities vr-12
+addprs42,saq 2 wks: felt down/depressed/hopeless
+addscu42,saq: discuss aspirin preventive use
+adefrt42,saq 30 days: how oftn everythng an effort
+ademls42,saq 4wks: accmp less b/c mnt prbs vr-12
+adengy42,saq 4wks: had a lot of energy vr-12
+adflst42,saq 12 mths: flu vaccination
+adgenh42,saq: health in general vr-12
+adgrptrt42,"saq 12 mths: counsel trtment in person
+group"
+adhdaddx,adhd/add diagnosis (5-17)
+adhdaged,age of diagnosis-adhd/add
+adhope42,saq 30 days: how often felt hopeless
+adintr42,saq 2 wks: little interest in things
+adkalc42,saq 12 mths: asked alcohol consumption
+adlang42,saq: language of saq interview
+adlhlp31,adl screener - rd 3/1
+adlhlp53,adl screener - rd 5/3
+admdvt42,saq: last time dr visit
+admmgr42,saq 2 yrs: had mammogram
+admntrt42,saq 12 mths: get counsel trtment medicine
+admood42,saq 12 mths: dr ask anxious/deprssed
+admwcf42,saq 4wks:work limt b/c mnt probs vr-12
+adnerv42,saq 30 days: how often felt nervous
+adnoap42,saq: can't take asprin for med reason
+adnumdrk42,saq 12 mths: number drinks typical day
+adoftalc42,"saq 12 mths: asked how much or often
+alcohol"
+adoftb42,saq 12 mths: how often use tobacco
+adonltrt42,saq 12 mths: counsel trtment online
+adostp42,saq: dx with osteoporosis
+adpain42,saq 4wks: pain limits normal work vr-12
+adpap42,saq 5 yrs: had pap smear test
+adpapg42,saq: age at last pap smear test
+adpcfl42,saq 4wks: felt calm/peaceful vr-12
+adphontrt42,saq 12 mths: counsel trtment teleph hotline
+adpneu42,saq: ever had pneumonia shot
+adprobtrt42,"saq 12 mths: problem needed counsel
+trtment"
+adpros42,saq: had prostate cancer
+adprox42,saq: relationship of proxy to adult
+adprst42,saq 4wks: felt downhearted/depr vr-12
+adpsag42,saq: age last psa test
+adqthp42,saq 12 mths: dr advs oth way quit tobac
+adqtmd42,saq 12 mths: dr advs meds to quit tobac
+adqttb42,saq 12 mths: did dr advise quit tobacco
+adratetrt42,"saq 12 mths: rate counsel trtment (0,
+worst-10, best)"
+adreltrt42,saq 12 mths: counsel trtment relig advisor
+adrest42,saq 30 days: how often felt restless
+adrnk442,saq 12 mths: had 4+ drinks per day
+adrnk542,saq 12 mths: had 5+ drinks per day
+adsad42,saq 30 days: how often felt sad
+adschtrt42,saq 12 mths: counsel trtment schl resource
+adsex42,saq: survey gender
+adsgmd42,saq 5 yrs: had sigmoidoscopy
+adshng42,saq: ever had shingles vaccine
+adsleep42,saq: how often trouble with sleep
+adsoca42,saq 4wks: hlth stopped soc activ vr-12
+adstal42,saq 12 mths: advised to stop alcohol
+adtbac42,saq 12 mths: did dr ask about tobacco
+adtrtexp42,saq: worry family finance stability m health
+adtrthlp42,saq 12 mths: counsel trtment helped
+adtrtpd42,saq 12 mths: counsel trtment paid by other
+adunabtrt42,"saq 12 mths: not get needed counsel
+trtment"
+adutrm42,saq: had hystrctmy/crvcl cancer
+adwghd42,saq 12 mths: weighed by professional
+adwklm42,saq 4wks:work limt b/c phy probs vr-12
+adwrth42,saq 30 days: how often felt worthless
+adwtad42,saq 12 mths: weight management advice
+afrdca42,could not afford med care-r4/2
+afrddn42,could not afford dental care-r4/2
+afrdpm42,could not afford pmed care-r4/2
+afthou42,how diff contact usc aft hours-r4/2
+age20x,age as of 12/31/20 (edited/imputed)
+age31x,age - r3/1 (edited/imputed)
+age42x,age - r4/2 (edited/imputed)
+age53x,age - r5/3 (edited/imputed)
+agelast,person's age last time eligible
+aidhlp31,used assistive devices - rd 3/1
+aidhlp53,used assistive devices - rd 5/3
+aliimp20,alimony income imputation flag
+alimp20x,person's alimony income
+angiaged,age of diagnosis-angina
+angidx,angina diagnosis (>17)
+anylmi20,"any limitation in p23r6,7/p24r3,4,5/p25r1,2,3"
+arthaged,age of diagnosis-arthritis
+arthdx,arthritis diagnosis (>17)
+arthtype,type of arthritis diagnosed (>17)
+asacut31,used acute pres inhaler last 3 mos - rd 3/1
+asacut53,used acute pres inhaler last 3 mos - rd 5/3
+asatak31,asthma attack last 12 mos- rd 3/1
+asatak53,asthma attack last 12 mos- rd 5/3
+asdaly31,now take prev daily asthma meds - rd 3/1
+asdaly53,now take prev daily asthma meds - rd 5/3
+asevfl31,ever used peak flow meter - rd 3/1
+asevfl53,ever used peak flow meter - rd 5/3
+asianp42,is provider asian-r4/2
+asmrcn31,used >3 acute cn pres inh last 3 mos - rd 3/1
+asmrcn53,used >3 acute cn pres inh last 3 mos - rd 5/3
+aspkfl31,have peak flow meter at home - rd 3/1
+aspkfl53,have peak flow meter at home - rd 5/3
+asprev31,ever used prev daily asthma meds - rd 3/1
+asprev53,ever used prev daily asthma meds - rd 5/3
+asstil31,does person still have asthma - rd 3/1
+asstil53,does person still have asthma - rd 5/3
+asthaged,age of diagnosis-asthma
+asthdx,asthma diagnosis
+asthep31,when was last episode of asthma - rd 3/1
+asthep53,when was last episode of asthma - rd 5/3
+aswnfl31,when last used peak flow meter - rd 3/1
+aswnfl53,when last used peak flow meter - rd 5/3
+begrfm31,r3/1 reference period begin date: month
+begrfm42,r4/2 reference period begin date: month
+begrfm53,r5/3 reference period begin date: month
+begrfy31,r3/1 reference period begin date: year
+begrfy42,r4/2 reference period begin date: year
+begrfy53,r5/3 reference period begin date: year
+bendif31,difficulty bending/stooping - rd 3/1
+bendif53,difficulty bending/stooping - rd 5/3
+blckpr42,is provider black/african amer-r4/2
+boost42,dr advise booster seat (40<wt<80)-r4/2
+bornusa,person born in the us
+bpmldx,mult diag high blood press (>17)
+bsnty31,"sole prop, partner, corp, rd 3/1 cmj"
+bsnty31h,"sol prop, prtnr, corp, rd 3/1 cmj (imp)"
+bsnty42,"sole prop, partner, corp, rd 4/2 cmj"
+bsnty42h,"sol prop, prtnr, corp, rd 4/2 cmj (imp)"
+bsnty53,"sole prop, partner, corp, rd 5/3 cmj"
+bsnty53h,"sol prop, prtnr, corp, rd 5/3 cmj (imp)"
+busimp20,business income imputation flag
+busnp20x,person's business income
+cabladdr,cancer diagnosed - bladder (>17)
+cablood,cancer diagnosed - blood (>17)
+cabreast,cancer diagnosed - breast (>17)
+cacervix,cancer diagnosed - cervical (>17)
+cacolon,cancer diagnosed - colon (>17)
+calung,cancer diagnosed - lung (>17)
+calymph,"cancer diagnosed - lymphoma (non-
+hodgkin's) (>17)"
+camelano,cancer diagnosed - skin melanoma (>17)
+cancerdx,cancer diagnosis (>17)
+caother,cancer diagnosed - other (>17)
+caprosta,cancer diagnosed - prostate (>17)
+cashp20x,person's other regular cash contribution
+caskindk,cancer diagnosed-skin-unknown type (>17)
+caskinnm,cancer diagnosed - skin-nonmelano (>17)
+cauterus,cancer diagnosed - uterine (>17)
+chbmix42,child's body mass index (6 -17) - r4/2
+chbron31,chronc bronchits last 12 mths (>17)-r3/1
+chbron53,chronc bronchits last 12 mths (>17)-r5/3
+chcoun42,cshcn:child needs counseling (0-17)-r4/2
+chdaged,age of diagnosis-coronary heart disease
+chddx,coronary hrt disease diag (>17)
+chempb42,cshcn:couns prob last 12+mos (0-17)-r4/2
+chgj3142,changed job between rd 3/1 and rd 4/2
+chgj4253,changed job between rd 4/2 and rd 5/3
+chldp20x,person's child support
+chlico42,cshcn:limit cond last 12+mos (0-17)-r4/2
+chlihb42,cshcn:limt for hlth/behv cond(0-17)-r4/2
+chlimi42,cshcn:limited in any way (0-17)-r4/2
+chlimp20,child support imputation flag
+choic31,choice of health plans at rd 3/1 cmj
+choic42,choice of health plans at rd 4/2 cmj
+choic53,choice of health plans at rd 5/3 cmj
+cholaged,age of diagnosis-high cholesterol
+choldx,high cholesterol diagnosis (>17)
+chpmcn42,cshcn:pmed cond last 12+ mos (0-17)-r4/2
+chpmed42,cshcn:child needs prescrb med(0-17)-r4/2
+chpmhb42,cshcn:pmed for hlth/behv cond(0-17)-r4/2
+chserv42,cshcn:chld needs med/oth serv(0-17)-r4/2
+chsrcn42,cshcn:serv cond last 12+ mos (0-17)-r4/2
+chsrhb42,cshcn:serv for hlth/behv cond(0-17)-r4/2
+chthco42,cshcn:ther cond last 12+ mos (0-17)-r4/2
+chther42,cshcn:chld needs spec therapy(0-17)-r4/2
+chthhb42,cshcn:spec ther for hlth+cond(0-17)-r4/2
+cmjhld31,hlth insur held from rd 3/1 cmj (prpl)
+cmjhld42,hlth insur held from rd 4/2 cmj (prpl)
+cmjhld53,hlth insur held from rd 5/3 cmj (prpl)
+coglim31,cognitive limitations - rd 3/1
+coglim53,cognitive limitations - rd 5/3
+cpsfamid,cps-like family identifier
+crfmpy42,family med bills being paid over time
+cshcn42,cshcn:child w/spec hc needs (0-17)-r4/2
+cshimp20,cash contribution imputation flag
+cvdlayca53,delay med care for covid r5/3
+cvdlaydn53,delay getting dental for covid r5/3
+cvdlaypm53,delay getting pmed for covid r5/3
+dapid31x,pid of person's dad - rd 3/1
+dapid42x,pid of person's dad - rd 4/2
+dapid53x,pid of person's dad - rd 5/3
+dcselig,eligibility status for dcs
+ddnwrk20,# days missed work due to ill/inj 2020
+decide42,prov asks pers to help decide-r4/2
+dentin31,dental insurance - any time in rd 3/1
+dentin42,dental insurance - any time in rd 4/2
+dentin53,dental insurance - any time in rd 5/3
+dfcog42,serious cognitive difficulties-rd 4/2
+dfdrsb42,difficulty dressing/bathing-rd 4/2
+dfernd42,difficulty doing errands alone-rd 4/2
+dfhear42,serious difficulty hearing-rd 4/2
+dfsee42,serious difficulty see w/glasses-rd 4/2
+dfwlkc42,serious difculty wlk/climb stairs-rd 4/2
+diabaged,age of diagnosis-diabetes
+diabdx_m18,diabetes diagnosis
+diabw20f,final diabetes care supplement weight
+diffwg31,persons wages different this rd 3/1 at cmj
+diffwg42,persons wages different this rd 4/2 at cmj
+diffwg53,persons wages different this rd 5/3 at cmj
+disvw31x,disavowed health ins at rd 3/1 cmj (ed)
+disvw42x,disavowed health ins at rd 4/2 cmj (ed)
+disvw53x,disavowed health ins at rd 5/3 cmj (ed)
+divdp20x,person's dividend income
+divimp20,dividend income imputation flag
+dlayca42,delay med care for cost-r4/2
+dlaydn42,delay getting dental for cost-r4/2
+dlaypm42,delay getting pmed for cost-r4/2
+dntins20,dentl ins-any time in r5/r3 til 12/31/20
+dntins31,dental ins - any time in rd 3/1 in 2020
+dobmm,date of birth: month
+dobyy,date of birth: year
+dsa1c53,dcs: times tested for a-one-c - 2020
+dscb1953,dcs: blood cholesterol checked bef 2019
+dscgrp53,dcs: learned care by taking group class
+dsch1953,dcs: blood cholesterol checked in 2019
+dsch2053,dcs: blood cholesterol checked in 2020
+dsch2153,dcs: blood cholesterol checked in 2021
+dschnv53,dcs: never had blood cholesterol checked
+dscint53,dcs: learned care from reading internet
+dscnpc53,dcs: learned care from other provider
+dsconf53,dcs: confident taking care of diabetes
+dscpcp53,dcs: learned care from primary care prov
+dscphn53,dcs: learn care from phone call w/prov
+dsdia53,dcs: diabetes diagnosis by health prof
+dsdiet53,dcs: treat diabetes w/diet modification
+dseb1953,dcs: dilated eye exam before 2019
+dsey1953,dcs: dilated eye exam in 2019
+dsey2053,dcs: dilated eye exam in 2020
+dsey2153,dcs: dilated eye exam in 2021
+dseynv53,dcs: never had dilated eye exam
+dseypr53,dcs: has diabetes caused eye probs
+dsfb1953,dcs: had feet checked before 2019
+dsfl1953,dcs: got flu vaccination in 2019
+dsfl2053,dcs: got flu vaccination in 2020
+dsfl2153,dcs: got flu vaccination in 2021
+dsflnv53,dcs: never got flu vaccination
+dsft1953,dcs: had feet checked during 2019
+dsft2053,dcs: had feet checked during 2020
+dsft2153,dcs: had feet checked during 2021
+dsftnv53,dcs: never had feet checked
+dsinsu53,dcs: treat diabetes w/insulin injections
+dskidn53,dcs: has diabetes caused kidney problems
+dsmed53,dcs: treat diabetes w/meds by mouth
+dsprx53,dcs: was respondent a proxy
+dsvb1953,dcs: got flu vaccination before 2019
+duid,panel # + encrypted du identifier
+dupersid,person id (duid + pid)
+dvtexp20,total dental care exp 20
+dvtmcd20,all dental care -medicaid amt 20
+dvtmcr20,all dental care -medicare amt 20
+dvtofd20,all dental care -other fedrl amt 20
+dvtosr20,all dent care-ot unclass srce amt 20
+dvtot20,# dental care visits 2020
+dvtoth20,all dental care -oth combined amt 20
+dvtprv20,all dental care -private ins amt 20
+dvtptr20,all dental care -prv & tri amt 20
+dvtslf20,all dental care -self/family amt 20
+dvtstl20,all dental care -oth st/local amt 20
+dvttch20,total dental care visit charges 20
+dvttri20,all dental care -tricare amt 20
+dvtva20,all dental care -va/champva amt 20
+dvtwcp20,all dental care -workers comp amt 20
+eathlt42,dr advise eat healthy (2-17)-r4/2
+educyr,years of educ when first entered meps
+elgrnd20,eligibility status as of 12/31/20
+elgrnd31,eligibility - r3/1
+elgrnd42,eligibility - r4/2
+elgrnd53,eligibility - r5/3
+emphaged,age of diagnosis-emphysema
+emphdx,emphysema diagnosis (>17)
+empst31,employment status rd 3/1
+empst31h,employment status rd 3/1 (imp)
+empst42,employment status rd 4/2
+empst42h,employment status rd 4/2 (imp)
+empst53,employment status rd 5/3
+empst53h,employment status rd 5/3 (imp)
+endrfm20,2020 reference period end date: month
+endrfm31,r3/1 reference period end date: month
+endrfm42,r4/2 reference period end date: month
+endrfm53,r5/3 reference period end date: month
+endrfy20,2020 reference period end date: year
+endrfy31,r3/1 reference period end date: year
+endrfy42,r4/2 reference period end date: year
+endrfy53,r5/3 reference period end date: year
+erdexp20,total emergency room dr exp 20
+erdmcd20,er-medicaid amt - dr 20
+erdmcr20,er-medicare amt - dr 20
+erdofd20,er-other fed amt - dr 20
+erdosr20,er-oth unclass srce amt - dr 20
+erdoth20,er-oth combined amt - dr 20
+erdprv20,er-private ins amt - dr 20
+erdptr20,er-prv & tri amt - dr 20
+erdslf20,er-self/family amt - dr 20
+erdstl20,er-oth st/local amt - dr 20
+erdtch20,er doctor visit charges 20
+erdtri20,er-tricare amt - dr 20
+erdva20,er-va/champva amt - dr 20
+erdwcp20,er-workers comp amt - dr 20
+erfexp20,total er facility exp 20
+erfmcd20,er-medicaid amt - fac 20
+erfmcr20,er-medicare amt - fac 20
+erfofd20,er-other federal amt - fac 20
+erfosr20,er-oth unclass srce amt - fac 20
+erfoth20,er-oth combined amt - fac 20
+erfprv20,er-private ins amt - fac 20
+erfptr20,er-prv & tri amt - fac 20
+erfslf20,er-self/family amt - fac 20
+erfstl20,er-oth st/local amt - fac 20
+erftch20,er facility visit charges 20
+erftri20,er-tricare amt - fac 20
+erfva20,er-va/champva amt - fac 20
+erfwcp20,er-workers comp amt - fac 20
+ertexp20,total er facility + dr exp 20
+ertmcd20,er -medicaid amt-(fac+dr) 20
+ertmcr20,er -medicare amt-(fac+dr) 20
+ertofd20,er -other fed amt-(fac+dr) 20
+ertosr20,er -oth unclass srce amt-(fac+dr) 20
+ertot20,# emergency room visits 2020
+ertoth20,er -oth combined amt (fac+dr) 20
+ertprv20,er -priv ins amt-(fac+dr) 20
+ertptr20,er-prv & tri amt (fac+dr) 20
+ertslf20,er -self/family amt-(fac+dr) 20
+ertstl20,er -oth st/local amt-(fac+dr) 20
+erttch20,er facility + dr visit charges 20
+erttri20,er -tricare amt-(fac+dr) 20
+ertva20,er -va/champva amt-(fac+dr) 20
+ertwcp20,er -workers comp amt-(fac+dr) 20
+evretire,person has ever retired
+evrwrk,ever wrkd for pay in life as of 12/31/20
+explop42,prov explns options to pers-r4/2
+famid20,family id (student merged in) - 12/31/20
+famid31,family id (student merged in) - r3/1
+famid42,family id (student merged in) - r4/2
+famid53,family id (student merged in) - r5/3
+famidyr,annual family identifier
+faminc20,family's total income
+famrfpyr,reference person of annualized family
+fams1231,family size of responding 12/31 family
+famsze20,ru size including student as of 12/31/20
+famsze31,ru size including students - r3/1
+famsze42,ru size including students - r4/2
+famsze53,ru size including students - r5/3
+famszeyr,size of responding annualized family
+famwt20c,pov adj family wgt-cps fam on 12/31/20
+famwt20f,"final family weight, 2020"
+fcrp1231,ref person of 12/31 cps family
+fcsz1231,fam size responding 12/31 cps family
+filedr20,has person filed a fed income tax return
+filer20,primary or secondary filer
+flstat20,person's filing status
+fmrs1231,member of responding 12/31 family
+fngrdf31,difficulty using fingers to grasp-rd 3/1
+fngrdf53,difficulty using fingers to grasp - rd 5/3
+foodmn20,number of months food stamps purchased
+foodst20,did anyone purchase food stamps
+foodvl20,monthly value of food stamps
+fsagt31,anyone in ru have fsa - r3/1
+ftstu20x,student status if ages 17-23 - 12/31/20
+ftstu31x,student status if ages 17-23 - r3/1
+ftstu42x,student status if ages 17-23 - r4/2
+ftstu53x,student status if ages 17-23 - r5/3
+gendrp42,is provider male or female-r4/2
+govaat20,cv oth pub-any tme in r5/3 til 12/31/20
+govaat31,cov by other public-any time in r3/1
+govaat42,cov by other public-any time in r4/2
+govaat53,cov by other public-any time in r5/3
+govbat20,cov oth pb hmo-any tm r5/3 til 12/31/20
+govbat31,cov by oth pub hmo-any time in r3/1
+govbat42,cov by oth pub hmo-any time in r4/2
+govbat53,cov by oth pub hmo-any time in r5/3
+govcat20,cv oth pub pays prem- r5/3 til 12/31/20
+govcat31,cv by oth pub pays prem-any time in r3/1
+govcat42,cv by oth pub pays prem-any time in r4/2
+govcat53,cv by oth pub pays prem-any time in r5/3
+govta20,cov by other public cov - 12/31/20
+govta31,cov by other public cov - r3/1 int dt
+govta42,cov by other public cov - r4/2 int dt
+govta53,cov by other public cov 12-31/r3 int dt
+govtb20,cov by oth pub hmo - 12/31/20
+govtb31,cov by oth pub hmo - r3/1 int dt
+govtb42,cov by oth pub hmo - r4/2 int dt
+govtb53,cov by oth pub hmo 12-31/r3 int dt
+govtc20,cov by oth pub pays prem - 12/31/20
+govtc31,cov by oth pub pays prem - r3/1 int dt
+govtc42,cov by oth pub pays prem - r4/2 int dt
+govtc53,cov by oth pub pays prem 12-31/r3 int dt
+gvaap20,cov by other public coverage in apr20
+gvaau20,cov by other public coverage in aug20
+gvade20,cov by other public coverage in dec20
+gvaev20,ever have other public during 2020
+gvafe20,cov by other public coverage in feb20
+gvaja20,cov by other public coverage in jan20
+gvajl20,cov by other public coverage in jul20
+gvaju20,cov by other public coverage in jun20
+gvama20,cov by other public coverage in mar20
+gvamy20,cov by other public coverage in may20
+gvano20,cov by other public coverage in nov20
+gvaoc20,cov by other public coverage in oct20
+gvase20,cov by other public coverage in sep20
+gvbap20,cov by other public hmo in apr20
+gvbau20,cov by other public hmo in aug20
+gvbde20,cov by other public hmo in dec20
+gvbev20,ever have other public hmo during 2020
+gvbfe20,cov by other public hmo in feb20
+gvbja20,cov by other public hmo in jan20
+gvbjl20,cov by other public hmo in jul20
+gvbju20,cov by other public hmo in jun20
+gvbma20,cov by other public hmo in mar20
+gvbmy20,cov by other public hmo in may20
+gvbno20,cov by other public hmo in nov20
+gvboc20,cov by other public hmo in oct20
+gvbse20,cov by other public hmo in sep20
+gvcap20,cov by other public pays prem in apr20
+gvcau20,cov by other public pays prem in aug20
+gvcde20,cov by other public pays prem in dec20
+gvcev20,ever have oth pub pays prem during 2020
+gvcfe20,cov by other public pays prem in feb20
+gvcja20,cov by other public pays prem in jan20
+gvcjl20,cov by other public pays prem in jul20
+gvcju20,cov by other public pays prem in jun20
+gvcma20,cov by other public pays prem in mar20
+gvcmy20,cov by other public pays prem in may20
+gvcno20,cov by other public pays prem in nov20
+gvcoc20,cov by other public pays prem in oct20
+gvcse20,cov by other public pays prem in sep20
+hasfsa31,person is fsa holder - r3/1
+haveus42,does person have usc provider-r4/2
+held31x,health insur held from rd 3/1 cmj (ed)
+held42x,health insur held from rd 4/2 cmj (ed)
+held53x,health insur held from rd 5/3 cmj (ed)
+helmet42,dr advise bike helmet (2-17)-r4/2
+hhaexp20,total home health agency exp 20
+hhagd20,# agency home health provider days 2020
+hhamcd20,home hlth agency -medicaid amt 20
+hhamcr20,home hlth agency -medicare amt 20
+hhaofd20,home hlth agency-other fed amt 20
+hhaosr20,h hlth agency - ot unclass srce amt 20
+hhaoth20,home hlth agency -oth combined amt 20
+hhaprv20,home hlth agency -private ins amt 20
+hhaptr20,home hlth agency -prv & tri amt 20
+hhaslf20,home hlth agency -self/family amt 20
+hhastl20,home hlth agency-othr st/local amt 20
+hhatch20,home health agency visit charges 20
+hhatri20,home hlth agency-tricare amt 20
+hhava20,home hlth agency-va/champva amt 20
+hhawcp20,home hlth agency- workers comp amt 20
+hhindd20,# non-agency home health providr days 2020
+hhinfd20,# informal home health provider days 2020
+hhnexp20,total home health non-agncy exp 20
+hhnmcd20,home hlth non-agncy -medicaid amt 20
+hhnmcr20,home hlth non-agncy -medicare amt 20
+hhnofd20,home hlth non-agncy-othr fed amt 20
+hhnosr20,h hlth non-agncy-ot unclass srce amt 20
+hhnoth20,home hlth non-agncy -oth combined amt 20
+hhnprv20,home hlth non-agncy -priv ins amt 20
+hhnptr20,home hlth non-agncy -prv & tri amt 20
+hhnslf20,home hlth non-agncy -self/fam amt 20
+hhnstl20,home hlth non-agncy-othr st/locl amt 20
+hhntch20,home health non-agency visit charges 20
+hhntri20,home hlth non-agncy-tricare amt 20
+hhnva20,home hlth non-agncy-va/champva amt 20
+hhnwcp20,home hlth non-agncy-workers comp amt 20
+hhtotd20,# home health provider days 2020
+hibpaged,age of diagnosis-high blood pressure
+hibpdx,high blood pressure diag (>17)
+hideg,highest degree when first entered meps
+hieuidx,hieu identifier
+hispanx,hispanic ethnicity (edited/imputed)
+hispncat,hispanic ethnicity (edited/imputed)
+hour31,hours per week at rd 3/1 cmj
+hour31h,hours per week at rd 3/1 cmj (imp)
+hour42,hours per week at rd 4/2 cmj
+hour42h,hours per week at rd 4/2 cmj (imp)
+hour53,hours per week at rd 5/3 cmj
+hour53h,hours per week at rd 5/3 cmj (imp)
+hpdap20,pholder of priv ins (source unknwn) apr20
+hpdau20,pholder of priv ins (source unknwn) aug20
+hpdde20,pholder of priv ins (source unknwn) dec20
+hpdfe20,pholder of priv ins (source unknwn) feb20
+hpdja20,pholder of priv ins (source unknwn) jan20
+hpdjl20,pholder of priv ins (source unknwn) jul20
+hpdju20,pholder of priv ins (source unknwn) jun20
+hpdma20,pholder of priv ins (source unknwn) mar20
+hpdmy20,pholder of priv ins (source unknwn) may20
+hpdno20,pholder of priv ins (source unknwn) nov20
+hpdoc20,pholder of priv ins (source unknwn) oct20
+hpdse20,pholder of priv ins (source unknwn) sep20
+hpeap20,pholder of empl union ins in apr20
+hpeau20,pholder of empl union ins in aug20
+hpede20,pholder of empl union ins in dec20
+hpefe20,pholder of empl union ins in feb20
+hpeja20,pholder of empl union ins in jan20
+hpejl20,pholder of empl union ins in jul20
+hpeju20,pholder of empl union ins in jun20
+hpema20,pholder of empl union ins in mar20
+hpemy20,pholder of empl union ins in may20
+hpeno20,pholder of empl union ins in nov20
+hpeoc20,pholder of empl union ins in oct20
+hpese20,pholder of empl union ins in sep20
+hpnap20,pholder of nongroup ins in apr20
+hpnau20,pholder of nongroup ins in aug20
+hpnde20,pholder of nongroup ins in dec20
+hpnfe20,pholder of nongroup ins in feb20
+hpnja20,pholder of nongroup ins in jan20
+hpnjl20,pholder of nongroup ins in jul20
+hpnju20,pholder of nongroup ins in jun20
+hpnma20,pholder of nongroup ins in mar20
+hpnmy20,pholder of nongroup ins in may20
+hpnno20,pholder of nongroup ins in nov20
+hpnoc20,pholder of nongroup ins in oct20
+hpnse20,pholder of nongroup ins in sep20
+hpoap20,pholder of other group ins in apr20
+hpoau20,pholder of other group ins in aug20
+hpode20,pholder of other group ins in dec20
+hpofe20,pholder of other group ins in feb20
+hpoja20,pholder of other group ins in jan20
+hpojl20,pholder of other group ins in jul20
+hpoju20,pholder of other group ins in jun20
+hpoma20,pholder of other group ins in mar20
+hpomy20,pholder of other group ins in may20
+hpono20,pholder of other group ins in nov20
+hpooc20,pholder of other group ins in oct20
+hpose20,pholder of other group ins in sep20
+hprap20,pholder of private insurance in apr20
+hprau20,pholder of private insurance in aug20
+hprde20,pholder of private insurance in dec20
+hprfe20,pholder of private insurance in feb20
+hprja20,pholder of private insurance in jan20
+hprjl20,pholder of private insurance in jul20
+hprju20,pholder of private insurance in jun20
+hprma20,pholder of private insurance in mar20
+hprmy20,pholder of private insurance in may20
+hprno20,pholder of private insurance in nov20
+hproc20,pholder of private insurance in oct20
+hprse20,pholder of private insurance in sep20
+hpxap20,pholder of priv ins through exch in apr20
+hpxau20,pholder of priv ins through exch in aug20
+hpxde20,pholder of priv ins through exch in dec20
+hpxfe20,pholder of priv ins through exch in feb20
+hpxja20,pholder of priv ins through exch in jan20
+hpxjl20,pholder of priv ins through exch in jul20
+hpxju20,pholder of priv ins through exch in jun20
+hpxma20,pholder of priv ins through exch in mar20
+hpxmy20,pholder of priv ins through exch in may20
+hpxno20,pholder of priv ins through exch in nov20
+hpxoc20,pholder of priv ins through exch in oct20
+hpxse20,pholder of priv ins through exch in sep20
+hrhow31,how hourly wage was calculated rd 3/1
+hrhow42,how hourly wage was calculated rd 4/2
+hrhow53,how hourly wage was calculated rd 5/3
+hrwg31h,hourly wage rd 3/1 cmj (imp)
+hrwg31x,hourly wage rd 3/1 cmj (imp)
+hrwg42h,hourly wage rd 4/2 cmj (imp)
+hrwg42x,hourly wage rd 4/2 cmj (imp)
+hrwg53h,hourly wage rd 5/3 cmj (imp)
+hrwg53x,hourly wage rd 5/3 cmj (imp)
+hrwgim31,hrwg31x imputation flag
+hrwgim42,hrwg42x imputation flag
+hrwgim53,hrwg53x imputation flag
+hselim31,housework limitation - rd 3/1
+hselim53,housework limitation - rd 5/3
+hsplap42,is provider hispanic or latino-r4/2
+hwellspk,how well person speaks english
+iadlhp31,iadl screener - rd 3/1
+iadlhp53,iadl screener - rd 5/3
+ihs20,cov by ihs - 12/31/20
+ihs31,cv by indian health service- r3/1 int dt
+ihs42,cv by indian health service- r4/2 int dt
+ihs53,cv by ihs 12-31/r3 int dt
+ihsap20,cov by indian health service in apr20
+ihsat20,cov by ihs-any tme in r5/3 til 12/31/20
+ihsat31,cov by ihs - any time in r3/1
+ihsat42,cov by ihs - any time in r4/2
+ihsat53,cov by ihs - any time in r5/3
+ihsau20,cov by indian health service in aug20
+ihsde20,cov by indian health service in dec20
+ihsfe20,cov by indian health service in feb20
+ihsja20,cov by indian health service in jan20
+ihsjl20,cov by indian health service in jul20
+ihsju20,cov by indian health service in jun20
+ihsma20,cov by indian health service in mar20
+ihsmy20,cov by indian health service in may20
+ihsno20,cov by indian health service in nov20
+ihsoc20,cov by indian health service in oct20
+ihsse20,cov by indian health service in sep20
+indcat31,industry group rd 3/1 cmj
+indcat42,industry group rd 4/2 cmj
+indcat53,industry group rd 5/3 cmj
+indct31h,industry group rd 3/1 cmj (imp)
+indct42h,industry group rd 4/2 cmj (imp)
+indct53h,industry group rd 5/3 cmj (imp)
+ins20x,insured - 12/31/20 (ed)
+ins31x,insured - r3/1 int date (ed)
+ins42x,insured - r4/2 int date (ed)
+ins53x,insured 12-31/r3 int date (ed)
+insap20x,covr by hosp/med ins in apr20
+insat20x,insured any time in r5/r3 until 12/31/20
+insat31x,insured any time in r3/1
+insat42x,insured any time in r4/2
+insat53x,insured any time in r5/3
+insau20x,covr by hosp/med ins in aug20
+insc1231,inscope status on 12/31/20
+inscop20,inscope - r5/3 start through 12/31/20
+inscop31,inscope - r3/1
+inscop42,inscope - r4/2
+inscop53,inscope - r5/3
+inscope,was person ever inscope in 2020
+inscov20,health insurance coverage indicator 2020
+insde20x,covr by hosp/med ins in dec20
+insfe20x,covr by hosp/med ins in feb20
+insja20x,covr by hosp/med ins in jan20
+insjl20x,covr by hosp/med ins in jul20
+insju20x,covr by hosp/med ins in jun20
+insma20x,covr by hosp/med ins in mar20
+insmy20x,covr by hosp/med ins in may20
+insno20x,covr by hosp/med ins in nov20
+insoc20x,covr by hosp/med ins in oct20
+insse20x,covr by hosp/med ins in sep20
+insurc20,full year insurance coverage status 2020
+intimp20,interest income imputation flag
+intrp20x,person's interest income
+intvlang,language interview was completed
+ipdexp20,totl hosp staz dr exp 20
+ipdis20,# hospital discharges 2020
+ipdmcd20,ip hosp staz-medicaid amt-dr 20
+ipdmcr20,ip hosp staz-medicare amt- dr 20
+ipdofd20,ip hosp staz-other fed amt-dr 20
+ipdosr20,ip hosp staz-ot unclass sorce amt-dr 20
+ipdoth20,ip hosp staz-oth combined amt-dr 20
+ipdprv20,ip hosp staz-priv ins amt- dr 20
+ipdptr20,ip hosp staz-prv & tri amt-dr 20
+ipdslf20,ip hosp staz-self/family amt-dr 20
+ipdstl20,ip hosp staz-oth st/local amt-dr 20
+ipdtch20,ip hosp stay charges - dr 20
+ipdtri20,ip hosp staz-tricare amt-dr 20
+ipdva20,ip hosp staz-va/champva amt-dr 20
+ipdwcp20,ip hosp staz-workers comp amt-dr 20
+ipfexp20,tot hosp ip facility exp-inc 0 nites 20
+ipfmcd20,ip hosp staz-medicaid amt-fac 20
+ipfmcr20,ip hosp staz-medicare amt-fac 20
+ipfofd20,ip hosp staz-other fed amt-fac 20
+ipfosr20,ip hosp staz-ot unclass srce amt-fac 20
+ipfoth20,ip hosp staz-oth combined amt-fac 20
+ipfprv20,ip hosp staz-priv ins amt-fac 20
+ipfptr20,ip hosp staz-prv & tri amt-fac 20
+ipfslf20,ip hosp staz-self/family amt-fac 20
+ipfstl20,ip hosp staz-oth st/local amt-fac 20
+ipftch20,ip hosp stay charges - fac 20
+ipftri20,ip hosp staz-tricare amt-fac 20
+ipfva20,ip hosp staz-va/champva amt-fac 20
+ipfwcp20,ip hosp staz-workers comp amt-fac 20
+ipngtd20,"# nights in hosp for discharges, 2020"
+iptexp20,tot hosp ip facility + dr exp 20
+iptmcd20,ip hosp staz-medicaid amt-(fac+dr) 20
+iptmcr20,ip hosp staz-medicare amt-(fac+dr) 20
+iptofd20,ip hosp staz-other fed amt-(fac+dr) 20
+iptosr20,ip hosp staz-oth uncls src amt-(fac+dr) 20
+iptoth20,ip hosp staz -oth combined amt (fac+dr) 20
+iptprv20,ip hosp staz-priv ins amt-(fac+dr) 20
+iptptr20,ip hosp staz-prv & tri amt (fac+dr) 20
+iptslf20,ip hosp staz-self/family amt-(fac+dr) 20
+iptstl20,ip hsp staz-oth st/local amt-(fac+dr) 20
+ipttch20,ip hosp stay charges (fac+dr) 20
+ipttri20,ip hosp staz-tricare amt-(fac+dr) 20
+iptva20,ip hosp staz-va/champva amt-(fac+dr) 20
+iptwcp20,ip hosp staz-wrkrs comp amt-(fac+dr) 20
+iraimp20,ira income imputation flag
+irasp20x,person's ira income
+jborg31h,"prv, st-lc gov, fed gov rd 3/1 cmj (imp)"
+jborg42h,"prv, st-lc gov, fed gov rd 4/2 cmj (imp)"
+jborg53h,"prv, st-lc gov, fed gov rd 5/3 cmj (imp)"
+jntpid20,pid of secondary filer
+joborg31,"priv (profit,nonprofit) gov rd 3/1 cmj"
+joborg42,"priv (profit,nonprofit) gov rd 4/2 cmj"
+joborg53,"priv (profit,nonprofit) gov rd 5/3 cmj"
+jtinru20,joint filer's membership in ru
+jtpain31_m18,joint pain last 12 months (>17) - rd 3/1
+jtpain53_m18,joint pain last 12 months (>17) - rd 5/3
+k6sum42,saq 30 days: overall rating of feelings
+keyness,person key status
+lapblt42,dr advise lap/shoulder belt (80<wt)-r4/2
+lftdif31,difficulty lifting 10 pounds - rd 3/1
+lftdif53,difficulty lifting 10 pounds-rd 5/3
+locatn42,usc location-r4/2
+lsteth53,lost all uppr and lowr teeth (>17)-rd5/3
+marry20x,marital status-12/31/20 (edited/imputed)
+marry31x,marital status - r3/1 (edited/imputed)
+marry42x,marital status - r4/2 (edited/imputed)
+marry53x,marital status - r5/3 (edited/imputed)
+mcaid20,cov by medicaid or schip - 12/31/20
+mcaid20x,cov by medicaid or schip - 12/31/20 (ed)
+mcaid31,cov by medicaid or schip - r3/1 int dt
+mcaid31x,cov by medicaid/schip - r3/1 int dt (ed)
+mcaid42,cov by medicaid or schip - r4/2 int dt
+mcaid42x,cov by medicaid/schip - r4/2 int dt (ed)
+mcaid53,cov by medicaid or schip 12-31/r3 int dt
+mcaid53x,cov medicaid/schip 12-31/r3 int dt(ed)
+mcare20,cov by medicare - 12/31/20
+mcare20x,cov by medicare - 12/31/20 (ed)
+mcare31,cov by medicare - r3/1 int dt
+mcare31x,cov by medicare - r3/1 int dt (ed)
+mcare42,cov by medicare - r4/2 int dt
+mcare42x,cov by medicare - r4/2 int dt (ed)
+mcare53,cov by medicare 12-31/r3 int dt
+mcare53x,cov by medicare 12-31/r3 int dt (ed)
+mcdap20,cov by medicaid or schip in apr20
+mcdap20x,cov by medicaid or schip in apr20 (ed)
+mcdat20x,cv mcd/chip-any tme in r5/3 til 12/31/20
+mcdat31x,cov medicaid or schip - any time in r3/1
+mcdat42x,cov medicaid or schip - any time in r4/2
+mcdat53x,cov medicaid or schip - any time in r5/3
+mcdau20,cov by medicaid or schip in aug20
+mcdau20x,cov by medicaid or schip in aug20 (ed)
+mcdde20,cov by medicaid or schip in dec20
+mcdde20x,cov by medicaid or schip in dec20 (ed)
+mcdev20,ever have mcaid/schip during 2020 (ed)
+mcdfe20,cov by medicaid or schip in feb20
+mcdfe20x,cov by medicaid or schip in feb20 (ed)
+mcdhmo20,cov by mcaid/schip hmo-r5/3 til 12/31/20
+mcdhmo31,cov by mcaid/schip hmo -any time in r3/1
+mcdhmo42,cov by mcaid/schip hmo -any time in r4/2
+mcdja20,cov by medicaid or schip in jan20
+mcdja20x,cov by medicaid or schip in jan20 (ed)
+mcdjl20,cov by medicaid or schip in jul20
+mcdjl20x,cov by medicaid or schip in jul20 (ed)
+mcdju20,cov by medicaid or schip in jun20
+mcdju20x,cov by medicaid or schip in jun20 (ed)
+mcdma20,cov by medicaid or schip in mar20
+mcdma20x,cov by medicaid or schip in mar20 (ed)
+mcdmc20,cv mcd/chip gtkpr pln-r5/3 til 12/31/20
+mcdmc31,cv mcaid/chip gtkpr pln-any time in r3/1
+mcdmc42,cv mcaid/chip gtkpr pln-any time in r4/2
+mcdmy20,cov by medicaid or schip in may20
+mcdmy20x,cov by medicaid or schip in may20 (ed)
+mcdno20,cov by medicaid or schip in nov20
+mcdno20x,cov by medicaid or schip in nov20 (ed)
+mcdoc20,cov by medicaid or schip in oct20
+mcdoc20x,cov by medicaid or schip in oct20 (ed)
+mcdse20,cov by medicaid or schip in sep20
+mcdse20x,cov by medicaid or schip in sep20 (ed)
+mcrap20,covered by medicare in apr20
+mcrap20x,covered by medicare in apr20 (ed)
+mcrau20,covered by medicare in aug20
+mcrau20x,covered by medicare in aug20 (ed)
+mcrde20,covered by medicare in dec20
+mcrde20x,covered by medicare in dec20 (ed)
+mcrev20,ever have medicare during 2020 (ed)
+mcrfe20,covered by medicare in feb20
+mcrfe20x,covered by medicare in feb20 (ed)
+mcrja20,covered by medicare in jan20
+mcrja20x,covered by medicare in jan20 (ed)
+mcrjl20,covered by medicare in jul20
+mcrjl20x,covered by medicare in jul20 (ed)
+mcrju20,covered by medicare in jun20
+mcrju20x,covered by medicare in jun20 (ed)
+mcrma20,covered by medicare in mar20
+mcrma20x,covered by medicare in mar20 (ed)
+mcrmy20,covered by medicare in may20
+mcrmy20x,covered by medicare in may20 (ed)
+mcrno20,covered by medicare in nov20
+mcrno20x,covered by medicare in nov20 (ed)
+mcroc20,covered by medicare in oct20
+mcroc20x,covered by medicare in oct20 (ed)
+mcrpb20,cov by medicare part b - 12/31/20
+mcrpb31,cov by medicare part b - r3/1
+mcrpb42,cov by medicare part b - r4/2
+mcrpd20,cov by medicare pmed benefit - 12/31/20
+mcrpd20x,cov by mcare pmed benefit-12/31/20 (ed)
+mcrpd31,cov by medicare pmed benefit - r3/1
+mcrpd31x,cov by medicare pmed benefit - r3/1 (ed)
+mcrpd42,cov by medicare pmed benefit - r4/2
+mcrpd42x,cov by medicare pmed benefit - r4/2 (ed)
+mcrpho20,cov by medicare managed care - 12/31/20
+mcrpho31,cov by medicare managed care - r3/1
+mcrpho42,cov by medicare managed care - r4/2
+mcrse20,covered by medicare in sep20
+mcrse20x,covered by medicare in sep20 (ed)
+meshgt42,doctor ever measured height (0-17)-r4/2
+mesvis42,doctor checked child's vision (3-6)-r4/2
+meswgt42,doctor ever measured weight (0-17)-r4/2
+miaged,age of diagnosis-heart attack(mi)
+midx,heart attack (mi) diag (>17)
+mildif31,difficulty walking a mile - rd 3/1
+mildif53,difficulty walking a mile - rd 5/3
+mnhlth31,perceived mental health status - rd 3/1
+mnhlth42,perceived mental health status - rd 4/2
+mnhlth53,perceived mental health status - rd 5/3
+mopid31x,pid of person's mom - rd 3/1
+mopid42x,pid of person's mom - rd 4/2
+mopid53x,pid of person's mom - rd 5/3
+more31,rd 3/1 cmj firm has more than 1 location
+more31h,rd 3/1 cmj firm more than 1 location (imp)
+more42,rd 4/2 cmj firm has more than 1 location
+more42h,rd 4/2 cmj firm more than 1 location (imp)
+more53,rd 5/3 cmj firm has more than 1 location
+more53h,rd 5/3 cmj firm more than 1 location (imp)
+morecovr,cov by mor compr pl prev 2 yr-pn 25 only
+morjob31,has more than one job rd 3/1 int date
+morjob42,has more than one job rd 4/2 int date
+morjob53,has more than one job rd 5/3 int date
+natamp42,is provider native american-r4/2
+nhrwg31,updated hrly wage rd 3/1 cmj (edited)
+nhrwg42,updated hrly wage rd 4/2 cmj (edited)
+nhrwg53,updated hrly wage rd 5/3 cmj (edited)
+nmemp31h,number of employees at rd 3/1 cmj (imp)
+nmemp42h,number of employees at rd 4/2 cmj (imp)
+nmemp53h,number of employees at rd 5/3 cmj (imp)
+nosmok42,dr advise smkg in home is bad(0-17)-r4/2
+numemp31,number of employees at rd 3/1 cmj
+numemp42,number of employees at rd 4/2 cmj
+numemp53,number of employees at rd 5/3 cmj
+nwk31,reason not working during rd 3/1
+nwk42,reason not working during rd 4/2
+nwk53,reason not working during rd 5/3
+obdexp20,total off-based dr exp 20
+obdmcd20,dr office visits -medicaid amt 20
+obdmcr20,dr office visits -medicare amt 20
+obdofd20,dr office visits -other federal amt 20
+obdosr20,dr off vsts - oth unclass srce amt 20
+obdoth20,dr office visits -oth combined amt 20
+obdprv20,dr office visits -private ins amt 20
+obdptr20,dr office visits -prv & tri amt 20
+obdrv20,# office-based physician visits 2020
+obdslf20,dr office visits -self/family amt 20
+obdstl20,dr office visits -oth st/local amt 20
+obdtch20,office-based physician visit charges 20
+obdtri20,dr office visits -tricare amt 20
+obdva20,dr office visits -va/champva amt 20
+obdwcp20,dr office visits -workers comp amt 20
+obtotv20,# office-based provider visits 2020
+obvexp20,total office-based exp 20
+obvmcd20,all office visits -medicaid amt 20
+obvmcr20,all office visits -medicare amt 20
+obvofd20,all office visits-other federal amt 20
+obvosr20,all off vsts - oth unclass srce amt 20
+obvoth20,all office visits -oth combined amt 20
+obvprv20,all office visits -private ins amt 20
+obvptr20,all office visits -prv & tri amt 20
+obvslf20,all office visits -self/family amt 20
+obvstl20,all office visits-oth st/local amt 20
+obvtch20,office-based provider visit charges 20
+obvtri20,all office visits-tricare amt 20
+obvva20,all office visits-va/champva amt 20
+obvwcp20,all office visits -workers comp amt 20
+occcat31,occupation group rd 3/1 cmj
+occcat42,occupation group rd 4/2 cmj
+occcat53,occupation group rd 5/3 cmj
+occct31h,occupation group rd 3/1 cmj (imp)
+occct42h,occupation group rd 4/2 cmj (imp)
+occct53h,occupation group rd 5/3 cmj (imp)
+ofemp31h,emp offers health ins rd 3/1 cmj (imp)
+ofemp42h,emp offers health ins rd 4/2 cmj (imp)
+ofemp53h,emp offers health ins rd 5/3 cmj (imp)
+offer31h,health insur offered by rd 3/1 cmj (imp)
+offer31x,health insur offered by rd 3/1 cmj (ed)
+offer42h,health insur offered by rd 4/2 cmj (imp)
+offer42x,health insur offered by rd 4/2 cmj (ed)
+offer53h,health insur offered by rd 5/3 cmj (imp)
+offer53x,health insur offered by rd 5/3 cmj (ed)
+offhou42,usc has offce hrs nghts/wkends-r4/2
+ofremp31,employer offers health ins rd 3/1 cmj
+ofremp42,employer offers health ins rd 4/2 cmj
+ofremp53,employer offers health ins rd 5/3 cmj
+oftsmk53,how oftn smoke cigarettes (>17) - rd 5/3
+ohrtaged,age of diagnosis-other heart disease
+ohrtdx,other heart disease diag (>17)
+ohrttype,type of other heart disease (>17)
+opdexp20,total outpatient provider exp 20
+opdmcd20,all opd visits-medicaid amt -dr 20
+opdmcr20,all opd visits-medicare amt -dr 20
+opdofd20,all opd visits-other fed amt-dr 20
+opdosr20,all opd vsts-oth unclass srce amt-dr 20
+opdoth20,all opd visits -oth combined amt-dr 20
+opdprv20,all opd visits-priv ins amt-dr 20
+opdptr20,all opd visits -prv & tri amt -dr 20
+opdrv20,# outpatient dept physician visits 2020
+opdslf20,all opd visits-self/family amt-dr 20
+opdstl20,all opd visits-oth st/local amt-dr 20
+opdtch20,opd provider visit charges - dr 20
+opdtri20,all opd visits-tricare amt-dr 20
+opdva20,all opd visits-va/champva amt-dr 20
+opdwcp20,all opd visits-workers comp amt-dr 20
+opfexp20,total outpatient facility exp 20
+opfmcd20,all opd visits-medicaid amt-fac 20
+opfmcr20,all opd visits-medicare amt-fac 20
+opfofd20,all opd visits-other fed amt-fac 20
+opfosr20,all opd vsts-oth unclass srce amt-fac 20
+opfoth20,all opd visits -oth combined amt-fac 20
+opfprv20,all opd visits-priv ins amt-fac 20
+opfptr20,all opd visits -prv & tri amt-fac 20
+opfslf20,all opd visits-self/family amt-fac 20
+opfstl20,all opd visits-oth st/local amt-fac 20
+opftch20,opd provider visit charges - fac 20
+opftri20,all opd visits-tricare amt-fac 20
+opfva20,all opd visits-va/champva amt-fac 20
+opfwcp20,all opd visits-workers comp amt-fac 20
+opsexp20,total outpatient physician - dr exp 20
+opsmcd20,opd dr visits-medicaid amt-dr 20
+opsmcr20,opd dr visits-medicare amt-dr 20
+opsofd20,opd dr visits-other fed amt-dr 20
+opsosr20,opd dr vsts-oth unclass srce amt-dr 20
+opsoth20,opd dr visits -oth combined amt-dr 20
+opsprv20,opd dr visits-priv ins amt-dr 20
+opsptr20,opd dr visits -prv & tri amt-dr 20
+opsslf20,opd dr visits-self/family amt-dr 20
+opsstl20,opd dr visits-oth st/local amt-dr 20
+opstch20,opd physician visit charges - dr 20
+opstri20,opd dr visits-tricare amt-dr 20
+opsva20,opd dr visits-va/champva amt-dr 20
+opswcp20,opd dr visits-workers comp amt-dr 20
+optexp20,total outpatient fac + dr exp 20
+optmcd20,all opd vsts-medicaid amt-(fac+dr) 20
+optmcr20,all opd vsts-medicare amt-(fac+dr) 20
+optofd20,all opd vsts-other fed amt-(fac+dr) 20
+optosr20,all opd vsts-oth uncls src amt-(fac+dr) 20
+optoth20,all opd visits-oth combined amt(fac+dr) 20
+optotv20,# outpatient dept provider visits 2020
+optprv20,all opd vsts-priv ins amt-(fac+dr) 20
+optptr20,all opd visits -prv & tri amt (fac+dr) 20
+optslf20,all opd vsts-self/family amt-(fac+dr) 20
+optstl20,all opd vsts-oth st/local amt-(fac+dr) 20
+opttch20,opd facility + dr visit charges - 20
+opttri20,all opd vsts-tricare amt-(fac+dr) 20
+optva20,all opd vsts-va/champva amt-(fac+dr) 20
+optwcp20,all opd vsts-workers comp amt-(fac+dr) 20
+opvexp20,total outpatient physician - fac exp 20
+opvmcd20,opd dr visits-medicaid amt-fac 20
+opvmcr20,opd dr visits-medicare amt-fac 20
+opvofd20,opd dr visits-other fed amt-fac 20
+opvosr20,opd dr vsts-oth unclass srce amt-fac 20
+opvoth20,opd dr visits -oth combined amt-fac 20
+opvprv20,opd dr visits-priv ins amt-fac 20
+opvptr20,opd dr visits -prv & tri amt-fac 20
+opvslf20,opd dr visits-self/family amt-fac 20
+opvstl20,opd dr visits-oth st/local amt-fac 20
+opvtch20,opd physician visit charges - fac 20
+opvtri20,opd dr visits-tricare amt-fac 20
+opvva20,opd dr visits-va/champva amt-fac 20
+opvwcp20,opd dr visits-workers comp amt-fac 20
+othdys20,miss any work day to care for oth 2020
+othexp20,tot other equip/sply (excl diab) exp 20
+othimp20,other income imputation flag
+othlgspk,speak other language at home
+othmcd20,other equp/supplies-medicaid amt 20
+othmcr20,other equp/supplies-medicare amt 20
+othndd20,# day missed work to care for oth 2020
+othofd20,other equp/supplies-othr fedrl amt 20
+othosr20,oth equp/suply -ot unclass srce amt 20
+othoth20,other equp/supply -oth combined amt 20
+othprv20,other equp/supplies-priv ins amt 20
+othptr20,other equp/supply -prv & tri amt 20
+othrcp42,is provider some other race-r4/2
+othrp20x,person's other income
+othslf20,other equp/supplies -self/fam amt 20
+othstl20,other equp/supply-othr st/local amt 20
+othtch20,other equp/supplies charges 20
+othtri20,other equp/supply-tricare amt 20
+othva20,other equp/supply-va/champva amt 20
+othwcp20,other equp/supply -workers comp amt 20
+outflag31,"outlier flag indicates wage flagged but not
+edited"
+outflag42,"outlier flag indicates wage flagged but not
+edited"
+outflag53,"outlier flag indicates wage flagged but not
+edited"
+pacisp42,is provider oth pacific islndr-r4/2
+panel,panel number
+paydr31,paid leave to visit dr rd 3/1 cmj
+paydr31h,paid leave to visit dr rd 3/1 cmj (imp)
+paydr42,paid leave to visit dr rd 4/2 cmj
+paydr42h,paid leave to visit dr rd 4/2 cmj (imp)
+paydr53,paid leave to visit dr rd 5/3 cmj
+paydr53h,paid leave to visit dr rd 5/3 cmj (imp)
+payvac31,paid vacation at rd 3/1 cmj
+payvac42,paid vacation at rd 4/2 cmj
+payvac53,paid vacation at rd 5/3 cmj
+pdkap20,covr by priv ins (source unknwn) apr20
+pdkau20,covr by priv ins (source unknwn) aug20
+pdkde20,covr by priv ins (source unknwn) dec20
+pdkfe20,covr by priv ins (source unknwn) feb20
+pdkja20,covr by priv ins (source unknwn) jan20
+pdkjl20,covr by priv ins (source unknwn) jul20
+pdkju20,covr by priv ins (source unknwn) jun20
+pdkma20,covr by priv ins (source unknwn) mar20
+pdkmy20,covr by priv ins (source unknwn) may20
+pdkno20,covr by priv ins (source unknwn) nov20
+pdkoc20,covr by priv ins (source unknwn) oct20
+pdkse20,covr by priv ins (source unknwn) sep20
+pegap20,covered by empl union ins in apr20
+pegau20,covered by empl union ins in aug20
+pegde20,covered by empl union ins in dec20
+pegfe20,covered by empl union ins in feb20
+pegja20,covered by empl union ins in jan20
+pegjl20,covered by empl union ins in jul20
+pegju20,covered by empl union ins in jun20
+pegma20,covered by empl union ins in mar20
+pegmy20,covered by empl union ins in may20
+pegno20,covered by empl union ins in nov20
+pegoc20,covered by empl union ins in oct20
+pegse20,covered by empl union ins in sep20
+penimp20,pension income imputation flag
+pensp20x,person's pension income
+perwt20f,"final person weight, 2020"
+pfsamt31,person-level fsa total amount - r3/1
+phnreg42,how diff contact usc by phone-r4/2
+phq242,saq 2 wks: overall rating of feelings
+phyexe53,mod/vig phys exec 5x wk (>17) - rd 5/3
+physcl42,dr advise exercise (2-17)-r4/2
+pid,person number
+plctyp42,usc type of place-r4/2
+pmdins20,pmed ins - r5/r3 until 12/31/20
+pmdins31,pmed ins - rd 3/1 in 2020
+pmedin31,pmed ins - any time in rd 3/1
+pmedin42,pmedins - any time in rd 4/2
+pmedin53,pmedins - any time in rd 5/3
+pmedpy31,usual 3rd party payer for pmeds - r3/1
+pmedpy42,usual 3rd party payer for pmeds - r4/2
+pmedpy53,usual 3rd party payer for pmeds - r5/3
+pmedup31,has usual 3rd party payer for pmeds-r3/1
+pmedup42,has usual 3rd party payer for pmeds-r4/2
+pmedup53,has usual 3rd party payer for pmeds-r5/3
+pneap20,"cov by non-esi, phldr outside ru in apr20"
+pneau20,"cov by non-esi, phldr outside ru in aug20"
+pnede20,"cov by non-esi, phldr outside ru in dec20"
+pnefe20,"cov by non-esi, phldr outside ru in feb20"
+pneja20,"cov by non-esi, phldr outside ru in jan20"
+pnejl20,"cov by non-esi, phldr outside ru in jul20"
+pneju20,"cov by non-esi, phldr outside ru in jun20"
+pnema20,"cov by non-esi, phldr outside ru in mar20"
+pnemy20,"cov by non-esi, phldr outside ru in may20"
+pneno20,"cov by non-esi, phldr outside ru in nov20"
+pneoc20,"cov by non-esi, phldr outside ru in oct20"
+pnese20,"cov by non-esi, phldr outside ru in sep20"
+pngap20,covered by nongroup ins in apr20
+pngau20,covered by nongroup ins in aug20
+pngde20,covered by nongroup ins in dec20
+pngfe20,covered by nongroup ins in feb20
+pngja20,covered by nongroup ins in jan20
+pngjl20,covered by nongroup ins in jul20
+pngju20,covered by nongroup ins in jun20
+pngma20,covered by nongroup ins in mar20
+pngmy20,covered by nongroup ins in may20
+pngno20,covered by nongroup ins in nov20
+pngoc20,covered by nongroup ins in oct20
+pngse20,covered by nongroup ins in sep20
+poeap20,"cov by esi, pholder outside ru in apr20"
+poeau20,"cov by esi, pholder outside ru in aug20"
+poede20,"cov by esi, pholder outside ru in dec20"
+poefe20,"cov by esi, pholder outside ru in feb20"
+poeja20,"cov by esi, pholder outside ru in jan20"
+poejl20,"cov by esi, pholder outside ru in jul20"
+poeju20,"cov by esi, pholder outside ru in jun20"
+poema20,"cov by esi, pholder outside ru in mar20"
+poemy20,"cov by esi, pholder outside ru in may20"
+poeno20,"cov by esi, pholder outside ru in nov20"
+poeoc20,"cov by esi, pholder outside ru in oct20"
+poese20,"cov by esi, pholder outside ru in sep20"
+pogap20,covered by other group ins in apr20
+pogau20,covered by other group ins in aug20
+pogde20,covered by other group ins in dec20
+pogfe20,covered by other group ins in feb20
+pogja20,covered by other group ins in jan20
+pogjl20,covered by other group ins in jul20
+pogju20,covered by other group ins in jun20
+pogma20,covered by other group ins in mar20
+pogmy20,covered by other group ins in may20
+pogno20,covered by other group ins in nov20
+pogoc20,covered by other group ins in oct20
+pogse20,covered by other group ins in sep20
+povcat20,family inc as % of poverty line - categorical
+povlev20,family inc as % of poverty line - continuous
+practp42,provider own/group practice-r4/2
+prevcovr,per cov by ins in prev 2 yrs-pnl 25 only
+priap20,covered by private ins in apr20
+priau20,covered by private ins in aug20
+pride20,covered by private ins in dec20
+pridk20,cov by priv ins (dk plan) - 12/31/20
+pridk31,cov by priv ins (dk plan) - r3/1 int
+pridk42,cov by priv ins (dk plan) - r4/2 int
+pridk53,cov by priv ins (dk plan) 12-31/r3 int
+prieu20,cov by empl/union grp ins - 12/31/20
+prieu31,cov by empl/union grp ins - r3/1 int dt
+prieu42,cov by empl/union grp ins - r4/2 int dt
+prieu53,cov by empl/union grp ins 12-31/r3 int
+prieuo20,"cov by esi, pholdr outside ru - 12/31/20"
+prieuo31,"cov by esi, pholdr outside ru - r3/1 int"
+prieuo42,"cov by esi, pholdr outside ru - r4/2 int"
+prieuo53,"cv by esi, phldr outside ru 12-31/r3 int"
+prife20,covered by private ins in feb20
+prija20,covered by private ins in jan20
+prijl20,covered by private ins in jul20
+priju20,covered by private ins in jun20
+prima20,covered by private ins in mar20
+primy20,covered by private ins in may20
+prineo20,"cov by non-esi, pholdr out ru - 12/31/20"
+prineo31,"cov by non-esi, pholdr out ru - r3/1 int dt"
+prineo42,"cov by non-esi, pholdr out ru - r4/2 int dt"
+prineo53,"cov by non-esi, pholdr out ru 12-31/r3 int dt"
+pring20,cov by non-group ins - 12/31/20
+pring31,cov by non-group ins - r3/1 int dt
+pring42,cov by non-group ins - r4/2 int dt
+pring53,cov by non-group ins 12-31/r3 int dt
+prino20,covered by private ins in nov20
+prioc20,covered by private ins in oct20
+priog20,cov by other group ins - 12/31/20
+priog31,cov by other group ins - r3/1 int dt
+priog42,cov by other group ins - r4/2 int dt
+priog53,cov by other group ins 12-31/r3 int dt
+prise20,covered by private ins in sep20
+priv20,cov by priv hlth ins - 12/31/20
+priv31,cov by priv hlth ins - r3/1 int date
+priv42,cov by priv hlth ins - r4/2 int date
+priv53,cov by priv hlth ins 12-31/r3 int date
+privat20,cov by private ins - r5/3 until 12/31/20
+privat31,cov by private ins - any time in r3/1
+privat42,cov by private ins - any time in r4/2
+privat53,cov by private ins - any time in r5/3
+probpy42,family having prob paying medical bills
+provty42_m18,provider type-r4/2
+proxy20,was respondent a proxy as of 12/31/20
+proxy31,was respondent a proxy in r3/1
+proxy42,was respondent a proxy in r4/2
+proxy53,was respondent a proxy in r5/3
+prstx20,priv exchange insurance on 12/31/20
+prstx31,cov by priv exchange ins -r3/1 int dt
+prstx42,cov by priv exchange ins -r4/2 int dt
+prstx53,priv exchange ins on 12-31 r5/r3 int dt
+prvev20,ever have private insurance during 2020
+prvhmo20,covered by private hmo-r5/3 til 12/31/20
+prvhmo31,covered by private hmo-any time in r3/1
+prvhmo42,covered by private hmo-any time in r4/2
+prvspk42,prov speaks person's language-r4/2
+prxap20,cov by priv ins through exchng in apr20
+prxau20,cov by priv ins through exchng in aug20
+prxde20,cov by priv ins through exchng in dec20
+prxfe20,cov by priv ins through exchng in feb20
+prxja20,cov by priv ins through exchng in jan20
+prxjl20,cov by priv ins through exchng in jul20
+prxju20,cov by priv ins through exchng in jun20
+prxma20,cov by priv ins through exchng in mar20
+prxmy20,cov by priv ins through exchng in may20
+prxno20,cov by priv ins through exchng in nov20
+prxoc20,cov by priv ins through exchng in oct20
+prxse20,cov by priv ins through exchng in sep20
+pstats31,person disposition status - r3/1
+pstats42,person disposition status - r4/2
+pstats53,person disposition status - r5/3
+pub20x,cov by public ins - 12/31/20 (ed)
+pub31x,cov by public ins - r3/1 int dt (ed)
+pub42x,cov by public ins - r4/2 int dt (ed)
+pub53x,cov by public ins 12-31/r3 int dt (ed)
+pubap20x,covr by any public ins in apr20
+pubat20x,cov by public - r5/3 until 12/31/20
+pubat31x,cov by public - any time in r3/1
+pubat42x,cov by public - any time in r4/2
+pubat53x,cov by public - any time in r5/3
+pubau20x,covr by any public ins in aug20
+pubde20x,covr by any public ins in dec20
+pubfe20x,covr by any public ins in feb20
+pubimp20,public assistance imputation flag
+pubja20x,covr by any public ins in jan20
+pubjl20x,covr by any public ins in jul20
+pubju20x,covr by any public ins in jun20
+pubma20x,covr by any public ins in mar20
+pubmy20x,covr by any public ins in may20
+pubno20x,covr by any public ins in nov20
+puboc20x,covr by any public ins in oct20
+pubp20x,person's public assistance
+pubse20x,covr by any public ins in sep20
+pyunbl42,unable to pay family medical bills
+pyvac31h,paid vacation at rd 3/1 cmj (imp)
+pyvac42h,paid vacation at rd 4/2 cmj (imp)
+pyvac53h,paid vacation at rd 5/3 cmj (imp)
+raceax,asian among races rptd (edited/imputed)
+racebx,black among races rptd (edited/imputed)
+racethx,race/ethnicity (edited/imputed)
+racev1x,race (edited/imputed)
+racev2x,race (edited/imputed)
+racewx,white among races rptd (edited/imputed)
+rchdif31,difficulty reaching overhead - rd 3/1
+rchdif53,difficulty reaching overhead - rd 5/3
+refprs20,reference person as of 12/31/20
+refprs31,reference person at - r3/1
+refprs42,reference person at - r4/2
+refprs53,reference person at - r5/3
+refrl20x,relation to ref pers-12/31/20 (edit/imp)
+refrl31x,relation to ref pers- r3/1 (edit/imp)
+refrl42x,relation to ref pers- r4/2 (edit/imp)
+refrl53x,relation to ref pers- r5/3 (edit/imp)
+region20,census region as of 12/31/20
+region31,census region - r3/1
+region42,census region - r4/2
+region53,census region - r5/3
+resp20,1st respondent indicator as of 12/31/20
+resp31,1st respondent indicator for r3/1
+resp42,1st respondent indicator for r4/2
+resp53,1st respondent indicator for r5/3
+retpln31,pension plan at rd 3/1 cmj
+retpln42,pension plan at rd 4/2 cmj
+retpln53,pension plan at rd 5/3 cmj
+rndflg31,data collection round for rd 3/1 cmj
+rthlth31,perceived health status - rd 3/1
+rthlth42,perceived health status - rd 4/2
+rthlth53,perceived health status - rd 5/3
+rtpln31h,pension plan at rd 3/1 cmj (imp)
+rtpln42h,pension plan at rd 4/2 cmj (imp)
+rtpln53h,pension plan at rd 5/3 cmj (imp)
+ruclas20,ru fielded as:standard/new/stud-12/31/20
+ruclas31,ru fielded as:standard/new/student-r3/1
+ruclas42,ru fielded as:standard/new/student-r4/2
+ruclas53,ru fielded as:standard/new/student-r5/3
+ruletr20,ru letter as of 12/31/20
+ruletr31,ru letter - r3/1
+ruletr42,ru letter - r4/2
+ruletr53,ru letter - r5/3
+rurslt31,ru result - r3/1
+rurslt42,ru result - r4/2
+rurslt53,ru result - r5/3
+rusize20,ru size as of 12/31/20
+rusize31,ru size - r3/1
+rusize42,ru size - r4/2
+rusize53,ru size - r5/3
+rxexp20,total rx-exp 20
+rxmcd20,total rx-medicaid amt 20
+rxmcr20,total rx--medicare amt 20
+rxofd20,total rx-other fed amt 20
+rxosr20,tot rx-oth unclass srce amt 20
+rxoth20,total rx-oth combined amt 20
+rxprv20,total rx-private ins amt 20
+rxptr20,total rx-prv & tri amt 20
+rxslf20,total rx-self/family amt 20
+rxstl20,total rx-other st/local amt 20
+rxtot20,# presc meds incl refills 20
+rxtri20,total rx-tricare amt 20
+rxva20,total rx-va/champva amt 20
+rxwcp20,total rx-workers comp amt 20
+safest42,dr advise chld safety seat (wt<=40)-r4/2
+salep20x,person's sales income
+salimp20,sales income imputation flag
+saqelig,eligibility status for saq
+saqwt20f,"final saq person weight, 2020"
+schlim31,school limitation - rd 3/1
+schlim53,school limitation - rd 5/3
+scpay31h,paid sick leave at rd 3/1 cmj (imp)
+scpay42h,paid sick leave at rd 4/2 cmj (imp)
+scpay53h,paid sick leave at rd 5/3 cmj (imp)
+selfcm31,self-employed at rd 3/1 cmj
+selfcm42,self-employed at rd 4/2 cmj
+selfcm53,self-employed at rd 5/3 cmj
+sex,sex
+sicpay31,paid sick leave at rd 3/1 cmj
+sicpay42,paid sick leave at rd 4/2 cmj
+sicpay53,paid sick leave at rd 5/3 cmj
+slfcm31h,self-employed at rd 3/1 cmj (imp)
+slfcm42h,self-employed at rd 4/2 cmj (imp)
+slfcm53h,self-employed at rd 5/3 cmj (imp)
+soclim31,social limitations - rd 3/1
+soclim53,social limitations - rd 5/3
+spouid20,spouse id - 12/31/20
+spouid31,spouse id - r3/1
+spouid42,spouse id - r4/2
+spouid53,spouse id - r5/3
+spouin20,marital status w/spouse present-12/31/20
+spouin31,marital status w/spouse present-r3/1
+spouin42,marital status w/spouse present-r4/2
+spouin53,marital status w/spouse present-r5/3
+sscimp20,social security income imputation flag
+ssecp20x,person's social security income
+ssiimp20,ssi imputation flag
+ssip20x,person's ssi
+ssnljb31,is cmj a seasonal job rd 3/1
+ssnljb42,is cmj a seasonal job rd 4/2
+ssnljb53,is cmj a seasonal job rd 5/3
+stjbmm31,month started rd 3/1 cmj
+stjbmm42,month started rd 4/2 cmj
+stjbmm53,month started rd 5/3 cmj
+stjbyy31,year started rd 3/1 cmj
+stjbyy42,year started rd 4/2 cmj
+stjbyy53,year started rd 5/3 cmj
+stndif31,difficulty standing 20 minutes - rd 3/1
+stndif53,difficulty standing 20 minutes - rd 5/3
+stpdif31,difficulty walking up 10 steps - rd 3/1
+stpdif53,difficulty walking up 10 steps - rd 5/3
+strkaged,age of diagnosis-stroke
+strkdx,stroke diagnosis (>17)
+taxfrm20,tax form person will file
+tempjb31,is cmj a temporary job rd 3/1
+tempjb42,is cmj a temporary job rd 4/2
+tempjb53,is cmj a temporary job rd 5/3
+timaln42,doctor spend any time alone (12-17)-r4/2
+tmtkus42,how long it takes get to usc-r4/2
+totexp20,total health care exp 20
+totmcd20,total amt paid by medicaid 20
+totmcr20,total amt paid by medicare 20
+totofd20,total amt paid by other federal 20
+totosr20,total amt paid by other sources 20
+tototh20,total amt paid by oth combined 20
+totprv20,total amt paid by private ins 20
+totptr20,total amt paid by prv & tri 20
+totslf20,total amt paid by self/family 20
+totstl20,total amt paid by oth st/local 20
+tottch20,"total health care charges 20, excl rx"
+tottri20,total amt paid by tricare 20
+totva20,total amt paid by va/champva 20
+totwcp20,total amt paid by workers comp 20
+treatm42,prov ask about oth treatments-r4/2
+triap20x,covered by tricare/champva in apr20(ed)
+triat20x,cov tricare/champva-r5/3 until 12/31/20
+triat31x,cov tricare/champva - any time in r3/1
+triat42x,cov tricare/champva - any time in r4/2
+triat53x,cov tricare/champva - any time in r5/3
+triau20x,covered by tricare/champva in aug20 (ed)
+trich20x,covered by champva - r5/3 until 12/31/20
+trich31x,covered by champva - any time in r3/1
+trich42x,covered by champva - any time in r4/2
+tricr20x,cov by tricr/chamv - 12/31/20 (ed)
+tricr31x,cov by tricr/chamv - r3/1 int dt (ed)
+tricr42x,cov by tricr/chamv - r4/2 int dt (ed)
+tricr53x,cov by tricr/chamv 12-31/r3 int dt (ed)
+tride20x,covered by tricare/champva in dec20 (ed)
+triev20,ever have tricare/champva during 2020
+triex20x,cov by tricare extra - r5/3 til 12/31/20
+triex31x,cov by tricare extra - any time in r3/1
+triex42x,cov by tricare extra - any time in r4/2
+trife20x,covered by tricare/champva in feb20 (ed)
+trija20x,covered by tricare/champva in jan20 (ed)
+trijl20x,covered by tricare/champva in jul20 (ed)
+triju20x,covered by tricare/champva in jun20 (ed)
+trili20x,cv by tricare for life-r5/3 til 12/31/20
+trili31x,cov by tricare for life-any time in r3/1
+trili42x,cov by tricare for life-any time in r4/2
+trima20x,covered by tricare/champva in mar20 (ed)
+trimy20x,covered by tricare/champva in may20 (ed)
+trino20x,covered by tricare/champva in nov20 (ed)
+trioc20x,covered by tricare/champva in oct20 (ed)
+tripr20x,cov by tricare prime-r5/3 until 12/31/20
+tripr31x,cov by tricare prime - any time in r3/1
+tripr42x,cov by tricare prime - any time in r4/2
+trise20x,covered by tricare/champva in sep20 (ed)
+trist20x,cv by tricare standard-r5/3 til 12/31/20
+trist31x,cov by tricare standard-any time in r3/1
+trist42x,cov by tricare standard-any time in r4/2
+trstp20x,person's trust/rent income
+trtimp20,trust income imputation flag
+ttlp20x,person's total income
+typepe42,usc type of provider-r4/2
+unable31,completely unable to do activity-rd 3/1
+unable53,completely unable to do activity - rd 5/3
+uneimp20,unemployment imputation flag
+unemp20x,person's unemployment comp income
+unins20,uninsured all of 2020
+union31,union status at rd 3/1 cmj
+union31h,union status at rd 3/1 cmj (imp)
+union42,union status at rd 4/2 cmj
+union42h,union status at rd 4/2 cmj (imp)
+union53,union status at rd 5/3 cmj
+union53h,union status at rd 5/3 cmj (imp)
+vaev20,ever have va during 2020
+vapap20,covered by va in apr20
+vapau20,covered by va in aug20
+vapde20,covered by va in dec20
+vapfe20,covered by va in feb20
+vapja20,covered by va in jan20
+vapjl20,covered by va in jul20
+vapju20,covered by va in jun20
+vapma20,covered by va in mar20
+vapmy20,covered by va in may20
+vapno20,covered by va in nov20
+vapoc20,covered by va in oct20
+vaprat20,cov by va-any tme in r5/3 til 12/31/20
+vaprat31,cov by va - any time in r3/1
+vaprat42,cov by va - any time in r4/2
+vaprat53,cov by va - any time in r5/3
+vaprog20,cov by va- 12/31/20
+vaprog31,cov by va - r3/1 int dt
+vaprog42,cov by va - r4/2 int dt
+vaprog53,cov by va 12-31/r3 int dt
+vapse20,covered by va in sep20
+varpsu,variance estimation psu - 2020
+varstr,variance estimation stratum - 2020
+verflg20,"pid gained covg thru verification in r5/r3
+until 12/31/20"
+verflg31,pid gained covg thru verification r3/1
+verflg42,pid gained covg thru verification r4/2
+vetimp20,veteran's income imputation flag
+vetsp20x,person's veteran's income
+visexp20,total glasses/contact lens exp 20
+vismcd20,glasses/cntct lenses-medicaid amt 20
+vismcr20,glasses/cntct lenses-medicare amt 20
+visofd20,glasses/cntct lenses-othr fed amt 20
+visosr20,glases/cntct lense-ot unclas srce amt 20
+visoth20,glasses/cntct lenses -oth combined amt 20
+visprv20,glasses/cntct lenses-priv ins amt 20
+visptr20,glasses/cntct lenses -prv & tri amt 20
+visslf20,glasses/cntct lenses -self/fam amt 20
+visstl20,glasses/cntct lenses-oth st/locl amt 20
+vistch20,glasses/contact lenses charges 20
+vistri20,glasses/lenses-tricare amt 20
+visva20,glasses/cntct lenses-va/champva amt 20
+viswcp20,glasses/cntct lenses-workers comp amt 20
+vmcs42,saq:mnt component summry vr-12 imputed
+vpcs42,saq:phy component summry vr-12 imputed
+vrflag42,saq: vpcs42/vmcs42 imputation flag vr-12
+wagep20x,person's wage income
+wagimp20,wage imputation flag
+wcmpp20x,person's workers' compensation
+wcpimp20,workers' comp imputation flag
+whitpr42,is provider white-r4/2
+whnbst42,when dr advise boost seat(40<wt<80)-r4/2
+whneat42,when dr advise eat healthy (2-17)-r4/2
+whnhel42,when dr advise bike helmet (2-17)-r4/2
+whnhgt42,when doctor measured height (0-17)-r4/2
+whnlap42,whn dr advise lap/shldr blt (80<wt)-r4/2
+whnphy42,when dr advise exercise (2-17)-r4/2
+whnsaf42,when dr advise safety seat (wt<40)-r4/2
+whnsmk42,whn dr advis smkg in home bad(0-17)-r4/2
+whnwgt42,when doctor measured weight (0-17)-r4/2
+whtlgspk,what language spoken other than english
+wilfil20,will person file fed income tax return
+wlkdif31,difficulty walking 3 blocks - rd 3/1
+wlkdif53,difficulty walking 3 blocks - rd 5/3
+wlklim31,limitation in physical functioning-rd3/1
+wlklim53,limitation in physical functioning - rd 5/3
+wrklim31,work limitation - rd 3/1
+wrklim53,work limitation - rd 5/3
+ychj3142,why chngd job between rd 3/1 and rd 4/2
+ychj4253,why chngd job between rd 4/2 and rd 5/3
+ynousc42_m18,main reas pers doesnt have usc-r4/2
+yrsinus,years person lived in the us

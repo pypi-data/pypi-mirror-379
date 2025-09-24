@@ -1,0 +1,2053 @@
+Variable,Description
+acceli42,pers eligible for access supplement-r4/2
+actdty31,military full-time active duty - r3/1
+actdty42,military full-time active duty - r4/2
+actdty53,military full-time active duty - r5/3
+actlim31,any limitation work/housewrk/schl-rd 3/1
+actlim53,any limitation work/housewrk/schl-rd 5/3
+adappt42,saq 12 mos: # visits to med off for care
+adcape42,saq 4wks: felt calm/peaceful sf-12v2
+adclim42,saq: hlth limits climbing stairs sf-12v2
+adcmpd42,saq: date completed - day
+adcmpm42,saq: date completed - month
+adcmpy42,saq: date completed - year
+addaya42,saq: hlth limits mod activities sf-12v2
+addown42,saq 4wks: felt downhearted/depr sf-12v2
+addprs42,saq 2 wks: felt down/depressed/hopeless
+addrbp42,saq 2 yrs: dr checked blood pressure
+adefrt42,saq 30 days: how oftn evrythng an effort
+adegmc42,saq 12mos: easy getting needed med care
+adexpl42,saq 12 mos: doc explained so understood
+adezun42,saq 12 mos: dr given instr. ez undrstd
+adffrm42,saq 12 mos: had to fill out/sign forms
+adfhlp42,saq 12 mos: offrd help filling out forms
+adgenh42,saq: health in general sf-12v2
+adhdaddx,adhdadd diagnosis (5-17)
+adhdaged,age of diagnosis-adhd/add
+adhecr42,saq 12 mos: rating of health care
+adhope42,saq 30 days: how often felt hopeless
+adilcr42,saq 12mos: ill/injury needing immed care
+adilww42,saq 12 mos: got care when needed ill/inj
+adinsa42,saq: do not need health insurance
+adinsb42,saq: health insurance not worth cost
+adinst42,saq 12 mos: dr gave spcifc instrctns
+adintr42,saq 2 wks: little interest in things
+adl3mo31,adl help 3+ months - rd 3/1
+adl3mo42,adl help 3+ months - rd 4/2
+adl3mo53,adl help 3+ months - rd 5/3
+adlang42,saq: language of saq interview
+adlhlp31,adl screener - rd 3/1
+adlhlp42,adl screener - rd 4/2
+adlhlp53,adl screener - rd 5/3
+adlist42,saq 12 mos: doctor listened to you
+admals42,saq 4wks:accmp less b/c mnt prbs sf-12v2
+admwlm42,saq 4wks:work limt b/c mnt probs sf-12v2
+adndcr42,"saq 12mos: need any care, test, treatmnt"
+adnerv42,saq 30 days: how often felt nervous
+adnrgy42,saq 4wks: had a lot of energy sf-12v2
+adnsmk42,saq 12mos: dr advised to quit smoking
+adover42,saq: can overcome ills without med help
+adpain42,saq 4wks:pain limits normal work sf-12v2
+adpals42,saq 4wks:accmp less b/c phy prbs sf-12v2
+adprtm42,saq 12 mos: dr spent enuf time with you
+adprx42,saq: relationship of proxy to adult
+adpwlm42,saq 4wks:work limt b/c phy probs sf-12v2
+adresp42,saq 12 mos: dr showed respect
+adrest42,saq 30 days: how often felt restless
+adrisk42,saq: more likely to take risks
+adrtcr42,saq 12 mos: made appt routine med care
+adrtww42,saq 12 mos: got med appt when wanted
+adsad42,saq 30 days: how often felt sad
+adsmok42,saq: currently smoke
+adsoca42,saq 4wks: hlth stopped soc activ sf-12v2
+adspec42,saq 12 mos: needed to see specialist
+adsprf42,saq 12mos: how esy getting spec referral
+adtlhw42,saq 12 mos: dr asked r desc how follow
+adupro42,prblm getting along w/adults (5-17)-r4/2
+adwrth42,saq 30 days: how often felt worthless
+afdc11,did person's check include tanf
+afthou42,ac25 how diff contact usc aft hours-r4/2
+age11x,age as of 12/31/11 (edited/imputed)
+age31x,age - r3/1 (edited/imputed)
+age42x,age - r4/2 (edited/imputed)
+age53x,age - r5/3 (edited/imputed)
+agelast,person's age last time eligible
+aidhlp31,used assistive devices - rd 3/1
+aidhlp53,used assistive devices - rd 5/3
+aliimp11,alimony income imputation flag
+alimp11x,person's alimony income
+amaexp11,totl ambultry (ob+op) phys ass t exp 11
+amamcd11,phys ass t amb vsts-medicaid amt 11
+amamcr11,phys ass t amb vsts-medicare amt 11
+amaofd11,phys ass t amb vsts - other fed amt 11
+amaopr11,phys ass t amb vsts - oth private amt 11
+amaopu11,phys ass t amb vsts - oth public amt 11
+amaosr11,p a amb vsts - oth unclass srce amt 11
+amaoth11,phys ass t amb vsts-oth combined amt 11
+amaprv11,phys ass t amb vsts-private ins amt 11
+amaptr11,phys ass t amb vsts - prv & tri amt 11
+amaslf11,phys ass t amb vsts-self/family amt 11
+amasst11,"# physician ass t vsts (off+oupat), 2011"
+amastl11,phys ass t amb vsts-oth st/locl amt 11
+amatch11,phys ass t ambulatory visit charges 11
+amatri11,phys ass t amb vsts-tricare amt 11
+amava11,phys ass t amb vsts-va/champva amt 11
+amawcp11,phys ass t amb vsts-wrkers comp amt 11
+amcexp11,totl ambultry (ob+op) chiro exp 11
+amchir11,"# chiropractr vsts (off+outpat), 2011"
+amcmcd11,chiro amb visits - medicaid amt 11
+amcmcr11,chiro amb visits - medicare amt 11
+amcofd11,chiro amb visits - other federal amt 11
+amcopr11,chiro amb visits - oth private amt 11
+amcopu11,chiro amb visits - oth public amt 11
+amcosr11,chir amb vsts - oth unclass srce amt 11
+amcoth11,chiro amb visits - oth combined amt 11
+amcprv11,chiro amb visits - private ins amt 11
+amcptr11,chiro amb visits -prv & tri amt 11
+amcslf11,chiro amb visits - self/family amt 11
+amcstl11,chiro amb visits - oth st/local amt 11
+amctch11,chiro ambulatory visit charges 11
+amctri11,chiro amb visits-tricare amt 11
+amcva11,chiro amb visits - va/champva amt 11
+amcwcp11,chiro amb visits-workers comp amt 11
+amdrc11,"# calls w/off & outpat physicians, 2011"
+ameexp11,totl ambultry (ob+op) optometrist exp 11
+amemcd11,optmtrist amb vsts - medicaid amt 11
+amemcr11,optmtrist amb vsts - medicare amt 11
+ameofd11,optmtrist amb vsts-other fed amt 11
+ameopr11,optmtrist amb vsts - oth private amt 11
+ameopu11,optmtrist amb vsts - oth public amt 11
+ameosr11,optom amb vsts - oth unclas srce amt 11
+ameoth11,optmtrist amb vsts - oth combined amt 11
+ameprv11,optmtrist amb vsts - private ins amt 11
+ameptr11,optmtrist amb vsts - prv & tri amt 11
+ameslf11,optmtrist amb vsts - self/family amt 11
+amestl11,optmtrist amb vsts-oth st/local amt 11
+ametch11,optometrist ambulatory visit charges 11
+ametri11,optmtrist amb vsts-tricare amt 11
+ameva11,optmtrist amb vsts-va/champva amt 11
+amewcp11,optmtrist amb vsts-workers comp amt 11
+amnexp11,totl ambultry (ob+op) nurse/prac exp 11
+amnmcd11,nrs/prac amb vsts - medicaid amt 11
+amnmcr11,nrs/prac amb vsts - medicare amt 11
+amnofd11,nrs/prac amb vsts-other federal amt 11
+amnopr11,nrs/prac amb vsts - oth private amt 11
+amnopu11,nrs/prac amb vsts - oth public amt 11
+amnosr11,nrs/pr amb vsts - oth unclas srce amt 11
+amnoth11,nrs/prac amb vsts - oth combined amt 11
+amnprv11,nrs/prac amb vsts - priv ins amt 11
+amnptr11,nrs/prac amb vsts - prv & tri amt 11
+amnslf11,nrs/prac amb vsts - self/family amt 11
+amnstl11,nrs/prac amb vsts-oth st/local amt 11
+amntch11,nrs/prac ambulatory visit charges 11
+amntri11,nrs/prac amb vsts-tricare amt 11
+amnurs11,# amb nurse/prctitionr vsts(ob+op) 11
+amnva11,nrs/prac amb vsts-va/champva amt 11
+amnwcp11,nrs/prac amb vsts-workers comp amt 11
+amopto11,# amb optometrist vsts (ob+op) 11
+amtexp11,totl ambultry (ob+op) pt/ot exp 11
+amther11,# amb pt/ot thrpy visits (ob+op) 11
+amtmcd11,pt/ot amb visits-medicaid amt 11
+amtmcr11,pt/ot amb visits-medicare amt 11
+amtofd11,pt/ot amb visits - other fed amt 11
+amtopr11,pt/ot amb visits - oth private amt 11
+amtopu11,pt/ot amb visits-oth public amt 11
+amtosr11,pt/ot amb vsts-oth unclas srce amt 11
+amtotc11,"# calls w/office & oupat depts, 2011"
+amtoth11,pt/ot amb visits - oth combined amt 11
+amtprv11,pt/ot amb visits-private ins amt 11
+amtptr11,pt/ot amb visits -prv & tri amt 11
+amtslf11,pt/ot amb visits-self/family amt 11
+amtstl11,pt/ot amb visits-oth st/locl amt 11
+amttch11,pt/oc ambulatory visit charges 11
+amttri11,pt/ot amb visits-tricare amt 11
+amtva11,pt/ot amb visits-va/champva amt 11
+amtwcp11,pt/ot amb visits-workers comp amt 11
+angiaged,age of diagnosis-angina
+angidx,angina diagnosis (>17)
+anylim11,"any limitation in p15r3,4,5/p16r1,2,3"
+aprdlm42,mcaid/schip/o pub: dly wait 4 apprv-r4/2
+aprdlt42,tricr/chamv: delay waiting 4 apprvl-r4/2
+aprtrm42,mcaid/schip/o pub: need apprv 4 trt-r4/2
+aprtrt42,tricr/chamv: need apprvl 4 treatmnt-r4/2
+arthaged,age of diagnosis-arthritis
+arthdx,arthritis diagnosis (>17)
+arthtype,type of arthritis diagnosed (>17)
+asacut53,used acute pres inhaler last 3 mos-rd5/3
+asatak31,asthma attack last 12 mos - rd3/1
+asatak53,asthma attack last 12 mos - rd 5/3
+asdaly53,now take prev daily asthma meds - rd 5/3
+asevfl53,ever used peak flow meter - rd 5/3
+asianp42,ac19 is provider asian-r4/2
+asmrcn53,used>3acute cn pres inh last 3 mos-rd5/3
+aspkfl53,have peak flow meter at home - rd 5/3
+asprev53,ever used prev daily asthma meds -rd 5/3
+asprin53,tke aspirn every (othr) day (>17)-rd 5/3
+asstil31,does person still have asthma-rd3/1
+asstil53,does person still have asthma - rd 5/3
+asthaged,age of diagnosis-asthma
+asthdx,asthma diagnosis
+asthep31,when was last episode of asthma - rd 3/1
+asthep53,when was last episode of asthma - rd 5/3
+aswnfl53,when last used peak flow meter - rd 5/3
+begrfd31,r3/1 reference period begin date: day
+begrfd42,r4/2 reference period begin date: day
+begrfd53,r5/3 reference period begin date: day
+begrfm31,r3/1 reference period begin date: month
+begrfm42,r4/2 reference period begin date: month
+begrfm53,r5/3 reference period begin date: month
+begrfy31,r3/1 reference period begin date: year
+begrfy42,r4/2 reference period begin date: year
+begrfy53,r5/3 reference period begin date: year
+bendif31,difficulty bending/stooping - rd 3/1
+bendif53,difficulty bending/stooping - rd 5/3
+blckpr42,ac19 is provider black/african amer-r4/2
+bldraged,age of diagnosis-bladder cancer
+bldrrems,bladder cancer in remission
+blind42,person is blind - rd 4/2
+blodaged,age of diagnosis-blood cancer
+blodrems,blood cancer in remission
+bmindx53,adult body mass index (>17) - rd 5/3
+boneaged,age of diagnosis-bone cancer
+bonerems,bone cancer in remission
+boost42,dr advise booster seat (40<wt<=80)-r4/2
+bpchek53,time snce lst blood pres chk (>17)-rd5/3
+bpmldx,mult diag high blood press (>17)
+bpmont53,# mos snce lst blood pres chk (>17)-r5/3
+braiaged,age of diagnosis-brain cancer
+brairems,brain cancer in remission
+brstaged,age of diagnosis-breast cancer
+brstex53,how lng snce lst breast exam (>17)-rd5/3
+brstrems,breast cancer in remission
+bsnty31,"sole prop, partner, corp, rd 3/1 cmj"
+bsnty42,"sole prop, partner, corp, rd 4/2 cmj"
+bsnty53,"sole prop, partner, corp, rd 5/3 cmj"
+bstsre53,rsn have bld stool tst (>39)-r5/3
+bstst53,mst rcnt bld stool tst hme kit(>39)-r5/3
+busimp11,business income imputation flag
+busnp11x,person's business income
+cabladdr,cancer diagnosed - bladder (>17)
+cablood,cancer diagnosed - blood (>17)
+cabone,cancer diagnosed - bone (>17)
+cabrain,cancer diagnosed - brain (>17)
+cabreast,cancer diagnosed - breast (>17)
+cacervix,cancer diagnosed - cervix (>17)
+cacolon,cancer diagnosed - colon (>17)
+caesoph,cancer diagnosed - esophagus (>17)
+cakidney,cancer diagnosed - kidney (>17)
+calarynx,cancer diagnosed - larynx (>17)
+caleukem,cancer diagnosed - leukemia (>17)
+caliver,cancer diagnosed - liver (>17)
+calung,cancer diagnosed - lung (>17)
+calymph,cancer diagnosed - lymphoma (>17)
+camelano,cancer diagnosed - melanoma (>17)
+camouth,cancer diagnosed - mouth/lip/tonge (>17)
+camuscle,cancer diagnsd - softtiss/musc/fat (>17)
+cancerdx,cancer diagnosis (>17)
+caother,cancer diagnosed - other (>17)
+caovary,cancer diagnosed - ovary (>17)
+capancrs,cancer diagnosed - pancreas (>17)
+caprosta,cancer diagnosed - prostate (>17)
+careco42,ac08 oth reas no usc:cost of med cr-r4/2
+carectum,cancer diagnosed - rectum (>17)
+cashp11x,person's other regular cash contribution
+caskindk,cancer diagnosed-skin-unknown type (>17)
+caskinnm,cancer diagnosed - skin-nonmelano (>17)
+castomch,cancer diagnosed - stomach (>17)
+catestis,cancer diagnosed - testis (>17)
+cathroat,cancer diagnosed - throat (>17)
+cathyrod,cancer diagnosed - thyroid (>17)
+cauterus,cancer diagnosed - uterus (>17)
+cbck53,csaq: cancer back told by health prof
+cbckyr53,csaq: year told cancer back
+cclhin53,csaq: concerned losing hlth ins to cncr
+ccngft53,csaq: part-time to full-time working
+ccngpt53,csaq: full-time to part-time work
+ccnrdi53,csaq: cancer diagnosis by health prof
+cdiag53,csaq: cancer diagnosis before age 18
+cdret53,csaq: delayed retirement
+cefact53,csaq: activities limited due to cancer
+cefahu53,csaq: asked for help understanding bills
+cefask53,csaq: asked for help getting to doctor
+cefbck53,csaq: worry cancer come back/get worse
+cefcop53,csaq: exp - cope better w/ challenges
+cefhlt53,csaq: exp - made healthier habits
+ceflct53,csaq: how long activities limited
+cefmtl53,csaq: mental tasks affected by cancer
+cefog53,csaq: is limitation ongoing
+cefopn53,csaq: chances of cancer return/get worse
+cefpos53,csaq: exp - reason for positive changes
+cefrec53,csaq: rcvd help from doctor or provider
+cefrhu53,csaq: rcvd help understanding bills
+cefrsp53,csaq: worry responsibilities at home/wrk
+cefstg53,csaq: exp - made a stronger person
+celigi53,csaq: eligibility status for csaq
+ceret53,csaq: early retirement
+cervaged,age of diagnosis-cervical cancer
+cervrems,cervical cancer in remission
+cextdi53,csaq: paid time off at diagnosis
+cextlt53,csaq: paid time off < 1 year aft trtmnt
+cextm53,csaq: took extended paid time off
+cextmt53,csaq: paid time off >= 1 year aft trtmnt
+cextog53,csaq: paid time off ongoing
+cextot53,csaq: total paid time off
+cextrt53,csaq: paid time off during treatment
+cfm2mt53,csaq: fmem take extnd tim off >= 2 mnth
+cfmcog53,csaq: fmem part-time work ongoing
+cfmdrt53,csaq: fmem delayed retirement
+cfmem53,csaq: fmem provide care
+cfmetm53,csaq: estimated fmem take paid time off
+cfmext53,csaq: fmem take extended paid time off
+cfmfog53,csaq: fmem full-time work ongoing
+cfmftm53,csaq: estimated time fmem work full-time
+cfmftp53,csaq: fmem change full-time to part-time
+cfmgrt53,csaq: fmem early retirement
+cfmldj53,csaq: fmem change to less demanding job
+cfmnpt53,csaq: fmem take unpaid time off
+cfmntm53,csaq: estimated unpaid time off by fmem
+cfmoth53,csaq: fmem other arrangements
+cfmpog53,csaq: fmem extnd paid time off ongoing
+cfmptf53,csaq: fmem change part-time to full-time
+cfmptm53,csaq: estimated fmem work part-time
+cfmtof53,csaq: fmem take extended time off
+cfmuog53,csaq: fmem unpaid time ongoing
+cfnamt53,csaq: amount of borrowed or in debt
+cfnbnk53,csaq: self or fmem file bankruptcy
+cfndbt53,csaq: money borrowed or in debt
+cfnpmt53,csaq: worry pay medical bills
+cfnsac53,csaq: financial sacrifice
+cfnunb53,csaq: unable to cover medical bills
+cfree53,csaq: free from cancer
+cfret53,csaq: might be forced to retire
+cftrt53,csaq: first time treated for cancer
+cfttot53,csaq: total full-time work
+chappt42,cahps:12mos:# of off/clin apts(0-17)r4/2
+chbmix42,child's body mass index (6-17)-r4/2
+chbron31,chronc bronchits last 12 mths (>17)-r3/1
+chbron53,chronc bronchits last 12 mths (>17)-r5/3
+chcoun42,cshcn:child needs counseling (0-17)-r4/2
+chdaged,age of diagnosis-coronary heart disease
+chddx,coronary hrt disease diag (>17)
+check53,how lng lst routne checkup (>17)-rd 5/3
+chempb42,cshcn:couns prob last 12+mos (0-17)-r4/2
+chenec42,cahps:12mos:easy get nec care (0-17)r4/2
+chexpl42,cahps:12mos:chld dr expl thng(0-17)r4/2
+cheyre42,cahps:12mos:esy w/rfr to spec(0-17)-r4/2
+chgj3142,changed job between rd 3/1 and rd 4/2
+chgj4253,changed job between rd 4/2 and rd 5/3
+chhecr42,cahps:12mos:rate chld hlt care(0-17)r4/2
+chilcr42,cahps:12mos:ill/inj need care(0-17)-r4/2
+chilww42,cahps:12mos:ill care whn wntd(0-17)-r4/2
+chldp11x,person's child support
+chlico42,cshcn:limit cond last 12+mos (0-17)-r4/2
+chlihb42,cshcn:limt for hlth/behv cond(0-17)-r4/2
+chlimi42,cshcn:limited in any way (0-17)-r4/2
+chlimp11,child support imputation flag
+chlist42,cahps:12mos:chld dr lsn to you(0-17)r4/2
+chndcr42,cahps:12mos:need any care/trt(0-17)-r4/2
+choic31,choice of health plans at rd 3/1 cmj
+choic42,choice of health plans at rd 4/2 cmj
+choic53,choice of health plans at rd 5/3 cmj
+cholaged,age of diagnosis-high cholesterol
+cholck53,how lng cholest lst chck (>17) - rd 5/3
+choldx,high cholesterol diagnosis (>17)
+chpmcn42,cshcn:pmed cond last 12+ mos (0-17)-r4/2
+chpmed42,cshcn:child needs prescrb med(0-17)-r4/2
+chpmhb42,cshcn:pmed for hlth/behv cond(0-17)-r4/2
+chprtm42,cahps:12mos:child dr engh time(0-17)r4/2
+chresp42,cahps:12mos:chld's dr shw resp(0-17)r4/2
+chrtcr42,cahps:12mos:make rout care apt(0-17)r4/2
+chrtww42,cahps:12mos:rout apt whn wntd(0-17)-r4/2
+chserv42,cshcn:chld needs med&oth serv(0-17)-r4/2
+chspec42,cahps:12mos:chld needed spec(0-17)r4/2
+chsrcn42,cshcn:serv cond last 12+ mos (0-17)-r4/2
+chsrhb42,cshcn:serv for hlth/behv cond(0-17)-r4/2
+chthco42,cshcn:ther cond last 12+ mos (0-17)-r4/2
+chther42,cshcn:chld needs spec therapy(0-17)-r4/2
+chthhb42,cshcn:spec ther for hlth+cond(0-17)-r4/2
+cin2op53,csaq: hlth ins refused 2nd opinion
+cincov53,csaq: covered by health insurance
+cindnd53,csaq: health insurance denied
+cinref53,csaq: hlth ins refused visit coverage
+cldjob53,csaq: total time at ldj
+clhins53,csaq: stay at job - worry lose hlth ins
+clinic42,ac08 oth reas no usc: hosp/er/clnic-r4/2
+clmdep11,did/will pers claim dependents on return
+clmhip11,did/will pers deduct health insur. prem.
+clntre53,rsn have colonoscopy (>39)-r5/3
+clntst53,most recent colonoscopy (>39) - r5/3
+clprod53,csaq: feel less productive
+clstrt53,csaq: last cancer treatment
+cmceff53,csaq: discuss side effects
+cmcfup53,csaq: discuss regular follow-up care
+cmcnec53,csaq: received necessary medical care
+cmcpsy53,csaq: discuss emo/soc needs
+cmcsty53,csaq: discuss lifestyle or health
+cmmain53,csaq: main reason for no treatment/care
+cmnacc53,csaq: doctor did not accept insurance
+cmnaff53,csaq: could not afford care
+cmncre53,csaq: no child/adult care
+cmnins53,csaq: ins company didn't approve or pay
+cmnlng53,csaq: no time for care/treatment
+cmnoff53,csaq: problems getting to doctor office
+cmnplc53,csaq: didn't know where to go
+cmntim53,csaq: no time off from work
+cmothr,csaq: other reason for no treatment/care
+cmtask53,csaq: interfere with mental tasks
+cngfdi53,csaq: prt-time to fll-time at diagnosis
+cngflt53,csaq: prt-tim to fll-tim < 1 yr aft trt
+cngflx53,csaq: flexible work schedule
+cngfmt53,csaq: prt-tim to fll-tim >=1 yr aft trt
+cngfog53,csaq: full-time work ongoing
+cngftr53,csaq: prt-time to fll-time during trtmnt
+cngfxd53,csaq: flx work schedule at diagnosis
+cngfxl53,csaq: flx wrk schedule < 1 year aft trt
+cngfxm53,csaq: flx wrk schedule >= 1 year aft trt
+cngfxt53,csaq: flx work schedule during treatment
+cngldd53,csaq: change to ldj at diagnosis
+cngldj53,csaq: change to less demanding job (ldj)
+cngldl53,csaq: change to ldj < 1 year aft trtmnt
+cngldm53,csaq: change to ldj >= 1 year aft trtmnt
+cngldt53,csaq: change to ldj during treatment
+cnglog53,csaq: ldj ongoing
+cngpdi53,csaq: fll-time to prt-time at diagnosis
+cngplt53,csaq: fll-tim to prt-tim < 1 yr aft trt
+cngpmt53,csaq: fll-tim to prt-tim >=1 yr aft trt
+cngpog53,csaq: part-time work ongoing
+cngptr53,csaq: fll-time to prt-time during trtmnt
+cnpog53,csaq: unpaid time off ongoing
+cnptdi53,csaq: unpaid time off at diagnosis
+cnptlt53,csaq: unpaid tim off < 1 year aft trtmnt
+cnptmt53,csaq: unpaid tim off >=1 year aft trtmnt
+cnptof53,csaq: take unpaid time off
+cnptot53,csaq: total unpaid time off
+cnptrt53,csaq: unpaid time off during treatment
+coglim31,cognitive limitations - rd 3/1
+coglim53,cognitive limitations - rd 5/3
+coloaged,age of diagnosis-colon cancer
+colorems,colon cancer in remission
+cotarr53,csaq: other arrangements
+covrmm,month most recently covered-pnl 16 only
+covryy,year most recently covered-panel 16 only
+cprom53,csaq: did not pursue promotion
+cpsfamid,cpsfamid
+cptask53,csaq: interfere with physical tasks
+cpttot53,csaq: total part-time work
+csaqw11f,final cancer saq person weight - 2011
+cshcn42,cshcn:child w/spec hc needs (0-17)-r4/2
+cshimp11,cash contribution imputation flag
+cslhin53,csaq: fmem stay at job - worry lose ins
+cstsvm42,mcaid/schip/o pub: call custmr serv-r4/2
+cstsvt42,tricr/chamv: call customer service-r4/2
+ctmoff53,csaq: take time off since diagnosed
+ctmsk53,csaq: asked for extnd tim off since diag
+ctrtmt53,csaq: currently treated for cancer
+cwrkef53,csaq: effects of treatment on work
+cwrkp53,csaq: work for pay since diagnosed
+cwyask53,csaq: why ask for work changes
+cwycng53,csaq: why make work changes
+dadpro42,problem getting along w/dad (5-17)-r4/2
+dapid31x,pid of person's dad - rd 3/1
+dapid42x,pid of person's dad - rd 4/2
+dapid53x,pid of person's dad - rd 5/3
+ddbdys31,# oth day spent in bed since start(rd31)
+ddbdys42,# oth day spent in bed since start(rd42)
+ddbdys53,# oth day spent in bed since start(rd53)
+ddnscl31,# days missd school due to ill/inj(rd31)
+ddnscl42,# days missd school due to ill/inj(rd42)
+ddnscl53,# days missd school due to ill/inj(rd53)
+ddnwrk31,# days missed work due to ill/inj (rd31)
+ddnwrk42,# days missed work due to ill/inj (rd42)
+ddnwrk53,# days missed work due to ill/inj (rd53)
+deaf42,person is deaf - rd 4/2
+decide42,ac28 prov asks pers to help decide-r4/2
+deduct11,itemize or standard deduction
+dental42,dr advise reg dental checkup (2-17)-r4/2
+dentck53,how often dental check-up - rd 5/3
+dentin31,dental insurance - rd 3/1
+dentin42,dental insurance - rd 4/2
+dentin53,dental insurance - rd 5/3
+depdnt11,person is flagged a dependent
+dftous42,ac14 how difficult is it get to usc-r4/2
+diabaged,age of diagnosis-diabetes
+diabdx,diabetes diagnosis (>17)
+diabw11f,final diabetes care supplement weight
+diffpl42,ac08 oth reas no usc:diffrnt places-r4/2
+diffwg31,persons wages different this rd31 at cmj
+diffwg42,persons wages different this rd42 at cmj
+diffwg53,persons wages different this rd53 at cmj
+disvw31x,disavowed health ins at rd 3/1 cmj (ed)
+disvw42x,disavowed health ins at rd 4/2 cmj (ed)
+disvw53x,disavowed health ins at rd 5/3 cmj (ed)
+divdp11x,person's dividend income
+divimp11,dividend income imputation flag
+dkwhru42,ac08 oth reas no usc:dk where to go-r4/2
+dndlay42,delayed in getting nec dental care-r4/2
+dndlpr42,ac47 prb dlayd gettng nec dent care-r4/2
+dndlrs42,ac46 rsn dlayd gettng nec dent care-r4/2
+dntins11,dental ins - r5/r3 until 12/31/11
+dntins31,dental ins - rd 3/1 in 11
+dnunab42,unable to get necessary dental care-r4/2
+dnunpr42,ac43 prb unable get ncsry dent care-r4/2
+dnunrs42,ac42 rsn unable get ncsry dent care-r4/2
+dobmm,date of birth: month
+dobyy,date of birth: year
+docels42,ac08 oth reas no usc: dr elsewhere-r4/2
+dpinru11,dependents in/out of ru
+dpotsd11,how many dependents live outside ru
+dsa1c53,dcs: times tested for a-one-c in 2011
+dscb1053,dcs: blood cholesterol checked bef 2010
+dscgrp53,dcs: learned care by taking group class
+dsch1053,dcs: blood cholesterol checked in 2010
+dsch1153,dcs: blood cholesterol checked in 2011
+dsch1253,dcs: blood cholesterol checked in 2012
+dschnv53,dcs: never had blood cholesterol checked
+dscint53,dcs: learned care from reading internet
+dscnpc53,dcs: learned care from other provider
+dsconf53,dcs: confident taking care of diabetes
+dscpcp53,dcs: learned care from primary care prov
+dscphn53,dcs: learn care from phone call w/prov
+dsdia53,dcs: diabetes diagnosis by health prof
+dsdiet53,dcs: treat diabetes w/diet modification
+dseb1053,dcs: dilated eye exam before 2010
+dsey1053,dcs: dilated eye exam in 2010
+dsey1153,dcs: dilated eye exam in 2011
+dsey1253,dcs: dilated eye exam in 2012
+dseynv53,dcs: never had dilated eye exam
+dseypr53,dcs: has diabetes caused eye probs
+dsfb1053,dcs: had feet checked before 2010
+dsfl1053,dcs: got flu vaccination in 2010
+dsfl1153,dcs: got flu vaccination in 2011
+dsfl1253,dcs: got flu vaccination in 2012
+dsflnv53,dcs: never got flu vaccination
+dsft1053,dcs: had feet checked during 2010
+dsft1153,dcs: had feet checked during 2011
+dsft1253,dcs: had feet checked during 2012
+dsftnv53,dcs: never had feet checked
+dsinsu53,dcs: treat diabetes w/insulin injections
+dskidn53,dcs: has diabetes caused kidney problems
+dsmed53,dcs: treat diabetes w/meds by mouth
+dsprx53,dcs: was respondent a proxy
+dsvb1053,dcs: got flu vaccination before 2010
+duid,dwelling unit id
+dupersid,person id (duid + pid)
+dvgen11,# general dentist visits 11
+dvgexp11,total general dentist exp 11
+dvgmcd11,gnrl dental visits - medicaid amt 11
+dvgmcr11,gnrl dental visits - medicare amt 11
+dvgofd11,gnrl dental visits - other fed amt 11
+dvgopr11,gnrl dental visits - oth private amt 11
+dvgopu11,gnrl dental visits - oth public amt 11
+dvgosr11,gnrl dent vsts - ot unclass srce amt 11
+dvgoth11,gnrl dental visits - oth combined amt 11
+dvgprv11,gnrl dental visits - private ins amt 11
+dvgptr11,gnrl dental visits - prv & tri amt 11
+dvgslf11,gnrl dental visits - self/fam amt 11
+dvgstl11,gnrl dental visits - oth st/local amt 11
+dvgtch11,general dental care visit charges 11
+dvgtri11,gnrl dental visits-tricare amt 11
+dvgva11,gnrl dental visits - va/champva amt 11
+dvgwcp11,gnrl dental visits - workers comp amt 11
+dvoexp11,total orthodontist exp 11
+dvomcd11,orthodontist visits - medicaid amt 11
+dvomcr11,orthodontist visits - medicare amt 11
+dvoofd11,orthodontist visits-othr fed amt 11
+dvoopr11,orthodontist visits-othr private amt 11
+dvoopu11,orthodontist visits-othr public amt 11
+dvoosr11,orthodont vsts - ot unclass srce amt 11
+dvooth11,orthodontist visits-oth combined amt 11
+dvoprv11,orthodontist visits - private ins amt 11
+dvoptr11,orthodontist visits - prv & tri amt 11
+dvorth11,# orthodontist visits 11
+dvoslf11,orthodontist visits - self/family amt 11
+dvostl11,orthodontist visits-othr st/local amt 11
+dvotch11,orthodontist visit charges 11
+dvotri11,orthodontist visits-tricare amt 11
+dvova11,orthodontist visits-va/champva amt 11
+dvowcp11,orthodontist visits-workers comp amt 11
+dvtexp11,total dental care exp 11
+dvtmcd11,all dental care - medicaid amt 11
+dvtmcr11,all dental care - medicare amt 11
+dvtofd11,all dental care - other fedrl amt 11
+dvtopr11,all dental care - oth private amt 11
+dvtopu11,all dental care - oth public amt 11
+dvtosr11,all dent care-ot unclass srce amt 11
+dvtot11,# dental care visits 11
+dvtoth11,all dental care - oth combined amt 11
+dvtprv11,all dental care - private ins amt 11
+dvtptr11,all dental care - prv & tri amt 11
+dvtslf11,all dental care - self/family amt 11
+dvtstl11,all dental care - oth st/local amt 11
+dvttch11,total dental care visit charges 11
+dvttri11,all dental care - tricare amt 11
+dvtva11,all dental care - va/champva amt 11
+dvtwcp11,all dental care - workers comp amt 11
+eathlt42,dr advise eat healthy (2-17)-r4/2
+edrecode,education recode
+educyr,years of educ when first entered meps
+eduyrdeg,year of education or highest degree
+eicrdt11,did/will pers receive earned inc credit
+elgrnd11,eligibility status as of 12/31/11
+elgrnd31,eligibility - r3/1
+elgrnd42,eligibility - r4/2
+elgrnd53,eligibility - r5/3
+emphaged,age of diagnosis-emphysema
+emphdx,emphysema diagnosis (>17)
+empst31,employment status rd 3/1
+empst42,employment status rd 4/2
+empst53,employment status rd 5/3
+endrfd11,2011 reference period end date: day
+endrfd31,r3/1 reference period end date: day
+endrfd42,r4/2 reference period end date: day
+endrfd53,r5/3 reference period end date: day
+endrfm11,2011 reference period end date: month
+endrfm31,r3/1 reference period end date: month
+endrfm42,r4/2 reference period end date: month
+endrfm53,r5/3 reference period end date: month
+endrfy11,2011 reference period end date: year
+endrfy31,r3/1 reference period end date: year
+endrfy42,r4/2 reference period end date: year
+endrfy53,r5/3 reference period end date: year
+engcmf42,ac02 whole hh comfrtble speakng eng-r4/2
+engspk42,ac02a not comfrtble speakng english-r4/2
+erdexp11,total emergency room dr exp 11
+erdmcd11,er-medicaid amt - dr 11
+erdmcr11,er-medicare amt - dr 11
+erdofd11,er-other fed amt - dr 11
+erdopr11,er - other private amt - dr 11
+erdopu11,er - other public amt - dr 11
+erdosr11,er-oth unclass srce amt - dr 11
+erdoth11,er-oth combined amt - dr 11
+erdprv11,er-private ins amt - dr 11
+erdptr11,er-prv & tri amt - dr 11
+erdslf11,er-self/family amt - dr 11
+erdstl11,er-oth st/local amt - dr 11
+erdtch11,er doctor visit charges 11
+erdtri11,er-tricare amt - dr 11
+erdva11,er-va/champva amt - dr 11
+erdwcp11,er-workers comp amt - dr 11
+erfexp11,total er facility exp 11
+erfmcd11,er-medicaid amt - fac 11
+erfmcr11,er-medicare amt - fac 11
+erfofd11,er-other federal amt - fac 11
+erfopr11,er-other private amt - fac 11
+erfopu11,er-other public amt - fac 11
+erfosr11,er-oth unclass srce amt - fac 11
+erfoth11,er-oth combined amt - fac 11
+erfprv11,er-private ins amt - fac 11
+erfptr11,er-prv & tri amt - fac 11
+erfslf11,er-self/family amt - fac 11
+erfstl11,er-oth st/local amt - fac 11
+erftch11,er facility visit charges 11
+erftri11,er-tricare amt - fac 11
+erfva11,er-va/champva amt - fac 11
+erfwcp11,er-workers comp amt - fac 11
+ertexp11,total er facility + dr exp 11
+ertmcd11,er-medicaid amt-(fac+dr) 11
+ertmcr11,er-medicare amt-(fac+dr) 11
+ertofd11,er-other fed amt-(fac+dr) 11
+ertopr11,er-oth private amt-(fac+dr) 11
+ertopu11,er-oth public amt-(fac+dr) 11
+ertosr11,er-oth unclass srce amt-(fac+dr) 11
+ertot11,# emergency room visits 11
+ertoth11,er -oth combined amt (fac+dr) 11
+ertprv11,er-priv ins amt-(fac+dr) 11
+ertptr11,er-prv & tri amt (fac+dr) 11
+ertslf11,er-self/family amt-(fac+dr) 11
+ertstl11,er-oth st/local amt-(fac+dr) 11
+erttch11,er facility + dr visit charges 11
+erttri11,er-tricare amt-(fac+dr) 11
+ertva11,er-va/champva amt-(fac+dr) 11
+ertwcp11,er-workers comp amt-(fac+dr) 11
+esphaged,age of diagnosis-esophageal cancer
+esphrems,esophageal cancer in remission
+evretire,person has ever retired
+evrunat,ever uninsured in 11 using privat/pubatx
+evrunins,ever uninsured in 11 using priv/pubx
+evrwrk,ever wrkd for pay in life as of 12/31/11
+explop42,ac30 prov explns options to pers-r4/2
+exrcis53,advised to exercise more (>17) - rd 5/3
+famid11,family id (student merged in) - 12/31/11
+famid31,family id (student merged in) - r3/1
+famid42,family id (student merged in) - r4/2
+famid53,family id (student merged in) - r5/3
+famidyr,annual family identifier
+faminc11,family's total income
+famrfpyr,reference person of annualized family
+fams1231,family size of responding 12/31 family
+famsze11,ru size including student as of 12/31/11
+famsze31,ru size including students - r3/1
+famsze42,ru size including students - r4/2
+famsze53,ru size including students - r5/3
+famszeyr,size of responding annualized family
+famwt11c,pov adj family wgt-cps fam on 12/31/11
+famwt11f,"final family weight, 2011"
+fcrp1231,ref person of 12/31 cps family
+fcsz1231,fam size responding 12/31 cps family
+filedr11,has person filed a fed income tax return
+filer11,primary or secondary filer
+flstat11,person's filing status
+flusht53,how lng last flu vacination (>17)-rd 5/3
+fmrs1231,member of responding 12/31 family
+fngrdf31,difficulty using fingers to grasp-rd 3/1
+fngrdf53,difficulty using fingers to grasp-rd 5/3
+foodmn11,number of months food stamps purchased
+foodst11,did anyone purchase food stamps
+foodvl11,monthly value of food stamps
+fsaamt31,fsa total amount for ru - r3/1
+fsagt31,anyone in ru have fsa - r3/1
+ftstu11x,student status if ages 17-23 - 12/31/11
+ftstu31x,student status if ages 17-23 - r3/1
+ftstu42x,student status if ages 17-23 - r4/2
+ftstu53x,student status if ages 17-23 - r5/3
+gdcpbm42,mcaid/schip/o pub: prb get pers doc-r4/2
+gdcpbt42,tricr/chamv: prob getting pers doc-r4/2
+gendrp42,ac20 is provider male or female-r4/2
+gotous42,ac12 how does pers get to usc prov-r4/2
+hasfsa31,person is fsa holder - r3/1
+haveus42,ac05 does person have usc provider-r4/2
+havfun42,problem having fun (5-17) - r4/2
+health42,ac08 oth reas no usc: hlth related-r4/2
+hearad42,person wears hearing aid - rd 4/2
+heardi42,any diffclty hearing w/hearing aid-rd4/2
+hearmo42,can hear most conversation - rd 4/2
+hearng42,hearing impairment (summary) - rd 4/2
+hearsm42,can hear some conversation - rd 4/2
+held31x,health insur held from rd 3/1 cmj (ed)
+held42x,health insur held from rd 4/2 cmj (ed)
+held53x,health insur held from rd 5/3 cmj (ed)
+helmet42,dr advise bike helmet (2-17)-r4/2
+hhaexp11,total home health agency exp 11
+hhagd11,# agency home health provider days 11
+hhamcd11,home hlth agency - medicaid amt 11
+hhamcr11,home hlth agency - medicare amt 11
+hhaofd11,home hlth agency - other fed amt 11
+hhaopr11,home hlth agency - oth private amt 11
+hhaopu11,home hlth agency - oth public amt 11
+hhaosr11,h hlth agency - ot unclass srce amt 11
+hhaoth11,home hlth agency - oth combined amt 11
+hhaprv11,home hlth agency - private ins amt 11
+hhaptr11,home hlth agency - prv & tri amt 11
+hhaslf11,home hlth agency - self/family amt 11
+hhastl11,home hlth agency-othr st/local amt 11
+hhatch11,home health agency visit charges 11
+hhatri11,home hlth agency-tricare amt 11
+hhava11,home hlth agency-va/champva amt 11
+hhawcp11,home hlth agency - workers comp amt 11
+hhindd11,# non-agency home health providr days 11
+hhinfd11,# informal home health provider days 11
+hhnexp11,total home health non-agncy exp 11
+hhnmcd11,home hlth non-agncy - medicaid amt 11
+hhnmcr11,home hlth non-agncy - medicare amt 11
+hhnofd11,home hlth non-agncy-othr fed amt 11
+hhnopr11,home hlth non-agncy-oth private amt 11
+hhnopu11,home hlth non-agncy-oth public amt 11
+hhnosr11,h hlth non-agncy-ot unclass srce amt 11
+hhnoth11,home hlth non-agncy-oth combined amt 11
+hhnprv11,home hlth non-agncy - priv ins amt 11
+hhnptr11,home hlth non-agncy - prv & tri amt 11
+hhnslf11,home hlth non-agncy - self/fam amt 11
+hhnstl11,home hlth non-agncy-othr st/locl amt 11
+hhntch11,home health non-agency visit charges 11
+hhntri11,home hlth non-agncy-tricare amt 11
+hhnva11,home hlth non-agncy-va/champva amt 11
+hhnwcp11,home hlth non-agncy-workers comp amt 11
+hhtotd11,"# home health provider days, 2011"
+hibpaged,age of diagnosis-high blood pressure
+hibpdx,high blood pressure diag (>17)
+hideg,highest degree when first entered meps
+hieuidx,hieu identifier
+hispanx,hispanic ethnicity (edited/imputed)
+hispcat,specific hispanic ethnicity group
+hlthlf42,child will have healthy life (0-17)-r4/2
+homebh42,problem w/behavior at home (5-17)-r4/2
+honrdc31,honorably discharged from military
+honrdc42,honorably discharged from military
+honrdc53,honorably discharged from military
+hour31,hours per week at rd 3/1 cmj
+hour42,hours per week at rd 4/2 cmj
+hour53,hours per week at rd 5/3 cmj
+hpdap11,holder of priv ins (source unknwn) apr11
+hpdau11,holder of priv ins (source unknwn) aug11
+hpdde11,holder of priv ins (source unknwn) dec11
+hpdfe11,holder of priv ins (source unknwn) feb11
+hpdja11,holder of priv ins (source unknwn) jan11
+hpdjl11,holder of priv ins (source unknwn) jul11
+hpdju11,holder of priv ins (source unknwn) jun11
+hpdma11,holder of priv ins (source unknwn) mar11
+hpdmy11,holder of priv ins (source unknwn) may11
+hpdno11,holder of priv ins (source unknwn) nov11
+hpdoc11,holder of priv ins (source unknwn) oct11
+hpdse11,holder of priv ins (source unknwn) sep11
+hpeap11,holder of empl union ins in apr11
+hpeau11,holder of empl union ins in aug11
+hpede11,holder of empl union ins in dec11
+hpefe11,holder of empl union ins in feb11
+hpeja11,holder of empl union ins in jan11
+hpejl11,holder of empl union ins in jul11
+hpeju11,holder of empl union ins in jun11
+hpema11,holder of empl union ins in mar11
+hpemy11,holder of empl union ins in may11
+hpeno11,holder of empl union ins in nov11
+hpeoc11,holder of empl union ins in oct11
+hpese11,holder of empl union ins in sep11
+hpnap11,holder of nongroup ins in apr11
+hpnau11,holder of nongroup ins in aug11
+hpnde11,holder of nongroup ins in dec11
+hpnfe11,holder of nongroup ins in feb11
+hpnja11,holder of nongroup ins in jan11
+hpnjl11,holder of nongroup ins in jul11
+hpnju11,holder of nongroup ins in jun11
+hpnma11,holder of nongroup ins in mar11
+hpnmy11,holder of nongroup ins in may11
+hpnno11,holder of nongroup ins in nov11
+hpnoc11,holder of nongroup ins in oct11
+hpnse11,holder of nongroup ins in sep11
+hpoap11,holder of other group ins in apr11
+hpoau11,holder of other group ins in aug11
+hpode11,holder of other group ins in dec11
+hpofe11,holder of other group ins in feb11
+hpoja11,holder of other group ins in jan11
+hpojl11,holder of other group ins in jul11
+hpoju11,holder of other group ins in jun11
+hpoma11,holder of other group ins in mar11
+hpomy11,holder of other group ins in may11
+hpono11,holder of other group ins in nov11
+hpooc11,holder of other group ins in oct11
+hpose11,holder of other group ins in sep11
+hprap11,holder of private insurance in apr11
+hprau11,holder of private insurance in aug11
+hprde11,holder of private insurance in dec11
+hprfe11,holder of private insurance in feb11
+hprja11,holder of private insurance in jan11
+hprjl11,holder of private insurance in jul11
+hprju11,holder of private insurance in jun11
+hprma11,holder of private insurance in mar11
+hprmy11,holder of private insurance in may11
+hprno11,holder of private insurance in nov11
+hproc11,holder of private insurance in oct11
+hprse11,holder of private insurance in sep11
+hpsap11,holder of self-emp-1 ins in apr11
+hpsau11,holder of self-emp-1 ins in aug11
+hpsde11,holder of self-emp-1 ins in dec11
+hpsfe11,holder of self-emp-1 ins in feb11
+hpsja11,holder of self-emp-1 ins in jan11
+hpsjl11,holder of self-emp-1 ins in jul11
+hpsju11,holder of self-emp-1 ins in jun11
+hpsma11,holder of self-emp-1 ins in mar11
+hpsmy11,holder of self-emp-1 ins in may11
+hpsno11,holder of self-emp-1 ins in nov11
+hpsoc11,holder of self-emp-1 ins in oct11
+hpsse11,holder of self-emp-1 ins in sep11
+hrhow31,how hourly wage was calculated rd 3/1
+hrhow42,how hourly wage was calculated rd 4/2
+hrhow53,how hourly wage was calculated rd 5/3
+hrwg31x,hourly wage rd 3/1 cmj (imp)
+hrwg42x,hourly wage rd 4/2 cmj (imp)
+hrwg53x,hourly wage rd 5/3 cmj (imp)
+hrwgim31,hrwg31x imputation flag
+hrwgim42,hrwg42x imputation flag
+hrwgim53,hrwg53x imputation flag
+hselim31,housework limitation - rd 3/1
+hselim53,housework limitation - rd 5/3
+hsplap42,ac18 is provider hispanic or latino-r4/2
+hyster53,had a hysterectomy (>17) - rd 5/3
+iadl3m31,iadl help 3+ months - rd 3/1
+iadl3m42,iadl help 3+ months - rd 4/2
+iadl3m53,iadl help 3+ months - rd 5/3
+iadlhp31,iadl screener - rd 3/1
+iadlhp42,iadl screener - rd 4/2
+iadlhp53,iadl screener - rd 5/3
+indcat31,industry group rd 3/1 cmj
+indcat42,industry group rd 4/2 cmj
+indcat53,industry group rd 5/3 cmj
+ins11x,insured - 12/31/11 (ed)
+ins31x,insured - r3/1 int date (ed)
+ins42x,insured - r4/2 int date (ed)
+ins53x,insured 12-31/r3 int date (ed)
+insap11x,covr by hosp/med ins in apr11 (ed)
+insat11x,insured any time in r5/r3 until 12/31/11
+insat31x,insured any time in r3/1
+insat42x,insured any time in r4/2
+insat53x,insured any time in r5/3
+insau11x,covr by hosp/med ins in aug11 (ed)
+insc1231,inscope status on 12/31/11
+inscop11,inscope - r5/3 start through 12/31/11
+inscop31,inscope - r3/1
+inscop42,inscope - r4/2
+inscop53,inscope - r5/3
+inscope,was person ever inscope in 2011
+inscov11,health insurance coverage indicator 11
+insde11x,covr by hosp/med ins in dec11 (ed)
+insendmm,month most recently covd-panel 16 only
+insendyy,year most recently covd-panel 16 only
+insfe11x,covr by hosp/med ins in feb11 (ed)
+insja11x,covr by hosp/med ins in jan11 (ed)
+insjl11x,covr by hosp/med ins in jul11 (ed)
+insju11x,covr by hosp/med ins in jun11 (ed)
+insma11x,covr by hosp/med ins in mar11 (ed)
+insmy11x,covr by hosp/med ins in may11 (ed)
+insno11x,covr by hosp/med ins in nov11 (ed)
+insoc11x,covr by hosp/med ins in oct11 (ed)
+insrpl42,ac08 oth reas no usc:just chngd ins-r4/2
+insse11x,covr by hosp/med ins in sep11 (ed)
+insurc11,full year insurance coverage status 2011
+intimp11,interest income imputation flag
+intrp11x,person's interest income
+intvlang,language interview was completed
+ipdexp11,totl hosp staz dr exp 11
+ipdis11,"# hospital discharges, 2011"
+ipdmcd11,ip hosp staz-medicaid amt-dr 11
+ipdmcr11,ip hosp staz-medicare amt- dr 11
+ipdofd11,ip hosp staz-other fed amt-dr 11
+ipdopr11,ip hosp staz - oth private amt-dr 11
+ipdopu11,ip hosp staz - oth public amt-dr 11
+ipdosr11,ip hosp staz-ot unclass sorce amt-dr 11
+ipdoth11,ip hosp staz-oth combined amt-dr 11
+ipdprv11,ip hosp staz-priv ins amt-dr 11
+ipdptr11,ip hosp staz-prv & tri amt-dr 11
+ipdslf11,ip hosp staz-self/family amt-dr 11
+ipdstl11,ip hosp staz-oth st/local amt-dr 11
+ipdtch11,ip hosp stay charges - dr 11
+ipdtri11,ip hosp staz-tricare amt-dr 11
+ipdva11,ip hosp staz-va/champva amt-dr 11
+ipdwcp11,ip hosp staz-workers comp amt-dr 11
+ipfexp11,tot hosp ip facility exp-inc 0 nites 11
+ipfmcd11,ip hosp staz-medicaid amt-fac 11
+ipfmcr11,ip hosp staz-medicare amt-fac 11
+ipfofd11,ip hosp staz-other fed amt-fac 11
+ipfopr11,ip hosp staz - oth private amt-fac 11
+ipfopu11,ip hosp staz - oth public amt-fac 11
+ipfosr11,ip hosp staz-ot unclass srce amt-fac 11
+ipfoth11,ip hosp staz-oth combined amt-fac 11
+ipfprv11,ip hosp staz-priv ins amt-fac 11
+ipfptr11,ip hosp staz-prv & tri amt-fac 11
+ipfslf11,ip hosp staz-self/family amt-fac 11
+ipfstl11,ip hosp staz-oth st/local amt-fac 11
+ipftch11,ip hosp stay charges - fac 11
+ipftri11,ip hosp staz-tricare amt-fac 11
+ipfva11,ip hosp staz-va/champva amt-fac 11
+ipfwcp11,ip hosp staz-workers comp amt-fac 11
+ipngtd11,"# nights in hosp for discharges, 2011"
+iptexp11,tot hosp ip facility + dr exp 11
+iptmcd11,ip hosp staz-medicaid amt-(fac+dr) 11
+iptmcr11,ip hosp staz-medicare amt-(fac+dr) 11
+iptofd11,ip hosp staz-other fed amt-(fac+dr) 11
+iptopr11,ip hosp staz-oth private amt-(fac+dr) 11
+iptopu11,ip hosp staz-oth public amt-(fac+dr) 11
+iptosr11,ip hsp staz-oth uncls src amt(fac+dr) 11
+iptoth11,ip hosp staz-oth combined amt(fac+dr) 11
+iptprv11,ip hosp staz-priv ins amt-(fac+dr) 11
+iptptr11,ip hosp staz-prv & tri amt-(fac+dr) 11
+iptslf11,ip hosp staz-self/family amt-(fac+dr) 11
+iptstl11,ip hsp staz-oth st/local amt-(fac+dr) 11
+ipttch11,ip hosp stay charges (fac+dr) 11
+ipttri11,ip hosp staz-tricare amt-(fac+dr) 11
+iptva11,ip hosp staz-va/champva amt-(fac+dr) 11
+iptwcp11,ip hosp staz-wrkrs comp amt-(fac+dr) 11
+ipzero11,# zero-night hospital stays 11
+iraimp11,ira income imputation flag
+irasp11x,person's ira income
+jntpid11,pid of secondary filer
+joborg31,"priv (profit,nonprofit) gov rd 3/1 cmj"
+joborg42,"priv (profit,nonprofit) gov rd 4/2 cmj"
+joborg53,"priv (profit,nonprofit) gov rd 5/3 cmj"
+jobrsn42,ac08 oth reas no usc: job related-r4/2
+jtinru11,joint filer's membership in ru
+jtpain31,joint pain last 12 months (>17) - rd 3/1
+jtpain53,joint pain last 12 months (>17) - rd 5/3
+k6sum42,saq 30 days: overall rating of feelings
+keyness,person key status
+kidnaged,age of diagnosis-renal cancer
+kidnrems,renal cancer in remission
+kidpro42,prblm getting along w/kids (5-17)-r4/2
+knowdr42,ac08 oth reas no usc: knows/is a dr-r4/2
+langhm42,ac01 language spoken most in home-r4/2
+langpr42,ac31 prov speaks person's language-r4/2
+lapblt42,dr advise lap/shoulder belt (80<wt)-r4/2
+leukaged,age of diagnosis-leukemia
+leukrems,leukemia in remission
+lftdif31,difficulty lifting 10 pounds - rd 3/1
+lftdif53,difficulty lifting 10 pounds - rd 5/3
+livraged,age of diagnosis-liver cancer
+livrrems,liver cancer in remission
+lkinfm42,mcaid/schip/o pub: look 4 plan info-r4/2
+lkinft42,tricr/chamv: info on how plan works-r4/2
+locatn42,usc location-r4/2
+lrnxaged,age of diagnosis-laryngeal cancer
+lrnxrems,laryngeal cancer in remission
+lshlth42,less healthy than othr child (0-17)-r4/2
+lsteth53,lost all uppr and lowr teeth (>17)-rd5/3
+lungaged,age of diagnosis-lung cancer
+lungrems,lung cancer in remission
+lympaged,age of diagnosis-lymphoma
+lymprems,lymphoma in remission
+mamogr53,how lng snce lst mammogram (>29) - rd5/3
+marry11x,marital status-12/31/11 (edited/imputed)
+marry31x,marital status - r3/1 (edited/imputed)
+marry42x,marital status - r4/2 (edited/imputed)
+marry53x,marital status - r5/3 (edited/imputed)
+mcaid11,cov by medicaid or schip - 12/31/11
+mcaid11x,cov by medicaid or schip - 12/31/11 (ed)
+mcaid31,cov by medicaid or schip - r3/1 int dt
+mcaid31x,cov by medicaid/schip - r3/1 int dt (ed)
+mcaid42,cov by medicaid or schip - r4/2 int dt
+mcaid42x,cov by medicaid/schip - r4/2 int dt (ed)
+mcaid53,cov by medicaid or schip 12-31/r3 int dt
+mcaid53x,cov medicaid/schip 12-31/r3 int dt(ed)
+mcare11,cov by medicare - 12/31/11
+mcare11x,cov by medicare - 12/31/11 (ed)
+mcare31,cov by medicare - r3/1 int dt
+mcare31x,cov by medicare - r3/1 int dt (ed)
+mcare42,cov by medicare - r4/2 int dt
+mcare42x,cov by medicare - r4/2 int dt (ed)
+mcare53,cov by medicare 12-31/r3 int dt
+mcare53x,cov by medicare 12-31/r3 int dt (ed)
+mcdap11,cov by medicaid or schip in apr11
+mcdap11x,cov by medicaid or schip in apr11 (ed)
+mcdat11x,any time cov medicaid or schip-12/31/11
+mcdat31x,any time cov medicaid or schip - r3/1
+mcdat42x,any time cov medicaid or schip - r4/2
+mcdat53x,any time cov medicaid or schip - r5/3
+mcdau11,cov by medicaid or schip in aug11
+mcdau11x,cov by medicaid or schip in aug11 (ed)
+mcdde11,cov by medicaid or schip in dec11
+mcdde11x,cov by medicaid or schip in dec11 (ed)
+mcdev11,ever have medicaid/schip during 11 (ed)
+mcdfe11,cov by medicaid or schip in feb11
+mcdfe11x,cov by medicaid or schip in feb11 (ed)
+mcdhmo11,covred by medicaid or schip hmo-12/31/11
+mcdhmo31,covered by medicaid or schip hmo - r3/1
+mcdhmo42,covered by medicaid or schip hmo - r4/2
+mcdja11,cov by medicaid or schip in jan11
+mcdja11x,cov by medicaid or schip in jan11 (ed)
+mcdjl11,cov by medicaid or schip in jul11
+mcdjl11x,cov by medicaid or schip in jul11 (ed)
+mcdju11,cov by medicaid or schip in jun11
+mcdju11x,cov by medicaid or schip in jun11 (ed)
+mcdma11,cov by medicaid or schip in mar11
+mcdma11x,cov by medicaid or schip in mar11 (ed)
+mcdmc11,cov by mcaid/schip gtkeepr plan-12/31/11
+mcdmc31,cov by mcaid/schip gatekeeper plan-r3/1
+mcdmc42,cov by mcaid/schip gatekeeper plan-r4/2
+mcdmy11,cov by medicaid or schip in may11
+mcdmy11x,cov by medicaid or schip in may11 (ed)
+mcdno11,cov by medicaid or schip in nov11
+mcdno11x,cov by medicaid or schip in nov11 (ed)
+mcdoc11,cov by medicaid or schip in oct11
+mcdoc11x,cov by medicaid or schip in oct11 (ed)
+mcdse11,cov by medicaid or schip in sep11
+mcdse11x,cov by medicaid or schip in sep11 (ed)
+mcrap11,covered by medicare in apr11
+mcrap11x,covered by medicare in apr11 (ed)
+mcrau11,covered by medicare in aug11
+mcrau11x,covered by medicare in aug11 (ed)
+mcrde11,covered by medicare in dec11
+mcrde11x,covered by medicare in dec11 (ed)
+mcrev11,ever have medicare during 11 (ed)
+mcrfe11,covered by medicare in feb11
+mcrfe11x,covered by medicare in feb11 (ed)
+mcrja11,covered by medicare in jan11
+mcrja11x,covered by medicare in jan11 (ed)
+mcrjl11,covered by medicare in jul11
+mcrjl11x,covered by medicare in jul11 (ed)
+mcrju11,covered by medicare in jun11
+mcrju11x,covered by medicare in jun11 (ed)
+mcrma11,covered by medicare in mar11
+mcrma11x,covered by medicare in mar11 (ed)
+mcrmy11,covered by medicare in may11
+mcrmy11x,covered by medicare in may11 (ed)
+mcrno11,covered by medicare in nov11
+mcrno11x,covered by medicare in nov11 (ed)
+mcroc11,covered by medicare in oct11
+mcroc11x,covered by medicare in oct11 (ed)
+mcrpb11,cov by medicare part b - 12/31/11
+mcrpb31,cov by medicare part b - r3/1
+mcrpb42,cov by medicare part b - r4/2
+mcrpd11,cov by medicare pmed benefit - 12/31/11
+mcrpd11x,cov by mcare pmed benefit-12/31/11 (ed)
+mcrpd31,cov by medicare pmed benefit - r3/1
+mcrpd31x,cov by medicare pmed benefit - r3/1 (ed)
+mcrpd42,cov by medicare pmed benefit - r4/2
+mcrpd42x,cov by medicare pmed benefit - r4/2 (ed)
+mcrpho11,cov by medicare managed care - 12/31/11
+mcrpho31,cov by medicare managed care - r3/1
+mcrpho42,cov by medicare managed care - r4/2
+mcrse11,covered by medicare in sep11
+mcrse11x,covered by medicare in sep11 (ed)
+mcs42,saq:mnt component summry sf-12v2 imputed
+mddlay42,delayed in getting necsry med care-r4/2
+mddlpr42,ac39 prb dlayd getting nec med care-r4/2
+mddlrs42,ac38 rsn dlayd getting nec med care-r4/2
+mdunab42,unable to get necessry medical care-r4/2
+mdunpr42,ac35 prb not getting ncsry med care-r4/2
+mdunrs42,ac34 rsn unable get necsry med care-r4/2
+melaaged,age of diagnosis-melanoma
+melarems,melanoma in remission
+mesbpr42,dr checked blood pressure (2-17)-r4/2
+meshgt42,doctor ever measured height (0-17)-r4/2
+mesvis42,doctor checked child's vision (3-6)-r4/2
+meswgt42,doctor ever measured weight (0-17)-r4/2
+miaged,age of diagnosis-heart attack(mi)
+midx,heart attack (mi) diag (>17)
+mildif31,difficulty walking a mile - rd 3/1
+mildif53,difficulty walking a mile - rd 5/3
+minorp42,ac22 go to usc for new health prob-r4/2
+mnhlth31,perceived mental health status - rd 3/1
+mnhlth42,perceived mental health status - rd 4/2
+mnhlth53,perceived mental health status - rd 5/3
+mompro42,problem getting along w/mom (5-17)-r4/2
+mopid31x,pid of person's mom - rd 3/1
+mopid42x,pid of person's mom - rd 4/2
+mopid53x,pid of person's mom - rd 5/3
+more31,rd 3/1 cmj firm has more than 1 locat
+more42,rd 4/2 cmj firm has more than 1 locat
+more53,rd 5/3 cmj firm has more than 1 locat
+morecovr,cov by mor compr pl prev 2 yr-pn 16 only
+morjob31,has more than one job rd 3/1 int date
+morjob42,has more than one job rd 4/2 int date
+morjob53,has more than one job rd 5/3 int date
+moutaged,age of diagnosis-mouth/lip/tongue cancer
+moutrems,mouth/tongue/lip cancer in remission
+msa11,msa as of 12/31/11
+msa31,msa status - r3/1
+msa42,msa status - r4/2
+msa53,msa status - r5/3
+muscaged,age of diagnosis-sfttiss/musc/fat cancer
+muscrems,sft tiss/musc/fat cancer in remission
+myself42,ac08 oth reas no usc:no doc/trt slf-r4/2
+natamp42,ac19 is provider native american-r4/2
+nervaf42,prblm feeling nervous/afraid (5-17)-r4/2
+nevill42,never been seriously ill (0-17)-r4/2
+neware42,ac08 oth reas no usc:recently moved-r4/2
+newdoc42,ac08 oth reas no usc: lookng for dr-r4/2
+nhrwg31,updated hrly wage rd 3/1 cmj (edited)
+nhrwg42,updated hrly wage rd 4/2 cmj (edited)
+nhrwg53,updated hrly wage rd 5/3 cmj (edited)
+noaspr53,taking aspirin unsafe (>17) - rd 5/3
+nofat53,restrict hgh fat/choles food (>17)-rd5/3
+nogodr42,ac08 oth reas no usc: wont go to dr-r4/2
+nohins42,ac08 oth reas no usc:no hlth insrnc-r4/2
+noinsbef,evr wout hlth insr prev yr-panel 16 only
+noinstm,# wks/mon wout hlth ins prv yr-pn 16 onl
+noinunit,unit of time wout hlth ins-panel 16 only
+nolike42,ac08 oth reas no usc: dont like drs-r4/2
+noreas42,ac08 oth reas no usc:no oth reasons-r4/2
+nosmok42,dr advise smkg in home is bad(0-17)-r4/2
+numemp31,number of employees at rd 3/1 cmj
+numemp42,number of employees at rd 4/2 cmj
+numemp53,number of employees at rd 5/3 cmj
+nwk31,reason not working during rd 3/1
+nwk42,reason not working during rd 4/2
+nwk53,reason not working during rd 5/3
+obaexp11,total off-based phys ass t exp 11
+obamcd11,phys ass t off vsts - medicaid amt 11
+obamcr11,phys ass t off vsts - medicare amt 11
+obaofd11,phys ass t off vsts - other fed amt 11
+obaopr11,phys ass t off vsts - oth private amt 11
+obaopu11,phys ass t off vsts - oth public amt 11
+obaosr11,p a off vsts - oth unclass srce amt 11
+obaoth11,phys asst off vsts - oth combined amt 11
+obaprv11,phys ass t off vsts - private ins amt 11
+obaptr11,phys asst off vsts - prv & tri amt 11
+obaslf11,phys ass t off vsts - self/family amt 11
+obasst11,# off-based physician assist visits 11
+obastl11,phys ass t off vsts - oth st/locl amt 11
+obatch11,office-based phys asst visit charges 11
+obatri11,phys ass t off vsts - tricare amt 11
+obava11,phys ass t off vsts - va/champva amt 11
+obawcp11,phys ass t off vsts-workers comp amt 11
+obcexp11,total off-based chiro exp 11
+obchir11,# office-based chiropractor visits 11
+obcmcd11,chiro off visits - medicaid amt 11
+obcmcr11,chiro off visits - medicare amt 11
+obcofd11,chiro off visits - other federal amt 11
+obcopr11,chiro off vists - othr private amt 11
+obcopu11,chiro off vists - othr public amt 11
+obcosr11,chiro off vsts-othr unclass srce amt 11
+obcoth11,chiro off visits -oth combined amt 11
+obcprv11,chiro off visits - private ins amt 11
+obcptr11,chiro off visits - prv & tri amt 11
+obcslf11,chiro off visits - self/family amt 11
+obcstl11,chiro off visits - oth st/local amt 11
+obctch11,office-based chiro visit charges 11
+obctri11,chiro off visits - tricare amt 11
+obcva11,chiro off visits - va/champva amt 11
+obcwcp11,chiro off visits - workers comp amt 11
+obdexp11,total off-based dr exp 11
+obdmcd11,dr office visits - medicaid amt 11
+obdmcr11,dr office visits - medicare amt 11
+obdofd11,dr office visits - other federal amt 11
+obdopr11,dr office visits - oth private amt 11
+obdopu11,dr office visits - oth public amt 11
+obdosr11,dr off vsts - oth unclass srce amt 11
+obdoth11,dr office visits - oth combined amt 11
+obdprv11,dr office visits - private ins amt 11
+obdptr11,dr office visits - prv & tri amt 11
+obdrv11,# office-based physician visits 11
+obdslf11,dr office visits - self/family amt 11
+obdstl11,dr office visits - oth st/local amt 11
+obdtch11,office-based physician visit charges 11
+obdtri11,dr office visits - tricare amt 11
+obdva11,dr office visits - va/champva amt 11
+obdwcp11,dr office visits - workers comp amt 11
+obeexp11,total off-based optometrist exp 11
+obemcd11,optometrist off vsts - medicaid amt 11
+obemcr11,optometrist off vsts - medicare amt 11
+obeofd11,optometrist off vsts-oth federal amt 11
+obeopr11,optometrist off vsts-oth private amt 11
+obeopu11,optometrist off vsts - oth public amt 11
+obeosr11,optom off vsts-oth unclass srce amt 11
+obeoth11,optometrist off vsts-oth combined amt 11
+obeprv11,optometrist off vsts-private ins amt 11
+obeptr11,optometrist off vsts - prv & tri amt 11
+obeslf11,optometrist off vsts-self/family amt 11
+obestl11,optometrist off vsts-oth st/locl amt 11
+obetch11,office-based optomtrist visit charges 11
+obetri11,optometrist off vsts - tricare amt 11
+obeva11,optometrist off vsts - va/champva amt 11
+obewcp11,optometrist off vsts-workers comp amt 11
+obnexp11,total off-based nurse/prac 11
+obnmcd11,nurse/prac off vsts - medicaid amt 11
+obnmcr11,nurse/prac off visits - medicare amt 11
+obnofd11,nurse/prac off vsts-other federal amt 11
+obnopr11,nurse/prac off vsts - oth private amt 11
+obnopu11,nurse/prac off vsts - oth public amt 11
+obnosr11,nrs/pr off vsts-oth unclass srce amt 11
+obnoth11,nurse/prac off vsts-oth combined amt 11
+obnprv11,nurse/prac off vsts-private ins amt 11
+obnptr11,nurse/prac off vsts - prv & tri amt 11
+obnslf11,nurse/prac off visits-self/family amt 11
+obnstl11,nurse/prac off vsts-oth st/local amt 11
+obntch11,office-based nurse/prac visit charges 11
+obntri11,nurse/prac off vsts - tricare amt 11
+obnurs11,# off-based nurse/practitioner visits 11
+obnva11,nurse/prac off vsts - va/champva amt 11
+obnwcp11,nurse/prac off vsts-workers comp amt 11
+oboexp11,total off-based non-dr exp 11
+obomcd11,non-dr off vists - medicaid amt 11
+obomcr11,non-dr off vists - medicare amt 11
+oboofd11,non-dr off vists - other federal amt 11
+oboopr11,non-dr off vists - oth private amt 11
+oboopu11,non-dr off vists - oth public amt 11
+oboosr11,non-dr of vsts - oth unclass srce amt 11
+obooth11,non-dr off vists - oth combined amt 11
+oboprv11,non-dr off vists - private ins amt 11
+obopto11,# off-based optometrist visits 11
+oboptr11,non-dr off vists - prv & tri amt 11
+oboslf11,non-dr off vists - self/family amt 11
+obostl11,non-dr off vists - oth st/local amt 11
+obotch11,office-based non-dr visit charges 11
+obothv11,# office-based non-physican visits 11
+obotri11,non-dr off vists - tricare amt 11
+obova11,non-dr off vists - va/champva amt 11
+obowcp11,non-dr off vists - workers comp amt 11
+obtexp11,tot off-based pt exp 11
+obther11,# off-based pt/ot visits 11
+obtmcd11,pt/ot off visits - medicaid amt 11
+obtmcr11,pt/ot off visits - medicare amt 11
+obtofd11,pt/ot off visits - other fed amt 11
+obtopr11,pt/ot off visits - oth private amt 11
+obtopu11,pt/ot off visits - oth public amt 11
+obtosr11,pt/ot off vsts-oth unclass srce amt 11
+obtoth11,pt/ot off visits - oth combined amt 11
+obtotv11,# office-based provider visits 11
+obtprv11,pt/ot off visits - private ins amt 11
+obtptr11,pt/ot off visits - prv & tri amt 11
+obtslf11,pt/ot off visits - self/family amt 11
+obtstl11,pt/ot off visits - oth st/locl amt 11
+obttch11,office-based pt/oc visit charges 11
+obttri11,pt/ot off visits - tricare amt 11
+obtva11,pt/ot off visits - va/champva amt 11
+obtwcp11,pt/ot off visits - workers comp amt 11
+obvexp11,total office-based exp 11
+obvmcd11,all office visits - medicaid amt 11
+obvmcr11,all office visits - medicare amt 11
+obvofd11,all office visits-other federal amt 11
+obvopr11,all office visits - oth private amt 11
+obvopu11,all office visits - oth public amt 11
+obvosr11,all off vsts - oth unclass srce amt 11
+obvoth11,all office visits - oth combined amt 11
+obvprv11,all office visits - private ins amt 11
+obvptr11,all office visits - prv & tri amt 11
+obvslf11,all office visits - self/family amt 11
+obvstl11,all office visits-oth st/local amt 11
+obvtch11,office-based provider visit charges 11
+obvtri11,all office visits-tricare amt 11
+obvva11,all office visits-va/champva amt 11
+obvwcp11,all office visits - workers comp amt 11
+occcat31,occupation group rd 3/1 cmj
+occcat42,occupation group rd 4/2 cmj
+occcat53,occupation group rd 5/3 cmj
+offer31x,health insur offered by rd 3/1 cmj (ed)
+offer42x,health insur offered by rd 4/2 cmj (ed)
+offer53x,health insur offered by rd 5/3 cmj (ed)
+offhou42,ac24 usc has offce hrs nghts/wkends-r4/2
+ofremp31,employer offers health ins rd 3/1 cmj
+ofremp42,employer offers health ins rd 4/2 cmj
+ofremp53,employer offers health ins rd 5/3 cmj
+ohrtaged,age of diagnosis-other heart disease
+ohrtdx,other heart disease diag (>17)
+ongong42,ac22 go to usc for ongoing hlth prb-r4/2
+onjob42,ac08 oth reas no usc: dr at work-r4/2
+opaap11,cov by other public a ins in apr11
+opaau11,cov by other public a ins in aug11
+opade11,cov by other public a ins in dec11
+opaev11,ever have other public a ins during 11
+opafe11,cov by other public a ins in feb11
+opaja11,cov by other public a ins in jan11
+opajl11,cov by other public a ins in jul11
+opaju11,cov by other public a ins in jun11
+opama11,cov by other public a ins in mar11
+opamy11,cov by other public a ins in may11
+opano11,cov by other public a ins in nov11
+opaoc11,cov by other public a ins in oct11
+opase11,cov by other public a ins in sep11
+opbap11,cov by other public b ins in apr11
+opbau11,cov by other public b ins in aug11
+opbde11,cov by other public b ins in dec11
+opbev11,ever have other public b ins during 11
+opbfe11,cov by other public b ins in feb11
+opbja11,cov by other public b ins in jan11
+opbjl11,cov by other public b ins in jul11
+opbju11,cov by other public b ins in jun11
+opbma11,cov by other public b ins in mar11
+opbmy11,cov by other public b ins in may11
+opbno11,cov by other public b ins in nov11
+opboc11,cov by other public b ins in oct11
+opbse11,cov by other public b ins in sep11
+opdexp11,total outpatient provider exp 11
+opdmcd11,all opd visits-medicaid amt-dr 11
+opdmcr11,all opd visits-medicare amt-dr 11
+opdofd11,all opd visits-other fed amt-dr 11
+opdopr11,all opd visits - oth private amt-dr 11
+opdopu11,all opd visits-oth public amt-dr 11
+opdosr11,all opd vsts-oth unclass srce amt-dr 11
+opdoth11,all opd visits-oth combined amt-dr 11
+opdprv11,all opd visits-priv ins amt-dr 11
+opdptr11,all opd visits-prv & tri amt -dr 11
+opdrv11,# outpatient dept physician visits 11
+opdslf11,all opd visits-self/family amt-dr 11
+opdstl11,all opd visits-oth st/local amt-dr 11
+opdtch11,opd provider visit charges - dr 11
+opdtri11,all opd visits-tricare amt-dr 11
+opdva11,all opd visits-va/champva amt-dr 11
+opdwcp11,all opd visits-workers comp amt-dr 11
+opfexp11,total outpatient facility exp 11
+opfmcd11,all opd visits-medicaid amt-fac 11
+opfmcr11,all opd visits-medicare amt-fac 11
+opfofd11,all opd visits-other fed amt-fac 11
+opfopr11,all opd visits - oth private amt-fac 11
+opfopu11,all opd visits - oth public amt-fac 11
+opfosr11,all opd vsts-oth unclass srce amt-fac 11
+opfoth11,all opd visits - oth combined amt-fac 11
+opfprv11,all opd visits-priv ins amt-fac 11
+opfptr11,all opd visits - prv & tri amt-fac 11
+opfslf11,all opd visits-self/family amt-fac 11
+opfstl11,all opd visits-oth st/local amt-fac 11
+opftch11,opd provider visit charges - fac 11
+opftri11,all opd visits-tricare amt-fac 11
+opfva11,all opd visits-va/champva amt-fac 11
+opfwcp11,all opd visits-workers comp amt-fac 11
+opoexp11,total outpatient non-dr - fac exp 11
+opomcd11,opd non-dr visits-medicaid amt-fac 11
+opomcr11,opd non-dr visits-medicare amt-fac 11
+opoofd11,opd non-dr visits-other fed amt-fac 11
+opoopr11,opd non-dr visits-oth private amt-fac 11
+opoopu11,opd non-dr visits-oth public amt-fac 11
+opoosr11,opd non-dr vsts-ot unclas src amt-fac 11
+opooth11,opd non-dr visits-oth combined am-fac 11
+opoprv11,opd non-dr visits-priv ins amt-fac 11
+opoptr11,opd non-dr visits - prv & tri amt-fac 11
+oposlf11,opd non-dr visits-self/fam amt-fac 11
+opostl11,opd non-dr visits-oth st/loc amt-fac 11
+opotch11,opd non-phys visit charges - fac 11
+opothv11,# outpatient dept non-dr visits 11
+opotri11,opd non-dr visits-tricare amt-fac 11
+opova11,opd non-dr visits-va/champva amt-fac 11
+opowcp11,opd non-dr visits-wrkrs comp amt-fac 11
+oppexp11,total outpatient non-dr - dr exp 11
+oppmcd11,opd non-dr visits-medicaid amt-dr 11
+oppmcr11,opd non-dr visits-medicare amt-dr 11
+oppofd11,opd non-dr visits-other fed amt-dr 11
+oppopr11,opd non-dr visits-oth private amt-dr 11
+oppopu11,opd non-dr visits-oth public amt-dr 11
+opposr11,opd non-dr vsts-ot unclas src amt-dr 11
+oppoth11,opd non-dr visits-oth combined amt-dr 11
+oppprv11,opd non-dr visits-priv ins amt-dr 11
+oppptr11,opd non-dr visits - prv & tri amt-dr 11
+oppslf11,opd non-dr visits-self/fam amt-dr 11
+oppstl11,opd non-dr visits-oth st/loc amt-dr 11
+opptch11,opd non-phys visit charges - dr 11
+opptri11,opd non-dr visits-tricare amt-dr 11
+oppva11,opd non-dr visits-va/champva amt-dr 11
+oppwcp11,opd non-dr visits-wrkrs comp amt-dr 11
+opsexp11,total outpatient physician - dr exp 11
+opsmcd11,opd dr visits-medicaid amt-dr 11
+opsmcr11,opd dr visits-medicare amt-dr 11
+opsofd11,opd dr visits-other fed amt-dr 11
+opsopr11,opd dr visits - oth private amt-dr 11
+opsopu11,opd dr visits-oth public amt-dr 11
+opsosr11,opd dr vsts-oth unclass srce amt-dr 11
+opsoth11,opd dr visits -oth combined amt-dr 11
+opsprv11,opd dr visits-priv ins amt-dr 11
+opsptr11,opd dr visits - prv & tri amt-dr 11
+opsslf11,opd dr visits-self/family amt-dr 11
+opsstl11,opd dr visits-oth st/local amt-dr 11
+opstch11,opd physician visit charges - dr 11
+opstri11,opd dr visits-tricare amt-dr 11
+opsva11,opd dr visits-va/champva amt-dr 11
+opswcp11,opd dr visits-workers comp amt-dr 11
+optexp11,total outpatient fac + dr exp 11
+optmcd11,all opd vsts-medicaid amt-(fac+dr) 11
+optmcr11,all opd vsts-medicare amt-(fac+dr) 11
+optofd11,all opd vsts-other fed amt-(fac+dr) 11
+optopr11,all opd vsts-oth private amt-(fac+dr) 11
+optopu11,all opd vsts-oth public amt-(fac+dr) 11
+optosr11,all opd vst-oth uncls src amt(fac+dr) 11
+optoth11,all opd vsts-oth combined amt(fac+dr) 11
+optotv11,# outpatient dept provider visits 11
+optprv11,all opd vsts-priv ins amt-(fac+dr) 11
+optptr11,all opd visits-prv & tri amt (fac+dr) 11
+optslf11,all opd vsts-self/family amt-(fac+dr) 11
+optstl11,all opd vst-oth st/local amt(fac+dr) 11
+opttch11,opd facility + dr visit charges - 11
+opttri11,all opd vsts-tricare amt-(fac+dr) 11
+optva11,all opd vsts-va/champva amt-(fac+dr) 11
+optwcp11,all opd vst-workrs comp amt-(fac+dr) 11
+opvexp11,total outpatient physician - fac exp 11
+opvmcd11,opd dr visits-medicaid amt-fac 11
+opvmcr11,opd dr visits-medicare amt-fac 11
+opvofd11,opd dr visits-other fed amt-fac 11
+opvopr11,opd dr visits - oth private amt-fac 11
+opvopu11,opd dr visits-oth public amt-fac 11
+opvosr11,opd dr vsts-oth unclass srce amt-fac 11
+opvoth11,opd dr visits - oth combined amt-fac 11
+opvprv11,opd dr visits-priv ins amt-fac 11
+opvptr11,opd dr visits - prv & tri amt-fac 11
+opvslf11,opd dr visits-self/family amt-fac 11
+opvstl11,opd dr visits-oth st/local amt-fac 11
+opvtch11,opd physician visit charges - fac 11
+opvtri11,opd dr visits-tricare amt-fac 11
+opvva11,opd dr visits-va/champva amt-fac 11
+opvwcp11,opd dr visits-workers comp amt-fac 11
+othdys31,miss any work day to care for oth (rd31)
+othdys42,miss any work day to care for oth (rd42)
+othdys53,miss any work day to care for oth (rd53)
+othexp11,tot other equip/sply (excl diab) exp 11
+othimp11,other income imputation flag
+othins42,ac08 oth reas no usc: ins related-r4/2
+othmcd11,other equp/supplies-medicaid amt 11
+othmcr11,other equp/supplies-medicare amt 11
+othndd31,# day missed work to care for oth (rd31)
+othndd42,# day missed work to care for oth (rd42)
+othndd53,# day missed work to care for oth (rd53)
+othofd11,other equp/supplies-othr fedrl amt 11
+othopr11,other equp/supply-oth private amt 11
+othopu11,other equp/supply - oth public amt 11
+othosr11,oth equp/suply - ot unclass srce amt 11
+othoth11,other equp/supply - oth combined amt 11
+othprv11,other equp/supplies-priv ins amt 11
+othptr11,other equp/supply - prv & tri amt 11
+othraged,age of diagnosis-other cancer
+othrcp42,ac19 is provider some other race-r4/2
+othrea42,ac08 oth reas no usc: other reason-r4/2
+othrp11x,person's other income
+othrrems,other cancer in remission
+othslf11,other equp/supplies-self/fam amt 11
+othstl11,other equp/supply-othr st/local amt 11
+othtch11,other equp/supplies charges 11
+othtri11,other equp/supply-tricare amt 11
+othva11,other equp/supply-va/champva amt 11
+othwcp11,other equp/supply - workers comp amt 11
+otpaat11,any cov ot gov mcaid/schip hmo-12/31/11
+otpaat31,any time cov ot gov mcaid/schip hmo-r3/1
+otpaat42,any time cov ot gov mcaid/schip hmo-r4/2
+otpaat53,any time cov ot gov mcaid/schip hmo-r5/3
+otpbat11,any cv ot gv nt mcaid/schip hmo-12/31/11
+otpbat31,any cov ot gov not mcaid/schip hmo-r3/1
+otpbat42,any cov ot gov not mcaid/schip hmo-r4/2
+otpbat53,any cov ot gov not mcaid/schip hmo-r5/3
+otpuba11,cov/pay oth gov mcaid/schip hmo-12/31/11
+otpuba31,cov/pay oth gov mcaid/schip hmo-r3/1 int
+otpuba42,cov/pay oth gov mcaid/schip hmo-r4/2 int
+otpuba53,cov/pay oth gov mcaid/schip hmo 12-31/r3
+otpubb11,cov oth gov not mcaid/schip hmo-12/31/11
+otpubb31,cov oth gov not mcaid/schip hmo-r3/1 int
+otpubb42,cov oth gov not mcaid/schip hmo-r4/2 int
+otpubb53,cov oth gov not mcaid/schip hmo 12-31/r3
+ovryaged,age of diagnosis-ovarian cancer
+ovryrems,ovarian cancer in remission
+pacisp42,ac19 is provider oth pacific islndr-r4/2
+pancaged,age of diagnosis-pancreatic cancer
+pancrems,pancreatic cancer in remission
+panel,panel number
+papsmr53,how lng lst pap smear tst (>17) - rd 5/3
+paydr31,paid leave to visit dr rd 3/1 cmj
+paydr42,paid leave to visit dr rd 4/2 cmj
+paydr53,paid leave to visit dr rd 5/3 cmj
+payvac31,paid vacation at rd 3/1 cmj
+payvac42,paid vacation at rd 4/2 cmj
+payvac53,paid vacation at rd 5/3 cmj
+pbinfm42,mcaid/schip/o pub: prob findng info-r4/2
+pbinft42,tricr/chamv: problem finding info-r4/2
+pbpwkm42,mcaid/schip/o pub: prb w pln pprwrk-r4/2
+pbpwkt42,tricr/chamv: prob w plan paperwork-r4/2
+pbsvcm42,mcaid/schip/o pub: prb w cusrvc hlp-r4/2
+pbsvct42,tricr/chamv: prob get help fr csrvc-r4/2
+pcs42,saq:phy component summry sf-12v2 imputed
+pdkap11,covr by priv ins (source unknwn) apr11
+pdkau11,covr by priv ins (source unknwn) aug11
+pdkde11,covr by priv ins (source unknwn) dec11
+pdkfe11,covr by priv ins (source unknwn) feb11
+pdkja11,covr by priv ins (source unknwn) jan11
+pdkjl11,covr by priv ins (source unknwn) jul11
+pdkju11,covr by priv ins (source unknwn) jun11
+pdkma11,covr by priv ins (source unknwn) mar11
+pdkmy11,covr by priv ins (source unknwn) may11
+pdkno11,covr by priv ins (source unknwn) nov11
+pdkoc11,covr by priv ins (source unknwn) oct11
+pdkse11,covr by priv ins (source unknwn) sep11
+pegap11,covered by empl union ins in apr11
+pegau11,covered by empl union ins in aug11
+pegde11,covered by empl union ins in dec11
+pegfe11,covered by empl union ins in feb11
+pegja11,covered by empl union ins in jan11
+pegjl11,covered by empl union ins in jul11
+pegju11,covered by empl union ins in jun11
+pegma11,covered by empl union ins in mar11
+pegmy11,covered by empl union ins in may11
+pegno11,covered by empl union ins in nov11
+pegoc11,covered by empl union ins in oct11
+pegse11,covered by empl union ins in sep11
+penimp11,pension income imputation flag
+pensp11x,person's pension income
+persla42,ac08 oth reas no usc: language-r4/2
+perwt11f,"final person weight, 2011"
+phmonp11,cov by hmo-pays non-plan drs - 12/31/11
+phmonp31,cov by hmo-pays non-plan dr visits-r3/1
+phmonp42,cov by hmo-pays non-plan dr visits-r4/2
+phnreg42,ac23 how diff contact usc by phone-r4/2
+phq242,saq 2 wks: overall rating of feelings
+phyexe53,mod/vig phys exec 5x wk (>17) - rd 5/3
+physcl42,dr advise exercise (2-17)-r4/2
+pid,person number
+plctyp42,usc type of place-r4/2
+pmdins11,pmed ins - r5/r3 until 12/31/11
+pmdins31,pmed ins - rd 3/1 in 11
+pmdlay42,delayed in getting necsry pres med-r4/2
+pmdlpr42,ac55 prb dlayd getting nec pres med-r4/2
+pmdlrs42,ac54 rsn dlayd getting nec pres med-r4/2
+pmedin31,prescription drug insurance - rd 3/1
+pmedin42,prescription drug insurance - rd 4/2
+pmedin53,prescription drug insurance - rd 5/3
+pmedpp31,out-of-pocket payment for last pmed-r3/1
+pmedpp42,out-of-pocket payment for last pmed-r4/2
+pmedpp53,out-of-pocket payment for last pmed-r5/3
+pmedpy31,usual 3rd party payer for pmeds - r3/1
+pmedpy42,usual 3rd party payer for pmeds - r4/2
+pmedpy53,usual 3rd party payer for pmeds - r5/3
+pmedup31,has usual 3rd party payer for pmeds-r3/1
+pmedup42,has usual 3rd party payer for pmeds-r4/2
+pmedup53,has usual 3rd party payer for pmeds-r5/3
+pmncnp11,cov by gatekp-pays non-plan drs-12/31/11
+pmncnp31,cov by gatekpr-pays non-plan drs-r3/1
+pmncnp42,cov by gatekpr-pays non-plan drs-r4/2
+pmunab42,unable to get necessary pres med-r4/2
+pmunpr42,ac51 prb unable to get nec pres med-r4/2
+pmunrs42,ac50 rsn unable to get nec pres med-r4/2
+pngap11,covered by nongroup ins in apr11
+pngau11,covered by nongroup ins in aug11
+pngde11,covered by nongroup ins in dec11
+pngfe11,covered by nongroup ins in feb11
+pngja11,covered by nongroup ins in jan11
+pngjl11,covered by nongroup ins in jul11
+pngju11,covered by nongroup ins in jun11
+pngma11,covered by nongroup ins in mar11
+pngmy11,covered by nongroup ins in may11
+pngno11,covered by nongroup ins in nov11
+pngoc11,covered by nongroup ins in oct11
+pngse11,covered by nongroup ins in sep11
+pogap11,covered by other group ins in apr11
+pogau11,covered by other group ins in aug11
+pogde11,covered by other group ins in dec11
+pogfe11,covered by other group ins in feb11
+pogja11,covered by other group ins in jan11
+pogjl11,covered by other group ins in jul11
+pogju11,covered by other group ins in jun11
+pogma11,covered by other group ins in mar11
+pogmy11,covered by other group ins in may11
+pogno11,covered by other group ins in nov11
+pogoc11,covered by other group ins in oct11
+pogse11,covered by other group ins in sep11
+pouap11,covered by holder outside of ru in apr11
+pouau11,covered by holder outside of ru in aug11
+poude11,covered by holder outside of ru in dec11
+poufe11,covered by holder outside of ru in feb11
+pouja11,covered by holder outside of ru in jan11
+poujl11,covered by holder outside of ru in jul11
+pouju11,covered by holder outside of ru in jun11
+pouma11,covered by holder outside of ru in mar11
+poumy11,covered by holder outside of ru in may11
+pouno11,covered by holder outside of ru in nov11
+pouoc11,covered by holder outside of ru in oct11
+pouse11,covered by holder outside of ru in sep11
+povcat11,family inc as % of poverty line - catego
+povlev11,family inc as % of poverty line - contin
+pprwkm42,mcaid/schip/o pub: comp plan pprwrk-r4/2
+pprwkt42,tricr/chamv:fill out paperwrk 4 pln-r4/2
+prdrnp11,cov by dr list-pays non-plan dr-12/31/11
+prdrnp31,cov by dr list-pays non-plan drs-r3/1
+prdrnp42,cov by dr list-pays non-plan drs-r4/2
+pregnt31,pregnant during ref period - rd 3/1
+pregnt42,pregnant during ref period - rd 4/2
+pregnt53,pregnant during ref period - rd 5/3
+prevcovr,per cov by ins in prev 2 yrs-pnl 16 only
+preven42,ac22 go to usc for prvntve hlt care-r4/2
+priap11,covered by private ins in apr11
+priau11,covered by private ins in aug11
+pride11,covered by private ins in dec11
+pridk11,cov by priv ins (dk plan) - 12/31/11
+pridk31,cov by priv ins (dk plan) - r3/1 int
+pridk42,cov by priv ins (dk plan) - r4/2 int
+pridk53,cov by priv ins (dk plan) 12-31/r3 int
+prieu11,cov by empl/union grp ins - 12/31/11
+prieu31,cov by empl/union grp ins - r3/1 int dt
+prieu42,cov by empl/union grp ins - r4/2 int dt
+prieu53,cov by empl/union grp ins 12-31/r3 int
+prife11,covered by private ins in feb11
+prija11,covered by private ins in jan11
+prijl11,covered by private ins in jul11
+priju11,covered by private ins in jun11
+prima11,covered by private ins in mar11
+primy11,covered by private ins in may11
+pring11,cov by non-group ins - 12/31/11
+pring31,cov by non-group ins - r3/1 int dt
+pring42,cov by non-group ins - r4/2 int dt
+pring53,cov by non-group ins 12-31/r3 int dt
+prino11,covered by private ins in nov11
+prioc11,covered by private ins in oct11
+priog11,cov by other group ins - 12/31/11
+priog31,cov by other group ins - r3/1 int dt
+priog42,cov by other group ins - r4/2 int dt
+priog53,cov by other group ins 12-31/r3 int dt
+pris11,cov by self-emp-1 ins - 12/31/11
+pris31,cov by self-emp-1 ins - r3/1 int dt
+pris42,cov by self-emp-1 ins - r4/2 int dt
+pris53,cov by self-emp-1 ins 12-31/r3 int dt
+prise11,covered by private ins in sep11
+priv11,cov by priv hlth ins - 12/31/11
+priv31,cov by priv hlth ins - r3/1 int date
+priv42,cov by priv hlth ins - r4/2 int date
+priv53,cov by priv hlth ins 12-31/r3 int date
+privat11,any time cov private ins - 12/31/11
+privat31,any time cov private ins - r3/1
+privat42,any time cov private ins - r4/2
+privat53,any time cov private ins - r5/3
+prout11,cov by someone out of ru - 12/31/11
+prout31,cov by someone out of ru - r3/1 int
+prout42,cov by someone out of ru - r4/2 int
+prout53,cov by someone out of ru 12-31/r3 int dt
+provty42,provider type-r4/2
+proxy11,was respondent a proxy as of 12/31/11
+proxy31,was respondent a proxy in r3/1
+proxy42,was respondent a proxy in r4/2
+proxy53,was respondent a proxy in r5/3
+prsap11,covered by self-emp-1 ins in apr11
+prsau11,covered by self-emp-1 ins in aug11
+prsde11,covered by self-emp-1 ins in dec11
+prsfe11,covered by self-emp-1 ins in feb11
+prsja11,covered by self-emp-1 ins in jan11
+prsjl11,covered by self-emp-1 ins in jul11
+prsju11,covered by self-emp-1 ins in jun11
+prsma11,covered by self-emp-1 ins in mar11
+prsmy11,covered by self-emp-1 ins in may11
+prsno11,covered by self-emp-1 ins in nov11
+prsoc11,covered by self-emp-1 ins in oct11
+prsse11,covered by self-emp-1 ins in sep11
+prstaged,age of diagnosis-prostate cancer
+prstrems,prostate cancer in remission
+prvdrl11,cov by priv plan w/doctor list-12/31/11
+prvdrl31,cov by priv plan w/doctor list - r3/1
+prvdrl42,cov by priv plan w/doctor list - r4/2
+prvev11,ever have private insurance during 11
+prvhmo11,covered by private hmo - 12/31/11
+prvhmo31,covered by private hmo - r3/1
+prvhmo42,covered by private hmo - r4/2
+prvmnc11,covered by priv gatekeeper plan-12/31/11
+prvmnc31,covered by private gatekeeper plan-r3/1
+prvmnc42,covered by private gatekeeper plan-r4/2
+psa53,how long since last psa (>39) - rd 5/3
+pstats31,person disposition status - r3/1
+pstats42,person disposition status - r4/2
+pstats53,person disposition status - r5/3
+pub11x,cov by public ins - 12/31/11 (ed)
+pub31x,cov by public ins - r3/1 int dt (ed)
+pub42x,cov by public ins - r4/2 int dt (ed)
+pub53x,cov by public ins 12-31/r3 int dt (ed)
+pubap11x,covr by any public ins in apr11 (ed)
+pubat11x,any time cov by public - 12/31/11
+pubat31x,any time cov by public - r3/1
+pubat42x,any time cov by public - r4/2
+pubat53x,any time cov by public - r5/3
+pubau11x,covr by any public ins in aug11 (ed)
+pubde11x,covr by any public ins in dec11 (ed)
+pubfe11x,covr by any public ins in feb11 (ed)
+pubimp11,public assistance imputation flag
+pubja11x,covr by any public ins in jan11 (ed)
+pubjl11x,covr by any public ins in jul11 (ed)
+pubju11x,covr by any public ins in jun11 (ed)
+pubma11x,covr by any public ins in mar11 (ed)
+pubmy11x,covr by any public ins in may11 (ed)
+pubno11x,covr by any public ins in nov11 (ed)
+puboc11x,covr by any public ins in oct11 (ed)
+pubp11x,person's public assistance
+pubse11x,covr by any public ins in sep11 (ed)
+raceax,asian among races rptd (edited/imputed)
+racebx,black among races rptd (edited/imputed)
+racethnx,race/ethnicity (edited/imputed)
+racewx,white among races rptd (edited/imputed)
+racex,race (edited/imputed)
+rchdif31,difficulty reaching overhead - rd 3/1
+rchdif53,difficulty reaching overhead - rd 5/3
+readnw42,can read newsprnt w/glasses/cntcts-rd4/2
+recpep42,can recgnze people w/glasses/cntcts-r4/2
+rectaged,age of diagnosis-rectal cancer
+rectrems,rectal cancer in remission
+refdp11x,person's refund income
+reffrl42,ac22 go to usc for referrals-r4/2
+refimp11,refund income imputation flag
+refprs11,reference person as of 12/31/11
+refprs31,reference person at - r3/1
+refprs42,reference person at - r4/2
+refprs53,reference person at - r5/3
+region11,census region as of 12/31/11
+region31,census region - r3/1
+region42,census region - r4/2
+region53,census region - r5/3
+resp11,1st respondent indicator as of 12/31/11
+resp31,1st respondent indicator for r3/1
+resp42,1st respondent indicator for r4/2
+resp53,1st respondent indicator for r5/3
+respct42,ac27 prov shows respect for trtmnts-r4/2
+retpln31,pension plan at rd 3/1 cmj
+retpln42,pension plan at rd 4/2 cmj
+retpln53,pension plan at rd 5/3 cmj
+rfrel11x,relation to ref pers-12/31/11 (edit/imp)
+rfrel31x,relation to ref pers-r3/1 (edit/imp)
+rfrel42x,relation to ref pers-r4/2 (edit/imp)
+rfrel53x,relation to ref pers-r5/3 (edit/imp)
+rndflg31,data collection round for rd 3/1 cmj
+rthlth31,perceived health status - rd 3/1
+rthlth42,perceived health status - rd 4/2
+rthlth53,perceived health status - rd 5/3
+rtplnm42,mcaid/schip/o pub: rate exp w plan-r4/2
+rtplnt42,tricr/chamv: rate experience w plan-r4/2
+ruclas11,ru fielded as:standard/new/stud-12/31/11
+ruclas31,ru fielded as:standard/new/student-r3/1
+ruclas42,ru fielded as:standard/new/student-r4/2
+ruclas53,ru fielded as:standard/new/student-r5/3
+ruletr11,ru letter as of 12/31/11
+ruletr31,ru letter - r3/1
+ruletr42,ru letter - r4/2
+ruletr53,ru letter - r5/3
+rurslt31,ru result - r3/1
+rurslt42,ru result - r4/2
+rurslt53,ru result - r5/3
+rusize11,ru size as of 12/31/11
+rusize31,ru size - r3/1
+rusize42,ru size - r4/2
+rusize53,ru size - r5/3
+rxexp11,total rx-exp 11
+rxmcd11,total rx-medicaid amt 11
+rxmcr11,total rx-medicare amt 11
+rxofd11,total rx-other fed amt 11
+rxopr11,total rx-oth private amt 11
+rxopu11,total rx-oth public amt 11
+rxosr11,tot rx-oth unclass srce amt 11
+rxoth11,total rx-oth combined amt 11
+rxprv11,total rx-private ins amt 11
+rxptr11,total rx-prv & tri amt 11
+rxslf11,total rx-self/family amt 11
+rxstl11,total rx-other st/local amt 11
+rxtot11,# presc meds incl refills 11
+rxtri11,total rx-tricare amt 11
+rxva11,total rx-va/champva amt 11
+rxwcp11,total rx-workers comp amt 11
+safest42,dr advise chld safety seat (wt<=40)-r4/2
+salep11x,person's sales income
+salimp11,sales income imputation flag
+saqelig,eligibility status for saq
+saqwt11f,"final saq person weight, 2011"
+schlbh42,problem behavior at school (5-17)-r4/2
+schlim31,school limitation - rd 3/1
+schlim53,school limitation - rd 5/3
+schpro42,problem with schoolwork (5-17)-r4/2
+sclnbd31,# days missed school stayd in bed (rd31)
+sclnbd42,# days missed school stayd in bed (rd42)
+sclnbd53,# days missed school stayd in bed (rd53)
+seatbe53,wears seat belt (>15) - rd 5/3
+seedif42,diffclty seeing w/glasses/cntcts-rd 4/2
+seldsi42,ac08 oth reas no usc:seldm/nev sick-r4/2
+selfcm31,self-employed at rd 3/1 cmj
+selfcm42,self-employed at rd 4/2 cmj
+selfcm53,self-employed at rd 5/3 cmj
+sex,sex
+sfflag42,saq: pcs/mcs imputation flag sf-12v2
+sgmtre53,rsn have sigmoidoscopy (>39)-r5/3
+sgmtst53,most recent sigmoidoscopy (>39) - r5/3
+sibpro42,prblm getting along w/sibs (5-17)-r4/2
+siceas42,child gets sick easily (0-17)-r4/2
+sicpay31,paid sick leave at rd 3/1 cmj
+sicpay42,paid sick leave at rd 4/2 cmj
+sicpay53,paid sick leave at rd 5/3 cmj
+skdkaged,age of diagnosis-skin-unknwn type cancer
+skdkrems,skin-unknown type cancer in remission
+sknmaged,age of diagnosis-skin-nonmelanoma cancer
+sknmrems,skin-nonmelanoma cancer in remission
+soclim31,social limitations - rd 3/1
+soclim53,social limitations - rd 5/3
+spouid11,spouse id - 12/31/11
+spouid31,spouse id - r3/1
+spouid42,spouse id - r4/2
+spouid53,spouse id - r5/3
+spouin11,marital status w/spouse present-12/31/11
+spouin31,marital status w/spouse present-r3/1
+spouin42,marital status w/spouse present-r4/2
+spouin53,marital status w/spouse present-r5/3
+sprpro42,problem w/sports/hobbies (5-17)-r4/2
+sscimp11,social security income imputation flag
+ssecp11x,person's social security income
+ssidis11,ssi receipt due to disability
+ssiimp11,ssi imputation flag
+ssip11x,person's ssi
+ssnljb31,is cmj a seasonal job rd 3/1
+ssnljb42,is cmj a seasonal job rd 4/2
+ssnljb53,is cmj a seasonal job rd 5/3
+staap11,covered by other state prog in apr11
+staau11,covered by other state prog in aug11
+stade11,covered by other state prog in dec11
+stafe11,covered by other state prog in feb11
+staja11,covered by other state prog in jan11
+stajl11,covered by other state prog in jul11
+staju11,covered by other state prog in jun11
+stama11,covered by other state prog in mar11
+stamy11,covered by other state prog in may11
+stano11,covered by other state prog in nov11
+staoc11,covered by other state prog in oct11
+stapr11,cov by state-spec prog - 12/31/11
+stapr31,cov by state-spec prog - r3/1 int dt
+stapr42,cov by state-spec prog - r4/2 int dt
+stapr53,cov by state-spec prog 12-31/r3 int dt
+stase11,covered by other state prog in sep11
+stjbdd31,day started rd 3/1 cmj
+stjbdd42,day started rd 4/2 cmj
+stjbdd53,day started rd 5/3 cmj
+stjbmm31,month started rd 3/1 cmj
+stjbmm42,month started rd 4/2 cmj
+stjbmm53,month started rd 5/3 cmj
+stjbyy31,year started rd 3/1 cmj
+stjbyy42,year started rd 4/2 cmj
+stjbyy53,year started rd 5/3 cmj
+stndif31,difficulty standing 20 minutes - rd 3/1
+stndif53,difficulty standing 20 minutes - rd 5/3
+stomaged,age of diagnosis-stomach cancer
+stomch53,tke asprn unsafe b/c stomch (>17)-rd 5/3
+stomrems,stomach cancer in remission
+stpdif31,difficulty walking up 10 steps - rd 3/1
+stpdif53,difficulty walking up 10 steps - rd 5/3
+stprat11,any time cov by state ins - 12/31/11
+stprat31,any time coverage by state ins - r3/1
+stprat42,any time coverage by state ins - r4/2
+stprat53,any time coverage by state ins - r5/3
+strkaged,age of diagnosis-stroke
+strkdx,stroke diagnosis (>17)
+taxfrm11,tax form person will file
+tempjb31,is cmj a temporary job rd 3/1
+tempjb42,is cmj a temporary job rd 4/2
+tempjb53,is cmj a temporary job rd 5/3
+thrtaged,age of diagnosis-throat cancer
+thrtrems,throat cancer in remission
+thyraged,age of diagnosis-thyroid cancer
+thyrrems,thyroid cancer in remission
+timaln42,doctor spend any time alone (12-17)-r4/2
+tmtkus42,ac13 how long it takes get to usc-r4/2
+totded11,total of all itemized deductions
+totexp11,total health care exp 11
+totmcd11,total amt paid by medicaid 11
+totmcr11,total amt paid by medicare 11
+totofd11,total amt paid by other federal 11
+totopr11,total amt paid by other private 11
+totopu11,total amt paid by other public 11
+totosr11,total amt paid by other sources 11
+tototh11,total amt paid by oth combined 11
+totprv11,total amt paid by private ins 11
+totptr11,total amt paid by prv & tri 11
+totslf11,total amt paid by self/family 11
+totstl11,total amt paid by oth st/local 11
+tottch11,"total health care charges 11, excl rx"
+tottri11,total amt paid by tricare 11
+totva11,total amt paid by va/champva 11
+totwcp11,total amt paid by workers comp 11
+trans42,ac08 oth reas no usc: transprt/time-r4/2
+trble42,prblm stay out of trouble (5-17)-r4/2
+treatm42,ac26 prov ask about oth treatments-r4/2
+triap11x,covered by tricare/champva in apr11(ed)
+triat11x,any time cov tricare/champva - 12/31/11
+triat31x,any time cov tricare/champva - r3/1
+triat42x,any time cov tricare/champva - r4/2
+triat53x,any time cov tricare/champva - r5/3
+triau11x,covered by tricare/champva in aug11 (ed)
+trich11x,covered by tricare champva - 12/31/11
+trich31x,covered by tricare champva - r3/1
+trich42x,covered by tricare champva - r4/2
+tricr11x,cov by tricr/chamv - 12/31/11 (ed)
+tricr31x,cov by tricr/chamv - r3/1 int dt (ed)
+tricr42x,cov by tricr/chamv - r4/2 int dt (ed)
+tricr53x,cov by tricr/chamv 12-31/r3 int dt (ed)
+tride11x,covered by tricare/champva in dec11 (ed)
+triev11,ever have tricare/champva during 11
+triex11x,covered by tricare extra - 12/31/11
+triex31x,covered by tricare extra - r3/1
+triex42x,covered by tricare extra - r4/2
+trife11x,covered by tricare/champva in feb11 (ed)
+trija11x,covered by tricare/champva in jan11 (ed)
+trijl11x,covered by tricare/champva in jul11 (ed)
+triju11x,covered by tricare/champva in jun11 (ed)
+trili11x,covered by tricare for life - 12/31/11
+trili31x,covered by tricare for life - r3/1
+trili42x,covered by tricare for life - r4/2
+trima11x,covered by tricare/champva in mar11 (ed)
+trimy11x,covered by tricare/champva in may11 (ed)
+trino11x,covered by tricare/champva in nov11 (ed)
+trioc11x,covered by tricare/champva in oct11 (ed)
+tripr11x,covered by tricare prime - 12/31/11
+tripr31x,covered by tricare prime - r3/1
+tripr42x,covered by tricare prime - r4/2
+trise11x,covered by tricare/champva in sep11 (ed)
+trist11x,covered by tricare standard - 12/31/11
+trist31x,covered by tricare standard - r3/1
+trist42x,covered by tricare standard - r4/2
+trstp11x,person's trust/rent income
+trtimp11,trust income imputation flag
+tstsaged,age of diagnosis-testicular cancer
+tstsrems,testicular cancer in remission
+ttlp11x,person's total income
+typepe42,usc type of provider-r4/2
+unable31,completely unable to do activity-rd 3/1
+unable53,completely unable to do activity-rd 5/3
+uneimp11,unemployment imputation flag
+unemp11x,person's unemployment comp income
+unhap42,problem feeling unhappy/sad (5-17)-r4/2
+unins11,uninsured all of 11
+union31,union status at rd 3/1 cmj
+union42,union status at rd 4/2 cmj
+union53,union status at rd 5/3 cmj
+usborn42,ac03 was person born in us-r4/2
+uscnot42,ac08 oth reas no usc: usc not avail-r4/2
+uslive42,ac04 # yrs person lived in us-r4/2
+uteraged,age of diagnosis-uterine cancer
+uterrems,uterine cancer in remission
+varpsu,variance estimation psu - 2011
+varstr,variance estimation stratum - 2011
+vetimp11,veteran's income imputation flag
+vetsp11x,person's veteran's income
+visexp11,total glasses/contact lens exp 11
+vision42,vision impairment (summary) - rd 4/2
+vismcd11,glasses/cntct lenses-medicaid amt 11
+vismcr11,glasses/cntct lenses-medicare amt 11
+visofd11,glasses/cntct lenses-othr fed amt 11
+visopr11,glasses/cntct lenses-oth private amt 11
+visopu11,glasses/cntct lenses-oth public amt 11
+visosr11,glases/cntct lense-ot unclas srce amt 11
+visoth11,glasses/cntct lenses-oth combined amt 11
+visprv11,glasses/cntct lenses-priv ins amt 11
+visptr11,glasses/cntct lenses-prv & tri amt 11
+visslf11,glasses/cntct lenses -self/fam amt 11
+visstl11,glasses/cntct lenses-oth st/locl amt 11
+vistch11,glasses/contact lenses charges 11
+vistri11,glasses/lenses-tricare amt 11
+visva11,glasses/cntct lenses-va/champva amt 11
+viswcp11,glasses/cntct lenses-workers comp amt 11
+wagep11x,person's wage income
+wagimp11,wage imputation flag
+wasafdc,was prev ins by public afdc-pnl 16 only
+waschamp,was prev ins tricare/champva-pnl 16 only
+wasestb,was prev ins by empl or union-pn 16 only
+wasmcaid,was prev ins by mcaid/schip-pnl 16 only
+wasmcare,was prev ins by medicare-panel 16 only
+wasotgov,was prev ins by oth gov prg-pnl 16 only
+wasother,was prev ins by oth source-panel 16 only
+waspriv,was prev ins grp/assoc/ins co-pn 16 only
+wasssi,was prev ins by ssi program-pnl 16 only
+wasstat1,was prev ins by stat prog 1-pnl 16 only
+wasstat2,was prev ins by stat prog 2-pnl 16 only
+wasstat3,was prev ins by stat prog 3-pnl 16 only
+wasstat4,was prev ins by stat prog 4-pnl 16 only
+wasva,was prev ins va/militar care-pnl 16 only
+wcmpp11x,person's workers' compensation
+wcpimp11,workers' comp imputation flag
+whitpr42,ac19 is provider white-r4/2
+whnbpr42,when dr checked blood press (2-17)-r4/2
+whnbst42,whn dr advise boost seat(40<wt<=80)-r4/2
+whnden42,when dr advise dent checkup (2-17)-r4/2
+whneat42,when dr advise eat healthy (2-17)-r4/2
+whnhel42,when dr advise bike helmet (2-17)-r4/2
+whnhgt42,when doctor measured height (0-17)-r4/2
+whnlap42,whn dr advise lap/shldr blt (80<wt)-r4/2
+whnphy42,when dr advise exercise (2-17)-r4/2
+whnsaf42,when dr advise safety seat (wt<=40)-r4/2
+whnsmk42,whn dr advis smkg in home bad(0-17)-r4/2
+whnwgt42,when doctor measured weight (0-17)-r4/2
+wilfil11,will person file fed income tax return
+wkinbd31,# days missed work stayed in bed (rd31)
+wkinbd42,# days missed work stayed in bed (rd42)
+wkinbd53,# days missed work stayed in bed (rd53)
+wlk3mo31,phys functioning help 3+ months - rd 3/1
+wlk3mo53,phys functioning help 3+ months - rd 5/3
+wlkdif31,difficulty walking 3 blocks - rd 3/1
+wlkdif53,difficulty walking 3 blocks - rd 5/3
+wlklim31,limitation in physical functioning-rd3/1
+wlklim53,limitation in physical functioning-rd5/3
+wrglas42,wears eyeglasses or contacts - rd 4/2
+wrhlth42,worry more about health (0-17)-r4/2
+wrklim31,work limitation - rd 3/1
+wrklim53,work limitation - rd 5/3
+ychj3142,why chngd job between rd 3/1 and rd 4/2
+ychj4253,why chngd job between rd 4/2 and rd 5/3
+ynoins31,why not eligible health ins rd 3/1 cmj
+ynoins42,why not eligible health ins rd 4/2 cmj
+ynoins53,why not eligible health ins rd 5/3 cmj
+ynousc42,ac07 main reas pers doesnt have usc-r4/2
+zidexp11,total zero-nite staz dr 11
+zidmcd11,zero-nite ip staz-medicaid amt-dr 11
+zidmcr11,zero-nite ip staz-medicare amt-dr 11
+zidofd11,zero-nite ip staz-other fed amt-dr 11
+zidopr11,zero-nite ip staz-oth private amt-dr 11
+zidopu11,zero-nite ip staz-oth public amt-dr 11
+zidosr11,zero-nite ip staz-unclas srce amt-dr 11
+zidoth11,zero-nite ip staz-oth combined amt-dr 11
+zidprv11,zero-nite ip staz-priv ins amt-dr 11
+zidptr11,zero-nite ip staz-prv & tri amt-dr 11
+zidslf11,zero-nite ip staz-self/fam amt-dr 11
+zidstl11,zero-nite ip staz-oth st/loc amt-dr 11
+zidtch11,zero-nite ip stay charges - dr 11
+zidtri11,zero-nite ip staz-tricare amt-dr 11
+zidva11,zero-nite ip staz-va/champva amt-dr 11
+zidwcp11,zero-nite ip staz-wrkers comp amt-dr 11
+zifexp11,total zero-nite stays fac exp 11
+zifmcd11,zero-nite ip staz-medicaid amt-fac 11
+zifmcr11,zero-nite ip staz-medicare amt-fac 11
+zifofd11,zero-nite ip staz-other fed amt-fac 11
+zifopr11,zero-nite ip staz-oth private amt-fac 11
+zifopu11,zero-nite ip staz-oth public amt-fac 11
+zifosr11,zero-nite ip staz-unclas srce amt-fac 11
+zifoth11,zero-nite ip staz-oth combine amt-fac 11
+zifprv11,zero-nite ip staz-priv ins amt-fac 11
+zifptr11,zero-nite ip staz-prv & tri amt-fac 11
+zifslf11,zero-nite ip staz-self/fam amt-fac 11
+zifstl11,zero-nite ip staz-oth st/loc amt-fac 11
+ziftch11,zero-nite ip stay charges - fac 11
+ziftri11,zero-nite ip staz-tricare amt-fac 11
+zifva11,zero-nite ip staz-va/champva amt-fac 11
+zifwcp11,zero-nite ip staz-wrkers comp amt-fac 11

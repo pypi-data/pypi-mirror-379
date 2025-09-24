@@ -1,0 +1,212 @@
+﻿Variable,Description
+puf_id,unique puf identification number
+surveyyr,survey year
+version,version number
+acw_d_ervist,er visit in this or any of prev 2 rounds
+acw_d_opvist,op visit in this or any of prev 2 rounds
+acw_opdmcond,reason for opd visit: medical condition
+acw_opdtests,reason for opd visit: tests
+acw_opdfolup,reason for opd visit: follow-up
+acw_opdchkup,reason for opd visit: checkup
+acw_opdrfrl,reason for opd visit: referral
+acw_opdsurgy,reason for opd visit: surgery
+acw_opdpshot,reason for opd visit: preventative shot
+acw_opdtshot,reason for opd visit: treatment shot
+acw_opdpmed,reason for opd visit: medication
+acw_opdother,reason for opd visit: other
+acw_opdappt,opd visit by appt or walk-in
+acw_opddrtel,did someone in opd tell to come back
+acw_d_opappt,days waited for opd appointment
+acw_d_mdvist,md visit in this or any of prev 2 rounds
+acw_mdmcond,reason dr seen: med condition
+acw_mdtests,reason dr seen: tests
+acw_mdfolup,reason dr seen: follow-up
+acw_mdchkup,reason dr seen: checkup
+acw_mdrfrl,reason dr seen: referral
+acw_mdsurgy,reason dr seen: surgery
+acw_mdpshot,reason dr seen: preventative shot
+acw_mdtshot,reason dr seen: treatment shot
+acw_mdpmed,reason dr seen: medication
+acw_mdother,reason dr seen: other
+acw_mdappt,was visit to dr appointment or walk-in
+acw_mddrtel,dr's office tell come back
+acw_d_mdappt,days waited for dr's appointment
+acw_d_mdtime,minutes wait at dr
+acw_dvneed,ever a time sp couldn t get dental care?
+acw_dvndcost,cldn t get dental: cost
+acw_madvdfrf,difficulty get referrals thru mcare adv
+acw_madvnoem,mcare adv refused to pay emergency care
+acw_placepar,ever go to particular place for med care
+acw_placeknd,kind of place usually go for med care
+acw_placemcp,dr/clinic associated with mcp
+acw_usualdoc,have particular dr usually see
+acw_pvspec,doctor specialty: usual source of care
+acw_getushow,how usually get to dr office
+acw_d_getus,time it usually takes to get dr office
+acw_accompus,does someone accompany to dr office
+acw_accwrite,someone accompanies to take notes
+acw_accexpdr,someone accompanies explain things to dr
+acw_accexpsp,someone accompanies explain instructions
+acw_accaskqs,someone accompanies to ask questions
+acw_acctrans,someone accompanies to translate
+acw_accappts,someone accompanies to schedule appt
+acw_accmoral,someone accompanies for moral support
+acw_accdrive,someone accompanies for transportation
+acw_acchelp,someone accompanies to assist with adls
+acw_provyr,sp seen provider in last 12 months
+acw_dochlth,how often provider asks about sp's life
+acw_doceasy,provider explains things clearly
+acw_hlthidea,provider asks to improve health
+acw_sthlthgl,provider talked to sp about health goals
+acw_mthlthgl,care helped reach goals
+acw_usckevry,dr checks everything when examining
+acw_usunwrng,dr completely understands what's wrong
+acw_ordrtest,provider ordered tests
+acw_tstflwup,provider followed up about tests
+acw_rqstrslt,how often sp requested test results
+acw_rslteasy,how often test results presented clearly
+acw_hlthsrvc,sp needed home services
+acw_giveinst,provider gave health care instructions
+acw_anyrx,sp took prescription medcines
+acw_talkrx,provider told sp how to take meds
+acw_badrctn,provider talked about bad reactions
+acw_carespcl,see specialist outside pcp office
+acw_drinfrmd,how often pcp seem informed of spec care
+acw_reminddr,how often remind pcp about spec care
+acw_stpmspcl,specialist outside pcp prescribe rx
+acw_talkpms,how often pcp talk abt spec prescr'd rx
+acw_knowspcl,specialist knows enough of med history
+acw_drrepeat,how often sp repeats info to specialist
+acw_knowrslt,how often specialists know sp test rslts
+acw_hosadmit,sp admitted to hospital overnight
+acw_prvnomed,one provider knew all sp's medicines
+acw_notavail,med records not available for dr appt
+acw_emedrec,does pcp enter health info in computer
+acw_nusnotsk,no usc: seldom/never sick
+acw_nusmovin,no usc: recent move to area
+acw_nusavail,no usc: usc no longer available
+acw_nusdiffp,no usc: like different place
+acw_nustoofr,no usc: places are too far away
+acw_nustooex,no usc: cost too expensive
+knw_knowmc,how easy is mcare to understand
+knw_kcarknow,how much they know about mcare
+knw_compdesk,own/use a desktop/laptop computer
+knw_compphon,own/use a smartphone
+knw_comptab,own/use a tablet/portable computer
+knw_internet,has access to internet
+knw_usenet,ever use internet to get info
+knw_somelnet,has someone to get info from internet
+knw_oftnnet,how often access internet seeking info
+knw_kvstsite,has visited website for medicare info
+knw_kcominte,"past yr, used internet for health info"
+knw_kcompres,"past yr, used internet to fill rx"
+knw_kcomappo,"past yr, used internet to schedule appt"
+knw_kcomcomm,"past yr, used internet communicate w hcp"
+knw_kchihelp,who makes health insurance decisions
+tmw_telmed,usual provider offers telehealth
+tmw_telmedt1,provider offers telephone or video appts
+tmw_telmeddu,provider offered tele appt (past yr)
+tmw_telmedt3,offered appt was telephone or video
+tmw_telmedus,sp had telehealth appt (past yr)
+tmw_telmedt4,appt was telephone or video
+pufwwgt,puf winter ever enrolled full sample wt
+pufw001,puf winter ever enrolled rep wt 1
+pufw002,puf winter ever enrolled rep wt 2
+pufw003,puf winter ever enrolled rep wt 3
+pufw004,puf winter ever enrolled rep wt 4
+pufw005,puf winter ever enrolled rep wt 5
+pufw006,puf winter ever enrolled rep wt 6
+pufw007,puf winter ever enrolled rep wt 7
+pufw008,puf winter ever enrolled rep wt 8
+pufw009,puf winter ever enrolled rep wt 9
+pufw010,puf winter ever enrolled rep wt 10
+pufw011,puf winter ever enrolled rep wt 11
+pufw012,puf winter ever enrolled rep wt 12
+pufw013,puf winter ever enrolled rep wt 13
+pufw014,puf winter ever enrolled rep wt 14
+pufw015,puf winter ever enrolled rep wt 15
+pufw016,puf winter ever enrolled rep wt 16
+pufw017,puf winter ever enrolled rep wt 17
+pufw018,puf winter ever enrolled rep wt 18
+pufw019,puf winter ever enrolled rep wt 19
+pufw020,puf winter ever enrolled rep wt 20
+pufw021,puf winter ever enrolled rep wt 21
+pufw022,puf winter ever enrolled rep wt 22
+pufw023,puf winter ever enrolled rep wt 23
+pufw024,puf winter ever enrolled rep wt 24
+pufw025,puf winter ever enrolled rep wt 25
+pufw026,puf winter ever enrolled rep wt 26
+pufw027,puf winter ever enrolled rep wt 27
+pufw028,puf winter ever enrolled rep wt 28
+pufw029,puf winter ever enrolled rep wt 29
+pufw030,puf winter ever enrolled rep wt 30
+pufw031,puf winter ever enrolled rep wt 31
+pufw032,puf winter ever enrolled rep wt 32
+pufw033,puf winter ever enrolled rep wt 33
+pufw034,puf winter ever enrolled rep wt 34
+pufw035,puf winter ever enrolled rep wt 35
+pufw036,puf winter ever enrolled rep wt 36
+pufw037,puf winter ever enrolled rep wt 37
+pufw038,puf winter ever enrolled rep wt 38
+pufw039,puf winter ever enrolled rep wt 39
+pufw040,puf winter ever enrolled rep wt 40
+pufw041,puf winter ever enrolled rep wt 41
+pufw042,puf winter ever enrolled rep wt 42
+pufw043,puf winter ever enrolled rep wt 43
+pufw044,puf winter ever enrolled rep wt 44
+pufw045,puf winter ever enrolled rep wt 45
+pufw046,puf winter ever enrolled rep wt 46
+pufw047,puf winter ever enrolled rep wt 47
+pufw048,puf winter ever enrolled rep wt 48
+pufw049,puf winter ever enrolled rep wt 49
+pufw050,puf winter ever enrolled rep wt 50
+pufw051,puf winter ever enrolled rep wt 51
+pufw052,puf winter ever enrolled rep wt 52
+pufw053,puf winter ever enrolled rep wt 53
+pufw054,puf winter ever enrolled rep wt 54
+pufw055,puf winter ever enrolled rep wt 55
+pufw056,puf winter ever enrolled rep wt 56
+pufw057,puf winter ever enrolled rep wt 57
+pufw058,puf winter ever enrolled rep wt 58
+pufw059,puf winter ever enrolled rep wt 59
+pufw060,puf winter ever enrolled rep wt 60
+pufw061,puf winter ever enrolled rep wt 61
+pufw062,puf winter ever enrolled rep wt 62
+pufw063,puf winter ever enrolled rep wt 63
+pufw064,puf winter ever enrolled rep wt 64
+pufw065,puf winter ever enrolled rep wt 65
+pufw066,puf winter ever enrolled rep wt 66
+pufw067,puf winter ever enrolled rep wt 67
+pufw068,puf winter ever enrolled rep wt 68
+pufw069,puf winter ever enrolled rep wt 69
+pufw070,puf winter ever enrolled rep wt 70
+pufw071,puf winter ever enrolled rep wt 71
+pufw072,puf winter ever enrolled rep wt 72
+pufw073,puf winter ever enrolled rep wt 73
+pufw074,puf winter ever enrolled rep wt 74
+pufw075,puf winter ever enrolled rep wt 75
+pufw076,puf winter ever enrolled rep wt 76
+pufw077,puf winter ever enrolled rep wt 77
+pufw078,puf winter ever enrolled rep wt 78
+pufw079,puf winter ever enrolled rep wt 79
+pufw080,puf winter ever enrolled rep wt 80
+pufw081,puf winter ever enrolled rep wt 81
+pufw082,puf winter ever enrolled rep wt 82
+pufw083,puf winter ever enrolled rep wt 83
+pufw084,puf winter ever enrolled rep wt 84
+pufw085,puf winter ever enrolled rep wt 85
+pufw086,puf winter ever enrolled rep wt 86
+pufw087,puf winter ever enrolled rep wt 87
+pufw088,puf winter ever enrolled rep wt 88
+pufw089,puf winter ever enrolled rep wt 89
+pufw090,puf winter ever enrolled rep wt 90
+pufw091,puf winter ever enrolled rep wt 91
+pufw092,puf winter ever enrolled rep wt 92
+pufw093,puf winter ever enrolled rep wt 93
+pufw094,puf winter ever enrolled rep wt 94
+pufw095,puf winter ever enrolled rep wt 95
+pufw096,puf winter ever enrolled rep wt 96
+pufw097,puf winter ever enrolled rep wt 97
+pufw098,puf winter ever enrolled rep wt 98
+pufw099,puf winter ever enrolled rep wt 99
+pufw100,puf winter ever enrolled rep wt 100

@@ -1,0 +1,28 @@
+﻿Variable,Description
+dmdborn4,country of birth
+dmdeduc2,what is the highest grade or level of school {you have/sp has} completed or the highest degree {you have/s/he has} received?
+dmdhhsiz,total number of people in the household
+dmdhragz,hh ref person’s age in years
+dmdhredz,hh ref person’s education level
+dmdhrgnd,hh ref person’s gender
+dmdhrmaz,hh ref person’s marital status
+dmdhsedz,hh ref person’s spouse’s education level
+dmdmartz,marital status
+dmdyrusr,length of time the participant has been in the us.
+dmqmiliz,"{have you/has sp} ever served on active duty in the u.s. armed forces, military reserves, or national guard? (active duty does not include training for the reserves or national guard, but does include activation, for service in the u.s. or in a foreign country, in support of military or humanitarian operations.)"
+indfmpir,ratio of family income to poverty
+riagendr,gender of the participant.
+ridagemn,age in months of the participant at the time of screening. reported for persons aged 24 months or younger at the time of exam (or screening if not examined).
+ridageyr,age in years of the participant at the time of screening. individuals 80 and over are top-coded at 80 years of age.
+ridexagm,age in months of the participant at the time of examination. reported for persons aged 19 years or younger at the time of examination.
+ridexmon,"six month time period when the examination was performed - two categories: november 1 through april 30, may 1 through october 31."
+ridexprg,pregnancy status for females between 20 and 44 years of age at the time of mec exam.
+ridreth1,recode of reported race and hispanic origin information
+ridreth3,"recode of reported race and hispanic origin information, with non-hispanic asian category"
+ridstatr,interview and examination status of the participant.
+sddsrvyr,data release cycle
+sdmvpsu,masked variance unit pseudo-psu variable for variance estimation
+sdmvstra,masked variance unit pseudo-stratum variable for variance estimation
+seqn,respondent sequence number.
+wtint2yr,full sample 2 year interview weight.
+wtmec2yr,full sample 2 year mec exam weight.

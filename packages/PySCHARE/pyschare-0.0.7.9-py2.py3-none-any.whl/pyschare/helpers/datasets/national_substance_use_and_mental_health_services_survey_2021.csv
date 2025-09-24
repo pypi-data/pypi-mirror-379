@@ -1,0 +1,899 @@
+﻿Variable,Description
+masterid,"master id
+generated case (record) identifier."
+inmh,facility is included in the mental health i-tf
+insu,facility is included in the substance use i-tf
+locationstate,facility state
+locationstate,facility state
+focus,primary treatment focus (q.1)
+sutrtmntalso,offered substance use treatment also (q.1a)
+jail,"jail, prison, or other (q.2)"
+othnontx,offered intake/assessment/referral (q.a1)
+detox,offered detoxification (q.a1)
+treatmt_su,offered substance use treatment (q.a1)
+smisedsud_su,"offered co-occurring serious mental illness (smi)/serious emotional disturbance (sed)
+and substance use disorder (sud) (q.a1)"
+admin,any other substance use services offered (q.a1)
+mhtxsa,offers mental health treatment to substance use clients (q.a1a)
+mhtxnonsa,offers mental health treatment to non-substance use clients (q.a1a)
+nomhtx,offers no mental health treatment (q.a1a)
+detxalc,detoxify from alcohol (q.a2)
+detxben,detoxify from benzodiazepines (q.a2)
+detxcoc,detoxify from cocaine (q.a2)
+detxmet,detoxify from methamphetamines (q.a2)
+detxop,detoxify from opioids (q.a2)
+detxoth,detoxify from other substances (q.a2)
+detxmed,routinely detoxification with medications (q.a2a)
+loc15_su,solo practice (q.a3)
+ctype4,hospital inpatient substance use care offered currently (q.a4)
+ctypehi1,hospital inpatient detoxification care offered (q.a4a)
+ctypehi2,hospital inpatient treatment care offered (q.a4a)
+ctype7,non-hospital residential substance use care offered currently (q.a5)
+ctyperc1,non-hospital residential detoxification care offered (q.a5a)
+ctyperc3,non-hospital residential short-term treatment offered (q.a5a)
+ctyperc4,non-hospital residential long-term treatment offered (q.a5a)
+ctype1,any outpatient substance use care offered currently (q.a6)
+ctype6,outpatient detoxification offered (q.a6a)
+ctypeml,outpatient methadone maintenance offered (q.a6a)
+ctypeop,day treatment/partial hospitalization offered (q.a6a)
+ctype2,intensive outpatient treatment offered (q.a6a)
+ctype3,regular outpatient treatment offered (q.a6a)
+srvc89,assessment screening substance use (q.a7)
+srvc90,assessment screening mental disorders (q.a7)
+srvc1,assessment comprehensive substance use (q.a7)
+srvc2,assessment mental health (q.a7)
+srvccompexam,complete medical history and physical examination done (q.a7)
+srvc107,assessment screening tobacco use (q.a7)
+srvc91,assessment outreach (q.a7)
+srvc93,assessment interim services (q.a7)
+srvcedcon,assessment professional consultant (q.a7)
+nopretxsrvc,none of the above assessment or pretreatment services (q.a7)
+srvcoral,testing drug/alcohol oral fluid (q.a7)
+srvc10,testing blood/alcohol (q.a7)
+srvc11,testing drug/alcohol urine screen (q.a7)
+srvc73,testing hepatitis b (hbv) (q.a7)
+srvc74,testing hepatitis c (hcv) (q.a7)
+srvc14,testing hiv (q.a7)
+srvc15,testing sexually transmitted disease (std) (q.a7)
+srvc16,testing tuberculosis (tb) screen (q.a7)
+srvcmeta,testing metabolic syndrome (q.a7)
+notestingsrvc,none of the above testing services (q.a7)
+srvchav,medical hepatitis a (q.a7)
+srvchbv,medical hepatitis b (q.a7)
+nomedsrvc,none of the above medical services (q.a7)
+srvc37,transitional discharge plan (q.a7)
+srvc27,transitional aftercare (q.a7)
+srvcoded,transitional naloxone and overdose education (q.a7)
+srvcoutcm,transitional outcome follow-up after discharge (q.a7)
+notranssrvc,none of the above transitional services (q.a7)
+srvc97,recovery mentoring/peer support (q.a7)
+srvc102,recovery self-help groups (q.a7)
+srvc39,recovery housing assist (q.a7)
+srvc38,recovery employment (q.a7)
+srvc36,recovery assistance social services (q.a7)
+srvccoach,recovery coach (q.a7)
+norssrvc,none of the above recovery support services (q.a7)
+srvc24,education and counseling hiv/aids education (q.a7)
+srvc104,education and counseling hepatitis education (q.a7)
+srvc99,education and counseling health education (q.a7)
+srvc100,education and counseling substance use education (q.a7)
+srvc105,education and counseling smoking/tobacco cessation (q.a7)
+srvc6,education and counseling individual (q.a7)
+srvc5,education and counseling group (q.a7)
+srvc4,education and counseling family (q.a7)
+srvc103,education and counseling marital/couples (q.a7)
+srvcvoced,education and counseling vocational (q.a7)
+noedsrvc,none of the above education and counseling services (q.a7)
+srvc49,ancillary services case management (q.a7)
+srvcprimcare,ancillary services integrated primary care (q.a7)
+srvc96,ancillary social skills (q.a7)
+srvc50,ancillary child care (q.a7)
+srvc52,ancillary domestic violence (q.a7)
+srvc98,ancillary intervention hiv (q.a7)
+srvc59,ancillary transportation assistance (q.a7)
+srvc101,ancillary mental health services (q.a7)
+srvcsuicideprev,ancillary suicide prevention services (q.a7)
+srvc48,ancillary acupuncture (q.a7)
+srvc75,ancillary residential beds for children (q.a7)
+noancsrvc,none of the above ancillary services (q.a7)
+srvc117,other gambling disorder (q.a7)
+srvc119,other non-substance use addiction disorder (q.a7)
+noothsrvc,none of the above other (q.a7)
+srvc70,pharmacotherapies disulfiram (q.a7)
+srvc71,pharmacotherapies naltrexone (oral) (q.a7)
+srvc108,"pharmacotherapies naltrexone (extended-release, injectable) (q.a7)"
+srvc88,pharmacotherapies acamprosate (campral) (q.a7)
+srvc94,pharmacotherapies nicotine replacement (q.a7)
+srvc106,pharmacotherapies non-nicotine cessation (q.a7)
+srvc95,pharmacotherapies psychiatric disorders (q.a7)
+srvc85,pharmacotherapies methadone (q.a7)
+srvc87,"pharm buprenorphine with naloxone (suboxone, bunavail, zubsolv, cassipa) (q.a7)"
+srvc86,pharmacotherapies buprenorphine without naloxone (q.a7)
+srvc129,pharmacotherapies buprenorphine sub-dermal implant (probuphine) (q.a7)
+srvc130,"pharm buprenorphine (extended-release, injectable, for example, sublocade) (q.a7)"
+srvcmedhiv,pharmacotherapies for hiv treatment (q.a7)
+srvcmedpreexp,pharmacotherapies for pre-exposure prophylaxis (q.a7)
+srvcmedhcv,pharmacotherapies for hepatitis c (hcv) treatment (q.a7)
+srvcmedlofe,pharmacotherapies lofexidine (q.a7)
+srvcmedclon,pharmacotherapies clonidine (q.a7)
+srvcmedothcond,pharmacotherapies for other medical conditions (q.a7)
+nopharmsrvc,none of the above pharmacotherapies (q.a7)
+otxnomed,drugs may originate at another site (q.a8)
+otxnal,uses naltrexone to treat opioid use disorder (q.a8)
+otxbup,uses buprenorphine to treat opioid use disorder (q.a8)
+otxfedotp,federally-certified opioid treatment program (otp) (q.a8)
+otxfree,"treats opioid addiction, but without methadone, buprenorphine, and/or naltrexone (q.a8)"
+otxpain,uses methadone or buprenorphine for other purposes (q.a8)
+otxnone,does not treat opioid use disorder (q.a8)
+oudwnet,"opioid use disorder medication source, prescribing entity in network (q.a8a)"
+oudwbusrel,"opioid use disorder medication source, referral relationship with prescribing entity
+(q.a8a)"
+oudwperprov,"opioid use disorder medication source, personal physician/health care provider
+(q.a8a)"
+onlyoud,serve only opioid use disorder clients (q.a8b)
+opioidmaint,maintenance services with methadone or buprenorphine (q.a8c)
+opioidwdraw,"maintenance services with medical supervised withdrawal after period of stabilization
+(q.a8c)"
+opioiddetox,detoxification from opioids of use with methadone or buprenorphine (q.a8c)
+opioiddlofe,detoxification from opioids of use with lofexidine or clonidine (q.a8c)
+opioidnal,relapse prevention with naltrexone (q.a8c)
+opioidoth,medication services other (q.a8c)
+noopioidmedsrvc,none of the above medication services (q.a8c)
+audtxmedelse,alcohol use disorder treatment but drugs may originate at another site (q.a9)
+audtxdis,alcohol use disorder treatment with disulfiram (q.a9)
+audtxnal,alcohol use disorder treatment with naltrexone (q.a9)
+audtxacam,alcohol use disorder treatment with acamprosate (q.a9)
+audtxfree,alcohol use disorder treatment without medication-assisted treatment (q.a9)
+audtxnone,does not treat alcohol use disorder (q.a9)
+audwnet,"alcohol use disorder medication source, prescribing entity in network (q.a9a)"
+audwbusrel,"alcohol use disorder medication source, referral relationship with prescribing entity
+(q.a9a)"
+audwperprov,"alcohol use disorder medication source, personal physician/health care provider
+(q.a9a)"
+onlyaud,serve only alcohol use disorder clients (q.a9b)
+sacounopioid,frequently uses substance use counseling for opioid use (q.a10)
+sacounothsub,frequently uses substance use counseling for other substances (q.a10)
+_12stepopioid,frequently uses 12-step facilitation for opioid use (q.a10)
+_12stepothsub,frequently uses 12-step facilitation for other substances (q.a10)
+briefopioid,frequently uses brief intervention for opioid use (q.a10)
+briefothsub,frequently uses brief intervention for other substances (q.a10)
+cogbtopioid,frequently uses cognitive behavior therapy for opioid use (q.a10)
+cogbtothsub,frequently uses cognitive behavior therapy for other substances (q.a10)
+conmgmtopioid,"frequently uses contingency management/motivational incentives for opioid use
+(q.a10)"
+conmgmtothsub,"frequently uses contingency management/motivational incentives for other
+substances (q.a10)"
+motivateopioid,frequently uses motivational interviewing for opioid use (q.a10)
+motivateothsub,frequently uses motivational interviewing for other substances (q.a10)
+traumacopioid,frequently uses trauma-related counseling for opioid use (q.a10)
+traumacothsub,frequently uses trauma-related counseling for other substances (q.a10)
+angermopioid,frequently uses anger management for opioid use (q.a10)
+angermothsub,frequently uses anger management for other substances (q.a10)
+matrixmopioid,frequently uses matrix model for opioid use (q.a10)
+matrixmothsub,frequently uses matrix model for other substances (q.a10)
+crvoucheropioid,frequently uses community reinforcement plus vouchers for opioid use (q.a10)
+crvoucherothsub,"frequently uses community reinforcement plus vouchers for other substances
+(q.a10)"
+relprevopioid,frequently uses relapse prevention for opioid use (q.a10)
+relprevothsub,frequently uses relapse prevention for other substances (q.a10)
+telemedopioid,frequently uses telemedicine/telehealth therapy for opioid use (q.a10)
+telemedothsub,frequently uses telemedicine/telehealth therapy for other substances (q.a10)
+apprchothopioid,frequently uses other treatment approach for opioid use (q.a10)
+apprchothothsub,frequently uses other treatment approach for other substances (q.a10)
+noapprchopioid,no clinical/therapeutic approaches for opioid use (q.a10)
+noapprchothsub,no clinical/therapeutic approaches for other substances (q.a10)
+dui_dwi,"program for clients driving under the influence/driving while intoxicated (dui/dwi)/other
+offenders (q.a11)"
+onlydui,"all substance use treatment for clients driving under the influence/driving while intoxicated
+(dui/dwi) (q.a11a)"
+marijuana,all substance use treatment services for marijuana (q.a12)
+stimulants,all substance use treatment services for stimulants (q.a12)
+othsub,all substance use treatment services for other substances (q.a12)
+signlang_su,substance use treatment in sign language (q.a13)
+lang_su,substance use treatment in language other than english (q.a14)
+langprov_su,"substance use treatment language provided by staff counselor/interpreter/both
+(q.a14a)"
+lang16_su,staff counselors provide substance use treatment in spanish (q.a14a1)
+lang_b_su,staff counselors provide substance use treatment in any other language (q.a14a2)
+lang1_su,substance use treatment in hopi (q.a14b)
+lang2_su,substance use treatment in lakota (q.a14b)
+lang3_su,substance use treatment in navajo (q.a14b)
+lang21_su,substance use treatment in ojibwa (q.a14b)
+lang4_su,substance use treatment in yupik (q.a14b)
+lang5_su,substance use treatment in other american indian/alaska native (q.a14b)
+lang6_su,substance use treatment in arabic (q.a14b)
+lang7_su,substance use treatment in chinese (q.a14b)
+lang8_su,substance use treatment in creole (q.a14b)
+lang24_su,substance use treatment in farsi (q.a14b)
+lang9_su,substance use treatment in french (q.a14b)
+lang10_su,substance use treatment in german (q.a14b)
+lang22_su,substance use treatment in greek (q.a14b)
+lang25_su,substance use treatment in hebrew (q.a14b)
+lang26_su,substance use treatment in hindi (q.a14b)
+lang11_su,substance use treatment in hmong (q.a14b)
+lang19_su,substance use treatment in italian (q.a14b)
+lang23_su,substance use treatment in japanese (q.a14b)
+lang12_su,substance use treatment in korean (q.a14b)
+lang13_su,substance use treatment in polish (q.a14b)
+lang14_su,substance use treatment in portuguese (q.a14b)
+lang15_su,substance use treatment in russian (q.a14b)
+lang20_su,substance use treatment in tagalog (q.a14b)
+lang17_su,substance use treatment in vietnamese (q.a14b)
+lang18_su,substance use treatment in other language (q.a14b)
+femalesrv,females served by this facility (q.a15)
+malesrv,males served by this facility (q.a15)
+femaleminyrs,females lowest age served (q.a15)
+femalenomin,females no minimum age served (q.a15)
+femalemaxyrs,females highest age served (q.a15)
+femalenomax,females no maximum age served (q.a15)
+maleminyrs,males lowest age served (q.a15)
+malenomin,males no minimum age served (q.a15)
+malemaxyrs,males highest age served (q.a15)
+malenomax,males no maximum age served (q.a15)
+srvc30,specific program/group for adolescents (q.a15a)
+srvc120,specific program/group for young adults (q.a15a)
+srvc34,specific program/group for adult women (q.a15a)
+srvc33,specific program/group for pregnant/postpartum women (q.a15a)
+srvc64,specific program/group for adult men (q.a15a)
+srvc63_su,specific program/group for seniors or older adults (q.a15a)
+srvc62_su,"specific program/group for lesbian, gay, bisexual, transgender, queer/questioning
+(lgbtq) (q.a15a)"
+srvc113_su,specific program/group for veterans (q.a15a)
+srvc114_su,specific program/group for active duty military (q.a15a)
+srvc115_su,specific program/group for members of military families (q.a15a)
+srvc61_su,specific program/group for criminal justice clients (q.a15a)
+srvc31_su,specific program/group for clients with co-occurring disorders (q.a15a)
+srvcpainsa,specific program/group for clients with co-occurring pain and substance use (q.a15a)
+srvc32_su,specific program/group for clients with hiv or aids (q.a15a)
+srvc121,specific program/group for clients who have experienced sexual abuse (q.a15a)
+srvc122_su,specific program/group for clients who have experienced domestic violence (q.a15a)
+srvc116_su,specific program/group for clients who have experienced trauma (q.a15a)
+srvc35_su,specific program/group for other groups (q.a15a)
+nospecgrp_su,none of the above are offered specifically tailored programs (q.a15a)
+earmark,"receive any federal, state, county, or local funds (q.a16)"
+revchk3,free treatment to all clients (q.a17)
+revchk1_su,substance use-accepts cash or self-payment (q.a17)
+revchk8_su,accepts medicare payments (q.a17)
+revchk5_su,accepts medicaid payments (q.a17)
+revchk10_su,accepts state financed health insurance (q.a17)
+revchk15_su,"accepts federal military insurance such as uniformed services health care program
+(tricare) (q.a17)"
+revchk2_su,accepts private health insurance (q.a17)
+revchk4_su,accepts samhsa funding/block grant (q.a17)
+revchk17_su,accepts indian health service (ihs)/tribal/urban (itu) funds (q.a17)
+revchk2a_su,accepts other payments (q.a17)
+hospital,located in/operated by hospital (q.a18)
+locs,hospital type (q.a18a)
+snf,provide skilled nursing facility (q.a19)
+loc5,"transitional, halfway or sober housing (q.a20)"
+licensed_su,licensed/certified by state substance use agency (q.a21)
+licenmh_su,licensed/certified by mental health department (q.a21)
+licenph_su,licensed/certified by state health department (q.a21)
+licenhos_su,licensed/certified by hospital authority (q.a21)
+jcaho_su,accredited by the joint commission (jc) (q.a21)
+carf_su,accredited by commission on accreditation of rehabilitation facilities (carf) (q.a21)
+ncqa,accredited national committee for quality assurance (ncqa) (q.a21)
+coa_su,accredited by council on accreditation (coa) (q.a21)
+hfap,accredited by healthcare facilities accreditation program (hfap) (q.a21)
+otp,accredited by samhsa certification for opioid treatment program (otp) (q.a21)
+dea,accredited by drug enforcement agency (dea) (q.a21)
+othstate_su,accredited by other federal/state/local agency (q.a21)
+nolicen_su,"not licensed, certified or accredited for substance use services (q.a21)"
+mhintake,offered mental health intake (q.b1)
+mhdiageval,offered mental health diagnostic evaluation (q.b1)
+mhreferral,offered mental health information and/or referral (q.b1)
+mentalhthserv,offered mental health treatment (q.b1)
+smisedsud_mh,"offered co-occurring serious mental illness (smi)/serious emotional disturbance (sed)
+and substance use disorder (sud) (q.b1)"
+treatmt_mh,offered substance use treatment (q.b1)
+adminserv,offered administrative or operational services for mental health treatment facilities (q.b1)
+settingip,24-hour hospital inpatient (q.b2)
+settingrc,24-hour residential (q.b2)
+settingdtph,partial hospitalization/day treatment (q.b2)
+settingop,outpatient (q.b2)
+facilitytype,facility type (q.b3)
+loc15_mh,either a solo or small group practice (q.b4)
+licclinic,licensed or accredited facility (q.b4a)
+asstlivnurshc,assisted living or nursing home care (q.b5)
+grphome,group homes (q.b5)
+clbhouseserv,clubhouse services (q.b5)
+shelter,emergency shelter (q.b5)
+devdis,care for individuals with developmental disability (q.b5)
+nosrvcs,none of these services (q.b5)
+treatpsychothrpy,facility provides individual psychotherapy (q.b6)
+treatfamthrpy,facility provides couples/family therapy (q.b6)
+treatgrpthrpy,facility provides group therapy (q.b6)
+treatcogthrpy,facility provides cognitive behavioral therapy (q.b6)
+treatdialthrpy,facility provides dialectical behavior therapy (q.b6)
+treatcogrem,facility provides cognitive remediation therapy (q.b6)
+treatdualmhsa,facility provides integrated mental health and substance use treatment (q.b6)
+treatactvtythrpy,facility provides activity therapy (q.b6)
+treatelectro,facility provides electroconvulsive therapy (q.b6)
+treattms,facility provides transcranial magnetic stimulation (tms) (q.b6)
+treatkit,facility provides ketamine infusion therapy (kit) (q.b6)
+treatemdr,facility provides eye movement desensitization and reprocessing (edmr) therapy (q.b6)
+treattelemedince,facility provides telemedicine/telehealth therapy (q.b6)
+treataims,facility provides abnormal involuntary movement scale (aims) test (q.b6)
+treatoth,facility provides other mental health treatment approach (q.b6)
+notreat,none of these mental health treatment modalities are offered (q.b6)
+antipsych,antipsychotics for the treatment of serious mental illness (smi) (q.b7)
+chlor_no,"chlorpromazine, not used at this facility (q.b7a)"
+chlor_oral,"chlorpromazine, oral (q.b7a)"
+chlor_inj,"chlorpromazine, injectable (q.b7a)"
+chlor_rec,"chlorpromazine, rectal (q.b7a)"
+chlor_dk,"chlorpromazine, do not know the mode of administration (q.b7a)"
+drope_no,"droperidol, not used at this facility (q.b7a)"
+drope_inj,"droperidol, injectable (q.b7a)"
+drope_dk,"droperidol, do not know the mode of administration (q.b7a)"
+fluph_no,"fluphenazine, not used at this facility (q.b7a)"
+fluph_oral,"fluphenazine, oral (q.b7a)"
+fluph_inj,"fluphenazine, injectable (q.b7a)"
+fluph_dk,"fluphenazine, do not know the mode of administration (q.b7a)"
+halop_no,"haloperidol, not used at this facility (q.b7a)"
+halop_oral,"haloperidol, oral (q.b7a)"
+halop_inj,"haloperidol, injectable (q.b7a)"
+halop_dk,"haloperidol, do not know the mode of administration (q.b7a)"
+loxap_no,"loxapine, not used at this facility (q.b7a)"
+loxap_oral,"loxapine, oral (q.b7a)"
+loxap_inj,"loxapine, injectable (q.b7a)"
+loxap_inh,"loxapine, inhalation (q.b7a)"
+loxap_dk,"loxapine, do not know the mode of administration (q.b7a)"
+perph_no,"perphenazine, not used at this facility (q.b7a)"
+perph_oral,"perphenazine, oral (q.b7a)"
+perph_inj,"perphenazine, injectable (q.b7a)"
+perph_dk,"perphenazine, do not know the mode of administration (q.b7a)"
+pimoz_no,"pimozide, not used at this facility (q.b7a)"
+pimoz_oral,"pimozide, oral (q.b7a)"
+pimoz_top,"pimozide, topical (q.b7a)"
+pimoz_dk,"pimozide, do not know the mode of administration (q.b7a)"
+proch_no,"prochlorperazine, not used at this facility (q.b7a)"
+proch_oral,"prochlorperazine, oral (q.b7a)"
+proch_inj,"prochlorperazine, injectable (q.b7a)"
+proch_rec,"prochlorperazine, rectal (q.b7a)"
+proch_dk,"prochlorperazine, do not know the mode of administration (q.b7a)"
+thiot_no,"thiothixene, not used at this facility (q.b7a)"
+thiot_oral,"thiothixene, oral (q.b7a)"
+thiot_inj,"thiothixene, injectable (q.b7a)"
+thiot_dk,"thiothixene, do not know the mode of administration (q.b7a)"
+thior_no,"thioridazine, not used at this facility (q.b7a)"
+thior_oral,"thioridazine, oral (q.b7a)"
+thior_dk,"thioridazine, do not know the mode of administration (q.b7a)"
+trifl_no,"trifluoperazine, not used at this facility (q.b7a)"
+trifl_oral,"trifluoperazine, oral (q.b7a)"
+trifl_inj,"trifluoperazine, injectable (q.b7a)"
+trifl_dk,"trifluoperazine, do not know the mode of administration (q.b7a)"
+fstgenoth_no,"other first-generation antipsychotics, not used at this facility (q.b7a)"
+fstgenoth_oral,"other first-generation antipsychotics, oral (q.b7a)"
+fstgenoth_inj,"other first-generation antipsychotics, injectable (q.b7a)"
+fstgenoth_lai,"other first-generation antipsychotics, long-acting injectable (q.b7a)"
+fstgenoth_rec,"other first-generation antipsychotics, rectal (q.b7a)"
+fstgenoth_top,"other first-generation antipsychotics, topical (q.b7a)"
+fstgenoth_inh,"other first-generation antipsychotics, inhalation (q.b7a)"
+fstgenoth_dk,"other first-generation antipsychotics, do not know the mode of administration (q.b7a)"
+aripi_no,"aripiprazole, not used at this facility (q.b7a)"
+aripi_oral,"aripiprazole, oral (q.b7a)"
+aripi_inj,"aripiprazole, injectable (q.b7a)"
+aripi_lai,"aripiprazole, long-acting injectable (q.b7a)"
+aripi_dk,"aripiprazole, do not know the mode of administration (q.b7a)"
+asena_no,"asenapine, not used at this facility (q.b7a)"
+asena_oral,"asenapine, oral (q.b7a)"
+asena_top,"asenapine, topical (q.b7a)"
+asena_dk,"asenapine, do not know the mode of administration (q.b7a)"
+brexp_no,"brexpiprazole, not used at this facility (q.b7a)"
+brexp_oral,"brexpiprazole, oral (q.b7a)"
+brexp_dk,"brexpiprazole, do not know the mode of administration (q.b7a)"
+carip_no,"cariprazine, not used at this facility (q.b7a)"
+carip_oral,"cariprazine, oral (q.b7a)"
+carip_dk,"cariprazine, do not know the mode of administration (q.b7a)"
+cloza_no,"clozapine, not used at this facility (q.b7a)"
+cloza_oral,"clozapine, oral (q.b7a)"
+cloza_dk,"clozapine, do not know the mode of administration (q.b7a)"
+ilope_no,"iioperidone, not used at this facility (q.b7a)"
+ilope_oral,"iioperidone, oral (q.b7a)"
+ilope_dk,"iioperidone, do not know the mode of administration (q.b7a)"
+luras_no,"lurasidone, not used at this facility (q.b7a)"
+luras_oral,"lurasidone, oral (q.b7a)"
+luras_dk,"lurasidone, do not know the mode of administration (q.b7a)"
+olanz_no,"olanzapine, not used at this facility (q.b7a)"
+olanz_oral,"olanzapine, oral (q.b7a)"
+olanz_inj,"olanzapine, injectable (q.b7a)"
+olanz_lai,"olanzapine, long-acting injectable (q.b7a)"
+olanz_dk,"olanzapine, do not know the mode of administration (q.b7a)"
+olanzflu_no,"olanzapine/fluoxetine combination, not used at this facility (q.b7a)"
+olanzflu_oral,"olanzapine/fluoxetine combination, oral (q.b7a)"
+olanzflu_dk,"olanzapine/fluoxetine combination, do not know the mode of administration (q.b7a)"
+palip_no,"paliperidone, not used at this facility (q.b7a)"
+palip_oral,"paliperidone, oral (q.b7a)"
+palip_inj,"paliperidone, injectable (q.b7a)"
+palip_lai,"paliperidone, long-acting injectable (q.b7a)"
+palip_dk,"paliperidone, do not know the mode of administration (q.b7a)"
+queti_no,"quetiapine, not used at this facility (q.b7a)"
+queti_oral,"quetiapine, oral (q.b7a)"
+queti_dk,"quetiapine, do not know the mode of administration (q.b7a)"
+rispe_no,"risperidone, not used at this facility (q.b7a)"
+rispe_oral,"risperidone, oral (q.b7a)"
+rispe_inj,"risperidone, injectable (q.b7a)"
+rispe_lai,"risperidone, long-acting injectable (q.b7a)"
+rispe_dk,"risperidone, do not know the mode of administration (q.b7a)"
+zipra_no,"ziprasidone, not used at this facility (q.b7a)"
+zipra_oral,"ziprasidone, oral (q.b7a)"
+zipra_inj,"ziprasidone, injectable (q.b7a)"
+zipra_dk,"ziprasidone, do not know the mode of administration (q.b7a)"
+secgen1oth_no,"other second-generation antipsychotics (a), not used at this facility (q.b7a)"
+secgen1oth_oral,"other second-generation antipsychotics (a), oral (q.b7a)"
+secgen1oth_inj,"other second-generation antipsychotics (a), injectable (q.b7a)"
+secgen1oth_lai,"other second-generation antipsychotics (a), long-acting injectable (q.b7a)"
+secgen1oth_rec,"other second-generation antipsychotics (a), rectal (q.b7a)"
+secgen1oth_top,"other second-generation antipsychotics (a), topical (q.b7a)"
+secgen1oth_dk,"other second-generation antipsychotics (a), do not know the mode of administration
+(q.b7a)"
+secgen2oth_no,"other second-generation antipsychotics (b), not used at this facility (q.b7a)"
+secgen2oth_oral,"other second-generation antipsychotics (b), oral (q.b7a)"
+secgen2oth_inj,"other second-generation antipsychotics (b), injectable (q.b7a)"
+secgen2oth_lai,"other second-generation antipsychotics (b), long-acting injectable (q.b7a)"
+secgen2oth_rec,"other second-generation antipsychotics (b), rectal (q.b7a)"
+secgen2oth_top,"other second-generation antipsychotics (b), topical (q.b7a)"
+secgen2oth_dk,"other second-generation antipsychotics (b), do not know the mode of administration
+(q.b7a)"
+secgen3oth_no,"other second-generation antipsychotics (c), not used at this facility (q.b7a)"
+secgen3oth_oral,"other second-generation antipsychotics (c), oral (q.b7a)"
+secgen3oth_inj,"other second-generation antipsychotics (c), injectable (q.b7a)"
+secgen3oth_lai,"other second-generation antipsychotics (c), long-acting injectable (q.b7a)"
+secgen3oth_rec,"other second-generation antipsychotics (c), rectal (q.b7a)"
+secgen3oth_top,"other second-generation antipsychotics (c), topical (q.b7a)"
+secgen3oth_dk,"other second-generation antipsychotics (c), do not know the mode of administration
+(q.b7a)"
+assertcomm,facility provides assertive community treatment (act) (q.b8)
+mhintcasemgmt,facility provides intensive case management (icm) (q.b8)
+mhcasemgmt,facility provides case management (cm) (q.b8)
+mhcourtordered,facility provides court-ordered treatment (q.b8)
+mhaot,facility provides assisted outpatient treatment (aot) (q.b8)
+mhchronic,facility provides chronic disease/illness management (cdm) (q.b8)
+illnessmgmt,facility provides illness management and recovery (imr) (q.b8)
+primarycare,facility provides integrated primary care services (q.b8)
+dietexercounsel,facility provides diet and exercise counseling (q.b8)
+fampsyched,facility provides family psychoeducation (q.b8)
+mheducation,facility provides education services (q.b8)
+mhhousing,facility provides housing services (q.b8)
+supphousing,facility provides supported housing (q.b8)
+mhpsychrehab,facility provides psychosocial rehabilitation services (q.b8)
+mhvocrehab,facility provides vocational rehabilitation services (q.b8)
+suppemploy,facility provides supported employment (q.b8)
+fostercare,facility provides therapeutic foster care (q.b8)
+mhlegal,facility provides legal advocacy (q.b8)
+mhemgcy,facility provides psychiatric emergency walk-in services (q.b8)
+mhsuicide,facility provides suicide prevention services (q.b8)
+mhconsumer,facility provides peer support services (q.b8)
+mhhbv,facility provides testing for hepatitis b (hbv) (q.b8)
+mhhcv,facility provides testing for hepatitis c (hcv) (q.b8)
+mhlab,facility provides laboratory testing (q.b8)
+mhmetsynmon,facility provides metabolic syndrome monitoring (q.b8)
+mhhiv,facility provides hiv testing (q.b8)
+mhstd,facility provides sexually transmitted disease (std) testing (q.b8)
+mhtb,facility provides tuberculosis (tb) screening (q.b8)
+mhtobaccouse,facility provides screening for tobacco use (q.b8)
+mhtobaccocess,facility provides smoking/vaping/tobacco cessation counseling (q.b8)
+mhnicotinerep,facility provides nicotine replacement therapy (q.b8)
+smokingcessation,facility provides non-nicotine smoking/tobacco cessation medications (q.b8)
+mhoth,facility provides other services (q.b8)
+mhnosvcs,facility provides none of these services and practices (q.b8)
+coocdetox,service provided detoxification (medical withdrawal) for co-occurring clients (q.b9)
+coocmataud,"service provided medication-assisted treatment (mat) for alcohol use disorder (aud)
+for co-occurring clients (q.b9)"
+coocmatoud,"service provided medication-assisted treatment (mat) for opioid use disorder (oud)
+for co-occurring clients (q.b9)"
+coocidvcnsl,service provided individual counseling for co-occurring clients (q.b9)
+coocgrpcnsl,service provided group counseling for co-occurring clients (q.b9)
+cooc12step,service provided 12-step groups for co-occurring clients (q.b9)
+cooccasemgmt,service provided co-occurring case management (q.b9)
+coocoth,"service provided, other for co-occurring clients (q.b9)"
+nocoocsrvcs,facility provides none of these co-occurring services (q.b9)
+yngchld,accept for treatment of young children (0-5) (q.b10)
+children,accept for treatment of children (6-12) (q.b10)
+adoles,accept for treatment of adolescents (13-17) (q.b10)
+youngadults,accept for treatment of young adults (18-25) (q.b10)
+adult,accept for treatment of adults (26-64) (q.b10)
+seniors,accept for treatment of older adults (65 or older) (q.b10)
+sed,specially designed program/group for children with serious emotional disturbance (sed) (q.b11)
+tayoungadults,specially designed program/group for young adults (q.b11)
+spmi,specially designed program/group for serious mental illness (smi) (q.b11)
+srvc63_mh,specially designed program/group for older adults (q.b11)
+alzhdementia,specially designed program/group for alzheimer or dementia (q.b11)
+srvc31_mh,specially designed program/group for co-occurring clients (q.b11)
+specgrpeating,specially designed program/group for eating disorders (q.b11)
+firsteppsych,specially designed program/group for first-episode psychosis (q.b11)
+srvc122_mh,specially designed program/group for domestic violence (q.b11)
+posttraum,specially designed program/group for post-traumatic stress disorder (ptsd) (q.b11)
+srvc116_mh,specially designed program/group for who has experienced trauma (q.b11)
+traumaticbrain,specially designed program/group for traumatic brain injury (q.b11)
+srvc113_mh,specially designed program/group for veterans (q.b11)
+srvc114_mh,specially designed program/group for active duty military (q.b11)
+srvc115_mh,specially designed program/group for members of military families (q.b11)
+srvc62_mh,"specially designed program/group for lesbian, gay, bisexual, transgender, or
+queer/questioning (lgbtq) clients (q.b11)"
+srvc61_mh,specially designed program/group for forensic clients (q.b11)
+srvc32_mh,specially designed program/group for hiv/aids (q.b11)
+srvc35_mh,specially designed program/group for other groups (q.b11)
+nospecgrp_mh,"no dedicated, exclusively designed programs or groups are offered (q.b11)"
+crisisteam2,crisis intervention treatment team offered by facility (q.b12)
+psychon,services for psychiatric emergencies onsite (q.b13)
+psychoff,mobile/off-site psychiatric crisis services (q.b14)
+signlang_mh,mental health treatment in sign language (q.b15)
+lang_mh,mental health treatment in language other than english (q.b16)
+langprov_mh,mental health treatment language provided by staff/interpreter/both (q.b16a)
+lang16_mh,do staff provide mental health treatment in spanish (q.b16a1)
+lang_b_mh,do staff provide mental health treatment in any other language (q.b16a2)
+lang1_mh,mental health treatment in hopi (q.b16b)
+lang2_mh,mental health treatment in lakota (q.b16b)
+lang3_mh,mental health treatment in navajo (q.b16b)
+lang21_mh,mental health treatment in ojibwa (q.b16b)
+lang4_mh,mental health treatment in yupik (q.b16b)
+lang5_mh,mental health treatment in other american indian/alaska native (q.b16b)
+lang6_mh,mental health treatment in arabic (q.b16b)
+lang7_mh,mental health treatment in any chinese language (q.b16b)
+lang8_mh,mental health treatment in creole (q.b16b)
+lang24_mh,mental health treatment in farsi (q.b16b)
+lang9_mh,mental health treatment in french (q.b16b)
+lang10_mh,mental health treatment in german (q.b16b)
+lang22_mh,mental health treatment in greek (q.b16b)
+lang25_mh,mental health treatment in hebrew (q.b16b)
+lang26_mh,mental health treatment in hindi (q.b16b)
+lang11_mh,mental health treatment in hmong (q.b16b)
+lang19_mh,mental health treatment in italian (q.b16b)
+lang23_mh,mental health treatment in japanese (q.b16b)
+lang12_mh,mental health treatment in korean (q.b16b)
+lang13_mh,mental health treatment in polish (q.b16b)
+lang14_mh,mental health treatment in portuguese (q.b16b)
+lang15_mh,mental health treatment in russian (q.b16b)
+lang20_mh,mental health treatment in tagalog (q.b16b)
+lang17_mh,mental health treatment in vietnamese (q.b16b)
+lang18_mh,mental health treatment in other language (q.b16b)
+conted,continuing education requirements for staff (q.b17)
+caserev,case review with supervisor (q.b17)
+qualrev,case review by a quality review committee (q.b17)
+outfup,client outcome follow-up after discharge (q.b17)
+cqip,continuous quality improvement processes (q.b17)
+satsur,periodic client satisfaction survey (q.b17)
+cppr,clinical provider peer review (cppr) (q.b17)
+rca,root cause analysis (rca) (q.b17)
+secnotused,staff have not used seclusion practices (q.b18)
+secchem,staff have used chemical seclusion practices (q.b18)
+secphys,staff have used physical seclusion practices (q.b18)
+restrntnotused,staff have not used restraint practices (q.b18)
+restrntchem,staff have used chemical restraint practices (q.b18)
+restrntphys,staff have used physical restraint practices (q.b18)
+adoptseclusion,facility has policies to minimize seclusion/restraint (q.b18a)
+revchk1_mh,accepts cash or self-payment (q.b19)
+revchk2_mh,accepts private health insurance (q.b19)
+revchk8_mh,accepts medicare (q.b19)
+revchk5_mh,accepts medicaid (q.b19)
+revchk10_mh,accepts state-financed health insurance (q.b19)
+fundsmha,accepts state mental health agency funds (q.b19)
+fundstatewelfare,accepts state welfare or child/family services agency funds (q.b19)
+fundstatejuv,accepts state corrections/juvenile justice agency funds (q.b19)
+fundstateeduc,accepts state education agency funds (q.b19)
+fundothstate,accepts other state government funds (q.b19)
+fundlocalgov,accepts county or local government funds (q.b19)
+fundcsbg,accepts community service block grants (q.b19)
+fundcmhg,accepts community mental health block grants (q.b19)
+fundfedgrant,accepts federal grants (q.b19)
+revchk15_mh,accepts federal military insurance (q.b19)
+fundva,accepts veterans affairs (va) funds (q.b19)
+revchk17_mh,accepts indian health service (ihs)/tribal/urban (itu) funds (q.b19)
+fundprivcomm,accepts private or community foundation funds (q.b19)
+revchk2a_mh,accepts other payments (q.b19)
+licenmh_mh,facility has licensing through state mental health authority (q.b20)
+licensed_mh,facility has licensing through state substance use agency (q.b20)
+licenph_mh,facility has licensing through state department of health (q.b20)
+licensedfcs,"facility has licensing through department of family and children services (dfcs)
+(q.b20)"
+licenhos_mh,facility has licensing through hospital licensing authority (q.b20)
+jcaho_mh,facility has licensing through the joint commission (jc) (q.b20)
+carf_mh,"facility has licensing through commission on accreditation of rehabilitation facilities
+(carf) (q.b20)"
+coa_mh,facility has licensing through council on accreditation (coa) (q.b20)
+cms,facility has licensing through centers for medicare and medicaid services (cms) (q.b20)
+othstate_mh,"facility has licensing through other national organization/federal/state/local agencies
+(q.b20)"
+nolicen_mh,"facility does not have licensing, certification, or accreditation from any of the listed
+organizations (q.b20)"
+fqhc,federally qualified health center (fqhc) (q.c1)
+ownershp,ownership (q.c2)
+fedown,federal government agency (q.c2a)
+relig,associated with religious/faith-based organizations (q.c3)
+smokingpolicy,facility smoking policy for clients (q.c4)
+vapingpolicy,facility vaping policy for clients (q.c5)
+feescale,uses sliding fee scale (q.c6)
+dirsfs,sliding fee scale included in online locator (q.c6a)
+payasst,offers treatment at no charge or minimal payment (q.c7)
+dirapa,treatment at no charge or minimal payment included in online locator (q.c7a)
+indrctry,list facility in directory (q.c8)
+pubstreet,publish the street address in locator/directory (q.c8a)
+pubmail,publish the mailing address in locator/directory (q.c8a)
+nopubaddr,do not publish street/mailing address in locator/directory (q.c8a)
+google,list facility in online services (q.c8b)
+m1network,part of an organization with multiple substance use or mental health sites (q.c9)
+othfac,"client counts for only this facility, this plus others, none (q.d1)"
+facnum,number of facilities in client count data (q.d2)
+not_unrolled_unable_su,unable to unroll su client/bed counts
+type4,"any patients received hospital inpatient substance use services, 3/31/2021 (q.d4)"
+t_cli1_o,"hospital inpatient clients, detoxification"
+t_cli1,"hospital inpatient clients, detoxification, unrolled (q.d4a)"
+t_cli2_o,"hospital inpatient clients, treated"
+t_cli2,"hospital inpatient clients, treated, unrolled (q.d4a)"
+t_clihi_o,total number of hospital inpatients
+t_clihi,"total number of hospital inpatients, unrolled (q.d4a)"
+h_age1,hospital inpatient clients under 18 years old (q.d4b)
+himetnum,total methadone inpatients (q.d4c)
+hibupnum,total buprenorphine inpatients (q.d4c)
+hivivnum,total naltrexone inpatients (q.d4c)
+hidisnum,total alcohol disulfiram inpatients (q.d4d)
+hinalnum,total alcohol naltrexone inpatients (q.d4d)
+hiacamnum,total alcohol acamprosate inpatients (q.d4d)
+hospbed_o,total beds designated-hospital inpatient
+hospbed,"total beds designated-hospital inpatient, unrolled (q.d4e)"
+type7,"any clients received residential non-hospital substance use services, 3/31/2021 (q.d5)"
+t_cli3_o,"residential clients, detoxification"
+t_cli3,"residential clients, detoxification, unrolled (q.d5a)"
+t_cli9_o,"residential clients, short-term treatment"
+t_cli9,"residential clients, short-term treatment, unrolled (q.d5a)"
+t_cli10_o,"residential clients, long-term treatment"
+t_cli10,"residential clients, long-term treatment, unrolled (q.d5a)"
+t_clirc_o,total number of residential clients
+t_clirc,"total number of residential clients, unrolled (q.d5a)"
+r_age1,residential clients under 18 years old (q.d5b)
+rcmetnum,total methadone residential clients (q.d5c)
+rcbupnum,total buprenorphine residential clients (q.d5c)
+rcvivnum,total naltrexone residential clients (q.d5c)
+rcdisnum,total alcohol disulfiram residential clients (q.d5d)
+rcnalnum,total alcohol naltrexone residential clients (q.d5d)
+rcacamnum,total alcohol acamprosate residential clients (q.d5d)
+resbed_o,total beds designated-residential clients
+resbed,"total beds designated-residential clients, unrolled (q.d5e)"
+type1,"any clients received outpatient substance use services, 3/31/2021 (q.d6)"
+t_cli7_o,"outpatient clients, detoxification"
+t_cli7,"outpatient clients, detoxification, unrolled (q.d6a)"
+t_climl_o,"outpatient clients, methadone maintained"
+t_climl,"outpatient clients, methadone maintained, unrolled (q.d6a)"
+t_cli8_o,"outpatient clients, day treatment/partial hospitalization"
+t_cli8,"outpatient clients, day treatment/partial hospitalization, unrolled (q.d6a)"
+t_cli6_o,"outpatient clients, intensive"
+t_cli6,"outpatient clients, intensive, unrolled (q.d6a)"
+t_cli5_o,"outpatient clients, regular outpatient care"
+t_cli5,"outpatient clients, regular outpatient care, unrolled (q.d6a)"
+t_cliop_o,total number of outpatient clients
+t_cliop,"total number of outpatient clients, unrolled (q.d6a)"
+o_age1,outpatient clients under 18 years old (q.d6b)
+opmetnum,total methadone outpatient (q.d6c)
+opbupnum,total buprenorphine outpatient (q.d6c)
+opvivnum,total naltrexone outpatient (q.d6c)
+opdisnum,total alcohol disulfiram outpatient clients (q.d6d)
+opnalnum,total alcohol naltrexone outpatient clients (q.d6d)
+opacamnum,total alcohol acamprosate outpatient clients (q.d6d)
+b_num,number of clients treated for both alcohol/drug use (q.d7)
+b_pct,percent of clients treated for both alcohol/drug use (q.d7)
+a_num,number of clients treated for only alcohol use (q.d7)
+a_pct,percent of clients treated for only alcohol use (q.d7)
+d_num,number of clients treated for only drug use (q.d7)
+d_pct,percent of clients treated for only drug use (q.d7)
+cod_pct_su_r1,percent of clients with mental health and substance use diagnosis (q.d8)
+totadmis_su,total number of admissions for substance use treatment (q.d9)
+t_cli11_o,total number of substance use clients
+t_cli11,"total number of substance use clients, unrolled"
+ipserv,"any patients received 24-hour hospital inpatient mental health services, 3/31/2021 (q.d10)"
+iptotal,total number of 24-hour hospital inpatients (q.d10a)
+u_iptotal,"total number of 24-hour hospital inpatients, unrolled"
+ipbeds,number of hospital inpatient beds set up/staffed at facility (q.d10b)
+u_ipbeds,"number of hospital inpatient beds set up/staffed at facility, unrolled"
+ipsextotm,total male clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipsexperm,percent male clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipsextotf,total female clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipsexperf,percent female clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipagetot017,total clients/patients 0-17 years at this 24-hour hospital inpatient facility (q.d10c)
+ipageper017,percent clients/patients 0-17 years at this 24-hour hospital inpatient facility (q.d10c)
+ipagetot1864,total clients/patients 18-64 years at this 24-hour hospital inpatient facility (q.d10c)
+ipageper1864,percent clients/patients 18-64 years at this 24-hour hospital inpatient facility (q.d10c)
+ipagetot65,total clients/patients 65 plus years at this 24-hour hospital inpatient facility (q.d10c)
+ipageper65,percent clients/patients 65 plus years at this 24-hour hospital inpatient facility (q.d10c)
+ipethtothisp,total hispanic clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipethperhisp,percent hispanic clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipethtotnonhisp,"total non-hispanic clients/patients at this 24-hour hospital inpatient facility
+(q.d10c)"
+ipethpernonhisp,"percent non-hispanic clients/patients at this 24-hour hospital inpatient facility
+(q.d10c)"
+ipethtotunk,"total unknown ethnicity clients/patients at this 24-hour hospital inpatient facility
+(q.d10c)"
+ipethperunk,"percent unknown ethnicity clients/patients at this 24-hour hospital inpatient facility
+(q.d10c)"
+ipracetotindian,"total american indian/alaska native clients/patients at this 24-hour hospital
+inpatient facility (q.d10c)"
+ipraceperindian,"percent american indian/alaska native clients/patients at this 24-hour hospital
+inpatient facility (q.d10c)"
+ipracetotasian,total asian clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipraceperasian,percent asian clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipracetotblk,total black clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipraceperblk,percent black clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipracetothawpac,"total native hawaiian/other pacific islander at this 24-hour hospital inpatient
+facility (q.d10c)"
+ipraceperhawpac,"percent native hawaiian/other pacific islander at this 24-hour hospital inpatient
+facility (q.d10c)"
+ipracetotwhit,total white clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipraceperwhit,percent white clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipracetotmr,total mixed-race clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipracepermr,percent mixed-race clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipracetotunk,total unknown race clients/patients at this 24-hour hospital inpatient facility (q.d10c)
+ipraceperunk,"percent unknown race clients/patients at this 24-hour hospital inpatient facility
+(q.d10c)"
+iplegaltotvol,"total clients/patients with voluntary legal status at this 24-hour hospital inpatient
+facility (q.d10c)"
+iplegalpervol,"percent clients/patients with voluntary legal status at this 24-hour hospital inpatient
+facility (q.d10c)"
+iplegaltotnonforen,"total clients/patients, involuntary (non-for) status at this 24-hour hospital
+inpatient facility (q.d10c)"
+iplegalpernonforen,"percent clients/patients, involuntary (non-for) status at this 24-hour hospital
+inpatient facility (q.d10c)"
+iplegaltotforen,"total clients/patients, involuntary (for) status at this 24-hour hospital inpatient
+facility (q.d10c)"
+iplegalperforen,"percent clients/patients, involuntary (for) status at this 24-hour hospital inpatient
+facility (q.d10c)"
+rcserv,"any clients received 24-hour residential mental health services, 3/31/2021 (q.d11)"
+rctotal,total number of 24-hour residential clients (q.d11a)
+u_rctotal,"total number of 24-hour residential clients, unrolled"
+rcbeds,number of residential beds set up/staffed at facility (q.d11b)
+u_rcbeds,"number of residential beds set up/staffed at facility, unrolled"
+rcsextotm,total male clients/patients at this 24-hour residential facility (q.d11c)
+rcsexperm,percent male clients/patients at this 24-hour residential facility (q.d11c)
+rcsextotf,total female clients/patients at this 24-hour residential facility (q.d11c)
+rcsexperf,percent female clients/patients at this 24-hour residential facility (q.d11c)
+rcagetot017,total clients/patients 0-17 years at this 24-hour residential facility (q.d11c)
+rcageper017,percent clients/patients 0-17 years at this 24-hour residential facility (q.d11c)
+rcagetot1864,total clients/patients 18-64 years at this 24-hour residential facility (q.d11c)
+rcageper1864,percent clients/patients 18-64 years at this 24-hour residential facility (q.d11c)
+rcagetot65,total clients/patients 65 plus years at this 24-hour residential facility (q.d11c)
+rcageper65,percent clients/patients 65 plus years at this 24-hour residential facility (q.d11c)
+rcethtothisp,total hispanic clients/patients at this 24-hour residential facility (q.d11c)
+rcethperhisp,percent hispanic clients/patients at this 24-hour residential facility (q.d11c)
+rcethtotnonhisp,total non-hispanic clients/patients at this 24-hour residential facility (q.d11c)
+rcethpernonhisp,percent non-hispanic clients/patients at this 24-hour residential facility (q.d11c)
+rcethtotunk,total unknown ethnicity clients/patients at this 24-hour residential facility (q.d11c)
+rcethperunk,percent unknown ethnicity clients/patients at this 24-hour residential facility (q.d11c)
+rcracetotindian,"total american indian/alaska native clients/patients at this 24-hour residential
+facility (q.d11c)"
+rcraceperindian,"percent american indian/alaska native clients/patients at this 24-hour residential
+facility (q.d11c)"
+rcracetotasian,total asian clients/patients at this 24-hour residential facility (q.d11c)
+rcraceperasian,percent asian clients/patients at this 24-hour residential facility (q.d11c)
+rcracetotblk,total black clients/patients at this 24-hour residential facility (q.d11c)
+rcraceperblk,percent black clients/patients at this 24-hour residential facility (q.d11c)
+rcracetothawpac,"total native hawaiian/other pacific islander clients/patients at this 24-hour
+residential facility (q.d11c)"
+rcraceperhawpac,"percent native hawaiian/other pacific islander clients/patients at this 24-hour
+residential facility (q.d11c)"
+rcracetotwhit,total white clients/patients at this 24-hour residential facility (q.d11c)
+rcraceperwhit,percent white clients/patients at this 24-hour residential facility (q.d11c)
+rcracetotmr,total mixed-race clients/patients at this 24-hour residential facility (q.d11c)
+rcracepermr,percent mixed-race clients/patients at this 24-hour residential facility (q.d11c)
+rcracetotunk,total unknown race clients/patients at this 24-hour residential facility (q.d11c)
+rcraceperunk,percent unknown race clients/patients at this 24-hour residential facility (q.d11c)
+rclegaltotvol,"total clients/patients with voluntary legal status at this 24-hour residential facility
+(q.d11c)"
+rclegalpervol,"percent clients/patients with voluntary legal status at this 24-hour residential facility
+(q.d11c)"
+rclegaltotnonforen,"total clients/patients, involuntary (non-for) status at this 24-hour residential
+facility (q.d11c)"
+rclegalpernonforen,"percent clients/patients, involuntary (non-for) status at this 24-hour
+residential facility (q.d11c)"
+rclegaltotforen,"total clients/patients, involuntary (for) status at this 24-hour residential facility
+(q.d11c)"
+rclegalperforen,"percent clients/patients, involuntary (for) status at this 24-hour residential facility
+(q.d11c)"
+opserv,"any clients received less than 24-hour mental health services, 3/31/2021 (q.d12)"
+optotal,total number of less than 24-hour clients (q.d12a)
+u_optotal,"total number of less than 24-hour clients, unrolled"
+opsextotm,total male clients/patients at this less than 24-hour facility (q.d12b)
+opsexperm,percent male clients/patients at this less than 24-hour facility (q.d12b)
+opsextotf,total female clients/patients at this less than 24-hour facility (q.d12b)
+opsexperf,percent female clients/patients at this less than 24-hour facility (q.d12b)
+opagetot017,total clients/patients 0-17 years at this less than 24-hour facility (q.d12b)
+opageper017,percent clients/patients 0-17 years at this less than 24-hour facility (q.d12b)
+opagetot1864,total clients/patients 18-64 years at this less than 24-hour facility (q.d12b)
+opageper1864,percent clients/patients 18-64 years at this less than 24-hour facility (q.d12b)
+opagetot65,total clients/patients 65 plus years at this less than 24-hour facility (q.d12b)
+opageper65,percent clients/patients 65 plus years at this less than 24-hour facility (q.d12b)
+opethtothisp,total hispanic clients/patients at this less than 24-hour facility (q.d12b)
+opethperhisp,percent hispanic clients/patients at this less than 24-hour facility (q.d12b)
+opethtotnonhisp,total non-hispanic clients/patients at this less than 24-hour facility (q.d12b)
+opethpernonhisp,percent non-hispanic clients/patients at this less than 24-hour facility (q.d12b)
+opethtotunk,total unknown ethnicity clients/patients at this less than 24-hour facility (q.d12b)
+opethperunk,percent unknown ethnicity clients/patients at this less than 24-hour facility (q.d12b)
+opracetotindian,"total american indian/alaska native clients/patients at this less than 24-hour
+facility (q.d12b)"
+opraceperindian,"percent american indian/alaska native clients/patients at this less than 24-hour
+facility (q.d12b)"
+opracetotasian,total asian clients/patients at this less than 24-hour facility (q.d12b)
+opraceperasian,percent asian clients/patients at this less than 24-hour facility (q.d12b)
+opracetotblk,total black clients/patients at this less than 24-hour facility (q.d12b)
+opraceperblk,percent black clients/patients at this less than 24-hour facility (q.d12b)
+opracetothawpac,"total native hawaiian/other pacific islander at this less than 24-hour facility
+(q.d12b)"
+opraceperhawpac,"percent native hawaiian/other pacific islander at this less than 24-hour facility
+(q.d12b)"
+opracetotwhit,total white clients/patients at this less than 24-hour facility (q.d12b)
+opraceperwhit,percent white clients/patients at this less than 24-hour facility (q.d12b)
+opracetotmr,total mixed-race clients/patients at this less than 24-hour facility (q.d12b)
+opracepermr,percent mixed-race clients/patients at this less than 24-hour facility (q.d12b)
+opracetotunk,total unknown race clients/patients at this less than 24-hour facility (q.d12b)
+opraceperunk,percent unknown race clients/patients at this less than 24-hour facility (q.d12b)
+oplegaltotvol,"total clients/patients with voluntary legal status at this less than 24-hour facility
+(q.d12b)"
+oplegalpervol,"percent clients/patients with voluntary legal status at this less than 24-hour facility
+(q.d12b)"
+oplegaltotnonforen,"total clients/patients, involuntary (non-for) status at this less than 24-hour
+facility (q.d12b)"
+oplegalpernonforen,"percent clients/patients, involuntary (non-for) status at this less than 24-hour
+facility (q.d12b)"
+oplegaltotforen,"total clients/patients, involuntary (for) status at this less than 24-hour facility
+(q.d12b)"
+oplegalperforen,"percent clients/patients, involuntary (for) status at this less than 24-hour facility
+(q.d12b)"
+cod_pct_mh_r1,"percent of clients/patients with co-occurring mental health and substance use
+disorders (q.d13)"
+totadmis_mh,number of mental health admissions in 12 months period (q.d14)
+percentva,percent of admissions that are veterans (q.d15)
+t_climh,total number of mental health clients
+vaebspi_su,offers evidence-based suicide prevention interventions (q.va1_su)
+variskscrn_su,offers suicide risk screening (q.va1_su)
+variskeval_su,offers suicide risk evaluation (q.va1_su)
+vanosuisrvc_su,none of the above are offered suicide-related services (q.va1_su)
+vacbtsp_su,uses cognitive therapy for suicide prevention (cbt-sp) (q.va2_su)
+vacbt_su,uses cognitive behavioral therapy (cbt) (q.va2_su)
+vadbt_su,uses dialectical behavior therapy (dbt) (q.va2_su)
+vapst_su,uses problem solving therapy (pst) (q.va2_su)
+vasftypln_su,uses safety planning/crisis response planning (q.va2_su)
+vaket_su,uses ketamine infusions (q.va2_su)
+valith_su,uses lithium treatment (q.va2_su)
+vacloz_su,uses clozapine treatment (q.va2_su)
+vacarcomm_su,uses caring communications (q.va2_su)
+vahome_su,uses home support (q.va2_su)
+vawhobic_su,uses world health organization-brief intervention and contact (who-bic) (q.va2_su)
+vagktrain_su,uses gate keeper training (q.va2_su)
+valethal_su,uses lethal means safety counseling (q.va2_su)
+vaebspioth_su,uses other evidence-based suicide prevention interventions (q.va2_su)
+vacssrsscrn_su,uses columbia-suicide severity rating scale (c-ssrs) screener (q.va3_su)
+vaphq9_su,uses patient health questionnaire (phq-9) item 9 (q.va3_su)
+vascrnoth_su,uses other standardized suicide screening tools (q.va3_su)
+vanoscrntls_su,none of the above standardized suicide screening tools (q.va3_su)
+vacssrseval_su,uses columbia-suicide severity rating scale (c-ssrs) (q.va4_su)
+vamini_su,uses the mini international neuropsychiatric interview (mini) (q.va4_su)
+vacsre_su,uses va comprehensive suicide risk evaluation (csre) (q.va4_su)
+vasafet_su,uses suicide assessment five-step evaluation and triage (safe-t) (q.va4_su)
+vaevaloth_su,uses other standardized suicide evaluation tools (q.va4_su)
+vanoevaltls_su,none of the above standardized suicide evaluation tools (q.va4_su)
+vahighriskhi_su,hospital inpatients identified as high risk of suicide (q.va5_su)
+vahighriskrc_su,residential clients identified as high risk of suicide (q.va6_su)
+vahighriskop_su,outpatient clients identified as high risk of suicide (q.va7_su)
+vastndrd,standardized process for referring clients based on treatment plan (q.va1_mh)
+vafllwup,follow-up of clients of mental health care with suicidal thoughts/behavior (q.va2_mh)
+valmst_mh,offers lethal means safety training (q.va3_mh)
+vagunlocks_mh,offers free gun locks (q.va3_mh)
+vaspcow_mh,offers community outreach of workshops (q.va3_mh)
+vanosuiprev_mh,none of these suicide prevention services (q.va3_mh)
+vabegin_mh,staff are trained when they begin working (q.va4_mh)
+vatrainreg_mh,trainings are held at regular intervals (q.va4_mh)
+vanotrain_mh,staff not trained on suicide prevention strategies (q.va4_mh)
+varskprogind_mh,"suicide risk screening program, indicated (q.va5_mh)"
+varskprogsel_mh,"suicide risk screening program, selected (q.va5_mh)"
+varskproguniv_mh,"suicide risk screening program, universal (q.va5_mh)"
+vanorskprog_mh,no suicide risk screening program (q.va5_mh)
+vawarnsign,identifies warning signs for suicide and violence (q.va6_mh)
+vaassessrisk,assesses each client level of risk for suicide (q.va7_mh)
+vamaintain,maintains a list of clients who are high risk for suicide (q.va8_mh)
+vafuapptmssd,process for ensuring high risk for suicide clients are followed up with (q.va8a_mh)
+vaspc_mh,full-time suicide prevention coordinators (spcs) employed at this facility (q.va9_mh)
+vacaremgr_mh,full-time care managers employed at this facility (q.va9_mh)
+vaprogsupp_mh,full-time program support assistants employed at this facility (q.va9_mh)
+vahighriskhi_mh,hospital inpatients identified as high risk of suicide (q.va10_mh)
+vahighriskrc_mh,residential clients identified as high risk of suicide (q.va11_mh)
+vahighriskop_mh,outpatient clients identified as high risk of suicide (q.va12_mh)
+tsu21_su,inclusion/exclusion flag for substance use report
+tsu21_mh,inclusion/exclusion flag for mental health report

@@ -1,0 +1,1514 @@
+Variable,Description
+acceli42,pers eligible for access supplement-r4/2
+actdty31,military full-time active duty - r3/1
+actdty42,military full-time active duty - r4/2
+actdty53,military full-time active duty - r5/3
+actlim31,any limitation work/housewrk/schl-rd 3/1
+adacls42,saq 4wks:accmp less b/c phy prbs vr-12
+adage42,saq: survey age
+adblds42,saq 12 mths: at home blood stool test
+adbmi42,saq: adult body mass index (>17)-rd 4/2
+adbndn42,saq: bone density scan
+adbpck42,saq 24 mths: dr check blood pressure
+adbrst42,saq: have brst cancer\brst removed
+adbrtc42,saq 12 mths: birth control counseling
+adchlc42,saq 5 yrs: dr check cholesterol
+adclim42,saq: hlth limits climbing stairs vr-12
+adclns42,saq 10 yrs: had colonoscopy
+adcmpm42,saq: date completed - month
+adcmpy42,saq: date completed - year
+adcoln42,saq: had colon cancer/colon removed
+addaya42,saq: hlth limits mod activities vr-12
+addprs42,saq 2 wks: felt down/depressed/hopeless
+addscu42,saq: discuss aspirin preventive use
+adefrt42,saq 30 days: how oftn everythng an effort
+ademls42,saq 4wks: accmp less b/c mnt prbs vr-12
+adengy42,saq 4wks: had a lot of energy vr-12
+adflst42,saq 12 mths: flu vaccination
+adgenh42,saq: health in general vr-12
+adhdaddx,adhd/add diagnosis (5-17)
+adhdaged,age of diagnosis-adhd/add
+adhope42,saq 30 days: how often felt hopeless
+adintr42,saq 2 wks: little interest in things
+adkalc42,saq 12 mths: asked alcohol consumption
+adlang42,saq: language of saq interview
+adlhlp31,adl screener - rd 3/1
+admdvt42,saq: last time dr visit
+admmgr42,saq 2 yrs: had mammogram
+admood42,saq 12 mths: dr ask anxious/deprssed
+admwcf42,saq 4wks:work limt b/c mnt probs vr-12
+adnerv42,saq 30 days: how often felt nervous
+adnoap42,saq: can't take asprin for med reason
+adoftb42,saq 12 mths: how often use tobacco
+adostp42,saq: dx with osteoporosis
+adpain42,saq 4wks: pain limits normal work vr-12
+adpap42,saq 5 yrs: had pap smear test
+adpapg42,saq: age at last pap smear test
+adpcfl42,saq 4wks: felt calm/peaceful vr-12
+adpneu42,saq: ever had pneumonia shot
+adpros42,saq: had prostate cancer
+adprox42,saq: relationship of proxy to adult
+adprst42,saq 4wks: felt downhearted/depr vr-12
+adpsag42,saq: age last psa test
+adqthp42,saq 12 mths: dr advs oth way quit tobac
+adqtmd42,saq 12 mths: dr advs meds to quit tobac
+adqttb42,saq 12 mths: did dr advise quit tobacco
+adrest42,saq 30 days: how often felt restless
+adrnk442,saq 12 mths: had 4+ drinks per day
+adrnk542,saq 12 mths: had 5+ drinks per day
+adsad42,saq 30 days: how often felt sad
+adsex42,saq: survey gender
+adsgmd42,saq 5 yrs: had sigmoidoscopy
+adshng42,saq: ever had shingles vaccine
+adsoca42,saq 4wks: hlth stopped soc activ vr-12
+adstal42,saq: 12 mths: advised to stop alcohol
+adtbac42,saq 12 mths: did dr ask about tobacco
+adutrm42,saq: had hystrctmy/crvcl cancer
+adwghd42,saq 12 mths: weighed by professional
+adwklm42,saq 4wks:work limt b/c phy probs vr-12
+adwrth42,saq 30 days: how often felt worthless
+adwtad42,saq 12 mths: weight management advice
+afrdca42,could not afford med care-r4/2
+afrddn42,could not afford dental care-r4/2
+afrdpm42,could not afford pmed care-r4/2
+afthou42,how diff contact usc aft hours-r4/2
+age18x,age as of 12/31/18 (edited/imputed)
+age31x,age - r3/1 (edited/imputed)
+age42x,age - r4/2 (edited/imputed)
+age53x,age - r5/3 (edited/imputed)
+agelast,person's age last time eligible
+aidhlp31,used assistive devices - rd 3/1
+aliimp18,alimony income imputation flag
+alimp18x,person's alimony income
+angiaged,age of diagnosis-angina
+angidx,angina diagnosis (>17)
+anylmi18,"any limitation in p22r3,4/p23r1,2"
+arthaged,age of diagnosis-arthritis
+arthdx,arthritis diagnosis (>17)
+arthtype,type of arthritis diagnosed (>17)
+asacut31,"used acute prescribed inhaler last 3 mos -
+rd 3/1"
+asatak31,asthma attack last 12 mos- rd 3/1
+asdaly31,now take prev daily asthma meds - rd 3/1
+asevfl31,ever used peak flow meter - rd 3/1
+asianp42,is provider asian-r4/2
+asmrcn31,"used >3 acute canstrs prescribed inh last 3
+mos - rd 3/1"
+aspkfl31,have peak flow meter at home - rd 3/1
+asprev31,ever used prev daily asthma meds - rd 3/1
+asstil31,does person still have asthma - rd 3/1
+asthaged,age of diagnosis-asthma
+asthdx,asthma diagnosis
+asthep31,when was last episode of asthma - rd 3/1
+aswnfl31,when last used peak flow meter - rd 3/1
+begrfm31,r3/1 reference period begin date: month
+begrfm42,r4/2 reference period begin date: month
+begrfm53,r5/3 reference period begin date: month
+begrfy31,r3/1 reference period begin date: year
+begrfy42,r4/2 reference period begin date: year
+begrfy53,r5/3 reference period begin date: year
+bendif31,difficulty bending/stooping - rd 3/1
+blckpr42,is provider black/african amer-r4/2
+boost42,dr advise booster seat (40<wt<=80)-r4/2
+bornusa,person born in the us
+bpmldx,mult diag high blood press (>17)
+bsnty31,"sole prop, partner, corp, rd 3/1 cmj"
+bsnty31h,"sol prop, prtnr, corp, rd 3/1 cmj (imp)"
+bsnty42,"sole prop, partner, corp, rd 4/2 cmj"
+bsnty42h,"sol prop, prtnr, corp, rd 4/2 cmj (imp)"
+bsnty53,"sole prop, partner, corp, rd 5/3 cmj"
+bsnty53h,"sol prop, prtnr, corp, rd 5/3 cmj (imp)"
+busimp18,business income imputation flag
+busnp18x,person's business income
+cabladdr,cancer diagnosed - bladder (>17)
+cabreast,cancer diagnosed - breast (>17)
+cacervix,cancer diagnosed - cervical (>17)
+cacolon,cancer diagnosed - colon (>17)
+calung,cancer diagnosed - lung (>17)
+calymph,"cancer diagnosed - lymphoma (non-
+hodgkin's) (>17)"
+camelano,cancer diagnosed - skin melanoma (>17)
+cancerdx,cancer diagnosis (>17)
+caother,cancer diagnosed - other (>17)
+caprosta,cancer diagnosed - prostate (>17)
+cashp18x,person's other regular cash contribution
+caskindk,cancer diagnosed-skin-unknown type (>17)
+caskinnm,cancer diagnosed - skin-nonmelano (>17)
+cauterus,cancer diagnosed - uterine (>17)
+chbmix42,child's body mass index (6-17)-r4/2
+chbron31,chronc bronchits last 12 mths (>17)-r3/1
+chcoun42,cshcn:child needs counseling (0-17)-r4/2
+chdaged,age of diagnosis-coronary heart disease
+chddx,coronary hrt disease diag (>17)
+chempb42,cshcn:couns prob last 12+mos (0-17)-r4/2
+chgj3142,changed job between rd 3/1 and rd 4/2
+chgj4253,changed job between rd 4/2 and rd 5/3
+chldp18x,person's child support
+chlico42,cshcn:limit cond last 12+mos (0-17)-r4/2
+chlihb42,cshcn:limt for hlth/behv cond(0-17)-r4/2
+chlimi42,cshcn:limited in any way (0-17)-r4/2
+chlimp18,child support imputation flag
+choic31,choice of health plans at rd 3/1 cmj
+choic42,choice of health plans at rd 4/2 cmj
+choic53,choice of health plans at rd 5/3 cmj
+cholaged,age of diagnosis-high cholesterol
+choldx,high cholesterol diagnosis (>17)
+chpmcn42,cshcn:pmed cond last 12+ mos (0-17)-r4/2
+chpmed42,cshcn:child needs prescrb med(0-17)-r4/2
+chpmhb42,cshcn:pmed for hlth/behv cond(0-17)-r4/2
+chserv42,cshcn:chld needs med&oth serv(0-17)-r4/2
+chsrcn42,cshcn:serv cond last 12+ mos (0-17)-r4/2
+chsrhb42,cshcn:serv for hlth/behv cond(0-17)-r4/2
+chthco42,cshcn:ther cond last 12+ mos (0-17)-r4/2
+chther42,cshcn:chld needs spec therapy(0-17)-r4/2
+chthhb42,cshcn:spec ther for hlth+cond(0-17)-r4/2
+cmjhld31,hlth insur held from rd 3/1 cmj (prpl)
+cmjhld42,hlth insur held from rd 4/2 cmj (prpl)
+cmjhld53,hlth insur held from rd 5/3 cmj (prpl)
+coglim31,cognitive limitations - rd 3/1
+cpsfamid,cpsfamid
+crfmpy42,family med bills being paid over time
+cshcn42,cshcn:child w/spec hc needs (0-17)-r4/2
+cshimp18,cash contribution imputation flag
+dapid31x,pid of person's dad - rd 3/1
+dapid42x,pid of person's dad - rd 4/2
+dapid53x,pid of person's dad - rd 5/3
+dcselig,dcs: eligibility status for dcs
+ddnwrk18,# days missed work due to ill/inj 2018
+decide42,prov asks pers to help decide-r4/2
+dentin31,dental insurance - any time in rd 3/1
+dentin42,dental insurance - any time in rd 4/2
+dentin53,dental insurance - any time in rd 5/3
+dfcog42,serious cognitive difficulties-rd 4/2
+dfdrsb42,difficulty dressing/bathing-rd 4/2
+dfernd42,difficulty doing errands alone-rd 4/2
+dfhear42,serious difficulty hearing-rd 4/2
+dfsee42,serious difficulty see w/glasses-rd 4/2
+dfwlkc42,serious difculty wlk/climb stairs-rd 4/2
+diabaged,age of diagnosis-diabetes
+diabdx_m18,diabetes diagnosis
+diabw18f,final diabetes care supplement weight
+diffwg31,persons wages different this rd 3/1 at cmj
+diffwg42,persons wages different this rd 4/2 at cmj
+diffwg53,persons wages different this rd 5/3 at cmj
+disvw31x,disavowed health ins at rd 3/1 cmj (ed)
+disvw42x,disavowed health ins at rd 4/2 cmj (ed)
+disvw53x,disavowed health ins at rd 5/3 cmj (ed)
+divdp18x,person's dividend income
+divimp18,dividend income imputation flag
+dlayca42,delay med care for cost-r4/2
+dlaydn42,delay getting dental for cost-r4/2
+dlaypm42,delay getting pmed for cost-r4/2
+dntins18,dentl ins-any time in r5/r3 til 12/31/18
+dntins31,dental ins - any time in rd 3/1 in 2018
+dobmm,date of birth: month
+dobyy,date of birth: year
+dsa1c53,dcs: times tested for a-one-c in 2018
+dscb1753,dcs: blood cholesterol checked bef 2017
+dscgrp53,dcs: learned care by taking group class
+dsch1753,dcs: blood cholesterol checked in 2017
+dsch1853,dcs: blood cholesterol checked in 2018
+dsch1953,dcs: blood cholesterol checked in 2019
+dschnv53,dcs: never had blood cholesterol checked
+dscint53,dcs: learned care from reading internet
+dscnpc53,dcs: learned care from other provider
+dsconf53,dcs: confident taking care of diabetes
+dscpcp53,dcs: learned care from primary care prov
+dscphn53,dcs: learn care from phone call w/ prov
+dsdia53,dcs: diabetes diagnosis by health prof
+dsdiet53,dcs: treat diabetes w/diet modification
+dseb1753,dcs: dilated eye exam before 2017
+dsey1753,dcs: dilated eye exam in 2017
+dsey1853,dcs: dilated eye exam in 2018
+dsey1953,dcs: dilated eye exam in 2019
+dseynv53,dcs: never had dilated eye exam
+dseypr53,dcs: has diabetes caused eye probs
+dsfb1753,dcs: had feet checked before 2017
+dsfl1753,dcs: got flu vaccination in 2017
+dsfl1853,dcs: got flu vaccination in 2018
+dsfl1953,dcs: got flu vaccination in 2019
+dsflnv53,dcs: never got flu vaccination
+dsft1753,dcs: had feet checked during 2017
+dsft1853,dcs: had feet checked during 2018
+dsft1953,dcs: had feet checked during 2019
+dsftnv53,dcs: never had feet checked
+dsinsu53,dcs: treat diabetes w/insulin injections
+dskidn53,dcs: has diabetes caused kidney problems
+dsmed53,dcs: treat diabetes w/meds by mouth
+dsprx53,dcs: was respondent a proxy
+dsvb1753,dcs: got flu vaccination before 2017
+duid,panel # + encrypted du identifier
+dupersid,person id (duid + pid)
+dvtexp18,total dental care exp 18
+dvtmcd18,all dental care - medicaid amt 18
+dvtmcr18,all dental care - medicare amt 18
+dvtofd18,all dental care - other fedrl amt 18
+dvtopr18,all dental care - oth private amt 18
+dvtopu18,all dental care - oth public amt 18
+dvtosr18,all dent care-ot unclass srce amt 18
+dvtot18,# dental care visits 2018
+dvtoth18,all dental care - oth combined amt 18
+dvtprv18,all dental care - private ins amt 18
+dvtptr18,all dental care - prv & tri amt 18
+dvtslf18,all dental care - self/family amt 18
+dvtstl18,all dental care - oth st/local amt 18
+dvttch18,total dental care visit charges 18
+dvttri18,all dental care - tricare amt 18
+dvtva18,all dental care - va/champva amt 18
+dvtwcp18,all dental care - workers comp amt 18
+eathlt42,dr advise eat healthy (2-17)-r4/2
+educyr,years of educ when first entered meps
+elgrnd18,eligibility status as of 12/31/18
+elgrnd31,eligibility - r3/1
+elgrnd42,eligibility - r4/2
+elgrnd53,eligibility - r5/3
+emphaged,age of diagnosis-emphysema
+emphdx,emphysema diagnosis (>17)
+empst31,employment status rd 3/1
+empst31h,employment status rd 3/1 (imp)
+empst42,employment status rd 4/2
+empst42h,employment status rd 4/2 (imp)
+empst53,employment status rd 5/3
+empst53h,employment status rd 5/3 (imp)
+endrfm18,2018 reference period end date: month
+endrfm31,r3/1 reference period end date: month
+endrfm42,r4/2 reference period end date: month
+endrfm53,r5/3 reference period end date: month
+endrfy18,2018 reference period end date: year
+endrfy31,r3/1 reference period end date: year
+endrfy42,r4/2 reference period end date: year
+endrfy53,r5/3 reference period end date: year
+erdexp18,total emergency room dr exp 18
+erdmcd18,er-medicaid amt - dr 18
+erdmcr18,er-medicare amt - dr 18
+erdofd18,er-other fed amt - dr 18
+erdopr18,er - other private amt - dr 18
+erdopu18,er - other public amt - dr 18
+erdosr18,er-oth unclass srce amt - dr 18
+erdoth18,er-oth combined amt - dr 18
+erdprv18,er-private ins amt - dr 18
+erdptr18,er-prv & tri amt - dr 18
+erdslf18,er-self/family amt - dr 18
+erdstl18,er-oth st/local amt - dr 18
+erdtch18,er doctor visit charges 18
+erdtri18,er-tricare amt - dr 18
+erdva18,er-va/champva amt - dr 18
+erdwcp18,er-workers comp amt - dr 18
+erfexp18,total er facility exp 18
+erfmcd18,er-medicaid amt - fac 18
+erfmcr18,er-medicare amt - fac 18
+erfofd18,er-other federal amt - fac 18
+erfopr18,er-other private amt - fac 18
+erfopu18,er-other public amt - fac 18
+erfosr18,er-oth unclass srce amt - fac 18
+erfoth18,er-oth combined amt - fac 18
+erfprv18,er-private ins amt - fac 18
+erfptr18,er-prv & tri amt - fac 18
+erfslf18,er-self/family amt - fac 18
+erfstl18,er-oth st/local amt - fac 18
+erftch18,er facility visit charges 18
+erftri18,er-tricare amt - fac 18
+erfva18,er-va/champva amt - fac 18
+erfwcp18,er-workers comp amt - fac 18
+ertexp18,total er facility + dr exp 18
+ertmcd18,er-medicaid amt-(fac+dr) 18
+ertmcr18,er-medicare amt-(fac+dr) 18
+ertofd18,er-other fed amt-(fac+dr) 18
+ertopr18,er-oth private amt-(fac+dr) 18
+ertopu18,er-oth public amt-(fac+dr) 18
+ertosr18,er-oth unclass srce amt-(fac+dr) 18
+ertot18,# emergency room visits 2018
+ertoth18,er -oth combined amt (fac+dr) 18
+ertprv18,er-priv ins amt-(fac+dr) 18
+ertptr18,er-prv & tri amt (fac+dr) 18
+ertslf18,er-self/family amt-(fac+dr) 18
+ertstl18,er-oth st/local amt-(fac+dr) 18
+erttch18,er facility + dr visit charges 18
+erttri18,er-tricare amt-(fac+dr) 18
+ertva18,er-va/champva amt-(fac+dr) 18
+ertwcp18,er-workers comp amt-(fac+dr) 18
+evretire,person has ever retired
+evrwrk,ever wrkd for pay in life as of 12/31/18
+explop42,prov explns options to pers-r4/2
+famid18,family id (student merged in) - 12/31/18
+famid31,family id (student merged in) - r3/1
+famid42,family id (student merged in) - r4/2
+famid53,family id (student merged in) - r5/3
+famidyr,annual family identifier
+faminc18,family's total income
+famrfpyr,reference person of annualized family
+fams1231,family size of responding 12/31 family
+famsze18,ru size including student as of 12/31/18
+famsze31,ru size including students - r3/1
+famsze42,ru size including students - r4/2
+famsze53,ru size including students - r5/3
+famszeyr,size of responding annualized family
+famwt18c,pov adj family wgt-cps fam on 12/31/18
+famwt18f,"final family weight, 2018"
+fcrp1231,ref person of 12/31 cps family
+fcsz1231,fam size responding 12/31 cps family
+filedr18,has person filed a fed income tax return
+filer18,primary or secondary filer
+flstat18,person's filing status
+fmrs1231,mvapcun53 er of responding 12/31 family
+fngrdf31,difficulty using fingers to grasp-rd 3/1
+foodmn18,number of months food stamps purchased
+foodst18,did anyone purchase food stamps
+foodvl18,monthly value of food stamps
+fsagt31,anyone in ru have fsa - r3/1
+ftstu18x,student status if ages 17-23 - 12/31/18
+ftstu31x,student status if ages 17-23 - r3/1
+ftstu42x,student status if ages 17-23 - r4/2
+ftstu53x,student status if ages 17-23 - r5/3
+gendrp42,is provider male or female-r4/2
+govaat18,cv oth pub-any tme in r5/3 til 12/31/18
+govaat31,cov by other public-any time in r3/1
+govaat42,cov by other public-any time in r4/2
+govaat53,cov by other public-any time in r5/3
+govbat18,cov oth pb hmo-any tm r5/3 til 12/31/18
+govbat31,cov by oth pub hmo-any time in r3/1
+govbat42,cov by oth pub hmo-any time in r4/2
+govbat53,cov by oth pub hmo-any time in r5/3
+govcat18,cv oth pub pays prem- r5/3 til 12/31/18
+govcat31,cv by oth pub pays prem-any time in r3/1
+govcat42,cv by oth pub pays prem-any time in r4/2
+govcat53,cv by oth pub pays prem-any time in r5/3
+govta18,cov by other public cov - 12/31/18
+govta31,cov by other public cov - r3/1 int dt
+govta42,cov by other public cov - r4/2 int dt
+govta53,cov by other public cov 12-31/r3 int dt
+govtb18,cov by oth pub hmo - 12/31/18
+govtb31,cov by oth pub hmo - r3/1 int dt
+govtb42,cov by oth pub hmo - r4/2 int dt
+govtb53,cov by oth pub hmo 12-31/r3 int dt
+govtc18,cov by oth pub pays prem - 12/31/18
+govtc31,cov by oth pub pays prem - r3/1 int dt
+govtc42,cov by oth pub pays prem - r4/2 int dt
+govtc53,cov by oth pub pays prem 12-31/r3 int dt
+gvaap18,cov by other public coverage in apr18
+gvaau18,cov by other public coverage in aug18
+gvade18,cov by other public coverage in dec18
+gvaev18,ever have other public during 2018
+gvafe18,cov by other public coverage in feb18
+gvaja18,cov by other public coverage in jan18
+gvajl18,cov by other public coverage in jul18
+gvaju18,cov by other public coverage in jun18
+gvama18,cov by other public coverage in mar18
+gvamy18,cov by other public coverage in may18
+gvano18,cov by other public coverage in nov18
+gvaoc18,cov by other public coverage in oct18
+gvase18,cov by other public coverage in sep18
+gvbap18,cov by other public hmo in apr18
+gvbau18,cov by other public hmo in aug18
+gvbde18,cov by other public hmo in dec18
+gvbev18,ever have other public hmo during 2018
+gvbfe18,cov by other public hmo in feb18
+gvbja18,cov by other public hmo in jan18
+gvbjl18,cov by other public hmo in jul18
+gvbju18,cov by other public hmo in jun18
+gvbma18,cov by other public hmo in mar18
+gvbmy18,cov by other public hmo in may18
+gvbno18,cov by other public hmo in nov18
+gvboc18,cov by other public hmo in oct18
+gvbse18,cov by other public hmo in sep18
+gvcap18,cov by other public pays prem in apr18
+gvcau18,cov by other public pays prem in aug18
+gvcde18,cov by other public pays prem in dec18
+gvcev18,ever have oth pub pays prem during 2018
+gvcfe18,cov by other public pays prem in feb18
+gvcja18,cov by other public pays prem in jan18
+gvcjl18,cov by other public pays prem in jul18
+gvcju18,cov by other public pays prem in jun18
+gvcma18,cov by other public pays prem in mar18
+gvcmy18,cov by other public pays prem in may18
+gvcno18,cov by other public pays prem in nov18
+gvcoc18,cov by other public pays prem in oct18
+gvcse18,cov by other public pays prem in sep18
+hasfsa31,person is fsa holder - r3/1
+haveus42,does person have usc provider-r4/2
+held31x,health insur held from rd 3/1 cmj (ed)
+held42x,health insur held from rd 4/2 cmj (ed)
+held53x,health insur held from rd 5/3 cmj (ed)
+helmet42,dr advise bike helmet (2-17)-r4/2
+hhaexp18,total home health agency exp 18
+hhagd18,# agency home health provider days 2018
+hhamcd18,home hlth agency - medicaid amt 18
+hhamcr18,home hlth agency - medicare amt 18
+hhaofd18,home hlth agency - other fed amt 18
+hhaopr18,home hlth agency - oth private amt 18
+hhaopu18,home hlth agency - oth public amt 18
+hhaosr18,h hlth agency - ot unclass srce amt 18
+hhaoth18,home hlth agency - oth combined amt 18
+hhaprv18,home hlth agency - private ins amt 18
+hhaptr18,home hlth agency - prv & tri amt 18
+hhaslf18,home hlth agency - self/family amt 18
+hhastl18,home hlth agency-othr st/local amt 18
+hhatch18,home health agency visit charges 18
+hhatri18,home hlth agency-tricare amt 18
+hhava18,home hlth agency-va/champva amt 18
+hhawcp18,home hlth agency - workers comp amt 18
+hhindd18,# non-agency home hlth providr days 2018
+hhinfd18,# informal home hlth provider days 2018
+hhnexp18,total home health non-agncy exp 18
+hhnmcd18,home hlth non-agncy - medicaid amt 18
+hhnmcr18,home hlth non-agncy - medicare amt 18
+hhnofd18,home hlth non-agncy-othr fed amt 18
+hhnopr18,home hlth non-agncy-oth private amt 18
+hhnopu18,home hlth non-agncy-oth public amt 18
+hhnosr18,h hlth non-agncy-ot unclass srce amt 18
+hhnoth18,home hlth non-agncy-oth combined amt 18
+hhnprv18,home hlth non-agncy - priv ins amt 18
+hhnptr18,home hlth non-agncy - prv & tri amt 18
+hhnslf18,home hlth non-agncy - self/fam amt 18
+hhnstl18,home hlth non-agncy-othr st/locl amt 18
+hhntch18,home health non-agency visit charges 18
+hhntri18,home hlth non-agncy-tricare amt 18
+hhnva18,home hlth non-agncy-va/champva amt 18
+hhnwcp18,home hlth non-agncy-workers comp amt 18
+hhtotd18,# home health provider days 2018
+hibpaged,age of diagnosis-high blood pressure
+hibpdx,high blood pressure diag (>17)
+hideg,highest degree when first entered meps
+hieuidx,hieu identifier
+hispanx,hispanic ethnicity (edited/imputed)
+hispncat,hispanic ethnicity (edited/imputed)
+honrdc31,honorably discharged from military
+honrdc42,honorably discharged from military
+hour31,hours per week at rd 3/1 cmj
+hour31h,hours per week at rd 3/1 cmj (imp)
+hour42,hours per week at rd 4/2 cmj
+hour42h,hours per week at rd 4/2 cmj (imp)
+hour53,hours per week at rd 5/3 cmj
+hour53h,hours per week at rd 5/3 cmj (imp)
+hpdap18,pholder of priv ins (source unknwn) apr18
+hpdau18,pholder of priv ins (source unknwn) aug18
+hpdde18,pholder of priv ins (source unknwn) dec18
+hpdfe18,pholder of priv ins (source unknwn) feb18
+hpdja18,pholder of priv ins (source unknwn) jan18
+hpdjl18,pholder of priv ins (source unknwn) jul18
+hpdju18,pholder of priv ins (source unknwn) jun18
+hpdma18,pholder of priv ins (source unknwn) mar18
+hpdmy18,pholder of priv ins (source unknwn) may18
+hpdno18,pholder of priv ins (source unknwn) nov18
+hpdoc18,pholder of priv ins (source unknwn) oct18
+hpdse18,pholder of priv ins (source unknwn) sep18
+hpeap18,pholder of empl union ins in apr18
+hpeau18,pholder of empl union ins in aug18
+hpede18,pholder of empl union ins in dec18
+hpefe18,pholder of empl union ins in feb18
+hpeja18,pholder of empl union ins in jan18
+hpejl18,pholder of empl union ins in jul18
+hpeju18,pholder of empl union ins in jun18
+hpema18,pholder of empl union ins in mar18
+hpemy18,pholder of empl union ins in may18
+hpeno18,pholder of empl union ins in nov18
+hpeoc18,pholder of empl union ins in oct18
+hpese18,pholder of empl union ins in sep18
+hpnap18,pholder of nongroup ins in apr18
+hpnau18,pholder of nongroup ins in aug18
+hpnde18,pholder of nongroup ins in dec18
+hpnfe18,pholder of nongroup ins in feb18
+hpnja18,pholder of nongroup ins in jan18
+hpnjl18,pholder of nongroup ins in jul18
+hpnju18,pholder of nongroup ins in jun18
+hpnma18,pholder of nongroup ins in mar18
+hpnmy18,pholder of nongroup ins in may18
+hpnno18,pholder of nongroup ins in nov18
+hpnoc18,pholder of nongroup ins in oct18
+hpnse18,pholder of nongroup ins in sep18
+hpoap18,pholder of other group ins in apr18
+hpoau18,pholder of other group ins in aug18
+hpode18,pholder of other group ins in dec18
+hpofe18,pholder of other group ins in feb18
+hpoja18,pholder of other group ins in jan18
+hpojl18,pholder of other group ins in jul18
+hpoju18,pholder of other group ins in jun18
+hpoma18,pholder of other group ins in mar18
+hpomy18,pholder of other group ins in may18
+hpono18,pholder of other group ins in nov18
+hpooc18,pholder of other group ins in oct18
+hpose18,pholder of other group ins in sep18
+hprap18,pholder of private insurance in apr18
+hprau18,pholder of private insurance in aug18
+hprde18,pholder of private insurance in dec18
+hprfe18,pholder of private insurance in feb18
+hprja18,pholder of private insurance in jan18
+hprjl18,pholder of private insurance in jul18
+hprju18,pholder of private insurance in jun18
+hprma18,pholder of private insurance in mar18
+hprmy18,pholder of private insurance in may18
+hprno18,pholder of private insurance in nov18
+hproc18,pholder of private insurance in oct18
+hprse18,pholder of private insurance in sep18
+hpxap18,pholder of priv ins through exch in apr18
+hpxau18,pholder of priv ins through exch in aug18
+hpxde18,pholder of priv ins through exch in dec18
+hpxfe18,pholder of priv ins through exch in feb18
+hpxja18,pholder of priv ins through exch in jan18
+hpxjl18,pholder of priv ins through exch in jul18
+hpxju18,pholder of priv ins through exch in jun18
+hpxma18,pholder of priv ins through exch in mar18
+hpxmy18,pholder of priv ins through exch in may18
+hpxno18,pholder of priv ins through exch in nov18
+hpxoc18,pholder of priv ins through exch in oct18
+hpxse18,pholder of priv ins through exch in sep18
+hrhow31,how hourly wage was calculated rd 3/1
+hrhow42,how hourly wage was calculated rd 4/2
+hrhow53,how hourly wage was calculated rd 5/3
+hrwg31h,hourly wage rd 3/1 cmj (imp)
+hrwg31x,hourly wage rd 3/1 cmj (imp)
+hrwg42h,hourly wage rd 4/2 cmj (imp)
+hrwg42x,hourly wage rd 4/2 cmj (imp)
+hrwg53h,hourly wage rd 5/3 cmj (imp)
+hrwg53x,hourly wage rd 5/3 cmj (imp)
+hrwgim31,hrwg31x imputation flag
+hrwgim42,hrwg42x imputation flag
+hrwgim53,hrwg53x imputation flag
+hselim31,housework limitation - rd 3/1
+hsplap42,is provider hispanic or latino-r4/2
+hwellspe,how well pers spks eng-family oth lang
+hwellspk,how well person speaks english
+iadlhp31,iadl screener - rd 3/1
+ihs18,cov by ihs - 12/31/18
+ihs31,cv by indian health service- r3/1 int dt
+ihs42,cv by indian health service- r4/2 int dt
+ihs53,cv by ihs 12-31/r3 int dt
+ihsap18,cov by indian health service in apr18
+ihsat18,cov by ihs-any tme in r5/3 til 12/31/18
+ihsat31,cov by ihs - any time in r3/1
+ihsat42,cov by ihs - any time in r4/2
+ihsat53,cov by ihs - any time in r5/3
+ihsau18,cov by indian health service in aug18
+ihsde18,cov by indian health service in dec18
+ihsfe18,cov by indian health service in feb18
+ihsja18,cov by indian health service in jan18
+ihsjl18,cov by indian health service in jul18
+ihsju18,cov by indian health service in jun18
+ihsma18,cov by indian health service in mar18
+ihsmy18,cov by indian health service in may18
+ihsno18,cov by indian health service in nov18
+ihsoc18,cov by indian health service in oct18
+ihsse18,cov by indian health service in sep18
+indcat31,industry group rd 3/1 cmj
+indcat42,industry group rd 4/2 cmj
+indcat53,industry group rd 5/3 cmj
+indct31h,industry group rd 3/1 cmj (imp)
+indct42h,industry group rd 4/2 cmj (imp)
+indct53h,industry group rd 5/3 cmj (imp)
+ins18x,insured - 12/31/18 (ed)
+ins31x,insured - r3/1 int date (ed)
+ins42x,insured - r4/2 int date (ed)
+ins53x,insured 12-31/r3 int date (ed)
+insap18x,covr by hosp/med ins in apr18
+insat18x,insured any time in r5/r3 until 12/31/18
+insat31x,insured any time in r3/1
+insat42x,insured any time in r4/2
+insat53x,insured any time in r5/3
+insau18x,covr by hosp/med ins in aug18
+insc1231,inscope status on 12/31/18
+inscop18,inscope - r5/3 start through 12/31/18
+inscop31,inscope - r3/1
+inscop42,inscope - r4/2
+inscop53,inscope - r5/3
+inscope,was person ever inscope in 2018
+inscov18,health insurance coverage indicator 2018
+insde18x,covr by hosp/med ins in dec18
+insfe18x,covr by hosp/med ins in feb18
+insja18x,covr by hosp/med ins in jan18
+insjl18x,covr by hosp/med ins in jul18
+insju18x,covr by hosp/med ins in jun18
+insma18x,covr by hosp/med ins in mar18
+insmy18x,covr by hosp/med ins in may18
+insno18x,covr by hosp/med ins in nov18
+insoc18x,covr by hosp/med ins in oct18
+insse18x,covr by hosp/med ins in sep18
+insurc18,full year insurance coverage status 2018
+intimp18,interest income imputation flag
+intrp18x,person's interest income
+intvlang,language interview was completed
+ipdexp18,totl hosp staz dr exp 18
+ipdis18,# hospital discharges 2018
+ipdmcd18,ip hosp staz-medicaid amt-dr 18
+ipdmcr18,ip hosp staz-medicare amt- dr 18
+ipdofd18,ip hosp staz-other fed amt-dr 18
+ipdopr18,ip hosp staz - oth private amt-dr 18
+ipdopu18,ip hosp staz - oth public amt-dr 18
+ipdosr18,ip hosp staz-ot unclass sorce amt-dr 18
+ipdoth18,ip hosp staz-oth combined amt-dr 18
+ipdprv18,ip hosp staz-priv ins amt-dr 18
+ipdptr18,ip hosp staz-prv & tri amt-dr 18
+ipdslf18,ip hosp staz-self/family amt-dr 18
+ipdstl18,ip hosp staz-oth st/local amt-dr 18
+ipdtch18,ip hosp stay charges - dr 18
+ipdtri18,ip hosp staz-tricare amt-dr 18
+ipdva18,ip hosp staz-va/champva amt-dr 18
+ipdwcp18,ip hosp staz-workers comp amt-dr 18
+ipfexp18,tot hosp ip facility exp-inc 0 nites 18
+ipfmcd18,ip hosp staz-medicaid amt-fac 18
+ipfmcr18,ip hosp staz-medicare amt-fac 18
+ipfofd18,ip hosp staz-other fed amt-fac 18
+ipfopr18,ip hosp staz - oth private amt-fac 18
+ipfopu18,ip hosp staz - oth public amt-fac 18
+ipfosr18,ip hosp staz-ot unclass srce amt-fac 18
+ipfoth18,ip hosp staz-oth combined amt-fac 18
+ipfprv18,ip hosp staz-priv ins amt-fac 18
+ipfptr18,ip hosp staz-prv & tri amt-fac 18
+ipfslf18,ip hosp staz-self/family amt-fac 18
+ipfstl18,ip hosp staz-oth st/local amt-fac 18
+ipftch18,ip hosp stay charges - fac 18
+ipftri18,ip hosp staz-tricare amt-fac 18
+ipfva18,ip hosp staz-va/champva amt-fac 18
+ipfwcp18,ip hosp staz-workers comp amt-fac 18
+ipngtd18,"# nights in hosp for discharges, 2018"
+iptexp18,tot hosp ip facility + dr exp 18
+iptmcd18,ip hosp staz-medicaid amt-(fac+dr) 18
+iptmcr18,ip hosp staz-medicare amt-(fac+dr) 18
+iptofd18,ip hosp staz-other fed amt-(fac+dr) 18
+iptopr18,ip hosp staz-oth private amt-(fac+dr) 18
+iptopu18,ip hosp staz-oth public amt-(fac+dr) 18
+iptosr18,ip hsp staz-oth uncls src amt(fac+dr) 18
+iptoth18,ip hosp staz-oth combined amt(fac+dr) 18
+iptprv18,ip hosp staz-priv ins amt-(fac+dr) 18
+iptptr18,ip hosp staz-prv & tri amt-(fac+dr) 18
+iptslf18,ip hosp staz-self/family amt-(fac+dr) 18
+iptstl18,ip hsp staz-oth st/local amt-(fac+dr) 18
+ipttch18,ip hosp stay charges (fac+dr) 18
+ipttri18,ip hosp staz-tricare amt-(fac+dr) 18
+iptva18,ip hosp staz-va/champva amt-(fac+dr) 18
+iptwcp18,ip hosp staz-wrkrs comp amt-(fac+dr) 18
+iraimp18,ira income imputation flag
+irasp18x,person's ira income
+jborg31h,"prv, st-lc gov, fed gov rd 3/1 cmj (imp)"
+jborg42h,"prv, st-lc gov, fed gov rd 4/2 cmj (imp)"
+jborg53h,"prv, st-lc gov, fed gov rd 5/3 cmj (imp)"
+jntpid18,pid of secondary filer
+joborg31,"priv (profit,nonprofit) gov rd 3/1 cmj"
+joborg42,"priv (profit,nonprofit) gov rd 4/2 cmj"
+joborg53,"priv (profit,nonprofit) gov rd 5/3 cmj"
+jtinru18,joint filer's membership in ru
+jtpain31_m18,joint pain last 12 months (>17) - rd 3/1
+k6sum42,saq 30 days: overall rating of feelings
+keyness,person key status
+langspk,language spoken at home other than engl
+lapblt42,dr advise lap/shoulder belt (80<wt)-r4/2
+lftdif31,difficulty lifting 10 pounds - rd 3/1
+locatn42,usc location-r4/2
+lsteth53,lost all uppr and lowr teeth (>17)-rd5/3
+marry18x,marital status-12/31/18 (edited/imputed)
+marry31x,marital status - r3/1 (edited/imputed)
+marry42x,marital status - r4/2 (edited/imputed)
+marry53x,marital status - r5/3 (edited/imputed)
+mcaid18,cov by medicaid or schip - 12/31/18
+mcaid18x,cov by medicaid or schip - 12/31/18 (ed)
+mcaid31,cov by medicaid or schip - r3/1 int dt
+mcaid31x,cov by medicaid/schip - r3/1 int dt (ed)
+mcaid42,cov by medicaid or schip - r4/2 int dt
+mcaid42x,cov by medicaid/schip - r4/2 int dt (ed)
+mcaid53,cov by medicaid or schip 12-31/r3 int dt
+mcaid53x,cov medicaid/schip 12-31/r3 int dt(ed)
+mcare18,cov by medicare - 12/31/18
+mcare18x,cov by medicare - 12/31/18 (ed)
+mcare31,cov by medicare - r3/1 int dt
+mcare31x,cov by medicare - r3/1 int dt (ed)
+mcare42,cov by medicare - r4/2 int dt
+mcare42x,cov by medicare - r4/2 int dt (ed)
+mcare53,cov by medicare 12-31/r3 int dt
+mcare53x,cov by medicare 12-31/r3 int dt (ed)
+mcdap18,cov by medicaid or schip in apr18
+mcdap18x,cov by medicaid or schip in apr18 (ed)
+mcdat18x,cv mcd/chip-any tme in r5/3 til 12/31/18
+mcdat31x,cov medicaid or schip - any time in r3/1
+mcdat42x,cov medicaid or schip - any time in r4/2
+mcdat53x,cov medicaid or schip - any time in r5/3
+mcdau18,cov by medicaid or schip in aug18
+mcdau18x,cov by medicaid or schip in aug18 (ed)
+mcdde18,cov by medicaid or schip in dec18
+mcdde18x,cov by medicaid or schip in dec18 (ed)
+mcdev18,ever have mcaid/schip during 2018 (ed)
+mcdfe18,cov by medicaid or schip in feb18
+mcdfe18x,cov by medicaid or schip in feb18 (ed)
+mcdhmo18,cov by mcaid/schip hmo-r5/3 til 12/31/18
+mcdhmo31,cov by mcaid/schip hmo -any time in r3/1
+mcdhmo42,cov by mcaid/schip hmo -any time in r4/2
+mcdja18,cov by medicaid or schip in jan18
+mcdja18x,cov by medicaid or schip in jan18 (ed)
+mcdjl18,cov by medicaid or schip in jul18
+mcdjl18x,cov by medicaid or schip in jul18 (ed)
+mcdju18,cov by medicaid or schip in jun18
+mcdju18x,cov by medicaid or schip in jun18 (ed)
+mcdma18,cov by medicaid or schip in mar18
+mcdma18x,cov by medicaid or schip in mar18 (ed)
+mcdmc18,cv mcd/chip gtkpr pln-r5/3 til 12/31/18
+mcdmc31,cv mcaid/chip gtkpr pln-any time in r3/1
+mcdmc42,cv mcaid/chip gtkpr pln-any time in r4/2
+mcdmy18,cov by medicaid or schip in may18
+mcdmy18x,cov by medicaid or schip in may18 (ed)
+mcdno18,cov by medicaid or schip in nov18
+mcdno18x,cov by medicaid or schip in nov18 (ed)
+mcdoc18,cov by medicaid or schip in oct18
+mcdoc18x,cov by medicaid or schip in oct18 (ed)
+mcdse18,cov by medicaid or schip in sep18
+mcdse18x,cov by medicaid or schip in sep18 (ed)
+mcrap18,covered by medicare in apr18
+mcrap18x,covered by medicare in apr18 (ed)
+mcrau18,covered by medicare in aug18
+mcrau18x,covered by medicare in aug18 (ed)
+mcrde18,covered by medicare in dec18
+mcrde18x,covered by medicare in dec18 (ed)
+mcrev18,ever have medicare during 2018 (ed)
+mcrfe18,covered by medicare in feb18
+mcrfe18x,covered by medicare in feb18 (ed)
+mcrja18,covered by medicare in jan18
+mcrja18x,covered by medicare in jan18 (ed)
+mcrjl18,covered by medicare in jul18
+mcrjl18x,covered by medicare in jul18 (ed)
+mcrju18,covered by medicare in jun18
+mcrju18x,covered by medicare in jun18 (ed)
+mcrma18,covered by medicare in mar18
+mcrma18x,covered by medicare in mar18 (ed)
+mcrmy18,covered by medicare in may18
+mcrmy18x,covered by medicare in may18 (ed)
+mcrno18,covered by medicare in nov18
+mcrno18x,covered by medicare in nov18 (ed)
+mcroc18,covered by medicare in oct18
+mcroc18x,covered by medicare in oct18 (ed)
+mcrpb18,cov by medicare part b - 12/31/18
+mcrpb31,cov by medicare part b - r3/1
+mcrpb42,cov by medicare part b - r4/2
+mcrpd18,cov by medicare pmed benefit - 12/31/18
+mcrpd18x,cov by mcare pmed benefit-12/31/18 (ed)
+mcrpd31,cov by medicare pmed benefit - r3/1
+mcrpd31x,cov by medicare pmed benefit - r3/1 (ed)
+mcrpd42,cov by medicare pmed benefit - r4/2
+mcrpd42x,cov by medicare pmed benefit - r4/2 (ed)
+mcrpho18,"cov by medicare managed care/medicare
+advantage - 12/31/18"
+mcrpho31,"cov by medicare managed care/medicare
+advantage - r3/1"
+mcrpho42,"cov by medicare managed care/medicare
+advantage - r4/2"
+mcrse18,covered by medicare in sep18
+mcrse18x,covered by medicare in sep18 (ed)
+meshgt42,doctor ever measured height (0-17)-r4/2
+mesvis42,doctor checked child's vision (3-6)-r4/2
+meswgt42,doctor ever measured weight (0-17)-r4/2
+miaged,age of diagnosis-heart attack(mi)
+midx,heart attack (mi) diag (>17)
+mildif31,difficulty walking a mile - rd 3/1
+mnhlth31,perceived mental health status - rd 3/1
+mnhlth42,perceived mental health status - rd 4/2
+mnhlth53,perceived mental health status - rd 5/3
+mopid31x,pid of person's mom - rd 3/1
+mopid42x,pid of person's mom - rd 4/2
+mopid53x,pid of person's mom - rd 5/3
+more31,rd 3/1 cmj firm has more than 1 location
+more31h,rd 3/1 cmj firm more than 1 location (imp)
+more42,rd 4/2 cmj firm has more than 1 location
+more42h,rd 4/2 cmj firm more than 1 location (imp)
+more53,rd 5/3 cmj firm has more than 1 location
+more53h,rd 5/3 cmj firm more than 1 location (imp)
+morecovr,cov by mor compr pl prev 2 yr-pn 23 only
+morjob31,has more than one job rd 3/1 int date
+morjob42,has more than one job rd 4/2 int date
+morjob53,has more than one job rd 5/3 int date
+natamp42,is provider native american-r4/2
+nhrwg31,updated hrly wage rd 3/1 cmj (edited)
+nhrwg42,updated hrly wage rd 4/2 cmj (edited)
+nhrwg53,updated hrly wage rd 5/3 cmj (edited)
+nmemp31h,number of employees at rd 3/1 cmj (imp)
+nmemp42h,number of employees at rd 4/2 cmj (imp)
+nmemp53h,number of employees at rd 5/3 cmj (imp)
+nosmok42,dr advise smkg in home is bad(0-17)-r4/2
+numemp31,number of employees at rd 3/1 cmj
+numemp42,number of employees at rd 4/2 cmj
+numemp53,number of employees at rd 5/3 cmj
+nwk31,reason not working during rd 3/1
+nwk42,reason not working during rd 4/2
+nwk53,reason not working during rd 5/3
+obdexp18,total off-based dr exp 18
+obdmcd18,dr office visits - medicaid amt 18
+obdmcr18,dr office visits - medicare amt 18
+obdofd18,dr office visits - other federal amt 18
+obdopr18,dr office visits - oth private amt 18
+obdopu18,dr office visits - oth public amt 18
+obdosr18,dr off vsts - oth unclass srce amt 18
+obdoth18,dr office visits - oth combined amt 18
+obdprv18,dr office visits - private ins amt 18
+obdptr18,dr office visits - prv & tri amt 18
+obdrv18,# office-based physician visits 18
+obdslf18,dr office visits - self/family amt 18
+obdstl18,dr office visits - oth st/local amt 18
+obdtch18,office-based physician visit charges 18
+obdtri18,dr office visits - tricare amt 18
+obdva18,dr office visits - va/champva amt 18
+obdwcp18,dr office visits - workers comp amt 18
+obtotv18,# office-based provider visits 2018
+obvexp18,total office-based exp 18
+obvmcd18,all office visits - medicaid amt 18
+obvmcr18,all office visits - medicare amt 18
+obvofd18,all office visits-other federal amt 18
+obvopr18,all office visits - oth private amt 18
+obvopu18,all office visits - oth public amt 18
+obvosr18,all off vsts - oth unclass srce amt 18
+obvoth18,all office visits - oth combined amt 18
+obvprv18,all office visits - private ins amt 18
+obvptr18,all office visits - prv & tri amt 18
+obvslf18,all office visits - self/family amt 18
+obvstl18,all office visits-oth st/local amt 18
+obvtch18,office-based provider visit charges 18
+obvtri18,all office visits-tricare amt 18
+obvva18,all office visits-va/champva amt 18
+obvwcp18,all office visits - workers comp amt 18
+occcat31,occupation group rd 3/1 cmj
+occcat42,occupation group rd 4/2 cmj
+occcat53,occupation group rd 5/3 cmj
+occct31h,occupation group rd 3/1 cmj (imp)
+occct42h,occupation group rd 4/2 cmj (imp)
+occct53h,occupation group rd 5/3 cmj (imp)
+ofemp31h,emp offers health ins rd 3/1 cmj (imp)
+ofemp42h,emp offers health ins rd 4/2 cmj (imp)
+ofemp53h,emp offers health ins rd 5/3 cmj (imp)
+offer31h,health insur offered by rd 3/1 cmj (imp)
+offer31x,health insur offered by rd 3/1 cmj (ed)
+offer42h,health insur offered by rd 4/2 cmj (imp)
+offer42x,health insur offered by rd 4/2 cmj (ed)
+offer53h,health insur offered by rd 5/3 cmj (imp)
+offer53x,health insur offered by rd 5/3 cmj (ed)
+offhou42,usc has offce hrs nghts/wkends-r4/2
+ofremp31,employer offers health ins rd 3/1 cmj
+ofremp42,employer offers health ins rd 4/2 cmj
+ofremp53,employer offers health ins rd 5/3 cmj
+oftsmk53,how oftn smoke cigarettes (>17) - rd 5/3
+ohrtaged,age of diagnosis-other heart disease
+ohrtdx,other heart disease diag (>17)
+ohrttype,type of other heart disease (>17)
+opdexp18,total outpatient provider exp 18
+opdmcd18,all opd visits-medicaid amt-dr 18
+opdmcr18,all opd visits-medicare amt-dr 18
+opdofd18,all opd visits-other fed amt-dr 18
+opdopr18,all opd visits - oth private amt-dr 18
+opdopu18,all opd visits-oth public amt-dr 18
+opdosr18,all opd vsts-oth unclass srce amt-dr 18
+opdoth18,all opd visits-oth combined amt-dr 18
+opdprv18,all opd visits-priv ins amt-dr 18
+opdptr18,all opd visits-prv & tri amt -dr 18
+opdrv18,# outpatient dept physician visits 2018
+opdslf18,all opd visits-self/family amt-dr 18
+opdstl18,all opd visits-oth st/local amt-dr 18
+opdtch18,opd provider visit charges - dr 18
+opdtri18,all opd visits-tricare amt-dr 18
+opdva18,all opd visits-va/champva amt-dr 18
+opdwcp18,all opd visits-workers comp amt-dr 18
+opfexp18,total outpatient facility exp 18
+opfmcd18,all opd visits-medicaid amt-fac 18
+opfmcr18,all opd visits-medicare amt-fac 18
+opfofd18,all opd visits-other fed amt-fac 18
+opfopr18,all opd visits - oth private amt-fac 18
+opfopu18,all opd visits - oth public amt-fac 18
+opfosr18,all opd vsts-oth unclass srce amt-fac 18
+opfoth18,all opd visits - oth combined amt-fac 18
+opfprv18,all opd visits-priv ins amt-fac 18
+opfptr18,all opd visits - prv & tri amt-fac 18
+opfslf18,all opd visits-self/family amt-fac 18
+opfstl18,all opd visits-oth st/local amt-fac 18
+opftch18,opd provider visit charges - fac 18
+opftri18,all opd visits-tricare amt-fac 18
+opfva18,all opd visits-va/champva amt-fac 18
+opfwcp18,all opd visits-workers comp amt-fac 18
+opsexp18,total outpatient physician - dr exp 18
+opsmcd18,opd dr visits-medicaid amt-dr 18
+opsmcr18,opd dr visits-medicare amt-dr 18
+opsofd18,opd dr visits-other fed amt-dr 18
+opsopr18,opd dr visits - oth private amt-dr 18
+opsopu18,opd dr visits-oth public amt-dr 18
+opsosr18,opd dr vsts-oth unclass srce amt-dr 18
+opsoth18,opd dr visits -oth combined amt-dr 18
+opsprv18,opd dr visits-priv ins amt-dr 18
+opsptr18,opd dr visits - prv & tri amt-dr 18
+opsslf18,opd dr visits-self/family amt-dr 18
+opsstl18,opd dr visits-oth st/local amt-dr 18
+opstch18,opd physician visit charges - dr 18
+opstri18,opd dr visits-tricare amt-dr 18
+opsva18,opd dr visits-va/champva amt-dr 18
+opswcp18,opd dr visits-workers comp amt-dr 18
+optexp18,total outpatient fac + dr exp 18
+optmcd18,all opd vsts-medicaid amt-(fac+dr) 18
+optmcr18,all opd vsts-medicare amt-(fac+dr) 18
+optofd18,all opd vsts-other fed amt-(fac+dr) 18
+optopr18,all opd vsts-oth private amt-(fac+dr) 18
+optopu18,all opd vsts-oth public amt-(fac+dr) 18
+optosr18,all opd vst-oth uncls src amt(fac+dr) 18
+optoth18,all opd vsts-oth combined amt(fac+dr) 18
+optotv18,# outpatient dept provider visits 2018
+optprv18,all opd vsts-priv ins amt-(fac+dr) 18
+optptr18,all opd visits-prv & tri amt (fac+dr) 18
+optslf18,all opd vsts-self/family amt-(fac+dr) 18
+optstl18,all opd vst-oth st/local amt(fac+dr) 18
+opttch18,opd facility + dr visit charges - 18
+opttri18,all opd vsts-tricare amt-(fac+dr) 18
+optva18,all opd vsts-va/champva amt-(fac+dr) 18
+optwcp18,all opd vst-workrs comp amt-(fac+dr) 18
+opvexp18,total outpatient physician - fac exp 18
+opvmcd18,opd dr visits-medicaid amt-fac 18
+opvmcr18,opd dr visits-medicare amt-fac 18
+opvofd18,opd dr visits-other fed amt-fac 18
+opvopr18,opd dr visits - oth private amt-fac 18
+opvopu18,opd dr visits-oth public amt-fac 18
+opvosr18,opd dr vsts-oth unclass srce amt-fac 18
+opvoth18,opd dr visits - oth combined amt-fac 18
+opvprv18,opd dr visits-priv ins amt-fac 18
+opvptr18,opd dr visits - prv & tri amt-fac 18
+opvslf18,opd dr visits-self/family amt-fac 18
+opvstl18,opd dr visits-oth st/local amt-fac 18
+opvtch18,opd physician visit charges - fac 18
+opvtri18,opd dr visits-tricare amt-fac 18
+opvva18,opd dr visits-va/champva amt-fac 18
+opvwcp18,opd dr visits-workers comp amt-fac 18
+othdys18,miss any work day to care for oth 2018
+othexp18,tot other equip/sply (excl diab) exp 18
+othimp18,other income imputation flag
+othlang,in family with someone spkng other lang
+othlgspk,speak other language at home
+othmcd18,other equp/supplies-medicaid amt 18
+othmcr18,other equp/supplies-medicare amt 18
+othndd18,# day missed work to care for oth 2018
+othofd18,other equp/supplies-othr fedrl amt 18
+othopr18,other equp/supply-oth private amt 18
+othopu18,other equp/supply - oth public amt 18
+othosr18,oth equp/suply - ot unclass srce amt 18
+othoth18,other equp/supply - oth combined amt 18
+othprv18,other equp/supplies-priv ins amt 18
+othptr18,other equp/supply - prv & tri amt 18
+othrcp42,is provider some other race-r4/2
+othrp18x,person's other income
+othslf18,other equp/supplies-self/fam amt 18
+othstl18,other equp/supply-othr st/local amt 18
+othtch18,other equp/supplies charges 18
+othtri18,other equp/supply-tricare amt 18
+othva18,other equp/supply-va/champva amt 18
+othwcp18,other equp/supply - workers comp amt 18
+pacisp42,is provider oth pacific islndr-r4/2
+panel,panel number
+paydr31,paid leave to visit dr rd 3/1 cmj
+paydr31h,paid leave to visit dr rd 3/1 cmj (imp)
+paydr42,paid leave to visit dr rd 4/2 cmj
+paydr42h,paid leave to visit dr rd 4/2 cmj (imp)
+paydr53,paid leave to visit dr rd 5/3 cmj
+paydr53h,paid leave to visit dr rd 5/3 cmj (imp)
+payvac31,paid vacation at rd 3/1 cmj
+payvac42,paid vacation at rd 4/2 cmj
+payvac53,paid vacation at rd 5/3 cmj
+pdkap18,covr by priv ins (source unknwn) apr18
+pdkau18,covr by priv ins (source unknwn) aug18
+pdkde18,covr by priv ins (source unknwn) dec18
+pdkfe18,covr by priv ins (source unknwn) feb18
+pdkja18,covr by priv ins (source unknwn) jan18
+pdkjl18,covr by priv ins (source unknwn) jul18
+pdkju18,covr by priv ins (source unknwn) jun18
+pdkma18,covr by priv ins (source unknwn) mar18
+pdkmy18,covr by priv ins (source unknwn) may18
+pdkno18,covr by priv ins (source unknwn) nov18
+pdkoc18,covr by priv ins (source unknwn) oct18
+pdkse18,covr by priv ins (source unknwn) sep18
+pegap18,covered by empl union ins in apr18
+pegau18,covered by empl union ins in aug18
+pegde18,covered by empl union ins in dec18
+pegfe18,covered by empl union ins in feb18
+pegja18,covered by empl union ins in jan18
+pegjl18,covered by empl union ins in jul18
+pegju18,covered by empl union ins in jun18
+pegma18,covered by empl union ins in mar18
+pegmy18,covered by empl union ins in may18
+pegno18,covered by empl union ins in nov18
+pegoc18,covered by empl union ins in oct18
+pegse18,covered by empl union ins in sep18
+penimp18,pension income imputation flag
+pensp18x,person's pension income
+perwt18f,"final person weight, 2018"
+pfsamt31,person-level fsa total amount - r3/1
+phnreg42,how diff contact usc by phone-r4/2
+phq242,saq 2 wks: overall rating of feelings
+phyexe53,mod/vig phys exec 5x wk (>17) - rd 5/3
+physcl42,dr advise exercise (2-17)-r4/2
+pid,person number
+plctyp42,usc type of place-r4/2
+pmdins18,pmed ins - r5/r3 until 12/31/18
+pmdins31,pmed ins - rd 3/1 in 2018
+pmedin31,pmed ins - any time in rd 3/1
+pmedin42,pmedins - any time in rd 4/2
+pmedin53,pmedins - any time in rd 5/3
+pmedpy31,usual 3rd party payer for pmeds - r3/1
+pmedpy42,usual 3rd party payer for pmeds - r4/2
+pmedpy53,usual 3rd party payer for pmeds - r5/3
+pmedup31,has usual 3rd party payer for pmeds-r3/1
+pmedup42,has usual 3rd party payer for pmeds-r4/2
+pmedup53,has usual 3rd party payer for pmeds-r5/3
+pneap18,"cov by non-esi, phldr outside ru in apr18"
+pneau18,"cov by non-esi, phldr outside ru in aug18"
+pnede18,"cov by non-esi, phldr outside ru in dec18"
+pnefe18,"cov by non-esi, phldr outside ru in feb18"
+pneja18,"cov by non-esi, phldr outside ru in jan18"
+pnejl18,"cov by non-esi, phldr outside ru in jul18"
+pneju18,"cov by non-esi, phldr outside ru in jun18"
+pnema18,"cov by non-esi, phldr outside ru in mar18"
+pnemy18,"cov by non-esi, phldr outside ru in may18"
+pneno18,"cov by non-esi, phldr outside ru in nov18"
+pneoc18,"cov by non-esi, phldr outside ru in oct18"
+pnese18,"cov by non-esi, phldr outside ru in sep18"
+pngap18,covered by nongroup ins in apr18
+pngau18,covered by nongroup ins in aug18
+pngde18,covered by nongroup ins in dec18
+pngfe18,covered by nongroup ins in feb18
+pngja18,covered by nongroup ins in jan18
+pngjl18,covered by nongroup ins in jul18
+pngju18,covered by nongroup ins in jun18
+pngma18,covered by nongroup ins in mar18
+pngmy18,covered by nongroup ins in may18
+pngno18,covered by nongroup ins in nov18
+pngoc18,covered by nongroup ins in oct18
+pngse18,covered by nongroup ins in sep18
+poeap18,"cov by esi, pholder outside ru in apr18"
+poeau18,"cov by esi, pholder outside ru in aug18"
+poede18,"cov by esi, pholder outside ru in dec18"
+poefe18,"cov by esi, pholder outside ru in feb18"
+poeja18,"cov by esi, pholder outside ru in jan18"
+poejl18,"cov by esi, pholder outside ru in jul18"
+poeju18,"cov by esi, pholder outside ru in jun18"
+poema18,"cov by esi, pholder outside ru in mar18"
+poemy18,"cov by esi, pholder outside ru in may18"
+poeno18,"cov by esi, pholder outside ru in nov18"
+poeoc18,"cov by esi, pholder outside ru in oct18"
+poese18,"cov by esi, pholder outside ru in sep18"
+pogap18,covered by other group ins in apr18
+pogau18,covered by other group ins in aug18
+pogde18,covered by other group ins in dec18
+pogfe18,covered by other group ins in feb18
+pogja18,covered by other group ins in jan18
+pogjl18,covered by other group ins in jul18
+pogju18,covered by other group ins in jun18
+pogma18,covered by other group ins in mar18
+pogmy18,covered by other group ins in may18
+pogno18,covered by other group ins in nov18
+pogoc18,covered by other group ins in oct18
+pogse18,covered by other group ins in sep18
+povcat18,family inc as % of poverty line - catego
+povlev18,family inc as % of poverty line - contin
+practp42,provider own/group practice-r4/2
+prevcovr,per cov by ins in prev 2 yrs-pnl 23 only
+priap18,covered by private ins in apr18
+priau18,covered by private ins in aug18
+pride18,covered by private ins in dec18
+pridk18,cov by priv ins (dk plan) - 12/31/18
+pridk31,cov by priv ins (dk plan) - r3/1 int
+pridk42,cov by priv ins (dk plan) - r4/2 int
+pridk53,cov by priv ins (dk plan) 12-31/r3 int
+prieu18,cov by empl/union grp ins - 12/31/18
+prieu31,cov by empl/union grp ins - r3/1 int dt
+prieu42,cov by empl/union grp ins - r4/2 int dt
+prieu53,cov by empl/union grp ins 12-31/r3 int
+prieuo18,"cov by esi, pholdr outside ru - 12/31/18"
+prieuo31,"cov by esi, pholdr outside ru - r3/1 int"
+prieuo42,"cov by esi, pholdr outside ru - r4/2 int"
+prieuo53,"cv by esi, phldr outside ru 12-31/r3 int"
+prife18,covered by private ins in feb18
+prija18,covered by private ins in jan18
+prijl18,covered by private ins in jul18
+priju18,covered by private ins in jun18
+prima18,covered by private ins in mar18
+primy18,covered by private ins in may18
+prineo18,"cov by non-esi, pholdr out ru - 12/31/18"
+prineo31,"cov by non-esi, pholdr out ru - r3/1 int dt"
+prineo42,"cov by non-esi, pholdr out ru - r4/2 int dt"
+prineo53,"cov by non-esi, pholdr out ru 12-31/r3 int dt"
+pring18,cov by non-group ins - 12/31/18
+pring31,cov by non-group ins - r3/1 int dt
+pring42,cov by non-group ins - r4/2 int dt
+pring53,cov by non-group ins 12-31/r3 int dt
+prino18,covered by private ins in nov18
+prioc18,covered by private ins in oct18
+priog18,cov by other group ins - 12/31/18
+priog31,cov by other group ins - r3/1 int dt
+priog42,cov by other group ins - r4/2 int dt
+priog53,cov by other group ins 12-31/r3 int dt
+prise18,covered by private ins in sep18
+priv18,cov by priv hlth ins - 12/31/18
+priv31,cov by priv hlth ins - r3/1 int date
+priv42,cov by priv hlth ins - r4/2 int date
+priv53,cov by priv hlth ins 12-31/r3 int date
+privat18,cov by private ins - r5/3 until 12/31/18
+privat31,cov by private ins - any time in r3/1
+privat42,cov by private ins - any time in r4/2
+privat53,cov by private ins - any time in r5/3
+probpy42,family having prob paying medical bills
+provty42_m18,provider type-r4/2
+proxy18,was respondent a proxy as of 12/31/18
+proxy31,was respondent a proxy in r3/1
+proxy42,was respondent a proxy in r4/2
+proxy53,was respondent a proxy in r5/3
+prstx18,priv exchange insurance on 12/31/18
+prstx31,cov by priv exchange ins -r3/1 int dt
+prstx42,cov by priv exchange ins -r4/2 int dt
+prstx53,priv exchange ins on 12-31 r5/r3 int dt
+prvev18,ever have private insurance during 2018
+prvhmo18,covered by private hmo-r5/3 til 12/31/18
+prvhmo31,covered by private hmo-any time in r3/1
+prvhmo42,covered by private hmo-any time in r4/2
+prvspk42,prov speaks person's language-r4/2
+prxap18,cov by priv ins through exchng in apr18
+prxau18,cov by priv ins through exchng in aug18
+prxde18,cov by priv ins through exchng in dec18
+prxfe18,cov by priv ins through exchng in feb18
+prxja18,cov by priv ins through exchng in jan18
+prxjl18,cov by priv ins through exchng in jul18
+prxju18,cov by priv ins through exchng in jun18
+prxma18,cov by priv ins through exchng in mar18
+prxmy18,cov by priv ins through exchng in may18
+prxno18,cov by priv ins through exchng in nov18
+prxoc18,cov by priv ins through exchng in oct18
+prxse18,cov by priv ins through exchng in sep18
+pstats31,person disposition status - r3/1
+pstats42,person disposition status - r4/2
+pstats53,person disposition status - r5/3
+pub18x,cov by public ins - 12/31/18 (ed)
+pub31x,cov by public ins - r3/1 int dt (ed)
+pub42x,cov by public ins - r4/2 int dt (ed)
+pub53x,cov by public ins 12-31/r3 int dt (ed)
+pubap18x,covr by any public ins in apr18
+pubat18x,cov by public - r5/3 until 12/31/18
+pubat31x,cov by public - any time in r3/1
+pubat42x,cov by public - any time in r4/2
+pubat53x,cov by public - any time in r5/3
+pubau18x,covr by any public ins in aug18
+pubde18x,covr by any public ins in dec18
+pubfe18x,covr by any public ins in feb18
+pubimp18,public assistance imputation flag
+pubja18x,covr by any public ins in jan18
+pubjl18x,covr by any public ins in jul18
+pubju18x,covr by any public ins in jun18
+pubma18x,covr by any public ins in mar18
+pubmy18x,covr by any public ins in may18
+pubno18x,covr by any public ins in nov18
+puboc18x,covr by any public ins in oct18
+pubp18x,person's public assistance
+pubse18x,covr by any public ins in sep18
+pyunbl42,unable to pay family medical bills
+pyvac31h,paid vacation at rd 3/1 cmj (imp)
+pyvac42h,paid vacation at rd 4/2 cmj (imp)
+pyvac53h,paid vacation at rd 5/3 cmj (imp)
+raceax,asian among races rptd (edited/imputed)
+racebx,black among races rptd (edited/imputed)
+racethx,race/ethnicity (edited/imputed)
+racev1x,race (edited/imputed)
+racev2x,race (edited/imputed)
+racewx,white among races rptd (edited/imputed)
+rchdif31,difficulty reaching overhead - rd 3/1
+refprs18,reference person as of 12/31/18
+refprs31,reference person at - r3/1
+refprs42,reference person at - r4/2
+refprs53,reference person at - r5/3
+refrl18x,relation to ref pers-12/31/18 (edit/imp)
+refrl31x,relation to ref pers- r3/1 (edit/imp)
+refrl42x,relation to ref pers- r4/2 (edit/imp)
+refrl53x,relation to ref pers- r5/3 (edit/imp)
+region18,census region as of 12/31/18
+region31,census region - r3/1
+region42,census region - r4/2
+region53,census region - r5/3
+resp18,1st respondent indicator as of 12/31/18
+resp31,1st respondent indicator for r3/1
+resp42,1st respondent indicator for r4/2
+resp53,1st respondent indicator for r5/3
+retpln31,pension plan at rd 3/1 cmj
+retpln42,pension plan at rd 4/2 cmj
+retpln53,pension plan at rd 5/3 cmj
+rndflg31,data collection round for rd 3/1 cmj
+rthlth31,perceived health status - rd 3/1
+rthlth42,perceived health status - rd 4/2
+rthlth53,perceived health status - rd 5/3
+rtpln31h,pension plan at rd 3/1 cmj (imp)
+rtpln42h,pension plan at rd 4/2 cmj (imp)
+rtpln53h,pension plan at rd 5/3 cmj (imp)
+ruclas18,ru fielded as:standard/new/stud-12/31/18
+ruclas31,ru fielded as:standard/new/student-r3/1
+ruclas42,ru fielded as:standard/new/student-r4/2
+ruclas53,ru fielded as:standard/new/student-r5/3
+ruletr18,ru letter as of 12/31/18
+ruletr31,ru letter - r3/1
+ruletr42,ru letter - r4/2
+ruletr53,ru letter - r5/3
+rurslt31,ru result - r3/1
+rurslt42,ru result - r4/2
+rurslt53,ru result - r5/3
+rusize18,ru size as of 12/31/18
+rusize31,ru size - r3/1
+rusize42,ru size - r4/2
+rusize53,ru size - r5/3
+rxexp18,total rx-exp 18
+rxmcd18,total rx-medicaid amt 18
+rxmcr18,total rx-medicare amt 18
+rxofd18,total rx-other fed amt 18
+rxopr18,total rx-oth private amt 18
+rxopu18,total rx-oth public amt 18
+rxosr18,tot rx-oth unclass srce amt 18
+rxoth18,total rx-oth combined amt 18
+rxprv18,total rx-private ins amt 18
+rxptr18,total rx-prv & tri amt 18
+rxslf18,total rx-self/family amt 18
+rxstl18,total rx-other st/local amt 18
+rxtot18,# presc meds incl refills 18
+rxtri18,total rx-tricare amt 18
+rxva18,total rx-va/champva amt 18
+rxwcp18,total rx-workers comp amt 18
+safest42,dr advise chld safety seat (wt<=40)-r4/2
+salep18x,person's sales income
+salimp18,sales income imputation flag
+saqelig,eligibility status for saq
+saqwt18f,"final saq person weight, 2018"
+schlim31,school limitation - rd 3/1
+scpay31h,paid sick leave at rd 3/1 cmj (imp)
+scpay42h,paid sick leave at rd 4/2 cmj (imp)
+scpay53h,paid sick leave at rd 5/3 cmj (imp)
+selfcm31,self-employed at rd 3/1 cmj
+selfcm42,self-employed at rd 4/2 cmj
+selfcm53,self-employed at rd 5/3 cmj
+sex,sex
+sicpay31,paid sick leave at rd 3/1 cmj
+sicpay42,paid sick leave at rd 4/2 cmj
+sicpay53,paid sick leave at rd 5/3 cmj
+slfcm31h,self-employed at rd 3/1 cmj (imp)
+slfcm42h,self-employed at rd 4/2 cmj (imp)
+slfcm53h,self-employed at rd 5/3 cmj (imp)
+soclim31,social limitations - rd 3/1
+spouid18,spouse id - 12/31/18
+spouid31,spouse id - r3/1
+spouid42,spouse id - r4/2
+spouid53,spouse id - r5/3
+spouin18,marital status w/spouse present-12/31/18
+spouin31,marital status w/spouse present-r3/1
+spouin42,marital status w/spouse present-r4/2
+spouin53,marital status w/spouse present-r5/3
+sscimp18,social security income imputation flag
+ssecp18x,person's social security income
+ssiimp18,ssi imputation flag
+ssip18x,person's ssi
+ssnljb31,is cmj a seasonal job rd 3/1
+ssnljb42,is cmj a seasonal job rd 4/2
+ssnljb53,is cmj a seasonal job rd 5/3
+stjbmm31,month started rd 3/1 cmj
+stjbmm42,month started rd 4/2 cmj
+stjbmm53,month started rd 5/3 cmj
+stjbyy31,year started rd 3/1 cmj
+stjbyy42,year started rd 4/2 cmj
+stjbyy53,year started rd 5/3 cmj
+stndif31,difficulty standing 20 minutes - rd 3/1
+stpdif31,difficulty walking up 10 steps - rd 3/1
+strkaged,age of diagnosis-stroke
+strkdx,stroke diagnosis (>17)
+taxfrm18,tax form person will file
+tempjb31,is cmj a temporary job rd 3/1
+tempjb42,is cmj a temporary job rd 4/2
+tempjb53,is cmj a temporary job rd 5/3
+timaln42,doctor spend any time alone (12-17)-r4/2
+tmtkus42,how long it takes get to usc-r4/2
+totexp18,total health care exp 18
+totmcd18,total amt paid by medicaid 18
+totmcr18,total amt paid by medicare 18
+totofd18,total amt paid by other federal 18
+totopr18,total amt paid by other private 18
+totopu18,total amt paid by other public 18
+totosr18,total amt paid by other sources 18
+tototh18,total amt paid by oth combined 18
+totprv18,total amt paid by private ins 18
+totptr18,total amt paid by prv & tri 18
+totslf18,total amt paid by self/family 18
+totstl18,total amt paid by oth st/local 18
+tottch18,"total health care charges 18, excl rx"
+tottri18,total amt paid by tricare 18
+totva18,total amt paid by va/champva 18
+totwcp18,total amt paid by workers comp 18
+treatm42,prov ask about oth treatments-r4/2
+triap18x,covered by tricare/champva in apr18(ed)
+triat18x,cov tricare/champva-r5/3 until 12/31/18
+triat31x,cov tricare/champva - any time in r3/1
+triat42x,cov tricare/champva - any time in r4/2
+triat53x,cov tricare/champva - any time in r5/3
+triau18x,covered by tricare/champva in aug18 (ed)
+trich18x,covered by champva - r5/3 until 12/31/18
+trich31x,covered by champva - any time in r3/1
+trich42x,covered by champva - any time in r4/2
+tricr18x,cov by tricr/chamv - 12/31/18 (ed)
+tricr31x,cov by tricr/chamv - r3/1 int dt (ed)
+tricr42x,cov by tricr/chamv - r4/2 int dt (ed)
+tricr53x,cov by tricr/chamv 12-31/r3 int dt (ed)
+tride18x,covered by tricare/champva in dec18 (ed)
+triev18,ever have tricare/champva during 2018
+triex18x,cov by tricare extra - r5/3 til 12/31/18
+triex31x,cov by tricare extra - any time in r3/1
+triex42x,cov by tricare extra - any time in r4/2
+trife18x,covered by tricare/champva in feb18 (ed)
+trija18x,covered by tricare/champva in jan18 (ed)
+trijl18x,covered by tricare/champva in jul18 (ed)
+triju18x,covered by tricare/champva in jun18 (ed)
+trili18x,cv by tricare for life-r5/3 til 12/31/18
+trili31x,cov by tricare for life-any time in r3/1
+trili42x,cov by tricare for life-any time in r4/2
+trima18x,covered by tricare/champva in mar18 (ed)
+trimy18x,covered by tricare/champva in may18 (ed)
+trino18x,covered by tricare/champva in nov18 (ed)
+trioc18x,covered by tricare/champva in oct18 (ed)
+tripr18x,cov by tricare prime-r5/3 until 12/31/18
+tripr31x,cov by tricare prime - any time in r3/1
+tripr42x,cov by tricare prime - any time in r4/2
+trise18x,covered by tricare/champva in sep18 (ed)
+trist18x,cv by tricare standard-r5/3 til 12/31/18
+trist31x,cov by tricare standard-any time in r3/1
+trist42x,cov by tricare standard-any time in r4/2
+trstp18x,person's trust/rent income
+trtimp18,trust income imputation flag
+ttlp18x,person's total income
+typepe42,usc type of provider-r4/2
+unable31,completely unable to do activity-rd 3/1
+uneimp18,unemployment imputation flag
+unemp18x,person's unemployment comp income
+unins18,uninsured all of 2018
+union31,union status at rd 3/1 cmj
+union31h,union status at rd 3/1 cmj (imp)
+union42,union status at rd 4/2 cmj
+union42h,union status at rd 4/2 cmj (imp)
+union53,union status at rd 5/3 cmj
+union53h,union status at rd 5/3 cmj (imp)
+vaback53,vsaq: diagnosed with back pain
+vabipl53,vsaq: evr diagnosed with bipolar disorder
+vacarc53,vsaq 12mos: non-va prvdr aware va srvcs
+vacare53,vsaq 12mos: recvd care from va provider
+vacmpm53,vsaq: date completed - month
+vacmpy53,vsaq: date completed - year
+vacomp53,"vsaq 12mos: non-va prvdr hlth info
+complete"
+vacopd53,vsaq: diagnosed with copd
+vacost53,vsaq: cost of care
+vacrgv53,vsaq: receive caregiver support
+vactdy53,vsaq: ever served on active duty
+vadepr53,vsaq: ever diagnosed with depression
+vaderm53,vsaq: diagnosed with dermatol conditions
+vaev18,ever have va during 2018
+vagcns53,vsaq: receive mental hlth grp counseling
+vagerd53,vsaq: diagnosed with gerd
+vagout53,vsaq: ever diagnosed with gout
+vagtrc53,vsaq 12mos: non-va prvdr get med records
+vahrls53,vsaq: diagnosed with hearing loss
+vajtpn53,vsaq: ever diagnosed with joint pain
+valcoh53,vsaq: ever diagnosed with alcohol abuse
+valoct53,vsaq: location of doctor's practice
+vamnhc53,vsaq: receive individl mental hlth care
+vamobl53,vsaq: receive assistive mobility device
+vamood53,vsaq: ever diagnosed with mood disorder
+vamrec53,"vsaq 12mos: ask non-va prvdr for med
+records"
+vaneck53,vsaq: ever diagnosed with neck pain
+vaneed53,vsaq: understands needs of veterans
+vantwk53,vsaq: in network provider
+vaout53,vsaq 12 mos: visit provider outside va
+vapact53,vsaq 12mos: visit pact or pcp
+vapap18,covered by va in apr18
+vapast53,"vsaq 12mos:non-va prvdr knw pst hlth
+problems"
+vapau18,covered by va in aug18
+vapcco53,vsaq 12mos: va pcp/pact hlth info complete
+vapcot53,vsaq 12mos: va pcp knw rslt oth va prvdr
+vapcou53,vsaq 12mos:va pcp/pact aware non-va svcs
+vapcpr53,"vsaq 12mos: va pcp/pact knw pst hlth
+problems"
+vapcrc53,"vsaq 12mos: ask va pcp/pact for med
+records"
+vapcrf53,vsaq 12mos: need rfrl to non-va prvdr
+vapcsn53,vsaq 12mos: va pcp/pact get med records
+vapcso53,vsaq 12mos: get rfrl to non-va prvdr
+vapcun53,vsaq: va pcp/pact unaware non-va svcs
+vapde18,covered by va in dec18
+vapfe18,covered by va in feb18
+vapja18,covered by va in jan18
+vapjl18,covered by va in jul18
+vapju18,covered by va in jun18
+vapma18,covered by va in mar18
+vapmy18,covered by va in may18
+vapno18,covered by va in nov18
+vapoc18,covered by va in oct18
+vaprat18,cov by va-any tme in r5/3 til 12/31/18
+vaprat31,cov by va - any time in r3/1
+vaprat42,cov by va - any time in r4/2
+vaprat53,cov by va - any time in r5/3
+vaprht53,vsaq: purple heart recipient
+vaprob53,vsaq: prob non-va prvdr not awar va svcs
+vaprog18,cov by va- 12/31/18
+vaprog31,cov by va - r3/1 int dt
+vaprog42,cov by va - r4/2 int dt
+vaprog53,cov by va 12-31/r3 int dt
+vapros53,vsaq: receive prosthesis
+vaprov53,vsaq 12mos: see va prov oth thn pcp/pact
+vaprox53,vsaq: relationship of proxy to veteran
+vapse18,covered by va in sep18
+vaptsd53,vsaq: ever diagnosed with ptsd
+varecm53,vsaq: recommendation of another doctor
+varep53,vsaq:reputation of doctor providing care
+varhab53,vsaq: receive rehabilitation services
+varpsu,variance estimation psu - 2018
+varstr,variance estimation stratum - 2018
+varthr53,vsaq: ever diagnosed with osteoarthritis
+varxmd53,vsaq: receive prescription medications
+vaspcl53,vsaq 12mos: receive care from va speclst
+vaspmh53,vsaq 12mos: va spclst had med history
+vaspou53,vsaq 12mos: va spclst aware non-va svcs
+vaspun53,vsaq 12mos: va splst unaware non-va svcs
+vatmd53,vsaq: ever diagnosed with tmd
+vawait53,vsaq: short wait time
+verflg18,"pid gained covg thru verification in r5/r3
+until 12/31/18"
+verflg31,pid gained covg thru verification r3/1
+verflg42,pid gained covg thru verification r4/2
+vetimp18,veteran's income imputation flag
+vetsp18x,person's veteran's income
+visexp18,total glasses/contact lens exp 18
+vismcd18,glasses/cntct lenses-medicaid amt 18
+vismcr18,glasses/cntct lenses-medicare amt 18
+visofd18,glasses/cntct lenses-othr fed amt 18
+visopr18,glasses/cntct lenses-oth private amt 18
+visopu18,glasses/cntct lenses-oth public amt 18
+visosr18,glases/cntct lense-ot unclas srce amt 18
+visoth18,glasses/cntct lenses-oth combined amt 18
+visprv18,glasses/cntct lenses-priv ins amt 18
+visptr18,glasses/cntct lenses-prv & tri amt 18
+visslf18,glasses/cntct lenses -self/fam amt 18
+visstl18,glasses/cntct lenses-oth st/locl amt 18
+vistch18,glasses/contact lenses charges 18
+vistri18,glasses/lenses-tricare amt 18
+visva18,glasses/cntct lenses-va/champva amt 18
+viswcp18,glasses/cntct lenses-workers comp amt 18
+vmcs42,saq:mnt component summry vr-12 imputed
+vpcs42,saq:phy component summry vr-12 imputed
+vrflag42,saq: vpcs42/vmcs42 imputation flag vr-12
+vsaqelig,eligibility status for vsaq
+vsaqw18f,"final vsaq person weight, 2018"
+wagep18x,person's wage income
+wagimp18,wage imputation flag
+wcmpp18x,person's workers' compensation
+wcpimp18,workers' comp imputation flag
+whitpr42,is provider white-r4/2
+whnbst42,whn dr advise boost seat(40<wt<=80)-r4/2
+whneat42,when dr advise eat healthy (2-17)-r4/2
+whnhel42,when dr advise bike helmet (2-17)-r4/2
+whnhgt42,when doctor measured height (0-17)-r4/2
+whnlap42,whn dr advise lap/shldr blt (80<wt)-r4/2
+whnphy42,when dr advise exercise (2-17)-r4/2
+whnsaf42,when dr advise safety seat (wt<=40)-r4/2
+whnsmk42,whn dr advis smkg in home bad(0-17)-r4/2
+whnwgt42,when doctor measured weight (0-17)-r4/2
+whtlgspk,what language spoken other than english
+wilfil18,will person file fed income tax return
+wlkdif31,difficulty walking 3 blocks - rd 3/1
+wlklim31,limitation in physical functioning-rd3/1
+wrklim31,work limitation - rd 3/1
+ychj3142,why chngd job between rd 3/1 and rd 4/2
+ychj4253,why chngd job between rd 4/2 and rd 5/3
+ynousc42_m18,main reas pers doesnt have usc-r4/2
+yrsinus,years person lived in the us

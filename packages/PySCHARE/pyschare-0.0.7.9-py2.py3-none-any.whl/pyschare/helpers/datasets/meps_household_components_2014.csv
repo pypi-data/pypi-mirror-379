@@ -1,0 +1,1839 @@
+Variable,Description
+acceli42,pers eligible for access supplement-r4/2
+actdty31,military full-time active duty - r3/1
+actdty42,military full-time active duty - r4/2
+actdty53,military full-time active duty - r5/3
+actlim31,any limitation work/housewrk/schl-rd 3/1
+actlim53,any limitation work/housewrk/schl-rd 5/3
+adappt42,saq 12 mos: # visits to med off for care
+adcape42,saq 4wks: felt calm/peaceful sf-12v2
+adclim42,saq: hlth limits climbing stairs sf-12v2
+adcmpm42,saq: date completed - month
+adcmpy42,saq: date completed - year
+addaya42,saq: hlth limits mod activities sf-12v2
+addown42,saq 4wks: felt downhearted/depr sf-12v2
+addprs42,saq 2 wks: felt down/depressed/hopeless
+addrbp42,saq 2 yrs: dr checked blood pressure
+adefrt42,saq 30 days: how oftn evrythng an effort
+adegmc42,saq 12mos: easy getting needed med care
+adessp42,saq 12mos: how esy to see specialist
+adexpl42,saq 12 mos: doc explained so understood
+adezun42,saq 12 mos: dr given instr. ez undrstd
+adffrm42,saq 12 mos: had to fill out/sign forms
+adfhlp42,saq 12 mos: offrd help filling out forms
+adgenh42,saq: health in general sf-12v2
+adhdaddx,adhdadd diagnosis (5-17)
+adhdaged,age of diagnosis-adhd/add
+adhecr42,saq 12 mos: rating of health care
+adhope42,saq 30 days: how often felt hopeless
+adilcr42,saq 12mos: ill/injury needing immed care
+adilww42,saq 12 mos: got care when needed ill/inj
+adinsa42,saq: do not need health insurance
+adinsb42,saq: health insurance not worth cost
+adinst42,saq 12 mos: dr gave spcifc instrctns
+adintr42,saq 2 wks: little interest in things
+adlang42,saq: language of saq interview
+adlhlp31,adl screener - rd 3/1
+adlhlp53,adl screener - rd 5/3
+adlist42,saq 12 mos: doctor listened to you
+admals42,saq 4wks:accmp less b/c mnt prbs sf-12v2
+admwlm42,saq 4wks:work limt b/c mnt probs sf-12v2
+adndcr42,"saq 12mos: need any care, test, treatmnt"
+adnerv42,saq 30 days: how often felt nervous
+adnrgy42,saq 4wks: had a lot of energy sf-12v2
+adnsmk42,saq 12mos: dr advised to quit smoking
+adover42,saq: can overcome ills without med help
+adpain42,saq 4wks:pain limits normal work sf-12v2
+adpals42,saq 4wks:accmp less b/c phy prbs sf-12v2
+adprtm42,saq 12 mos: dr spent enuf time with you
+adprx42,saq: relationship of proxy to adult
+adpwlm42,saq 4wks:work limt b/c phy probs sf-12v2
+adresp42,saq 12 mos: dr showed respect
+adrest42,saq 30 days: how often felt restless
+adrisk42,saq: more likely to take risks
+adrtcr42,saq 12 mos: made appt routine med care
+adrtww42,saq 12 mos: got med appt when wanted
+adsad42,saq 30 days: how often felt sad
+adsmok42,saq: currently smoke
+adsoca42,saq 4wks: hlth stopped soc activ sf-12v2
+adspec42,saq 12 mos: needed to see specialist
+adtlhw42,saq 12 mos: dr asked r desc how follow
+adupro42,prblm getting along w/adults (5-17)-r4/2
+adwrth42,saq 30 days: how often felt worthless
+afdc14,did person's check include tanf
+afthou42,ac25 how diff contact usc aft hours-r4/2
+age14x,age as of 12/31/14 (edited/imputed)
+age31x,age - r3/1 (edited/imputed)
+age42x,age - r4/2 (edited/imputed)
+age53x,age - r5/3 (edited/imputed)
+agelast,person's age last time eligible
+aidhlp31,used assistive devices - rd 3/1
+aidhlp53,used assistive devices - rd 5/3
+aliimp14,alimony income imputation flag
+alimp14x,person's alimony income
+amaexp14,totl ambultry (ob+op) phys ass t exp 14
+amamcd14,phys ass t amb vsts-medicaid amt 14
+amamcr14,phys ass t amb vsts-medicare amt 14
+amaofd14,phys ass t amb vsts - other fed amt 14
+amaopr14,phys ass t amb vsts - oth private amt 14
+amaopu14,phys ass t amb vsts - oth public amt 14
+amaosr14,p a amb vsts - oth unclass srce amt 14
+amaoth14,phys ass t amb vsts-oth combined amt 14
+amaprv14,phys ass t amb vsts-private ins amt 14
+amaptr14,phys ass t amb vsts - prv & tri amt 14
+amaslf14,phys ass t amb vsts-self/family amt 14
+amasst14,"# physician ass t vsts (off+oupat), 2014"
+amastl14,phys ass t amb vsts-oth st/locl amt 14
+amatch14,phys ass t ambulatory visit charges 14
+amatri14,phys ass t amb vsts-tricare amt 14
+amava14,phys ass t amb vsts-va/champva amt 14
+amawcp14,phys ass t amb vsts-wrkers comp amt 14
+amcexp14,totl ambultry (ob+op) chiro exp 14
+amchir14,"# chiropractr vsts (off+outpat), 2014"
+amcmcd14,chiro amb visits - medicaid amt 14
+amcmcr14,chiro amb visits - medicare amt 14
+amcofd14,chiro amb visits - other federal amt 14
+amcopr14,chiro amb visits - oth private amt 14
+amcopu14,chiro amb visits - oth public amt 14
+amcosr14,chir amb vsts - oth unclass srce amt 14
+amcoth14,chiro amb visits - oth combined amt 14
+amcprv14,chiro amb visits - private ins amt 14
+amcptr14,chiro amb visits -prv & tri amt 14
+amcslf14,chiro amb visits - self/family amt 14
+amcstl14,chiro amb visits - oth st/local amt 14
+amctch14,chiro ambulatory visit charges 14
+amctri14,chiro amb visits-tricare amt 14
+amcva14,chiro amb visits - va/champva amt 14
+amcwcp14,chiro amb visits-workers comp amt 14
+amdrc14,"# calls w/off & outpat physicians, 2014"
+ameexp14,totl ambultry (ob+op) optometrist exp 14
+amemcd14,optmtrist amb vsts - medicaid amt 14
+amemcr14,optmtrist amb vsts - medicare amt 14
+ameofd14,optmtrist amb vsts-other fed amt 14
+ameopr14,optmtrist amb vsts - oth private amt 14
+ameopu14,optmtrist amb vsts - oth public amt 14
+ameosr14,optom amb vsts - oth unclas srce amt 14
+ameoth14,optmtrist amb vsts - oth combined amt 14
+ameprv14,optmtrist amb vsts - private ins amt 14
+ameptr14,optmtrist amb vsts - prv & tri amt 14
+ameslf14,optmtrist amb vsts - self/family amt 14
+amestl14,optmtrist amb vsts-oth st/local amt 14
+ametch14,optometrist ambulatory visit charges 14
+ametri14,optmtrist amb vsts-tricare amt 14
+ameva14,optmtrist amb vsts-va/champva amt 14
+amewcp14,optmtrist amb vsts-workers comp amt 14
+amnexp14,totl ambultry (ob+op) nurse/prac exp 14
+amnmcd14,nrs/prac amb vsts - medicaid amt 14
+amnmcr14,nrs/prac amb vsts - medicare amt 14
+amnofd14,nrs/prac amb vsts-other federal amt 14
+amnopr14,nrs/prac amb vsts - oth private amt 14
+amnopu14,nrs/prac amb vsts - oth public amt 14
+amnosr14,nrs/pr amb vsts - oth unclas srce amt 14
+amnoth14,nrs/prac amb vsts - oth combined amt 14
+amnprv14,nrs/prac amb vsts - priv ins amt 14
+amnptr14,nrs/prac amb vsts - prv & tri amt 14
+amnslf14,nrs/prac amb vsts - self/family amt 14
+amnstl14,nrs/prac amb vsts-oth st/local amt 14
+amntch14,nrs/prac ambulatory visit charges 14
+amntri14,nrs/prac amb vsts-tricare amt 14
+amnurs14,# amb nurse/prctitionr vsts(ob+op) 14
+amnva14,nrs/prac amb vsts-va/champva amt 14
+amnwcp14,nrs/prac amb vsts-workers comp amt 14
+amopto14,# amb optometrist vsts (ob+op) 14
+amtexp14,totl ambultry (ob+op) pt/ot exp 14
+amther14,# amb pt/ot thrpy visits (ob+op) 14
+amtmcd14,pt/ot amb visits-medicaid amt 14
+amtmcr14,pt/ot amb visits-medicare amt 14
+amtofd14,pt/ot amb visits - other fed amt 14
+amtopr14,pt/ot amb visits - oth private amt 14
+amtopu14,pt/ot amb visits-oth public amt 14
+amtosr14,pt/ot amb vsts-oth unclas srce amt 14
+amtotc14,"# calls w/office & oupat depts, 2014"
+amtoth14,pt/ot amb visits - oth combined amt 14
+amtprv14,pt/ot amb visits-private ins amt 14
+amtptr14,pt/ot amb visits -prv & tri amt 14
+amtslf14,pt/ot amb visits-self/family amt 14
+amtstl14,pt/ot amb visits-oth st/locl amt 14
+amttch14,pt/oc ambulatory visit charges 14
+amttri14,pt/ot amb visits-tricare amt 14
+amtva14,pt/ot amb visits-va/champva amt 14
+amtwcp14,pt/ot amb visits-workers comp amt 14
+angiaged,age of diagnosis-angina
+angidx,angina diagnosis (>17)
+anylmt14,"any limitation in p18r3,4,5/p19r1,2,3"
+arthaged,age of diagnosis-arthritis
+arthdx,arthritis diagnosis (>17)
+arthtype,type of arthritis diagnosed (>17)
+asacut53,used acute pres inhaler last 3 mos-rd5/3
+asatak31,asthma attack last 12 mos - rd3/1
+asatak53,asthma attack last 12 mos - rd 5/3
+asdaly53,now take prev daily asthma meds - rd 5/3
+asevfl53,ever used peak flow meter - rd 5/3
+asianp42,ac19 is provider asian-r4/2
+asmrcn53,used>3acute cn pres inh last 3 mos-rd5/3
+aspkfl53,have peak flow meter at home - rd 5/3
+asprev53,ever used prev daily asthma meds -rd 5/3
+asprin53,tke aspirn every (othr) day (>17)-rd 5/3
+asstil31,does person still have asthma-rd3/1
+asstil53,does person still have asthma - rd 5/3
+asthaged,age of diagnosis-asthma
+asthdx,asthma diagnosis
+asthep31,when was last episode of asthma - rd 3/1
+asthep53,when was last episode of asthma - rd 5/3
+aswnfl53,when last used peak flow meter - rd 5/3
+begrfm31,r3/1 reference period begin date: month
+begrfm42,r4/2 reference period begin date: month
+begrfm53,r5/3 reference period begin date: month
+begrfy31,r3/1 reference period begin date: year
+begrfy42,r4/2 reference period begin date: year
+begrfy53,r5/3 reference period begin date: year
+bendif31,difficulty bending/stooping - rd 3/1
+bendif53,difficulty bending/stooping - rd 5/3
+blckpr42,ac19 is provider black/african amer-r4/2
+blind42,person is blind - rd 4/2
+bmindx53,adult body mass index (>17) - rd 5/3
+boost42,dr advise booster seat (40<wt<=80)-r4/2
+bornusa,person born in the us
+bpchek53,time snce lst blood pres chk (>17)-rd5/3
+bpmldx,mult diag high blood press (>17)
+brstex53,how lng snce lst breast exam (>17)-rd5/3
+bsnty31,"sole prop, partner, corp, rd 3/1 cmj"
+bsnty31h,"sol prop, prtnr, corp, rd 3/1 cmj (imp)"
+bsnty42,"sole prop, partner, corp, rd 4/2 cmj"
+bsnty42h,"sol prop, prtnr, corp, rd 4/2 cmj (imp)"
+bsnty53,"sole prop, partner, corp, rd 5/3 cmj"
+bsnty53h,"sol prop, prtnr, corp, rd 5/3 cmj (imp)"
+bstsre53,rsn have bld stool tst (>39)-r5/3
+bstst53,mst rcnt bld stool tst hme kit(>39)-r5/3
+busimp14,business income imputation flag
+busnp14x,person's business income
+cabladdr,cancer diagnosed - bladder (>17)
+cabreast,cancer diagnosed - breast (>17)
+cacervix,cancer diagnosed - cervix (>17)
+cacolon,cancer diagnosed - colon (>17)
+calung,cancer diagnosed - lung (>17)
+calymph,cancer diagnosed - lymphoma (>17)
+camelano,cancer diagnosed - melanoma (>17)
+cancerdx,cancer diagnosis (>17)
+caother,cancer diagnosed - other (>17)
+caprosta,cancer diagnosed - prostate (>17)
+careco42,ac08 oth reas no usc:cost of med cr-r4/2
+cashp14x,person's other regular cash contribution
+caskindk,cancer diagnosed-skin-unknown type (>17)
+caskinnm,cancer diagnosed - skin-nonmelano (>17)
+cauterus,cancer diagnosed - uterus (>17)
+chappt42,cahps:12mos:# of off/clin apts(0-17)r4/2
+chbmix42,child's body mass index (6-17)-r4/2
+chbron31,chronc bronchits last 12 mths (>17)-r3/1
+chbron53,chronc bronchits last 12 mths (>17)-r5/3
+chcoun42,cshcn:child needs counseling (0-17)-r4/2
+chdaged,age of diagnosis-coronary heart disease
+chddx,coronary hrt disease diag (>17)
+check53,how lng lst routne checkup (>17)-rd 5/3
+chempb42,cshcn:couns prob last 12+mos (0-17)-r4/2
+chenec42,cahps:12mos:easy get nec care (0-17)r4/2
+chexpl42,cahps:12mos:chld dr expl thng(0-17)r4/2
+cheyre42,cahps:12mos:esy w/rfr to spec(0-17)-r4/2
+chgj3142,changed job between rd 3/1 and rd 4/2
+chgj4253,changed job between rd 4/2 and rd 5/3
+chhecr42,cahps:12mos:rate chld hlt care(0-17)r4/2
+chilcr42,cahps:12mos:ill/inj need care(0-17)-r4/2
+chilww42,cahps:12mos:ill care whn wntd(0-17)-r4/2
+chldp14x,person's child support
+chlico42,cshcn:limit cond last 12+mos (0-17)-r4/2
+chlihb42,cshcn:limt for hlth/behv cond(0-17)-r4/2
+chlimi42,cshcn:limited in any way (0-17)-r4/2
+chlimp14,child support imputation flag
+chlist42,cahps:12mos:chld dr lsn to you(0-17)r4/2
+chndcr42,cahps:12mos:need any care/trt(0-17)-r4/2
+choic31,choice of health plans at rd 3/1 cmj
+choic42,choice of health plans at rd 4/2 cmj
+choic53,choice of health plans at rd 5/3 cmj
+cholaged,age of diagnosis-high cholesterol
+cholck53,how lng cholest lst chck (>17) - rd 5/3
+choldx,high cholesterol diagnosis (>17)
+chpmcn42,cshcn:pmed cond last 12+ mos (0-17)-r4/2
+chpmed42,cshcn:child needs prescrb med(0-17)-r4/2
+chpmhb42,cshcn:pmed for hlth/behv cond(0-17)-r4/2
+chprtm42,cahps:12mos:child dr engh time(0-17)r4/2
+chresp42,cahps:12mos:chld's dr shw resp(0-17)r4/2
+chrtcr42,cahps:12mos:make rout care apt(0-17)r4/2
+chrtww42,cahps:12mos:rout apt whn wntd(0-17)-r4/2
+chserv42,cshcn:chld needs med&oth serv(0-17)-r4/2
+chspec42,cahps:12mos:chld needed spec(0-17)r4/2
+chsrcn42,cshcn:serv cond last 12+ mos (0-17)-r4/2
+chsrhb42,cshcn:serv for hlth/behv cond(0-17)-r4/2
+chthco42,cshcn:ther cond last 12+ mos (0-17)-r4/2
+chther42,cshcn:chld needs spec therapy(0-17)-r4/2
+chthhb42,cshcn:spec ther for hlth+cond(0-17)-r4/2
+clinic42,ac08 oth reas no usc: hosp/er/clnic-r4/2
+clmdep14,did/will pers claim dependents on return
+clmhip14,did/will pers deduct health insur. prem.
+clntre53,rsn have colonoscopy (>39)-r5/3
+clntst53,most recent colonoscopy (>39) - r5/3
+cmjhld31,hlth insur held from rd 3/1 cmj (prpl)
+cmjhld42,hlth insur held from rd 4/2 cmj (prpl)
+cmjhld53,hlth insur held from rd 5/3 cmj (prpl)
+coglim31,cognitive limitations - rd 3/1
+coglim53,cognitive limitations - rd 5/3
+covrmm,month most recently covered-pnl 19 only
+covryy,year most recently covered-panel 19 only
+cpsfamid,cpsfamid
+crfmpy42,family med bills being paid over time
+cshcn42,cshcn:child w/spec hc needs (0-17)-r4/2
+cshimp14,cash contribution imputation flag
+dadpro42,problem getting along w/dad (5-17)-r4/2
+dapid31x,pid of person's dad - rd 3/1
+dapid42x,pid of person's dad - rd 4/2
+dapid53x,pid of person's dad - rd 5/3
+ddnscl31,# days missd school due to ill/inj(rd31)
+ddnscl42,# days missd school due to ill/inj(rd42)
+ddnscl53,# days missd school due to ill/inj(rd53)
+ddnwrk31,# days missed work due to ill/inj (rd31)
+ddnwrk42,# days missed work due to ill/inj (rd42)
+ddnwrk53,# days missed work due to ill/inj (rd53)
+deaf42,person is deaf - rd 4/2
+decide42,ac28 prov asks pers to help decide-r4/2
+dental42,dr advise reg dental checkup (2-17)-r4/2
+dentck53,how often dental check-up - rd 5/3
+dentin31,dental insurance - rd 3/1
+dentin42,dental insurance - rd 4/2
+dentin53,dental insurance - rd 5/3
+depdnt14,person is flagged a dependent
+dfcog42,serious cognitive difficulties-rd 4/2
+dfdrsb42,difficulty dressing/bathing-rd 4/2
+dfernd42,difficulty doing errands alone-rd 4/2
+dfhear42,serious difficulty hearing-rd 4/2
+dfsee42,serious difficulty see w/glasses-rd 4/2
+dfwlkc42,serious difculty wlk/climb stairs-rd 4/2
+diabaged,age of diagnosis-diabetes
+diabdx,diabetes diagnosis (>17)
+diabw14f,final diabetes care supplement weight
+diffpl42,ac08 oth reas no usc:diffrnt places-r4/2
+diffwg31,persons wages different this rd31 at cmj
+diffwg42,persons wages different this rd42 at cmj
+diffwg53,persons wages different this rd53 at cmj
+disvw31x,disavowed health ins at rd 3/1 cmj (ed)
+disvw42x,disavowed health ins at rd 4/2 cmj (ed)
+disvw53x,disavowed health ins at rd 5/3 cmj (ed)
+divdp14x,person's dividend income
+divimp14,dividend income imputation flag
+dkwhru42,ac08 oth reas no usc:dk where to go-r4/2
+dndlay42,delayed in getting nec dental care-r4/2
+dndlrs42,ac46 rsn dlayd gettng nec dent care-r4/2
+dntins14,dental ins - r5/r3 until 12/31/14
+dntins31,dental ins - rd 3/1 in 14
+dnunab42,unable to get necessary dental care-r4/2
+dnunrs42,ac42 rsn unable get ncsry dent care-r4/2
+dobmm,date of birth: month
+dobyy,date of birth: year
+docels42,ac08 oth reas no usc: dr elsewhere-r4/2
+dpinru14,dependents in/out of ru
+dpotsd14,how many dependents live outside ru
+dsa1c53,dcs: times tested for a-one-c in 2013
+dscb1353,dcs: blood cholesterol checked bef 2013
+dscgrp53,dcs: learned care by taking group class
+dsch1353,dcs: blood cholesterol checked in 2013
+dsch1453,dcs: blood cholesterol checked in 2014
+dsch1553,dcs: blood cholesterol checked in 2015
+dschnv53,dcs: never had blood cholesterol checked
+dscint53,dcs: learned care from reading internet
+dscnpc53,dcs: learned care from other provider
+dsconf53,dcs: confident taking care of diabetes
+dscpcp53,dcs: learned care from primary care prov
+dscphn53,dcs: learn care from phone call w/prov
+dsdia53,dcs: diabetes diagnosis by health prof
+dsdiet53,dcs: treat diabetes w/diet modification
+dseb1353,dcs: dilated eye exam before 2013
+dsey1353,dcs: dilated eye exam in 2013
+dsey1453,dcs: dilated eye exam in 2014
+dsey1553,dcs: dilated eye exam in 2015
+dseynv53,dcs: never had dilated eye exam
+dseypr53,dcs: has diabetes caused eye probs
+dsfb1353,dcs: had feet checked before 2013
+dsfl1353,dcs: got flu vaccination in 2013
+dsfl1453,dcs: got flu vaccination in 2014
+dsfl1553,dcs: got flu vaccination in 2015
+dsflnv53,dcs: never got flu vaccination
+dsft1353,dcs: had feet checked during 2013
+dsft1453,dcs: had feet checked during 2014
+dsft1553,dcs: had feet checked during 2015
+dsftnv53,dcs: never had feet checked
+dsinsu53,dcs: treat diabetes w/insulin injections
+dskidn53,dcs: has diabetes caused kidney problems
+dsmed53,dcs: treat diabetes w/meds by mouth
+dsprx53,dcs: was respondent a proxy
+dsvb1353,dcs: got flu vaccination before 2013
+duid,dwelling unit id
+dupersid,person id (duid + pid)
+dvgen14,# general dentist visits 14
+dvgexp14,total general dentist exp 14
+dvgmcd14,gnrl dental visits - medicaid amt 14
+dvgmcr14,gnrl dental visits - medicare amt 14
+dvgofd14,gnrl dental visits - other fed amt 14
+dvgopr14,gnrl dental visits - oth private amt 14
+dvgopu14,gnrl dental visits - oth public amt 14
+dvgosr14,gnrl dent vsts - ot unclass srce amt 14
+dvgoth14,gnrl dental visits - oth combined amt 14
+dvgprv14,gnrl dental visits - private ins amt 14
+dvgptr14,gnrl dental visits - prv & tri amt 14
+dvgslf14,gnrl dental visits - self/fam amt 14
+dvgstl14,gnrl dental visits - oth st/local amt 14
+dvgtch14,general dental care visit charges 14
+dvgtri14,gnrl dental visits-tricare amt 14
+dvgva14,gnrl dental visits - va/champva amt 14
+dvgwcp14,gnrl dental visits - workers comp amt 14
+dvoexp14,total orthodontist exp 14
+dvomcd14,orthodontist visits - medicaid amt 14
+dvomcr14,orthodontist visits - medicare amt 14
+dvoofd14,orthodontist visits-othr fed amt 14
+dvoopr14,orthodontist visits-othr private amt 14
+dvoopu14,orthodontist visits-othr public amt 14
+dvoosr14,orthodont vsts - ot unclass srce amt 14
+dvooth14,orthodontist visits-oth combined amt 14
+dvoprv14,orthodontist visits - private ins amt 14
+dvoptr14,orthodontist visits - prv & tri amt 14
+dvorth14,# orthodontist visits 14
+dvoslf14,orthodontist visits - self/family amt 14
+dvostl14,orthodontist visits-othr st/local amt 14
+dvotch14,orthodontist visit charges 14
+dvotri14,orthodontist visits-tricare amt 14
+dvova14,orthodontist visits-va/champva amt 14
+dvowcp14,orthodontist visits-workers comp amt 14
+dvtexp14,total dental care exp 14
+dvtmcd14,all dental care - medicaid amt 14
+dvtmcr14,all dental care - medicare amt 14
+dvtofd14,all dental care - other fedrl amt 14
+dvtopr14,all dental care - oth private amt 14
+dvtopu14,all dental care - oth public amt 14
+dvtosr14,all dent care-ot unclass srce amt 14
+dvtot14,# dental care visits 14
+dvtoth14,all dental care - oth combined amt 14
+dvtprv14,all dental care - private ins amt 14
+dvtptr14,all dental care - prv & tri amt 14
+dvtslf14,all dental care - self/family amt 14
+dvtstl14,all dental care - oth st/local amt 14
+dvttch14,total dental care visit charges 14
+dvttri14,all dental care - tricare amt 14
+dvtva14,all dental care - va/champva amt 14
+dvtwcp14,all dental care - workers comp amt 14
+eathlt42,dr advise eat healthy (2-17)-r4/2
+edrecode,education recode (edited)
+educyr,years of educ when first entered meps
+eduyrdg,year of education or highest degree
+eicrdt14,did/will pers receive earned inc credit
+elgrnd14,eligibility status as of 12/31/14
+elgrnd31,eligibility - r3/1
+elgrnd42,eligibility - r4/2
+elgrnd53,eligibility - r5/3
+emphaged,age of diagnosis-emphysema
+emphdx,emphysema diagnosis (>17)
+empst31,employment status rd 3/1
+empst31h,employment status rd 3/1 (imp)
+empst42,employment status rd 4/2
+empst42h,employment status rd 4/2 (imp)
+empst53,employment status rd 5/3
+empst53h,employment status rd 5/3 (imp)
+endrfm14,2014 reference period end date: month
+endrfm31,r3/1 reference period end date: month
+endrfm42,r4/2 reference period end date: month
+endrfm53,r5/3 reference period end date: month
+endrfy14,2014 reference period end date: year
+endrfy31,r3/1 reference period end date: year
+endrfy42,r4/2 reference period end date: year
+endrfy53,r5/3 reference period end date: year
+erdexp14,total emergency room dr exp 14
+erdmcd14,er-medicaid amt - dr 14
+erdmcr14,er-medicare amt - dr 14
+erdofd14,er-other fed amt - dr 14
+erdopr14,er - other private amt - dr 14
+erdopu14,er - other public amt - dr 14
+erdosr14,er-oth unclass srce amt - dr 14
+erdoth14,er-oth combined amt - dr 14
+erdprv14,er-private ins amt - dr 14
+erdptr14,er-prv & tri amt - dr 14
+erdslf14,er-self/family amt - dr 14
+erdstl14,er-oth st/local amt - dr 14
+erdtch14,er doctor visit charges 14
+erdtri14,er-tricare amt - dr 14
+erdva14,er-va/champva amt - dr 14
+erdwcp14,er-workers comp amt - dr 14
+erfexp14,total er facility exp 14
+erfmcd14,er-medicaid amt - fac 14
+erfmcr14,er-medicare amt - fac 14
+erfofd14,er-other federal amt - fac 14
+erfopr14,er-other private amt - fac 14
+erfopu14,er-other public amt - fac 14
+erfosr14,er-oth unclass srce amt - fac 14
+erfoth14,er-oth combined amt - fac 14
+erfprv14,er-private ins amt - fac 14
+erfptr14,er-prv & tri amt - fac 14
+erfslf14,er-self/family amt - fac 14
+erfstl14,er-oth st/local amt - fac 14
+erftch14,er facility visit charges 14
+erftri14,er-tricare amt - fac 14
+erfva14,er-va/champva amt - fac 14
+erfwcp14,er-workers comp amt - fac 14
+ertexp14,total er facility + dr exp 14
+ertmcd14,er-medicaid amt-(fac+dr) 14
+ertmcr14,er-medicare amt-(fac+dr) 14
+ertofd14,er-other fed amt-(fac+dr) 14
+ertopr14,er-oth private amt-(fac+dr) 14
+ertopu14,er-oth public amt-(fac+dr) 14
+ertosr14,er-oth unclass srce amt-(fac+dr) 14
+ertot14,# emergency room visits 14
+ertoth14,er -oth combined amt (fac+dr) 14
+ertprv14,er-priv ins amt-(fac+dr) 14
+ertptr14,er-prv & tri amt (fac+dr) 14
+ertslf14,er-self/family amt-(fac+dr) 14
+ertstl14,er-oth st/local amt-(fac+dr) 14
+erttch14,er facility + dr visit charges 14
+erttri14,er-tricare amt-(fac+dr) 14
+ertva14,er-va/champva amt-(fac+dr) 14
+ertwcp14,er-workers comp amt-(fac+dr) 14
+evretire,person has ever retired
+evrwrk,ever wrkd for pay in life as of 12/31/14
+explop42,ac30 prov explns options to pers-r4/2
+exrcis53,advised to exercise more (>17) - rd 5/3
+famid14,family id (student merged in) - 12/31/14
+famid31,family id (student merged in) - r3/1
+famid42,family id (student merged in) - r4/2
+famid53,family id (student merged in) - r5/3
+famidyr,annual family identifier
+faminc14,family's total income
+famrfpyr,reference person of annualized family
+fams1231,family size of responding 12/31 family
+famsze14,ru size including student as of 12/31/14
+famsze31,ru size including students - r3/1
+famsze42,ru size including students - r4/2
+famsze53,ru size including students - r5/3
+famszeyr,size of responding annualized family
+famwt14c,pov adj family wgt-cps fam on 12/31/14
+famwt14f,"final family weight, 2014"
+fcrp1231,ref person of 12/31 cps family
+fcsz1231,fam size responding 12/31 cps family
+filedr14,has person filed a fed income tax return
+filer14,primary or secondary filer
+flstat14,person's filing status
+flusht53,how lng last flu vacination (>17)-rd 5/3
+fmrs1231,member of responding 12/31 family
+fngrdf31,difficulty using fingers to grasp-rd 3/1
+fngrdf53,difficulty using fingers to grasp-rd 5/3
+foodmn14,number of months food stamps purchased
+foodst14,did anyone purchase food stamps
+foodvl14,monthly value of food stamps
+fsaamt31,fsa total amount for ru - r3/1
+fsagt31,anyone in ru have fsa - r3/1
+ftstu14x,student status if ages 17-23 - 12/31/14
+ftstu31x,student status if ages 17-23 - r3/1
+ftstu42x,student status if ages 17-23 - r4/2
+ftstu53x,student status if ages 17-23 - r5/3
+gendrp42,ac20 is provider male or female-r4/2
+hasfsa31,person is fsa holder - r3/1
+haveus42,ac05 does person have usc provider-r4/2
+havfun42,problem having fun (5-17) - r4/2
+health42,ac08 oth reas no usc: hlth related-r4/2
+hearad42,person wears hearing aid - rd 4/2
+held31x,health insur held from rd 3/1 cmj (ed)
+held42x,health insur held from rd 4/2 cmj (ed)
+held53x,health insur held from rd 5/3 cmj (ed)
+helmet42,dr advise bike helmet (2-17)-r4/2
+hhaexp14,total home health agency exp 14
+hhagd14,# agency home health provider days 14
+hhamcd14,home hlth agency - medicaid amt 14
+hhamcr14,home hlth agency - medicare amt 14
+hhaofd14,home hlth agency - other fed amt 14
+hhaopr14,home hlth agency - oth private amt 14
+hhaopu14,home hlth agency - oth public amt 14
+hhaosr14,h hlth agency - ot unclass srce amt 14
+hhaoth14,home hlth agency - oth combined amt 14
+hhaprv14,home hlth agency - private ins amt 14
+hhaptr14,home hlth agency - prv & tri amt 14
+hhaslf14,home hlth agency - self/family amt 14
+hhastl14,home hlth agency-othr st/local amt 14
+hhatch14,home health agency visit charges 14
+hhatri14,home hlth agency-tricare amt 14
+hhava14,home hlth agency-va/champva amt 14
+hhawcp14,home hlth agency - workers comp amt 14
+hhindd14,# non-agency home health providr days 14
+hhinfd14,# informal home health provider days 14
+hhnexp14,total home health non-agncy exp 14
+hhnmcd14,home hlth non-agncy - medicaid amt 14
+hhnmcr14,home hlth non-agncy - medicare amt 14
+hhnofd14,home hlth non-agncy-othr fed amt 14
+hhnopr14,home hlth non-agncy-oth private amt 14
+hhnopu14,home hlth non-agncy-oth public amt 14
+hhnosr14,h hlth non-agncy-ot unclass srce amt 14
+hhnoth14,home hlth non-agncy-oth combined amt 14
+hhnprv14,home hlth non-agncy - priv ins amt 14
+hhnptr14,home hlth non-agncy - prv & tri amt 14
+hhnslf14,home hlth non-agncy - self/fam amt 14
+hhnstl14,home hlth non-agncy-othr st/locl amt 14
+hhntch14,home health non-agency visit charges 14
+hhntri14,home hlth non-agncy-tricare amt 14
+hhnva14,home hlth non-agncy-va/champva amt 14
+hhnwcp14,home hlth non-agncy-workers comp amt 14
+hhtotd14,"# home health provider days, 2014"
+hibpaged,age of diagnosis-high blood pressure
+hibpdx,high blood pressure diag (>17)
+hieuidx,hieu identifier
+hispanx,hispanic ethnicity (edited/imputed)
+hispncat,hispanic ethnicity (edited/imputed)
+homebh42,problem w/behavior at home (5-17)-r4/2
+honrdc31,honorably discharged from military
+honrdc42,honorably discharged from military
+honrdc53,honorably discharged from military
+hour31,hours per week at rd 3/1 cmj
+hour31h,hours per week at rd 3/1 cmj (imp)
+hour42,hours per week at rd 4/2 cmj
+hour42h,hours per week at rd 4/2 cmj (imp)
+hour53,hours per week at rd 5/3 cmj
+hour53h,hours per week at rd 5/3 cmj (imp)
+hpdap14,holder of priv ins (source unknwn) apr14
+hpdau14,holder of priv ins (source unknwn) aug14
+hpdde14,holder of priv ins (source unknwn) dec14
+hpdfe14,holder of priv ins (source unknwn) feb14
+hpdja14,holder of priv ins (source unknwn) jan14
+hpdjl14,holder of priv ins (source unknwn) jul14
+hpdju14,holder of priv ins (source unknwn) jun14
+hpdma14,holder of priv ins (source unknwn) mar14
+hpdmy14,holder of priv ins (source unknwn) may14
+hpdno14,holder of priv ins (source unknwn) nov14
+hpdoc14,holder of priv ins (source unknwn) oct14
+hpdse14,holder of priv ins (source unknwn) sep14
+hpeap14,holder of empl union ins in apr14
+hpeau14,holder of empl union ins in aug14
+hpede14,holder of empl union ins in dec14
+hpefe14,holder of empl union ins in feb14
+hpeja14,holder of empl union ins in jan14
+hpejl14,holder of empl union ins in jul14
+hpeju14,holder of empl union ins in jun14
+hpema14,holder of empl union ins in mar14
+hpemy14,holder of empl union ins in may14
+hpeno14,holder of empl union ins in nov14
+hpeoc14,holder of empl union ins in oct14
+hpese14,holder of empl union ins in sep14
+hpnap14,holder of nongroup ins in apr14
+hpnau14,holder of nongroup ins in aug14
+hpnde14,holder of nongroup ins in dec14
+hpnfe14,holder of nongroup ins in feb14
+hpnja14,holder of nongroup ins in jan14
+hpnjl14,holder of nongroup ins in jul14
+hpnju14,holder of nongroup ins in jun14
+hpnma14,holder of nongroup ins in mar14
+hpnmy14,holder of nongroup ins in may14
+hpnno14,holder of nongroup ins in nov14
+hpnoc14,holder of nongroup ins in oct14
+hpnse14,holder of nongroup ins in sep14
+hpoap14,holder of other group ins in apr14
+hpoau14,holder of other group ins in aug14
+hpode14,holder of other group ins in dec14
+hpofe14,holder of other group ins in feb14
+hpoja14,holder of other group ins in jan14
+hpojl14,holder of other group ins in jul14
+hpoju14,holder of other group ins in jun14
+hpoma14,holder of other group ins in mar14
+hpomy14,holder of other group ins in may14
+hpono14,holder of other group ins in nov14
+hpooc14,holder of other group ins in oct14
+hpose14,holder of other group ins in sep14
+hprap14,holder of private insurance in apr14
+hprau14,holder of private insurance in aug14
+hprde14,holder of private insurance in dec14
+hprfe14,holder of private insurance in feb14
+hprja14,holder of private insurance in jan14
+hprjl14,holder of private insurance in jul14
+hprju14,holder of private insurance in jun14
+hprma14,holder of private insurance in mar14
+hprmy14,holder of private insurance in may14
+hprno14,holder of private insurance in nov14
+hproc14,holder of private insurance in oct14
+hprse14,holder of private insurance in sep14
+hpsap14,holder of self-emp-1 ins in apr14
+hpsau14,holder of self-emp-1 ins in aug14
+hpsde14,holder of self-emp-1 ins in dec14
+hpsfe14,holder of self-emp-1 ins in feb14
+hpsja14,holder of self-emp-1 ins in jan14
+hpsjl14,holder of self-emp-1 ins in jul14
+hpsju14,holder of self-emp-1 ins in jun14
+hpsma14,holder of self-emp-1 ins in mar14
+hpsmy14,holder of self-emp-1 ins in may14
+hpsno14,holder of self-emp-1 ins in nov14
+hpsoc14,holder of self-emp-1 ins in oct14
+hpsse14,holder of self-emp-1 ins in sep14
+hpxap14,holder of priv ins through exch in apr14
+hpxau14,holder of priv ins through exch in aug14
+hpxde14,holder of priv ins through exch in dec14
+hpxfe14,holder of priv ins through exch in feb14
+hpxja14,holder of priv ins through exch in jan14
+hpxjl14,holder of priv ins through exch in jul14
+hpxju14,holder of priv ins through exch in jun14
+hpxma14,holder of priv ins through exch in mar14
+hpxmy14,holder of priv ins through exch in may14
+hpxno14,holder of priv ins through exch in nov14
+hpxoc14,holder of priv ins through exch in oct14
+hpxse14,holder of priv ins through exch in sep14
+hrhow31,how hourly wage was calculated rd 3/1
+hrhow42,how hourly wage was calculated rd 4/2
+hrhow53,how hourly wage was calculated rd 5/3
+hrwg31h,hourly wage rd 3/1 cmj (imp)
+hrwg31x,hourly wage rd 3/1 cmj (imp)
+hrwg42h,hourly wage rd 4/2 cmj (imp)
+hrwg42x,hourly wage rd 4/2 cmj (imp)
+hrwg53h,hourly wage rd 5/3 cmj (imp)
+hrwg53x,hourly wage rd 5/3 cmj (imp)
+hrwgim31,hrwg31x imputation flag
+hrwgim42,hrwg42x imputation flag
+hrwgim53,hrwg53x imputation flag
+hselim31,housework limitation - rd 3/1
+hselim53,housework limitation - rd 5/3
+hsplap42,ac18 is provider hispanic or latino-r4/2
+hwellspe,how well person speaks english
+hyster53,had a hysterectomy (>17) - rd 5/3
+iadlhp31,iadl screener - rd 3/1
+iadlhp53,iadl screener - rd 5/3
+indcat31,industry group rd 3/1 cmj
+indcat42,industry group rd 4/2 cmj
+indcat53,industry group rd 5/3 cmj
+indct31h,industry group rd 3/1 cmj (imp)
+indct42h,industry group rd 4/2 cmj (imp)
+indct53h,industry group rd 5/3 cmj (imp)
+ins14x,insured - 12/31/14 (ed)
+ins31x,insured - r3/1 int date (ed)
+ins42x,insured - r4/2 int date (ed)
+ins53x,insured 12-31/r3 int date (ed)
+insap14x,covr by hosp/med ins in apr14 (ed)
+insat14x,insured any time in r5/r3 until 12/31/14
+insat31x,insured any time in r3/1
+insat42x,insured any time in r4/2
+insat53x,insured any time in r5/3
+insau14x,covr by hosp/med ins in aug14 (ed)
+insc1231,inscope status on 12/31/14
+inscop14,inscope - r5/3 start through 12/31/14
+inscop31,inscope - r3/1
+inscop42,inscope - r4/2
+inscop53,inscope - r5/3
+inscope,was person ever inscope in 2014
+inscov14,health insurance coverage indicator 14
+insde14x,covr by hosp/med ins in dec14 (ed)
+insendmm,month most recently covd-panel 19 only
+insendyy,year most recently covd-panel 19 only
+insfe14x,covr by hosp/med ins in feb14 (ed)
+insja14x,covr by hosp/med ins in jan14 (ed)
+insjl14x,covr by hosp/med ins in jul14 (ed)
+insju14x,covr by hosp/med ins in jun14 (ed)
+insma14x,covr by hosp/med ins in mar14 (ed)
+insmy14x,covr by hosp/med ins in may14 (ed)
+insno14x,covr by hosp/med ins in nov14 (ed)
+insoc14x,covr by hosp/med ins in oct14 (ed)
+insrpl42,ac08 oth reas no usc:just chngd ins-r4/2
+insse14x,covr by hosp/med ins in sep14 (ed)
+insurc14,full year insurance coverage status 2014
+intimp14,interest income imputation flag
+intrp14x,person's interest income
+intvlang,language interview was completed
+ipdexp14,totl hosp staz dr exp 14
+ipdis14,"# hospital discharges, 2014"
+ipdmcd14,ip hosp staz-medicaid amt-dr 14
+ipdmcr14,ip hosp staz-medicare amt- dr 14
+ipdofd14,ip hosp staz-other fed amt-dr 14
+ipdopr14,ip hosp staz - oth private amt-dr 14
+ipdopu14,ip hosp staz - oth public amt-dr 14
+ipdosr14,ip hosp staz-ot unclass sorce amt-dr 14
+ipdoth14,ip hosp staz-oth combined amt-dr 14
+ipdprv14,ip hosp staz-priv ins amt-dr 14
+ipdptr14,ip hosp staz-prv & tri amt-dr 14
+ipdslf14,ip hosp staz-self/family amt-dr 14
+ipdstl14,ip hosp staz-oth st/local amt-dr 14
+ipdtch14,ip hosp stay charges - dr 14
+ipdtri14,ip hosp staz-tricare amt-dr 14
+ipdva14,ip hosp staz-va/champva amt-dr 14
+ipdwcp14,ip hosp staz-workers comp amt-dr 14
+ipfexp14,tot hosp ip facility exp-inc 0 nites 14
+ipfmcd14,ip hosp staz-medicaid amt-fac 14
+ipfmcr14,ip hosp staz-medicare amt-fac 14
+ipfofd14,ip hosp staz-other fed amt-fac 14
+ipfopr14,ip hosp staz - oth private amt-fac 14
+ipfopu14,ip hosp staz - oth public amt-fac 14
+ipfosr14,ip hosp staz-ot unclass srce amt-fac 14
+ipfoth14,ip hosp staz-oth combined amt-fac 14
+ipfprv14,ip hosp staz-priv ins amt-fac 14
+ipfptr14,ip hosp staz-prv & tri amt-fac 14
+ipfslf14,ip hosp staz-self/family amt-fac 14
+ipfstl14,ip hosp staz-oth st/local amt-fac 14
+ipftch14,ip hosp stay charges - fac 14
+ipftri14,ip hosp staz-tricare amt-fac 14
+ipfva14,ip hosp staz-va/champva amt-fac 14
+ipfwcp14,ip hosp staz-workers comp amt-fac 14
+ipngtd14,"# nights in hosp for discharges, 2014"
+iptexp14,tot hosp ip facility + dr exp 14
+iptmcd14,ip hosp staz-medicaid amt-(fac+dr) 14
+iptmcr14,ip hosp staz-medicare amt-(fac+dr) 14
+iptofd14,ip hosp staz-other fed amt-(fac+dr) 14
+iptopr14,ip hosp staz-oth private amt-(fac+dr) 14
+iptopu14,ip hosp staz-oth public amt-(fac+dr) 14
+iptosr14,ip hsp staz-oth uncls src amt(fac+dr) 14
+iptoth14,ip hosp staz-oth combined amt(fac+dr) 14
+iptprv14,ip hosp staz-priv ins amt-(fac+dr) 14
+iptptr14,ip hosp staz-prv & tri amt-(fac+dr) 14
+iptslf14,ip hosp staz-self/family amt-(fac+dr) 14
+iptstl14,ip hsp staz-oth st/local amt-(fac+dr) 14
+ipttch14,ip hosp stay charges (fac+dr) 14
+ipttri14,ip hosp staz-tricare amt-(fac+dr) 14
+iptva14,ip hosp staz-va/champva amt-(fac+dr) 14
+iptwcp14,ip hosp staz-wrkrs comp amt-(fac+dr) 14
+ipzero14,# zero-night hospital stays 14
+iraimp14,ira income imputation flag
+irasp14x,person's ira income
+jborg31h,"prv, st-lc gov, fed gov rd 3/1 cmj (imp)"
+jborg42h,"prv, st-lc gov, fed gov rd 4/2 cmj (imp)"
+jborg53h,"prv, st-lc gov, fed gov rd 5/3 cmj (imp)"
+jntpid14,pid of secondary filer
+joborg31,"priv (profit,nonprofit) gov rd 3/1 cmj"
+joborg42,"priv (profit,nonprofit) gov rd 4/2 cmj"
+joborg53,"priv (profit,nonprofit) gov rd 5/3 cmj"
+jobrsn42,ac08 oth reas no usc: job related-r4/2
+jtinru14,joint filer's membership in ru
+jtpain31,joint pain last 12 months (>17) - rd 3/1
+jtpain53,joint pain last 12 months (>17) - rd 5/3
+k6sum42,saq 30 days: overall rating of feelings
+keyness,person key status
+kidpro42,prblm getting along w/kids (5-17)-r4/2
+knowdr42,ac08 oth reas no usc: knows/is a dr-r4/2
+langspk,language spoken at home other than engl
+lapblt42,dr advise lap/shoulder belt (80<wt)-r4/2
+lftdif31,difficulty lifting 10 pounds - rd 3/1
+lftdif53,difficulty lifting 10 pounds - rd 5/3
+locatn42,usc location-r4/2
+lsteth53,lost all uppr and lowr teeth (>17)-rd5/3
+mamogr53,how lng snce lst mammogram (>29) - rd5/3
+marry14x,marital status-12/31/14 (edited/imputed)
+marry31x,marital status - r3/1 (edited/imputed)
+marry42x,marital status - r4/2 (edited/imputed)
+marry53x,marital status - r5/3 (edited/imputed)
+mcaid14,cov by medicaid or schip - 12/31/14
+mcaid14x,cov by medicaid or schip - 12/31/14 (ed)
+mcaid31,cov by medicaid or schip - r3/1 int dt
+mcaid31x,cov by medicaid/schip - r3/1 int dt (ed)
+mcaid42,cov by medicaid or schip - r4/2 int dt
+mcaid42x,cov by medicaid/schip - r4/2 int dt (ed)
+mcaid53,cov by medicaid or schip 12-31/r3 int dt
+mcaid53x,cov medicaid/schip 12-31/r3 int dt (ed)
+mcare14,cov by medicare - 12/31/14
+mcare14x,cov by medicare -12/31/14 (ed)
+mcare31,cov by medicare - r3/1 int dt
+mcare31x,cov by medicare - r3/1 int dt (ed)
+mcare42,cov by medicare - r4/2 int dt
+mcare42x,cov by medicare - r4/2 int dt (ed)
+mcare53,cov by medicare 12-31/r3 int dt
+mcare53x,cov by medicare 12-31/r3 int dt (ed)
+mcdap14,cov by medicaid or schip in apr14
+mcdap14x,cov by medicaid or schip in apr14 (ed)
+mcdat14x,cov by medicaid or schip - 12/31/14
+mcdat31x,any time cov medicaid or schip - r3/1
+mcdat42x,any time cov medicaid or schip - r4/2
+mcdat53x,any time cov medicaid or schip - r5/3
+mcdau14,cov by medicaid or schip in aug14
+mcdau14x,cov by medicaid or schip in aug14 (ed)
+mcdde14,cov by medicaid or schip in dec14
+mcdde14x,cov by medicaid or schip in dec14 (ed)
+mcdev14,ever have medicaid/schip during 14 (ed)
+mcdfe14,cov by medicaid or schip in feb14
+mcdfe14x,cov by medicaid or schip in feb14 (ed)
+mcdhmo14,covered by medicaid or schip hmo–12/31/14
+mcdhmo31,covered by medicaid or schip hmo - r3/1
+mcdhmo42,covered by medicaid or schip hmo - r4/2
+mcdja14,cov by medicaid or schip in jan14
+mcdja14x,cov by medicaid or schip in jan14 (ed)
+mcdjl14,cov by medicaid or schip in jul14
+mcdjl14x,cov by medicaid or schip in jul14 (ed)
+mcdju14,cov by medicaid or schip in jun14
+mcdju14x,cov by medicaid or schip in jun14 (ed)
+mcdma14,cov by medicaid or schip in mar14
+mcdma14x,cov by medicaid or schip in mar14 (ed)
+mcdmc14,cov by mcaid/schip gtkeepr plan–12/31/14
+mcdmc31,cov by mcaid/schip gatekeeper plan-r3/1
+mcdmc42,cov by mcaid/schip gatekeeper plan-r4/2
+mcdmy14,cov by medicaid or schip in may14
+mcdmy14x,cov by medicaid or schip in may14 (ed)
+mcdno14,cov by medicaid or schip in nov14
+mcdno14x,cov by medicaid or schip in nov14 (ed)
+mcdoc14,cov by medicaid or schip in oct14
+mcdoc14x,cov by medicaid or schip in oct14 (ed)
+mcdse14,cov by medicaid or schip in sep14
+mcdse14x,cov by medicaid or schip in sep14 (ed)
+mcrap14,covered by medicare in apr14
+mcrap14x,covered by medicare in apr14 (ed)
+mcrau14,covered by medicare in aug14
+mcrau14x,covered by medicare in aug14 (ed)
+mcrde14,covered by medicare in dec14
+mcrde14x,covered by medicare in dec14 (ed)
+mcrev14,ever have medicare during 14 (ed)
+mcrfe14,covered by medicare in feb14
+mcrfe14x,covered by medicare in feb14 (ed)
+mcrja14,covered by medicare in jan14
+mcrja14x,covered by medicare in jan14 (ed)
+mcrjl14,covered by medicare in jul14
+mcrjl14x,covered by medicare in jul14 (ed)
+mcrju14,covered by medicare in jun14
+mcrju14x,covered by medicare in jun14 (ed)
+mcrma14,covered by medicare in mar14
+mcrma14x,covered by medicare in mar14 (ed)
+mcrmy14,covered by medicare in may14
+mcrmy14x,covered by medicare in may14 (ed)
+mcrno14,covered by medicare in nov14
+mcrno14x,covered by medicare in nov14 (ed)
+mcroc14,covered by medicare in oct14
+mcroc14x,covered by medicare in oct14 (ed)
+mcrpb14,cov by medicare part b–12/31/14
+mcrpb31,cov by medicare part b - r3/1
+mcrpb42,cov by medicare part b - r4/2
+mcrpd14,cov by medicare pmed benefit – 12/31/14
+mcrpd14x,cov by mcare pmed benefit–12/31/14(ed)
+mcrpd31,cov by medicare pmed benefit - r3/1
+mcrpd31x,cov by medicare pmed benefit - r3/1 (ed)
+mcrpd42,cov by medicare pmed benefit - r4/2
+mcrpd42x,cov by medicare pmed benefit - r4/2 (ed)
+mcrpho14,covered by medicare managed care–12/31/14
+mcrpho31,cov by medicare managed care - r3/1
+mcrpho42,cov by medicare managed care - r4/2
+mcrse14,covered by medicare in sep14
+mcrse14x,covered by medicare in sep14 (ed)
+mcs42,saq:mnt component summry sf-12v2 imputed
+mddlay42,delayed in getting necsry med care-r4/2
+mddlrs42,ac38 rsn dlayd getting nec med care-r4/2
+mdunab42,unable to get necessry medical care-r4/2
+mdunrs42,ac34 rsn unable get necsry med care-r4/2
+mesbpr42,dr checked blood pressure (2-17)-r4/2
+meshgt42,doctor ever measured height (0-17)-r4/2
+mesvis42,doctor checked child's vision (3-6)-r4/2
+meswgt42,doctor ever measured weight (0-17)-r4/2
+miaged,age of diagnosis-heart attack(mi)
+midx,heart attack (mi) diag (>17)
+mildif31,difficulty walking a mile - rd 3/1
+mildif53,difficulty walking a mile - rd 5/3
+minorp42,ac22 go to usc for new health prob-r4/2
+mnhlth31,perceived mental health status - rd 3/1
+mnhlth42,perceived mental health status - rd 4/2
+mnhlth53,perceived mental health status - rd 5/3
+mompro42,problem getting along w/mom (5-17)-r4/2
+mopid31x,pid of person's mom - rd 3/1
+mopid42x,pid of person's mom - rd 4/2
+mopid53x,pid of person's mom - rd 5/3
+more31,rd 3/1 cmj firm has more than 1 locat
+more31h,rd 3/1 cmj firm more than 1 locat (imp)
+more42,rd 4/2 cmj firm has more than 1 locat
+more42h,rd 4/2 cmj firm more than 1 locat (imp)
+more53,rd 5/3 cmj firm has more than 1 locat
+more53h,rd 5/3 cmj firm more than 1 locat (imp)
+morecovr,cov by mor compr pl prev 2 yr-pn 19 only
+morjob31,has more than one job rd 3/1 int date
+morjob42,has more than one job rd 4/2 int date
+morjob53,has more than one job rd 5/3 int date
+myself42,ac08 oth reas no usc:no doc/trt slf-r4/2
+natamp42,ac19 is provider native american-r4/2
+nervaf42,prblm feeling nervous/afraid (5-17)-r4/2
+neware42,ac08 oth reas no usc:recently moved-r4/2
+newdoc42,ac08 oth reas no usc: lookng for dr-r4/2
+nhrwg31,updated hrly wage rd 3/1 cmj (edited)
+nhrwg42,updated hrly wage rd 4/2 cmj (edited)
+nhrwg53,updated hrly wage rd 5/3 cmj (edited)
+nmemp31h,number of employees at rd 3/1 cmj (imp)
+nmemp42h,number of employees at rd 4/2 cmj (imp)
+nmemp53h,number of employees at rd 5/3 cmj (imp)
+noaspr53,taking aspirin unsafe (>17) - rd 5/3
+nofat53,restrict hgh fat/choles food (>17)-rd5/3
+nogodr42,ac08 oth reas no usc: wont go to dr-r4/2
+nohins42,ac08 oth reas no usc:no hlth insrnc-r4/2
+noinsbef,evr wout hlth insr prev yr-panel 19 only
+noinstm,# wks/mon wout hlth ins prv yr-pn 19 onl
+noinunit,unit of time wout hlth ins-panel 19 only
+nolike42,ac08 oth reas no usc: dont like drs-r4/2
+noreas42,ac08 oth reas no usc:no oth reasons-r4/2
+nosmok42,dr advise smkg in home is bad(0-17)-r4/2
+numemp31,number of employees at rd 3/1 cmj
+numemp42,number of employees at rd 4/2 cmj
+numemp53,number of employees at rd 5/3 cmj
+nwk31,reason not working during rd 3/1
+nwk42,reason not working during rd 4/2
+nwk53,reason not working during rd 5/3
+obaexp14,total off-based phys ass t exp 14
+obamcd14,phys ass t off vsts - medicaid amt 14
+obamcr14,phys ass t off vsts - medicare amt 14
+obaofd14,phys ass t off vsts - other fed amt 14
+obaopr14,phys ass t off vsts - oth private amt 14
+obaopu14,phys ass t off vsts - oth public amt 14
+obaosr14,p a off vsts - oth unclass srce amt 14
+obaoth14,phys asst off vsts - oth combined amt 14
+obaprv14,phys ass t off vsts - private ins amt 14
+obaptr14,phys asst off vsts - prv & tri amt 14
+obaslf14,phys ass t off vsts - self/family amt 14
+obasst14,# off-based physician assist visits 14
+obastl14,phys ass t off vsts - oth st/locl amt 14
+obatch14,office-based phys asst visit charges 14
+obatri14,phys ass t off vsts - tricare amt 14
+obava14,phys ass t off vsts - va/champva amt 14
+obawcp14,phys ass t off vsts-workers comp amt 14
+obcexp14,total off-based chiro exp 14
+obchir14,# office-based chiropractor visits 14
+obcmcd14,chiro off visits - medicaid amt 14
+obcmcr14,chiro off visits - medicare amt 14
+obcofd14,chiro off visits - other federal amt 14
+obcopr14,chiro off vists - othr private amt 14
+obcopu14,chiro off vists - othr public amt 14
+obcosr14,chiro off vsts-othr unclass srce amt 14
+obcoth14,chiro off visits -oth combined amt 14
+obcprv14,chiro off visits - private ins amt 14
+obcptr14,chiro off visits - prv & tri amt 14
+obcslf14,chiro off visits - self/family amt 14
+obcstl14,chiro off visits - oth st/local amt 14
+obctch14,office-based chiro visit charges 14
+obctri14,chiro off visits - tricare amt 14
+obcva14,chiro off visits - va/champva amt 14
+obcwcp14,chiro off visits - workers comp amt 14
+obdexp14,total off-based dr exp 14
+obdmcd14,dr office visits - medicaid amt 14
+obdmcr14,dr office visits - medicare amt 14
+obdofd14,dr office visits - other federal amt 14
+obdopr14,dr office visits - oth private amt 14
+obdopu14,dr office visits - oth public amt 14
+obdosr14,dr off vsts - oth unclass srce amt 14
+obdoth14,dr office visits - oth combined amt 14
+obdprv14,dr office visits - private ins amt 14
+obdptr14,dr office visits - prv & tri amt 14
+obdrv14,# office-based physician visits 14
+obdslf14,dr office visits - self/family amt 14
+obdstl14,dr office visits - oth st/local amt 14
+obdtch14,office-based physician visit charges 14
+obdtri14,dr office visits - tricare amt 14
+obdva14,dr office visits - va/champva amt 14
+obdwcp14,dr office visits - workers comp amt 14
+obeexp14,total off-based optometrist exp 14
+obemcd14,optometrist off vsts - medicaid amt 14
+obemcr14,optometrist off vsts - medicare amt 14
+obeofd14,optometrist off vsts-oth federal amt 14
+obeopr14,optometrist off vsts-oth private amt 14
+obeopu14,optometrist off vsts - oth public amt 14
+obeosr14,optom off vsts-oth unclass srce amt 14
+obeoth14,optometrist off vsts-oth combined amt 14
+obeprv14,optometrist off vsts-private ins amt 14
+obeptr14,optometrist off vsts - prv & tri amt 14
+obeslf14,optometrist off vsts-self/family amt 14
+obestl14,optometrist off vsts-oth st/locl amt 14
+obetch14,office-based optomtrist visit charges 14
+obetri14,optometrist off vsts - tricare amt 14
+obeva14,optometrist off vsts - va/champva amt 14
+obewcp14,optometrist off vsts-workers comp amt 14
+obnexp14,total off-based nurse/prac 14
+obnmcd14,nurse/prac off vsts - medicaid amt 14
+obnmcr14,nurse/prac off visits - medicare amt 14
+obnofd14,nurse/prac off vsts-other federal amt 14
+obnopr14,nurse/prac off vsts - oth private amt 14
+obnopu14,nurse/prac off vsts - oth public amt 14
+obnosr14,nrs/pr off vsts-oth unclass srce amt 14
+obnoth14,nurse/prac off vsts-oth combined amt 14
+obnprv14,nurse/prac off vsts-private ins amt 14
+obnptr14,nurse/prac off vsts - prv & tri amt 14
+obnslf14,nurse/prac off visits-self/family amt 14
+obnstl14,nurse/prac off vsts-oth st/local amt 14
+obntch14,office-based nurse/prac visit charges 14
+obntri14,nurse/prac off vsts - tricare amt 14
+obnurs14,# off-based nurse/practitioner visits 14
+obnva14,nurse/prac off vsts - va/champva amt 14
+obnwcp14,nurse/prac off vsts-workers comp amt 14
+oboexp14,total off-based non-dr exp 14
+obomcd14,non-dr off vists - medicaid amt 14
+obomcr14,non-dr off vists - medicare amt 14
+oboofd14,non-dr off vists - other federal amt 14
+oboopr14,non-dr off vists - oth private amt 14
+oboopu14,non-dr off vists - oth public amt 14
+oboosr14,non-dr of vsts - oth unclass srce amt 14
+obooth14,non-dr off vists - oth combined amt 14
+oboprv14,non-dr off vists - private ins amt 14
+obopto14,# off-based optometrist visits 14
+oboptr14,non-dr off vists - prv & tri amt 14
+oboslf14,non-dr off vists - self/family amt 14
+obostl14,non-dr off vists - oth st/local amt 14
+obotch14,office-based non-dr visit charges 14
+obothv14,# office-based non-physican visits 14
+obotri14,non-dr off vists - tricare amt 14
+obova14,non-dr off vists - va/champva amt 14
+obowcp14,non-dr off vists - workers comp amt 14
+obtexp14,tot off-based pt exp 14
+obther14,# off-based pt/ot visits 14
+obtmcd14,pt/ot off visits - medicaid amt 14
+obtmcr14,pt/ot off visits - medicare amt 14
+obtofd14,pt/ot off visits - other fed amt 14
+obtopr14,pt/ot off visits - oth private amt 14
+obtopu14,pt/ot off visits - oth public amt 14
+obtosr14,pt/ot off vsts-oth unclass srce amt 14
+obtoth14,pt/ot off visits - oth combined amt 14
+obtotv14,# office-based provider visits 14
+obtprv14,pt/ot off visits - private ins amt 14
+obtptr14,pt/ot off visits - prv & tri amt 14
+obtslf14,pt/ot off visits - self/family amt 14
+obtstl14,pt/ot off visits - oth st/locl amt 14
+obttch14,office-based pt/oc visit charges 14
+obttri14,pt/ot off visits - tricare amt 14
+obtva14,pt/ot off visits - va/champva amt 14
+obtwcp14,pt/ot off visits - workers comp amt 14
+obvexp14,total office-based exp 14
+obvmcd14,all office visits - medicaid amt 14
+obvmcr14,all office visits - medicare amt 14
+obvofd14,all office visits-other federal amt 14
+obvopr14,all office visits - oth private amt 14
+obvopu14,all office visits - oth public amt 14
+obvosr14,all off vsts - oth unclass srce amt 14
+obvoth14,all office visits - oth combined amt 14
+obvprv14,all office visits - private ins amt 14
+obvptr14,all office visits - prv & tri amt 14
+obvslf14,all office visits - self/family amt 14
+obvstl14,all office visits-oth st/local amt 14
+obvtch14,office-based provider visit charges 14
+obvtri14,all office visits-tricare amt 14
+obvva14,all office visits-va/champva amt 14
+obvwcp14,all office visits - workers comp amt 14
+occcat31,occupation group rd 3/1 cmj
+occcat42,occupation group rd 4/2 cmj
+occcat53,occupation group rd 5/3 cmj
+occct31h,occupation group rd 3/1 cmj (imp)
+occct42h,occupation group rd 4/2 cmj (imp)
+occct53h,occupation group rd 5/3 cmj (imp)
+ofemp31h,emp offers health ins rd 3/1 cmj (imp)
+ofemp42h,emp offers health ins rd 4/2 cmj (imp)
+ofemp53h,emp offers health ins rd 5/3 cmj (imp)
+offer31h,health insur offered by rd 3/1 cmj (imp)
+offer31x,health insur offered by rd 3/1 cmj (ed)
+offer42h,health insur offered by rd 4/2 cmj (imp)
+offer42x,health insur offered by rd 4/2 cmj (ed)
+offer53h,health insur offered by rd 5/3 cmj (imp)
+offer53x,health insur offered by rd 5/3 cmj (ed)
+offhou42,ac24 usc has offce hrs nghts/wkends-r4/2
+ofremp31,employer offers health ins rd 3/1 cmj
+ofremp42,employer offers health ins rd 4/2 cmj
+ofremp53,employer offers health ins rd 5/3 cmj
+ohrtaged,age of diagnosis-other heart disease
+ohrtdx,other heart disease diag (>17)
+ongong42,ac22 go to usc for ongoing hlth prb-r4/2
+onjob42,ac08 oth reas no usc: dr at work-r4/2
+opaap14,cov by other public a ins in apr14
+opaau14,cov by other public a ins in aug14
+opade14,cov by other public a ins in dec14
+opaev14,ever have other public a ins during 14
+opafe14,cov by other public a ins in feb14
+opaja14,cov by other public a ins in jan14
+opajl14,cov by other public a ins in jul14
+opaju14,cov by other public a ins in jun14
+opama14,cov by other public a ins in mar14
+opamy14,cov by other public a ins in may14
+opano14,cov by other public a ins in nov14
+opaoc14,cov by other public a ins in oct14
+opase14,cov by other public a ins in sep14
+opbap14,cov by other public b ins in apr14
+opbau14,cov by other public b ins in aug14
+opbde14,cov by other public b ins in dec14
+opbev14,ever have other public b ins during 14
+opbfe14,cov by other public b ins in feb14
+opbja14,cov by other public b ins in jan14
+opbjl14,cov by other public b ins in jul14
+opbju14,cov by other public b ins in jun14
+opbma14,cov by other public b ins in mar14
+opbmy14,cov by other public b ins in may14
+opbno14,cov by other public b ins in nov14
+opboc14,cov by other public b ins in oct14
+opbse14,cov by other public b ins in sep14
+opdexp14,total outpatient provider exp 14
+opdmcd14,all opd visits-medicaid amt-dr 14
+opdmcr14,all opd visits-medicare amt-dr 14
+opdofd14,all opd visits-other fed amt-dr 14
+opdopr14,all opd visits - oth private amt-dr 14
+opdopu14,all opd visits-oth public amt-dr 14
+opdosr14,all opd vsts-oth unclass srce amt-dr 14
+opdoth14,all opd visits-oth combined amt-dr 14
+opdprv14,all opd visits-priv ins amt-dr 14
+opdptr14,all opd visits-prv & tri amt -dr 14
+opdrv14,# outpatient dept physician visits 14
+opdslf14,all opd visits-self/family amt-dr 14
+opdstl14,all opd visits-oth st/local amt-dr 14
+opdtch14,opd provider visit charges - dr 14
+opdtri14,all opd visits-tricare amt-dr 14
+opdva14,all opd visits-va/champva amt-dr 14
+opdwcp14,all opd visits-workers comp amt-dr 14
+opfexp14,total outpatient facility exp 14
+opfmcd14,all opd visits-medicaid amt-fac 14
+opfmcr14,all opd visits-medicare amt-fac 14
+opfofd14,all opd visits-other fed amt-fac 14
+opfopr14,all opd visits - oth private amt-fac 14
+opfopu14,all opd visits - oth public amt-fac 14
+opfosr14,all opd vsts-oth unclass srce amt-fac 14
+opfoth14,all opd visits - oth combined amt-fac 14
+opfprv14,all opd visits-priv ins amt-fac 14
+opfptr14,all opd visits - prv & tri amt-fac 14
+opfslf14,all opd visits-self/family amt-fac 14
+opfstl14,all opd visits-oth st/local amt-fac 14
+opftch14,opd provider visit charges - fac 14
+opftri14,all opd visits-tricare amt-fac 14
+opfva14,all opd visits-va/champva amt-fac 14
+opfwcp14,all opd visits-workers comp amt-fac 14
+opoexp14,total outpatient non-dr - fac exp 14
+opomcd14,opd non-dr visits-medicaid amt-fac 14
+opomcr14,opd non-dr visits-medicare amt-fac 14
+opoofd14,opd non-dr visits-other fed amt-fac 14
+opoopr14,opd non-dr visits-oth private amt-fac 14
+opoopu14,opd non-dr visits-oth public amt-fac 14
+opoosr14,opd non-dr vsts-ot unclas src amt-fac 14
+opooth14,opd non-dr visits-oth combined am-fac 14
+opoprv14,opd non-dr visits-priv ins amt-fac 14
+opoptr14,opd non-dr visits - prv & tri amt-fac 14
+oposlf14,opd non-dr visits-self/fam amt-fac 14
+opostl14,opd non-dr visits-oth st/loc amt-fac 14
+opotch14,opd non-phys visit charges - fac 14
+opothv14,# outpatient dept non-dr visits 14
+opotri14,opd non-dr visits-tricare amt-fac 14
+opova14,opd non-dr visits-va/champva amt-fac 14
+opowcp14,opd non-dr visits-wrkrs comp amt-fac 14
+oppexp14,total outpatient non-dr - dr exp 14
+oppmcd14,opd non-dr visits-medicaid amt-dr 14
+oppmcr14,opd non-dr visits-medicare amt-dr 14
+oppofd14,opd non-dr visits-other fed amt-dr 14
+oppopr14,opd non-dr visits-oth private amt-dr 14
+oppopu14,opd non-dr visits-oth public amt-dr 14
+opposr14,opd non-dr vsts-ot unclas src amt-dr 14
+oppoth14,opd non-dr visits-oth combined amt-dr 14
+oppprv14,opd non-dr visits-priv ins amt-dr 14
+oppptr14,opd non-dr visits - prv & tri amt-dr 14
+oppslf14,opd non-dr visits-self/fam amt-dr 14
+oppstl14,opd non-dr visits-oth st/loc amt-dr 14
+opptch14,opd non-phys visit charges - dr 14
+opptri14,opd non-dr visits-tricare amt-dr 14
+oppva14,opd non-dr visits-va/champva amt-dr 14
+oppwcp14,opd non-dr visits-wrkrs comp amt-dr 14
+opsexp14,total outpatient physician - dr exp 14
+opsmcd14,opd dr visits-medicaid amt-dr 14
+opsmcr14,opd dr visits-medicare amt-dr 14
+opsofd14,opd dr visits-other fed amt-dr 14
+opsopr14,opd dr visits - oth private amt-dr 14
+opsopu14,opd dr visits-oth public amt-dr 14
+opsosr14,opd dr vsts-oth unclass srce amt-dr 14
+opsoth14,opd dr visits -oth combined amt-dr 14
+opsprv14,opd dr visits-priv ins amt-dr 14
+opsptr14,opd dr visits - prv & tri amt-dr 14
+opsslf14,opd dr visits-self/family amt-dr 14
+opsstl14,opd dr visits-oth st/local amt-dr 14
+opstch14,opd physician visit charges - dr 14
+opstri14,opd dr visits-tricare amt-dr 14
+opsva14,opd dr visits-va/champva amt-dr 14
+opswcp14,opd dr visits-workers comp amt-dr 14
+optexp14,total outpatient fac + dr exp 14
+optmcd14,all opd vsts-medicaid amt-(fac+dr) 14
+optmcr14,all opd vsts-medicare amt-(fac+dr) 14
+optofd14,all opd vsts-other fed amt-(fac+dr) 14
+optopr14,all opd vsts-oth private amt-(fac+dr) 14
+optopu14,all opd vsts-oth public amt-(fac+dr) 14
+optosr14,all opd vst-oth uncls src amt(fac+dr) 14
+optoth14,all opd vsts-oth combined amt(fac+dr) 14
+optotv14,# outpatient dept provider visits 14
+optprv14,all opd vsts-priv ins amt-(fac+dr) 14
+optptr14,all opd visits-prv & tri amt (fac+dr) 14
+optslf14,all opd vsts-self/family amt-(fac+dr) 14
+optstl14,all opd vst-oth st/local amt(fac+dr) 14
+opttch14,opd facility + dr visit charges - 14
+opttri14,all opd vsts-tricare amt-(fac+dr) 14
+optva14,all opd vsts-va/champva amt-(fac+dr) 14
+optwcp14,all opd vst-workrs comp amt-(fac+dr) 14
+opvexp14,total outpatient physician - fac exp 14
+opvmcd14,opd dr visits-medicaid amt-fac 14
+opvmcr14,opd dr visits-medicare amt-fac 14
+opvofd14,opd dr visits-other fed amt-fac 14
+opvopr14,opd dr visits - oth private amt-fac 14
+opvopu14,opd dr visits-oth public amt-fac 14
+opvosr14,opd dr vsts-oth unclass srce amt-fac 14
+opvoth14,opd dr visits - oth combined amt-fac 14
+opvprv14,opd dr visits-priv ins amt-fac 14
+opvptr14,opd dr visits - prv & tri amt-fac 14
+opvslf14,opd dr visits-self/family amt-fac 14
+opvstl14,opd dr visits-oth st/local amt-fac 14
+opvtch14,opd physician visit charges - fac 14
+opvtri14,opd dr visits-tricare amt-fac 14
+opvva14,opd dr visits-va/champva amt-fac 14
+opvwcp14,opd dr visits-workers comp amt-fac 14
+othdys31,miss any work day to care for oth (rd31)
+othdys42,miss any work day to care for oth (rd42)
+othdys53,miss any work day to care for oth (rd53)
+othexp14,tot other equip/sply (excl diab) exp 14
+othimp14,other income imputation flag
+othins42,ac08 oth reas no usc: ins related-r4/2
+othlang,in family with someone spkng other lang
+othmcd14,other equp/supplies-medicaid amt 14
+othmcr14,other equp/supplies-medicare amt 14
+othndd31,# day missed work to care for oth (rd31)
+othndd42,# day missed work to care for oth (rd42)
+othndd53,# day missed work to care for oth (rd53)
+othofd14,other equp/supplies-othr fedrl amt 14
+othopr14,other equp/supply-oth private amt 14
+othopu14,other equp/supply - oth public amt 14
+othosr14,oth equp/suply - ot unclass srce amt 14
+othoth14,other equp/supply - oth combined amt 14
+othprv14,other equp/supplies-priv ins amt 14
+othptr14,other equp/supply - prv & tri amt 14
+othrcp42,ac19 is provider some other race-r4/2
+othrea42,ac08 oth reas no usc: other reason-r4/2
+othrp14x,person's other income
+othslf14,other equp/supplies-self/fam amt 14
+othstl14,other equp/supply-othr st/local amt 14
+othtch14,other equp/supplies charges 14
+othtri14,other equp/supply-tricare amt 14
+othva14,other equp/supply-va/champva amt 14
+othwcp14,other equp/supply - workers comp amt 14
+otpaat14,any cov ot gov mcaid/schip hmo-12/31/14
+otpaat31,any time cov ot gov mcaid/schip hmo-r3/1
+otpaat42,any time cov ot gov mcaid/schip hmo-r4/2
+otpaat53,any time cov ot gov mcaid/schip hmo-r5/3
+otpbat14,any cv ot gv nt mcaid/schip hmo-12/31/14
+otpbat31,any cov ot gov not mcaid/schip hmo-r3/1
+otpbat42,any cov ot gov not mcaid/schip hmo-r4/2
+otpbat53,any cov ot gov not mcaid/schip hmo-r5/3
+otpuba14,cov/pay oth gov mcaid/schip hmo-12/31/14
+otpuba31,cov/pay oth gov mcaid/schip hmo-r3/1 int
+otpuba42,cov/pay oth gov mcaid/schip hmo-r4/2 int
+otpuba53,cov/pay oth gov mcaid/schip hmo 12-31/r3
+otpubb14,cov oth gov not mcaid/schip hmo-12/31/14
+otpubb31,cov oth gov not mcaid/schip hmo-r3/1 int
+otpubb42,cov oth gov not mcaid/schip hmo-r4/2 int
+otpubb53,cov oth gov not mcaid/schip hmo 12-31
+pacisp42,ac19 is provider oth pacific islndr-r4/2
+panel,panel number
+papsmr53,how lng lst pap smear tst (>17) - rd 5/3
+paydr31,paid leave to visit dr rd 3/1 cmj
+paydr31h,paid leave to visit dr rd 3/1 cmj (imp)
+paydr42,paid leave to visit dr rd 4/2 cmj
+paydr42h,paid leave to visit dr rd 4/2 cmj (imp)
+paydr53,paid leave to visit dr rd 5/3 cmj
+paydr53h,paid leave to visit dr rd 5/3 cmj (imp)
+payvac31,paid vacation at rd 3/1 cmj
+payvac42,paid vacation at rd 4/2 cmj
+payvac53,paid vacation at rd 5/3 cmj
+pcs42,saq:phy component summry sf-12v2 imputed
+pdkap14,covr by priv ins (source unknwn) apr14
+pdkau14,covr by priv ins (source unknwn) aug14
+pdkde14,covr by priv ins (source unknwn) dec14
+pdkfe14,covr by priv ins (source unknwn) feb14
+pdkja14,covr by priv ins (source unknwn) jan14
+pdkjl14,covr by priv ins (source unknwn) jul14
+pdkju14,covr by priv ins (source unknwn) jun14
+pdkma14,covr by priv ins (source unknwn) mar14
+pdkmy14,covr by priv ins (source unknwn) may14
+pdkno14,covr by priv ins (source unknwn) nov14
+pdkoc14,covr by priv ins (source unknwn) oct14
+pdkse14,covr by priv ins (source unknwn) sep14
+pegap14,covered by empl union ins in apr14
+pegau14,covered by empl union ins in aug14
+pegde14,covered by empl union ins in dec14
+pegfe14,covered by empl union ins in feb14
+pegja14,covered by empl union ins in jan14
+pegjl14,covered by empl union ins in jul14
+pegju14,covered by empl union ins in jun14
+pegma14,covered by empl union ins in mar14
+pegmy14,covered by empl union ins in may14
+pegno14,covered by empl union ins in nov14
+pegoc14,covered by empl union ins in oct14
+pegse14,covered by empl union ins in sep14
+penimp14,pension income imputation flag
+pensp14x,person's pension income
+persla42,ac08 oth reas no usc: language-r4/2
+perwt14f,"final person weight, 2014"
+phnreg42,ac23 how diff contact usc by phone-r4/2
+phq242,saq 2 wks: overall rating of feelings
+phyexe53,mod/vig phys exec 5x wk (>17) - rd 5/3
+physcl42,dr advise exercise (2-17)-r4/2
+pid,person number
+plctyp42,usc type of place-r4/2
+pmdins14,pmed ins - r5/r3 until 12/31/14
+pmdins31,pmed ins - rd 3/1 in 14
+pmdlay42,delayed in getting necsry pres med-r4/2
+pmdlrs42,ac54 rsn dlayd getting nec pres med-r4/2
+pmedin31,prescription drug insurance - rd 3/1
+pmedin42,prescription drug insurance - rd 4/2
+pmedin53,prescription drug insurance - rd 5/3
+pmedpy31,usual 3rd party payer for pmeds - r3/1
+pmedpy42,usual 3rd party payer for pmeds - r4/2
+pmedpy53,usual 3rd party payer for pmeds - r5/3
+pmedup31,has usual 3rd party payer for pmeds-r3/1
+pmedup42,has usual 3rd party payer for pmeds-r4/2
+pmedup53,has usual 3rd party payer for pmeds-r5/3
+pmunab42,unable to get necessary pres med-r4/2
+pmunrs42,ac50 rsn unable to get nec pres med-r4/2
+pngap14,covered by nongroup ins in apr14
+pngau14,covered by nongroup ins in aug14
+pngde14,covered by nongroup ins in dec14
+pngfe14,covered by nongroup ins in feb14
+pngja14,covered by nongroup ins in jan14
+pngjl14,covered by nongroup ins in jul14
+pngju14,covered by nongroup ins in jun14
+pngma14,covered by nongroup ins in mar14
+pngmy14,covered by nongroup ins in may14
+pngno14,covered by nongroup ins in nov14
+pngoc14,covered by nongroup ins in oct14
+pngse14,covered by nongroup ins in sep14
+pogap14,covered by other group ins in apr14
+pogau14,covered by other group ins in aug14
+pogde14,covered by other group ins in dec14
+pogfe14,covered by other group ins in feb14
+pogja14,covered by other group ins in jan14
+pogjl14,covered by other group ins in jul14
+pogju14,covered by other group ins in jun14
+pogma14,covered by other group ins in mar14
+pogmy14,covered by other group ins in may14
+pogno14,covered by other group ins in nov14
+pogoc14,covered by other group ins in oct14
+pogse14,covered by other group ins in sep14
+pouap14,covered by holder outside of ru in apr14
+pouau14,covered by holder outside of ru in aug14
+poude14,covered by holder outside of ru in dec14
+poufe14,covered by holder outside of ru in feb14
+pouja14,covered by holder outside of ru in jan14
+poujl14,covered by holder outside of ru in jul14
+pouju14,covered by holder outside of ru in jun14
+pouma14,covered by holder outside of ru in mar14
+poumy14,covered by holder outside of ru in may14
+pouno14,covered by holder outside of ru in nov14
+pouoc14,covered by holder outside of ru in oct14
+pouse14,covered by holder outside of ru in sep14
+povcat14,family inc as % of poverty line - catego
+povlev14,family inc as % of poverty line - contin
+pregnt31,pregnant during ref period - rd 3/1
+pregnt42,pregnant during ref period - rd 4/2
+pregnt53,pregnant during ref period - rd 5/3
+prevcovr,per cov by ins in prev 2 yrs-pnl 19 only
+preven42,ac22 go to usc for prvntve hlt care-r4/2
+priap14,covered by private ins in apr14
+priau14,covered by private ins in aug14
+pride14,covered by private ins in dec14
+pridk14,cov by priv ins (dk plan) - 12/31/14
+pridk31,cov by priv ins (dk plan) - r3/1 int
+pridk42,cov by priv ins (dk plan) - r4/2 int
+pridk53,cov by priv ins (dk plan) 12-31/r3 int
+prieu14,cov by empl/union grp ins - 12/31/14
+prieu31,cov by empl/union grp ins - r3/1 int dt
+prieu42,cov by empl/union grp ins - r4/2 int dt
+prieu53,cov by empl/union grp ins 12-31/r3 int
+prife14,covered by private ins in feb14
+prija14,covered by private ins in jan14
+prijl14,covered by private ins in jul14
+priju14,covered by private ins in jun14
+prima14,covered by private ins in mar14
+primy14,covered by private ins in may14
+pring14,cov by non-group ins - 12/31/14
+pring31,cov by non-group ins - r3/1 int dt
+pring42,cov by non-group ins - r4/2 int dt
+pring53,cov by non-group ins 12-31/r3 int dt
+prino14,covered by private ins in nov14
+prioc14,covered by private ins in oct14
+priog14,cov by other group ins - 12/31/14
+priog31,cov by other group ins - r3/1 int dt
+priog42,cov by other group ins - r4/2 int dt
+priog53,cov by other group ins 12-31/r3 int dt
+pris14,cov by self-emp-1 ins - 12/31/14
+pris31,cov by self-emp-1 ins - r3/1 int dt
+pris42,cov by self-emp-1 ins - r4/2 int dt
+pris53,cov by self-emp-1 ins 12-31/r3 int dt
+prise14,covered by private ins in sep14
+priv14,cov by priv hlth ins - 12/31/14
+priv31,cov by priv hlth ins - r3/1 int date
+priv42,cov by priv hlth ins - r4/2 int date
+priv53,cov by priv hlth ins 12-31/r3 int date
+privat14,any time cov private ins - 12/31/14
+privat31,any time cov private ins - r3/1
+privat42,any time cov private ins - r4/2
+privat53,any time cov private ins - r5/3
+probpy42,family having prob paying medical bills
+prout14,cov by someone out of ru - 12/31/14
+prout31,cov by someone out of ru - r3/1 int
+prout42,cov by someone out of ru - r4/2 int
+prout53,cov by someone out of ru 12-31/r3 int dt
+provty42,provider type-r4/2
+proxy14,was respondent a proxy as of 12/31/14
+proxy31,was respondent a proxy in r3/1
+proxy42,was respondent a proxy in r4/2
+proxy53,was respondent a proxy in r5/3
+prsap14,covered by self-emp-1 ins in apr14
+prsau14,covered by self-emp-1 ins in aug14
+prsde14,covered by self-emp-1 ins in dec14
+prsfe14,covered by self-emp-1 ins in feb14
+prsja14,covered by self-emp-1 ins in jan14
+prsjl14,covered by self-emp-1 ins in jul14
+prsju14,covered by self-emp-1 ins in jun14
+prsma14,covered by self-emp-1 ins in mar14
+prsmy14,covered by self-emp-1 ins in may14
+prsno14,covered by self-emp-1 ins in nov14
+prsoc14,covered by self-emp-1 ins in oct14
+prsse14,covered by self-emp-1 ins in sep14
+prstx14,priv exchange insurance on 12/31/14
+prstx31,cov by priv exchange ins -r3/1 int dt
+prstx42,cov by priv exchange ins -r4/2 int dt
+prstx53,priv exchange ins on 12-31 r5/r3 int dt
+prvev14,ever have private insurance during 14
+prvhmo14,covered by private hmo – 12/31/14
+prvhmo31,covered by private hmo - r3/1
+prvhmo42,covered by private hmo - r4/2
+prvspk42,ac31 prov speaks person's language-r4/2
+prxap14,cov by priv ins through exchng in apr14
+prxau14,cov by priv ins through exchng in aug14
+prxde14,cov by priv ins through exchng in dec14
+prxfe14,cov by priv ins through exchng in feb14
+prxja14,cov by priv ins through exchng in jan14
+prxjl14,cov by priv ins through exchng in jul14
+prxju14,cov by priv ins through exchng in jun14
+prxma14,cov by priv ins through exchng in mar14
+prxmy14,cov by priv ins through exchng in may14
+prxno14,cov by priv ins through exchng in nov14
+prxoc14,cov by priv ins through exchng in oct14
+prxse14,cov by priv ins through exchng in sep14
+psa53,how long since last psa (>39) - rd 5/3
+pstats31,person disposition status - r3/1
+pstats42,person disposition status - r4/2
+pstats53,person disposition status - r5/3
+pub14x,cov by public ins - 12/31/14 (ed)
+pub31x,cov by public ins - r3/1 int dt (ed)
+pub42x,cov by public ins - r4/2 int dt (ed)
+pub53x,cov by public ins 12-31/r3 int dt (ed)
+pubap14x,covr by any public ins in apr14 (ed)
+pubat14x,any time cov by public - 12/31/14
+pubat31x,any time cov by public - r3/1
+pubat42x,any time cov by public - r4/2
+pubat53x,any time cov by public - r5/3
+pubau14x,covr by any public ins in aug14 (ed)
+pubde14x,covr by any public ins in dec14 (ed)
+pubfe14x,covr by any public ins in feb14 (ed)
+pubimp14,public assistance imputation flag
+pubja14x,covr by any public ins in jan14 (ed)
+pubjl14x,covr by any public ins in jul14 (ed)
+pubju14x,covr by any public ins in jun14 (ed)
+pubma14x,covr by any public ins in mar14 (ed)
+pubmy14x,covr by any public ins in may14 (ed)
+pubno14x,covr by any public ins in nov14 (ed)
+puboc14x,covr by any public ins in oct14 (ed)
+pubp14x,person's public assistance
+pubse14x,covr by any public ins in sep14 (ed)
+pyunbl42,unable to pay family medical bills
+pyvac31h,paid vacation at rd 3/1 cmj (imp)
+pyvac42h,paid vacation at rd 4/2 cmj (imp)
+pyvac53h,paid vacation at rd 5/3 cmj (imp)
+raceax,asian among races rptd (edited/imputed)
+racebx,black among races rptd (edited/imputed)
+racethx,race/ethnicity (edited/imputed)
+racev1x,race (edited/imputed)
+racev2x,race (edited/imputed)
+racewx,white among races rptd (edited/imputed)
+rchdif31,difficulty reaching overhead - rd 3/1
+rchdif53,difficulty reaching overhead - rd 5/3
+reffrl42,ac22 go to usc for referrals-r4/2
+refprs14,reference person as of 12/31/14
+refprs31,reference person at - r3/1
+refprs42,reference person at - r4/2
+refprs53,reference person at - r5/3
+refrl14x,relation to ref pers-12/31/14 (edit/imp)
+refrl31x,relation to ref pers- r3/1 (edit/imp)
+refrl42x,relation to ref pers- r4/2 (edit/imp)
+refrl53x,relation to ref pers- r5/3 (edit/imp)
+region14,census region as of 12/31/14
+region31,census region - r3/1
+region42,census region - r4/2
+region53,census region - r5/3
+resp14,1st respondent indicator as of 12/31/14
+resp31,1st respondent indicator for r3/1
+resp42,1st respondent indicator for r4/2
+resp53,1st respondent indicator for r5/3
+respct42,ac27 prov shows respect for trtmnts-r4/2
+retpln31,pension plan at rd 3/1 cmj
+retpln42,pension plan at rd 4/2 cmj
+retpln53,pension plan at rd 5/3 cmj
+rndflg31,data collection round for rd 3/1 cmj
+rthlth31,perceived health status - rd 3/1
+rthlth42,perceived health status - rd 4/2
+rthlth53,perceived health status - rd 5/3
+rtpln31h,pension plan at rd 3/1 cmj (imp)
+rtpln42h,pension plan at rd 4/2 cmj (imp)
+rtpln53h,pension plan at rd 5/3 cmj (imp)
+ruclas14,ru fielded as:standard/new/stud-12/31/14
+ruclas31,ru fielded as:standard/new/student-r3/1
+ruclas42,ru fielded as:standard/new/student-r4/2
+ruclas53,ru fielded as:standard/new/student-r5/3
+ruletr14,ru letter as of 12/31/14
+ruletr31,ru letter - r3/1
+ruletr42,ru letter - r4/2
+ruletr53,ru letter - r5/3
+rurslt31,ru result - r3/1
+rurslt42,ru result - r4/2
+rurslt53,ru result - r5/3
+rusize14,ru size as of 12/31/14
+rusize31,ru size - r3/1
+rusize42,ru size - r4/2
+rusize53,ru size - r5/3
+rxexp14,total rx-exp 14
+rxmcd14,total rx-medicaid amt 14
+rxmcr14,total rx-medicare amt 14
+rxofd14,total rx-other fed amt 14
+rxopr14,total rx-oth private amt 14
+rxopu14,total rx-oth public amt 14
+rxosr14,tot rx-oth unclass srce amt 14
+rxoth14,total rx-oth combined amt 14
+rxprv14,total rx-private ins amt 14
+rxptr14,total rx-prv & tri amt 14
+rxslf14,total rx-self/family amt 14
+rxstl14,total rx-other st/local amt 14
+rxtot14,# presc meds incl refills 14
+rxtri14,total rx-tricare amt 14
+rxva14,total rx-va/champva amt 14
+rxwcp14,total rx-workers comp amt 14
+safest42,dr advise chld safety seat (wt<=40)-r4/2
+salep14x,person's sales income
+salimp14,sales income imputation flag
+saqelig,eligibility status for saq
+saqwt14f,"final saq person weight, 2014"
+schlbh42,problem behavior at school (5-17)-r4/2
+schlim31,school limitation - rd 3/1
+schlim53,school limitation - rd 5/3
+schpro42,problem with schoolwork (5-17)-r4/2
+scpay31h,paid sick leave at rd 3/1 cmj (imp)
+scpay42h,paid sick leave at rd 4/2 cmj (imp)
+scpay53h,paid sick leave at rd 5/3 cmj (imp)
+seatbe53,wears seat belt (>15) - rd 5/3
+seldsi42,ac08 oth reas no usc:seldm/nev sick-r4/2
+selfcm31,self-employed at rd 3/1 cmj
+selfcm42,self-employed at rd 4/2 cmj
+selfcm53,self-employed at rd 5/3 cmj
+sex,sex
+sfflag42,saq: pcs/mcs imputation flag sf-12v2
+sgmtre53,rsn have sigmoidoscopy (>39)-r5/3
+sgmtst53,most recent sigmoidoscopy (>39) - r5/3
+sibpro42,prblm getting along w/sibs (5-17)-r4/2
+sicpay31,paid sick leave at rd 3/1 cmj
+sicpay42,paid sick leave at rd 4/2 cmj
+sicpay53,paid sick leave at rd 5/3 cmj
+slfcm31h,self-employed at rd 3/1 cmj (imp)
+slfcm42h,self-employed at rd 4/2 cmj (imp)
+slfcm53h,self-employed at rd 5/3 cmj (imp)
+soclim31,social limitations - rd 3/1
+soclim53,social limitations - rd 5/3
+spouid14,spouse id - 12/31/14
+spouid31,spouse id - r3/1
+spouid42,spouse id - r4/2
+spouid53,spouse id - r5/3
+spouin14,marital status w/spouse present-12/31/14
+spouin31,marital status w/spouse present-r3/1
+spouin42,marital status w/spouse present-r4/2
+spouin53,marital status w/spouse present-r5/3
+sprpro42,problem w/sports/hobbies (5-17)-r4/2
+sscimp14,social security income imputation flag
+ssecp14x,person's social security income
+ssiimp14,ssi imputation flag
+ssip14x,person's ssi
+ssnljb31,is cmj a seasonal job rd 3/1
+ssnljb42,is cmj a seasonal job rd 4/2
+ssnljb53,is cmj a seasonal job rd 5/3
+staap14,covered by other state prog in apr14
+staau14,covered by other state prog in aug14
+stade14,covered by other state prog in dec14
+stafe14,covered by other state prog in feb14
+staja14,covered by other state prog in jan14
+stajl14,covered by other state prog in jul14
+staju14,covered by other state prog in jun14
+stama14,covered by other state prog in mar14
+stamy14,covered by other state prog in may14
+stano14,covered by other state prog in nov14
+staoc14,covered by other state prog in oct14
+stapr14,cov by state-spec prog - 12/31/14
+stapr31,cov by state-spec prog - r3/1 int dt
+stapr42,cov by state-spec prog - r4/2 int dt
+stapr53,cov by state-spec prog 12-31/r3 int dt
+stase14,covered by other state prog in sep14
+stjbmm31,month started rd 3/1 cmj
+stjbmm42,month started rd 4/2 cmj
+stjbmm53,month started rd 5/3 cmj
+stjbyy31,year started rd 3/1 cmj
+stjbyy42,year started rd 4/2 cmj
+stjbyy53,year started rd 5/3 cmj
+stndif31,difficulty standing 20 minutes - rd 3/1
+stndif53,difficulty standing 20 minutes - rd 5/3
+stomch53,tke asprn unsafe b/c stomch (>17)-rd 5/3
+stpdif31,difficulty walking up 10 steps - rd 3/1
+stpdif53,difficulty walking up 10 steps - rd 5/3
+stprat14,any time cov by state ins - 12/31/14
+stprat31,any time coverage by state ins - r3/1
+stprat42,any time coverage by state ins - r4/2
+stprat53,any time coverage by state ins - r5/3
+strkaged,age of diagnosis-stroke
+strkdx,stroke diagnosis (>17)
+taxfrm14,tax form person will file
+tempjb31,is cmj a temporary job rd 3/1
+tempjb42,is cmj a temporary job rd 4/2
+tempjb53,is cmj a temporary job rd 5/3
+timaln42,doctor spend any time alone (12-17)-r4/2
+tmtkus42,ac13 how long it takes get to usc-r4/2
+totexp14,total health care exp 14
+totmcd14,total amt paid by medicaid 14
+totmcr14,total amt paid by medicare 14
+totofd14,total amt paid by other federal 14
+totopr14,total amt paid by other private 14
+totopu14,total amt paid by other public 14
+totosr14,total amt paid by other sources 14
+tototh14,total amt paid by oth combined 14
+totprv14,total amt paid by private ins 14
+totptr14,total amt paid by prv & tri 14
+totslf14,total amt paid by self/family 14
+totstl14,total amt paid by oth st/local 14
+tottch14,"total health care charges 14, excl rx"
+tottri14,total amt paid by tricare 14
+totva14,total amt paid by va/champva 14
+totwcp14,total amt paid by workers comp 14
+trans42,ac08 oth reas no usc: transprt/time-r4/2
+trble42,prblm stay out of trouble (5-17)-r4/2
+treatm42,ac26 prov ask about oth treatments-r4/2
+triap14x,covered by tricare/champva in apr14(ed)
+triat14x,any time cov tricare/champva - 12/31/14
+triat31x,any time cov tricare/champva - r3/1
+triat42x,any time cov tricare/champva - r4/2
+triat53x,any time cov tricare/champva - r5/3
+triau14x,covered by tricare/champva in aug14 (ed)
+trich14x,covered by tricare champva – 12/31/14
+trich31x,covered by champva - r3/1
+trich42x,covered by champva - r4/2
+tricr14x,cov by tricr/chamv - 12/31/14 (ed)
+tricr31x,cov by tricr/chamv - r3/1 int dt (ed)
+tricr42x,cov by tricr/chamv - r4/2 int dt (ed)
+tricr53x,cov by tricr/chamv 12-31/r3 int dt (ed)
+tride14x,covered by tricare/champva in dec14 (ed)
+triev14,ever have tricare/champva during 14
+triex14x,covered by tricare extra - 12/31/14
+triex31x,covered by tricare extra - r3/1
+triex42x,covered by tricare extra - r4/2
+trife14x,covered by tricare/champva in feb14 (ed)
+trija14x,covered by tricare/champva in jan14 (ed)
+trijl14x,covered by tricare/champva in jul14 (ed)
+triju14x,covered by tricare/champva in jun14 (ed)
+trili14x,covered by tricare for life - 12/31/14
+trili31x,covered by tricare for life - r3/1
+trili42x,covered by tricare for life - r4/2
+trima14x,covered by tricare/champva in mar14 (ed)
+trimy14x,covered by tricare/champva in may14 (ed)
+trino14x,covered by tricare/champva in nov14 (ed)
+trioc14x,covered by tricare/champva in oct14 (ed)
+tripr14x,covered by tricare prime – 12/31/14 trist
+tripr31x,covered by tricare prime - r3/1
+tripr42x,covered by tricare prime - r4/2
+trise14x,covered by tricare/champva in sep14 (ed)
+trist14x,covered by tricare standard – 12/31/14
+trist31x,covered by tricare standard - r3/1
+trist42x,covered by tricare standard - r4/2
+trstp14x,person's trust/rent income
+trtimp14,trust income imputation flag
+ttlp14x,person's total income
+typepe42,usc type of provider-r4/2
+unable31,completely unable to do activity-rd 3/1
+unable53,completely unable to do activity-rd 5/3
+uneimp14,unemployment imputation flag
+unemp14x,person's unemployment comp income
+unhap42,problem feeling unhappy/sad (5-17)-r4/2
+unins14,uninsured all of 14
+union31,union status at rd 3/1 cmj
+union31h,union status at rd 3/1 cmj (imp)
+union42,union status at rd 4/2 cmj
+union42h,union status at rd 4/2 cmj (imp)
+union53,union status at rd 5/3 cmj
+union53h,union status at rd 5/3 cmj (imp)
+uscnot42,ac08 oth reas no usc: usc not avail-r4/2
+varpsu,variance estimation psu - 2014
+varstr,variance estimation stratum - 2014
+vetimp14,veteran's income imputation flag
+vetsp14x,person's veteran's income
+visexp14,total glasses/contact lens exp 14
+vismcd14,glasses/cntct lenses-medicaid amt 14
+vismcr14,glasses/cntct lenses-medicare amt 14
+visofd14,glasses/cntct lenses-othr fed amt 14
+visopr14,glasses/cntct lenses-oth private amt 14
+visopu14,glasses/cntct lenses-oth public amt 14
+visosr14,glases/cntct lense-ot unclas srce amt 14
+visoth14,glasses/cntct lenses-oth combined amt 14
+visprv14,glasses/cntct lenses-priv ins amt 14
+visptr14,glasses/cntct lenses-prv & tri amt 14
+visslf14,glasses/cntct lenses -self/fam amt 14
+visstl14,glasses/cntct lenses-oth st/locl amt 14
+vistch14,glasses/contact lenses charges 14
+vistri14,glasses/lenses-tricare amt 14
+visva14,glasses/cntct lenses-va/champva amt 14
+viswcp14,glasses/cntct lenses-workers comp amt 14
+wagep14x,person's wage income
+wagimp14,wage imputation flag
+wasafdc,was prev ins by public afdc-pnl 19 only
+waschamp,was prev ins tricare/champva-pnl 19 only
+wasestb,was prev ins by empl or union-pn 19 only
+wasmcaid,was prev ins by mcaid/schip-pnl 19 only
+wasmcare,was prev ins by medicare-panel 19 only
+wasotgov,was prev ins by oth gov prg-pnl 19 only
+wasother,was prev ins by oth source-panel 19 only
+waspriv,was prev ins grp/assoc/ins co-pn 19 only
+wasssi,was prev ins by ssi program-pnl 19 only
+wasstat1,was prev ins by stat prog 1-pnl 19 only
+wasstat2,was prev ins by stat prog 2-pnl 19 only
+wasstat3,was prev ins by stat prog 3-pnl 19 only
+wasstat4,was prev ins by stat prog 4-pnl 19 only
+wasva,was prev ins va/militar care-pnl 19 only
+wcmpp14x,person's workers' compensation
+wcpimp14,workers' comp imputation flag
+whitpr42,ac19 is provider white-r4/2
+whnbpr42,when dr checked blood press (2-17)-r4/2
+whnbst42,whn dr advise boost seat(40<wt<=80)-r4/2
+whnden42,when dr advise dent checkup (2-17)-r4/2
+whneat42,when dr advise eat healthy (2-17)-r4/2
+whnhel42,when dr advise bike helmet (2-17)-r4/2
+whnhgt42,when doctor measured height (0-17)-r4/2
+whnlap42,whn dr advise lap/shldr blt (80<wt)-r4/2
+whnphy42,when dr advise exercise (2-17)-r4/2
+whnsaf42,when dr advise safety seat (wt<=40)-r4/2
+whnsmk42,whn dr advis smkg in home bad(0-17)-r4/2
+whnwgt42,when doctor measured weight (0-17)-r4/2
+wilfil14,will person file fed income tax return
+wlkdif31,difficulty walking 3 blocks - rd 3/1
+wlkdif53,difficulty walking 3 blocks - rd 5/3
+wlklim31,limitation in physical functioning-rd3/1
+wlklim53,limitation in physical functioning-rd5/3
+wrglas42,wears eyeglasses or contacts - rd 4/2
+wrklim31,work limitation - rd 3/1
+wrklim53,work limitation - rd 5/3
+ychj3142,why chngd job between rd 3/1 and rd 4/2
+ychj4253,why chngd job between rd 4/2 and rd 5/3
+ynousc42,ac07 main reas pers doesnt have usc-r4/2
+yrsinus,years person lived in the us
+zidexp14,total zero-nite staz dr 14
+zidmcd14,zero-nite ip staz-medicaid amt-dr 14
+zidmcr14,zero-nite ip staz-medicare amt-dr 14
+zidofd14,zero-nite ip staz-other fed amt-dr 14
+zidopr14,zero-nite ip staz-oth private amt-dr 14
+zidopu14,zero-nite ip staz-oth public amt-dr 14
+zidosr14,zero-nite ip staz-unclas srce amt-dr 14
+zidoth14,zero-nite ip staz-oth combined amt-dr 14
+zidprv14,zero-nite ip staz-priv ins amt-dr 14
+zidptr14,zero-nite ip staz-prv & tri amt-dr 14
+zidslf14,zero-nite ip staz-self/fam amt-dr 14
+zidstl14,zero-nite ip staz-oth st/loc amt-dr 14
+zidtch14,zero-nite ip stay charges - dr 14
+zidtri14,zero-nite ip staz-tricare amt-dr 14
+zidva14,zero-nite ip staz-va/champva amt-dr 14
+zidwcp14,zero-nite ip staz-wrkers comp amt-dr 14
+zifexp14,total zero-nite stays fac exp 14
+zifmcd14,zero-nite ip staz-medicaid amt-fac 14
+zifmcr14,zero-nite ip staz-medicare amt-fac 14
+zifofd14,zero-nite ip staz-other fed amt-fac 14
+zifopr14,zero-nite ip staz-oth private amt-fac 14
+zifopu14,zero-nite ip staz-oth public amt-fac 14
+zifosr14,zero-nite ip staz-unclas srce amt-fac 14
+zifoth14,zero-nite ip staz-oth combine amt-fac 14
+zifprv14,zero-nite ip staz-priv ins amt-fac 14
+zifptr14,zero-nite ip staz-prv & tri amt-fac 14
+zifslf14,zero-nite ip staz-self/fam amt-fac 14
+zifstl14,zero-nite ip staz-oth st/loc amt-fac 14
+ziftch14,zero-nite ip stay charges - fac 14
+ziftri14,zero-nite ip staz-tricare amt-fac 14
+zifva14,zero-nite ip staz-va/champva amt-fac 14
+zifwcp14,zero-nite ip staz-wrkers comp amt-fac 14

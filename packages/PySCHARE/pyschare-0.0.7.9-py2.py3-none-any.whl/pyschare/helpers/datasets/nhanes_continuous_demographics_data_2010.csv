@@ -1,0 +1,44 @@
+Variable,Description
+aialang,language of the mec acasi interview instrument
+dmdborn2,in what country {were you/was sp} born?
+dmdcitzn,{are you/is sp} a citizen of the united states? [information about citizenship is being collected by the u.s. public health service to perform health related research. providing this information is voluntary and is collected under the authority of the public health service act. there will be no effect on pending immigration or citizenship petitions.]
+dmdeduc2,(sp interview version) what is the highest grade or level of school {you have/sp has} completed or the highest degree {you have/s/he has} received?
+dmdeduc3,(sp interview version) what is the highest grade or level of school {you have/sp has} completed or the highest degree {you have/s/he has} received?
+dmdfmsiz,total number of people in the family
+dmdhhsiz,total number of people in the household
+dmdhrage,age in years of the household reference person at the time of hh screening. individuals 80 and over are topcoded at 80 years of age.
+dmdhrbr2,in what country {were you/was non-sp head} born?
+dmdhredu,what is the highest grade or level of school {you have/non_sp head has} received?
+dmdhrgnd,gender of the household reference person
+dmdhrmar,marital status of household reference person
+dmdhsedu,what is the highest grade or level of school {you have/non-sp spouse has completed or the highest degree {you have/he/she has} received
+dmdmartl,marital status
+dmdschol,{are you/is sp} now . . .
+dmdyrsus,length of time sp has been in the us.
+dmqmilit,did {you/sp} ever serve in the armed forces of the united states?
+fiaintrp,was an interpreter used to conduct the family interview?
+fialang,language of the family interview instrument
+fiaproxy,was a proxy respondent used in conducting the family interview?
+indfmin2,total family income (reported as a range value in dollars)
+indfmpir,a ratio of family income to poverty threshold
+indhhin2,total household income (reported as a range value in dollars)
+miaintrp,was an interpreter used to conduct the mec capi interview?
+mialang,language of the capi mec interview instrument
+miaproxy,was a proxy respondent used in conducting the mec capi interview?
+riagendr,gender of the sample person
+ridageex,best age in months at date of examination for individuals under 80 years of age at the time of mec exam.
+ridagemn,best age in months at date of screening for individuals under 80 years of age.
+ridageyr,best age in years of the sample person at time of hh screening. individuals 80 and over are topcoded at 80 years of age.
+ridexmon,"six month time period when the examination was performed - two categories: november 1 through april 30, may 1 through october 31."
+ridexprg,pregnancy status for females between 20 and 44 years of age at the time of mec exam.
+ridreth1,recode of reported race and ethnicity information.
+ridstatr,interview and examination status of the sample person.
+sddsrvyr,data release number.
+sdmvpsu,masked variance unit pseudo-psu variable for variance estimation
+sdmvstra,masked variance unit pseudo-stratum variable for variance estimation
+seqn,respondent sequence number.
+siaintrp,was an interpreter used to conduct the sample person (sp) interview?
+sialang,language of the sample person interview instrument
+siaproxy,was a proxy respondent used in conducting the sample person (sp) interview?
+wtint2yr,interviewed sample persons.
+wtmec2yr,both interviewed and mec examined sample persons.

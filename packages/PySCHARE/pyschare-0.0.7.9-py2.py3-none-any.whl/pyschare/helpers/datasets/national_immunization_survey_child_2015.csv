@@ -1,0 +1,461 @@
+﻿Variable,Description
+seqnumc,unique child identifier
+seqnumhh,unique household identifier
+pdat,child has adequate provider data
+provwt_d,dual-frame weight for children with adequate provider data and unvaccinated children
+provwt_d_terr,the dual-frame weight for children in the u.s. proper and territories for children with adequate provider data and unvaccinated children
+rddwt_d,dual-frame hh-phase child interivew weight
+rddwt_d_terr,the dual-frame hh-phase weight for households in the u.s. proper and territories
+stratum,stratum variable for dual-frame variance estimation
+year,year of interview
+agecpoxr,age in months at chicken pox disease (recode)
+had_cpox,child ever had chicken pox disease?
+agegrp,"age category of child (19-23, 24-29, 30-35 mo) (recode)"
+bf_endr06,duration of breast feeding in days (recode)
+bf_exclr06,duration of exclusive breast/formula feeding in days (recode)
+bf_formr08,age in days when child first fed formula (recode)
+bfendfl06,"duration of breast feeding exceeds child age in days, with buffer"
+bfformfl06,"age in days when child first fed formula exceeds child age in days, with buffer"
+c1r,number of people in household (recode)
+c5r,relationship of respondent to child (recode)
+cbf_01,was child ever breast fed or fed breast milk?
+cen_reg,census region based on true state of residence
+childnm,number of children less than 18 years in hh (recode)
+cwic_01,child ever received wic benefits?
+cwic_02,child currently receiving wic benefits?
+educ1,education of mother categories (recode)
+frstbrn,first born status of child
+i_hisp_k,hispanic origin of child
+incporar,income to poverty ratio (recode)
+incpov1,poverty status
+incq298a,family income categories (recode)
+intrp,phone interruption of 7 days or more in past year?
+language,language in which interview was conducted
+m_agegrp,age of mother categories (recode)
+marital2,marital status of mother (recode)
+mobil_i,geographic mobility status: state of residence of child at birth versus current state
+num_phone,number of residential telephone numbers in household (excluding cell phones)
+num_cells_hh,number of working cell phones household members have available for personal use
+num_cells_parents,number of working cell phones usually used by parents or guardians
+race_k,race of child (recode)
+raceethk,race/ethnicity of child (recode)
+rent_own,"is home owned/being bought, rented, or occupied by some other arrangement?"
+sex,gender of child
+estiap15,estimation area of residence
+est_grant,area of residence according to the 56 original core grantee areas
+state,true state of residence (state fips code)
+d6r,number of vaccination providers identified by respondent (recode)
+d7,consent to obtain child's immunization records from providers
+n_prvr,number of providers responding with vaccination data for child (recode)
+prov_fac,provider facility types
+registry,child's providers reported child's vaccinations to immunization registry
+vfc_order,do child's providers order vaccines from state/local health dept?
+hep_brth,hepatitis b-containing shot given at birth flag
+hep_flag,hepatitis b birth shot date imputation flag
+p_nuhepx,"number of hepatitis b-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_nuhibx,"number of hib-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nuhphb,"number of hepatitis b/hib combo shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numdah,"number of dtap/hib combo shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numdhi,"number of dtap/hepb/ipv combo shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numdih,"number of dtap/ipv/hib combo shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numdta,"number of dtap-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numdtp,"number of dt-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numflu,"number of seasonal flu-containing vaccinations by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numflul,"number of seasonal flu-containing vaccinations of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numflum,"number of seasonal flu spray vaccinations by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numflun,"number of injected seasonal flu vaccinations by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numhea,"number of hepatitis a-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numhen,"number of hepatitis b-containing shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numhep,"number of hepatitis b-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numhg,"number of hib-glaxosmithkline shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numhhy,"number of hib-mency shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date."
+p_numhib,"number of hib-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numhin,"number of hib-containing shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numhion,"number of hib-only shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the household interview date."
+p_numhm,"number of hib-merck shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numhs,"number of hib-sanofi shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date."
+p_numipv,"number of ipv-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nummcn,"number of measles-containing shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nummmr,"number of measles-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_nummmrx,"number of mmr-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_nummmx,"number of mmr-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nummp,"number of mumps-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nummpr,"number of (mumps/rubella)-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nummrv,"number of mmr/varicella combo shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numms,"number of measles-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nummsm,"number of measles/mumps combo shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_nummsr,"number of measles/rubella combo shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numoln,"number of polio shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numopv,"number of opv-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numpcv,"number of pneumococcal-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numpcp,"number of pcv polysaccharide shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numpcc,"number of pcv conjugate shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numpcc7,"number of pneumococcal conjugate-7 shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numpcc13,"number of pneumococcal conjugate13 shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numpccn,"number of pneumococcal conjugate shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numpcn,"number of pcv shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numpol,"number of polio-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numrb,"number of rubella-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date."
+p_numrg,"number of rotarix-gsk shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numrm,"number of rotateq-merck shots by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numro,"number of rotavirus shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the household interview date"
+p_numrot,"number of rotavirus-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numtpn,"number of dt-containing shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numvrc,"number of varicella-containing shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numvrn,"number of varicella-containing shots of unknown type by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_numvrx,"number of varicella-only shots by 36 months of age determined from provider info, excluding any vaccinations after the hh interview date"
+p_u12vrc,"utd (up-to-date) flag for provider 1+ varicella-containing shot at 12+ months, by 36 months of age"
+p_utd331,"utd (up-to-date) flag for provider 3:3:1 by 36 months of age, excluding any vaccinations after the household interview date"
+p_utd431,"utd (up-to-date) flag for provider 4:3:1 by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdhep,"utd (up-to-date) flag for provider 3+ hepatitis b-containing shots by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdhepa1,"utd (up-to-date) flag for provider 1+ hepatitis a-containing shots by 36 months of age, excluding any vaccinations after the household interview date."
+p_utdhepa2,"utd (up-to-date) flag for provider 2+ hepatitis a-containing shots by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdhib,"utd (up-to-date) flag for provider 3+ hib-containing shots by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdhib_rout_s,"utd (up-to-date) flag for provider 3+ hib doses by 36 months of age, based on the routine (non-shortage) hib recommendations and a strict treatment of hib shots of unknown type, excluding any vaccinations after the household interview date"
+p_utdhib_short_s,"utd (up-to-date) flag for provider 3+ hib doses by 36 months of age, based on the hib shortage recommendations and a strict treatment of hib shots of unknown type, excluding any vaccinations after the household interview date."
+p_utdmcv,"utd (up-to-date) flag for provider 1+ measles-containing shot by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdmmx,"utd flag for provider 1+ mmr combo shot by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdpc3,"utd (up-to-date) flag for provider 3+ pneumococcal-containing shots by 36 months of age, excluding any vaccinations after the household interview date."
+p_utdpcv,"utd (up-to-date) flag for provider 4+ pneumococcal-containing shots by 36 months of age, excluding any vaccinations after the household interview date."
+p_utdpcvb13,"utd (up-to-date) indicator for provider 1+ pneumococcal vaccinations of type conjugate 13, given 4+ doses of type conjugate 7, by 36 months of age, excluding any vaccinations after the household interview date."
+p_utdpol,"utd (up-to-date) flag for provider 3+ polio-containing shots by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdrot_s,"utd (up-to-date) flag for provider 3+ rotavirus doses by 36 months of age, based on a strict treatment of rotavirus vaccinations of unknown type, excluding any vaccinations after the household interview date."
+p_utdtp3,"utd (up-to-date) flag for provider 3+ dt-containing shots by 36 months of age, excluding any vaccinations after the household interview date"
+p_utdtp4,"utd (up-to-date) flag for provider 4+ dt-containing shots by 36 months of age, excluding any vaccinations after the household interview date"
+pu431331,"utd flag for provider 4:3:1:3:3:1 (includes 1+ varicella at age 12+ mths) by 36 months of age, excluding any vaccinations after the household interview date"
+p_utd431h31_rout_s,"utd (up-to-date) flag for provider 4:3:1:3*:3:1 by 36 months of age (includes 1+ varicella-containing at age 12+ mths) using the routine, strict definition of hib utd, excluding any vaccinations after the household interview date"
+pu431_31,"utd flag for provider 4:3:1::3:1 (4:3:1:3:3:1 excluding hib; includes 1+ varicella at age 12+ mths) by 36 months of age, excluding any vaccinations after the household interview date"
+pu4313313,"utd flag for provider 4:3:1:3:3:1:3 (includes 1+ varicella at age 12+ mths) by 36 months of age, excluding any vaccinations after the household interview date."
+p_utd431h313_rout_s,"utd (up-to-date) flag for provider 4:3:1:3*:3:1:3 by 36 months of age (includes 1+ varicella-containing at age 12+ mths) using the routine, strict definition of hib utd, excluding any vaccinations after the household interview date"
+pu4313314,"utd flag for provider 4:3:1:3:3:1:4 (includes 1+ varicella at age 12+ mths) by 36 months of age, excluding any vaccinations after the household interview date."
+p_utd431h314_rout_s,"utd (up-to-date) flag for provider 4:3:1:3*:3:1:4 by 36 months of age (includes 1+ varicella-containing at age 12+ mths) using the routine, strict definition of hib utd, excluding any vaccinations after the household interview date"
+pu431_314,"utd flag for provider 4:3:1::3:1:4 (4:3:1:3:3:1:4 excluding hib; includes 1+ varicella at age 12+ mths) by 36 months of age, excluding any vaccinations after the household interview date"
+put43133,"utd flag for provider 4:3:1:3:3 by 36 months of age, excluding any vaccinations after the household interview date."
+p_utd431h3_rout_s,"utd (up-to-date) flag for provider 4:3:1:3*:3 by 36 months of age, using the routine, strict definition of hib utd, excluding any vaccinations after the household interview date"
+putd4313,"utd flag for provider 4:3:1:3 by 36 months of age, excluding any vaccinations after the household interview date"
+p_utd431h_rout_s,"utd (up-to-date) flag for provider 4:3:1:3* by 36 months of age, using the routine, strict definition of hib utd, excluding any vaccinations after the household interview date"
+u1d_hep,birth dose hepatitis b-containing given from birth to day 1 flag
+u2d_hep,birth dose hepatitis b-containing given from birth to day 2 flag
+u3d_hep,birth dose hepatitis b-containing given from birth to day 3 flag
+ddtp1,age in days of prov-reptd dtcontaining shot #1
+ddtp2,age in days of prov-reptd dtcontaining shot #2
+ddtp3,age in days of prov-reptd dtcontaining shot #3
+ddtp4,age in days of prov-reptd dtcontaining shot #4
+ddtp5,age in days of prov-reptd dtcontaining shot #5
+ddtp6,age in days of prov-reptd dtcontaining shot #6
+ddtp7,age in days of prov-reptd dtcontaining shot #7
+ddtp8,age in days of prov-reptd dtcontaining shot #8
+ddtp9,age in days of prov-reptd dtcontaining shot #9
+dflu1,age in days of prov-reptd seasonal flu-containing vaccination #1
+dflu2,age in days of prov-reptd seasonal flu-containing vaccination #2
+dflu3,age in days of prov-reptd seasonal flu-containing vaccination #3
+dflu4,age in days of prov-reptd seasonal flu-containing vaccination #4
+dflu5,age in days of prov-reptd seasonal flu-containing vaccination #5
+dflu6,age in days of prov-reptd seasonal flu-containing vaccination #6
+dflu7,age in days of prov-reptd seasonal flu-containing vaccination #7
+dflu8,age in days of prov-reptd seasonal flu-containing vaccination #8
+dflu9,age in days of prov-reptd seasonal flu-containing vaccination #9
+dhepa1,age in days of prov-reptd hepatitis acontaining shot #1
+dhepa2,age in days of prov-reptd hepatitis acontaining shot #2
+dhepa3,age in days of prov-reptd hepatitis acontaining shot #3
+dhepa4,age in days of prov-reptd hepatitis acontaining shot #4
+dhepa5,age in days of prov-reptd hepatitis acontaining shot #5
+dhepa6,age in days of prov-reptd hepatitis acontaining shot #6
+dhepa7,age in days of prov-reptd hepatitis acontaining shot #7
+dhepa8,age in days of prov-reptd hepatitis acontaining shot #8
+dhepa9,age in days of prov-reptd hepatitis acontaining shot #9
+dhepb1,age in days of prov-reptd hepatitis bcontaining shot #1
+dhepb2,age in days of prov-reptd hepatitis bcontaining shot #2
+dhepb3,age in days of prov-reptd hepatitis bcontaining shot #3
+dhepb4,age in days of prov-reptd hepatitis bcontaining shot #4
+dhepb5,age in days of prov-reptd hepatitis bcontaining shot #5
+dhepb6,age in days of prov-reptd hepatitis bcontaining shot #6
+dhepb7,age in days of prov-reptd hepatitis bcontaining shot #7
+dhepb8,age in days of prov-reptd hepatitis bcontaining shot #8
+dhepb9,age in days of prov-reptd hepatitis bcontaining shot #9
+dhib1,age in days of prov-reptd hibcontaining shot #1
+dhib2,age in days of prov-reptd hibcontaining shot #2
+dhib3,age in days of prov-reptd hibcontaining shot #3
+dhib4,age in days of prov-reptd hibcontaining shot #4
+dhib5,age in days of prov-reptd hibcontaining shot #5
+dhib6,age in days of prov-reptd hibcontaining shot #6
+dhib7,age in days of prov-reptd hibcontaining shot #7
+dhib8,age in days of prov-reptd hibcontaining shot #8
+dhib9,age in days of prov-reptd hibcontaining shot #9
+dmmr1,age in days of prov-reptd measlescontaining shot #1
+dmmr2,age in days of prov-reptd measlescontaining shot #2
+dmmr3,age in days of prov-reptd measlescontaining shot #3
+dmmr4,age in days of prov-reptd measlescontaining shot #4
+dmmr5,age in days of prov-reptd measlescontaining shot #5
+dmmr6,age in days of prov-reptd measlescontaining shot #6
+dmmr7,age in days of prov-reptd measlescontaining shot #7
+dmmr8,age in days of prov-reptd measlescontaining shot #8
+dmmr9,age in days of prov-reptd measlescontaining shot #9
+dmp1,age in days of prov-reptd mumps-only shot #1
+dmp2,age in days of prov-reptd mumps-only shot #2
+dmp3,age in days of prov-reptd mumps-only shot #3
+dmp4,age in days of prov-reptd mumps-only shot #4
+dmp5,age in days of prov-reptd mumps-only shot #5
+dmp6,age in days of prov-reptd mumps-only shot #6
+dmp7,age in days of prov-reptd mumps-only shot #7
+dmp8,age in days of prov-reptd mumps-only shot #8
+dmp9,age in days of prov-reptd mumps-only shot #9
+dmprb1,age in days of prov-reptd (mumps/rubella)-only shot #1
+dmprb2,age in days of prov-reptd (mumps/rubella)-only shot #2
+dmprb3,age in days of prov-reptd (mumps/rubella)-only shot #3
+dmprb4,age in days of prov-reptd (mumps/rubella)-only shot #4
+dmprb5,age in days of prov-reptd (mumps/rubella)-only shot #5
+dmprb6,age in days of prov-reptd (mumps/rubella)-only shot #6
+dmprb7,age in days of prov-reptd (mumps/rubella)-only shot #7
+dmprb8,age in days of prov-reptd (mumps/rubella)-only shot #8
+dmprb9,age in days of prov-reptd (mumps/rubella)-only shot #9
+dpcv1,age in days of prov-reptd pneumococcal-containing shot #1
+dpcv2,age in days of prov-reptd pneumococcal-containing shot #2
+dpcv3,age in days of prov-reptd pneumococcal-containing shot #3
+dpcv4,age in days of prov-reptd pneumococcal-containing shot #4
+dpcv5,age in days of prov-reptd pneumococcal-containing shot #5
+dpcv6,age in days of prov-reptd pneumococcal-containing shot #6
+dpcv7,age in days of prov-reptd pneumococcal-containing shot #7
+dpcv8,age in days of prov-reptd pneumococcal-containing shot #8
+dpcv9,age in days of prov-reptd pneumococcal-containing shot #9
+dpolio1,age in days of prov-reptd poliocontaining shot #1
+dpolio2,age in days of prov-reptd poliocontaining shot #2
+dpolio3,age in days of prov-reptd poliocontaining shot #3
+dpolio4,age in days of prov-reptd poliocontaining shot #4
+dpolio5,age in days of prov-reptd poliocontaining shot #5
+dpolio6,age in days of prov-reptd poliocontaining shot #6
+dpolio7,age in days of prov-reptd poliocontaining shot #7
+dpolio8,age in days of prov-reptd poliocontaining shot #8
+dpolio9,age in days of prov-reptd poliocontaining shot #9
+drb1,age in days of prov-reptd rubellaonly shot #1
+drb2,age in days of prov-reptd rubellaonly shot #2
+drb3,age in days of prov-reptd rubellaonly shot #3
+drb4,age in days of prov-reptd rubellaonly shot #4
+drb5,age in days of prov-reptd rubellaonly shot #5
+drb6,age in days of prov-reptd rubellaonly shot #6
+drb7,age in days of prov-reptd rubellaonly shot #7
+drb8,age in days of prov-reptd rubellaonly shot #8
+drb9,age in days of prov-reptd rubellaonly shot #9
+drot1,age in days of prov-reptd rotaviruscontaining shot #1
+drot2,age in days of prov-reptd rotaviruscontaining shot #2
+drot3,age in days of prov-reptd rotaviruscontaining shot #3
+drot4,age in days of prov-reptd rotaviruscontaining shot #4
+drot5,age in days of prov-reptd rotaviruscontaining shot #5
+drot6,age in days of prov-reptd rotaviruscontaining shot #6
+drot7,age in days of prov-reptd rotaviruscontaining shot #7
+drot8,age in days of prov-reptd rotaviruscontaining shot #8
+drot9,age in days of prov-reptd rotaviruscontaining shot #9
+dvrc1,age in days of prov-reptd varicellacontaining shot #1
+dvrc2,age in days of prov-reptd varicellacontaining shot #2
+dvrc3,age in days of prov-reptd varicellacontaining shot #3
+dvrc4,age in days of prov-reptd varicellacontaining shot #4
+dvrc5,age in days of prov-reptd varicellacontaining shot #5
+dvrc6,age in days of prov-reptd varicellacontaining shot #6
+dvrc7,age in days of prov-reptd varicellacontaining shot #7
+dvrc8,age in days of prov-reptd varicellacontaining shot #8
+dvrc9,age in days of prov-reptd varicellacontaining shot #9
+dtp1_age,age in months of prov-reptd dtcontaining shot #1
+dtp2_age,age in months of prov-reptd dtcontaining shot #2
+dtp3_age,age in months of prov-reptd dtcontaining shot #3
+dtp4_age,age in months of prov-reptd dtcontaining shot #4
+dtp5_age,age in months of prov-reptd dtcontaining shot #5
+dtp6_age,age in months of prov-reptd dtcontaining shot #6
+dtp7_age,age in months of prov-reptd dtcontaining shot #7
+dtp8_age,age in months of prov-reptd dtcontaining shot #8
+dtp9_age,age in months of prov-reptd dtcontaining shot #9
+flu1_age,age in months of prov-reptd seasonal flu-containing vaccination #1
+flu2_age,age in months of prov-reptd seasonal flu-containing vaccination #2
+flu3_age,age in months of prov-reptd seasonal flu-containing vaccination #3
+flu4_age,age in months of prov-reptd seasonal flu-containing vaccination #4
+flu5_age,age in months of prov-reptd seasonal flu-containing vaccination #5
+flu6_age,age in months of prov-reptd seasonal flu-containing vaccination #6
+flu7_age,age in months of prov-reptd seasonal flu-containing vaccination #7
+flu8_age,age in months of prov-reptd seasonal flu-containing vaccination #8
+flu9_age,age in months of prov-reptd seasonal flu-containing vaccination #9
+hea1_age,age in months of prov-reptd hepatitis a-containing shot #1
+hea2_age,age in months of prov-reptd hepatitis a-containing shot #2
+hea3_age,age in months of prov-reptd hepatitis a-containing shot #3
+hea4_age,age in months of prov-reptd hepatitis a-containing shot #4
+hea5_age,age in months of prov-reptd hepatitis a-containing shot #5
+hea6_age,age in months of prov-reptd hepatitis a-containing shot #6
+hea7_age,age in months of prov-reptd hepatitis a-containing shot #7
+hea8_age,age in months of prov-reptd hepatitis a-containing shot #8
+hea9_age,age in months of prov-reptd hepatitis a-containing shot #9
+hep1_age,age in months of prov-reptd hepatitis b-containing shot #1
+hep2_age,age in months of prov-reptd hepatitis b-containing shot #2
+hep3_age,age in months of prov-reptd hepatitis b-containing shot #3
+hep4_age,age in months of prov-reptd hepatitis b-containing shot #4
+hep5_age,age in months of prov-reptd hepatitis b-containing shot #5
+hep6_age,age in months of prov-reptd hepatitis b-containing shot #6
+hep7_age,age in months of prov-reptd hepatitis b-containing shot #7
+hep8_age,age in months of prov-reptd hepatitis b-containing shot #8
+hep9_age,age in months of prov-reptd hepatitis b-containing shot #9
+hib1_age,age in months of prov-reptd hibcontaining shot #1
+hib2_age,age in months of prov-reptd hibcontaining shot #2
+hib3_age,age in months of prov-reptd hibcontaining shot #3
+hib4_age,age in months of prov-reptd hibcontaining shot #4
+hib5_age,age in months of prov-reptd hibcontaining shot #5
+hib6_age,age in months of prov-reptd hibcontaining shot #6
+hib7_age,age in months of prov-reptd hibcontaining shot #7
+hib8_age,age in months of prov-reptd hibcontaining shot #8
+hib9_age,age in months of prov-reptd hibcontaining shot #9
+mmr1_age,age in months of prov-reptd measlescontaining shot #1
+mmr2_age,age in months of prov-reptd measlescontaining shot #2
+mmr3_age,age in months of prov-reptd measlescontaining shot #3
+mmr4_age,age in months of prov-reptd measlescontaining shot #4
+mmr5_age,age in months of prov-reptd measlescontaining shot #5
+mmr6_age,age in months of prov-reptd measlescontaining shot #6
+mmr7_age,age in months of prov-reptd measlescontaining shot #7
+mmr8_age,age in months of prov-reptd measlescontaining shot #8
+mmr9_age,age in months of prov-reptd measlescontaining shot #9
+mp1_age,age in months of prov-reptd mumpsonly shot #1
+mp2_age,age in months of prov-reptd mumpsonly shot #2
+mp3_age,age in months of prov-reptd mumpsonly shot #3
+mp4_age,age in months of prov-reptd mumpsonly shot #4
+mp5_age,age in months of prov-reptd mumpsonly shot #5
+mp6_age,age in months of prov-reptd mumpsonly shot #6
+mp7_age,age in months of prov-reptd mumpsonly shot #7
+mp8_age,age in months of prov-reptd mumpsonly shot #8
+mp9_age,age in months of prov-reptd mumpsonly shot #9
+mpr1_age,age in months of prov-reptd (mumps/rubella)-only shot #1
+mpr2_age,age in months of prov-reptd (mumps/rubella)-only shot #2
+mpr3_age,age in months of prov-reptd (mumps/rubella)-only shot #3
+mpr4_age,age in months of prov-reptd (mumps/rubella)-only shot #4
+mpr5_age,age in months of prov-reptd (mumps/rubella)-only shot #5
+mpr6_age,age in months of prov-reptd (mumps/rubella)-only shot #6
+mpr7_age,age in months of prov-reptd (mumps/rubella)-only shot #7
+mpr8_age,age in months of prov-reptd (mumps/rubella)-only shot #8
+mpr9_age,age in months of prov-reptd (mumps/rubella)-only shot #9
+pcv1_age,age in months of prov-reptd pneumococcal-containing shot #1
+pcv2_age,age in months of prov-reptd pneumococcal-containing shot #2
+pcv3_age,age in months of prov-reptd pneumococcal-containing shot #3
+pcv4_age,age in months of prov-reptd pneumococcal-containing shot #4
+pcv5_age,age in months of prov-reptd pneumococcal-containing shot #5
+pcv6_age,age in months of prov-reptd pneumococcal-containing shot #6
+pcv7_age,age in months of prov-reptd pneumococcal-containing shot #7
+pcv8_age,age in months of prov-reptd pneumococcal-containing shot #8
+pcv9_age,age in months of prov-reptd pneumococcal-containing shot #9
+pol1_age,age in months of prov-reptd poliocontaining shot #1
+pol2_age,age in months of prov-reptd poliocontaining shot #2
+pol3_age,age in months of prov-reptd poliocontaining shot #3
+pol4_age,age in months of prov-reptd poliocontaining shot #4
+pol5_age,age in months of prov-reptd poliocontaining shot #5
+pol6_age,age in months of prov-reptd poliocontaining shot #6
+pol7_age,age in months of prov-reptd poliocontaining shot #7
+pol8_age,age in months of prov-reptd poliocontaining shot #8
+pol9_age,age in months of prov-reptd poliocontaining shot #9
+rb1_age,age in months of prov-reptd rubellaonly shot #1
+rb2_age,age in months of prov-reptd rubellaonly shot #2
+rb3_age,age in months of prov-reptd rubellaonly shot #3
+rb4_age,age in months of prov-reptd rubellaonly shot #4
+rb5_age,age in months of prov-reptd rubellaonly shot #5
+rb6_age,age in months of prov-reptd rubellaonly shot #6
+rb7_age,age in months of prov-reptd rubellaonly shot #7
+rb8_age,age in months of prov-reptd rubellaonly shot #8
+rb9_age,age in months of prov-reptd rubellaonly shot #9
+rot1_age,age in months of prov-reptd rotavirus-containing shot #1
+rot2_age,age in months of prov-reptd rotavirus-containing shot #2
+rot3_age,age in months of prov-reptd rotavirus-containing shot #3
+rot4_age,age in months of prov-reptd rotavirus-containing shot #4
+rot5_age,age in months of prov-reptd rotavirus-containing shot #5
+rot6_age,age in months of prov-reptd rotavirus-containing shot #6
+rot7_age,age in months of prov-reptd rotavirus-containing shot #7
+rot8_age,age in months of prov-reptd rotavirus-containing shot #8
+rot9_age,age in months of prov-reptd rotavirus-containing shot #9
+vrc1_age,age in months of prov-reptd varicella-containing shot #1
+vrc2_age,age in months of prov-reptd varicella-containing shot #2
+vrc3_age,age in months of prov-reptd varicella-containing shot #3
+vrc4_age,age in months of prov-reptd varicella-containing shot #4
+vrc5_age,age in months of prov-reptd varicella-containing shot #5
+vrc6_age,age in months of prov-reptd varicella-containing shot #6
+vrc7_age,age in months of prov-reptd varicella-containing shot #7
+vrc8_age,age in months of prov-reptd varicella-containing shot #8
+vrc9_age,age in months of prov-reptd varicella-containing shot #9
+xdtpty1,dt-containing vaccination #1 type code
+xdtpty2,dt-containing vaccination #2 type code
+xdtpty3,dt-containing vaccination #3 type code
+xdtpty4,dt-containing vaccination #4 type code
+xdtpty5,dt-containing vaccination #5 type code
+xdtpty6,dt-containing vaccination #6 type code
+xdtpty7,dt-containing vaccination #7 type code
+xdtpty8,dt-containing vaccination #8 type code
+xdtpty9,dt-containing vaccination #9 type code
+xfluty1,seasonal flu-containing vaccination #1 type code
+xfluty2,seasonal flu-containing vaccination #2 type code
+xfluty3,seasonal flu-containing vaccination #3 type code
+xfluty4,seasonal flu-containing vaccination #4 type code
+xfluty5,seasonal flu-containing vaccination #5 type code
+xfluty6,seasonal flu-containing vaccination #6 type code
+xfluty7,seasonal flu-containing vaccination #7 type code
+xfluty8,seasonal flu-containing vaccination #8 type code
+xfluty9,seasonal flu-containing vaccination #9 type code
+xhepty1,hepatitis b-containing vaccination #1 type code
+xhepty2,hepatitis b-containing vaccination #2 type code
+xhepty3,hepatitis b-containing vaccination #3 type code
+xhepty4,hepatitis b-containing vaccination #4 type code
+xhepty5,hepatitis b-containing vaccination #5 type code
+xhepty6,hepatitis b-containing vaccination #6 type code
+xhepty7,hepatitis b-containing vaccination #7 type code
+xhepty8,hepatitis b-containing vaccination #8 type code
+xhepty9,hepatitis b-containing vaccination #9 type code
+xhibty1,hib-containing vaccination #1 type code
+xhibty2,hib-containing vaccination #2 type code
+xhibty3,hib-containing vaccination #3 type code
+xhibty4,hib-containing vaccination #4 type code
+xhibty5,hib-containing vaccination #5 type code
+xhibty6,hib-containing vaccination #6 type code
+xhibty7,hib-containing vaccination #7 type code
+xhibty8,hib-containing vaccination #8 type code
+xhibty9,hib-containing vaccination #9 type code
+xmmrty1,measles-containing vaccination #1 type code
+xmmrty2,measles-containing vaccination #2 type code
+xmmrty3,measles-containing vaccination #3 type code
+xmmrty4,measles-containing vaccination #4 type code
+xmmrty5,measles-containing vaccination #5 type code
+xmmrty6,measles-containing vaccination #6 type code
+xmmrty7,measles-containing vaccination #7 type code
+xmmrty8,measles-containing vaccination #8 type code
+xmmrty9,measles-containing vaccination #9 type code
+xpcvty1,pneumococcal-containing vaccination #1 type code
+xpcvty2,pneumococcal-containing vaccination #2 type code
+xpcvty3,pneumococcal-containing vaccination #3 type code
+xpcvty4,pneumococcal-containing vaccination #4 type code
+xpcvty5,pneumococcal-containing vaccination #5 type code
+xpcvty6,pneumococcal-containing vaccination #6 type code
+xpcvty7,pneumococcal-containing vaccination #7 type code
+xpcvty8,pneumococcal-containing vaccination #8 type code
+xpcvty9,pneumococcal-containing vaccination #9 type code
+xpolty1,polio-containing vaccination #1 type code
+xpolty2,polio-containing vaccination #2 type code
+xpolty3,polio-containing vaccination #3 type code
+xpolty4,polio-containing vaccination #4 type code
+xpolty5,polio-containing vaccination #5 type code
+xpolty6,polio-containing vaccination #6 type code
+xpolty7,polio-containing vaccination #7 type code
+xpolty8,polio-containing vaccination #8 type code
+xpolty9,polio-containing vaccination #9 type code
+xrotty1,rotavirus-containing vaccination #1 type code
+xrotty2,rotavirus-containing vaccination #2 type code
+xrotty3,rotavirus-containing vaccination #3 type code
+xrotty4,rotavirus-containing vaccination #4 type code
+xrotty5,rotavirus-containing vaccination #5 type code
+xrotty6,rotavirus-containing vaccination #6 type code
+xrotty7,rotavirus-containing vaccination #7 type code
+xrotty8,rotavirus-containing vaccination #8 type code
+xrotty9,rotavirus-containing vaccination #9 type code
+xvrcty1,varicella-containing vaccination #1 type code
+xvrcty2,varicella-containing vaccination #2 type code
+xvrcty3,varicella-containing vaccination #3 type code
+xvrcty4,varicella-containing vaccination #4 type code
+xvrcty5,varicella-containing vaccination #5 type code
+xvrcty6,varicella-containing vaccination #6 type code
+xvrcty7,varicella-containing vaccination #7 type code
+xvrcty8,varicella-containing vaccination #8 type code
+xvrcty9,varicella-containing vaccination #9 type code
+ins_1,is child covered by health insurance provided through employer or union?
+ins_2,is child covered by any medicaid plan?
+ins_3,is child covered by s-chip?
+ins_3a,is child covered by any medicaid plan or s-chip?
+ins_4_5,"is child covered by indian health service, military health care, tricare, champus, or champ-va?"
+ins_6,is child covered by any other health insurance or health care plan?
+ins_11,any time when child was not covered by any health insurance?

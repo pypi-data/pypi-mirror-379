@@ -1,0 +1,87 @@
+﻿Variable Name,Description
+year,indicates the calendar year of medicare enrollment
+month,indicates the month of medicare enrollment
+bene_geo_lvl,"indicates geography level that the data in the row has been
+aggregated (e.g. national, state, and county)"
+bene_state_abrvtn,state abbreviation of beneficiary residence
+bene_state_desc,area of beneficiary residence
+bene_county_desc,county of beneficiary residence
+bene_fips_cd,state/county fips code of beneficiary residence
+tot_benes,count of all medicare beneficiaries
+orgnl_mdcr_benes,count of all original medicare beneficiaries
+ma_and_oth_benes,"count of all medicare advantage and other health plan
+beneficiaries"
+aged_tot_benes,count of medicare aged beneficiaries
+aged_esrd_benes,"count of medicare aged beneficiaries with end stage renal
+disease"
+aged_no_esrd_benes,"count of medicare aged beneficiaries without end stage renal
+disease"
+dsbld_tot_benes,count of medicare disabled beneficiaries
+dsbld_esrd_and_esrd_only_benes,count of medicare disabled beneficiaries with end stage renal disease and beneficiaries with end stage renal disease only
+dsbld_no_esrd_benes,"count of medicare disabled beneficiaries without end stage
+renal disease"
+male_tot_benes,count of male medicare beneficiaries
+female_tot_benes,count of female medicare beneficiaries
+white_tot_benes,count of non-hispanic white medicare beneficiaries
+black_tot_benes,count of non-hispanic black or african american beneficiaries.
+api_tot_benes,count of asian or pacific islander medicare beneficiaries
+hspnc_tot_benes,count of hispanic medicare beneficiaries
+natind_tot_benes,"count of american indian or alaska native medicare
+beneficiaries"
+othr_tot_benes,"count of medicare beneficiaries with race not elsewhere
+classified"
+age_lt_25_benes,count of medicare beneficiaries under the age of 25
+age_25_to_44_benes,"count of medicare beneficiaries between the ages of 25 and
+44"
+age_45_to_64_benes,"count of medicare beneficiaries between the ages of 45 and
+64"
+age_65_to_69_benes,"count of medicare beneficiaries, between the ages of 65 and
+69"
+age_70_to_74_benes,"count of medicare beneficiaries between the ages of 70 and
+74"
+age_75_to_79_benes,"count of medicare beneficiaries between the ages of 75 and
+79"
+age_80_to_84_benes,"count of medicare beneficiaries between the ages of 80 and
+84"
+age_85_to_89_benes,"count of medicare beneficiaries between the ages of 85 and
+89"
+age_90_to_94_benes,"count of medicare beneficiaries between the ages of 90 and
+94"
+age_gt_94_benes,count of medicare beneficiaries over the age of 94
+dual_tot_benes,"count of all beneficiaries qualified to receive medicare and
+medicaid benefits"
+full_dual_tot_benes,"count of beneficiaries qualified to receive medicare and full
+medicaid benefits"
+part_dual_tot_benes,"count of all beneficiaries qualified to receive medicare and
+partial medicaid benefits"
+nodual_tot_benes,"count of beneficiaries qualified to receive medicare only
+benefits"
+a_b_tot_benes,count of medicare beneficiaries enrolled in hospital insurance (or part a) and supplementary medical insurance (or part b)
+a_b_orgnl_mdcr_benes,"count of original medicare beneficiaries enrolled in hospital insurance (or part a) and supplementary medical insurance (or
+part b)"
+a_b_ma_and_oth_benes,"count of medicare advantage and other health plan beneficiaries enrolled in hospital insurance (or part a) and
+supplementary medical insurance (or part b)"
+a_tot_benes,"count of medicare beneficiaries enrolled in hospital insurance
+(or part a)"
+a_orgnl_mdcr_benes,"count of original medicare beneficiaries enrolled in hospital
+insurance (or part a)"
+a_ma_and_oth_benes,"count of medicare advantage and other health plan
+beneficiaries enrolled in hospital insurance (or part a)"
+b_tot_benes,"count of medicare beneficiaries enrolled in supplementary
+medical insurance (or part b)"
+b_orgnl_mdcr_benes,"count of original medicare beneficiaries enrolled in
+supplementary medical insurance (or part b)"
+b_ma_and_oth_benes,"count of medicare advantage and other health plan beneficiaries enrolled in supplementary medical insurance (or
+part b)"
+prscrptn_drug_tot_benes,"count of all medicare prescription drug (or part d)
+beneficiaries"
+prscrptn_drug_pdp_benes,"count of medicare prescription drug (or part d) beneficiaries
+enrolled in a prescription drug plan"
+prscrptn_drug_mapd_benes,count of medicare prescription drug (or part d) beneficiaries enrolled in a medicare advantage prescription drug plan
+prscrptn_drug_deemed_eligible_lis_ benes,"count of certain groups of medicare beneficiaries who are automatically deemed eligible for the low-income subsidy and do not have to apply. the following groups are deemed eligible: full-benefit dual eligibles, that is, persons eligible for both medicare and full medicaid benefits; supplemental security income (ssi) recipients, including ssi recipients who do not qualify for medicaid, and individuals deemed to be ssi recipients; and medicare beneficiaries who are participants in the medicare savings programs (msp)."
+prscrptn_drug_full_lis_benes,"count of medicare beneficiaries with limited income and resources who do not fall into one of the deemed subsidy groups and are enrolled for full subsidy. these beneficiaries
+successfully applied for low-income subsidy."
+prscrptn_drug_partial_lis_benes,"count of medicare beneficiaries with limited income and resources who do not fall into one of the deemed subsidy groups and are enrolled for partial subsidy. these
+beneficiaries successfully applied for low-income subsidy."
+prscrptn_drug_no lis_benes,"count of medicare part d beneficiaries with no low income
+subsidy."

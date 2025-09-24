@@ -1,0 +1,40 @@
+Variable,Description
+accdnwrk,did accident occur at work
+agediag,age when diagnosed
+ccsr1x,"clinical classification refined code 1-
+edited"
+ccsr2x,"clinical classification refined code 2-
+edited"
+ccsr3x,"clinical classification refined code 3-
+edited"
+ccsr4x,"clinical classification refined code 4-
+edited"
+condidx,condition id
+condn,condition number
+condrn,condition round number
+crnd1,has condition information in round 1
+crnd2,has condition information in round 2
+crnd3,has condition information in round 3
+crnd4,has condition information in round 4
+crnd5,has condition information in round 5
+crnd6,has condition information in round 6
+crnd7,has condition information in round 7
+crnd8,has condition information in round 8
+crnd9,has condition information in round 9
+duid,panel # + encrypted du identifier
+dupersid,person id (duid + pid)
+ercond,any er events assoc. w/ condition?
+hhcond,"any home health events assoc. w/
+condition?"
+icd10cdx,icd-10-cm code for condition - edited
+injury,was condition due to accident/injury
+ipcond,any inpatient events assoc. w/ condition?
+obcond,"any office-based events assoc. w/
+condition?"
+opcond,any outpatient events assoc. w/ condition?
+panel,panel number
+perwt22f,"expenditure file person weight, 2022"
+pid,person number
+rxcond,any prescribed medicines assoc. w/ cond.?
+varpsu,"variance estimation psu, 2022"
+varstr,"variance estimation stratum, 2022"

@@ -1,0 +1,24 @@
+Variable,Description
+year,year of data collection
+locationabbr,location abbreviation
+locationdesc,location description
+category,category
+indicator,indicator description
+response,response value (yes/no)
+datasource,data source
+data_value_unit,"description of unit (e.g.%, $, etc)"
+data_value_type,"description of type of data (e.g. population, percentage, rank)"
+data_value,"data value (0, 14.7, 97, etc.)"
+data_value_footnote_symbol,footnote symbol indicating there will be a footnote following
+data_value_footnote,text of the footnote associated with the symbol preceding
+high_confidence_interval,high confidence interval
+low_confidence_interval,low confidence interval
+samplesize,sample size
+break_out,data stratified by this value
+locationid,location lookup value for use in programming; can be used to filter the data
+geolocation,latitude & longitude to be provided for formatting geolocation
+sortusfirst,value that allows program to sort us data first
+break_out_category,data stratified by this group
+break_out_id,breakout lookup value for use in programming; can be used to filter the data
+sortbreakoutid,breakout value that allows for sorting; for use in programming and can be used to filter the data
+indicatorid,indicator lookup value for use in programming; can be used to filter the data
