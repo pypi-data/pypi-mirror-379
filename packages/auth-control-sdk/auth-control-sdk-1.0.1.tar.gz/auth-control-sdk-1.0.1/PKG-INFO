@@ -1,0 +1,411 @@
+Metadata-Version: 2.1
+Name: auth-control-sdk
+Version: 1.0.1
+Summary: Intelligent authorization and access control using adaptive scoring
+Home-page: https://github.com/jaimeajl/auth-control
+Author: Jaime Jimenez
+Author-email: jaimeajl@hotmail.com
+License: UNKNOWN
+Description: # Authorization Control SDK
+        
+        Enterprise-grade authorization and access control system using adaptive scoring algorithms. Replace complex permission matrices and nested if/else chains with intelligent, configurable authorization rules.
+        
+        ## Why Authorization Control?
+        
+        Traditional authorization systems, whether homegrown `if/else` matrices or complex policy engines, become brittle and difficult to manage as roles, resources, and business rules evolve. This SDK transforms your authorization logic into a **configurable scoring system** that makes nuanced decisions based on the full context of an access request.
+        
+        
+        ---
+        
+        ## Core Concepts
+        
+        Instead of rigid, binary rules, this SDK allows you to define authorization policies as a collection of weighted **factors**. The system evaluates how well a given request context matches an ideal state, producing a **permission score**. This moves your logic from brittle code to a flexible configuration.
+        
+        
+        ---
+        
+        ## Installation
+        
+        ```bash
+        # Standard version
+        pip install auth-control-sdk
+        
+        # For optimized performance (requires C++ compiler)
+        pip install auth-control-sdk[optimized]
+        ```
+        
+        ---
+        
+        ## Quick Start
+        
+        ### Community Edition (Free)
+        
+        ```python
+        from auth_control import PermissionManager
+        
+        pm = PermissionManager()
+        
+        context = {
+            'role_hierarchy_level': 2,      # employee
+            'action_severity': 1,            # read
+            'resource_sensitivity_level': 2, # internal
+            'user_seniority_years': 3,
+            'department_match': True,
+            'compliance_training': True
+        }
+        
+        allowed, score, message = pm.can_access(context)
+        print(f"Access: {message}")
+        ```
+        
+        ### Professional Edition
+        
+        ```python
+        from auth_control.main import PermissionManager, PermissionContext
+        
+        # Initialize with license
+        pm = PermissionManager(
+            tier='professional',
+            license_key='PRO-2026-12-31-XXXX-XXXX'
+        )
+        
+        # Use the structured context model for clarity and auto-complete
+        context = PermissionContext(
+            user_id='u-123',
+            user_role='manager',
+            action='delete',
+            resource_id='doc-456',
+            resource_sensitivity='internal'
+        )
+        
+        # The SDK's helper method simplifies common checks
+        is_allowed = pm.check_role_permission(
+            role='manager',
+            action='delete',
+            resource_sensitivity='internal'
+        )
+        print(f"Is manager allowed to delete internal resource? {'Yes' if is_allowed else 'No'}")
+        
+        # Access performance metrics to monitor your authorization system
+        metrics = pm.get_metrics()
+        print(f"Adaptive decision threshold: {metrics.current_threshold:.3f}")
+        ```
+        
+        ### Enterprise Edition
+        
+        ```python
+        from auth_control.main import PermissionManager, Field
+        from auth_control.policies import PolicyPresets
+        
+        # Initialize with a strict policy preset and license
+        pm = PermissionManager(
+            tier='enterprise', 
+            license_key='ENT-2026-12-31-XXXX-XXXX',
+            policy=PolicyPresets.strict_security()
+        )
+        
+        # Adjust the learning algorithm's behavior
+        pm.set_adjustment_factor(0.4) # 60% expert policy, 40% algorithm-optimized
+        
+        # ... process authorization requests ...
+        
+        # View how the system has adapted the importance of different policies
+        metrics = pm.get_metrics()
+        print(f"Policy weight optimizations: {metrics.weight_changes}")
+        ```
+        
+        
+        ---
+        
+        ## Tier Comparison
+        
+        | Feature                          |  Community |      Professional       |       Enterprise        |
+        |----------------------------------|------------|-------------------------|-------------------------|
+        | **Decisions/month**              | Unlimited* |      Unlimited          |       Unlimited         |
+        | **Standard Policies**            |    ✅      |          ✅            |          ✅             |
+        | **Policy Presets**               |    ❌      |          ✅            |          ✅             |
+        | **Adaptive Threshold**           |    ❌      |          ✅            |          ✅             |
+        | **Performance metrics**          |    ❌      |          ✅            |          ✅    Enhanced |
+        | **Policy Weight Optimization**   |    ❌      |          ❌            |          ✅             |
+        | **Support**                      |  Community |         Email           |     Priority SLA         |
+        | **License validity**             |    N/A     |        Annual           |        Annual            |
+        
+        *Community tier is free for evaluation. Production use requires registration.
+        
+        ---
+        
+        ## Enterprise Features
+        
+        ### Weight Calibration (Enterprise Exclusive)
+        Enterprise tier automatically calibrates field weights based on data patterns:
+        
+        ```python
+        # Control the balance between expert and algorithm weights
+        sdk.set_adjustment_factor(0.3)  # Default: 70% expert, 30% algorithm
+        
+        # Factor range:
+        # 0.0 = 100% expert weights (trust configuration)
+        # 0.5 = 50/50 mix
+        # 1.0 = 100% algorithm weights (full automation)
+        ```
+        
+        The algorithm tracks field magnitudes and uses sqrt dampening to prevent extreme values from dominating, then mixes expert and proposed weights according to your adjustment factor.
+        
+        ---
+        
+        ## Core Features
+        
+        ### Role-Based Access Control (RBAC) with Nuances
+        
+        Instead of a rigid matrix, define roles by a hierarchy level and let the score handle the edge cases. The check_role_permission() helper makes this easy.
+        
+        ```python
+        # Check hierarchical permissions
+        allowed = pm.check_role_permission('employee', 'read', 'internal')
+        ```
+        
+        ### Attribute-Based Access Control (ABAC)
+        Combine user attributes, resource properties, and environmental context into a single, holistic decision.
+        
+        ```python
+        from auth_control.main import Field
+        
+        # Add a custom attribute to the standard policy
+        custom_policy = get_standard_policies()
+        custom_policy.append(
+            Field('mfa_verified', reference=True, importance=5.0, sensitivity=5.0)
+        )
+        pm.configure(custom_policy)
+        
+        # Now, the MFA status will be a critical factor in all decisions
+        context['mfa_verified'] = user.has_mfa_enabled()
+        result = pm.can_access(context)
+        ```
+        
+        ```python
+        context = {
+            'department_match': True,
+            'time_restriction_compliance': True,
+            'project_phase_risk': 2,
+            'resource_ownership_match': False
+        }
+        allowed, score, msg = pm.can_access(context)
+        ```
+        ### Policy Presets
+        
+        ```python
+        from auth_control import PolicyPresets
+        
+        # Strict security mode
+        pm.set_policies(PolicyPresets.strict_security())
+        
+        # Relaxed mode for development
+        pm.set_policies(PolicyPresets.relaxed())
+        
+        # Department-specific
+        pm.set_policies(PolicyPresets.finance_department())
+        ```
+        
+        ### Dynamic Policy Adjustments
+        Respond to real-time events without deploying new code.
+        
+        ```python
+        # Scenario: Security incident detected. Immediately restrict all non-essential access.
+        print("Activating emergency lockdown mode...")
+        pm.adjust_sensitivity('lockdown') # Increases decision threshold to 0.85
+        
+        # Scenario: After-hours maintenance window.
+        print("Relaxing policies for maintenance...")
+        pm.adjust_sensitivity('relaxed') # Lowers decision threshold to 0.55
+        ```
+        ```python
+        # Emergency lockdown
+        pm.adjust_sensitivity('lockdown')  # Threshold: 0.85
+        
+        # Normal operations
+        pm.adjust_sensitivity('normal')    # Threshold: 0.65
+        ```
+        ---
+        
+        ### Authorization Factors
+        
+        Critical Factors (High Impact)
+        
+        -role_hierarchy_level - User's role level (1-4)
+        -action_severity - Action risk level (1-4)
+        -resource_sensitivity_level - Data classification (1-4)
+        
+        Contextual Factors (Medium Impact)
+        
+        -user_seniority_years - Experience in organization
+        -department_match - Department-resource alignment
+        -time_restriction_compliance - Time-based rules
+        -compliance_training - Required certifications
+        
+        Secondary Factors (Low Impact)
+        
+        -team_size_factor - Team management scope
+        -project_phase_risk - Development/Production
+        -weekend_restriction - Time-based policies
+        
+        ---
+        
+        ---
+        
+        ## Professional & Enterprise Licensing
+        
+        Professional and Enterprise tiers include:
+        - Adaptive confidence learning from evaluation patterns
+        - Real-time performance metrics and insights
+        - Support for complex data structures
+        - Production-ready optimization algorithms
+        - Enterprise: Automatic weight calibration
+        
+        **To purchase a license:**
+        - Professional: $299/month or $2,999/year
+        - Enterprise: Contact for custom pricing
+        - Email: licensing@adaptiveformula.ai
+        
+        **License format:**
+        - Professional: `PRO-YYYY-MM-DD-XXXX-XXXX`
+        - Enterprise: `ENT-YYYY-MM-DD-XXXX-XXXX`
+        
+        ---
+        
+        ## Use Cases
+        
+        
+        ### GitHub-Style Repository Access
+        
+        ```python
+        context = {
+            'role_hierarchy_level': 3,  # maintainer
+            'action_severity': 2,        # write
+            'resource_sensitivity_level': 2,  # private repo
+            'department_match': True,
+            'branch_protection': True
+        }
+        ```
+        
+        ### Healthcare Records (HIPAA)
+        
+        ```python
+        context = {
+            'role_hierarchy_level': 3,  # doctor
+            'resource_sensitivity_level': 4,  # patient data
+            'compliance_training': True,  # HIPAA certified
+            'emergency_override': False
+        }
+        ```
+        
+        ### Financial Systems
+        
+        ```python
+        context = {
+            'role_hierarchy_level': 2,  # analyst
+            'action_severity': 1,        # read only
+            'resource_sensitivity_level': 3,  # financial data
+            'audit_trail_enabled': True,
+            'mfa_verified': True
+        }
+        ```
+        
+        ---
+        
+        ## API Reference
+        
+        ### PermissionManager - Initialization:
+        
+        ```python
+        PermissionManager(
+            tier='community',
+            license_key=None,
+            custom_policies=None
+        )
+        ```
+        ---
+        
+        ### Methods:
+        
+        -can_access(context) - Evaluate authorization request
+        -check_role_permission(role, action, resource) - Simple role check
+        -set_policies(policies) - Update authorization policies
+        -adjust_sensitivity(mode) - Change security level
+        -get_metrics() - Performance stats (Pro/Ent)
+        -set_adjustment_factor(factor) - Weight calibration (Ent)
+        
+        ---
+        
+        ### Field Configuration
+        
+        ```python
+        Field(
+            name='factor_name',
+            reference=expected_value,
+            importance=1.0,  # 1.0-5.0
+            sensitivity=1.5   # 1.0-5.0
+        )
+        ```
+        
+        ---
+        
+        ## Migration from Traditional Systems
+        
+        ### Before:
+        
+        ```python
+        if user_role == 'admin':
+            if resource_type == 'critical':
+                if user_seniority < 2:
+                    return False
+            return True
+        elif user_role == 'manager':
+            if action == 'delete':
+                return False
+            # ... 50+ more conditions
+        ```
+        ### After:
+        
+        ```python
+        pm = PermissionManager()
+        allowed, score, message = pm.can_access(context)
+        ```
+        
+        ---
+        
+        ### License format:
+        - **Professional**: PRO-YYYY-MM-DD-XXXX-XXXX
+        - **Enterprise**: ENT-YYYY-MM-DD-XXXX-XXXX
+        
+        ---
+        
+        ## Support
+        
+        - **Documentation:** https://docs.authcontrol.ai
+        - **Community:** https://github.com/authcontrol/sdk/discussions
+        - **Issues:** https://github.com/authcontrol/sdk/issues
+        - **Professional/Enterprise Support:** jaimeajl@hotmail.com
+        
+        ---
+        
+        ## License
+        
+        MIT License for Community Edition. Professional and Enterprise editions are subject to commercial licensing terms.
+        
+        © 2025 Authorization Control SDK. Powered by Adaptive Formula technology.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: optimized
+Provides-Extra: dev

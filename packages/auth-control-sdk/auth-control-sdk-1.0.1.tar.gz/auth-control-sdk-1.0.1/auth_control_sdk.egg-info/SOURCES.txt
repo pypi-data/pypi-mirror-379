@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+auth_control/__init__.py
+auth_control/core.cpp
+auth_control/core_py.py
+auth_control/license_validator.py
+auth_control/models.py
+auth_control/permission.py
+auth_control/policies.py
+auth_control_sdk.egg-info/PKG-INFO
+auth_control_sdk.egg-info/SOURCES.txt
+auth_control_sdk.egg-info/dependency_links.txt
+auth_control_sdk.egg-info/not-zip-safe
+auth_control_sdk.egg-info/requires.txt
+auth_control_sdk.egg-info/top_level.txt
