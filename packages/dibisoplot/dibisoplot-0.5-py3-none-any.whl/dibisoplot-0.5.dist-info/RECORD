@@ -1,0 +1,14 @@
+dibisoplot/__init__.py,sha256=ewpzhZJHP2FSYamxU9QqKlcTNu0XO7YfbopTGWuEQHA,23
+dibisoplot/_version.py,sha256=DXi0eXA0_8cnOS0jGMyMZadxnTJW3z7QP2mTkpXoLAw,20
+dibisoplot/translation.py,sha256=yKTb-XRlk9yy3AC_HcQYsDwgY2r1vFJVyif_U_Bacu0,1055
+dibisoplot/biso/HAL_doc_types_names.toml,sha256=9Kqu8srxeb6dvHp2x-U6ibwLvrZhY0AuA4FuclMySDU,1109
+dibisoplot/biso/__init__.py,sha256=UtMaMGU5t0esDm8_tHlntIpHEVpMBMLkHWRPmSgGMMY,827
+dibisoplot/biso/biso.py,sha256=8uSN3Ybfz05Abmdq4Ve8E9v-1H7_tdHKFLWLDYzczXE,93038
+dibisoplot/locales/dibisoplot.pot,sha256=-rspI0Xe0e_dT7wjh5r6X8Rcwr_nMHwLXs81Gs8Q5Ys,2997
+dibisoplot/locales/fr/LC_MESSAGES/dibisoplot.mo,sha256=wZH9QhrMR-b3srY2vsxiflrSTpRQ7QIljTRspiTfaAk,2492
+dibisoplot/locales/fr/LC_MESSAGES/dibisoplot.po,sha256=iOsjjLsAdIKXxzaEjuoJewKVruhPuIoX-m_x13qQoG0,3991
+dibisoplot-0.5.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dibisoplot-0.5.dist-info/METADATA,sha256=oP10hKQjSRwS1LNTOneXS-lqmhQ55UrviU-x10kwE7U,2688
+dibisoplot-0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dibisoplot-0.5.dist-info/top_level.txt,sha256=pd2jB0f30v55gWVAuIe3ae1mmKM9lqLR4ya52SpmPlk,11
+dibisoplot-0.5.dist-info/RECORD,,

@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the dibisoplot package.
+# Romain Thomas <contact@romainthomas.net>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-23 18:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Romain Thomas <contact@romainthomas.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: biso/biso.py:310
+msgid ""
+"The data processing was limited by the maximum number of downloadable "
+"entities ("
+msgstr ""
+"Le traitement des données a été limité par le nombre maximal d'entités "
+"téléchargeables ("
+
+#: biso/biso.py:312
+msgid "). Data can be missing or values can be lower than the real values. "
+msgstr ""
+"). Des données peuvent être manquantes ou les valeurs peuvent être "
+"inférieures aux valeurs réelles. "
+
+#: biso/biso.py:316
+msgid "The number of displayed entities was limited to "
+msgstr "Le nombre d'entités affichées a été limité à "
+
+#: biso/biso.py:318
+msgid ". In the API, "
+msgstr ". Dans l'API, "
+
+#: biso/biso.py:320
+msgid " entities were found."
+msgstr " entités ont été trouvées."
+
+#: biso/biso.py:326 biso/biso.py:336 biso/biso.py:407
+msgid "No data"
+msgstr "Pas de données"
+
+#: biso/biso.py:331
+msgid "Error while making the plot"
+msgstr "Erreur lors de la création du graphique"
+
+#: biso/biso.py:341
+msgid "Error while making the table"
+msgstr "Erreur lors de la création du tableau"
+
+#: biso/biso.py:461 biso/biso.py:478
+msgid "Only"
+msgstr "Seulement"
+
+#: biso/biso.py:461 biso/biso.py:478
+msgid "displayed lines out of"
+msgstr "lignes affichées sur"
+
+#: biso/biso.py:828 biso/biso.py:901 biso/biso.py:1151 biso/biso.py:1152
+#: biso/biso.py:1153 biso/biso.py:1154 biso/biso.py:1393 biso/biso.py:1486
+#: biso/biso.py:1542 biso/biso.py:1608 biso/biso.py:1609 biso/biso.py:1610
+#: biso/biso.py:1612 biso/biso.py:1769 biso/biso.py:1770 biso/biso.py:1771
+#: biso/biso.py:1773 biso/biso.py:1869 biso/biso.py:2000 biso/biso.py:2125
+#: biso/biso.py:2173 biso/biso.py:2234
+msgid "Error"
+msgstr "Erreur"
+
+#: biso/biso.py:889
+msgid "Chapter title"
+msgstr "Titre du chapitre"
+
+#: biso/biso.py:890
+msgid "Book title"
+msgstr "Titre du livre"
+
+#: biso/biso.py:891 biso/biso.py:1796
+msgid "Publisher"
+msgstr "Éditeur"
+
+#: biso/biso.py:921
+msgid "List of chapters entered in HAL"
+msgstr "Liste des chapitres renseignés dans HAL"
+
+#: biso/biso.py:1442
+msgid "Unspecified country"
+msgstr "Pays non spécifié"
+
+#: biso/biso.py:1473
+msgid "Unspecified conference"
+msgstr "Conférence non spécifiée"
+
+#: biso/biso.py:1710 biso/biso.py:1739 biso/biso.py:1746
+#, fuzzy
+msgid "Unspecified journal"
+msgstr "Pays non spécifié"
+
+#: biso/biso.py:1711
+#, fuzzy
+msgid "Unspecified publisher"
+msgstr "Pays non spécifié"
+
+#: biso/biso.py:1795
+msgid "Journal"
+msgstr "Revue"
+
+#: biso/biso.py:1797
+msgid "Number of works"
+msgstr "Nombre de travaux"
+
+#: biso/biso.py:1798
+msgid "Is open access on the journal"
+msgstr "Est en accès ouvert sur le journal"
+
+#: biso/biso.py:1799
+msgid "Is open access on a repository"
+msgstr "Est en accès ouvert sur une archive"
+
+#: biso/biso.py:1800
+msgid "Paid APC"
+msgstr "APC payés"
+
+#: biso/biso.py:1806
+msgid "List of journals, publishers, open access status and paid APC"
+msgstr ""
+"Liste des revues, des éditeurs, des statuts d'accès ouvert et des APC payés"
+
+#: biso/biso.py:1807
+msgid "From the list of publications in HAL and the data of the BSO"
+msgstr "D'après la liste des publications dans HAL et les données du BSO"
+
+#: biso/biso.py:2022
+msgid "Full text in HAL"
+msgstr "TI dans HAL"
+
+#: biso/biso.py:2023
+msgid "OA outside HAL"
+msgstr "OA hors HAL"
+
+#: biso/biso.py:2024
+msgid "Closed access"
+msgstr "Accès fermé"
+
+#~ msgid "Chapters list"
+#~ msgstr "Liste des chapitres"
