@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+MaMAI.egg-info/PKG-INFO
+MaMAI.egg-info/SOURCES.txt
+MaMAI.egg-info/dependency_links.txt
+MaMAI.egg-info/requires.txt
+MaMAI.egg-info/top_level.txt
+Mama/__init__.py
+Mama/admin.py
+Mama/cbLLM.py
+Mama/chains.py
+Mama/config.py
+Mama/embedding_factory.py
+Mama/train.py
+Mama/utils.py
+Mama/webscraper.py
