@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: jmstate
+Version: 0.1.0
+Summary: Joint modeling with automatic differentiation
+Author-email: Félix Laplante <felixlaplante0@proton.me>
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: pydantic
+Requires-Dist: xxhash
+Dynamic: license-file
