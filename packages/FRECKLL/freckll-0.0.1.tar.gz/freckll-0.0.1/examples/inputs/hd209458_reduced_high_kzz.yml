@@ -1,0 +1,37 @@
+planet:
+  mass: 0.714 Mjup
+  radius: 1.38 Rjup
+  distance: 0.04747 AU
+  albedo: 0.0
+
+# Built in format
+network: venot-methanol-2020-reduced
+
+thermochemistry:
+  format: ace
+  abundances: [12.0, 10.925, 9.168, 7.86, 8.633]
+  elements: [H, He, C, N, O]
+
+atmosphere:
+  tp_profile:
+    format: from-file
+    filename: tpprofile.csv
+    temperature_column: 1
+    pressure_column: 0
+    comments: "#"
+    temperature_unit: K
+    pressure_unit: mbar
+
+  kzz: 1e14 cm2/s
+
+solver:
+  method: rosenbrock
+  t_span: [0.0, 1e11]
+  nevals: 200
+  dn_crit: 1e-2
+  dndt_crit: 1e-6
+  max_solve_time: 1 hour
+  enable_diffusion: true
+  rtol: 1e-3
+  atol: 1e-25
+  maxiter: 1000
