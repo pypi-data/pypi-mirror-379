@@ -1,0 +1,2 @@
+[console_scripts]
+educode = educode.__main__:main
