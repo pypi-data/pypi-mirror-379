@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "xenorchestra",
+  "version": "2.3.0-alpha.1758639464",
+  "server": "github://api.github.com/vatesfr/pulumi-xenorchestra"
+}
