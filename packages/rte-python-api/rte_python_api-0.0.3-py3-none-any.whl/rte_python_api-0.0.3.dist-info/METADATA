@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: rte-python-api
+Version: 0.0.3
+Author-email: David Alvarado <alvaradodavid96@gmail.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/nenio-traduko/rte-api
+License-File: License.txt
+Requires-Dist: requests
+Requires-Dist: tzdata
+Requires-Dist: importlib-metadata; python_version >= "3.13"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: hypothesis; extra == "test"
+Dynamic: license-file
