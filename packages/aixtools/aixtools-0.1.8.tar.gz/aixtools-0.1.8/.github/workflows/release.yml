@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    environment: release
+    env:
+      DOCKER_IMAGE_NAME: mcp-base
+      AZ_ARTIFACTORY_ODSP_DOCKER_REGISTRY: docker-l-odsp.artifactory.astrazeneca.com
+      AZ_ARTIFACTORY_ODSP_DOCKER_NAMESPACE: navari
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch full history for setuptools_scm
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install build dependencies
+        run: uv sync --group dev
+
+      - name: Build Python package
+        run: uv run python -m build
+
+      - name: Check Python package contents
+        run: |
+          ls -la dist/
+          uv run python -m twine check dist/*
+
+      - name: Publish Python package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          skip-existing: true
+
+      - name: Login to Docker Registry (JFrog Artifactory 🐸)
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.AZ_ARTIFACTORY_ODSP_DOCKER_REGISTRY }}
+          username: ${{ vars.AZ_ARTIFACTORY_ODSP_DOCKER_USER }}
+          password: ${{ secrets.AZ_ARTIFACTORY_ODSP_DOCKER_PASSWORD }}
+
+      - name: Build and push Docker image 🐳
+        id: docker_build
+        uses: docker/build-push-action@v6
+        env:
+          AZ_ARTIFACTORY_ODSP_DOCKER_IMAGE_REF: ${{ env.AZ_ARTIFACTORY_ODSP_DOCKER_REGISTRY }}/${{ env.AZ_ARTIFACTORY_ODSP_DOCKER_NAMESPACE }}/${{ env.DOCKER_IMAGE_NAME }}
+        with:
+          push: true
+          context: docker/${{ env.DOCKER_IMAGE_NAME }}
+          tags: |
+            ${{ env.AZ_ARTIFACTORY_ODSP_DOCKER_IMAGE_REF }}:${{ github.ref_name }}
+            ${{ env.AZ_ARTIFACTORY_ODSP_DOCKER_IMAGE_REF }}:latest
