@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: spssio
+Version: 0.2.4
+Summary: Pythonic, fast access to SPSS files
+Author: Jose Tiago Macara Coutinho
+Author-email: Jose Tiago Macara Coutinho <coutinhotiago@gmail.com>
+Requires-Dist: numpy
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# SPSS I/O in python
+
