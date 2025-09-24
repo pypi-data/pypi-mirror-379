@@ -1,0 +1,11 @@
+mcp_mysql_ops/__init__.py,sha256=5mpXbh1XCYo0pplasp8BV87HXRkauGscuIforyvMhKI,289
+mcp_mysql_ops/__main__.py,sha256=1gAvFRlDE1uJh3F9rXVJQHWSmk_lIvgyHKybnXQ85Qs,260
+mcp_mysql_ops/functions.py,sha256=UMBhAYMC1Zl_VI8Vd770sJomB53teJteDU8e3TF1BXU,11258
+mcp_mysql_ops/mcp_main.py,sha256=mvmISy8P5pp8DcGDXaD5PAN-Dwzzwce9KkwjeBnp-Ik,60885
+mcp_mysql_ops/version_compat.py,sha256=LoPj2w-OipN4E9e7_tu3KBooEWYdzydFGH74XMj3bUA,8720
+mcp_mysql_ops-1.1.4.dist-info/licenses/LICENSE,sha256=qFAVNNFQdlLi9rqeTtdbmvvZAAvKEz19_YwJn9CFB28,1082
+mcp_mysql_ops-1.1.4.dist-info/METADATA,sha256=2pqspdVbHSpyaFSaqNff1da5KVs5PZ6kgZLPl8_M0jI,43073
+mcp_mysql_ops-1.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mcp_mysql_ops-1.1.4.dist-info/entry_points.txt,sha256=mBjupOmf4ufJ0bZmk_E8EXkEt1h-1QSgoS06tbp09o4,132
+mcp_mysql_ops-1.1.4.dist-info/top_level.txt,sha256=XFFZfBJDmev2T2qxq5UXSemQOIGEvhDUe_5Zl6lOx0o,14
+mcp_mysql_ops-1.1.4.dist-info/RECORD,,
