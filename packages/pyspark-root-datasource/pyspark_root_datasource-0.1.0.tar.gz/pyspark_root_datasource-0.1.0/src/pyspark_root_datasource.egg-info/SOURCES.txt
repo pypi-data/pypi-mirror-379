@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyspark_root_datasource/__init__.py
+src/pyspark_root_datasource/_utils.py
+src/pyspark_root_datasource/datasource.py
+src/pyspark_root_datasource.egg-info/PKG-INFO
+src/pyspark_root_datasource.egg-info/SOURCES.txt
+src/pyspark_root_datasource.egg-info/dependency_links.txt
+src/pyspark_root_datasource.egg-info/requires.txt
+src/pyspark_root_datasource.egg-info/top_level.txt
+tests/test_pyspark_root_datasource.py
