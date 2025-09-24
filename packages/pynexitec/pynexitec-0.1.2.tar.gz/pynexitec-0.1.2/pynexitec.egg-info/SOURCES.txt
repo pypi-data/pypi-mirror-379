@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pynexitec/__init__.py
+pynexitec/tic_tac_toe.py
+pynexitec.egg-info/PKG-INFO
+pynexitec.egg-info/SOURCES.txt
+pynexitec.egg-info/dependency_links.txt
+pynexitec.egg-info/top_level.txt
