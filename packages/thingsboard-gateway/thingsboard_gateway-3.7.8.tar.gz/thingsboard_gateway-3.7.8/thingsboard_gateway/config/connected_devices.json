@@ -1,0 +1,9 @@
+{
+  "33312.0": {
+    "connectorId": "e0d8f0b6-4096-4c6c-b537-f8ecaf6f6150",
+    "connectorName": "opcua",
+    "deviceType": "2020-07-05",
+    "disconnected": false,
+    "renaming": null
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "server": {
+    "url": "opc.tcp://0.0.0.0:53530/OPCUA/SimulationServer",
+    "timeoutInMillis": 5000,
+    "scanPeriodInMillis": 3600000,
+    "enableSubscriptions": true,
+    "subCheckPeriodInMillis": 100,
+    "showMap": false,
+    "security": "Basic128Rsa15",
+    "identity": {
+      "type": "anonymous"
+    },
+    "pollPeriodInMillis": 5000
+  },
+  "mapping": [
+    {
+      "deviceNodeSource": "identifier",
+      "deviceNodePattern": "ns=3;i=1010",
+      "deviceInfo": {
+        "deviceNameExpression": "${ns=3;i=1017}",
+        "deviceNameExpressionSource": "constant",
+        "deviceProfileExpressionSource": "constant",
+        "deviceProfileExpression": "${FirmwareInformation\\.UpdatedDate}"
+      },
+      "attributes": [
+        {
+          "key": "some_key",
+          "type": "identifier",
+          "value": "${ns=3;i=1011}"
+        }
+      ],
+      "timeseries": [],
+      "rpc_methods": [],
+      "attributes_updates": []
+    }
+  ],
+  "name": "opcua",
+  "id": "e0d8f0b6-4096-4c6c-b537-f8ecaf6f6150",
+  "logLevel": "DEBUG",
+  "enableRemoteLogging": false,
+  "configVersion": "3.7.7"
+}

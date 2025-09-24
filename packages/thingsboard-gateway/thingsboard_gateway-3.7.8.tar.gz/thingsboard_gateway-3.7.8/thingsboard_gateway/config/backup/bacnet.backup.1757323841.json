@@ -1,0 +1,57 @@
+{
+  "application": {
+    "objectName": "TB_gateway",
+    "host": "192.168.1.167",
+    "port": 47809,
+    "mask": 24,
+    "objectIdentifier": 599,
+    "maxApduLengthAccepted": 1476,
+    "segmentationSupported": "segmentedBoth",
+    "vendorIdentifier": 15
+  },
+  "devices": [
+    {
+      "deviceInfo": {
+        "deviceNameExpression": "BACnet Device",
+        "deviceProfileExpression": "default",
+        "deviceNameExpressionSource": "expression",
+        "deviceProfileExpressionSource": "constant"
+      },
+      "address": "*:*",
+      "pollPeriod": 10000,
+      "attributes": [],
+      "timeseries": "*",
+      "attributeUpdates": [
+        {
+          "key": "brightness",
+          "objectType": "analogOutput",
+          "objectId": 1,
+          "propertyId": "presentValue"
+        }
+      ],
+      "serverSideRpc": [
+        {
+          "method": "set_state",
+          "requestType": "writeProperty",
+          "requestTimeout": 10000,
+          "objectType": "binaryOutput",
+          "objectId": 1,
+          "propertyId": "presentValue"
+        },
+        {
+          "method": "get_state",
+          "requestType": "readProperty",
+          "requestTimeout": 10000,
+          "objectType": "binaryOutput",
+          "objectId": 1,
+          "propertyId": "presentValue"
+        }
+      ]
+    }
+  ],
+  "name": "bacnet",
+  "id": "f8ecedcf-6be6-4a15-9595-16b3fad7fb62",
+  "logLevel": "DEBUG",
+  "enableRemoteLogging": false,
+  "configVersion": "3.7.7"
+}
