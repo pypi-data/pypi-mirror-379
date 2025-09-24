@@ -1,0 +1,64 @@
+[
+    {
+        "name": "wikimore.private.coffee",
+        "url": "https://wikimore.private.coffee",
+        "type": "clearnet",
+        "provider": {
+            "name": "Private.coffee",
+            "url": "https://private.coffee"
+        },
+        "location": "AT",
+        "notes": "Main instance"
+    },
+    {
+        "name": "wikimore.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion",
+        "url": "http://wikimore.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion",
+        "type": "onion",
+        "provider": {
+            "name": "Private.coffee",
+            "url": "https://private.coffee"
+        },
+        "location": "AT"
+    },
+    {
+        "name": "wm.bloat.cat",
+        "url": "https://wm.bloat.cat",
+        "type": "clearnet",
+        "provider": {
+            "name": "Bloat.cat",
+            "url": "https://bloat.cat"
+        },
+        "location": "DE"
+    },
+    {
+        "name": "wp.dc09.ru",
+        "url": "https://wp.dc09.ru",
+        "type": "clearnet",
+        "provider": {
+            "name": "dc09.ru",
+            "url": "https://dc09.ru"
+        },
+        "location": "RU"
+    },
+    {
+        "name": "wikimore.privadency.com",
+        "url": "https://wikimore.privadency.com",
+        "type": "clearnet",
+        "provider": {
+            "name": "privadency",
+            "url": "https://privadency.com"
+        },
+        "location": "DE"
+    },
+    {
+        "name": "wikimore.blitzw.in",
+        "url": "https://wikimore.blitzw.in",
+        "type": "clearnet",
+        "provider": {
+            "name": "Blitzw.in",
+            "url": "https://blitzw.in"
+        },
+        "location": "DK",
+        "notes": "Runs on modified code"
+    }
+]
