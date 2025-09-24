@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: icmd-python
+Version: 1.2.3
+Summary: Python client app for ICMD®
+Author: QuesTek Innovations LLC
+Requires-Python: >=3.12
+Requires-Dist: requests
+Requires-Dist: jupyter
+Provides-Extra: dev
+Requires-Dist: myst-nb; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: sphinx-rtd-theme; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
