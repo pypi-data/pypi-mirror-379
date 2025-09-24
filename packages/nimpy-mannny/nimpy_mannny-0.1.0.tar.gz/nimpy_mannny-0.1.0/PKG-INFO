@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: nimpy-mannny
+Version: 0.1.0
+Summary: advanced version of nimpy by mannny
+Author: nimpy production by mannny
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: tensorflow
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+nimpy_mannny.egg-info/PKG-INFO
+nimpy_mannny.egg-info/SOURCES.txt
+nimpy_mannny.egg-info/dependency_links.txt
+nimpy_mannny.egg-info/requires.txt
+nimpy_mannny.egg-info/top_level.txt
