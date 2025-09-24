@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+dorothy_cci.egg-info/PKG-INFO
+dorothy_cci.egg-info/SOURCES.txt
+dorothy_cci.egg-info/dependency_links.txt
+dorothy_cci.egg-info/requires.txt
+dorothy_cci.egg-info/top_level.txt
