@@ -1,0 +1,2 @@
+[console_scripts]
+mongodb-url-validator = mongodb_url_validator:main
