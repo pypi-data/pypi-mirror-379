@@ -1,0 +1,11 @@
+linkmotion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkmotion/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkmotion/transform/__init__.py,sha256=XeEIYc7J-kc215RVGq1ENsyRWKpOZDG7LPZZDX7htmg,116
+linkmotion/transform/manager.py,sha256=FytGepVwjqVgVuf7uy4GlkGh_tZsyw3RJK4kgrN7eL4,13313
+linkmotion/transform/transform.py,sha256=CIdtX8iUSkODq2zwd20ryGIOUDFao8q997d-gFBVyBM,10491
+linkmotion/typing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkmotion/typing/numpy.py,sha256=Bizyq4ubKrnzpJcJc0I0oiKey447LvMzeYiKrFqF758,988
+linkmotion-0.1.3.dist-info/METADATA,sha256=HHoJLj1p4XnXsJr1QGdyj1oB3Df71Q980uQhsX0ThYE,279
+linkmotion-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+linkmotion-0.1.3.dist-info/licenses/LICENSE,sha256=pDCAHFe9apzKDPvwiEsae_5KoqXvwflGHyKluUrvjS4,1065
+linkmotion-0.1.3.dist-info/RECORD,,
