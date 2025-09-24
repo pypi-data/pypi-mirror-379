@@ -1,0 +1,190 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+# Regression tests on z0lib
+#
+# Based on template 2.1.1
+[ $BASH_VERSINFO -lt 4 ] && echo "This script $0 requires bash 4.0+!" && exit 4
+READLINK=$(which readlink 2>/dev/null)
+export READLINK
+THIS=$(basename "$0")
+TDIR=$(readlink -f $(dirname $0))
+ME=$(readlink -e $0)
+if [[ -d $HOME/devel || -z $HOME_DEVEL || ! -d $HOME_DEVEL ]]; then
+  [[ -d $HOME/odoo/devel ]] && HOME_DEVEL="$HOME/odoo/devel" || HOME_DEVEL="$HOME/devel"
+fi
+PYPATH=""
+[[ $(basename $PWD) == "tests" && $(basename $PWD/../..) == "build" ]] && PYPATH="$(dirname $PWD)"
+[[ $(basename $PWD) == "tests" && $(basename $PWD/../..) == "build" && -d $PWD/../scripts ]] && PYPATH="$PYPATH $(readlink -f $PWD/../scripts)"
+x=$ME; while [[ $x != $HOME && $x != "/" && ! -d $x/lib && ! -d $x/bin && ! -d $x/pypi ]]; do x=$(dirname $x); done
+[[ -d $x/pypi ]] && PYPATH="$PYPATH $x/pypi"
+[[ -d $x/pypi/z0lib ]] && PYPATH="$PYPATH $x/pypi/z0lib"
+[[ -d $x/pypi/z0lib/z0lib ]] && PYPATH="$PYPATH $x/pypi/z0lib/z0lib"
+[[ -d $x/tools ]] && PYPATH="$PYPATH $x/tools"
+[[ -d $x/tools/z0lib ]] && PYPATH="$PYPATH $x/tools/z0lib"
+[[ -d $x/bin ]] && PYPATH="$PYPATH $x/bin"
+[[ -d $x/lib ]] && PYPATH="$PYPATH $x/lib"
+[[ -d $HOME_DEVEL/venv/bin ]] && PYPATH="$PYPATH $HOME_DEVEL/venv/bin"
+[[ -d $HOME_DEVEL/../tools ]] && PYPATH="$PYPATH $(readlink -f $HOME_DEVEL/../tools)"
+[[ $TRAVIS_DEBUG_MODE -ge 8 ]] && echo "PYPATH=$PYPATH"
+for d in $TDIR $PYPATH /etc; do
+  if [[ -e $d/z0librc ]]; then
+    . $d/z0librc
+    Z0LIBDIR=$(readlink -e $d)
+    break
+  fi
+done
+[[ -z "$Z0LIBDIR" ]] && echo "Library file z0librc not found in <$PYPATH>!" && exit 72
+[[ $TRAVIS_DEBUG_MODE -ge 8 ]] && echo "Z0LIBDIR=$Z0LIBDIR"
+TESTDIR=$(findpkg "" "$TDIR . .." "tests")
+[[ $TRAVIS_DEBUG_MODE -ge 8 ]] && echo "TESTDIR=$TESTDIR"
+RUNDIR=$(readlink -e $TESTDIR/..)
+[[ $TRAVIS_DEBUG_MODE -ge 8 ]] && echo "RUNDIR=$RUNDIR"
+Z0TLIBDIR=$(findpkg z0testrc "$PYPATH" "zerobug")
+[[ -z "$Z0TLIBDIR" ]] && echo "Library file z0testrc not found!" && exit 72
+. $Z0TLIBDIR
+Z0TLIBDIR=$(dirname $Z0TLIBDIR)
+[[ $TRAVIS_DEBUG_MODE -ge 8 ]] && echo "Z0TLIBDIR=$Z0TLIBDIR"
+
+# DIST_CONF=$(findpkg ".z0tools.conf" "$PYPATH")
+# TCONF="$HOME/.z0tools.conf"
+CFG_init "ALL"
+link_cfg_def
+link_cfg $DIST_CONF $TCONF
+[[ $TRAVIS_DEBUG_MODE -ge 8 ]] && echo "DIST_CONF=$DIST_CONF" && echo "TCONF=$TCONF"
+get_pypi_param ALL
+RED="\e[1;31m"
+CYAN="\e[1;36m"
+GREEN="\e[1;32m"
+CLR="\e[0m"
+
+__version__=2.0.9
+
+
+test_run() {
+   local SAVE_FLOG_ECHO=$FLOG_ECHO
+   local SAVE_FLOG=$FLOG
+   local SAVE_opt_verbose=$opt_verbose
+   local SAVE_opt_dry_run=$opt_dry_run
+   local SAVE_opt_humdrum=${opt_humdrum:-0}
+   local s=-1 x
+   FLOG_ECHO=
+   FLOG=
+   opt_verbose=
+   opt_humdrum=1
+   if [[ $1 == "ls" ]]; then
+     opt_verbose=1
+     opt_dry_run=1
+     x=$(run_traced "$1" "-q")
+     [[ -n "$x" ]] && false || true
+     s=$?
+   else
+     if [[ ${1:0:3} == "cd " || $1 == "cd" ]]; then
+       opt_dry_run=1
+     fi
+     run_traced "$1"
+     s=$?
+   fi
+   opt_humdrum=$SAVE_opt_humdrum
+   opt_dry_run=$SAVE_opt_dry_run
+   opt_verbose=$SAVE_opt_verbose
+   FLOG=$SAVE_FLOG
+   FLOG_ECHO=$SAVE_FLOG_ECHO
+   return $s
+}
+
+test_01() {
+    local s
+    test_run "true"
+    s=$?
+    test_result "run_traced true" "$s" "$STS_SUCCESS"
+}
+
+test_02() {
+    local s
+    test_run "false"
+    s=$?
+    test_result "run_traced false" "$s" "$STS_FAILED"
+}
+
+test_03() {
+    local f s
+    f="NOT_EXISTS"
+    [[ -f $f ]] && rm -f $f
+    test_run "touch $f"
+    s=$?
+    if [[ -f $f ]]; then
+      test_result "run_traced touch $f" "$s" "$STS_SUCCESS"
+    else
+      test_result "run_traced touch $f" "$s" "$STS_FAILED"
+    fi
+
+    test_run "rm -f $f"
+    s=$?
+    if [[ -f $f ]]; then
+      test_result "run_traced rm -f $f" "$s" "$STS_FAILED"
+    else
+      test_result "run_traced rm -f $f" "$s" "$STS_SUCCESS"
+    fi
+}
+
+test_04() {
+    local f s
+    f="NOT_EXISTS"
+    test_run "cd /not/exists/directory"
+    s=$?
+    test_result "run_traced cd $f" "$s" "$STS_SUCCESS"
+}
+
+test_05() {
+    local f s
+    test_run "ls"
+    s=$?
+    test_result "run_traced ls" "$s" "$STS_SUCCESS"
+}
+
+test_06() {
+    local d
+    d=$(readlink -f $TDIR/..)
+    is_pypi $d
+    s=$?
+    test_result "is_pypi $d" "$s" "$STS_SUCCESS"
+
+    if [[ -d $TRAVIS_SAVED_HOME_DEVEL/pypi ]]; then
+      d=$(readlink -f $TRAVIS_SAVED_HOME_DEVEL/pypi/oerplib3/oerplib3)
+      is_pypi $d
+      s=$?
+      test_result "is_pypi $d" "$s" "$STS_SUCCESS"
+    fi
+
+    if [[ -d $TRAVIS_SAVED_HOME_DEVEL/../tools ]]; then
+      d=$(readlink -f $TRAVIS_SAVED_HOME_DEVEL/../tools/z0lib)
+      is_pypi $d
+      s=$?
+      test_result "is_pypi $d" "$s" "$STS_SUCCESS"
+    fi
+}
+
+
+Z0BUG_init
+parseoptest -l$TESTDIR/test_z0lib.log "$@"
+sts=$?
+[[ $sts -ne 127 ]] && exit $sts
+for p in z0librc odoorc travisrc zarrc z0testrc; do
+  if [[ -f $RUNDIR/$p ]]; then
+    [[ $p == "z0librc" ]] && Z0LIBDIR="$RUNDIR" && source $RUNDIR/$p
+    [[ $p == "odoorc" ]] && ODOOLIBDIR="$RUNDIR" && source $RUNDIR/$p
+    [[ $p == "travisrc" ]] && TRAVISLIBDIR="$RUNDIR" && source $RUNDIR/$p
+    [[ $p == "zarrc" ]] && ZARLIB="$RUNDIR" && source $RUNDIR/$p
+    [[ $p == "z0testrc" ]] && Z0TLIBDIR="$RUNDIR" && source $RUNDIR/$p
+  fi
+done
+
+
+
+UT1_LIST=
+UT_LIST=
+[[ "$(type -t Z0BUG_setup)" == "function" ]] && Z0BUG_setup
+Z0BUG_main_file "$UT1_LIST" "$UT_LIST"
+sts=$?
+[[ "$(type -t Z0BUG_teardown)" == "function" ]] && Z0BUG_teardown
+exit $sts

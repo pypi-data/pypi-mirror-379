@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: z0lib
+Version: 2.1.1
+Summary: Bash zeroincombenze lib
+Home-page: https://github.com/zeroincombenze/tools
+Author: Antonio Maria Vigliotti
+Author-email: antoniomaria.vigliotti@gmail.com
+License: GPL-3.0-or-later
+Project-URL: Source, https://github.com/zeroincombenze/tools/tree/master/z0lib
+Project-URL: Documentation, https://zeroincombenze-tools.readthedocs.io/en/latest/#z0lib
+Project-URL: Changelog, https://github.com/zeroincombenze/tools/blob/master/z0lib/egg-info/CHANGELOG.rst
+Description: UNKNOWN
+Keywords: bash,optargs
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: System Shells
