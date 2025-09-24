@@ -1,0 +1,93 @@
+site_name: ehrax
+site_description: Documentation for the ehrax Python package
+site_url: https://github.com/barahona-research-group/ehrax
+repo_url: https://github.com/barahona-research-group/ehrax
+repo_name: ehrax
+edit_uri: edit/dev/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+  icon:
+    repo: fontawesome/brands/github
+
+# strict: true  # Don't allow warnings during the build process
+
+markdown_extensions:
+  - pymdownx.arithmatex:  # Render LaTeX via MathJax
+      generic: true
+  - pymdownx.superfences  # Seems to enable syntax highlighting when used with the Material theme.
+  - pymdownx.details  # Allowing hidden expandable regions denoted by ???
+  - pymdownx.snippets:  # Include one Markdown file into another
+      base_path: docs
+  - admonition
+  - toc:
+      permalink: "¤"  # Adds a clickable permalink to each section heading
+      toc_depth: 4
+
+
+plugins:
+  - search:
+        # See https://github.com/squidfunk/mkdocs-material/discussions/8116#discussioncomment-12632752
+        # and https://github.com/patrick-kidger/equinox/issues/984
+        # In particular this allows for searching e.g. 'filter_grad' and to match 'equinox.filter_grad'.
+        separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            force_inspection: true
+            heading_level: 4
+            inherited_members: true
+            members_order: source
+            show_bases: false
+            show_if_no_docstring: true
+            show_overloads: false
+            show_root_heading: true
+            show_signature_annotations: true
+            show_source: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+
+nav:
+  - Home: index.md
+  - Why ehrax: why-ehrax.md
+  - FAQ: faq.md
+  #  - Notebooks:
+  #      - Quality of ICD10→CCS Map: notebooks/quality_of_icd10_to_ccs_map.ipynb
+  - API Reference:
+      - Package overview: api.md
+      - Modules:
+          - Base: api/base.md
+          - Utils: api/utils.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/barahona-research-group/ehrax
+
+extra_css: [ ]
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: ehrax
+Version: 2025.0.0
+Summary: EHRs io+processing for JAX+equinox compatible tasks, e.g. mainly ML.
+Project-URL: repository, https://github.com/barahona-research-group/ehrax
+Author-email: Asem Alaa <asem.a.abdelaziz@proton.me>
+License-File: LICENCE
+Keywords: CCS,ICD,ICD10,ICD9,MIMIC,coding-schemes,data-processing-pipelines,dataset,ehr,electronic-health-records,equinox,hdf5,health-informatics,jax,pytree,serialization,vectorization
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.12
+Requires-Dist: equinox>=0.13.0
+Requires-Dist: jax>=0.7.0
+Requires-Dist: networkx==3.5
+Requires-Dist: numpy>=2.3.2
+Requires-Dist: pandas>=2.3.1
+Requires-Dist: psycopg==3.2.9
+Requires-Dist: scipy==1.16.1
+Requires-Dist: sqlalchemy==2.0.41
+Requires-Dist: tables==3.10.2
+Requires-Dist: tqdm==4.67.1
+Provides-Extra: docs
+Requires-Dist: jupyter>=1.0.0; extra == 'docs'
+Requires-Dist: mkdocs-git-revision-date-localized-plugin>=1.2.6; extra == 'docs'
+Requires-Dist: mkdocs-jupyter==0.24.8; extra == 'docs'
+Requires-Dist: mkdocs-material==9.6.7; extra == 'docs'
+Requires-Dist: mkdocs==1.6.1; extra == 'docs'
+Requires-Dist: mkdocstrings[python]==0.28.3; extra == 'docs'
+Requires-Dist: pymdown-extensions==10.14.3; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# Title

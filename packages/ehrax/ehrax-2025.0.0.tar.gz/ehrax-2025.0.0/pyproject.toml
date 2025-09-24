@@ -1,0 +1,87 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ehrax"
+version = "2025.0.0"
+authors = [
+    { name = "Asem Alaa", email = "asem.a.abdelaziz@proton.me" }
+]
+description = "EHRs io+processing for JAX+equinox compatible tasks, e.g. mainly ML."
+readme = "README.md"
+license-files = ["LICEN[CS]E"]
+keywords = ["electronic-health-records", "ehr", "coding-schemes", "ICD", "ICD9", "ICD10", "CCS", "MIMIC", "health-informatics",
+    "data-processing-pipelines", "dataset", "vectorization",
+    "serialization", "hdf5", "jax", "pytree", "equinox"
+]
+requires-python = ">= 3.12"
+dependencies = [
+    "equinox>=0.13.0",
+    "numpy>=2.3.2",
+    "jax>=0.7.0",
+    "pandas>=2.3.1",
+    "tables==3.10.2",
+    "scipy==1.16.1",
+    "tqdm==4.67.1",
+    "networkx==3.5",
+    "SQLAlchemy==2.0.41",
+    "psycopg==3.2.9"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering :: Information Analysis"
+]
+urls = { repository = "https://github.com/barahona-research-group/ehrax" }
+
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs==1.6.1",
+    "mkdocs-material==9.6.7",
+    "mkdocstrings[python]==0.28.3",
+    "pymdown-extensions==10.14.3",
+    "mkdocs-git-revision-date-localized-plugin>=1.2.6",
+    "mkdocs-jupyter==0.24.8",
+    "jupyter>=1.0.0"
+]
+
+
+[tool.ruff]
+#extend-include = ["*.ipynb"]
+src = []
+line-length = 120
+indent-width = 4
+
+
+[tool.ruff.lint]
+fixable = ["I001", "F401", "UP"]
+ignore = ["E731"]
+#ignore = ["E402", "E721", "E731", "E741", "F722", "UP038"]
+#select = ["E", "F", "I001", "UP"]
+
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+extra-standard-library = ["typing_extensions"]
+lines-after-imports = 2
+order-by-type = false
+
+[tool.pyright]
+include = [
+    "ehrax",
+#    "test"
+]
+exclude = ["test"]
+#reportFunctionMemberAccess = false
+#reportOptionalSubscript = false
+#reportOptionalMemberAccess = false
+reportIncompatibleMethodOverride = true
+reportIncompatibleVariableOverride = false
