@@ -1,0 +1,16 @@
+venvr/__init__.py,sha256=Ff_fLo18MsUL9TM1lxPCTsDVW-X9XcCs_bgr91PbVAQ,250
+venvr/agent.py,sha256=Uznw8dSnU6SaO9rDwYst3puSOTpSlcei_kXd-IRX0aE,2044
+venvr/builder.py,sha256=T9x6ZIM6jVMhBfjWF1VallOC-Kg5-c0I2wn5tVfOY9w,2304
+venvr/cli.py,sha256=YpN9ifsrkCHYideGwBfZd4rxwT6D__80IjHMdgcyUQU,676
+venvr/config.py,sha256=uIxseL6UgaGgu0OUGTzSHilgp1U_QkJlrzpMpcnBQ5k,248
+venvr/manager.py,sha256=Jb4Rz9XTLtdUPHHgxS682PKZ5fCMbJ4yfEMPNCWzZGI,751
+venvr/runner.py,sha256=mTA_kn-Hs4_ZD0aTRy-0v0g8bLZzJhEOt1226U6I-F8,946
+venvr/templates.py,sha256=HvAjzcYC0s7Z0wNvftoHCNCGnUtGIOEriVmbXfeI6EE,1011
+venvr/util.py,sha256=KzTU0CRL6ELnRuSiSW1zFDCboKWzi3DEZ1OKRtPSSYY,471
+venvr/venvr.py,sha256=DlV4KRZQqU4zJs-LA0OYTm5-578a2lNY4NtWDYvYwXM,721
+venvr-0.1.5.5.dist-info/LICENSE,sha256=TCGFq2RZnPZed3cKBhfq8EIxNzHcwJWJsBW8p9y1dDk,1068
+venvr-0.1.5.5.dist-info/METADATA,sha256=bcztPh1p0pOxRab0zJUgD4Dq9f9Yirly10BnmN5XISw,626
+venvr-0.1.5.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+venvr-0.1.5.5.dist-info/entry_points.txt,sha256=gb7JQDSD9PdOpto6n6NJyEGsDrsLi4yKI3z5vJyI4kM,39
+venvr-0.1.5.5.dist-info/top_level.txt,sha256=s6ZJmeHqZxA6uB3xztzJOCJM0lJ3uJ--Xp26tiEBuZM,6
+venvr-0.1.5.5.dist-info/RECORD,,
