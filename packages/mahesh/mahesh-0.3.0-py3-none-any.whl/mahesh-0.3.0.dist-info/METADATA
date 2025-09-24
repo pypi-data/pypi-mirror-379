@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: mahesh
+Version: 0.3.0
+Summary: Convert YOLO .pt models to ONNX and TensorRT engines easily 🚀
+Home-page: https://github.com/yourusername/yolo2trt
+Author: Mahi
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: ultralytics>=8.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

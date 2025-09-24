@@ -1,0 +1,2 @@
+[console_scripts]
+yolo2trt = yolo2trt.exporter:pt_to_trt
