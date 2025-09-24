@@ -1,0 +1,13 @@
+/.DS_Store
+/.venv
+/__pycache__
+.pyc
+build
+__pycache__
+*.key
+*.secure
+*.cer
+*.csr
+*.qolsys
+.DS_Store
+
