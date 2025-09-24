@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+purplepy/__init__.py
+purplepy/keysender.py
+purplepy/main.py
+purplepy.egg-info/PKG-INFO
+purplepy.egg-info/SOURCES.txt
+purplepy.egg-info/dependency_links.txt
+purplepy.egg-info/entry_points.txt
+purplepy.egg-info/requires.txt
+purplepy.egg-info/top_level.txt
