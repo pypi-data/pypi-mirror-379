@@ -1,0 +1,2 @@
+[console_scripts]
+locallib = catalog.__main__:main
