@@ -1,0 +1,228 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: [3.8, 3.9, "3.10", "3.11", "3.12"]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: rustfmt, clippy
+
+    - name: Cache Rust dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cargo/registry
+          ~/.cargo/git
+          target
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-cargo-
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install ODBC drivers (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y unixodbc-dev unixodbc
+
+    - name: Install maturin (Linux)
+      if: runner.os == 'Linux'
+      run: pip install maturin[patchelf]
+
+    - name: Install maturin (Windows)
+      if: runner.os == 'Windows'
+      run: pip install maturin
+
+    - name: Build in debug mode
+      run: maturin build
+
+    - name: Install built package
+      run: |
+        # Install the wheel file (cross-platform approach)
+        python -c "
+        import glob
+        import subprocess
+        import sys
+        import os
+        
+        # Find wheel files that match current Python version
+        wheel_files = glob.glob('target/wheels/*.whl')
+        if not wheel_files:
+            print('No wheel files found in target/wheels/')
+            sys.exit(1)
+        
+        # Filter wheels that match current Python version
+        python_version = f'cp{sys.version_info.major}{sys.version_info.minor}'
+        matching_wheels = [w for w in wheel_files if python_version in w]
+        
+        if matching_wheels:
+            wheel_file = matching_wheels[0]
+            print(f'Installing wheel: {wheel_file}')
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install', wheel_file])
+        else:
+            print(f'No matching wheel found for Python {python_version}')
+            print(f'Available wheels: {wheel_files}')
+            sys.exit(1)
+        "
+
+    - name: Install test dependencies
+      run: pip install pytest pytest-cov
+
+    - name: Run tests
+      run: pytest tests/ -v
+
+    - name: Test import
+      run: python -c "import ibarrow; print('Import successful')"
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: rustfmt, clippy
+
+    - name: Cache Rust dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cargo/registry
+          ~/.cargo/git
+          target
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-cargo-
+
+    - name: Run clippy
+      run: cargo clippy --all-targets --all-features -- -D warnings
+
+    - name: Run rustfmt
+      run: cargo fmt --all -- --check
+
+  build:
+    name: Build wheels
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: Cache Rust dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cargo/registry
+          ~/.cargo/git
+          target
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-cargo-
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install ODBC drivers (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y unixodbc-dev unixodbc
+
+    - name: Install maturin (Linux)
+      if: runner.os == 'Linux'
+      run: pip install maturin[patchelf]
+
+    - name: Install maturin (Windows)
+      if: runner.os == 'Windows'
+      run: pip install maturin
+
+    - name: Build wheels
+      run: maturin build --release --out dist
+
+    - name: Upload wheels
+      uses: actions/upload-artifact@v4
+      with:
+        path: dist/*.whl
+        name: wheels-${{ matrix.os }}
+
+  publish:
+    name: Publish to PyPI
+    runs-on: ubuntu-latest
+    needs: [test, lint, build]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: pypi
+      url: https://pypi.org/p/ibarrow
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Download wheels
+      uses: actions/download-artifact@v4
+      with:
+        name: wheels-ubuntu-latest
+        path: dist-ubuntu
+      
+    - name: Download Windows wheels
+      uses: actions/download-artifact@v4
+      with:
+        name: wheels-windows-latest
+        path: dist-windows
+      
+    - name: Combine wheels
+      run: |
+        mkdir -p dist
+        cp dist-ubuntu/*.whl dist/ 2>/dev/null || true
+        cp dist-windows/*.whl dist/ 2>/dev/null || true
+
+    - name: Install ODBC drivers (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y unixodbc-dev unixodbc
+
+    - name: Install maturin (Linux)
+      if: runner.os == 'Linux'
+      run: pip install maturin[patchelf]
+
+    - name: Install maturin (Windows)
+      if: runner.os == 'Windows'
+      run: pip install maturin
+
+    - name: Publish to PyPI
+      env:
+        MATURIN_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        MATURIN_USERNAME: __token__
+      run: maturin publish --skip-existing
