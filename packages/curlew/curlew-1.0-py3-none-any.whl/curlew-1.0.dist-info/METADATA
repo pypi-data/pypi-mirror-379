@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: curlew
+Version: 1.0
+Summary: A python package for constructing complex geological models from various types of neural fields.
+Home-page: https://github.com/samthiele/curlew
+Author: Sam Thiele
+Author-email: s.thiele@hzdr.de
+License: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
