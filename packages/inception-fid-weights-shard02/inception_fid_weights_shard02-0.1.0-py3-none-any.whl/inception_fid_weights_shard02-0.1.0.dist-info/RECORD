@@ -1,0 +1,6 @@
+inception_fid_weights_shard02/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inception_fid_weights_shard02/shard-02.bin,sha256=zIgASUB3ldqLKYbidJYnMFdmd_Ymz2ghz9AVLfMuMoY,41359681
+inception_fid_weights_shard02-0.1.0.dist-info/METADATA,sha256=pha-_SmFn9azA3fLdYUNQzNR4YOpESVaOUgaaBIZEV8,276
+inception_fid_weights_shard02-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+inception_fid_weights_shard02-0.1.0.dist-info/top_level.txt,sha256=3pQ1OUwcpYGJKtwLL9OyBRqq1rEH7FkdoG8DWQ1PI6A,30
+inception_fid_weights_shard02-0.1.0.dist-info/RECORD,,
