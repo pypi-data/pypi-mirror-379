@@ -1,0 +1,252 @@
+# PyDepM — Python Dependency Manager
+
+[![Python Version](https://img.shields.io/pypi/pyversions/pydm.svg)](https://pypi.org/project/pydm/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+PyDM is a modern Python project manager that simplifies dependency management, script execution, and project construction with an intuitive command-line interface.
+
+## Key Features
+
+- 🚀 Easy project initialization with `pydep init`
+- 📦 Dependency management with `pypackage.json`
+- 🛠️ Create standalone executables with PyInstaller
+- 📝 Project configuration with `pyproject.toml` (PEP 621) for module-type projects
+- 🔧 Run scripts with `pydep run`
+- 🌍 Global mode for system-wide tool installation
+- ⚡ Fast and efficient dependency resolution
+- 🔍 Security audit for dependencies
+- 📊 Outdated dependencies visualization
+- 🎛️ Advanced `pyproject.toml` customization for module projects
+
+## Requisitos
+
+- Python 3.9 o superior
+- pip (incluido con Python)
+
+## Instalación
+
+```bash
+pip install pydepm
+```
+
+## Quick Start Guide
+
+### Create a New Project
+
+```bash
+# Initialize a new application project
+pydep init my-app --type app
+
+# Or initialize a new module project
+pydep init my-module --type module
+
+# Navigate to the project directory
+cd my-app
+```
+
+### Advanced pyproject.toml Configuration (Module Projects Only)
+
+For module-type projects, you can customize the generated `pyproject.toml` in two ways:
+
+1. **Structured Format**: Define sections using JSON keys in `[section]` format
+2. **Raw Format**: Provide direct TOML content in the `_raw` field
+
+Example `pypackage.json` with custom pyproject configuration:
+
+```json
+{
+  "type": "module",
+  "name": "my-module",
+  "version": "0.1.0",
+  "pyproject": {
+    "[project.scripts]": {
+      "my-command": "my_module.cli:main",
+      "another-command": "my_module.other:cli"
+    },
+    "[tool.black]": {
+      "line-length": 100,
+      "target-version": ["py39"]
+    },
+    "[tool.mypy]": {
+      "python_version": "3.9",
+      "strict": true
+    },
+    "_raw": "# Direct TOML content here\n[tool.poetry]\nname = \"my-package\"\nversion = \"0.1.0\"\ndescription = \"My package description\"\n"
+  }
+}
+```
+
+When you run `pydep convert --to toml`, this will generate a `pyproject.toml` file with all the custom configurations merged together.
+
+### Manage Dependencies
+
+```bash
+# Add dependencies
+pydep add requests pytest
+
+# Añadir dependencias de desarrollo
+pydep add --dev black flake8
+
+# Instalar dependencias
+pydep install
+
+# Actualizar dependencias
+pydep update
+
+# Eliminar dependencias
+pydep remove nombre-del-paquete
+```
+
+### Ejecutar scripts
+
+Añade scripts a `pypackage.json`:
+```json
+{
+  "scripts": {
+    "iniciar": "python main.py",
+    "probar": "pytest",
+    "formatear": "black ."
+  }
+}
+```
+
+Ejecuta los scripts con:
+```bash
+pydep run iniciar
+pydep run probar
+pydep run formatear
+```
+
+### Construir ejecutables independientes (solo para proyectos de aplicación)
+
+Añade la configuración de compilación a `pypackage.json`:
+```json
+{
+  "executable": {
+    "target": "main.py",
+    "parameters": ["--onefile"],
+    "output": "dist/ejecutable"
+  }
+}
+```
+
+Construye el ejecutable:
+```bash
+pydep --helpd
+```
+
+## Estructura del proyecto
+
+### Proyectos de aplicación (`type: "app"` en pypackage.json)
+- Estructura de proyecto simple
+- Enfoque en la creación de ejecutables independientes
+- Sin `pyproject.toml` por defecto (puede habilitarse con `"pyprojectUse": true`)
+- Ideal para aplicaciones de usuario final
+
+### Proyectos de módulo (`type: "module"` en pypackage.json)
+- Estructura de paquete Python
+- Incluye `pyproject.toml` para metadatos del paquete
+- Soporta puntos de entrada (entry points) y scripts de consola
+- Ideal para bibliotecas y paquetes reutilizables
+
+## Comandos disponibles
+
+### Inicialización y configuración
+- `pydep init [NOMBRE] --type {app|module}`: Crea un nuevo proyecto
+- `pydep install [-e|--editable] [--global]`: Instala dependencias del proyecto
+
+### Gestión de dependencias
+- `pydep add [PAQUETE]... [--dev] [--global]`: Añade paquetes al proyecto
+- `pydep remove [PAQUETE]... [--global]`: Elimina paquetes del proyecto
+- `pydep update [PAQUETE]... [--global]`: Actualiza paquetes
+- `pydep outdated`: Muestra paquetes desactualizados
+- `pydep audit [--json] [--extended]`: Audita vulnerabilidades de seguridad
+- `pydep list`: Lista paquetes instalados
+- `pydm why PAQUETE`: Muestra por qué está instalado un paquete
+
+### Construcción y publicación
+- `pydep --helpd`: Construye el proyecto (ejecutable o paquete)
+- `pydm publish [--repository NOMBRE]`: Publica el paquete en PyPI
+
+### Ejecución
+- `pydep run SCRIPT`: Ejecuta un script definido en pypackage.json
+- `pydm version`: Muestra la versión de PyDM
+
+### Utilidad pydepx
+PyDM incluye una utilidad `pydepx` para ejecutar herramientas Python con salida enriquecida:
+
+```bash
+# Ejecutar black con salida mejorada
+pydepx black .
+
+# Ejecutar un módulo como script
+pydepx -m http.server 8000
+
+# Ejecutar tests con pytest
+pydepx -m pytest tests/
+```
+
+## pypackage.json
+
+El archivo `pypackage.json` es el archivo de configuración principal de PyDM. Aquí tienes un ejemplo completo:
+
+```json
+{
+  "type": "app",
+  "name": "mi-proyecto",
+  "version": "0.1.0",
+  "description": "Una descripción de mi proyecto",
+  "authors": [{"name": "Tu Nombre"}],
+  "license": "MIT",
+  "dependencies": {
+    "requests": "^2.31.0"
+  },
+  "devDependencies": {
+    "pytest": "^8.0.0",
+    "black": "^24.0.0"
+  },
+  "scripts": {
+    "start": "python main.py",
+    "test": "pytest"
+  },
+  "executable": {
+    "target": "main.py",
+    "parameters": ["--onefile"],
+    "output": "dist/ejecutable"
+  },
+  "useGlobalDeps": false,
+  "pyprojectUse": false
+}
+```
+
+## Uso avanzado
+
+### Modo global
+Puedes instalar paquetes globalmente con la bandera `--global`:
+
+```bash
+# Instalar un paquete globalmente
+pydep add -g black
+
+# Listar paquetes globales
+pydep list --global
+```
+
+### Variables de entorno
+PyDM respeta las siguientes variables de entorno:
+- `PYDM_VERBOSE`: Activa el modo detallado (equivalente a `--logs`)
+- `PYDM_GLOBAL_DEPS`: Usa dependencias globales (equivalente a `--global`)
+
+## Contribuir
+
+¡Las contribuciones son bienvenidas! Por favor, lee nuestra guía de contribución antes de enviar pull requests.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## Agradecimientos
+
+- A la comunidad de Python por su increíble ecosistema
+- Proyectos que nos inspiran: npm, pip, pipenv, poetry
+- A todos los contribuyentes que ayudan a mejorar PyDM
