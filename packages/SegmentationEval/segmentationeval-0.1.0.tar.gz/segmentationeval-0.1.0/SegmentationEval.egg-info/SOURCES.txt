@@ -1,0 +1,8 @@
+setup.py
+SegEval/__init__.py
+SegEval/core.py
+SegmentationEval.egg-info/PKG-INFO
+SegmentationEval.egg-info/SOURCES.txt
+SegmentationEval.egg-info/dependency_links.txt
+SegmentationEval.egg-info/requires.txt
+SegmentationEval.egg-info/top_level.txt
