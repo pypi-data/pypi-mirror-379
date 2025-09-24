@@ -1,0 +1,13 @@
+txtpack/__init__.py,sha256=yWTD2pshwaKbIGcPkuf9kIRdHXg87JKdONHRFw3NILA,252
+txtpack/cli.py,sha256=LImWQ2dfaIPMW2-b-ATZ9C0ee4kBTwsx53uCw9pN8Ls,5328
+txtpack/content_parsing.py,sha256=5aRaRvu9BHby1aNcGlggiH2Ln3GsqGRTXLdfum0ktQ8,1899
+txtpack/delimiter_processing.py,sha256=YF5mj6RhvFW-GfGCwXnrsn4-CL8rV2JcONDCWhlpMDs,14026
+txtpack/file_operations.py,sha256=nnBcyGLZXScCwgEwg51AXipzhGZ8rmCVmlEKYKnXWOw,3415
+txtpack/main.py,sha256=1YjUwTHUuJWANBqSCK94FEVp8bWlLXv7EHPXr4-u7iE,92
+txtpack/pattern_matching.py,sha256=UMFOZTeoXbjLN5ncbJ7t768WMx9tTr_-bbSQwAdQAxs,1935
+txtpack/pipeline.py,sha256=WZKkU8MxE0eRVbXK9pDa2SPN-EGt5TclMdDkpN93WEc,4605
+txtpack-1.2.0.dist-info/METADATA,sha256=KZ8BI8XtcCiKoFhNDLYDRmH6y159TgiEfJSqgNXQI6M,2000
+txtpack-1.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+txtpack-1.2.0.dist-info/entry_points.txt,sha256=vTnNfAViksYTRsI3O3k9azp9o71iDQZRyT_sCpGCEFQ,46
+txtpack-1.2.0.dist-info/licenses/LICENSE,sha256=9pwzu1ZMSTdxuR0rLflCmdroLlJAnyfKCYbSYd7Wl-k,1064
+txtpack-1.2.0.dist-info/RECORD,,
