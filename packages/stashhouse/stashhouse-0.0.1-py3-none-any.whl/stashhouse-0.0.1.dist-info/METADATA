@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: stashhouse
+Version: 0.0.1
+Summary: Centrally store files from a variety of protocols.
+Project-URL: Homepage, https://github.com/Jayson-Fong/stashhouse
+Project-URL: Issues, https://github.com/Jayson-Fong/stashhouse/issues
+Author-email: Jayson Fong <jayson.fong@gatech.edu>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.11
+Requires-Dist: asyncssh==2.21.0
+Description-Content-Type: text/markdown
+
+🏠 stashhouse
+=============
+
+stashhouse is a framework for centrally collecting files to enable rapid file transfers. The framework is designed with 
+a plugin system to enable the inclusion of additional file transfer protocols while working to minimize the overhead 
+required for file transfers.

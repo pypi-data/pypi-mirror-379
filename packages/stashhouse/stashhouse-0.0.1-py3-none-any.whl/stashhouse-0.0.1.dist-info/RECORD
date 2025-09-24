@@ -1,0 +1,12 @@
+stashhouse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stashhouse/__main__.py,sha256=kueH2JfaWOo05HV6PuEocpQzZz4DgWmAcsqA4KEXEtA,64
+stashhouse/cli.py,sha256=HOvypXm1WKxKQqC14H_auopapSpK_UP9TmeyJCW_9bQ,131
+stashhouse/plugin.py,sha256=DjHtWHX247OfArEx6vlOgGneZ5FdLu07nBDD2XWOwIQ,1313
+stashhouse/server.py,sha256=wpFRK1FVBW8K_rThEkr7BkCHFNRAVPL66dUsJB54Ezk,2050
+stashhouse/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stashhouse/plugins/ssh/__init__.py,sha256=MQ7KiMVpzdLQIeCCLJ0IxudbXWsWxW9lyyqvNIrqc7Y,2314
+stashhouse-0.0.1.dist-info/METADATA,sha256=8n207Gglvv6MHvkI0fBZrzeUpbwCO4GLrqR_N0J_9_Y,1082
+stashhouse-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+stashhouse-0.0.1.dist-info/entry_points.txt,sha256=u8E0zYv8crrGnTDNZ5CnDGnRwI7jrARZd2tjHGejSsI,119
+stashhouse-0.0.1.dist-info/licenses/LICENSE,sha256=Xq0RPxJ5dNBvWyg7y66Z5b4TB54pS7px4yd2fBkmR0I,1068
+stashhouse-0.0.1.dist-info/RECORD,,

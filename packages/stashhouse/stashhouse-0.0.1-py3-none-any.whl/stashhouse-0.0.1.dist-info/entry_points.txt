@@ -1,0 +1,5 @@
+[console_scripts]
+stashhouse = stashhouse.cli:main
+
+[stashhouse.plugins.server]
+ssh = stashhouse.plugins.ssh:SSHServer
