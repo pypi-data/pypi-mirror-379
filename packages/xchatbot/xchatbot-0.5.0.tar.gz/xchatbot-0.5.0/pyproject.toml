@@ -1,0 +1,51 @@
+[build-system]
+requires = [
+    "wheel",
+    "setuptools",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xchatbot"
+version = "0.5.0"
+description = "the Xtensible XMPP Chat Bot"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+authors = [
+    { name = "Fabio Comuni", email = "fabrixxm@gmail.com" },
+]
+classifiers = [
+  'Development Status :: 4 - Beta',
+  'Intended Audience :: Developers',
+  'Operating System :: MacOS :: MacOS X',
+  'Operating System :: Microsoft :: Windows',
+  'Operating System :: POSIX',
+  'Programming Language :: Python :: 3',
+  'Topic :: Communications :: Chat',
+]
+
+dependencies = [
+    'nbxmpp>=4.0.0,<7.0.0',
+    'PyGObject>=3.40.0,<3.60.0',
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "setuptools",
+    "wheel",
+]
+
+[project.urls]
+"Homepage" = "https://git.sr.ht/~fabrixxm/xchatbot"
+"Documentation" = "https://xchatbot.readthedocs.io/"
+
+[tool.setuptools]
+py-modules = ["xchatbot"]
+
+# Non-code data that should be included in the package source code
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[tool.setuptools.package-data]
+dist = [ "echobot.rc.dist", "README.md", "LICENSE"]
+
+

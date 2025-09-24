@@ -1,0 +1,27 @@
+## Release 0.5.0 (2025-09-24)
+
+* update to nbxmpp 5, pygobject 3.50
+* move from build.py to pyproject.toml
+
+
+## Release 0.4.0 (2023-08-02)
+
+* update to nbxmpp 4, PyGObject 3.40
+* update docs
+* fix config validation
+* config must be explicitly created and passed to start
+* add 'ready()' callback method: called when the bot is connected and logged in and ready to send/receive messages
+
+## Release 0.3.1 (2020-04-26)
+
+* Fix docs and readme
+
+## Release 0.3.0 (2020-04-26)
+
+### Features
+* stop loop on uncaught exceptions
+* add a preconfigured logger in bot class
+* set logger format
+
+
+---
