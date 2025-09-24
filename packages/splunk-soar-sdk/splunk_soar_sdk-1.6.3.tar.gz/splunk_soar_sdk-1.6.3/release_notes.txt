@@ -1,0 +1,21 @@
+## [1.6.3](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.6.2...1.6.3) (2025-09-23)
+
+
+### Bug Fixes
+
+* allow ActionOutput to be Optional ([8d6f2c6](https://github.com/phantomcyber/splunk-soar-sdk/commit/8d6f2c650d938f25ae3f6ab71412acbe4c4eeb08))
+
+
+
+
+
+## [1.6.3](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.6.2...1.6.3) (2025-09-23)
+
+
+### Bug Fixes
+
+* allow ActionOutput to be Optional ([8d6f2c6](https://github.com/phantomcyber/splunk-soar-sdk/commit/8d6f2c650d938f25ae3f6ab71412acbe4c4eeb08))
+
+
+
+
