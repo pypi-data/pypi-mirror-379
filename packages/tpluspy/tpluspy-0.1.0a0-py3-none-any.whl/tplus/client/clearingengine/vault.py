@@ -1,0 +1,34 @@
+from tplus.client.clearingengine.base import BaseClearingEngineClient
+from tplus.model.asset_identifier import AssetIdentifier, ChainAddress
+from tplus.model.types import ChainID
+
+
+class VaultClient(BaseClearingEngineClient):
+    """
+    APIs related to vaults.
+    """
+
+    async def update(self):
+        """
+        Request that the CE check the registry contract for new registered vaults.
+        """
+        await self._post("vaults/update")
+
+    async def update_balance(self, asset_id: AssetIdentifier | str, chain_id: ChainID):
+        """
+        Request that the CE check the deposit vault for new deposits for
+        the given user.
+
+        Args:
+            asset_id (AssetIdentifier | str): The asset identifier.
+            chain_id (:class:`~tplus.models.types.ChainID`): The chain ID to check.
+        """
+        request = {"asset_id": asset_id, "chain_id": chain_id}
+        await self._post("vault/balance/update", json_data=request)
+
+    async def get(self) -> list[ChainAddress]:
+        """
+        Get all registered vaults.
+        """
+        result = await self._get("vaults") or []
+        return [ChainAddress.model_validate(a) for a in result]
