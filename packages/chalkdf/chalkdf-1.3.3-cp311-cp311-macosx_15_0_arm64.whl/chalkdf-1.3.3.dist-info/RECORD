@@ -1,0 +1,16 @@
+chalkdf-1.3.3.dist-info/RECORD,,
+chalkdf-1.3.3.dist-info/WHEEL,sha256=QvawZXnKf5RzgCM7_3l1uq62qvkWSJCfiCGu4Mjmt9E,136
+chalkdf-1.3.3.dist-info/entry_points.txt,sha256=oP2gQVOTJjfVqlZaIoQRF0zSpRXkrH-CnBfw7pJsbQ8,56
+chalkdf-1.3.3.dist-info/top_level.txt,sha256=3RBKdmw-8swV57wEoaTTlG3PMboX60-gfsB_KE576eU,8
+chalkdf-1.3.3.dist-info/METADATA,sha256=N2ZvfLpHt0np4URVFJJP0Co2TwhiGk-edGSwba_NegQ,6385
+chalkdf/libchalk.cpython-311-darwin.so,sha256=Ly5axy50WfkwYusvlQ8q1cUJrpUXsko_FLIZdOTwumo,311375184
+chalkdf/dataframe.py,sha256=rdTzEvLraKsbLKqa24LKvvu7hABaGbHUCfHEKqXoPT4,19346
+chalkdf/__init__.py,sha256=5qFHbrMbjJq4HrTntKTiuyzVuLIi6i53Qfm4-jDc6mY,495
+chalkdf/lazyframe.py,sha256=k0hRjDtkOLdqOpogSCpjwkJRKvvEG8fIX6gas11503Y,13598
+chalkdf/testing.py,sha256=qor129YbjSs0Lp5282Vi8jGcMs4qohoJHBLa0SIiSgs,7085
+chalkdf/underscore_conversion/__HACK__chalk_overload.py,sha256=UMtnU_aoMdv-PYg9ydI5D3k6iSzhJpqJWjupGxBPf80,23771
+chalkdf/underscore_conversion/convert_underscore_to_expr.py,sha256=zwL0VZ78ee_gKZHtIVxHqyc8655yspXHZYxldSAjh7Y,13537
+chalkdf/underscore_conversion/__HACK__chalk_function_registry.py,sha256=ECcJnLyylJjHsZn9sjsCmwbvIEhZjUYF6Ko1Qp6sfGc,171674
+chalkdf/underscore_conversion/__HACK__maybe_named_collection.py,sha256=i7zYOtVCEug0FZW3b9K93KwX1zf_95M3ZOuIAyIi4R4,2627
+chalkdf/underscore_conversion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chalkdf/underscore_conversion/__HACK__arrow_type_promotion.py,sha256=xh5QFYuRk27rbAXcrNIyf_uB3tC0s9wCMXbK3R8Cefc,11586
