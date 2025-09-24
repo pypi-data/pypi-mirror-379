@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: LiGrad
+Version: 0.1
+Requires-Dist: numpy>=1.21
+Requires-Dist: scipy>=1.7
+Requires-Dist: astropy>=5.0
+Requires-Dist: pylightcurve>=4.0
