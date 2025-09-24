@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aigraphcodescan"
+version = "4.0.6"
+description = "A tool for security review of code using graph-based analysis"
+authors = [
+  { name = "Marcin Kozlowski", email = "marcinguy@gmail.com" },
+]
+license = "AGPL-3.0-only"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "neo4j>=4.0.0",
+    "fast_graphrag>=0.0.4",
+    "logging",
+    "argparse"
+]
+
+[project.scripts]
+aigraphcodescan = "aigraphcodescan.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["aigraphcodescan"]
