@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: pysparks
+Version: 0.1.0a6
+Summary: Software for Polymerization and Reaction Kinetics Simulations
+Author-email: Devon Callan <devoncallan@ucsb.edu>
+License: MIT
+Project-URL: Homepage, https://github.com/devoncallan/SPaRKS
+Project-URL: Repository, https://github.com/devoncallan/SPaRKS
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: pyyaml
+Requires-Dist: runkmc
+Dynamic: license-file
+
+# SPARKS
+### Software for Polymerization And Reaction Kinetic Simulations
+
+## Quick Install
+
+```bash
+pip install pysparks
+```
