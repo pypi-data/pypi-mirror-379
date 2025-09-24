@@ -1,0 +1,3 @@
+qcloud_cos
+tqdm
+pillow
