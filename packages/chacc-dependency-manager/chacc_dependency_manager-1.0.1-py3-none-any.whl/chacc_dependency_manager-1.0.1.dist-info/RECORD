@@ -1,0 +1,10 @@
+chacc_dependency_manager-1.0.1.dist-info/licenses/LICENSE,sha256=C6CaA0DYgsaPfcjvXGmaGviKhJOtrLtQLTUs2Xyrobs,1074
+package/README.md,sha256=O6Pg--Ytibo185Ycu-71aCLzScKoi7pIdh4FYG05d74,626
+package/__init__.py,sha256=qYOJxFAgmyrLWrHCUoluBAJpE5rAZfVRRcnGcdlWqew,1017
+package/chacc.py,sha256=PudkVjxNhmNOhAtqL-ePLS7Hj6cfcwMGJt-t_5f2K-8,20497
+package/cli.py,sha256=7w7F7ee2iJQQwOP2BcklZBVvhZe3fRSiDCoHGpadwBQ,5347
+chacc_dependency_manager-1.0.1.dist-info/METADATA,sha256=3sIEraJfSWGkVqegcj-wjEpYOegZ0XhWeTgJKoH1meY,15022
+chacc_dependency_manager-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+chacc_dependency_manager-1.0.1.dist-info/entry_points.txt,sha256=K3-fkK0lnzfj6Vf38BVX8SUEqlOnfIPiM7amaZBwxEc,113
+chacc_dependency_manager-1.0.1.dist-info/top_level.txt,sha256=TpQW7893uEAT8mPh-QCMZWhhKYvlqryC9Fjm5Hxg2f8,8
+chacc_dependency_manager-1.0.1.dist-info/RECORD,,
