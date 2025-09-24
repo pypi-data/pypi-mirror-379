@@ -1,0 +1,7 @@
+[project]
+name = "geobrix"
+authors = [
+    {name = "Michael Johns", email = "mjohns@databricks.com"},
+]
+version = "0.0.0"
+description = "Coming soon"
