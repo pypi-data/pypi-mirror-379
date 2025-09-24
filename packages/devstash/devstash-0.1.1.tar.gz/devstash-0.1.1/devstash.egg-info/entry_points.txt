@@ -1,0 +1,2 @@
+[console_scripts]
+devstash = devstash.cli:main
