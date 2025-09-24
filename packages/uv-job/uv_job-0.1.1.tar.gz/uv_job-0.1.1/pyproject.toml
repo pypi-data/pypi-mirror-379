@@ -1,0 +1,16 @@
+[project]
+name = "uv-job"
+version = "0.1.1"
+description = "Simple task runner for uv"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["tomli>=1.2.0; python_version < '3.11'"]
+
+[project.scripts]
+job = "job:main"
+
+[dependency-groups]
+dev = ["mypy>=1.18.2", "pytest>=8.4.2"]
+
+[tool.jobs]
+test = "pytest -v"
