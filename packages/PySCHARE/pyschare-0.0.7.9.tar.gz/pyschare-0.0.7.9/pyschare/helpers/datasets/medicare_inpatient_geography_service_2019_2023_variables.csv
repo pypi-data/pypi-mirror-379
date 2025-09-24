@@ -1,0 +1,20 @@
+﻿Variable,Description
+rndrng_prvdr_geo_lvl,"identifies the level of geography that the data in the row has been aggregated. a value of 'state' indicates the data in the row is aggregated to the single state identified in the rndrng_prvdr_ geo_desc column for a given drg. a value of 'national' indicates the data in the row is aggregated across all
+states for a given drg."
+rndrng_prvdr_geo_cd,"fips state code where the provider is physically located when rndrng_prvdr_geo_level = 'state'. the rndrng_prvdr_geo_code will be blank for data aggregated at
+the national level."
+rndrng_prvdr_geo_desc,"state name where the provider is physically located when rndrng_prvdr_geo_level = 'state'. the rndrng_prvdr_geo_code will be blank for data aggregated at
+the national level."
+year,year
+drg_cd,"classification system that groups similar clinical conditions
+(diagnoses) and the procedures furnished by the hospital during the stay."
+drg_desc,"description of the classification system (drg) that groups similar clinical conditions (diagnoses) and the procedures
+furnished by the hospital during the stay."
+tot_dschrgs,"the number of discharges billed by all providers for inpatient
+hospital services."
+avg_submtd_cvrd_chrg,"the average charge of all providers' services covered by medicare for discharges in the drg. these will vary from hospital to hospital because of differences in hospital charge
+structures."
+avg_tot_pymt_amt,"the average total payments to all providers for the drg including the ms-drg amount, teaching, disproportionate share, capital, and outlier payments for all cases. also included in average total payments are co- payment and deductible amounts that the patient is responsible for and any additional payments by third parties for coordination of
+benefits."
+avg_mdcr_pymt_amt,"the average amount that medicare pays to the provider for medicare's share of the ms-drg. medicare payment amounts include the ms-drg amount, teaching, disproportionate share, capital, and outlier payments for all cases. medicare payments do not include beneficiary co-payments and deductible amounts nor any additional payments from third
+parties for coordination of benefits"

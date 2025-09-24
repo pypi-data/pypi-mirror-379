@@ -1,0 +1,151 @@
+Variable,Description
+grasp_id,unique id for database administration - unique id
+st,state fips code - geography
+state,state name - geography
+st_abbr,state abbreviation - geography
+county,county name - geography
+fips,county fips code - geography
+e_totpop,total population - estimate
+e_hu,housing units - estimate
+e_hh,households - estimate
+e_pov,persons below poverty - estimate
+e_unemp,civilian age 16+ unemployed - estimate
+e_pci,per capita income - estimate
+e_nohsdp,persons age 25+ with no high school diploma - estimate
+e_age65,persons age 65 and older - estimate
+e_age17,persons age 17 and younger - estimate
+e_disabl,civilian noninstitutionalized population with a disability - estimate
+e_sngpnt,single parent household with children under 18 - estimate
+e_aian,american indian and alaska native - estimate
+e_asian,asian - estimate
+e_afam,african american or black - estimate
+e_nhpi,native hawaiian/pacific islander - estimate
+e_hisp,hispanic or latino/a - estimate
+e_other,some other race alone - estimate
+e_span,"spanish speakers who speak english less than ""very well"" - estimate"
+e_chin,"chinese speakers who speak english less than ""very well"" - estimate"
+e_viet,"vietnamese speakers who speak english less than ""very well"" - estimate"
+e_kor,"korean speakers who speak english less than ""very well"" - estimate"
+e_rus,"russian speakers who speak english less than ""very well"" - estimate"
+e_munit,housing in structures with 10 or more units - estimate
+e_mobile,mobile homes - estimate
+e_crowd,"at household level (occupied housing units), more people than rooms - estimate"
+e_noveh,households with no vehicle available - estimate
+e_groupq,persons in group quarters - estimate
+hosp,hospitals - count
+urg,urgent care clinics - count
+pharm,pharmacies - count
+pcp,primary care physicians -
+e_uninsur,persons without health insurance - estimate
+e_noint,no internet access - estimate
+e_totpop,total population - margin of error
+m_hu,housing units - margin of error
+m_hh,households - margin of error
+m_pov,persons below poverty - margin of error
+m_unemp,civilian age 16+ unemployed - margin of error
+m_pci,per capita income - margin of error
+m_nohsdp,persons age 25+ with no high school diploma - margin of error
+m_age65,persons age 65 and older - margin of error
+m_age17,persons age 17 and younger - margin of error
+m_disabl,civilian noninstitutionalized population with a disability - margin of error
+m_sngpnt,single parent household with children under 18 - margin of error
+m_aian,american indian and alaska native - margin of error
+m_asian,asian - margin of error
+m_afam,african american or black - margin of error
+m_nhpi,native hawaiian/pacific islander - margin of error
+m_hisp,hispanic or latino/a - margin of error
+m_other,some other race alone - margin of error
+m_span,"spanish speakers who speak english less than ""very well"" - margin of error"
+m_chin,"chinese speakers who speak english less than ""very well"" - margin of error"
+m_viet,"vietnamese speakers who speak english less than ""very well"" - margin of error"
+m_kor,"korean speakers who speak english less than ""very well"" - margin of error"
+m_rus,"russian speakers who speak english less than ""very well"" - margin of error"
+m_munit,housing in structures with 10 or more units - margin of error
+m_mobile,mobile homes - margin of error
+m_crowd,"at household level (occupied housing units), more people than rooms - margin of error"
+m_noveh,households with no vehicle available - margin of error
+m_groupq,persons in group quarters - margin of error
+m_uninsur,persons without health insurance - margin of error
+m_noint,no internet access - margin of error
+ep_pov,persons below poverty - percentage estimate
+ep_unemp,civilian age 16+ unemployed - percentage estimate
+ep_pci,per capita income - percentage estimate
+ep_nohsdp,persons age 25+ with no high school diploma - percentage estimate
+ep_age65,persons age 65 and older - percentage estimate
+ep_age17,persons age 17 and younger - percentage estimate
+ep_disabl,civilian noninstitutionalized population with a disability - percentage estimate
+ep_sngpnt,single parent household with children under 18 - percentage estimate
+ep_aian,american indian and alaska native - percentage estimate
+ep_asian,asian - percentage estimate
+ep_afam,african american or black - percentage estimate
+ep_nhpi,native hawaiian/pacific islander - percentage estimate
+ep_hisp,hispanic or latino/a - percentage estimate
+ep_other,some other race alone - percentage estimate
+ep_span,"spanish speakers who speak english less than ""very well"" - percentage estimate"
+ep_chin,"chinese speakers who speak english less than ""very well"" - percentage estimate"
+ep_viet,"vietnamese speakers who speak english less than ""very well"" - percentage estimate"
+ep_kor,"korean speakers who speak english less than ""very well"" - percentage estimate"
+ep_rus,"russian speakers who speak english less than ""very well"" - percentage estimate"
+ep_munit,housing in structures with 10 or more units - percentage estimate
+ep_mobile,mobile homes - percentage estimate
+ep_crowd,"at household level (occupied housing units), more people than rooms - percentage estimate"
+ep_noveh,households with no vehicle available - percentage estimate
+ep_groupq,persons in group quarters - percentage estimate
+r_hosp,"hospitals per 100,000 - rate"
+r_urg,"urgent care clinics per 100,000 - rate"
+r_pharm,"pharmacies per 100,000 - rate"
+r_pcp,primary care physicians - rate
+ep_uninsur,persons without health insurance - percentage estimate
+er_cardio,"total cardiovascular disease death rate per 100,000 - rate"
+er_diab,diagnosed diabetes; total (total); adults aged 20+ years - rate
+er_obes,obesity; total (total); adults aged 20+ years - rate
+er_respd,chronic respiratory diseases - rate
+ep_noint,no internet access - percentage estimate
+epl_pov,persons below poverty - percentile of percentage estimate
+epl_unemp,civilian age 16+ unemployed - percentile of percentage estimate
+epl_pci,per capita income - percentile of percentage estimate
+epl_nohsdp,persons age 25+ with no high school diploma - percentile of percentage estimate
+epl_age65,persons age 65 and older - percentile of percentage estimate
+epl_age17,persons age 17 and younger - percentile of percentage estimate
+epl_disabl,civilian noninstitutionalized population with a disability - percentile of percentage estimate
+epl_sngpnt,single parent household with children under 18 - percentile of percentage estimate
+epl_aian,american indian and alaska native - percentile of percentage estimate
+epl_asian,asian - percentile of percentage estimate
+epl_afam,african american or black - percentile of percentage estimate
+epl_nhpi,native hawaiian/pacific islander - percentile of percentage estimate
+epl_hisp,hispanic or latino/a - percentile of percentage estimate
+epl_other,some other race alone - percentile of percentage estimate
+epl_span,"spanish speakers who speak english less than ""very well"" - percentile of percentage estimate"
+epl_chin,"chinese speakers who speak english less than ""very well"" - percentile of percentage estimate"
+epl_viet,"vietnamese speakers who speak english less than ""very well"" - percentile of percentage estimate"
+epl_kor,"korean speakers who speak english less than ""very well"" - percentile of percentage estimate"
+epl_rus,"russian speakers who speak english less than ""very well"" - percentile of percentage estimate"
+epl_munit,housing in structures with 10 or more units - percentile of percentage estimate
+epl_mobile,mobile homes - percentile of percentage estimate
+epl_crowd,"at household level (occupied housing units), more people than rooms - percentile of percentage estimate"
+epl_noveh,households with no vehicle available - percentile of percentage estimate
+epl_groupq,persons in group quarters - percentile of percentage estimate
+pl_hosp,hospitals - percentile of rate
+pl_urg,urgent care clinics - percentile of rate
+pl_pharm,pharmacies - percentile of rate
+pl_pcp,primary care physicians - percentile of floating catchment access score
+epl_uninsur,persons without health insurance - percentile of rate
+epl_cardio,"total cardiovascular disease death rate per 100,000 - percentile of rate"
+epl_diab,diagnosed diabetes; total (total); adults aged 20+ years - percentile of rate
+epl_obes,obesity; total (total); adults aged 20+ years - percentile of rate
+epl_respd,chronic respiratory diseases - percentile of rate
+epl_noint,no internet access - percentile of percentage estimate
+spl_theme1,sum of series; theme 1
+spl_theme2,sum of series; theme 2
+spl_theme3,sum of series; theme 3
+spl_theme4,sum of series; theme 4
+spl_theme5,sum of series; theme 5
+spl_theme6,sum of series; theme 6
+spl_themes,sum of series themes
+rpl_theme1,percentile ranking; theme 1
+rpl_theme2,percentile ranking; theme 2
+rpl_theme3,percentile ranking; theme 3
+rpl_theme4,percentile ranking; theme 4
+rpl_theme5,percentile ranking; theme 5
+rpl_theme6,percentile ranking; theme 6
+rpl_themes,overall percentile ranking

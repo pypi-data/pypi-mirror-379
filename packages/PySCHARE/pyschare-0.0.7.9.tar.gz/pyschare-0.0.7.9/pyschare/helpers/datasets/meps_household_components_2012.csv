@@ -1,0 +1,1884 @@
+Variable,Description
+acceli42,pers eligible for access supplement-r4/2
+actdty31,military full-time active duty - r3/1
+actdty42,military full-time active duty - r4/2
+actdty53,military full-time active duty - r5/3
+actlim31,any limitation work/housewrk/schl-rd 3/1
+actlim53,any limitation work/housewrk/schl-rd 5/3
+adappt42,saq 12 mos: # visits to med off for care
+adcape42,saq 4wks: felt calm/peaceful sf-12v2
+adclim42,saq: hlth limits climbing stairs sf-12v2
+adcmpd42,saq: date completed - day
+adcmpm42,saq: date completed - month
+adcmpy42,saq: date completed - year
+addaya42,saq: hlth limits mod activities sf-12v2
+addown42,saq 4wks: felt downhearted/depr sf-12v2
+addprs42,saq 2 wks: felt down/depressed/hopeless
+addrbp42,saq 2 yrs: dr checked blood pressure
+adefrt42,saq 30 days: how oftn evrythng an effort
+adegmc42,saq 12mos: easy getting needed med care
+adexpl42,saq 12 mos: doc explained so understood
+adezun42,saq 12 mos: dr given instr. ez undrstd
+adffrm42,saq 12 mos: had to fill out/sign forms
+adfhlp42,saq 12 mos: offrd help filling out forms
+adgenh42,saq: health in general sf-12v2
+adhdaddx,adhdadd diagnosis (5-17)
+adhdaged,age of diagnosis-adhd/add
+adhecr42,saq 12 mos: rating of health care
+adhope42,saq 30 days: how often felt hopeless
+adilcr42,saq 12mos: ill/injury needing immed care
+adilww42,saq 12 mos: got care when needed ill/inj
+adinsa42,saq: do not need health insurance
+adinsb42,saq: health insurance not worth cost
+adinst42,saq 12 mos: dr gave spcifc instrctns
+adintr42,saq 2 wks: little interest in things
+adl3mo31,adl help 3+ months - rd 3/1
+adl3mo42,adl help 3+ months - rd 4/2
+adl3mo53,adl help 3+ months - rd 5/3
+adlang42,saq: language of saq interview
+adlhlp31,adl screener - rd 3/1
+adlhlp42,adl screener - rd 4/2
+adlhlp53,adl screener - rd 5/3
+adlist42,saq 12 mos: doctor listened to you
+admals42,saq 4wks:accmp less b/c mnt prbs sf-12v2
+admwlm42,saq 4wks:work limt b/c mnt probs sf-12v2
+adndcr42,"saq 12mos: need any care, test, treatmnt"
+adnerv42,saq 30 days: how often felt nervous
+adnrgy42,saq 4wks: had a lot of energy sf-12v2
+adnsmk42,saq 12mos: dr advised to quit smoking
+adover42,saq: can overcome ills without med help
+adpain42,saq 4wks:pain limits normal work sf-12v2
+adpals42,saq 4wks:accmp less b/c phy prbs sf-12v2
+adprtm42,saq 12 mos: dr spent enuf time with you
+adprx42,saq: relationship of proxy to adult
+adpwlm42,saq 4wks:work limt b/c phy probs sf-12v2
+adresp42,saq 12 mos: dr showed respect
+adrest42,saq 30 days: how often felt restless
+adrisk42,saq: more likely to take risks
+adrtcr42,saq 12 mos: made appt routine med care
+adrtww42,saq 12 mos: got med appt when wanted
+adsad42,saq 30 days: how often felt sad
+adsmok42,saq: currently smoke
+adsoca42,saq 4wks: hlth stopped soc activ sf-12v2
+adspec42,saq 12 mos: needed to see specialist
+adsprf42,saq 12mos: how esy getting spec referral
+adtlhw42,saq 12 mos: dr asked r desc how follow
+adupro42,prblm getting along w/adults (5-17)-r4/2
+adwrth42,saq 30 days: how often felt worthless
+afdc12,did person's check include tanf
+afthou42,ac25 how diff contact usc aft hours-r4/2
+age12x,age as of 12/31/12 (edited/imputed)
+age31x,age - r3/1 (edited/imputed)
+age42x,age - r4/2 (edited/imputed)
+age53x,age - r5/3 (edited/imputed)
+agelast,person's age last time eligible
+aidhlp31,used assistive devices - rd 3/1
+aidhlp53,used assistive devices - rd 5/3
+aliimp12,alimony income imputation flag
+alimp12x,person's alimony income
+amaexp12,totl ambultry (ob+op) phys ass t exp 12
+amamcd12,phys ass t amb vsts-medicaid amt 12
+amamcr12,phys ass t amb vsts-medicare amt 12
+amaofd12,phys ass t amb vsts - other fed amt 12
+amaopr12,phys ass t amb vsts - oth private amt 12
+amaopu12,phys ass t amb vsts - oth public amt 12
+amaosr12,p a amb vsts - oth unclass srce amt 12
+amaoth12,phys ass t amb vsts-oth combined amt 12
+amaprv12,phys ass t amb vsts-private ins amt 12
+amaptr12,phys ass t amb vsts - prv & tri amt 12
+amaslf12,phys ass t amb vsts-self/family amt 12
+amasst12,"# physician ass t vsts (off+oupat), 2012"
+amastl12,phys ass t amb vsts-oth st/locl amt 12
+amatch12,phys ass t ambulatory visit charges 12
+amatri12,phys ass t amb vsts-tricare amt 12
+amava12,phys ass t amb vsts-va/champva amt 12
+amawcp12,phys ass t amb vsts-wrkers comp amt 12
+amcexp12,totl ambultry (ob+op) chiro exp 12
+amchir12,"# chiropractr vsts (off+outpat), 2012"
+amcmcd12,chiro amb visits - medicaid amt 12
+amcmcr12,chiro amb visits - medicare amt 12
+amcofd12,chiro amb visits - other federal amt 12
+amcopr12,chiro amb visits - oth private amt 12
+amcopu12,chiro amb visits - oth public amt 12
+amcosr12,chir amb vsts - oth unclass srce amt 12
+amcoth12,chiro amb visits - oth combined amt 12
+amcprv12,chiro amb visits - private ins amt 12
+amcptr12,chiro amb visits -prv & tri amt 12
+amcslf12,chiro amb visits - self/family amt 12
+amcstl12,chiro amb visits - oth st/local amt 12
+amctch12,chiro ambulatory visit charges 12
+amctri12,chiro amb visits-tricare amt 12
+amcva12,chiro amb visits - va/champva amt 12
+amcwcp12,chiro amb visits-workers comp amt 12
+amdrc12,"# calls w/off & outpat physicians, 2012"
+ameexp12,totl ambultry (ob+op) optometrist exp 12
+amemcd12,optmtrist amb vsts - medicaid amt 12
+amemcr12,optmtrist amb vsts - medicare amt 12
+ameofd12,optmtrist amb vsts-other fed amt 12
+ameopr12,optmtrist amb vsts - oth private amt 12
+ameopu12,optmtrist amb vsts - oth public amt 12
+ameosr12,optom amb vsts - oth unclas srce amt 12
+ameoth12,optmtrist amb vsts - oth combined amt 12
+ameprv12,optmtrist amb vsts - private ins amt 12
+ameptr12,optmtrist amb vsts - prv & tri amt 12
+ameslf12,optmtrist amb vsts - self/family amt 12
+amestl12,optmtrist amb vsts-oth st/local amt 12
+ametch12,optometrist ambulatory visit charges 12
+ametri12,optmtrist amb vsts-tricare amt 12
+ameva12,optmtrist amb vsts-va/champva amt 12
+amewcp12,optmtrist amb vsts-workers comp amt 12
+amnexp12,totl ambultry (ob+op) nurse/prac exp 12
+amnmcd12,nrs/prac amb vsts - medicaid amt 12
+amnmcr12,nrs/prac amb vsts - medicare amt 12
+amnofd12,nrs/prac amb vsts-other federal amt 12
+amnopr12,nrs/prac amb vsts - oth private amt 12
+amnopu12,nrs/prac amb vsts - oth public amt 12
+amnosr12,nrs/pr amb vsts - oth unclas srce amt 12
+amnoth12,nrs/prac amb vsts - oth combined amt 12
+amnprv12,nrs/prac amb vsts - priv ins amt 12
+amnptr12,nrs/prac amb vsts - prv & tri amt 12
+amnslf12,nrs/prac amb vsts - self/family amt 12
+amnstl12,nrs/prac amb vsts-oth st/local amt 12
+amntch12,nrs/prac ambulatory visit charges 12
+amntri12,nrs/prac amb vsts-tricare amt 12
+amnurs12,# amb nurse/prctitionr vsts(ob+op) 12
+amnva12,nrs/prac amb vsts-va/champva amt 12
+amnwcp12,nrs/prac amb vsts-workers comp amt 12
+amopto12,# amb optometrist vsts (ob+op) 12
+amtexp12,totl ambultry (ob+op) pt/ot exp 12
+amther12,# amb pt/ot thrpy visits (ob+op) 12
+amtmcd12,pt/ot amb visits-medicaid amt 12
+amtmcr12,pt/ot amb visits-medicare amt 12
+amtofd12,pt/ot amb visits - other fed amt 12
+amtopr12,pt/ot amb visits - oth private amt 12
+amtopu12,pt/ot amb visits-oth public amt 12
+amtosr12,pt/ot amb vsts-oth unclas srce amt 12
+amtotc12,"# calls w/office & oupat depts, 2012"
+amtoth12,pt/ot amb visits - oth combined amt 12
+amtprv12,pt/ot amb visits-private ins amt 12
+amtptr12,pt/ot amb visits -prv & tri amt 12
+amtslf12,pt/ot amb visits-self/family amt 12
+amtstl12,pt/ot amb visits-oth st/locl amt 12
+amttch12,pt/oc ambulatory visit charges 12
+amttri12,pt/ot amb visits-tricare amt 12
+amtva12,pt/ot amb visits-va/champva amt 12
+amtwcp12,pt/ot amb visits-workers comp amt 12
+angiaged,age of diagnosis-angina
+angidx,angina diagnosis (>17)
+anylim12,"any limitation in p16r3,4,5/p17r1,2,3"
+aprdlm42,mcaid/schip/o pub: dly wait 4 apprv-r4/2
+aprdlt42,tricr/chamv: delay waiting 4 apprvl-r4/2
+aprtrm42,mcaid/schip/o pub: need apprv 4 trt-r4/2
+aprtrt42,tricr/chamv: need apprvl 4 treatmnt-r4/2
+arthaged,age of diagnosis-arthritis
+arthdx,arthritis diagnosis (>17)
+arthtype,type of arthritis diagnosed (>17)
+asacut53,used acute pres inhaler last 3 mos-rd5/3
+asatak31,asthma attack last 12 mos - rd3/1
+asatak53,asthma attack last 12 mos - rd 5/3
+asdaly53,now take prev daily asthma meds - rd 5/3
+asevfl53,ever used peak flow meter - rd 5/3
+asianp42,ac19 is provider asian-r4/2
+asmrcn53,used>3acute cn pres inh last 3 mos-rd5/3
+aspkfl53,have peak flow meter at home - rd 5/3
+asprev53,ever used prev daily asthma meds -rd 5/3
+asprin53,tke aspirn every (othr) day (>17)-rd 5/3
+asstil31,does person still have asthma-rd3/1
+asstil53,does person still have asthma - rd 5/3
+asthaged,age of diagnosis-asthma
+asthdx,asthma diagnosis
+asthep31,when was last episode of asthma - rd 3/1
+asthep53,when was last episode of asthma - rd 5/3
+aswnfl53,when last used peak flow meter - rd 5/3
+begrfd31,r3/1 reference period begin date: day
+begrfd42,r4/2 reference period begin date: day
+begrfd53,r5/3 reference period begin date: day
+begrfm31,r3/1 reference period begin date: month
+begrfm42,r4/2 reference period begin date: month
+begrfm53,r5/3 reference period begin date: month
+begrfy31,r3/1 reference period begin date: year
+begrfy42,r4/2 reference period begin date: year
+begrfy53,r5/3 reference period begin date: year
+bendif31,difficulty bending/stooping - rd 3/1
+bendif53,difficulty bending/stooping - rd 5/3
+blckpr42,ac19 is provider black/african amer-r4/2
+bldraged,age of diagnosis-bladder cancer
+bldrrems,bladder cancer in remission
+blind42,person is blind - rd 4/2
+bmindx53,adult body mass index (>17) - rd 5/3
+boost42,dr advise booster seat (40<wt<=80)-r4/2
+bpchek53,time snce lst blood pres chk (>17)-rd5/3
+bpmldx,mult diag high blood press (>17)
+bpmont53,# mos snce lst blood pres chk (>17)-r5/3
+braiaged,age of diagnosis-brain cancer
+brairems,brain cancer in remission
+brstaged,age of diagnosis-breast cancer
+brstex53,how lng snce lst breast exam (>17)-rd5/3
+brstrems,breast cancer in remission
+bsnty31,"sole prop, partner, corp, rd 3/1 cmj"
+bsnty42,"sole prop, partner, corp, rd 4/2 cmj"
+bsnty53,"sole prop, partner, corp, rd 5/3 cmj"
+bstsre53,rsn have bld stool tst (>39)-r5/3
+bstst53,mst rcnt bld stool tst hme kit(>39)-r5/3
+busimp12,business income imputation flag
+busnp12x,person's business income
+cabladdr,cancer diagnosed - bladder (>17)
+cabrain,cancer diagnosed - brain (>17)
+cabreast,cancer diagnosed - breast (>17)
+cacervix,cancer diagnosed - cervix (>17)
+cacolon,cancer diagnosed - colon (>17)
+caleukem,cancer diagnosed - leukemia (>17)
+calung,cancer diagnosed - lung (>17)
+calymph,cancer diagnosed - lymphoma (>17)
+camelano,cancer diagnosed - melanoma (>17)
+cancerdx,cancer diagnosis (>17)
+caother,cancer diagnosed - other (>17)
+caprosta,cancer diagnosed - prostate (>17)
+careco42,ac08 oth reas no usc:cost of med cr-r4/2
+cashp12x,person's other regular cash contribution
+caskindk,cancer diagnosed-skin-unknown type (>17)
+caskinnm,cancer diagnosed - skin-nonmelano (>17)
+cathroat,cancer diagnosed - throat (>17)
+cathyrod,cancer diagnosed - thyroid (>17)
+cervaged,age of diagnosis-cervical cancer
+cervrems,cervical cancer in remission
+chappt42,cahps:12mos:# of off/clin apts(0-17)r4/2
+chbmix42,child's body mass index (6-17)-r4/2
+chbron31,chronc bronchits last 12 mths (>17)-r3/1
+chbron53,chronc bronchits last 12 mths (>17)-r5/3
+chcoun42,cshcn:child needs counseling (0-17)-r4/2
+chdaged,age of diagnosis-coronary heart disease
+chddx,coronary hrt disease diag (>17)
+check53,how lng lst routne checkup (>17)-rd 5/3
+chempb42,cshcn:couns prob last 12+mos (0-17)-r4/2
+chenec42,cahps:12mos:easy get nec care (0-17)r4/2
+chexpl42,cahps:12mos:chld dr expl thng(0-17)r4/2
+cheyre42,cahps:12mos:esy w/rfr to spec(0-17)-r4/2
+chgj3142,changed job between rd 3/1 and rd 4/2
+chgj4253,changed job between rd 4/2 and rd 5/3
+chhecr42,cahps:12mos:rate chld hlt care(0-17)r4/2
+chilcr42,cahps:12mos:ill/inj need care(0-17)-r4/2
+chilww42,cahps:12mos:ill care whn wntd(0-17)-r4/2
+chldp12x,person's child support
+chlico42,cshcn:limit cond last 12+mos (0-17)-r4/2
+chlihb42,cshcn:limt for hlth/behv cond(0-17)-r4/2
+chlimi42,cshcn:limited in any way (0-17)-r4/2
+chlimp12,child support imputation flag
+chlist42,cahps:12mos:chld dr lsn to you(0-17)r4/2
+chndcr42,cahps:12mos:need any care/trt(0-17)-r4/2
+choic31,choice of health plans at rd 3/1 cmj
+choic42,choice of health plans at rd 4/2 cmj
+choic53,choice of health plans at rd 5/3 cmj
+cholaged,age of diagnosis-high cholesterol
+cholck53,how lng cholest lst chck (>17) - rd 5/3
+choldx,high cholesterol diagnosis (>17)
+chpmcn42,cshcn:pmed cond last 12+ mos (0-17)-r4/2
+chpmed42,cshcn:child needs prescrb med(0-17)-r4/2
+chpmhb42,cshcn:pmed for hlth/behv cond(0-17)-r4/2
+chprtm42,cahps:12mos:child dr engh time(0-17)r4/2
+chresp42,cahps:12mos:chld's dr shw resp(0-17)r4/2
+chrtcr42,cahps:12mos:make rout care apt(0-17)r4/2
+chrtww42,cahps:12mos:rout apt whn wntd(0-17)-r4/2
+chserv42,cshcn:chld needs med&oth serv(0-17)-r4/2
+chspec42,cahps:12mos:chld needed spec(0-17)r4/2
+chsrcn42,cshcn:serv cond last 12+ mos (0-17)-r4/2
+chsrhb42,cshcn:serv for hlth/behv cond(0-17)-r4/2
+chthco42,cshcn:ther cond last 12+ mos (0-17)-r4/2
+chther42,cshcn:chld needs spec therapy(0-17)-r4/2
+chthhb42,cshcn:spec ther for hlth+cond(0-17)-r4/2
+clinic42,ac08 oth reas no usc: hosp/er/clnic-r4/2
+clmdep12,did/will pers claim dependents on return
+clmhip12,did/will pers deduct health insur. prem.
+clntre53,rsn have colonoscopy (>39)-r5/3
+clntst53,most recent colonoscopy (>39) - r5/3
+coglim31,cognitive limitations - rd 3/1
+coglim53,cognitive limitations - rd 5/3
+coloaged,age of diagnosis-colon cancer
+colorems,colon cancer in remission
+covrmm,month most recently covered-pnl 17 only
+covryy,year most recently covered-panel 17 only
+cpsfamid,cpsfamid
+cshcn42,cshcn:child w/spec hc needs (0-17)-r4/2
+cshimp12,cash contribution imputation flag
+cstsvm42,mcaid/schip/o pub: call custmr serv-r4/2
+cstsvt42,tricr/chamv: call customer service-r4/2
+dadpro42,problem getting along w/dad (5-17)-r4/2
+dapid31x,pid of person's dad - rd 3/1
+dapid42x,pid of person's dad - rd 4/2
+dapid53x,pid of person's dad - rd 5/3
+ddbdys31,# oth day spent in bed since start(rd31)
+ddbdys42,# oth day spent in bed since start(rd42)
+ddbdys53,# oth day spent in bed since start(rd53)
+ddnscl31,# days missd school due to ill/inj(rd31)
+ddnscl42,# days missd school due to ill/inj(rd42)
+ddnscl53,# days missd school due to ill/inj(rd53)
+ddnwrk31,# days missed work due to ill/inj (rd31)
+ddnwrk42,# days missed work due to ill/inj (rd42)
+ddnwrk53,# days missed work due to ill/inj (rd53)
+deaf42,person is deaf - rd 4/2
+decide42,ac28 prov asks pers to help decide-r4/2
+deduct12,itemize or standard deduction
+dental42,dr advise reg dental checkup (2-17)-r4/2
+dentck53,how often dental check-up - rd 5/3
+dentin31,dental insurance - rd 3/1
+dentin42,dental insurance - rd 4/2
+dentin53,dental insurance - rd 5/3
+depdnt12,person is flagged a dependent
+dftous42,ac14 how difficult is it get to usc-r4/2
+diabaged,age of diagnosis-diabetes
+diabdx,diabetes diagnosis (>17)
+diabw12f,final diabetes care supplement weight
+diffpl42,ac08 oth reas no usc:diffrnt places-r4/2
+diffwg31,persons wages different this rd31 at cmj
+diffwg42,persons wages different this rd42 at cmj
+diffwg53,persons wages different this rd53 at cmj
+disvw31x,disavowed health ins at rd 3/1 cmj (ed)
+disvw42x,disavowed health ins at rd 4/2 cmj (ed)
+disvw53x,disavowed health ins at rd 5/3 cmj (ed)
+divdp12x,person's dividend income
+divimp12,dividend income imputation flag
+dkwhru42,ac08 oth reas no usc:dk where to go-r4/2
+dndlay42,delayed in getting nec dental care-r4/2
+dndlpr42,ac47 prb dlayd gettng nec dent care-r4/2
+dndlrs42,ac46 rsn dlayd gettng nec dent care-r4/2
+dntins12,dental ins - r5/r3 until 12/31/12
+dntins31,dental ins - rd 3/1 in 12
+dnunab42,unable to get necessary dental care-r4/2
+dnunpr42,ac43 prb unable get ncsry dent care-r4/2
+dnunrs42,ac42 rsn unable get ncsry dent care-r4/2
+dobmm,date of birth: month
+dobyy,date of birth: year
+docels42,ac08 oth reas no usc: dr elsewhere-r4/2
+dpinru12,dependents in/out of ru
+dpotsd12,how many dependents live outside ru
+dsa1c53,dcs: times tested for a-one-c in 2012
+dscb1153,dcs: blood cholesterol checked bef 2011
+dscgrp53,dcs: learned care by taking group class
+dsch1153,dcs: blood cholesterol checked in 2011
+dsch1253,dcs: blood cholesterol checked in 2012
+dsch1353,dcs: blood cholesterol checked in 2013
+dschnv53,dcs: never had blood cholesterol checked
+dscint53,dcs: learned care from reading internet
+dscnpc53,dcs: learned care from other provider
+dsconf53,dcs: confident taking care of diabetes
+dscpcp53,dcs: learned care from primary care prov
+dscphn53,dcs: learn care from phone call w/prov
+dsdia53,dcs: diabetes diagnosis by health prof
+dsdiet53,dcs: treat diabetes w/diet modification
+dseb1153,dcs: dilated eye exam before 2011
+dsey1153,dcs: dilated eye exam in 2011
+dsey1253,dcs: dilated eye exam in 2012
+dsey1353,dcs: dilated eye exam in 2013
+dseynv53,dcs: never had dilated eye exam
+dseypr53,dcs: has diabetes caused eye probs
+dsfb1153,dcs: had feet checked before 2011
+dsfl1153,dcs: got flu vaccination in 2011
+dsfl1253,dcs: got flu vaccination in 2012
+dsfl1353,dcs: got flu vaccination in 2013
+dsflnv53,dcs: never got flu vaccination
+dsft1153,dcs: had feet checked during 2011
+dsft1253,dcs: had feet checked during 2012
+dsft1353,dcs: had feet checked during 2013
+dsftnv53,dcs: never had feet checked
+dsinsu53,dcs: treat diabetes w/insulin injections
+dskidn53,dcs: has diabetes caused kidney problems
+dsmed53,dcs: treat diabetes w/meds by mouth
+dsprx53,dcs: was respondent a proxy
+dsvb1153,dcs: got flu vaccination before 2011
+duid,dwelling unit id
+dupersid,person id (duid + pid)
+dvgen12,# general dentist visits 12
+dvgexp12,total general dentist exp 12
+dvgmcd12,gnrl dental visits - medicaid amt 12
+dvgmcr12,gnrl dental visits - medicare amt 12
+dvgofd12,gnrl dental visits - other fed amt 12
+dvgopr12,gnrl dental visits - oth private amt 12
+dvgopu12,gnrl dental visits - oth public amt 12
+dvgosr12,gnrl dent vsts - ot unclass srce amt 12
+dvgoth12,gnrl dental visits - oth combined amt 12
+dvgprv12,gnrl dental visits - private ins amt 12
+dvgptr12,gnrl dental visits - prv & tri amt 12
+dvgslf12,gnrl dental visits - self/fam amt 12
+dvgstl12,gnrl dental visits - oth st/local amt 12
+dvgtch12,general dental care visit charges 12
+dvgtri12,gnrl dental visits-tricare amt 12
+dvgva12,gnrl dental visits - va/champva amt 12
+dvgwcp12,gnrl dental visits - workers comp amt 12
+dvoexp12,total orthodontist exp 12
+dvomcd12,orthodontist visits - medicaid amt 12
+dvomcr12,orthodontist visits - medicare amt 12
+dvoofd12,orthodontist visits-othr fed amt 12
+dvoopr12,orthodontist visits-othr private amt 12
+dvoopu12,orthodontist visits-othr public amt 12
+dvoosr12,orthodont vsts - ot unclass srce amt 12
+dvooth12,orthodontist visits-oth combined amt 12
+dvoprv12,orthodontist visits - private ins amt 12
+dvoptr12,orthodontist visits - prv & tri amt 12
+dvorth12,# orthodontist visits 12
+dvoslf12,orthodontist visits - self/family amt 12
+dvostl12,orthodontist visits-othr st/local amt 12
+dvotch12,orthodontist visit charges 12
+dvotri12,orthodontist visits-tricare amt 12
+dvova12,orthodontist visits-va/champva amt 12
+dvowcp12,orthodontist visits-workers comp amt 12
+dvtexp12,total dental care exp 12
+dvtmcd12,all dental care - medicaid amt 12
+dvtmcr12,all dental care - medicare amt 12
+dvtofd12,all dental care - other fedrl amt 12
+dvtopr12,all dental care - oth private amt 12
+dvtopu12,all dental care - oth public amt 12
+dvtosr12,all dent care-ot unclass srce amt 12
+dvtot12,# dental care visits 12
+dvtoth12,all dental care - oth combined amt 12
+dvtprv12,all dental care - private ins amt 12
+dvtptr12,all dental care - prv & tri amt 12
+dvtslf12,all dental care - self/family amt 12
+dvtstl12,all dental care - oth st/local amt 12
+dvttch12,total dental care visit charges 12
+dvttri12,all dental care - tricare amt 12
+dvtva12,all dental care - va/champva amt 12
+dvtwcp12,all dental care - workers comp amt 12
+eathlt42,dr advise eat healthy (2-17)-r4/2
+edrecode,education recode (edited)
+educyr,years of educ when first entered meps
+eduyrdeg,year of education or highest degree
+eicrdt12,did/will pers receive earned inc credit
+elgrnd12,eligibility status as of 12/31/12
+elgrnd31,eligibility - r3/1
+elgrnd42,eligibility - r4/2
+elgrnd53,eligibility - r5/3
+emphaged,age of diagnosis-emphysema
+emphdx,emphysema diagnosis (>17)
+empst31,employment status rd 3/1
+empst42,employment status rd 4/2
+empst53,employment status rd 5/3
+endrfd12,2012 reference period end date: day
+endrfd31,r3/1 reference period end date: day
+endrfd42,r4/2 reference period end date: day
+endrfd53,r5/3 reference period end date: day
+endrfm12,2012 reference period end date: month
+endrfm31,r3/1 reference period end date: month
+endrfm42,r4/2 reference period end date: month
+endrfm53,r5/3 reference period end date: month
+endrfy12,2012 reference period end date: year
+endrfy31,r3/1 reference period end date: year
+endrfy42,r4/2 reference period end date: year
+endrfy53,r5/3 reference period end date: year
+engcmf42,ac02 whole hh comfrtble speakng eng-r4/2
+engspk42,ac02a not comfrtble speakng english-r4/2
+erdexp12,total emergency room dr exp 12
+erdmcd12,er-medicaid amt - dr 12
+erdmcr12,er-medicare amt - dr 12
+erdofd12,er-other fed amt - dr 12
+erdopr12,er - other private amt - dr 12
+erdopu12,er - other public amt - dr 12
+erdosr12,er-oth unclass srce amt - dr 12
+erdoth12,er-oth combined amt - dr 12
+erdprv12,er-private ins amt - dr 12
+erdptr12,er-prv & tri amt - dr 12
+erdslf12,er-self/family amt - dr 12
+erdstl12,er-oth st/local amt - dr 12
+erdtch12,er doctor visit charges 12
+erdtri12,er-tricare amt - dr 12
+erdva12,er-va/champva amt - dr 12
+erdwcp12,er-workers comp amt - dr 12
+erfexp12,total er facility exp 12
+erfmcd12,er-medicaid amt - fac 12
+erfmcr12,er-medicare amt - fac 12
+erfofd12,er-other federal amt - fac 12
+erfopr12,er-other private amt - fac 12
+erfopu12,er-other public amt - fac 12
+erfosr12,er-oth unclass srce amt - fac 12
+erfoth12,er-oth combined amt - fac 12
+erfprv12,er-private ins amt - fac 12
+erfptr12,er-prv & tri amt - fac 12
+erfslf12,er-self/family amt - fac 12
+erfstl12,er-oth st/local amt - fac 12
+erftch12,er facility visit charges 12
+erftri12,er-tricare amt - fac 12
+erfva12,er-va/champva amt - fac 12
+erfwcp12,er-workers comp amt - fac 12
+ertexp12,total er facility + dr exp 12
+ertmcd12,er-medicaid amt-(fac+dr) 12
+ertmcr12,er-medicare amt-(fac+dr) 12
+ertofd12,er-other fed amt-(fac+dr) 12
+ertopr12,er-oth private amt-(fac+dr) 12
+ertopu12,er-oth public amt-(fac+dr) 12
+ertosr12,er-oth unclass srce amt-(fac+dr) 12
+ertot12,# emergency room visits 12
+ertoth12,er -oth combined amt (fac+dr) 12
+ertprv12,er-priv ins amt-(fac+dr) 12
+ertptr12,er-prv & tri amt (fac+dr) 12
+ertslf12,er-self/family amt-(fac+dr) 12
+ertstl12,er-oth st/local amt-(fac+dr) 12
+erttch12,er facility + dr visit charges 12
+erttri12,er-tricare amt-(fac+dr) 12
+ertva12,er-va/champva amt-(fac+dr) 12
+ertwcp12,er-workers comp amt-(fac+dr) 12
+evretire,person has ever retired
+evrwrk,ever wrkd for pay in life as of 12/31/12
+explop42,ac30 prov explns options to pers-r4/2
+exrcis53,advised to exercise more (>17) - rd 5/3
+famid12,family id (student merged in) - 12/31/12
+famid31,family id (student merged in) - r3/1
+famid42,family id (student merged in) - r4/2
+famid53,family id (student merged in) - r5/3
+famidyr,annual family identifier
+faminc12,family's total income
+famrfpyr,reference person of annualized family
+fams1231,family size of responding 12/31 family
+famsze12,ru size including student as of 12/31/12
+famsze31,ru size including students - r3/1
+famsze42,ru size including students - r4/2
+famsze53,ru size including students - r5/3
+famszeyr,size of responding annualized family
+famwt12c,pov adj family wgt-cps fam on 12/31/12
+famwt12f,"final family weight, 2012"
+fcrp1231,ref person of 12/31 cps family
+fcsz1231,fam size responding 12/31 cps family
+filedr12,has person filed a fed income tax return
+filer12,primary or secondary filer
+flstat12,person's filing status
+flusht53,how lng last flu vacination (>17)-rd 5/3
+fmrs1231,member of responding 12/31 family
+fngrdf31,difficulty using fingers to grasp-rd 3/1
+fngrdf53,difficulty using fingers to grasp-rd 5/3
+foodmn12,number of months food stamps purchased
+foodst12,did anyone purchase food stamps
+foodvl12,monthly value of food stamps
+fsaamt31,fsa total amount for ru - r3/1
+fsagt31,anyone in ru have fsa - r3/1
+ftstu12x,student status if ages 17-23 - 12/31/12
+ftstu31x,student status if ages 17-23 - r3/1
+ftstu42x,student status if ages 17-23 - r4/2
+ftstu53x,student status if ages 17-23 - r5/3
+gdcpbm42,mcaid/schip/o pub: prb get pers doc-r4/2
+gdcpbt42,tricr/chamv: prob getting pers doc-r4/2
+gendrp42,ac20 is provider male or female-r4/2
+gotous42,ac12 how does pers get to usc prov-r4/2
+hasfsa31,person is fsa holder - r3/1
+haveus42,ac05 does person have usc provider-r4/2
+havfun42,problem having fun (5-17) - r4/2
+health42,ac08 oth reas no usc: hlth related-r4/2
+hearad42,person wears hearing aid - rd 4/2
+heardi42,any diffclty hearing w/hearing aid-rd4/2
+hearmo42,can hear most conversation - rd 4/2
+hearng42,hearing impairment (summary) - rd 4/2
+hearsm42,can hear some conversation - rd 4/2
+held31x,health insur held from rd 3/1 cmj (ed)
+held42x,health insur held from rd 4/2 cmj (ed)
+held53x,health insur held from rd 5/3 cmj (ed)
+helmet42,dr advise bike helmet (2-17)-r4/2
+hhaexp12,total home health agency exp 12
+hhagd12,# agency home health provider days 12
+hhamcd12,home hlth agency - medicaid amt 12
+hhamcr12,home hlth agency - medicare amt 12
+hhaofd12,home hlth agency - other fed amt 12
+hhaopr12,home hlth agency - oth private amt 12
+hhaopu12,home hlth agency - oth public amt 12
+hhaosr12,h hlth agency - ot unclass srce amt 12
+hhaoth12,home hlth agency - oth combined amt 12
+hhaprv12,home hlth agency - private ins amt 12
+hhaptr12,home hlth agency - prv & tri amt 12
+hhaslf12,home hlth agency - self/family amt 12
+hhastl12,home hlth agency-othr st/local amt 12
+hhatch12,home health agency visit charges 12
+hhatri12,home hlth agency-tricare amt 12
+hhava12,home hlth agency-va/champva amt 12
+hhawcp12,home hlth agency - workers comp amt 12
+hhindd12,# non-agency home health providr days 12
+hhinfd12,# informal home health provider days 12
+hhnexp12,total home health non-agncy exp 12
+hhnmcd12,home hlth non-agncy - medicaid amt 12
+hhnmcr12,home hlth non-agncy - medicare amt 12
+hhnofd12,home hlth non-agncy-othr fed amt 12
+hhnopr12,home hlth non-agncy-oth private amt 12
+hhnopu12,home hlth non-agncy-oth public amt 12
+hhnosr12,h hlth non-agncy-ot unclass srce amt 12
+hhnoth12,home hlth non-agncy-oth combined amt 12
+hhnprv12,home hlth non-agncy - priv ins amt 12
+hhnptr12,home hlth non-agncy - prv & tri amt 12
+hhnslf12,home hlth non-agncy - self/fam amt 12
+hhnstl12,home hlth non-agncy-othr st/locl amt 12
+hhntch12,home health non-agency visit charges 12
+hhntri12,home hlth non-agncy-tricare amt 12
+hhnva12,home hlth non-agncy-va/champva amt 12
+hhnwcp12,home hlth non-agncy-workers comp amt 12
+hhtotd12,"# home health provider days, 2012"
+hibpaged,age of diagnosis-high blood pressure
+hibpdx,high blood pressure diag (>17)
+hideg,highest degree when first entered meps
+hieuidx,hieu identifier
+hispanx,hispanic ethnicity (edited/imputed)
+hispcat,specific hispanic ethnicity group
+hlthlf42,child will have healthy life (0-17)-r4/2
+homebh42,problem w/behavior at home (5-17)-r4/2
+honrdc31,honorably discharged from military
+honrdc42,honorably discharged from military
+honrdc53,honorably discharged from military
+hour31,hours per week at rd 3/1 cmj
+hour42,hours per week at rd 4/2 cmj
+hour53,hours per week at rd 5/3 cmj
+hpdap12,holder of priv ins (source unknwn) apr12
+hpdau12,holder of priv ins (source unknwn) aug12
+hpdde12,holder of priv ins (source unknwn) dec12
+hpdfe12,holder of priv ins (source unknwn) feb12
+hpdja12,holder of priv ins (source unknwn) jan12
+hpdjl12,holder of priv ins (source unknwn) jul12
+hpdju12,holder of priv ins (source unknwn) jun12
+hpdma12,holder of priv ins (source unknwn) mar12
+hpdmy12,holder of priv ins (source unknwn) may12
+hpdno12,holder of priv ins (source unknwn) nov12
+hpdoc12,holder of priv ins (source unknwn) oct12
+hpdse12,holder of priv ins (source unknwn) sep12
+hpeap12,holder of empl union ins in apr12
+hpeau12,holder of empl union ins in aug12
+hpede12,holder of empl union ins in dec12
+hpefe12,holder of empl union ins in feb12
+hpeja12,holder of empl union ins in jan12
+hpejl12,holder of empl union ins in jul12
+hpeju12,holder of empl union ins in jun12
+hpema12,holder of empl union ins in mar12
+hpemy12,holder of empl union ins in may12
+hpeno12,holder of empl union ins in nov12
+hpeoc12,holder of empl union ins in oct12
+hpese12,holder of empl union ins in sep12
+hpnap12,holder of nongroup ins in apr12
+hpnau12,holder of nongroup ins in aug12
+hpnde12,holder of nongroup ins in dec12
+hpnfe12,holder of nongroup ins in feb12
+hpnja12,holder of nongroup ins in jan12
+hpnjl12,holder of nongroup ins in jul12
+hpnju12,holder of nongroup ins in jun12
+hpnma12,holder of nongroup ins in mar12
+hpnmy12,holder of nongroup ins in may12
+hpnno12,holder of nongroup ins in nov12
+hpnoc12,holder of nongroup ins in oct12
+hpnse12,holder of nongroup ins in sep12
+hpoap12,holder of other group ins in apr12
+hpoau12,holder of other group ins in aug12
+hpode12,holder of other group ins in dec12
+hpofe12,holder of other group ins in feb12
+hpoja12,holder of other group ins in jan12
+hpojl12,holder of other group ins in jul12
+hpoju12,holder of other group ins in jun12
+hpoma12,holder of other group ins in mar12
+hpomy12,holder of other group ins in may12
+hpono12,holder of other group ins in nov12
+hpooc12,holder of other group ins in oct12
+hpose12,holder of other group ins in sep12
+hprap12,holder of private insurance in apr12
+hprau12,holder of private insurance in aug12
+hprde12,holder of private insurance in dec12
+hprfe12,holder of private insurance in feb12
+hprja12,holder of private insurance in jan12
+hprjl12,holder of private insurance in jul12
+hprju12,holder of private insurance in jun12
+hprma12,holder of private insurance in mar12
+hprmy12,holder of private insurance in may12
+hprno12,holder of private insurance in nov12
+hproc12,holder of private insurance in oct12
+hprse12,holder of private insurance in sep12
+hpsap12,holder of self-emp-1 ins in apr12
+hpsau12,holder of self-emp-1 ins in aug12
+hpsde12,holder of self-emp-1 ins in dec12
+hpsfe12,holder of self-emp-1 ins in feb12
+hpsja12,holder of self-emp-1 ins in jan12
+hpsjl12,holder of self-emp-1 ins in jul12
+hpsju12,holder of self-emp-1 ins in jun12
+hpsma12,holder of self-emp-1 ins in mar12
+hpsmy12,holder of self-emp-1 ins in may12
+hpsno12,holder of self-emp-1 ins in nov12
+hpsoc12,holder of self-emp-1 ins in oct12
+hpsse12,holder of self-emp-1 ins in sep12
+hrhow31,how hourly wage was calculated rd 3/1
+hrhow42,how hourly wage was calculated rd 4/2
+hrhow53,how hourly wage was calculated rd 5/3
+hrwg31x,hourly wage rd 3/1 cmj (imp)
+hrwg42x,hourly wage rd 4/2 cmj (imp)
+hrwg53x,hourly wage rd 5/3 cmj (imp)
+hrwgim31,hrwg31x imputation flag
+hrwgim42,hrwg42x imputation flag
+hrwgim53,hrwg53x imputation flag
+hselim31,housework limitation - rd 3/1
+hselim53,housework limitation - rd 5/3
+hsplap42,ac18 is provider hispanic or latino-r4/2
+hyster53,had a hysterectomy (>17) - rd 5/3
+iadl3m31,iadl help 3+ months - rd 3/1
+iadl3m42,iadl help 3+ months - rd 4/2
+iadl3m53,iadl help 3+ months - rd 5/3
+iadlhp31,iadl screener - rd 3/1
+iadlhp42,iadl screener - rd 4/2
+iadlhp53,iadl screener - rd 5/3
+indcat31,industry group rd 3/1 cmj
+indcat42,industry group rd 4/2 cmj
+indcat53,industry group rd 5/3 cmj
+ins12x,insured - 12/31/12 (ed)
+ins31x,insured - r3/1 int date (ed)
+ins42x,insured - r4/2 int date (ed)
+ins53x,insured 12-31/r3 int date (ed)
+insap12x,covr by hosp/med ins in apr12 (ed)
+insat12x,insured any time in r5/r3 until 12/31/12
+insat31x,insured any time in r3/1
+insat42x,insured any time in r4/2
+insat53x,insured any time in r5/3
+insau12x,covr by hosp/med ins in aug12 (ed)
+insc1231,inscope status on 12/31/12
+inscop12,inscope - r5/3 start through 12/31/12
+inscop31,inscope - r3/1
+inscop42,inscope - r4/2
+inscop53,inscope - r5/3
+inscope,was person ever inscope in 2012
+inscov12,health insurance coverage indicator 12
+insde12x,covr by hosp/med ins in dec12 (ed)
+insendmm,month most recently covd-panel 17 only
+insendyy,year most recently covd-panel 17 only
+insfe12x,covr by hosp/med ins in feb12 (ed)
+insja12x,covr by hosp/med ins in jan12 (ed)
+insjl12x,covr by hosp/med ins in jul12 (ed)
+insju12x,covr by hosp/med ins in jun12 (ed)
+insma12x,covr by hosp/med ins in mar12 (ed)
+insmy12x,covr by hosp/med ins in may12 (ed)
+insno12x,covr by hosp/med ins in nov12 (ed)
+insoc12x,covr by hosp/med ins in oct12 (ed)
+insrpl42,ac08 oth reas no usc:just chngd ins-r4/2
+insse12x,covr by hosp/med ins in sep12 (ed)
+insurc12,full year insurance coverage status 2012
+intimp12,interest income imputation flag
+intrp12x,person's interest income
+intvlang,language interview was completed
+ipdexp12,totl hosp staz dr exp 12
+ipdis12,"# hospital discharges, 2012"
+ipdmcd12,ip hosp staz-medicaid amt-dr 12
+ipdmcr12,ip hosp staz-medicare amt- dr 12
+ipdofd12,ip hosp staz-other fed amt-dr 12
+ipdopr12,ip hosp staz - oth private amt-dr 12
+ipdopu12,ip hosp staz - oth public amt-dr 12
+ipdosr12,ip hosp staz-ot unclass sorce amt-dr 12
+ipdoth12,ip hosp staz-oth combined amt-dr 12
+ipdprv12,ip hosp staz-priv ins amt-dr 12
+ipdptr12,ip hosp staz-prv & tri amt-dr 12
+ipdslf12,ip hosp staz-self/family amt-dr 12
+ipdstl12,ip hosp staz-oth st/local amt-dr 12
+ipdtch12,ip hosp stay charges - dr 12
+ipdtri12,ip hosp staz-tricare amt-dr 12
+ipdva12,ip hosp staz-va/champva amt-dr 12
+ipdwcp12,ip hosp staz-workers comp amt-dr 12
+ipfexp12,tot hosp ip facility exp-inc 0 nites 12
+ipfmcd12,ip hosp staz-medicaid amt-fac 12
+ipfmcr12,ip hosp staz-medicare amt-fac 12
+ipfofd12,ip hosp staz-other fed amt-fac 12
+ipfopr12,ip hosp staz - oth private amt-fac 12
+ipfopu12,ip hosp staz - oth public amt-fac 12
+ipfosr12,ip hosp staz-ot unclass srce amt-fac 12
+ipfoth12,ip hosp staz-oth combined amt-fac 12
+ipfprv12,ip hosp staz-priv ins amt-fac 12
+ipfptr12,ip hosp staz-prv & tri amt-fac 12
+ipfslf12,ip hosp staz-self/family amt-fac 12
+ipfstl12,ip hosp staz-oth st/local amt-fac 12
+ipftch12,ip hosp stay charges - fac 12
+ipftri12,ip hosp staz-tricare amt-fac 12
+ipfva12,ip hosp staz-va/champva amt-fac 12
+ipfwcp12,ip hosp staz-workers comp amt-fac 12
+ipngtd12,"# nights in hosp for discharges, 2012"
+iptexp12,tot hosp ip facility + dr exp 12
+iptmcd12,ip hosp staz-medicaid amt-(fac+dr) 12
+iptmcr12,ip hosp staz-medicare amt-(fac+dr) 12
+iptofd12,ip hosp staz-other fed amt-(fac+dr) 12
+iptopr12,ip hosp staz-oth private amt-(fac+dr) 12
+iptopu12,ip hosp staz-oth public amt-(fac+dr) 12
+iptosr12,ip hsp staz-oth uncls src amt(fac+dr) 12
+iptoth12,ip hosp staz-oth combined amt(fac+dr) 12
+iptprv12,ip hosp staz-priv ins amt-(fac+dr) 12
+iptptr12,ip hosp staz-prv & tri amt-(fac+dr) 12
+iptslf12,ip hosp staz-self/family amt-(fac+dr) 12
+iptstl12,ip hsp staz-oth st/local amt-(fac+dr) 12
+ipttch12,ip hosp stay charges (fac+dr) 12
+ipttri12,ip hosp staz-tricare amt-(fac+dr) 12
+iptva12,ip hosp staz-va/champva amt-(fac+dr) 12
+iptwcp12,ip hosp staz-wrkrs comp amt-(fac+dr) 12
+ipzero12,# zero-night hospital stays 12
+iraimp12,ira income imputation flag
+irasp12x,person's ira income
+jntpid12,pid of secondary filer
+joborg31,"priv (profit,nonprofit) gov rd 3/1 cmj"
+joborg42,"priv (profit,nonprofit) gov rd 4/2 cmj"
+joborg53,"priv (profit,nonprofit) gov rd 5/3 cmj"
+jobrsn42,ac08 oth reas no usc: job related-r4/2
+jtinru12,joint filer's membership in ru
+jtpain31,joint pain last 12 months (>17) - rd 3/1
+jtpain53,joint pain last 12 months (>17) - rd 5/3
+k6sum42,saq 30 days: overall rating of feelings
+keyness,person key status
+kidpro42,prblm getting along w/kids (5-17)-r4/2
+knowdr42,ac08 oth reas no usc: knows/is a dr-r4/2
+langhm42,ac01 language spoken most in home-r4/2
+langpr42,ac31 prov speaks person's language-r4/2
+lapblt42,dr advise lap/shoulder belt (80<wt)-r4/2
+leukaged,age of diagnosis-leukemia
+leukrems,leukemia in remission
+lftdif31,difficulty lifting 10 pounds - rd 3/1
+lftdif53,difficulty lifting 10 pounds - rd 5/3
+lkinfm42,mcaid/schip/o pub: look 4 plan info-r4/2
+lkinft42,tricr/chamv: info on how plan works-r4/2
+locatn42,usc location-r4/2
+lshlth42,less healthy than othr child (0-17)-r4/2
+lsteth53,lost all uppr and lowr teeth (>17)-rd5/3
+lungaged,age of diagnosis-lung cancer
+lungrems,lung cancer in remission
+lympaged,age of diagnosis-lymphoma
+lymprems,lymphoma in remission
+mamogr53,how lng snce lst mammogram (>29) - rd5/3
+marry12x,marital status-12/31/12 (edited/imputed)
+marry31x,marital status - r3/1 (edited/imputed)
+marry42x,marital status - r4/2 (edited/imputed)
+marry53x,marital status - r5/3 (edited/imputed)
+mcaid12,cov by medicaid or schip - 12/31/12
+mcaid12x,cov by medicaid or schip - 12/31/12 (ed)
+mcaid31,cov by medicaid or schip - r3/1 int dt
+mcaid31x,cov by medicaid/schip - r3/1 int dt (ed)
+mcaid42,cov by medicaid or schip - r4/2 int dt
+mcaid42x,cov by medicaid/schip - r4/2 int dt (ed)
+mcaid53,cov by medicaid or schip 12-31/r3 int dt
+mcaid53x,cov medicaid/schip 12-31/r3 int dt(ed)
+mcare12,cov by medicare - 12/31/12
+mcare12x,cov by medicare - 12/31/12 (ed)
+mcare31,cov by medicare - r3/1 int dt
+mcare31x,cov by medicare - r3/1 int dt (ed)
+mcare42,cov by medicare - r4/2 int dt
+mcare42x,cov by medicare - r4/2 int dt (ed)
+mcare53,cov by medicare 12-31/r3 int dt
+mcare53x,cov by medicare 12-31/r3 int dt (ed)
+mcdap12,cov by medicaid or schip in apr12
+mcdap12x,cov by medicaid or schip in apr12 (ed)
+mcdat12x,any time cov medicaid or schip-12/31/12
+mcdat31x,any time cov medicaid or schip - r3/1
+mcdat42x,any time cov medicaid or schip - r4/2
+mcdat53x,any time cov medicaid or schip - r5/3
+mcdau12,cov by medicaid or schip in aug12
+mcdau12x,cov by medicaid or schip in aug12 (ed)
+mcdde12,cov by medicaid or schip in dec12
+mcdde12x,cov by medicaid or schip in dec12 (ed)
+mcdev12,ever have medicaid/schip during 12 (ed)
+mcdfe12,cov by medicaid or schip in feb12
+mcdfe12x,cov by medicaid or schip in feb12 (ed)
+mcdhmo12,covred by medicaid or schip hmo-12/31/12
+mcdhmo31,covered by medicaid or schip hmo - r3/1
+mcdhmo42,covered by medicaid or schip hmo - r4/2
+mcdja12,cov by medicaid or schip in jan12
+mcdja12x,cov by medicaid or schip in jan12 (ed)
+mcdjl12,cov by medicaid or schip in jul12
+mcdjl12x,cov by medicaid or schip in jul12 (ed)
+mcdju12,cov by medicaid or schip in jun12
+mcdju12x,cov by medicaid or schip in jun12 (ed)
+mcdma12,cov by medicaid or schip in mar12
+mcdma12x,cov by medicaid or schip in mar12 (ed)
+mcdmc12,cov by mcaid/schip gtkeepr plan-12/31/12
+mcdmc31,cov by mcaid/schip gatekeeper plan-r3/1
+mcdmc42,cov by mcaid/schip gatekeeper plan-r4/2
+mcdmy12,cov by medicaid or schip in may12
+mcdmy12x,cov by medicaid or schip in may12 (ed)
+mcdno12,cov by medicaid or schip in nov12
+mcdno12x,cov by medicaid or schip in nov12 (ed)
+mcdoc12,cov by medicaid or schip in oct12
+mcdoc12x,cov by medicaid or schip in oct12 (ed)
+mcdse12,cov by medicaid or schip in sep12
+mcdse12x,cov by medicaid or schip in sep12 (ed)
+mcrap12,covered by medicare in apr12
+mcrap12x,covered by medicare in apr12 (ed)
+mcrau12,covered by medicare in aug12
+mcrau12x,covered by medicare in aug12 (ed)
+mcrde12,covered by medicare in dec12
+mcrde12x,covered by medicare in dec12 (ed)
+mcrev12,ever have medicare during 12 (ed)
+mcrfe12,covered by medicare in feb12
+mcrfe12x,covered by medicare in feb12 (ed)
+mcrja12,covered by medicare in jan12
+mcrja12x,covered by medicare in jan12 (ed)
+mcrjl12,covered by medicare in jul12
+mcrjl12x,covered by medicare in jul12 (ed)
+mcrju12,covered by medicare in jun12
+mcrju12x,covered by medicare in jun12 (ed)
+mcrma12,covered by medicare in mar12
+mcrma12x,covered by medicare in mar12 (ed)
+mcrmy12,covered by medicare in may12
+mcrmy12x,covered by medicare in may12 (ed)
+mcrno12,covered by medicare in nov12
+mcrno12x,covered by medicare in nov12 (ed)
+mcroc12,covered by medicare in oct12
+mcroc12x,covered by medicare in oct12 (ed)
+mcrpb12,cov by medicare part b - 12/31/12
+mcrpb31,cov by medicare part b - r3/1
+mcrpb42,cov by medicare part b - r4/2
+mcrpd12,cov by medicare pmed benefit - 12/31/12
+mcrpd12x,cov by mcare pmed benefit-12/31/12 (ed)
+mcrpd31,cov by medicare pmed benefit - r3/1
+mcrpd31x,cov by medicare pmed benefit - r3/1 (ed)
+mcrpd42,cov by medicare pmed benefit - r4/2
+mcrpd42x,cov by medicare pmed benefit - r4/2 (ed)
+mcrpho12,cov by medicare managed care - 12/31/12
+mcrpho31,cov by medicare managed care - r3/1
+mcrpho42,cov by medicare managed care - r4/2
+mcrse12,covered by medicare in sep12
+mcrse12x,covered by medicare in sep12 (ed)
+mcs42,saq:mnt component summry sf-12v2 imputed
+mddlay42,delayed in getting necsry med care-r4/2
+mddlpr42,ac39 prb dlayd getting nec med care-r4/2
+mddlrs42,ac38 rsn dlayd getting nec med care-r4/2
+mdunab42,unable to get necessry medical care-r4/2
+mdunpr42,ac35 prb not getting ncsry med care-r4/2
+mdunrs42,ac34 rsn unable get necsry med care-r4/2
+melaaged,age of diagnosis-melanoma
+melarems,melanoma in remission
+mesbpr42,dr checked blood pressure (2-17)-r4/2
+meshgt42,doctor ever measured height (0-17)-r4/2
+mesvis42,doctor checked child's vision (3-6)-r4/2
+meswgt42,doctor ever measured weight (0-17)-r4/2
+miaged,age of diagnosis-heart attack(mi)
+midx,heart attack (mi) diag (>17)
+mildif31,difficulty walking a mile - rd 3/1
+mildif53,difficulty walking a mile - rd 5/3
+minorp42,ac22 go to usc for new health prob-r4/2
+mnhlth31,perceived mental health status - rd 3/1
+mnhlth42,perceived mental health status - rd 4/2
+mnhlth53,perceived mental health status - rd 5/3
+mompro42,problem getting along w/mom (5-17)-r4/2
+mopid31x,pid of person's mom - rd 3/1
+mopid42x,pid of person's mom - rd 4/2
+mopid53x,pid of person's mom - rd 5/3
+more31,rd 3/1 cmj firm has more than 1 locat
+more42,rd 4/2 cmj firm has more than 1 locat
+more53,rd 5/3 cmj firm has more than 1 locat
+morecovr,cov by mor compr pl prev 2 yr-pn 17 only
+morjob31,has more than one job rd 3/1 int date
+morjob42,has more than one job rd 4/2 int date
+morjob53,has more than one job rd 5/3 int date
+msa12,msa as of 12/31/12
+msa31,msa status - r3/1
+msa42,msa status - r4/2
+msa53,msa status - r5/3
+myself42,ac08 oth reas no usc:no doc/trt slf-r4/2
+natamp42,ac19 is provider native american-r4/2
+nervaf42,prblm feeling nervous/afraid (5-17)-r4/2
+nevill42,never been seriously ill (0-17)-r4/2
+neware42,ac08 oth reas no usc:recently moved-r4/2
+newdoc42,ac08 oth reas no usc: lookng for dr-r4/2
+nhrwg31,updated hrly wage rd 3/1 cmj (edited)
+nhrwg42,updated hrly wage rd 4/2 cmj (edited)
+nhrwg53,updated hrly wage rd 5/3 cmj (edited)
+noaspr53,taking aspirin unsafe (>17) - rd 5/3
+nofat53,restrict hgh fat/choles food (>17)-rd5/3
+nogodr42,ac08 oth reas no usc: wont go to dr-r4/2
+nohins42,ac08 oth reas no usc:no hlth insrnc-r4/2
+noinsbef,evr wout hlth insr prev yr-panel 17 only
+noinstm,# wks/mon wout hlth ins prv yr-pn 17 onl
+noinunit,unit of time wout hlth ins-panel 17 only
+nolike42,ac08 oth reas no usc: dont like drs-r4/2
+noreas42,ac08 oth reas no usc:no oth reasons-r4/2
+nosmok42,dr advise smkg in home is bad(0-17)-r4/2
+numemp31,number of employees at rd 3/1 cmj
+numemp42,number of employees at rd 4/2 cmj
+numemp53,number of employees at rd 5/3 cmj
+nwk31,reason not working during rd 3/1
+nwk42,reason not working during rd 4/2
+nwk53,reason not working during rd 5/3
+obaexp12,total off-based phys ass t exp 12
+obamcd12,phys ass t off vsts - medicaid amt 12
+obamcr12,phys ass t off vsts - medicare amt 12
+obaofd12,phys ass t off vsts - other fed amt 12
+obaopr12,phys ass t off vsts - oth private amt 12
+obaopu12,phys ass t off vsts - oth public amt 12
+obaosr12,p a off vsts - oth unclass srce amt 12
+obaoth12,phys asst off vsts - oth combined amt 12
+obaprv12,phys ass t off vsts - private ins amt 12
+obaptr12,phys asst off vsts - prv & tri amt 12
+obaslf12,phys ass t off vsts - self/family amt 12
+obasst12,# off-based physician assist visits 12
+obastl12,phys ass t off vsts - oth st/locl amt 12
+obatch12,office-based phys asst visit charges 12
+obatri12,phys ass t off vsts - tricare amt 12
+obava12,phys ass t off vsts - va/champva amt 12
+obawcp12,phys ass t off vsts-workers comp amt 12
+obcexp12,total off-based chiro exp 12
+obchir12,# office-based chiropractor visits 12
+obcmcd12,chiro off visits - medicaid amt 12
+obcmcr12,chiro off visits - medicare amt 12
+obcofd12,chiro off visits - other federal amt 12
+obcopr12,chiro off vists - othr private amt 12
+obcopu12,chiro off vists - othr public amt 12
+obcosr12,chiro off vsts-othr unclass srce amt 12
+obcoth12,chiro off visits -oth combined amt 12
+obcprv12,chiro off visits - private ins amt 12
+obcptr12,chiro off visits - prv & tri amt 12
+obcslf12,chiro off visits - self/family amt 12
+obcstl12,chiro off visits - oth st/local amt 12
+obctch12,office-based chiro visit charges 12
+obctri12,chiro off visits - tricare amt 12
+obcva12,chiro off visits - va/champva amt 12
+obcwcp12,chiro off visits - workers comp amt 12
+obdexp12,total off-based dr exp 12
+obdmcd12,dr office visits - medicaid amt 12
+obdmcr12,dr office visits - medicare amt 12
+obdofd12,dr office visits - other federal amt 12
+obdopr12,dr office visits - oth private amt 12
+obdopu12,dr office visits - oth public amt 12
+obdosr12,dr off vsts - oth unclass srce amt 12
+obdoth12,dr office visits - oth combined amt 12
+obdprv12,dr office visits - private ins amt 12
+obdptr12,dr office visits - prv & tri amt 12
+obdrv12,# office-based physician visits 12
+obdslf12,dr office visits - self/family amt 12
+obdstl12,dr office visits - oth st/local amt 12
+obdtch12,office-based physician visit charges 12
+obdtri12,dr office visits - tricare amt 12
+obdva12,dr office visits - va/champva amt 12
+obdwcp12,dr office visits - workers comp amt 12
+obeexp12,total off-based optometrist exp 12
+obemcd12,optometrist off vsts - medicaid amt 12
+obemcr12,optometrist off vsts - medicare amt 12
+obeofd12,optometrist off vsts-oth federal amt 12
+obeopr12,optometrist off vsts-oth private amt 12
+obeopu12,optometrist off vsts - oth public amt 12
+obeosr12,optom off vsts-oth unclass srce amt 12
+obeoth12,optometrist off vsts-oth combined amt 12
+obeprv12,optometrist off vsts-private ins amt 12
+obeptr12,optometrist off vsts - prv & tri amt 12
+obeslf12,optometrist off vsts-self/family amt 12
+obestl12,optometrist off vsts-oth st/locl amt 12
+obetch12,office-based optomtrist visit charges 12
+obetri12,optometrist off vsts - tricare amt 12
+obeva12,optometrist off vsts - va/champva amt 12
+obewcp12,optometrist off vsts-workers comp amt 12
+obnexp12,total off-based nurse/prac 12
+obnmcd12,nurse/prac off vsts - medicaid amt 12
+obnmcr12,nurse/prac off visits - medicare amt 12
+obnofd12,nurse/prac off vsts-other federal amt 12
+obnopr12,nurse/prac off vsts - oth private amt 12
+obnopu12,nurse/prac off vsts - oth public amt 12
+obnosr12,nrs/pr off vsts-oth unclass srce amt 12
+obnoth12,nurse/prac off vsts-oth combined amt 12
+obnprv12,nurse/prac off vsts-private ins amt 12
+obnptr12,nurse/prac off vsts - prv & tri amt 12
+obnslf12,nurse/prac off visits-self/family amt 12
+obnstl12,nurse/prac off vsts-oth st/local amt 12
+obntch12,office-based nurse/prac visit charges 12
+obntri12,nurse/prac off vsts - tricare amt 12
+obnurs12,# off-based nurse/practitioner visits 12
+obnva12,nurse/prac off vsts - va/champva amt 12
+obnwcp12,nurse/prac off vsts-workers comp amt 12
+oboexp12,total off-based non-dr exp 12
+obomcd12,non-dr off vists - medicaid amt 12
+obomcr12,non-dr off vists - medicare amt 12
+oboofd12,non-dr off vists - other federal amt 12
+oboopr12,non-dr off vists - oth private amt 12
+oboopu12,non-dr off vists - oth public amt 12
+oboosr12,non-dr of vsts - oth unclass srce amt 12
+obooth12,non-dr off vists - oth combined amt 12
+oboprv12,non-dr off vists - private ins amt 12
+obopto12,# off-based optometrist visits 12
+oboptr12,non-dr off vists - prv & tri amt 12
+oboslf12,non-dr off vists - self/family amt 12
+obostl12,non-dr off vists - oth st/local amt 12
+obotch12,office-based non-dr visit charges 12
+obothv12,# office-based non-physican visits 12
+obotri12,non-dr off vists - tricare amt 12
+obova12,non-dr off vists - va/champva amt 12
+obowcp12,non-dr off vists - workers comp amt 12
+obtexp12,tot off-based pt exp 12
+obther12,# off-based pt/ot visits 12
+obtmcd12,pt/ot off visits - medicaid amt 12
+obtmcr12,pt/ot off visits - medicare amt 12
+obtofd12,pt/ot off visits - other fed amt 12
+obtopr12,pt/ot off visits - oth private amt 12
+obtopu12,pt/ot off visits - oth public amt 12
+obtosr12,pt/ot off vsts-oth unclass srce amt 12
+obtoth12,pt/ot off visits - oth combined amt 12
+obtotv12,# office-based provider visits 12
+obtprv12,pt/ot off visits - private ins amt 12
+obtptr12,pt/ot off visits - prv & tri amt 12
+obtslf12,pt/ot off visits - self/family amt 12
+obtstl12,pt/ot off visits - oth st/locl amt 12
+obttch12,office-based pt/oc visit charges 12
+obttri12,pt/ot off visits - tricare amt 12
+obtva12,pt/ot off visits - va/champva amt 12
+obtwcp12,pt/ot off visits - workers comp amt 12
+obvexp12,total office-based exp 12
+obvmcd12,all office visits - medicaid amt 12
+obvmcr12,all office visits - medicare amt 12
+obvofd12,all office visits-other federal amt 12
+obvopr12,all office visits - oth private amt 12
+obvopu12,all office visits - oth public amt 12
+obvosr12,all off vsts - oth unclass srce amt 12
+obvoth12,all office visits - oth combined amt 12
+obvprv12,all office visits - private ins amt 12
+obvptr12,all office visits - prv & tri amt 12
+obvslf12,all office visits - self/family amt 12
+obvstl12,all office visits-oth st/local amt 12
+obvtch12,office-based provider visit charges 12
+obvtri12,all office visits-tricare amt 12
+obvva12,all office visits-va/champva amt 12
+obvwcp12,all office visits - workers comp amt 12
+occcat31,occupation group rd 3/1 cmj
+occcat42,occupation group rd 4/2 cmj
+occcat53,occupation group rd 5/3 cmj
+offer31x,health insur offered by rd 3/1 cmj (ed)
+offer42x,health insur offered by rd 4/2 cmj (ed)
+offer53x,health insur offered by rd 5/3 cmj (ed)
+offhou42,ac24 usc has offce hrs nghts/wkends-r4/2
+ofremp31,employer offers health ins rd 3/1 cmj
+ofremp42,employer offers health ins rd 4/2 cmj
+ofremp53,employer offers health ins rd 5/3 cmj
+ohrtaged,age of diagnosis-other heart disease
+ohrtdx,other heart disease diag (>17)
+ongong42,ac22 go to usc for ongoing hlth prb-r4/2
+onjob42,ac08 oth reas no usc: dr at work-r4/2
+opaap12,cov by other public a ins in apr12
+opaau12,cov by other public a ins in aug12
+opade12,cov by other public a ins in dec12
+opaev12,ever have other public a ins during 12
+opafe12,cov by other public a ins in feb12
+opaja12,cov by other public a ins in jan12
+opajl12,cov by other public a ins in jul12
+opaju12,cov by other public a ins in jun12
+opama12,cov by other public a ins in mar12
+opamy12,cov by other public a ins in may12
+opano12,cov by other public a ins in nov12
+opaoc12,cov by other public a ins in oct12
+opase12,cov by other public a ins in sep12
+opbap12,cov by other public b ins in apr12
+opbau12,cov by other public b ins in aug12
+opbde12,cov by other public b ins in dec12
+opbev12,ever have other public b ins during 12
+opbfe12,cov by other public b ins in feb12
+opbja12,cov by other public b ins in jan12
+opbjl12,cov by other public b ins in jul12
+opbju12,cov by other public b ins in jun12
+opbma12,cov by other public b ins in mar12
+opbmy12,cov by other public b ins in may12
+opbno12,cov by other public b ins in nov12
+opboc12,cov by other public b ins in oct12
+opbse12,cov by other public b ins in sep12
+opdexp12,total outpatient provider exp 12
+opdmcd12,all opd visits-medicaid amt-dr 12
+opdmcr12,all opd visits-medicare amt-dr 12
+opdofd12,all opd visits-other fed amt-dr 12
+opdopr12,all opd visits - oth private amt-dr 12
+opdopu12,all opd visits-oth public amt-dr 12
+opdosr12,all opd vsts-oth unclass srce amt-dr 12
+opdoth12,all opd visits-oth combined amt-dr 12
+opdprv12,all opd visits-priv ins amt-dr 12
+opdptr12,all opd visits-prv & tri amt -dr 12
+opdrv12,# outpatient dept physician visits 12
+opdslf12,all opd visits-self/family amt-dr 12
+opdstl12,all opd visits-oth st/local amt-dr 12
+opdtch12,opd provider visit charges - dr 12
+opdtri12,all opd visits-tricare amt-dr 12
+opdva12,all opd visits-va/champva amt-dr 12
+opdwcp12,all opd visits-workers comp amt-dr 12
+opfexp12,total outpatient facility exp 12
+opfmcd12,all opd visits-medicaid amt-fac 12
+opfmcr12,all opd visits-medicare amt-fac 12
+opfofd12,all opd visits-other fed amt-fac 12
+opfopr12,all opd visits - oth private amt-fac 12
+opfopu12,all opd visits - oth public amt-fac 12
+opfosr12,all opd vsts-oth unclass srce amt-fac 12
+opfoth12,all opd visits - oth combined amt-fac 12
+opfprv12,all opd visits-priv ins amt-fac 12
+opfptr12,all opd visits - prv & tri amt-fac 12
+opfslf12,all opd visits-self/family amt-fac 12
+opfstl12,all opd visits-oth st/local amt-fac 12
+opftch12,opd provider visit charges - fac 12
+opftri12,all opd visits-tricare amt-fac 12
+opfva12,all opd visits-va/champva amt-fac 12
+opfwcp12,all opd visits-workers comp amt-fac 12
+opoexp12,total outpatient non-dr - fac exp 12
+opomcd12,opd non-dr visits-medicaid amt-fac 12
+opomcr12,opd non-dr visits-medicare amt-fac 12
+opoofd12,opd non-dr visits-other fed amt-fac 12
+opoopr12,opd non-dr visits-oth private amt-fac 12
+opoopu12,opd non-dr visits-oth public amt-fac 12
+opoosr12,opd non-dr vsts-ot unclas src amt-fac 12
+opooth12,opd non-dr visits-oth combined am-fac 12
+opoprv12,opd non-dr visits-priv ins amt-fac 12
+opoptr12,opd non-dr visits - prv & tri amt-fac 12
+oposlf12,opd non-dr visits-self/fam amt-fac 12
+opostl12,opd non-dr visits-oth st/loc amt-fac 12
+opotch12,opd non-phys visit charges - fac 12
+opothv12,# outpatient dept non-dr visits 12
+opotri12,opd non-dr visits-tricare amt-fac 12
+opova12,opd non-dr visits-va/champva amt-fac 12
+opowcp12,opd non-dr visits-wrkrs comp amt-fac 12
+oppexp12,total outpatient non-dr - dr exp 12
+oppmcd12,opd non-dr visits-medicaid amt-dr 12
+oppmcr12,opd non-dr visits-medicare amt-dr 12
+oppofd12,opd non-dr visits-other fed amt-dr 12
+oppopr12,opd non-dr visits-oth private amt-dr 12
+oppopu12,opd non-dr visits-oth public amt-dr 12
+opposr12,opd non-dr vsts-ot unclas src amt-dr 12
+oppoth12,opd non-dr visits-oth combined amt-dr 12
+oppprv12,opd non-dr visits-priv ins amt-dr 12
+oppptr12,opd non-dr visits - prv & tri amt-dr 12
+oppslf12,opd non-dr visits-self/fam amt-dr 12
+oppstl12,opd non-dr visits-oth st/loc amt-dr 12
+opptch12,opd non-phys visit charges - dr 12
+opptri12,opd non-dr visits-tricare amt-dr 12
+oppva12,opd non-dr visits-va/champva amt-dr 12
+oppwcp12,opd non-dr visits-wrkrs comp amt-dr 12
+opsexp12,total outpatient physician - dr exp 12
+opsmcd12,opd dr visits-medicaid amt-dr 12
+opsmcr12,opd dr visits-medicare amt-dr 12
+opsofd12,opd dr visits-other fed amt-dr 12
+opsopr12,opd dr visits - oth private amt-dr 12
+opsopu12,opd dr visits-oth public amt-dr 12
+opsosr12,opd dr vsts-oth unclass srce amt-dr 12
+opsoth12,opd dr visits -oth combined amt-dr 12
+opsprv12,opd dr visits-priv ins amt-dr 12
+opsptr12,opd dr visits - prv & tri amt-dr 12
+opsslf12,opd dr visits-self/family amt-dr 12
+opsstl12,opd dr visits-oth st/local amt-dr 12
+opstch12,opd physician visit charges - dr 12
+opstri12,opd dr visits-tricare amt-dr 12
+opsva12,opd dr visits-va/champva amt-dr 12
+opswcp12,opd dr visits-workers comp amt-dr 12
+optexp12,total outpatient fac + dr exp 12
+optmcd12,all opd vsts-medicaid amt-(fac+dr) 12
+optmcr12,all opd vsts-medicare amt-(fac+dr) 12
+optofd12,all opd vsts-other fed amt-(fac+dr) 12
+optopr12,all opd vsts-oth private amt-(fac+dr) 12
+optopu12,all opd vsts-oth public amt-(fac+dr) 12
+optosr12,all opd vst-oth uncls src amt(fac+dr) 12
+optoth12,all opd vsts-oth combined amt(fac+dr) 12
+optotv12,# outpatient dept provider visits 12
+optprv12,all opd vsts-priv ins amt-(fac+dr) 12
+optptr12,all opd visits-prv & tri amt (fac+dr) 12
+optslf12,all opd vsts-self/family amt-(fac+dr) 12
+optstl12,all opd vst-oth st/local amt(fac+dr) 12
+opttch12,opd facility + dr visit charges - 12
+opttri12,all opd vsts-tricare amt-(fac+dr) 12
+optva12,all opd vsts-va/champva amt-(fac+dr) 12
+optwcp12,all opd vst-workrs comp amt-(fac+dr) 12
+opvexp12,total outpatient physician - fac exp 12
+opvmcd12,opd dr visits-medicaid amt-fac 12
+opvmcr12,opd dr visits-medicare amt-fac 12
+opvofd12,opd dr visits-other fed amt-fac 12
+opvopr12,opd dr visits - oth private amt-fac 12
+opvopu12,opd dr visits-oth public amt-fac 12
+opvosr12,opd dr vsts-oth unclass srce amt-fac 12
+opvoth12,opd dr visits - oth combined amt-fac 12
+opvprv12,opd dr visits-priv ins amt-fac 12
+opvptr12,opd dr visits - prv & tri amt-fac 12
+opvslf12,opd dr visits-self/family amt-fac 12
+opvstl12,opd dr visits-oth st/local amt-fac 12
+opvtch12,opd physician visit charges - fac 12
+opvtri12,opd dr visits-tricare amt-fac 12
+opvva12,opd dr visits-va/champva amt-fac 12
+opvwcp12,opd dr visits-workers comp amt-fac 12
+othdys31,miss any work day to care for oth (rd31)
+othdys42,miss any work day to care for oth (rd42)
+othdys53,miss any work day to care for oth (rd53)
+othexp12,tot other equip/sply (excl diab) exp 12
+othimp12,other income imputation flag
+othins42,ac08 oth reas no usc: ins related-r4/2
+othmcd12,other equp/supplies-medicaid amt 12
+othmcr12,other equp/supplies-medicare amt 12
+othndd31,# day missed work to care for oth (rd31)
+othndd42,# day missed work to care for oth (rd42)
+othndd53,# day missed work to care for oth (rd53)
+othofd12,other equp/supplies-othr fedrl amt 12
+othopr12,other equp/supply-oth private amt 12
+othopu12,other equp/supply - oth public amt 12
+othosr12,oth equp/suply - ot unclass srce amt 12
+othoth12,other equp/supply - oth combined amt 12
+othprv12,other equp/supplies-priv ins amt 12
+othptr12,other equp/supply - prv & tri amt 12
+othraged,age of diagnosis-other cancer
+othrcp42,ac19 is provider some other race-r4/2
+othrea42,ac08 oth reas no usc: other reason-r4/2
+othrp12x,person's other income
+othrrems,other cancer in remission
+othslf12,other equp/supplies-self/fam amt 12
+othstl12,other equp/supply-othr st/local amt 12
+othtch12,other equp/supplies charges 12
+othtri12,other equp/supply-tricare amt 12
+othva12,other equp/supply-va/champva amt 12
+othwcp12,other equp/supply - workers comp amt 12
+otpaat12,any cov ot gov mcaid/schip hmo-12/31/12
+otpaat31,any time cov ot gov mcaid/schip hmo-r3/1
+otpaat42,any time cov ot gov mcaid/schip hmo-r4/2
+otpaat53,any time cov ot gov mcaid/schip hmo-r5/3
+otpbat12,any cv ot gv nt mcaid/schip hmo-12/31/12
+otpbat31,any cov ot gov not mcaid/schip hmo-r3/1
+otpbat42,any cov ot gov not mcaid/schip hmo-r4/2
+otpbat53,any cov ot gov not mcaid/schip hmo-r5/3
+otpuba12,cov/pay oth gov mcaid/schip hmo-12/31/12
+otpuba31,cov/pay oth gov mcaid/schip hmo-r3/1 int
+otpuba42,cov/pay oth gov mcaid/schip hmo-r4/2 int
+otpuba53,cov/pay oth gov mcaid/schip hmo 12-31/r3
+otpubb12,cov oth gov not mcaid/schip hmo-12/31/12
+otpubb31,cov oth gov not mcaid/schip hmo-r3/1 int
+otpubb42,cov oth gov not mcaid/schip hmo-r4/2 int
+otpubb53,cov oth gov not mcaid/schip hmo 12-31/r3
+pacisp42,ac19 is provider oth pacific islndr-r4/2
+panel,panel number
+papsmr53,how lng lst pap smear tst (>17) - rd 5/3
+paydr31,paid leave to visit dr rd 3/1 cmj
+paydr42,paid leave to visit dr rd 4/2 cmj
+paydr53,paid leave to visit dr rd 5/3 cmj
+payvac31,paid vacation at rd 3/1 cmj
+payvac42,paid vacation at rd 4/2 cmj
+payvac53,paid vacation at rd 5/3 cmj
+pbinfm42,mcaid/schip/o pub: prob findng info-r4/2
+pbinft42,tricr/chamv: problem finding info-r4/2
+pbpwkm42,mcaid/schip/o pub: prb w pln pprwrk-r4/2
+pbpwkt42,tricr/chamv: prob w plan paperwork-r4/2
+pbsvcm42,mcaid/schip/o pub: prb w cusrvc hlp-r4/2
+pbsvct42,tricr/chamv: prob get help fr csrvc-r4/2
+pcs42,saq:phy component summry sf-12v2 imputed
+pdkap12,covr by priv ins (source unknwn) apr12
+pdkau12,covr by priv ins (source unknwn) aug12
+pdkde12,covr by priv ins (source unknwn) dec12
+pdkfe12,covr by priv ins (source unknwn) feb12
+pdkja12,covr by priv ins (source unknwn) jan12
+pdkjl12,covr by priv ins (source unknwn) jul12
+pdkju12,covr by priv ins (source unknwn) jun12
+pdkma12,covr by priv ins (source unknwn) mar12
+pdkmy12,covr by priv ins (source unknwn) may12
+pdkno12,covr by priv ins (source unknwn) nov12
+pdkoc12,covr by priv ins (source unknwn) oct12
+pdkse12,covr by priv ins (source unknwn) sep12
+pegap12,covered by empl union ins in apr12
+pegau12,covered by empl union ins in aug12
+pegde12,covered by empl union ins in dec12
+pegfe12,covered by empl union ins in feb12
+pegja12,covered by empl union ins in jan12
+pegjl12,covered by empl union ins in jul12
+pegju12,covered by empl union ins in jun12
+pegma12,covered by empl union ins in mar12
+pegmy12,covered by empl union ins in may12
+pegno12,covered by empl union ins in nov12
+pegoc12,covered by empl union ins in oct12
+pegse12,covered by empl union ins in sep12
+penimp12,pension income imputation flag
+pensp12x,person's pension income
+persla42,ac08 oth reas no usc: language-r4/2
+perwt12f,"final person weight, 2012"
+phmonp12,cov by hmo-pays non-plan drs - 12/31/12
+phmonp31,cov by hmo-pays non-plan dr visits-r3/1
+phmonp42,cov by hmo-pays non-plan dr visits-r4/2
+phnreg42,ac23 how diff contact usc by phone-r4/2
+phq242,saq 2 wks: overall rating of feelings
+phyexe53,mod/vig phys exec 5x wk (>17) - rd 5/3
+physcl42,dr advise exercise (2-17)-r4/2
+pid,person number
+plctyp42,usc type of place-r4/2
+pmdins12,pmed ins - r5/r3 until 12/31/12
+pmdins31,pmed ins - rd 3/1 in 12
+pmdlay42,delayed in getting necsry pres med-r4/2
+pmdlpr42,ac55 prb dlayd getting nec pres med-r4/2
+pmdlrs42,ac54 rsn dlayd getting nec pres med-r4/2
+pmedin31,prescription drug insurance - rd 3/1
+pmedin42,prescription drug insurance - rd 4/2
+pmedin53,prescription drug insurance - rd 5/3
+pmedpp31,out-of-pocket payment for last pmed-r3/1
+pmedpp42,out-of-pocket payment for last pmed-r4/2
+pmedpp53,out-of-pocket payment for last pmed-r5/3
+pmedpy31,usual 3rd party payer for pmeds - r3/1
+pmedpy42,usual 3rd party payer for pmeds - r4/2
+pmedpy53,usual 3rd party payer for pmeds - r5/3
+pmedup31,has usual 3rd party payer for pmeds-r3/1
+pmedup42,has usual 3rd party payer for pmeds-r4/2
+pmedup53,has usual 3rd party payer for pmeds-r5/3
+pmncnp12,cov by gatekp-pays non-plan drs-12/31/12
+pmncnp31,cov by gatekpr-pays non-plan drs-r3/1
+pmncnp42,cov by gatekpr-pays non-plan drs-r4/2
+pmunab42,unable to get necessary pres med-r4/2
+pmunpr42,ac51 prb unable to get nec pres med-r4/2
+pmunrs42,ac50 rsn unable to get nec pres med-r4/2
+pngap12,covered by nongroup ins in apr12
+pngau12,covered by nongroup ins in aug12
+pngde12,covered by nongroup ins in dec12
+pngfe12,covered by nongroup ins in feb12
+pngja12,covered by nongroup ins in jan12
+pngjl12,covered by nongroup ins in jul12
+pngju12,covered by nongroup ins in jun12
+pngma12,covered by nongroup ins in mar12
+pngmy12,covered by nongroup ins in may12
+pngno12,covered by nongroup ins in nov12
+pngoc12,covered by nongroup ins in oct12
+pngse12,covered by nongroup ins in sep12
+pogap12,covered by other group ins in apr12
+pogau12,covered by other group ins in aug12
+pogde12,covered by other group ins in dec12
+pogfe12,covered by other group ins in feb12
+pogja12,covered by other group ins in jan12
+pogjl12,covered by other group ins in jul12
+pogju12,covered by other group ins in jun12
+pogma12,covered by other group ins in mar12
+pogmy12,covered by other group ins in may12
+pogno12,covered by other group ins in nov12
+pogoc12,covered by other group ins in oct12
+pogse12,covered by other group ins in sep12
+pouap12,covered by holder outside of ru in apr12
+pouau12,covered by holder outside of ru in aug12
+poude12,covered by holder outside of ru in dec12
+poufe12,covered by holder outside of ru in feb12
+pouja12,covered by holder outside of ru in jan12
+poujl12,covered by holder outside of ru in jul12
+pouju12,covered by holder outside of ru in jun12
+pouma12,covered by holder outside of ru in mar12
+poumy12,covered by holder outside of ru in may12
+pouno12,covered by holder outside of ru in nov12
+pouoc12,covered by holder outside of ru in oct12
+pouse12,covered by holder outside of ru in sep12
+povcat12,family inc as % of poverty line - catego
+povlev12,family inc as % of poverty line - contin
+pprwkm42,mcaid/schip/o pub: comp plan pprwrk-r4/2
+pprwkt42,tricr/chamv:fill out paperwrk 4 pln-r4/2
+prdrnp12,cov by dr list-pays non-plan dr-12/31/12
+prdrnp31,cov by dr list-pays non-plan drs-r3/1
+prdrnp42,cov by dr list-pays non-plan drs-r4/2
+pregnt31,pregnant during ref period - rd 3/1
+pregnt42,pregnant during ref period - rd 4/2
+pregnt53,pregnant during ref period - rd 5/3
+prevcovr,per cov by ins in prev 2 yrs-pnl 17 only
+preven42,ac22 go to usc for prvntve hlt care-r4/2
+priap12,covered by private ins in apr12
+priau12,covered by private ins in aug12
+pride12,covered by private ins in dec12
+pridk12,cov by priv ins (dk plan) - 12/31/12
+pridk31,cov by priv ins (dk plan) - r3/1 int
+pridk42,cov by priv ins (dk plan) - r4/2 int
+pridk53,cov by priv ins (dk plan) 12-31/r3 int
+prieu12,cov by empl/union grp ins - 12/31/12
+prieu31,cov by empl/union grp ins - r3/1 int dt
+prieu42,cov by empl/union grp ins - r4/2 int dt
+prieu53,cov by empl/union grp ins 12-31/r3 int
+prife12,covered by private ins in feb12
+prija12,covered by private ins in jan12
+prijl12,covered by private ins in jul12
+priju12,covered by private ins in jun12
+prima12,covered by private ins in mar12
+primy12,covered by private ins in may12
+pring12,cov by non-group ins - 12/31/12
+pring31,cov by non-group ins - r3/1 int dt
+pring42,cov by non-group ins - r4/2 int dt
+pring53,cov by non-group ins 12-31/r3 int dt
+prino12,covered by private ins in nov12
+prioc12,covered by private ins in oct12
+priog12,cov by other group ins - 12/31/12
+priog31,cov by other group ins - r3/1 int dt
+priog42,cov by other group ins - r4/2 int dt
+priog53,cov by other group ins 12-31/r3 int dt
+pris12,cov by self-emp-1 ins - 12/31/12
+pris31,cov by self-emp-1 ins - r3/1 int dt
+pris42,cov by self-emp-1 ins - r4/2 int dt
+pris53,cov by self-emp-1 ins 12-31/r3 int dt
+prise12,covered by private ins in sep12
+priv12,cov by priv hlth ins - 12/31/12
+priv31,cov by priv hlth ins - r3/1 int date
+priv42,cov by priv hlth ins - r4/2 int date
+priv53,cov by priv hlth ins 12-31/r3 int date
+privat12,any time cov private ins - 12/31/12
+privat31,any time cov private ins - r3/1
+privat42,any time cov private ins - r4/2
+privat53,any time cov private ins - r5/3
+prout12,cov by someone out of ru - 12/31/12
+prout31,cov by someone out of ru - r3/1 int
+prout42,cov by someone out of ru - r4/2 int
+prout53,cov by someone out of ru 12-31/r3 int dt
+provty42,provider type-r4/2
+proxy12,was respondent a proxy as of 12/31/12
+proxy31,was respondent a proxy in r3/1
+proxy42,was respondent a proxy in r4/2
+proxy53,was respondent a proxy in r5/3
+prsap12,covered by self-emp-1 ins in apr12
+prsau12,covered by self-emp-1 ins in aug12
+prsde12,covered by self-emp-1 ins in dec12
+prsfe12,covered by self-emp-1 ins in feb12
+prsja12,covered by self-emp-1 ins in jan12
+prsjl12,covered by self-emp-1 ins in jul12
+prsju12,covered by self-emp-1 ins in jun12
+prsma12,covered by self-emp-1 ins in mar12
+prsmy12,covered by self-emp-1 ins in may12
+prsno12,covered by self-emp-1 ins in nov12
+prsoc12,covered by self-emp-1 ins in oct12
+prsse12,covered by self-emp-1 ins in sep12
+prstaged,age of diagnosis-prostate cancer
+prstrems,prostate cancer in remission
+prvdrl12,cov by priv plan w/doctor list-12/31/12
+prvdrl31,cov by priv plan w/doctor list - r3/1
+prvdrl42,cov by priv plan w/doctor list - r4/2
+prvev12,ever have private insurance during 12
+prvhmo12,covered by private hmo - 12/31/12
+prvhmo31,covered by private hmo - r3/1
+prvhmo42,covered by private hmo - r4/2
+prvmnc12,covered by priv gatekeeper plan-12/31/12
+prvmnc31,covered by private gatekeeper plan-r3/1
+prvmnc42,covered by private gatekeeper plan-r4/2
+psa53,how long since last psa (>39) - rd 5/3
+pstats31,person disposition status - r3/1
+pstats42,person disposition status - r4/2
+pstats53,person disposition status - r5/3
+pub12x,cov by public ins - 12/31/12 (ed)
+pub31x,cov by public ins - r3/1 int dt (ed)
+pub42x,cov by public ins - r4/2 int dt (ed)
+pub53x,cov by public ins 12-31/r3 int dt (ed)
+pubap12x,covr by any public ins in apr12 (ed)
+pubat12x,any time cov by public - 12/31/12
+pubat31x,any time cov by public - r3/1
+pubat42x,any time cov by public - r4/2
+pubat53x,any time cov by public - r5/3
+pubau12x,covr by any public ins in aug12 (ed)
+pubde12x,covr by any public ins in dec12 (ed)
+pubfe12x,covr by any public ins in feb12 (ed)
+pubimp12,public assistance imputation flag
+pubja12x,covr by any public ins in jan12 (ed)
+pubjl12x,covr by any public ins in jul12 (ed)
+pubju12x,covr by any public ins in jun12 (ed)
+pubma12x,covr by any public ins in mar12 (ed)
+pubmy12x,covr by any public ins in may12 (ed)
+pubno12x,covr by any public ins in nov12 (ed)
+puboc12x,covr by any public ins in oct12 (ed)
+pubp12x,person's public assistance
+pubse12x,covr by any public ins in sep12 (ed)
+raceax,asian among races rptd (edited/imputed)
+racebx,black among races rptd (edited/imputed)
+racethx,race/ethnicity (edited/imputed)
+racev1x,race (edited/imputed)
+racever,race question version asked
+racewx,white among races rptd (edited/imputed)
+rchdif31,difficulty reaching overhead - rd 3/1
+rchdif53,difficulty reaching overhead - rd 5/3
+readnw42,can read newsprnt w/glasses/cntcts-rd4/2
+recpep42,can recgnze people w/glasses/cntcts-r4/2
+refdp12x,person's refund income
+reffrl42,ac22 go to usc for referrals-r4/2
+refimp12,refund income imputation flag
+refprs12,reference person as of 12/31/12
+refprs31,reference person at - r3/1
+refprs42,reference person at - r4/2
+refprs53,reference person at - r5/3
+region12,census region as of 12/31/12
+region31,census region - r3/1
+region42,census region - r4/2
+region53,census region - r5/3
+resp12,1st respondent indicator as of 12/31/12
+resp31,1st respondent indicator for r3/1
+resp42,1st respondent indicator for r4/2
+resp53,1st respondent indicator for r5/3
+respct42,ac27 prov shows respect for trtmnts-r4/2
+retpln31,pension plan at rd 3/1 cmj
+retpln42,pension plan at rd 4/2 cmj
+retpln53,pension plan at rd 5/3 cmj
+rfrel12x,relation to ref pers-12/31/12 (edit/imp)
+rfrel31x,relation to ref pers-r3/1 (edit/imp)
+rfrel42x,relation to ref pers-r4/2 (edit/imp)
+rfrel53x,relation to ref pers-r5/3 (edit/imp)
+rndflg31,data collection round for rd 3/1 cmj
+rthlth31,perceived health status - rd 3/1
+rthlth42,perceived health status - rd 4/2
+rthlth53,perceived health status - rd 5/3
+rtplnm42,mcaid/schip/o pub: rate exp w plan-r4/2
+rtplnt42,tricr/chamv: rate experience w plan-r4/2
+ruclas12,ru fielded as:standard/new/stud-12/31/12
+ruclas31,ru fielded as:standard/new/student-r3/1
+ruclas42,ru fielded as:standard/new/student-r4/2
+ruclas53,ru fielded as:standard/new/student-r5/3
+ruletr12,ru letter as of 12/31/12
+ruletr31,ru letter - r3/1
+ruletr42,ru letter - r4/2
+ruletr53,ru letter - r5/3
+rurslt31,ru result - r3/1
+rurslt42,ru result - r4/2
+rurslt53,ru result - r5/3
+rusize12,ru size as of 12/31/12
+rusize31,ru size - r3/1
+rusize42,ru size - r4/2
+rusize53,ru size - r5/3
+rxexp12,total rx-exp 12
+rxmcd12,total rx-medicaid amt 12
+rxmcr12,total rx-medicare amt 12
+rxofd12,total rx-other fed amt 12
+rxopr12,total rx-oth private amt 12
+rxopu12,total rx-oth public amt 12
+rxosr12,tot rx-oth unclass srce amt 12
+rxoth12,total rx-oth combined amt 12
+rxprv12,total rx-private ins amt 12
+rxptr12,total rx-prv & tri amt 12
+rxslf12,total rx-self/family amt 12
+rxstl12,total rx-other st/local amt 12
+rxtot12,# presc meds incl refills 12
+rxtri12,total rx-tricare amt 12
+rxva12,total rx-va/champva amt 12
+rxwcp12,total rx-workers comp amt 12
+safest42,dr advise chld safety seat (wt<=40)-r4/2
+salep12x,person's sales income
+salimp12,sales income imputation flag
+saqelig,eligibility status for saq
+saqwt12f,"final saq person weight, 2012"
+schlbh42,problem behavior at school (5-17)-r4/2
+schlim31,school limitation - rd 3/1
+schlim53,school limitation - rd 5/3
+schpro42,problem with schoolwork (5-17)-r4/2
+sclnbd31,# days missed school stayd in bed (rd31)
+sclnbd42,# days missed school stayd in bed (rd42)
+sclnbd53,# days missed school stayd in bed (rd53)
+seatbe53,wears seat belt (>15) - rd 5/3
+seedif42,diffclty seeing w/glasses/cntcts-rd 4/2
+seldsi42,ac08 oth reas no usc:seldm/nev sick-r4/2
+selfcm31,self-employed at rd 3/1 cmj
+selfcm42,self-employed at rd 4/2 cmj
+selfcm53,self-employed at rd 5/3 cmj
+sex,sex
+sfflag42,saq: pcs/mcs imputation flag sf-12v2
+sgmtre53,rsn have sigmoidoscopy (>39)-r5/3
+sgmtst53,most recent sigmoidoscopy (>39) - r5/3
+sibpro42,prblm getting along w/sibs (5-17)-r4/2
+siceas42,child gets sick easily (0-17)-r4/2
+sicpay31,paid sick leave at rd 3/1 cmj
+sicpay42,paid sick leave at rd 4/2 cmj
+sicpay53,paid sick leave at rd 5/3 cmj
+skdkaged,age of diagnosis-skin-unknwn type cancer
+skdkrems,skin-unknown type cancer in remission
+sknmaged,age of diagnosis-skin-nonmelanoma cancer
+sknmrems,skin-nonmelanoma cancer in remission
+soclim31,social limitations - rd 3/1
+soclim53,social limitations - rd 5/3
+spouid12,spouse id - 12/31/12
+spouid31,spouse id - r3/1
+spouid42,spouse id - r4/2
+spouid53,spouse id - r5/3
+spouin12,marital status w/spouse present-12/31/12
+spouin31,marital status w/spouse present-r3/1
+spouin42,marital status w/spouse present-r4/2
+spouin53,marital status w/spouse present-r5/3
+sprpro42,problem w/sports/hobbies (5-17)-r4/2
+sscimp12,social security income imputation flag
+ssecp12x,person's social security income
+ssidis12,ssi receipt due to disability
+ssiimp12,ssi imputation flag
+ssip12x,person's ssi
+ssnljb31,is cmj a seasonal job rd 3/1
+ssnljb42,is cmj a seasonal job rd 4/2
+ssnljb53,is cmj a seasonal job rd 5/3
+staap12,covered by other state prog in apr12
+staau12,covered by other state prog in aug12
+stade12,covered by other state prog in dec12
+stafe12,covered by other state prog in feb12
+staja12,covered by other state prog in jan12
+stajl12,covered by other state prog in jul12
+staju12,covered by other state prog in jun12
+stama12,covered by other state prog in mar12
+stamy12,covered by other state prog in may12
+stano12,covered by other state prog in nov12
+staoc12,covered by other state prog in oct12
+stapr12,cov by state-spec prog - 12/31/12
+stapr31,cov by state-spec prog - r3/1 int dt
+stapr42,cov by state-spec prog - r4/2 int dt
+stapr53,cov by state-spec prog 12-31/r3 int dt
+stase12,covered by other state prog in sep12
+stjbdd31,day started rd 3/1 cmj
+stjbdd42,day started rd 4/2 cmj
+stjbdd53,day started rd 5/3 cmj
+stjbmm31,month started rd 3/1 cmj
+stjbmm42,month started rd 4/2 cmj
+stjbmm53,month started rd 5/3 cmj
+stjbyy31,year started rd 3/1 cmj
+stjbyy42,year started rd 4/2 cmj
+stjbyy53,year started rd 5/3 cmj
+stndif31,difficulty standing 20 minutes - rd 3/1
+stndif53,difficulty standing 20 minutes - rd 5/3
+stomch53,tke asprn unsafe b/c stomch (>17)-rd 5/3
+stpdif31,difficulty walking up 10 steps - rd 3/1
+stpdif53,difficulty walking up 10 steps - rd 5/3
+stprat12,any time cov by state ins - 12/31/12
+stprat31,any time coverage by state ins - r3/1
+stprat42,any time coverage by state ins - r4/2
+stprat53,any time coverage by state ins - r5/3
+strkaged,age of diagnosis-stroke
+strkdx,stroke diagnosis (>17)
+taxfrm12,tax form person will file
+tempjb31,is cmj a temporary job rd 3/1
+tempjb42,is cmj a temporary job rd 4/2
+tempjb53,is cmj a temporary job rd 5/3
+thrtaged,age of diagnosis-throat cancer
+thrtrems,throat cancer in remission
+thyraged,age of diagnosis-thyroid cancer
+thyrrems,thyroid cancer in remission
+timaln42,doctor spend any time alone (12-17)-r4/2
+tmtkus42,ac13 how long it takes get to usc-r4/2
+totded12,total of all itemized deductions
+totexp12,total health care exp 12
+totmcd12,total amt paid by medicaid 12
+totmcr12,total amt paid by medicare 12
+totofd12,total amt paid by other federal 12
+totopr12,total amt paid by other private 12
+totopu12,total amt paid by other public 12
+totosr12,total amt paid by other sources 12
+tototh12,total amt paid by oth combined 12
+totprv12,total amt paid by private ins 12
+totptr12,total amt paid by prv & tri 12
+totslf12,total amt paid by self/family 12
+totstl12,total amt paid by oth st/local 12
+tottch12,"total health care charges 12, excl rx"
+tottri12,total amt paid by tricare 12
+totva12,total amt paid by va/champva 12
+totwcp12,total amt paid by workers comp 12
+trans42,ac08 oth reas no usc: transprt/time-r4/2
+trble42,prblm stay out of trouble (5-17)-r4/2
+treatm42,ac26 prov ask about oth treatments-r4/2
+triap12x,covered by tricare/champva in apr12(ed)
+triat12x,any time cov tricare/champva - 12/31/12
+triat31x,any time cov tricare/champva - r3/1
+triat42x,any time cov tricare/champva - r4/2
+triat53x,any time cov tricare/champva - r5/3
+triau12x,covered by tricare/champva in aug12 (ed)
+trich12x,covered by tricare champva - 12/31/12
+trich31x,covered by tricare champva - r3/1
+trich42x,covered by tricare champva - r4/2
+tricr12x,cov by tricr/chamv - 12/31/12 (ed)
+tricr31x,cov by tricr/chamv - r3/1 int dt (ed)
+tricr42x,cov by tricr/chamv - r4/2 int dt (ed)
+tricr53x,cov by tricr/chamv 12-31/r3 int dt (ed)
+tride12x,covered by tricare/champva in dec12 (ed)
+triev12,ever have tricare/champva during 12
+triex12x,covered by tricare extra - 12/31/12
+triex31x,covered by tricare extra - r3/1
+triex42x,covered by tricare extra - r4/2
+trife12x,covered by tricare/champva in feb12 (ed)
+trija12x,covered by tricare/champva in jan12 (ed)
+trijl12x,covered by tricare/champva in jul12 (ed)
+triju12x,covered by tricare/champva in jun12 (ed)
+trili12x,covered by tricare for life - 12/31/12
+trili31x,covered by tricare for life - r3/1
+trili42x,covered by tricare for life - r4/2
+trima12x,covered by tricare/champva in mar12 (ed)
+trimy12x,covered by tricare/champva in may12 (ed)
+trino12x,covered by tricare/champva in nov12 (ed)
+trioc12x,covered by tricare/champva in oct12 (ed)
+tripr12x,covered by tricare prime - 12/31/12
+tripr31x,covered by tricare prime - r3/1
+tripr42x,covered by tricare prime - r4/2
+trise12x,covered by tricare/champva in sep12 (ed)
+trist12x,covered by tricare standard - 12/31/12
+trist31x,covered by tricare standard - r3/1
+trist42x,covered by tricare standard - r4/2
+trstp12x,person's trust/rent income
+trtimp12,trust income imputation flag
+ttlp12x,person's total income
+typepe42,usc type of provider-r4/2
+unable31,completely unable to do activity-rd 3/1
+unable53,completely unable to do activity-rd 5/3
+uneimp12,unemployment imputation flag
+unemp12x,person's unemployment comp income
+unhap42,problem feeling unhappy/sad (5-17)-r4/2
+unins12,uninsured all of 12
+union31,union status at rd 3/1 cmj
+union42,union status at rd 4/2 cmj
+union53,union status at rd 5/3 cmj
+usborn42,ac03 was person born in us-r4/2
+uscnot42,ac08 oth reas no usc: usc not avail-r4/2
+uslive42,ac04 # yrs person lived in us-r4/2
+varpsu,variance estimation psu - 2012
+varstr,variance estimation stratum - 2012
+vetimp12,veteran's income imputation flag
+vetsp12x,person's veteran's income
+visexp12,total glasses/contact lens exp 12
+vision42,vision impairment (summary) - rd 4/2
+vismcd12,glasses/cntct lenses-medicaid amt 12
+vismcr12,glasses/cntct lenses-medicare amt 12
+visofd12,glasses/cntct lenses-othr fed amt 12
+visopr12,glasses/cntct lenses-oth private amt 12
+visopu12,glasses/cntct lenses-oth public amt 12
+visosr12,glases/cntct lense-ot unclas srce amt 12
+visoth12,glasses/cntct lenses-oth combined amt 12
+visprv12,glasses/cntct lenses-priv ins amt 12
+visptr12,glasses/cntct lenses-prv & tri amt 12
+visslf12,glasses/cntct lenses -self/fam amt 12
+visstl12,glasses/cntct lenses-oth st/locl amt 12
+vistch12,glasses/contact lenses charges 12
+vistri12,glasses/lenses-tricare amt 12
+visva12,glasses/cntct lenses-va/champva amt 12
+viswcp12,glasses/cntct lenses-workers comp amt 12
+wagep12x,person's wage income
+wagimp12,wage imputation flag
+wasafdc,was prev ins by public afdc-pnl 17 only
+waschamp,was prev ins tricare/champva-pnl 17 only
+wasestb,was prev ins by empl or union-pn 17 only
+wasmcaid,was prev ins by mcaid/schip-pnl 17 only
+wasmcare,was prev ins by medicare-panel 17 only
+wasotgov,was prev ins by oth gov prg-pnl 17 only
+wasother,was prev ins by oth source-panel 17 only
+waspriv,was prev ins grp/assoc/ins co-pn 17 only
+wasssi,was prev ins by ssi program-pnl 17 only
+wasstat1,was prev ins by stat prog 1-pnl 17 only
+wasstat2,was prev ins by stat prog 2-pnl 17 only
+wasstat3,was prev ins by stat prog 3-pnl 17 only
+wasstat4,was prev ins by stat prog 4-pnl 17 only
+wasva,was prev ins va/militar care-pnl 17 only
+wcmpp12x,person's workers' compensation
+wcpimp12,workers' comp imputation flag
+whitpr42,ac19 is provider white-r4/2
+whnbpr42,when dr checked blood press (2-17)-r4/2
+whnbst42,whn dr advise boost seat(40<wt<=80)-r4/2
+whnden42,when dr advise dent checkup (2-17)-r4/2
+whneat42,when dr advise eat healthy (2-17)-r4/2
+whnhel42,when dr advise bike helmet (2-17)-r4/2
+whnhgt42,when doctor measured height (0-17)-r4/2
+whnlap42,whn dr advise lap/shldr blt (80<wt)-r4/2
+whnphy42,when dr advise exercise (2-17)-r4/2
+whnsaf42,when dr advise safety seat (wt<=40)-r4/2
+whnsmk42,whn dr advis smkg in home bad(0-17)-r4/2
+whnwgt42,when doctor measured weight (0-17)-r4/2
+wilfil12,will person file fed income tax return
+wkinbd31,# days missed work stayed in bed (rd31)
+wkinbd42,# days missed work stayed in bed (rd42)
+wkinbd53,# days missed work stayed in bed (rd53)
+wlk3mo31,phys functioning help 3+ months - rd 3/1
+wlk3mo53,phys functioning help 3+ months - rd 5/3
+wlkdif31,difficulty walking 3 blocks - rd 3/1
+wlkdif53,difficulty walking 3 blocks - rd 5/3
+wlklim31,limitation in physical functioning-rd3/1
+wlklim53,limitation in physical functioning-rd5/3
+wrglas42,wears eyeglasses or contacts - rd 4/2
+wrhlth42,worry more about health (0-17)-r4/2
+wrklim31,work limitation - rd 3/1
+wrklim53,work limitation - rd 5/3
+ychj3142,why chngd job between rd 3/1 and rd 4/2
+ychj4253,why chngd job between rd 4/2 and rd 5/3
+ynoins31,why not eligible health ins rd 3/1 cmj
+ynoins42,why not eligible health ins rd 4/2 cmj
+ynoins53,why not eligible health ins rd 5/3 cmj
+ynousc42,ac07 main reas pers doesnt have usc-r4/2
+zidexp12,total zero-nite staz dr 12
+zidmcd12,zero-nite ip staz-medicaid amt-dr 12
+zidmcr12,zero-nite ip staz-medicare amt-dr 12
+zidofd12,zero-nite ip staz-other fed amt-dr 12
+zidopr12,zero-nite ip staz-oth private amt-dr 12
+zidopu12,zero-nite ip staz-oth public amt-dr 12
+zidosr12,zero-nite ip staz-unclas srce amt-dr 12
+zidoth12,zero-nite ip staz-oth combined amt-dr 12
+zidprv12,zero-nite ip staz-priv ins amt-dr 12
+zidptr12,zero-nite ip staz-prv & tri amt-dr 12
+zidslf12,zero-nite ip staz-self/fam amt-dr 12
+zidstl12,zero-nite ip staz-oth st/loc amt-dr 12
+zidtch12,zero-nite ip stay charges - dr 12
+zidtri12,zero-nite ip staz-tricare amt-dr 12
+zidva12,zero-nite ip staz-va/champva amt-dr 12
+zidwcp12,zero-nite ip staz-wrkers comp amt-dr 12
+zifexp12,total zero-nite stays fac exp 12
+zifmcd12,zero-nite ip staz-medicaid amt-fac 12
+zifmcr12,zero-nite ip staz-medicare amt-fac 12
+zifofd12,zero-nite ip staz-other fed amt-fac 12
+zifopr12,zero-nite ip staz-oth private amt-fac 12
+zifopu12,zero-nite ip staz-oth public amt-fac 12
+zifosr12,zero-nite ip staz-unclas srce amt-fac 12
+zifoth12,zero-nite ip staz-oth combine amt-fac 12
+zifprv12,zero-nite ip staz-priv ins amt-fac 12
+zifptr12,zero-nite ip staz-prv & tri amt-fac 12
+zifslf12,zero-nite ip staz-self/fam amt-fac 12
+zifstl12,zero-nite ip staz-oth st/loc amt-fac 12
+ziftch12,zero-nite ip stay charges - fac 12
+ziftri12,zero-nite ip staz-tricare amt-fac 12
+zifva12,zero-nite ip staz-va/champva amt-fac 12
+zifwcp12,zero-nite ip staz-wrkers comp amt-fac 12

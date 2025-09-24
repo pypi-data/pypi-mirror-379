@@ -1,0 +1,229 @@
+Variable,Description
+stnam,state name
+fipst,the two-digit american national standards institute (ansi) code for state
+leaid,district nces id
+leanm10,district name
+all_mth00numvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+all_mth00pctprof_1011,percentage of students in the school that scored at or above proficient in all grades
+mam_mth00numvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+mam_mth00pctprof_1011,percentage of native american students that scored at or above proficient in all grades
+mas_mth00numvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+mas_mth00pctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in all grades
+mbl_mth00numvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+mbl_mth00pctprof_1011,percentage of black students that scored at or above proficient in all grades
+mhi_mth00numvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+mhi_mth00pctprof_1011,percentage of hispanic students that scored at or above proficient in all grades
+mtr_mth00numvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+mtr_mth00pctprof_1011,percentage of students with two or more races that scored at or above proficient in all grades
+mwh_mth00numvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+mwh_mth00pctprof_1011,percentage of white students that scored at or above proficient in all grades
+f_mth00numvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+f_mth00pctprof_1011,percentage of female students that scored at or above proficient in all grades
+m_mth00numvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+m_mth00pctprof_1011,percentage of male students that scored at or above proficient in all grades
+cwd_mth00numvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+cwd_mth00pctprof_1011,percentage of children with disabilities that scored at or above proficient in all grades
+ecd_mth00numvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+ecd_mth00pctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in all grades
+lep_mth00numvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+lep_mth00pctprof_1011,percentage of limited english proficient students that scored at or above proficient in all grades
+hom_mth00numvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+hom_mth00pctprof_1011,percentage of homeless students that scored at or above proficient in all grades
+mig_mth00numvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in all grades
+mig_mth00pctprof_1011,percentage of migrant students that scored at or above proficient in all grades
+all_mth03numvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+all_mth03pctprof_1011,percentage of students in the school that scored at or above proficient in grade 3
+all_mth04numvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+all_mth04pctprof_1011,percentage of students in the school that scored at or above proficient in grade 4
+all_mth05numvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+all_mth05pctprof_1011,percentage of students in the school that scored at or above proficient in grade 5
+all_mth06numvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+all_mth06pctprof_1011,percentage of students in the school that scored at or above proficient in grade 6
+all_mth07numvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+all_mth07pctprof_1011,percentage of students in the school that scored at or above proficient in grade 7
+all_mth08numvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+all_mth08pctprof_1011,percentage of students in the school that scored at or above proficient in grade 8
+all_mthhsnumvalid_1011,total number of students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+all_mthhspctprof_1011,percentage of students in the school that scored at or above proficient in high school
+mam_mth03numvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+mam_mth03pctprof_1011,percentage of native american students that scored at or above proficient in grade 3
+mam_mth04numvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+mam_mth04pctprof_1011,percentage of native american students that scored at or above proficient in grade 4
+mam_mth05numvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+mam_mth05pctprof_1011,percentage of native american students that scored at or above proficient in grade 5
+mam_mth06numvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+mam_mth06pctprof_1011,percentage of native american students that scored at or above proficient in grade 6
+mam_mth07numvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+mam_mth07pctprof_1011,percentage of native american students that scored at or above proficient in grade 7
+mam_mth08numvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+mam_mth08pctprof_1011,percentage of native american students that scored at or above proficient in grade 8
+mam_mthhsnumvalid_1011,number of native american students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+mam_mthhspctprof_1011,percentage of native american students that scored at or above proficient in high school
+mas_mth03numvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+mas_mth03pctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in grade 3
+mas_mth04numvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+mas_mth04pctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in grade 4
+mas_mth05numvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+mas_mth05pctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in grade 5
+mas_mth06numvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+mas_mth06pctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in grade 6
+mas_mth07numvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+mas_mth07pctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in grade 7
+mas_mth08numvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+mas_mth08pctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in grade 8
+mas_mthhsnumvalid_1011,number of asian/pacific islander students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+mas_mthhspctprof_1011,percentage of asian/pacific islander students that scored at or above proficient in high school
+mbl_mth03numvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+mbl_mth03pctprof_1011,percentage of black students that scored at or above proficient in grade 3
+mbl_mth04numvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+mbl_mth04pctprof_1011,percentage of black students that scored at or above proficient in grade 4
+mbl_mth05numvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+mbl_mth05pctprof_1011,percentage of black students that scored at or above proficient in grade 5
+mbl_mth06numvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+mbl_mth06pctprof_1011,percentage of black students that scored at or above proficient in grade 6
+mbl_mth07numvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+mbl_mth07pctprof_1011,percentage of black students that scored at or above proficient in grade 7
+mbl_mth08numvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+mbl_mth08pctprof_1011,percentage of black students that scored at or above proficient in grade 8
+mbl_mthhsnumvalid_1011,number of black students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+mbl_mthhspctprof_1011,percentage of black students that scored at or above proficient in high school
+mhi_mth03numvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+mhi_mth03pctprof_1011,percentage of hispanic students that scored at or above proficient in grade 3
+mhi_mth04numvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+mhi_mth04pctprof_1011,percentage of hispanic students that scored at or above proficient in grade 4
+mhi_mth05numvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+mhi_mth05pctprof_1011,percentage of hispanic students that scored at or above proficient in grade 5
+mhi_mth06numvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+mhi_mth06pctprof_1011,percentage of hispanic students that scored at or above proficient in grade 6
+mhi_mth07numvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+mhi_mth07pctprof_1011,percentage of hispanic students that scored at or above proficient in grade 7
+mhi_mth08numvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+mhi_mth08pctprof_1011,percentage of hispanic students that scored at or above proficient in grade 8
+mhi_mthhsnumvalid_1011,number of hispanic students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+mhi_mthhspctprof_1011,percentage of hispanic students that scored at or above proficient in high school
+mtr_mth03numvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+mtr_mth03pctprof_1011,percentage of students with two or more races that scored at or above proficient in grade 3
+mtr_mth04numvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+mtr_mth04pctprof_1011,percentage of students with two or more races that scored at or above proficient in grade 4
+mtr_mth05numvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+mtr_mth05pctprof_1011,percentage of students with two or more races that scored at or above proficient in grade 5
+mtr_mth06numvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+mtr_mth06pctprof_1011,percentage of students with two or more races that scored at or above proficient in grade 6
+mtr_mth07numvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+mtr_mth07pctprof_1011,percentage of students with two or more races that scored at or above proficient in grade 7
+mtr_mth08numvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+mtr_mth08pctprof_1011,percentage of students with two or more races that scored at or above proficient in grade 8
+mtr_mthhsnumvalid_1011,number of students with two or more races that completed mathematics assessment and for whom a proficiency level was assigned in high school
+mtr_mthhspctprof_1011,percentage of students with two or more races that scored at or above proficient in high school
+mwh_mth03numvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+mwh_mth03pctprof_1011,percentage of white students that scored at or above proficient in grade 3
+mwh_mth04numvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+mwh_mth04pctprof_1011,percentage of white students that scored at or above proficient in grade 4
+mwh_mth05numvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+mwh_mth05pctprof_1011,percentage of white students that scored at or above proficient in grade 5
+mwh_mth06numvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+mwh_mth06pctprof_1011,percentage of white students that scored at or above proficient in grade 6
+mwh_mth07numvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+mwh_mth07pctprof_1011,percentage of white students that scored at or above proficient in grade 7
+mwh_mth08numvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+mwh_mth08pctprof_1011,percentage of white students that scored at or above proficient in grade 8
+mwh_mthhsnumvalid_1011,number of white students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+mwh_mthhspctprof_1011,percentage of white students that scored at or above proficient in high school
+f_mth03numvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+f_mth03pctprof_1011,percentage of female students that scored at or above proficient in grade 3
+f_mth04numvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+f_mth04pctprof_1011,percentage of female students that scored at or above proficient in grade 4
+f_mth05numvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+f_mth05pctprof_1011,percentage of female students that scored at or above proficient in grade 5
+f_mth06numvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+f_mth06pctprof_1011,percentage of female students that scored at or above proficient in grade 6
+f_mth07numvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+f_mth07pctprof_1011,percentage of female students that scored at or above proficient in grade 7
+f_mth08numvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+f_mth08pctprof_1011,percentage of female students that scored at or above proficient in grade 8
+f_mthhsnumvalid_1011,number of female students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+f_mthhspctprof_1011,percentage of female students that scored at or above proficient in high school
+m_mth03numvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+m_mth03pctprof_1011,percentage of male students that scored at or above proficient in grade 3
+m_mth04numvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+m_mth04pctprof_1011,percentage of male students that scored at or above proficient in grade 4
+m_mth05numvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+m_mth05pctprof_1011,percentage of male students that scored at or above proficient in grade 5
+m_mth06numvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+m_mth06pctprof_1011,percentage of male students that scored at or above proficient in grade 6
+m_mth07numvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+m_mth07pctprof_1011,percentage of male students that scored at or above proficient in grade 7
+m_mth08numvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+m_mth08pctprof_1011,percentage of male students that scored at or above proficient in grade 8
+m_mthhsnumvalid_1011,number of male students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+m_mthhspctprof_1011,percentage of male students that scored at or above proficient in high school
+cwd_mth03numvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+cwd_mth03pctprof_1011,percentage of children with disabilities that scored at or above proficient in grade 3
+cwd_mth04numvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+cwd_mth04pctprof_1011,percentage of children with disabilities that scored at or above proficient in grade 4
+cwd_mth05numvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+cwd_mth05pctprof_1011,percentage of children with disabilities that scored at or above proficient in grade 5
+cwd_mth06numvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+cwd_mth06pctprof_1011,percentage of children with disabilities that scored at or above proficient in grade 6
+cwd_mth07numvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+cwd_mth07pctprof_1011,percentage of children with disabilities that scored at or above proficient in grade 7
+cwd_mth08numvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+cwd_mth08pctprof_1011,percentage of children with disabilities that scored at or above proficient in grade 8
+cwd_mthhsnumvalid_1011,number of children with disabilities that completed mathematics assessment and for whom a proficiency level was assigned in high school
+cwd_mthhspctprof_1011,percentage of children with disabilities that scored at or above proficient in high school
+ecd_mth03numvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+ecd_mth03pctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in grade 3
+ecd_mth04numvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+ecd_mth04pctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in grade 4
+ecd_mth05numvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+ecd_mth05pctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in grade 5
+ecd_mth06numvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+ecd_mth06pctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in grade 6
+ecd_mth07numvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+ecd_mth07pctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in grade 7
+ecd_mth08numvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+ecd_mth08pctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in grade 8
+ecd_mthhsnumvalid_1011,number of economically disadvantaged students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+ecd_mthhspctprof_1011,percentage of economically disadvantaged students that scored at or above proficient in high school
+lep_mth03numvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+lep_mth03pctprof_1011,percentage of limited english proficient students that scored at or above proficient in grade 3
+lep_mth04numvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+lep_mth04pctprof_1011,percentage of limited english proficient students that scored at or above proficient in grade 4
+lep_mth05numvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+lep_mth05pctprof_1011,percentage of limited english proficient students that scored at or above proficient in grade 5
+lep_mth06numvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+lep_mth06pctprof_1011,percentage of limited english proficient students that scored at or above proficient in grade 6
+lep_mth07numvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+lep_mth07pctprof_1011,percentage of limited english proficient students that scored at or above proficient in grade 7
+lep_mth08numvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+lep_mth08pctprof_1011,percentage of limited english proficient students that scored at or above proficient in grade 8
+lep_mthhsnumvalid_1011,number of limited english proficient students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+lep_mthhspctprof_1011,percentage of limited english proficient students that scored at or above proficient in high school
+hom_mth03numvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+hom_mth03pctprof_1011,percentage of homeless students that scored at or above proficient in grade 3
+hom_mth04numvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+hom_mth04pctprof_1011,percentage of homeless students that scored at or above proficient in grade 4
+hom_mth05numvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+hom_mth05pctprof_1011,percentage of homeless students that scored at or above proficient in grade 5
+hom_mth06numvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+hom_mth06pctprof_1011,percentage of homeless students that scored at or above proficient in grade 6
+hom_mth07numvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+hom_mth07pctprof_1011,percentage of homeless students that scored at or above proficient in grade 7
+hom_mth08numvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+hom_mth08pctprof_1011,percentage of homeless students that scored at or above proficient in grade 8
+hom_mthhsnumvalid_1011,number of homeless students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+hom_mthhspctprof_1011,percentage of homeless students that scored at or above proficient in high school
+mig_mth03numvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in grade 3
+mig_mth03pctprof_1011,percentage of migrant students that scored at or above proficient in grade 3
+mig_mth04numvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in grade 4
+mig_mth04pctprof_1011,percentage of migrant students that scored at or above proficient in grade 4
+mig_mth05numvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in grade 5
+mig_mth05pctprof_1011,percentage of migrant students that scored at or above proficient in grade 5
+mig_mth06numvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in grade 6
+mig_mth06pctprof_1011,percentage of migrant students that scored at or above proficient in grade 6
+mig_mth07numvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in grade 7
+mig_mth07pctprof_1011,percentage of migrant students that scored at or above proficient in grade 7
+mig_mth08numvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in grade 8
+mig_mth08pctprof_1011,percentage of migrant students that scored at or above proficient in grade 8
+mig_mthhsnumvalid_1011,number of migrant students that completed mathematics assessment and for whom a proficiency level was assigned in high school
+mig_mthhspctprof_1011,percentage of migrant students that scored at or above proficient in high school

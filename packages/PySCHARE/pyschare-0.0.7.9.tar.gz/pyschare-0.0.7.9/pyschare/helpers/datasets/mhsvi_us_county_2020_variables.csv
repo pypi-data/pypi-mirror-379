@@ -1,0 +1,188 @@
+﻿Variable,Description
+fips,county fips code - geography
+county,county name - geography
+e_hh,households - estimate
+m_hh,households - estimate margin of error
+e_hu,housing units - estimate
+m_hu,housing units - estimate margin of error
+st_abbr,state abbreviation - geography
+st,state fips code - geography
+state,state name - geography
+e_totpop,total population - estimate
+m_totpop,total population - estimate margin of error
+rpl_themes,overall percentile ranking - percentile of sum
+spl_themes,sum of series themes - sum
+e_unemp,civilian age 16+ unemployed - estimate
+m_unemp,civilian age 16+ unemployed - estimate margin of error
+ep_unemp,civilian age 16+ unemployed - percentage estimate
+epl_unemp,civilian age 16+ unemployed - percentile of percentage estimate
+mp_unemp,civilian age 16+ unemployed - percentage margin of error
+epl_hburd,"housing costburdened occupied housing units with annual income less than $75,000 (30%+ of income spent on housing costs) - percentile of percentage estimate"
+e_hburd,"housing cost-burdened occupied housing units with annual income less than $75,000 (30%+ of income spent on housing costs) - estimate"
+m_hburd,"housing cost-burdened occupied housing units with annual income less than $75,000 (30%+ of income spent on housing costs) - estimate margin of error"
+ep_hburd,"housing cost-burdened occupied housing units with annual income less than $75,000 (30%+ of income spent on housing costs) - percentage estimate"
+mp_hburd,"housing cost-burdened occupied housing units with annual income less than $75,000 (30%+ of income spent on housing costs) - percentage margin of error"
+rpl_theme1,percentile ranking; theme 1 - percentile of sum
+e_nohsdp,persons age 25+ with no high school diploma - estimate
+m_nohsdp,persons age 25+ with no high school diploma - estimate margin of error
+ep_nohsdp,persons age 25+ with no high school diploma - percentage estimate
+epl_nohsdp,persons age 25+ with no high school diploma - percentile of percentage estimate
+mp_nohsdp,persons age 25+ with no high school diploma - percentage margin of error
+e_pov150,persons below 150% of federal poverty line - estimate
+m_pov150,persons below 150% of federal poverty line - estimate margin of error
+ep_pov150,persons below 150% of federal poverty line - percentage estimate
+epl_pov150,persons below 150% of federal poverty line - percentile of percentage estimate
+mp_pov150,persons below 150% of federal poverty line - percentage margin of error
+e_uninsur,persons without health insurance - estimate
+m_uninsur,persons without health insurance - estimate margin of error
+ep_uninsur,persons without health insurance - percentage estimate
+epl_uninsur,persons without health insurance - percentile of rate
+mp_uninsur,persons without health insurance - percentage margin of error
+spl_theme1,sum of series; theme 1 - sum
+e_chin,"chinese (mandarin, cantonese) speakers who speak english less than ""very well"" - estimate"
+m_chin,"chinese (mandarin, cantonese) speakers who speak english less than ""very well"" - estimate margin of error"
+ep_chin,"chinese (mandarin, cantonese) speakers who speak english less than ""very well"" - percentage estimate"
+epl_chin,"chinese (mandarin, cantonese) speakers who speak english less than ""very well"" - percentile of percentage estimate"
+mp_chin,"chinese (mandarin, cantonese) speakers who speak english less than ""very well"" - percentage margin of error"
+e_disabl,civilian noninstitutionalized population with a disability - estimate
+m_disabl,civilian noninstitutionalized population with a disability - estimate margin of error
+ep_disabl,civilian noninstitutionalized population with a disability - percentage estimate
+epl_disabl,civilian noninstitutionalized population with a disability - percentile of percentage estimate
+mp_disabl,civilian noninstitutionalized population with a disability - percentage margin of error
+e_kor,"korean speakers who speak english less than ""very well"" - estimate"
+m_kor,"korean speakers who speak english less than ""very well"" - estimate margin of error"
+ep_kor,"korean speakers who speak english less than ""very well"" - percentage estimate"
+epl_kor,"korean speakers who speak english less than ""very well"" - percentile of percentage estimate"
+mp_kor,"korean speakers who speak english less than ""very well"" - percentage margin of error"
+e_otherlang,"other language speakers who speak english less than ""very well"" - estimate"
+m_otherlang,"other language speakers who speak english less than ""very well"" - estimate margin of error"
+ep_otherlang,"other language speakers who speak english less than ""very well"" - percentage estimate"
+epl_otherlang,"other language speakers who speak english less than ""very well"" - percentile of percentage estimate"
+mp_otherlang,"other language speakers who speak english less than ""very well"" - percentage margin of error"
+rpl_theme2,percentile ranking; theme 2 - percentile of sum
+e_age17,persons age 17 and younger - estimate
+m_age17,persons age 17 and younger - estimate margin of error
+ep_age17,persons age 17 and younger - percentage estimate
+epl_age17,persons age 17 and younger - percentile of percentage estimate
+mp_age17,persons age 17 and younger - percentage margin of error
+e_age65,persons age 65 and older - estimate
+m_age65,persons age 65 and older - estimate margin of error
+ep_age65,persons age 65 and older - percentage estimate
+epl_age65,persons age 65 and older - percentile of percentage estimate
+mp_age65,persons age 65 and older - percentage margin of error
+e_rus,"russian, polish, or other slavic language speakers who speak english less than ""very well"" - estimate"
+m_rus,"russian, polish, or other slavic language speakers who speak english less than ""very well"" - estimate margin of error"
+ep_rus,"russian, polish, or other slavic language speakers who speak english less than ""very well"" - percentage estimate"
+epl_rus,"russian, polish, or other slavic language speakers who speak english less than ""very well"" - percentile of percentage estimate"
+mp_rus,"russian, polish, or other slavic language speakers who speak english less than ""very well"" - percentage margin of error"
+e_sngpnt,single parent household with children under 18 - estimate
+m_sngpnt,single parent household with children under 18 - estimate margin of error
+ep_sngpnt,single parent household with children under 18 - percentage estimate
+epl_sngpnt,single parent household with children under 18 - percentile of percentage estimate
+mp_sngpnt,single parent household with children under 18 - percentage margin of error
+e_span,"spanish speakers who speak english less than ""very well"" - estimate"
+m_span,"spanish speakers who speak english less than ""very well"" - estimate margin of error"
+ep_span,"spanish speakers who speak english less than ""very well"" - percentage estimate"
+epl_span,"spanish speakers who speak english less than ""very well"" - percentile of percentage estimate"
+mp_span,"spanish speakers who speak english less than ""very well"" - percentage margin of error"
+spl_theme2,sum of series; theme 2 - sum
+e_viet,"vietnamese speakers who speak english less than ""very well"" - estimate"
+m_viet,"vietnamese speakers who speak english less than ""very well"" - estimate margin of error"
+ep_viet,"vietnamese speakers who speak english less than ""very well"" - percentage estimate"
+epl_viet,"vietnamese speakers who speak english less than ""very well"" - percentile of percentage estimate"
+mp_viet,"vietnamese speakers who speak english less than ""very well"" - percentage margin of error"
+e_afam,"african american or black, not hispanic or latino - estimate"
+m_afam,"african american or black, not hispanic or latino - estimate margin of error"
+ep_afam,"african american or black, not hispanic or latino - percentage estimate"
+epl_afam,"african american or black, not hispanic or latino - percentile of percentage estimate"
+mp_afam,"african american or black, not hispanic or latino - percentage margin of error"
+e_aian,"american indian and alaska native, not hispanic or latino - estimate"
+m_aian,"american indian and alaska native, not hispanic or latino - estimate margin of error"
+ep_aian,"american indian and alaska native, not hispanic or latino - percentage estimate"
+epl_aian,"american indian and alaska native, not hispanic or latino - percentile of percentage estimate"
+mp_aian,"american indian and alaska native, not hispanic or latino - percentage margin of error"
+e_asian,"asian, not hispanic or latino - estimate"
+m_asian,"asian, not hispanic or latino - estimate margin of error"
+ep_asian,"asian, not hispanic or latino - percentage estimate"
+epl_asian,"asian, not hispanic or latino - percentile of percentage estimate"
+mp_asian,"asian, not hispanic or latino - percentage margin of error"
+e_hisp,hispanic or latino/a - estimate
+m_hisp,hispanic or latino/a - estimate margin of error
+ep_hisp,hispanic or latino/a - percentage estimate
+epl_hisp,hispanic or latino/a - percentile of percentage estimate
+mp_hisp,hispanic or latino/a - percentage margin of error
+e_nhpi,"native hawaiian/pacific islander, not hispanic or latino - estimate"
+m_nhpi,"native hawaiian/pacific islander, not hispanic or latino - estimate margin of error"
+ep_nhpi,"native hawaiian/pacific islander, not hispanic or latino - percentage estimate"
+epl_nhpi,"native hawaiian/pacific islander, not hispanic or latino - percentile of percentage estimate"
+mp_nhpi,"native hawaiian/pacific islander, not hispanic or latino - percentage margin of error"
+rpl_theme3,percentile ranking; theme 3 - percentile of sum
+e_otherrace,"some other race alone, not hispanic or latino - estimate"
+m_otherrace,"some other race alone, not hispanic or latino - estimate margin of error"
+ep_otherrace,"some other race alone, not hispanic or latino - percentage estimate"
+epl_otherrace,"some other race alone, not hispanic or latino - percentile of percentage estimate"
+mp_otherrace,"some other race alone, not hispanic or latino - percentage margin of error"
+spl_theme3,sum of series; theme 3 - sum
+e_twomore,"two or more races, not hispanic or latino - estimate"
+m_twomore,"two or more races, not hispanic or latino - estimate margin of error"
+ep_twomore,"two or more races, not hispanic or latino - percentage estimate"
+epl_twomore,"two or more races, not hispanic or latino - percentile of percentage estimate"
+mp_twomore,"two or more races, not hispanic or latino - percentage margin of error"
+e_crowd,"at household level (occupied housing units), more people than rooms - estimate"
+m_crowd,"at household level (occupied housing units), more people than rooms - estimate margin of error"
+ep_crowd,"at household level (occupied housing units), more people than rooms - percentage estimate"
+epl_crowd,"at household level (occupied housing units), more people than rooms - percentile of percentage estimate"
+mp_crowd,"at household level (occupied housing units), more people than rooms - percentage margin of error"
+e_noveh,households with no vehicle available - estimate
+m_noveh,households with no vehicle available - estimate margin of error
+ep_noveh,households with no vehicle available - percentage estimate
+epl_noveh,households with no vehicle available - percentile of percentage estimate
+mp_noveh,households with no vehicle available - percentage margin of error
+e_munit,housing in structures with 10 or more units - estimate
+m_munit,housing in structures with 10 or more units - estimate margin of error
+ep_munit,housing in structures with 10 or more units - percentage estimate
+epl_munit,housing in structures with 10 or more units - percentile of percentage estimate
+mp_munit,housing in structures with 10 or more units - percentage margin of error
+e_mobile,mobile homes - estimate
+m_mobile,mobile homes - estimate margin of error
+ep_mobile,mobile homes - percentage estimate
+epl_mobile,mobile homes - percentile of percentage estimate
+mp_mobile,mobile homes - percentage margin of error
+rpl_theme4,percentile ranking; theme 4 - percentile of sum
+e_groupq,persons in group quarters - estimate
+m_groupq,persons in group quarters - estimate margin of error
+ep_groupq,persons in group quarters - percentage estimate
+epl_groupq,persons in group quarters - percentile of percentage estimate
+mp_groupq,persons in group quarters - percentage margin of error
+spl_theme4,sum of series; theme 4 - sum
+pl_hosp,"hospitals per 100,000 - percentile of rate"
+hosp,hospitals - count
+r_hosp,"hospitals per 100,000 - rate"
+rpl_theme5,percentile ranking; theme 5 - percentile of sum
+pl_pharm,"pharmacies per 100,000 - percentile of rate"
+pharm,pharmacies - count
+r_pharm,"pharmacies per 100,000 - rate"
+pcp,primary care physicians - count
+r_pcp,primary care physicians - rate
+pl_pcp,primary care physicians - percentile of rate
+spl_theme5,sum of series; theme 5 - sum
+pl_urg,"urgent care clinics per 100,000 - percentile of rate"
+urg,urgent care clinics - count
+r_urg,"urgent care clinics per 100,000 - rate"
+er_respd,chronic respiratory diseases - rate
+epl_respd,chronic respiratory diseases - percentile of rate
+er_diab,"diagnosed diabetes; total per 100,000; adults aged 20+ years - rate"
+mr_diab,"diagnosed diabetes; total per 100,000; adults aged 20+ years - rate margin of error"
+epl_diab,"diagnosed diabetes; total per 100,000; adults aged 20+ years - percentile of rate"
+e_noint,no internet access - estimate
+m_noint,no internet access - estimate margin of error
+ep_noint,no internet access - percentage estimate
+epl_noint,no internet access - percentile of percentage estimate
+mp_noint,no internet access - percentage margin of error
+er_obes,"obesity; total per 100,000; adults aged 20+ years - rate"
+mr_obes,"obesity; total per 100,000; adults aged 20+ years - rate margin of error"
+epl_obes,"obesity; total per 100,000; adults aged 20+ years - percentile of rate"
+rpl_theme6,percentile ranking; theme 6 - percentile of sum
+spl_theme6,sum of series; theme 6 - sum
+r_cardio,"total cardiovascular disease death rate per 100,000 - rate"
+epl_cardio,"total cardiovascular disease death rate per 100,000 - percentile of rate"

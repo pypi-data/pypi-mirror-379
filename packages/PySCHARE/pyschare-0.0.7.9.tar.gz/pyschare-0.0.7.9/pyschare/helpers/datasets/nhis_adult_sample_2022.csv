@@ -1,0 +1,638 @@
+Variable,Description
+rectype,record type
+srvy_yr,year of the national health interview survey
+hhx,randomly assigned household number unique to a household
+wtfa_a,weight - final annual
+urbrrl,2013 nchs urban-rural classification scheme for counties
+region,household region
+pstrat,pseudo-stratum for public-use file variance estimation
+ppsu,pseudo-psu for public-use file variance estimation
+hhrespsa_flg,sample adult is the household respondent or the proxy who lives in the
+intv_qrt,interview quarter
+intv_mon,interview month
+hhstat_a,indicates person is the sample adult
+astatnew,recoded astat
+avail_a,sample adult available
+proxy_a,proxy available
+proxyrel_a,proxy's relationship to sample adult
+sex_a,sex of sample adult
+agep_a,age of sa (top coded)
+age65,age 65 or older
+hisp_a,recode: hispanic ethnicity of sa
+hispallp_a,single and multiple race groups with hispanic origin
+raceallp_a,single and multiple race groups
+hisdetp_a,hispanic origin detail
+afnow,full-time active duty screener
+educp_a,educational level of sample adult
+pcntlt18tc,top-coded count of persons under 18 in the household
+pcnt18uptc,top-coded count of persons 18 or older in the household
+pcntadlt_a,"number of adults in sample adult family, top-coded 3+"
+pcntkids_a,"number of children in sample adult family, top-coded 3+"
+over65flg_a,indicator for at least 1 person aged 65+ in sa family
+mltfamflg_a,indicator for multifamily households
+maxeducp_a,highest level of education of all the adults in the sa's family
+phstat_a,general health status
+lsatis4_a,life satisfaction/dissatisfaction
+hypev_a,ever been told you had hypertension
+hypdif_a,told had hypertension on two or more visits
+hyp12m_a,"hypertension, past 12 months"
+hypmed_a,now taking high blood pressure medication
+chlev_a,ever told you had high cholesterol
+chl12m_a,"high cholesterol, past 12 months"
+chlmed_a,now taking cholesterol medication
+chdev_a,ever been told you had coronary heart disease
+angev_a,ever been told you had angina
+miev_a,ever been told you had a heart attack
+strev_a,ever been told you had a stroke
+asev_a,ever had asthma
+astill_a,still have asthma
+asat12m_a,asthma episode
+aser12m_a,asthma er visit
+canev_a,ever been told you had cancer
+bladdcan_a,bladder cancer mentioned
+bladdagetc_a,age when first told had bladder cancer
+bloodcan_a,blood cancer mentioned
+bloodagetc_a,age when first told had blood cancer
+bonecan_a,bone cancer mentioned
+boneagetc_a,age when first told had bone cancer
+braincan_a,brain cancer mentioned
+brainagetc_a,age when first told had brain cancer
+breascan_a,breast cancer mentioned
+breasagetc_a,age when first told had breast cancer
+cervican_a,cervical cancer mentioned
+cerviagetc_a,age when first told had cervical cancer
+coloncan_a,colon cancer mentioned
+colonagetc_a,age when first told had colon cancer
+esophcan_a,esophageal cancer mentioned
+esophagetc_a,age when first told had esophageal cancer
+gallbcan_a,gallbladder cancer mentioned
+gallbagetc_a,age when first told had gallbladder cancer
+laryncan_a,larynx-trachea cancer mentioned
+larynagetc_a,age when first told had larynx-trachea cancer
+leukecan_a,leukemia mentioned
+leukeagetc_a,age when first told had leukemia
+livercan_a,liver cancer mentioned
+liveragetc_a,age when first told had liver cancer
+lungcan_a,lung cancer mentioned
+lungagetc_a,age when first told had lung cancer
+lymphcan_a,lymphoma cancer mentioned
+lymphagetc_a,age when first told had lymphoma
+melancan_a,melanoma cancer mentioned
+melanagetc_a,age when first told had melanoma cancer
+mouthcan_a,"mouth, tongue or lip cancer mentioned"
+mouthagetc_a,"age when first told had mouth, tongue or lip cancer"
+ovarycan_a,ovarian cancer mentioned
+ovaryagetc_a,age when first told had ovarian cancer
+pancrcan_a,pancreatic cancer mentioned
+pancragetc_a,age when first told had pancreatic cancer
+prostcan_a,prostate cancer mentioned
+prostagetc_a,age when first told had prostate cancer
+rectucan_a,rectal cancer mentioned
+rectuagetc_a,age when first told had rectal cancer
+sknmcan_a,skin melanoma cancer mentioned
+sknmagetc_a,age when first told had skin melanoma cancer
+sknnmcan_a,skin non-melanoma cancer mentioned
+sknnmagetc_a,age when first told skin non-melanoma cancer
+skndkcan_a,skin cancer (don't know what kind) mentioned
+skndkagetc_a,age when first told had skin cancer (don't know what kind)
+stomacan_a,stomach cancer mentioned
+stomaagetc_a,age when first told had stomach cancer
+throacan_a,throat - pharynx cancer mentioned
+throaagetc_a,age when first told had throat-pharynx cancer
+thyrocan_a,thyroid cancer mentioned
+thyroagetc_a,age when first told had thyroid cancer
+uterucan_a,uterine cancer mentioned
+uteruagetc_a,age when first told had uterine cancer
+hdnckcan_a,head and neck cancers mentioned
+hdnckagetc_a,age when first told had head or neck cancer
+colrccan_a,colorectal cancer mentioned
+colrcagetc_a,age when first told had colon or rectal cancer
+othercanp_a,other cancer mentioned
+otheragetc_a,age when first told had other cancer
+numcan_a,number of reported types of cancers
+predib_a,ever had prediabetes
+gesdib_a,gestational diabetes
+dibev_a,ever had diabetes
+dibagetc_a,age first diagnosed w/diabetes
+difyrstc1_a,years since first diagnosed w/diabetes
+dibpill_a,taking diabetic pills
+dibins_a,taking insulin
+dibinstime_a,time from diabetes to insulin
+dibinsstop_a,ever stop using insulin
+dibinsstyr_a,only stop insulin in first year
+dibtype_a,diabetes type
+copdev_a,"ever been told you had copd, emphysema, or chronic bronchitis?"
+arthev_a,ever had arthritis
+demenev_a,ever had dementia
+anxev_a,ever had anxiety disorder
+depev_a,ever had depression
+cfsev_a,ever had chronic fatigue syndrome
+cfsnow_a,still have chronic fatigue syndrome
+medrxtrt_a,weakened immune system due to prescriptions
+hlthcond_a,weakened immune system due to health condition
+epiev_a,ever had epilepsy
+epimed_a,take medication for epilepsy
+epinumsezp_a,how many seizures past 12 months
+epidr_a,see a doctor for epilepsy
+pregnow_a,pregnant now
+heighttc_a,"height without shoes (inches), public use"
+weightlbtc_a,"weight without shoes (pounds), public use"
+bmicat_a,"categorical body mass index, public use"
+wearglss_a,wear glasses/contact lenses
+visiondf_a,difficulty seeing
+hearaid_a,use hearing aid
+hearaidfr_a,how often use hearing aid
+hearingdf_a,difficulty hearing
+diff_a,difficulty walking/steps
+equip_a,use equipment to get around
+wlk100_a,difficulty walking 100 yards
+wlk13m_a,difficulty walking 1/3 mile
+steps_a,difficulty walking steps
+canewlkr_a,use cane or walker
+wchair_a,use wheelchair/scooter
+perasst_a,use someone's assistance
+noeqwlk100_a,difficulty walking 100 yards without aid
+noeqwlk13m_a,difficulty walking 1/3 mile without aid
+noeqsteps_a,difficulty walking steps without equipment
+eqwlk100_a,difficulty walking 100 yards with aid
+eqwlk13m_a,difficulty walking 1/3 mile with aid
+eqsteps_a,difficulty walking steps with equipment
+comdiff_a,difficulty communicating
+cogmemdff_a,difficulty remembering/concentrating
+cogtypedff_a,remembering/concentrating or both
+cogfrqdff_a,difficulty remembering-how often
+cogamtdff_a,difficulty remembering-how much
+uppslfcr_a,difficulty with self care
+uppraise_a,difficulty raising soda bottle
+uppobjct_a,difficulty using hands and fingers
+disab3_a,the washington group short set composite disability indicator
+socerrnds_a,difficulty doing errands alone
+socsclpar_a,difficulty participating in social activities
+socwrklim_a,work limited due to health problem
+devdonset_a,difficulty doing activities before age 22
+notcov_a,coverage status as used in health united states
+cover_a,health insurance hierarchy under 65
+cover65_a,health insurance hierarchy 65+
+sincovde_a,single service plan - dental
+sincovvs_a,single service plan - vision
+sincovrx_a,single service plan - prescription
+medicare_a,medicare recode
+mcpart_a,type of medicare coverage
+mcchoice_a,enrolled in medicare advantage plan
+mchmo_a,medicare hmo
+mcadvr_a,medicare advantage plan
+mcdncov_a,medicare advantage plan pays for any dental care costs
+mcvscov_a,medicare advantage plan pays for any vision care costs
+mcpartd_a,medicare part d
+medicaid_a,medicaid recode
+maxchng_a,medicaid through marketplace
+maprem_a,medicaid premium
+madeduc_a,medicaid deductible
+mahdhp_a,medicaid hdhp
+maflg_a,medicaid reassignment flag
+private_a,private health insurance recode
+exchange_a,"plan through health insurance exchange, nchs algorithm"
+polhld1_a,policyholder for private plan 1
+prplcov1_a,plan coverage for others - plan 1
+prpolh1_a,relation to policyholder - plan 1
+prplcov1_c_a,response to prplcov1_c or prplcov2_c from child - plan 1
+plnwrkr1_a,how plan was originally obtained - plan 1
+plnexchg1_a,health plan obtained through marketplace - plan 1
+pln1pay1_a,paid for by self or family - plan 1
+pln1pay2_a,paid for by employer or union - plan 1
+pln1pay3_a,paid for by someone outside the household - plan 1
+pln1pay4_a,paid for by medicare - plan 1
+pln1pay5_a,paid for by medicaid - plan 1
+pln1pay6_a,paid for by other government program - plan 1
+hicostr1_a,out-of-pocket premium cost - plan 1
+prdeduc1_a,deductible - plan 1
+prhdhp1_a,high deductible health plan - plan 1
+hsahra1_a,health savings accounts / health reimbursement accounts - plan 1
+prrxcov1_a,plan pays for prescription drug - plan 1
+prdncov1_a,plan pays for dental care - plan 1
+prvscov1_a,plan pays for vision care - plan 1
+exchpr1_a,exchange company coding nchs - plan 1
+prflg_a,private reassignment flag
+pxchng1_a,"marketplace or state exchange, reassigned from public to private"
+prprem1_a,premium on plan reassigned from public to private
+plexchpr1_a,"exchange company coding, nchs, reassigned from public to private"
+polhld2_a,policyholder for private plan 2
+prplcov2_a,plan coverage for others - plan 2
+prpolh2_a,relation to policyholder - plan 2
+prplcov2_c_a,response to prplcov1_c or prplcov2_c from child - plan 2
+plnwrkr2_a,how plan was originally obtained - plan 2
+plnexchg2_a,health plan obtained through marketplace - plan 2
+pln2pay1_a,paid for by self or family - plan 2
+pln2pay2_a,paid for by employer or union - plan 2
+pln2pay3_a,paid for by someone outside the household - plan 2
+pln2pay4_a,paid for by medicare - plan 2
+pln2pay5_a,paid for by medicaid - plan 2
+pln2pay6_a,paid for by other government program - plan 2
+hicostr2_a,out-of-pocket premium cost - plan 2
+prdeduc2_a,deductible - plan 2
+prhdhp2_a,high deductible health plan - plan 2
+hsahra2_a,health savings accounts / health reimbursement accounts - plan 2
+prrxcov2_a,plan pays for prescription drug - plan 2
+prdncov2_a,plan pays for dental care - plan 2
+prvscov2_a,plan pays for vision care - plan 2
+exchpr2_a,exchange company coding nchs - plan 2
+chip_a,children's health insurance program (chip) recode
+chxchng_a,chip through marketplace
+chprem_a,pay chip premium
+chdeduc_a,chip deductible
+chhdhp_a,chip hdhp
+chflg_a,chip reassignment flag
+othpub_a,state-sponsored health plan recode
+opxchng_a,state-sponsored plan through marketplace
+opprem_a,pay premium for state-sponsored plan
+opdeduc_a,state-sponsored plan deductible
+ophdhp_a,state-sponsored plan hdhp
+plexchop_a,"exchange company coding, nchs (state-sponsored plan)"
+opflg_a,state-sponsored reassignment flag
+othgov_a,other government program recode
+ogxchng_a,other government program through marketplace
+ogprem_a,pay premium for other government program
+ogdeduc_a,other government program deductible
+oghdhp_a,other government program hdhp
+plexchog_a,"exchange company coding, nchs (other government program)"
+ogflg_a,other government reassignment flag
+military_a,military health care coverage recode
+milspc1r_a,types of military health care - va health care
+milspc2_a,types of military health care - tricare
+milspc3_a,types of military health care - champ-va
+ihs_a,indian health service recode
+hilast_a,how long since last health coverage
+hilastmy_a,number of months without coverage
+histopjob_a,lost job or changed employers
+histopmiss_a,missed deadline
+histopage_a,ineligible because of age/left school
+histopcost_a,cost increase
+histopelig_a,"not eligible for medicaid, chip, or other public coverage"
+rsnhicost_a,not affordable
+rsnhiwant_a,do not need or want coverage
+rsnhielig_a,not eligible for coverage
+rsnhiconf_a,signing up too difficult or confusing
+rsnhimeet_a,cannot find a plan that meets the needs
+rsnhiwait_a,coverage has not started yet
+rsnhioth_a,another reason
+rsnhijob_a,lost job
+rsnhimiss_a,missed deadline
+hinotyr_a,no health coverage during the past 12 months
+hinotmyr_a,months without coverage in the past 12 months
+milspc1_a,types of military health care - va health care original response
+hicov_a,have health insurance
+hikind01_a,kind(s) of health insurance - private health insurance
+hikind02_a,kind(s) of health insurance - medicare
+hikind03_a,kind(s) of health insurance - medicare supplement (medigap)
+hikind04_a,kind(s) of health insurance - medicaid
+hikind05_a,kind(s) of health insurance - chip
+hikind06_a,kind(s) of health insurance - military related health care
+hikind07_a,kind(s) of health insurance - indian health service
+hikind08_a,kind(s) of health insurance - state-sponsored health plan
+hikind09_a,kind(s) of health insurance - other government program
+hikind10_a,kind(s) of health insurance - no coverage of any type
+mcareprb_a,medicare coverage probe
+mcaidprb_a,medicaid coverage probe
+paybll12m_a,"problems paying medical bills, past 12m"
+paynobllnw_a,unable to pay medical bills
+payworry_a,"get sick or have accident, worry about paying medical bills"
+cvddiag_a,ever had covid-19
+postest_a,ever had positive covid-19 test
+cvdsev_a,symptoms of covid-19
+longcvd_a,had covid-19 symptoms for 3 or more months
+sympnow_a,currently has covid-19 symptoms
+denprev_a,time since last dental exam/cleaning
+dendl12m_a,"delayed dental care due to cost, past 12m"
+denng12m_a,"needed dental care but did not get it due to cost, past 12m"
+lastdr_a,time since last saw doctor
+wellness_a,was last visit a wellness visit
+wellvis_a,time since last wellness visit
+usualpl_a,have a usual place for care
+usplkind_a,type of place for usual care
+urgnt12mtc_a,"number of times visited urgent care, past 12m, top-coded"
+emerg12mtc_a,"number of times visited hospital emergency room, past 12m, top-coded"
+hospongt_a,"hospitalized overnight, past 12m"
+meddl12m_a,"delayed medical care due to cost, past 12m"
+medng12m_a,"needed medical care but did not get it due to cost, past 12m"
+abinsur_a,delay care because can't find doctor that accepts insurance
+abavail_a,delay care because an appointment wasn't available
+abopen_a,delay care because couldn't get to doctor's office when open
+abtoolong_a,delay care because takes too long to get to doctor's office
+abtime_a,delay care because you were too busy to take the time
+virapp12m_a,"virtual medical appointment, past 12m"
+accssint_a,internet access
+accsshom_a,internet access at home
+hitlook_a,used internet for health information
+hitcomm_a,communicated with doctor's office
+hittest_a,used internet for test results
+rx12m_a,"took prescription medication, past 12m"
+rxsk12m_a,"skipped medication doses to save money, past 12m"
+rxls12m_a,"took less medication to save money, past 12m"
+rxdl12m_a,"delayed filling prescription to save money, past 12m"
+rxdg12m_a,"needed prescription medication but did not get it due to cost, past 12m"
+pregfluyr_a,was sample adult pregnant last flu season
+livebirth_a,any live births
+shtflu12m_a,"flu vaccine, past 12 months"
+shtflum_a,month of last flu vaccine
+shtfluy_a,year of last flu vaccine
+flupreg_a,was flu shot before or during pregnancy
+flupreg2_a,earlier pregnancy and flu vaccine
+shtcvd191_a,covid-19 vaccination
+shtcvd19nm_a,number of covid-19 vaccinations
+cvdvac1m_a,month of most recent covid-19 vaccination
+cvdvac1y_a,year of most recent covid-19 vaccination
+cvdvac2m_a,month of next most recent covid-19 vaccination
+cvdvac2y_a,year of next most recent covid-19 vaccination
+shottyper_a,brand of first covid-19 shot
+shottype_a,brand of first covid-19 shot
+shottype1_a,brand of first covid-19 shot
+shtpnuev_a,ever had pneumonia shot
+shtpneunb_a,number of pneumonia shots
+shtshingl1_a,ever had a shingles vaccination
+shingyearp_a,year of most recent shingles vaccine
+shingwhen1_a,was last shingles shot before 2017
+shingrix2_a,ever had shingrix vaccination
+shingrixn2_a,how many shingrix shots
+shingrixfs_a,first or second shingrix shot
+tdappreg_a,have a tdap booster shot
+shttetanus_a,tetanus shot in past 10 years
+shttdap_a,kind of tetanus shot
+shthpv_a,ever had an hpv shot
+shthpvage_a,age at first hpv shot
+workhealth_a,currently provide medical care to patients
+wrkhlthfc_a,currently volunteer or work in health care
+eyeex12m_a,"had eye exam, past 12m"
+thera12m_a,"received physical/speech/rehabilitative/occupational therapy, past 12m"
+homehc12m_a,"received care at home, past 12m"
+anxfreq_a,"how often feel worried, nervous, or anxious"
+anxmed_a,take medication for worried/nervous/anxious feelings
+anxlevel_a,level of feelings when last felt worried/nervous/anxious
+depfreq_a,how often depressed
+depmed_a,take medication for depression
+deplevel_a,level of how depressed
+mhrx_a,"took medication for other emotions/concentration/behavior/mental health, past"
+mhthrpy_a,"received counseling/therapy from mental health professional, past 12m"
+mhtpynow_a,currently receiving counseling/therapy from mental health professional
+mhthdly_a,"delayed counseling/therapy due to cost, past 12m"
+mhthnd_a,"needed counseling/therapy but did not get it due to cost, past 12m"
+phq81_a,"how often little interest in things, past 2 weeks"
+phq82_a,"how often feeling down, past 2 weeks"
+phq83_a,"how often trouble with sleeping, past 2 weeks"
+phq84_a,"how often feeling tired, past 2 weeks"
+phq85_a,"how often undereating or overeating, past 2 weeks"
+phq86_a,"how often feeling bad about self, past 2 weeks"
+phq87_a,"how often trouble concentrating, past 2 weeks"
+phq88_a,"how often moving or speaking slow or fast, past 2 weeks"
+phqcat_a,severity of depressive symptoms - phq scale categorization
+gad71_a,"how often felt nervous/anxious/on edge, past 2 weeks"
+gad72_a,"how often can't stop/control worrying, past 2 weeks"
+gad73_a,"how often worrying too much, past 2 weeks"
+gad74_a,"how often had trouble relaxing, past 2 weeks"
+gad75_a,"how often can't sit still, past 2 weeks"
+gad76_a,"how often became easily annoyed, past 2 weeks"
+gad77_a,"how often felt afraid, past 2 weeks"
+gadcat_a,severity of anxiety symptoms - gad scale categorization
+fgefrqtrd_a,"how often tired, past 3m"
+fgelngtrd_a,how long tiredness lasted
+fgelevtrd_a,level of tiredness
+smkev_a,ever smoked 100 cigarettes
+smkage_a,age started smoking regularly
+smknow_a,now smoke cigarettes
+smkcigst_a,cigarette smoking status
+cignow_a,number of cigarettes a day
+smk30d_a,number of days smoked past month
+cig30d_a,number of cigarettes on days smoked past month
+mentholc_a,smoke menthol or non-menthol cigarettes
+smkqt12m_a,"stopped smoking for 1+ day, past 12 months"
+smkqtnp_a,time since quitting smoking-number
+smkqttp_a,time since quitting smoking-time period
+smkqty_a,years since quit smoking
+mentholf_a,smoked menthol or non-menthol cigarettes
+smktlk1_a,"advised by doctor about quitting, past 12m"
+ecigev_a,ever used electronic cigarettes
+ecignow_a,now use electronic cigarettes
+smkecigst_a,electronic cigarette use status
+fquita1_a,"quit method-nicotine patch, former smoker"
+fquita2_a,"quit method-nicotine gum or lozenge, former smoker"
+fquita3_a,"quit method-nicotine nasal spray or inhaler, former smoker"
+fquita4_a,"quit method-chantix/varenicline, former smoker"
+fquita5_a,"quit method-zyban/bupropion/wellbutrin, former smoker"
+fquitb1_a,"quit method-phone/help line, former smoker"
+fquitb2_a,"quit method-one-on-one counseling, former smoker"
+fquitb3_a,quit method-stop smoking clinic/class/support group - former smoker
+fquite_a,"quit method-e-cigarettes, former smoker"
+cquita1_a,"quit method-nicotine patch, attempted to quit smoking"
+cquita2_a,"quit method-nicotine gum or lozenge, attempted to quit smoking"
+cquita3_a,"quit method-nicotine nasal spray or inhaler, attempted to quit smoking"
+cquita4_a,"quit method-chantix/varenicline, attempted to quit smoking"
+cquita5_a,"quit method-zyban/bupropion/wellbutrin, attempted to quit smoking"
+cquitb1_a,"quit method-phone/help line, attempted to quit smoking"
+cquitb2_a,"quit method-one-on-one counseling, attempted to quit smoking"
+cquitb3_a,quit method-stop smoking clinic/class/support group - attempted to quit
+cquite_a,"quit method-e-cigarettes, attempted to quit smoking"
+qwant_a,want to quit smoking
+cigarev_a,ever smoked a cigar
+cigarcur_a,now smoke cigars
+cigar30d_a,"how many days smoked a cigar, past 30 days"
+pipeev_a,ever smoked a pipe filled with tobacco
+pipecur_a,now smoked pipe filled with tobacco
+smokelsev_a,ever used smokeless tobacco
+smokelscur_a,now use smokeless tobacco
+hptob3_a,"advised by doctor about quitting smoking or using other tobacco, past 12m"
+drklife_a,had at least one alcohol drink in lifetime
+drk12mn_a,days drank alcohol past 12m-number
+drk12mtp_a,days drank alcohol past 12m-time period
+drk12mwk_a,"days drank alcohol per week, past 12m"
+drk12myr_a,"days drank alcohol per year, past 12m"
+drkavg12m_a,average number of alcohol drinks on days drank
+drk12anyr_a,ever had 12+ alcohol drinks in any one year
+drkstat_a,alcohol drinking status
+drkbng12m_a,"ever had 4+/5+ alcohol drinks in a day, past 12m"
+drkany30d_a,"had any alcohol drink, past 30 days"
+drkbng30d_a,"number of times had 4+/5+ alcohol drinks on an occasion, past 30d"
+drkhvy12m_a,heavy alcohol drinking in the past 12m
+drkadvise1_a,"advised by doctor to cut drinking, past 12m"
+modnr_a,moderate physical activity-number
+modtpr_a,moderate physical activity-time period
+modfreqw_a,frequency of moderate physical activity (times per week)
+modlnr_a,length of moderate physical activity-number
+modltpr_a,length of moderate physical activity-time period
+modmin_a,duration of moderate physical activity (in minutes)
+vignr_a,vigorous physical activity-number
+vigtpr_a,vigorous physical activity-time period
+vigfreqw_a,frequency of vigorous physical activity (times per week)
+viglnr_a,length of vigorous physical activity-number
+vigltpr_a,length of vigorous physical activity-time period
+vigmin_a,duration of vigorous physical activity (in minutes)
+pa18_02r_a,physical activity met guidelines for aerobic activity
+strnr_a,strengthening physical activity-number
+strtpr_a,strengthening physical activity-time period
+strfreqw_a,frequency of strengthening physical activity (times per week)
+pa18_05r_a,physical activity met guidelines for aerobic and/or strengthening activity
+wlktran_a,"walk for transportation, past 7 days"
+wlktranday_a,"how many days for transportation walk, past 7 days"
+wlktrantpd_a,"how many times per day for transportation walk, past 7 days"
+wlktrantc_a,"length of walk for transportation, top coded at 181 minutes"
+wlkleis_a,"walk for leisure, past 7 days"
+wlkleisday_a,"how many days for leisure walk, past 7 days"
+wlkleistpd_a,"how many times per day for leisure walk, past 7 days"
+wlkleistc_a,"length of walk for leisure, top-coded at 181 minutes"
+advactive_a,doctor advised increase activity
+slphours_a,hours of sleep in a 24-hour period
+slprest_a,"wake up well rested, past 30 days"
+slpfll_a,"trouble falling asleep, past 30 days"
+slpsty_a,"trouble staying asleep, past 30 days"
+slpmed_a,"take medication for sleep, past 30 days"
+sodano_a,number of times drank soda with sugar
+sodatp_a,number of times drank soda - time period
+frjuicno_a,number of times drank pure fruit juice
+frjuictp_a,number of times drank pure fruit juice - time period
+coffeeno_a,number of times drank coffee or tea with sugar
+coffeenotp_a,number of times drank coffee or tea with sugar - time period
+spordrno_a,number of times drank sport or energy drinks
+spordrtp_a,number of times drank sport or energy drinks - time period
+frtdrno_a,number of times drank sweetened fruit drinks
+frtdrtp_a,number of times drank sweetened fruit drinks - time period
+fruitno_a,number of times eat fruit
+fruittp_a,number of times eat fruit - time period
+saladno_a,number of times eat salad
+saladtp_a,number of times eat salad - time period
+friesno_a,number of times eat fried potatoes
+friestp_a,number of times eat fried potatoes - time period
+potatono_a,number of times eat other kinds of potatoes
+potatotp_a,number of times eat other kind of potatoes - time period
+beansno_a,number of times eat beans
+beanstp_a,number of times eat beans - time period
+ovegno_a,number of times eat other vegetables
+ovegtp_a,number of times eat other vegetables - time period
+salsano_a,number of times eat salsa
+salsatp_a,number of times eat salsa - time period
+pizzano_a,number of times eat pizza
+pizzatp_a,number of times eat pizza - time period
+tomsauno_a,number of times eat tomato sauce
+tomsautp_a,number of times eat tomato sauce - time period
+chiro_a,seen or talked to a chiropractor
+chiropain_a,chiropractor visit for pain
+chirohlth_a,chiropractor visit to restore overall health
+acu_a,saw a practitioner of acupuncture
+acupain_a,acupuncture visit for pain
+acuhlth_a,acupuncture visit to restore overall health
+mass_a,saw a practitioner of massage
+masspain_a,massage visit for pain
+masshlth_a,massage visit to restore overall health
+natur_a,saw a practitioner of naturopathy
+naturpain_a,naturopath visit for pain
+naturhlth_a,naturopath visit to restore overall health
+artthpy_a,saw an art therapist
+musicthpy_a,saw a music therapist
+meditate_a,practice meditation
+medipain_a,meditation for pain
+medihlth_a,meditation to restore overall health
+gipr_a,use guided imagery or progressive relaxation
+giprpain_a,use guided imagery or progressive relaxation for pain
+giprhlth_a,use guided imagery or progressive relaxation to restore overall health
+yoga_a,practice yoga
+yogabrth_a,breathing exercises as part of yoga
+yogamed_a,meditation as part of yoga
+yogapain_a,yoga for pain
+yogahlth_a,yoga to restore overall health
+vslvyr_a,voice problem in the past 12m
+vslvdys_a,duration of voice problem
+vslvdif_a,amount of difficulty with voice problem
+vslswyr_a,swallowing problem in the past 12m
+vslswdys_a,duration of swallowing problem
+vslswdif_a,amount of difficulty with swallowing problem
+vslspyr_a,speech problem in the past 12m
+vslspdys_a,duration of speech problem
+vslspdif_a,amount of difficulty with speech problem
+vslspst_a,stuttering problem in the past 12m
+vsllgyr_a,language problem in the past 12m
+vsllgdys_a,duration of language problem
+vsllgdif_a,amount of difficulty with language problem
+vslbrain_a,vsl problems following a brain injury or stroke
+vslpa_a,saw a doctor for treatment in the past 12m
+vslpalf_a,seeing a doctor for treatment in the past 12m affected life
+vslbtwr_a,vsl problem better or worse
+orient_a,sexual orientation
+marital_a,sample adult's current marital status
+spousliv_a,sample adult's spouse lives here
+spousep_a,sample adult's spouse does not reside here due to legal separation
+evrmarried_a,sample adult has ever been married
+marstat_a,current marital status of sample adult
+legmstat_a,legal marital status of sample adult
+spousesex_a,sex of sample adult's spouse
+saspprace_a,race of sample adult and spouse or partner are the same
+saspphisp_a,hispanic ethnicity of sample adult and spouse or partner are the same
+spousagetc_a,"age of sample adult's spouse, top-coded"
+spouseducp_a,education level of sample adult's spouse
+spouswrk_a,working status of sample adult's spouse
+spouswkft_a,sample adult's spouse is working full-time
+prtnrsex_a,sex of the sample adult's partner
+prtnragetc_a,"age of sample adult's partner, top-coded"
+prtnreducp_a,education level of sample adult's partner
+prtnrwrk_a,working status of sample adult's partner
+prtnrwkft_a,sample adult's partner is working full-time
+saparentsc_a,sample adult relationship to sample child
+parstat_a,parental status of sample adult
+afvet_a,ever serve active duty military
+afvettrn_a,reserves or national guard
+combat_a,ever served abroad during armed conflict
+vadisb_a,have va disability rating
+vahosp_a,receive care at va facility
+vacareev_a,ever use va health care
+natusborn_a,born in u.s. or u.s. territory
+yrsinus_a,years that sample adult has been in the united states
+citznstp_a,citizenship status
+schcurenr_a,currently in school
+schdymsstc_a,"days of school missed due to illness/injury past 12 months, top-coded"
+emplastwk_a,worked for pay last week
+empnowrk_a,temporarily absent from work last week
+empwhynot_a,main reason not working
+empwhenwrk_a,last time worked
+empwrklsw1_a,worked last week
+emplstwor1_a,last time worked for pay
+empwkhrs3_a,hours worked per week (topcoded for public use)
+empwrkft1_a,usually work 35+ hours per week
+empsicklv_a,paid sick leave
+emphealins_a,health insurance offered
+empdysmss3_a,"days missed work, past 12 months (top-coded)"
+cevolun1_a,volunteer for organization or association
+cevolun2_a,other volunteer activities
+pcntadtwkp_a,number of adults in sample adult's family who are working
+pcntadtwfp_a,number of adults in sample adult's family who are working full-time
+incwrko_a,income from wages
+incinter_a,income from accounts
+incssrr_a,income from ss/railroad retirement
+incssissdi_a,family income from ssdi
+ssissdibth_a,which family income ssi/ssdi
+ssissdidsb_a,ssi/ssdi due to disability
+incwelf_a,income from public assistance
+incretire_a,income from retirement
+incothr_a,income from other sources
+impnum_a,imputation num
+povrattc_a,sa family poverty ratio (top-coded)
+ratcat_a,ratio of family income to poverty threshold for sa's family
+impincflg_a,imputed sa family income imputation flag
+inctcflg_a,sample adult family income top-code flag
+fsnap12m_a,"receive food stamps, past 12m"
+fsnap30d_a,"receive food stamps, past 30d"
+fwic12m_a,"receive wic benefits, past 12m"
+flunch12m_a,receive free/reduced meals at school
+fdsrunout_a,worry food would run out
+fdslast_a,food didn't last
+fdsbalance_a,couldn't afford to eat balanced meals
+fdsskip_a,cut the size of meals or skip meals
+fdsskipdys_a,how many days did you/adults in the family cut the size of meals or skip meals
+fdsless_a,eat less than should
+fdshungry_a,ever hungry because not enough money for food
+fdsweight_a,lose weight because not enough money for food
+fdsnoteat_a,not eat for a whole day
+fdsnedays_a,how many days not eat
+fdscat3_a,adult 3 category food security recode
+fdscat4_a,adult 4 category food security recode
+houyrsliv_a,length of time in house/apartment
+houtenure_a,residence owned/rented
+hougvasst_a,paying lower rent
+transpor_a,delay care in the past 12 months because no reliable transportation
+cemmetng_a,attend public meeting
+cevotelc_a,vote in last local elections

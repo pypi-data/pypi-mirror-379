@@ -1,0 +1,86 @@
+﻿Variable,Description
+jobsidx,job-round identifier
+jobidx,person s unique job identifier
+jobnum,unique du-job identifier
+estbidx,establishment identifier
+dupersid,person id (duid+pid)
+duid,panel # + encrypted du identifier
+pid,person number
+rn,round
+origrnd,round job first reported
+panel,panel to which job holder belongs
+jstrtm,job start date - month
+jstrty,job start date - year
+jstopm,job stop date - month
+jstopy,job stop date - year
+retirjob,person retired from this job
+subtype,job sub-type
+stillat,still works at main job establishment
+typechgd,job sub-type changed between rounds
+main_job,still main job or business
+diffwage,any change in wage amount
+stillworkftpt,still works full or part time
+whychngpttoft,why change part to full time
+whychngfttopt,why change full to part time
+stillwrk,still works at misc job establishment
+offtakei,offered insurance and now take
+nowtakei_m22,now has health insurance through employer
+estbthru,"offered insurance, did not take (review)"
+insestb,insurance offered to any employees (review)
+hidisavw,capi q where health insur thru emp/union disavowed
+rvwtotnumemp,establishment size at continuing self-employed job
+why_left_m18,reason why no longer at job now
+jobtype,self-employed or works for someone else
+numemps,establishment size at not self-employed job
+estmate1_m19,categorical approximate establishment size
+moreloc,employer has more than one location
+businc,business incorporated
+propriet,proprietorship or partnership
+typeempl,employee type
+yleft_m18,reason why no longer at job
+ynobusn_m18,reason why no longer has business
+hrsprwk,number of hours worked per week
+hrs35wk,works at least 35 hours per week
+tempjob,job at employer is temporary
+sesnljob,job is available certain time of year
+sickpay,has paid sick leave thru job
+paydrvst,has paid sick leave for doc visit thru job
+payvactn,has paid vacation leave thru job
+retirpln,has pension/retirement plan thru job
+wklyamt,usual weekly gross income at misc job
+emplins,has health insurance thru current main job
+jobhashi,has health insurance thru job
+offrdins,offered insurance but chose not to take
+diffplns,choice of different health insurance plans
+anyins,health insurance offered to any employees
+inunion,belongs to labor union
+provdins,"is health ins provided by employer, union or both"
+emplunionprov,employer or union is primary health insurer
+hhmember_m18,any other hh member wrk at this business
+totlemp_m18,current establishment size at self-employed job
+totnumemp,establishment size at new self-employed job
+salaried,"person salaried, paid by hour, some other way"
+howpaid,how is person paid
+daywage,person s daily wage rate
+hrsprdy,number of hours person worked in one day
+makeamt,how much money does person make
+perunit_m18,period for which person is paid
+hrlywage,how much person makes per hour
+more10,person makes more or less than $10/hour
+more15,person makes more or less than $15/hour
+moreminm,person makes more or less than min. wage
+grosspay,person s salary before taxes (gross)
+grossper,period in which gross salary was earned
+salrywks,number of weeks per year salary is based
+hrsalbas,hours per week salary based on
+earntips,person earns tips
+earnbons,person earns bonuses
+earncomm,person earns commission
+tipsamt,how much are person s tips
+tipsunit_m18,period which tip earnings are based on
+bonsamt,how much are person s bonuses
+bonsunit,period which bonuses are based on
+commamt,how much are person s commissions
+communit,period which commissions are based on
+indcodex,condensed industry code
+occcodex,condensed occupation code

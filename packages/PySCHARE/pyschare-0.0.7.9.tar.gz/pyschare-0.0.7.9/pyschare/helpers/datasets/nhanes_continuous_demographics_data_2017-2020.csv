@@ -1,0 +1,30 @@
+Variable,Description
+aialanga,language of the mec acasi interview instrument
+dmdborn4,in what country {were you/was sp} born?
+dmdeduc2,what is the highest grade or level of school {you have/sp has} completed or the highest degree {you have/s/he has} received?
+dmdmartz,marital status
+dmdyrusz,length of time the participant has been in the us.
+fiaintrp,was an interpreter used to conduct the family interview?
+fialang,language of the family interview instrument
+fiaproxy,was a proxy respondent used in conducting the family interview?
+indfmpir,a ratio of family income to poverty guidelines.
+miaintrp,was an interpreter used to conduct the mec capi interview?
+mialang,language of the mec capi interview instrument
+miaproxy,was a proxy respondent used in conducting the mec capi interview?
+riagendr,gender of the participant.
+ridagemn,age in months of the participant at the time of screening. reported for persons aged 24 months or younger at the time of exam (or screening if not examined).
+ridageyr,age in years of the participant at the time of screening. individuals 80 and over are topcoded at 80 years of age.
+ridexmon,"six month time period when the examination was performed - two categories: november 1 through april 30, may 1 through october 31."
+ridexprg,pregnancy status for females between 20 and 44 years of age at the time of mec exam.
+ridreth1,recode of reported race and hispanic origin information
+ridreth3,"recode of reported race and hispanic origin information, with non-hispanic asian category"
+ridstatr,interview and examination status of the participant.
+sddsrvyr,data release cycle
+sdmvpsu,masked variance unit pseudo-psu variable for variance estimation
+sdmvstra,masked variance unit pseudo-stratum variable for variance estimation
+seqn,respondent sequence number.
+siaintrp,was an interpreter used to conduct the sample person (sp) interview?
+sialang,language of the sample person interview instrument
+siaproxy,was a proxy respondent used in conducting the sample person (sp) interview?
+wtintprp,full sample interview weight
+wtmecprp,full sample mec exam weight
