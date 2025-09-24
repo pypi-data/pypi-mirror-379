@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AbstractMemory"
+version = "0.1.0"
+description = "Intelligent memory system for LLM agents with two-tier architecture - temporal knowledge graph memory for sophisticated AI agents"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "AbstractMemory Team", email = "lpalbou@gmail.com"}
+]
+maintainers = [
+    {name = "AbstractMemory Team", email = "palbou@gmail.com"}
+]
+keywords = ["llm", "memory", "stateful", "ai", "agents", "knowledge-graph", "temporal", "grounded-memory"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "networkx>=3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "mypy"]
+llm = ["abstractllm>=0.5.0"]
+storage = ["lancedb"]
+
+[project.urls]
+Homepage = "https://github.com/lpalbou/AbstractAgent"
+Documentation = "https://github.com/lpalbou/AbstractAgent#readme"
+Repository = "https://github.com/lpalbou/AbstractAgent"
+"Bug Reports" = "https://github.com/lpalbou/AbstractAgent/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["abstractmemory*"]
+
+[tool.setuptools.package-data]
+abstractmemory = ["*.md", "docs/*.md"]
