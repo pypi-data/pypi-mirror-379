@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: nitro-boost
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.12
+Requires-Dist: blinker>=1.9.0
+Requires-Dist: datastar-py>=0.6.5
+Requires-Dist: pydantic>=2.11.9
+Dynamic: requires-python

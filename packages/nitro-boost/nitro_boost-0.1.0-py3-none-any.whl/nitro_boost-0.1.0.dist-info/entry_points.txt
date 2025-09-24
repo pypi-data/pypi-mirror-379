@@ -1,0 +1,2 @@
+[console_scripts]
+nitro-boost = nitro:main
