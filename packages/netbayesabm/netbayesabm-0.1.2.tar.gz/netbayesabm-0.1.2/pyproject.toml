@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netbayesabm"
+version = "0.1.2"
+description = "Agent-based models of plant–pollinator networks with Bayesian inference (ABC)."
+readme = "README.md"
+requires-python = ">=3.9"
+
+authors = [
+    { name = "Javier Galeano, ", email = "javier.galeano@upm.es" },
+    { name = "Blanca Arroyo-Correa, ", email = "blanca.arroyo@ebd.csic.es" },
+    { name = "Mario Castro, ", email = "marioc@iit.comillas.edu" }
+]
+license = { text = "MIT" }
+
+maintainers = [
+  { name = "Javier Galeano", email = "javier.galeano@upm.es" }
+]
+
+keywords = ["abm", "ecology", "pollination", "bayesian", "abc"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "networkx",
+    "scipy"
+]
+
+[project.urls]
+Homepage = "https://github.com/galeanojav/NetBayesABM"
+Repository = "https://github.com/galeanojav/NetBayesABM"
+Issues = "https://github.com/galeanojav/NetBayesABM/issues"
