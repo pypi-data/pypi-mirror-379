@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: meu_pacote-leticia-matosc
+Version: 0.1.0
+Summary: Um pacote simples de exemplo para curso de Python
+Home-page: 
+Author: Leticia Matos
+Author-email: 
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# meu_pacote
+
+Pacote simples criado como exemplo para curso de Python.
+
+Autora: Leticia Matos
+"# meu-pacote"  
