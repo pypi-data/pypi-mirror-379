@@ -1,0 +1,7 @@
+langextract_vllm/__init__.py,sha256=z-S-_mwU-g-J_psIkmrCZLmwG76l6KhLNpS071U8KrM,156
+langextract_vllm/provider.py,sha256=2gfylwT0q5xnanD3J4TO_DIYpZ6sJwPQTgLwzw9QiCg,17361
+langextract_vllm-0.2.0.dist-info/METADATA,sha256=VmnLzWn6OqgeVXAZ6IPqu-QnzybFRLPOmAn_dsBnwow,8900
+langextract_vllm-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+langextract_vllm-0.2.0.dist-info/entry_points.txt,sha256=3M2Y4ac8Sd2wJaga8rXJT5Lnk8kUmwGmhnsiSQvhc7o,145
+langextract_vllm-0.2.0.dist-info/licenses/LICENSE,sha256=20V09KLo5sLIeUpiJCTpgvsKqX0uPQrwhaGK1GYb_LM,1069
+langextract_vllm-0.2.0.dist-info/RECORD,,
