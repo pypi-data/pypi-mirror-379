@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "face-enhancement-service"
+dynamic = ["version"]
+description = "High-performance REST API for real-time face enhancement"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Face Enhancement Team", email = "info@livlyv.com"}
+]
+maintainers = [
+    {name = "Face Enhancement Team", email = "info@livlyv.com"}
+]
+keywords = [
+    "face-enhancement",
+    "rest-api", 
+    "fastapi",
+    "computer-vision",
+    "opencv",
+    "mediapipe",
+    "beauty-filter",
+    "skin-smoothing",
+    "real-time"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9", 
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi>=0.104.1",
+    "uvicorn[standard]>=0.24.0",
+    "opencv-python>=4.8.1.78",
+    "numpy>=1.24.3",
+    "scipy>=1.11.3",
+    "Pillow>=10.0.1",
+    "imutils>=0.5.4",
+    "scikit-image>=0.21.0",
+    "mediapipe>=0.10.7",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "python-multipart>=0.0.6",
+    "pydantic>=2.5.0",
+    "structlog>=23.2.0",
+    "gunicorn>=21.2.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+linux = [
+    "uvloop>=0.19.0",
+    "httptools>=0.6.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/livlyv/face-enhancement-service"
+Documentation = "https://github.com/livlyv/face-enhancement-service#readme"
+Repository = "https://github.com/livlyv/face-enhancement-service.git"
+"Bug Tracker" = "https://github.com/livlyv/face-enhancement-service/issues"
+
+[project.scripts]
+face-enhancement-service = "src.face_enhancer_api:main"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md", "*.yml", "*.yaml", "*.conf"]
+
+[tool.setuptools_scm]
+write_to = "src/_version.py"

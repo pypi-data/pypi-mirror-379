@@ -1,0 +1,29 @@
+# Face Enhancement API
+
+## Overview
+High-performance REST API for real-time face enhancement with 100+ concurrent request support.
+
+## Features
+- Real-time face enhancement
+- 100+ concurrent requests support
+- JWT authentication
+- Rate limiting
+- Docker containerization
+- Load balancing ready
+
+## Quick Start
+```bash
+pip install -r requirements_api.txt
+python src/face_enhancer_api.py
+```
+
+## API Endpoints
+- Health: http://localhost:8000/health
+- Enhance: http://localhost:8000/enhance
+- Docs: http://localhost:8000/docs
+
+## Documentation
+See [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md) for detailed deployment instructions.
+
+## License
+MIT License - see LICENSE file for details.
