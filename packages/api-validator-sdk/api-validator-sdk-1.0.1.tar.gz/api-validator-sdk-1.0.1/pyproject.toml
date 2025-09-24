@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "cython", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-validator-sdk"
+version = "1.0.1"
+description = "Enterprise API validation with adaptive scoring"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [{name = "Jaime Jimenez", email = "jaimeajl@hotmail.com"}]
+keywords = ["api", "validation", "security", "rate-limiting"]
+
+[tool.cibuildwheel]
+build = "cp38-* cp39-* cp310-* cp311-* cp312-*"
+skip = "*-win32 *-musllinux_* *i686"
+before-build = "pip install cython numpy"

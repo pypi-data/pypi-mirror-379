@@ -1,0 +1,9 @@
+
+[dev]
+pytest
+black
+mypy
+
+[optimized]
+cython>=0.29.0
+numpy>=1.19.0
