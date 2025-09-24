@@ -1,0 +1,10 @@
+polypart/__init__.py,sha256=EB00vsMf0g_izdRG_Jw9u7YAq93mRSeMk_3O349QWIQ,437
+polypart/ftyping.py,sha256=l8fGhfqADKdEW9Peixvzk5YOheVBaInll4wsGImhVHw,2232
+polypart/geometry.py,sha256=z-C1VIzpKjBxJF3E4t4pdl9wVu5h1iX-5NXb9vWNcB4,8817
+polypart/io.py,sha256=zvhbtnZG2BANhqRjxzwf6Mheb_80MAARy2fp3Su303I,4881
+polypart/ppart.py,sha256=8P-0FXi6aPwpHWY1CY18Ng55MvAQCtnjAndF4TSaiD8,5157
+polypart-0.1.0.dist-info/licenses/LICENSE,sha256=ZrpUr3-ADZqAgeMZtug-nlHs7GCqu9zTLcxSrmraaGE,1084
+polypart-0.1.0.dist-info/METADATA,sha256=dFQ1EnWcNum9HWCD92kbUqAOj8qM518pKxMi6Gg9vOA,8474
+polypart-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+polypart-0.1.0.dist-info/top_level.txt,sha256=DudH0pMjo7N6MyKav1C3aKwQkxsR4hMNHk9MHhDGwsA,9
+polypart-0.1.0.dist-info/RECORD,,
