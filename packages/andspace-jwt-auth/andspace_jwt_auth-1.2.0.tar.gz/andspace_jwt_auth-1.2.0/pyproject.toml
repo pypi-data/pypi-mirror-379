@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "andspace-jwt-auth"
+version = "1.2.0"
+authors = [
+    {name = "And", email = "and.webdev@gmail.com"}
+]
+description = "Framework-agnostic JWT token validation library"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["jwt", "authentication", "token", "validation", "casdoor", "fastapi"]
+
+dependencies = [
+    "PyJWT[crypto]>=2.4.0",
+    "cryptography>=3.4.0",
+]
+
+[project.optional-dependencies]
+casdoor = ["casdoor>=1.0.0"]
+fastapi = ["fastapi>=0.68.0"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.991",
+    "isort>=5.10.0",
+]
+all = ["casdoor>=1.0.0", "fastapi>=0.68.0"]
+
+[project.urls]
+Homepage = "https://github.com/andspace/jwt-auth"
+Repository = "https://github.com/andspace/jwt-auth"
+Documentation = "https://github.com/andspace/jwt-auth#readme"
+"Bug Tracker" = "https://github.com/andspace/jwt-auth/issues"
+
+[tool.setuptools]
+packages = ["jwt_auth", "jwt_auth.core", "jwt_auth.providers", "jwt_auth.adapters"]
+
+[tool.setuptools.package-dir]
+"jwt_auth" = "."
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "casdoor"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "--cov=jwt_auth --cov-report=html --cov-report=term-missing"
+asyncio_mode = "auto"

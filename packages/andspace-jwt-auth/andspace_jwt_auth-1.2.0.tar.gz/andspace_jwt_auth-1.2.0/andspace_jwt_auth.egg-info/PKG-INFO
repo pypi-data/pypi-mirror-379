@@ -1,0 +1,341 @@
+Metadata-Version: 2.4
+Name: andspace-jwt-auth
+Version: 1.2.0
+Summary: Framework-agnostic JWT token validation library
+Home-page: https://github.com/andspace/jwt-auth
+Author: And
+Author-email: And <and.webdev@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/andspace/jwt-auth
+Project-URL: Repository, https://github.com/andspace/jwt-auth
+Project-URL: Documentation, https://github.com/andspace/jwt-auth#readme
+Project-URL: Bug Tracker, https://github.com/andspace/jwt-auth/issues
+Keywords: jwt,authentication,token,validation,casdoor,fastapi
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyJWT[crypto]>=2.4.0
+Requires-Dist: cryptography>=3.4.0
+Provides-Extra: casdoor
+Requires-Dist: casdoor>=1.0.0; extra == "casdoor"
+Provides-Extra: fastapi
+Requires-Dist: fastapi>=0.68.0; extra == "fastapi"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=0.991; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: casdoor>=1.0.0; extra == "all"
+Requires-Dist: fastapi>=0.68.0; extra == "all"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# JWT Auth Library
+
+A lightweight, framework-agnostic JWT token validation library with support for multiple authentication providers and easy integration with web frameworks.
+
+## Features
+
+- 🔐 **Framework Agnostic** - Works with FastAPI, Flask, Django, CLI tools, background workers, and any Python application
+- 🎯 **Provider Pattern** - Support for multiple JWT providers (Generic JWT, Casdoor, extensible for others)
+- ⚡ **Async/Await Support** - Built for modern Python async applications
+- 🛡️ **Type Safe** - Full type hints and dataclass-based configuration
+- 🔧 **Easy Integration** - Simple adapters for popular web frameworks
+- 🚨 **Comprehensive Errors** - Detailed error codes and messages for all failure scenarios
+
+## Installation
+
+```bash
+# Basic installation
+pip install jwt-auth-lib
+
+# With Casdoor support
+pip install jwt-auth-lib[casdoor]
+
+# With FastAPI adapter
+pip install jwt-auth-lib[fastapi]
+
+# With all optional dependencies
+pip install jwt-auth-lib[all]
+```
+
+## Quick Start
+
+### Generic JWT Validation
+
+```python
+import asyncio
+from jwt_auth import JWTProvider, JWTConfig
+
+async def main():
+    # Configure JWT validation
+    config = JWTConfig(
+        certificate="-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----",
+        algorithms=["RS256"],
+        audience="your-audience",
+        issuer="your-issuer"
+    )
+    
+    # Create provider
+    auth_provider = JWTProvider(config)
+    
+    # Validate token
+    try:
+        user = await auth_provider.validate_token("your.jwt.token")
+        print(f"Authenticated user: {user.email}")
+        print(f"User roles: {user.roles}")
+    except AuthError as e:
+        print(f"Authentication failed: {e.code} - {e.message}")
+
+asyncio.run(main())
+```
+
+### Casdoor Integration
+
+```python
+from jwt_auth import CasdoorProvider, CasdoorConfig
+
+# Configure Casdoor
+config = CasdoorConfig.from_env()  # Loads from environment variables
+
+# Create provider  
+auth_provider = CasdoorProvider(config)
+
+# Validate token
+user = await auth_provider.validate_token(token)
+```
+
+### FastAPI Integration
+
+```python
+from fastapi import FastAPI, Depends
+from jwt_auth import CasdoorProvider, CasdoorConfig, User
+from jwt_auth.adapters.fastapi import create_auth_dependency
+
+app = FastAPI()
+
+# Setup authentication
+config = CasdoorConfig.from_env()
+auth_provider = CasdoorProvider(config)
+get_current_user = create_auth_dependency(auth_provider)
+
+@app.get("/profile")
+async def get_profile(user: User = Depends(get_current_user)):
+    return {
+        "user_id": user.id,
+        "email": user.email,
+        "name": user.name,
+        "roles": user.roles
+    }
+
+@app.get("/admin")
+async def admin_only(user: User = Depends(get_current_user)):
+    if not user.has_role("admin"):
+        raise HTTPException(403, "Admin role required")
+    return {"message": "Admin access granted"}
+```
+
+## Configuration
+
+### Environment Variables (Casdoor)
+
+```bash
+CASDOOR_ENDPOINT=https://auth.your-domain.com
+CASDOOR_CLIENT_ID=your-client-id
+CASDOOR_CLIENT_SECRET=your-client-secret
+CASDOOR_CERTIFICATE="-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----"
+CASDOOR_ORG_NAME=your-org
+CASDOOR_APP_NAME=your-app
+```
+
+### Programmatic Configuration
+
+```python
+from jwt_auth import CasdoorConfig
+
+config = CasdoorConfig(
+    endpoint="https://auth.your-domain.com",
+    client_id="your-client-id", 
+    client_secret="your-client-secret",
+    certificate="-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----",
+    org_name="your-org",
+    app_name="your-app"
+)
+```
+
+## Framework-Agnostic Usage
+
+### CLI Tool
+
+```python
+#!/usr/bin/env python3
+import asyncio
+import sys
+from jwt_auth import CasdoorProvider, CasdoorConfig, AuthError
+
+async def validate_token_cli():
+    if len(sys.argv) != 2:
+        print("Usage: python validate.py <token>")
+        return
+    
+    config = CasdoorConfig.from_env()
+    auth_provider = CasdoorProvider(config)
+    
+    try:
+        user = await auth_provider.validate_token(sys.argv[1])
+        print(f"✅ Valid token for: {user.email}")
+    except AuthError as e:
+        print(f"❌ Invalid token: {e.code}")
+
+if __name__ == "__main__":
+    asyncio.run(validate_token_cli())
+```
+
+### Background Worker
+
+```python
+from jwt_auth import CasdoorProvider, CasdoorConfig
+
+class AuthenticatedWorker:
+    def __init__(self):
+        config = CasdoorConfig.from_env()
+        self.auth_provider = CasdoorProvider(config)
+    
+    async def process_message(self, message_data):
+        try:
+            user = await self.auth_provider.validate_token(
+                message_data["auth_token"]
+            )
+            await self.do_work(user, message_data["payload"])
+        except AuthError as e:
+            print(f"Skipping message: {e.code}")
+```
+
+## Error Handling
+
+The library provides specific exception types for different failure scenarios:
+
+```python
+from jwt_auth import (
+    AuthError,           # Base exception
+    TokenExpiredError,   # Token has expired
+    InvalidSignatureError, # Invalid signature
+    InvalidTokenError,   # Malformed token
+    MissingTokenError,   # No token provided
+    InvalidAudienceError, # Wrong audience
+    InvalidIssuerError,  # Wrong issuer
+)
+
+try:
+    user = await auth_provider.validate_token(token)
+except TokenExpiredError:
+    # Handle expired token - maybe redirect to login
+    pass
+except InvalidSignatureError:
+    # Handle invalid signature - security concern
+    pass
+except AuthError as e:
+    # Handle any other auth error
+    print(f"Auth failed: {e.code} - {e.message}")
+```
+
+## User Object
+
+The library returns a standard `User` object regardless of the authentication provider:
+
+```python
+@dataclass
+class User:
+    id: str                    # Unique user identifier
+    email: str                 # User email address
+    name: str                  # User's name
+    display_name: Optional[str] # Display name (if different from name)
+    avatar: Optional[str]      # Avatar URL
+    roles: List[str]           # User roles
+    permissions: List[str]     # User permissions  
+    metadata: Dict[str, Any]   # Provider-specific data
+    
+    # Utility methods
+    def has_role(self, role: str) -> bool
+    def has_permission(self, permission: str) -> bool
+    def has_any_role(self, roles: List[str]) -> bool
+    def has_all_roles(self, roles: List[str]) -> bool
+```
+
+## Publishing to PyPI
+
+This library includes a Docker-based publishing system for consistent, isolated uploads to PyPI.
+
+### Quick Publishing
+
+```bash
+# Navigate to library directory
+cd lib/jwt_auth
+
+# Test upload (recommended first)
+./publish.sh --test
+
+# Production upload  
+./publish.sh --prod
+
+# Both Test PyPI and Production PyPI
+./publish.sh --both
+```
+
+### Requirements
+- Docker installed and running
+- PyPI API tokens configured in `~/.pypirc`
+
+See **[DOCKER_PUBLISH.md](DOCKER_PUBLISH.md)** for detailed instructions.
+
+## Development
+
+```bash
+# Install development dependencies
+pip install -e .[dev]
+
+# Run tests
+pytest
+
+# Run linting
+black .
+flake8 .
+mypy .
+
+# Run type checking
+mypy jwt_auth/
+
+# Validate package before publishing
+./publish.sh --dry-run
+```
+
+## License
+
+MIT License - see LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please read CONTRIBUTING.md for guidelines.
+
+## Support
+
+- GitHub Issues: https://github.com/yourusername/jwt-auth-lib/issues  
+- Documentation: https://jwt-auth-lib.readthedocs.io/
