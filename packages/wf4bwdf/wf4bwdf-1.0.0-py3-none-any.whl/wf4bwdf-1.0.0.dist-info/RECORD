@@ -1,0 +1,11 @@
+wf4bwdf/__init__.py,sha256=BecNgyDgpyIhLb7W9mum653Zb0XnJBi7dN5_xyp1Tdc,272
+wf4bwdf/_data_loading.py,sha256=GUV3dR8xg9_uqhy1CMyWFPm5Y6XmAnPlb1YeVRkCmyc,14839
+wf4bwdf/_solution_evaluation.py,sha256=-SXD6fERx-dorawIXOfgoWv5rHz2ZnXvoKF_5LXag2c,10011
+wf4bwdf/_solutions_loading.py,sha256=8V1X16RvGWbLI93_u2df4ow8_AIEnXgEHEYkIPUhocs,1173
+wf4bwdf/data/InflowData.xlsx,sha256=wjm9tcmO7gDZT7aLawQFw5w6ybAyxv1MlLuNEtAGQMA,1877617
+wf4bwdf/data/WeatherData.xlsx,sha256=cHKfGEwLR6veLvJobijgE2k2QXgtbxsms_KN6cjQxiw,642069
+wf4bwdf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wf4bwdf-1.0.0.dist-info/licenses/LICENSE,sha256=LbCQT4UVcBLITLRdFHRN_rRGoJgRXwMOaiHfDmTHgsQ,1088
+wf4bwdf-1.0.0.dist-info/WHEEL,sha256=Pi5uDq5Fdo_Rr-HD5h9BiPn9Et29Y9Sh8NhcJNnFU1c,79
+wf4bwdf-1.0.0.dist-info/METADATA,sha256=w5OMkuqoTBxGVcDkACaufCdEI03VmAds6uzraCm8dvg,8285
+wf4bwdf-1.0.0.dist-info/RECORD,,
