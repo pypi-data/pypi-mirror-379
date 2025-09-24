@@ -1,0 +1,212 @@
+Metadata-Version: 2.4
+Name: data_driven_test_input_generator
+Version: 0.0.2
+Summary: A Test Input Generation Framework based on Data-Driven Models for Cyber-Physical Systems
+Author-email: Linh Ngoc Le <linh.le@tuhh.de>
+Project-URL: Homepage, https://github.com/flowcean/data-driven-test-input-generator
+Project-URL: Issues, https://github.com/flowcean/data-driven-test-input-generator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <4.0,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flowcean>=0.4.0.dev0
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: river>=0.22.0
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: tabulate>=0.9.0
+Dynamic: license-file
+
+# 📦 A Test Input Generation Framework based on Flowcean Models
+
+[![PyPI - Version](https://img.shields.io/badge/pypi-v0.0.1-orange)](https://pypi.python.org/pypi/data-driven-test-input-generator)
+[![License](https://img.shields.io/badge/license-BSD--3--Clause-yellowgreen)](https://github.com/flowcean/data-driven-test-input-generator/blob/main/LICENSE)
+[![PyPI - Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://pypi.python.org/pypi/data-driven-test-input-generator)
+
+A data-driven and adaptive framework for generating test inputs for cyber-physical systems based on Flowcean models. 
+
+---
+
+## 🧭 Overview
+
+This test input generation framework is designed to enhance test coverage for complex, real-world cyber-physical systems (CPS). It supports all types of data-driven models produced by Flowcean and automatically generates meaningful test inputs by leveraging the structure and behavior of Flowcean-trained models.
+
+Flowcean itself is an advanced and versatile framework that streamlines the automatic generation of models for CPS. You can find its documentation at [flowcean.me](https://flowcean.me).
+
+## Key Features
+- 🌐 Supports Boundary Value Analysis and Decision Tree Coverage
+- 🔍 Extracts equivalence classes from model structure
+- 📊 Generates test inputs from extracted equivalence classes
+- 🧠 Compatible with all Flowcean models
+- 🛠️ Modular design for easy integration and extension
+
+---
+
+## 🚀 Installation
+
+### Requirement
+
+- Python 3.10+
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/linhngocle2000/data-driven-test-input-generator
+
+# Navigate into the project directory
+cd data-driven-test-input-generator
+
+# Create a virtual environment
+python -m venv venv
+```
+```powershell
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+```
+```bash
+# On macOS/Linux:
+source venv/bin/activate
+```
+```bash
+# Install the framework
+pip install data-driven-test-input-generator
+```
+
+### ▶️ Running the Example Script
+
+To see the test input generation framework in action, run the provided `run.py` script:
+
+```bash
+python run.py
+```
+
+This script demonstrates how to use the framework to generate test inputs from a Flowcean model. It performs the following steps:
+
+- Constructs a Flowcean model using a sample configuration.
+- Generates test inputs based on the Flowcean model.
+- Executes the test inputs on the Flowcean model.
+- Prints the test inputs and their corresponding outcomes.
+
+> [!TIP]
+> The script includes several `TODO` comments that guide you on how to modify the script to explore different scenarios. You can:
+> - Change the model type or tune hyperparameters
+> - Modify the sample dataset or test requirements
+> - Print intermediate results or store outputs into files for further analysis
+
+Use `run.py` as a starting point to explore different Flowcean model types, test strategies, and framework configurations.
+
+## 📄 Specifying System Specifications
+
+To generate test inputs using the framework, you can define system specifications in a JSON file. This file describes the input features of your CPS and their constraints.
+
+### 🧬 JSON Structure
+
+- The outermost key must be `"features"`, whose value is a list of feature objects.
+- Each feature object must include the following keys:
+  - `"name"` *(string)*: Name of the feature 
+  - `"min"` *(int or float)*: Minimum value allowed
+  - `"max"` *(int or float)*: Maximum value allowed
+  - `"type"` *(either `"int"` or `"float"`)*: Data type of the feature
+  - `"nominal"` *(boolean)*: Indicates whether the feature is nominal
+
+> [!IMPORTANT]
+> The order of features in the list must match the column order in the training datasets used to generate the Flowcean model.
+
+### 🧾 Example
+
+```json
+{
+  "features": [
+    {
+      "name": "Weight",
+      "min": 0,
+      "max": 3,
+      "type": "int",
+      "nominal": false
+    },
+    {
+      "name": "Acidity",
+      "min": 0.2,
+      "max": 5.36,
+      "type": "float",
+      "nominal": false
+    },
+    {
+      "name": "Color",
+      "min": 0,
+      "max": 4,
+      "type": "int",
+      "nominal": true
+    }
+  ]
+}
+```
+
+### 🧠 When Is This File Required?
+
+A system specification file is **required** to ensure the framework understands the valid input ranges and types for each feature.
+
+However, if you provide a dataset containing **system inputs and outputs** that already encodes the necessary specifications, then you **do not need** to supply a separate system specification file.
+
+## 🧪 Specifying Test Requirements
+
+To control how the framework generates test inputs, you can define a set of test requirements in a JSON file.
+
+### 📁 JSON Structure
+
+The test requirements file is a flat JSON object with key-value pairs. Here's an example:
+
+```json
+{
+  "test_coverage_criterium": "bva",
+  "n_testinputs": 5000,
+  "inverse_alloc": false,
+  "epsilon": 0.5,
+  "performance_threshold": 0.3,
+  "sample_limit": 50000,
+  "n_predictions": 50,
+  "max_depth": 5
+}
+```
+
+### 🔍 Parameter Overview
+
+#### ✅ Required Parameters
+
+- `test_coverage_criterium` *(string)*: Strategy for test coverage. Must be either `"bva"` (Boundary Value Analysis) or `"dtc"` (Decision Tree Coverage).
+- `n_testinputs` *(int)*: Total number of test inputs to generate.
+
+#### ⚙️ Optional Parameters
+
+- `inverse_alloc` *(boolean)*: If `true`, use inverse test allocation strategy. **Default**: `false`
+- `epsilon` *(float)*: Size of the interval around boundaries for BVA testing. **Default**: `0.5`
+
+#### 🧠 For Surrogate Modelling Process
+
+- `performance_threshold` *(float, optional)*: Minimum performance required to export the Hoeffding Tree. **Default**: `0.3`
+- `sample_limit` *(int, optional)*: Maximum number of samples used to train the Hoeffding Tree. **Default**: `50000`
+- `n_predictions` *(int, optional)*: Number of correct predictions required before exporting the Hoeffding Tree. **Default**: `50`
+- `max_depth` *(int, optional)*: Maximum depth of the Hoeffding Tree. **Default**: `5`
+
+> [!NOTE]
+> Only `test_coverage_criterium` and `n_testinputs` are strictly required. All other parameters are optional and depend on the model type and testing strategy.
+
+## 📄 License
+
+This framework is licensed under the **BSD 3-Clause License**.
+
+## 📘 Framework Documentation
+
+For a deeper understanding of the framework's architecture, workflow, and the techniques used in the test input generation process, please refer to the accompanying paper: [A Test Input Generation Framework based on Data-Driven Models for Cyber-Physical Systems](paper/latex/paper.pdf)
+
+> [!NOTE]
+> 📎 Make sure to open the PDF in a compatible viewer to access diagrams and detailed explanations.
+
+
