@@ -1,0 +1,217 @@
+Metadata-Version: 2.4
+Name: prarabdha-ai
+Version: 1.3.0
+Summary: A CLI tool for scaffolding backend services with interactive menus
+Home-page: https://github.com/prarabdha/prarabdha-ai
+Author: Prarabdha
+Author-email: prarabdha@example.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.0.0
+Requires-Dist: rich>=12.0.0
+Requires-Dist: inquirer>=3.0.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: psutil>=5.9.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Prarabdha 🚀
+
+A powerful CLI tool for scaffolding backend services with interactive menus. Get started quickly with your favorite programming languages and frameworks.
+
+## Features
+
+- **Interactive CLI**: User-friendly menus for project setup
+- **Multiple Languages**: Support for Python, Java, and Node.js
+- **Framework Support**: Flask, FastAPI for Python
+- **Quick Start/Stop**: Easy project management
+- **Deployment Ready**: Deploy to Heroku, Railway, or Render
+- **Extensible**: Easy to add new languages and frameworks
+
+## Installation
+
+Install Prarabdha using pip:
+
+```bash
+pip install prarabdha
+```
+
+## Quick Start
+
+### 1. Start a New Project
+
+```bash
+prarabdha start
+```
+
+This will launch an interactive menu where you can:
+- Choose your programming language (Python, Java, Node.js)
+- Select frameworks (for Python: Flask or FastAPI)
+- Set project name and output directory
+
+### 2. Deploy Your Project
+
+```bash
+prarabdha deploy <project-path>
+```
+
+Deploy to free backend-as-a-service platforms:
+- **Heroku**: Full CLI integration
+- **Railway**: Modern deployment platform
+- **Render**: Web-based deployment
+
+### 3. Stop Running Projects
+
+```bash
+prarabdha stop <project-path>
+```
+
+Stop any running processes for your project.
+
+## Supported Languages and Frameworks
+
+### Python
+- **Flask**: Lightweight web framework
+- **FastAPI**: Modern, fast web framework with automatic API documentation
+
+### Java
+- **Spring Boot**: Enterprise-grade Java framework
+
+### Node.js
+- **Express**: Fast, unopinionated web framework
+
+## Project Structure
+
+Each scaffolded project includes:
+
+- **Production-ready boilerplate** with best practices
+- **Health check endpoints** for monitoring
+- **CORS configuration** for frontend integration
+- **Environment configuration** with `.env` files
+- **Comprehensive documentation** with setup instructions
+- **Git configuration** with appropriate `.gitignore`
+
+## Example Usage
+
+### Python Flask Project
+
+```bash
+$ prarabdha start
+🚀 Prarabdha
+Backend Service Scaffolding Tool
+
+Enter project name: my-flask-api
+Enter output directory: /path/to/projects
+
+Select a programming language:
+  1. Python
+  2. Java
+  3. Node.js
+
+Enter your choice: 1
+
+Select a Python framework:
+  1. Flask
+  2. FastAPI
+
+Enter your choice: 1
+
+✅ Project 'my-flask-api' created successfully!
+📁 Location: /path/to/projects/my-flask-api
+
+🚀 Next steps:
+   • Navigate to your project directory
+   • Install dependencies
+   • Run your project
+```
+
+### Deploy to Heroku
+
+```bash
+$ prarabdha deploy ./my-flask-api
+Select a deployment service:
+  1. Heroku
+  2. Railway
+  3. Render
+
+Enter your choice: 1
+
+Deploying to Heroku...
+Enter Heroku app name: my-awesome-api
+✅ Heroku app created successfully!
+✅ Deployment successful!
+```
+
+## Development
+
+### Prerequisites
+- Python 3.8+
+- pip
+
+### Setup Development Environment
+
+1. Clone the repository:
+```bash
+git clone https://github.com/prarabdha/prarabdha.git
+cd prarabdha
+```
+
+2. Install in development mode:
+```bash
+pip install -e .
+```
+
+3. Run tests:
+```bash
+python -m pytest
+```
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Adding New Languages/Frameworks
+
+1. Create a new scaffolder in `prarabdha/scaffolders/`
+2. Implement the `create_project` method
+3. Add the language option to the CLI
+4. Update documentation
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+- 📖 [Documentation](https://github.com/prarabdha/prarabdha/wiki)
+- 🐛 [Issue Tracker](https://github.com/prarabdha/prarabdha/issues)
+- 💬 [Discussions](https://github.com/prarabdha/prarabdha/discussions)
+
+## Roadmap
+
+- [ ] Support for more languages (Go, Rust, C#)
+- [ ] Database integration templates
+- [ ] Docker support
+- [ ] CI/CD pipeline templates
+- [ ] Monitoring and logging setup
+- [ ] Authentication templates
+
+---
+
+Made with ❤️ by the Prarabdha team
