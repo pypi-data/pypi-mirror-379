@@ -1,0 +1,14 @@
+nilai_py/__init__.py,sha256=jjOf8UuXuk1jaxodYsMxILyanFJnsF-rUDHOU82FNqo,541
+nilai_py/client.py,sha256=JH2waCtGbJqLIdyHh5sK0CUkA8oxe8DPATCs-HlAC40,8544
+nilai_py/common.py,sha256=JExIENTONZ98lXP9ajoAj0e4ycAv9SgRax0riKgl6tw,552
+nilai_py/niltypes.py,sha256=QP-HsSD5WiCcTThDkv1ybMgeGDhX6IrPxtdsX9sto_c,1735
+nilai_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nilai_py/server.py,sha256=WNR141mJSOuATQAnJm6Y8ViCTDfQ6YIXZ0nSC4jy5l8,4594
+nilai_py/nildb/__init__.py,sha256=AXwrh9VZ6MPZ4Evo0WxDwnnrau2ikvOWb1UimP7bxLo,5695
+nilai_py/nildb/config.py,sha256=7NS5tq3ZjM2nrTrd1_mWRoB5iSk5jCg6osKPkmuD6Gs,1845
+nilai_py/nildb/document.py,sha256=rZMB90Io27EO1j2m55BtSiFZcg-LurFNeWPUiVjaTvk,6583
+nilai_py/nildb/models.py,sha256=hCfgYxHCpcoEAET5WQGfa_ejwdX5Q-FNSk4fVlJ1Zo4,3532
+nilai_py/nildb/user.py,sha256=GFelKV_4fx4Z06qYXDBiwk3jLE4s0ujkh9svCWDBxDQ,11249
+nilai_py-0.2.0rc0.dist-info/METADATA,sha256=QLmpeEiRShtkTVqBTXV8X_xzQ0cody3aRTNJbENBryA,8648
+nilai_py-0.2.0rc0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nilai_py-0.2.0rc0.dist-info/RECORD,,
