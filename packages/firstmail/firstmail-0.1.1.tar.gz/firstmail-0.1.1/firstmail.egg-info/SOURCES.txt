@@ -1,0 +1,14 @@
+pyproject.toml
+readme.md
+firstmail/__init__.py
+firstmail/__main__.py
+firstmail/base.py
+firstmail/cli.py
+firstmail.egg-info/PKG-INFO
+firstmail.egg-info/SOURCES.txt
+firstmail.egg-info/dependency_links.txt
+firstmail.egg-info/entry_points.txt
+firstmail.egg-info/requires.txt
+firstmail.egg-info/top_level.txt
+tests/__init__.py
+tests/core_test.py
