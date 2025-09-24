@@ -1,0 +1,5 @@
+select icu.hadm_id {admission_id}, {attributes}, v.charttime {time}
+from mimiciv_derived.vitalsign as v
+inner join mimiciv_icu.icustays as icu
+ on icu.stay_id = v.stay_id
+where icu.hadm_id is not null
