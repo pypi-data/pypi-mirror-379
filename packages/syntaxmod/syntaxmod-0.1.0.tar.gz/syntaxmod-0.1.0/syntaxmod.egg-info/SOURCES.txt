@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+syntaxmod/__init__.py
+syntaxmod/general.py
+syntaxmod.egg-info/PKG-INFO
+syntaxmod.egg-info/SOURCES.txt
+syntaxmod.egg-info/dependency_links.txt
+syntaxmod.egg-info/requires.txt
+syntaxmod.egg-info/top_level.txt
+test/test.py
