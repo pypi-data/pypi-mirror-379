@@ -1,0 +1,15 @@
+datahold/__init__.py,sha256=sSBB2EdvnmXdndxoP9pofs1zSnfckvo-77bp5ivTSMk,57
+datahold/_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datahold/_utils/deco/ClassDataDecorator.py,sha256=SYhFiQQ_UsT74acZDxV8M3mTkmRKl5qsC7ft_pp7zZY,983
+datahold/_utils/deco/ClassFuncDecorator.py,sha256=014tnptF2fsqZmG1kM4rBclgZvXWKRe42j-S7V-k0lA,1280
+datahold/_utils/deco/ClassInitDecorator.py,sha256=bcN5vFbFYYEZzjVbApfwYHUhseKG63oxByymL3snYvA,1015
+datahold/_utils/deco/__init__.py,sha256=cNGoxuMGogCSw8psDMiBkRkAJg9PoeSZDy8u4qTahG8,213
+datahold/_utils/deco/util.py,sha256=Lbj0aBYpaKcP5Bqx6YN7I6VaW8wgrqiGlTrZStxzYWA,1239
+datahold/core/__init__.py,sha256=jhn5SV6A1SzJgG3RoigFTtGbOWui8GwTda0Y2eFjQ_4,9417
+datahold/tests/__init__.py,sha256=wBz_x30QKyAR6HQZnyrYlCPgmu0ErF0o44VygU3JLZk,387
+datahold/tests/test_okay.py,sha256=MDWCqDwPGRiJxz2s2S7rlns6IvwGxuoayCiL1piiSms,3505
+datahold-1.2.1.dist-info/licenses/LICENSE.txt,sha256=QwqYepQwTN5xG57cngKt6xxYD9z9hw9d3lcI8zSLiNg,1074
+datahold-1.2.1.dist-info/METADATA,sha256=xy4ip0aHyU6pyvlipmB2IU2ZuBeDVNCEvXE9mu58zLo,2517
+datahold-1.2.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+datahold-1.2.1.dist-info/top_level.txt,sha256=HVRwLAGYbE8XqAfyA2mE3JOS3k6Es4t74wEPmHbojis,9
+datahold-1.2.1.dist-info/RECORD,,
