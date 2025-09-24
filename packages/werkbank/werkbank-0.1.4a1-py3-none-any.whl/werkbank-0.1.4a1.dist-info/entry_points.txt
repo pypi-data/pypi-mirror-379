@@ -1,0 +1,6 @@
+[console_scripts]
+werkbank = werkbank.ui:main
+werkbank-mcp = werkbank:mcp.run
+
+[zntrack.nodes]
+ipsuite = werkbank.nodes:nodes
