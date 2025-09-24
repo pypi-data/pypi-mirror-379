@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: imagemtools-dpaulino09
+Version: 0.1.0
+Summary: Pacote para processamento de imagens em Python
+Author: Daniel
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: Pillow
+
