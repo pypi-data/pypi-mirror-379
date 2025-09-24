@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: myADconvert
+Version: 3.0.0
+Summary: Support tool for AD converter.
+Author: Toshihiro Nishimura
+Author-email: tnishimura@se.kanazawa-u.ac.jp
+License: MIT
+Requires-Dist: numpy
+
