@@ -1,0 +1,9 @@
+ppca/__init__.py,sha256=I8UqdSeO1QivrALu_1cFzXgm5OPAA65lzFfQCIf9oWI,216
+ppca/_ppca.py,sha256=68nry60NlikeNQWdX-Uhn89ReUeAlHELuHq-NPykLNE,10491
+ppca/_ppca_bindings.cpp,sha256=-BwZDZk-uoppzWmHASd6xe2awHiV25e_jVfAtSrrQhY,8713
+ppca/_ppca_bindings.cpython-310-x86_64-linux-gnu.so,sha256=-_tWFPaOBl3QLtuvYZ9NXRCUYOjo5ItTW8n1OlIIVAQ,525224
+ppca/_ppca_bindings.pyi,sha256=CScXKGtUfweIld-xlH2L0JHDFEfhzkG1tTposllblJc,2254
+ppca_py-1.0.1.dist-info/METADATA,sha256=4OJ6KLakUnlgKb8ChYikHilmp3pmmp5tSCZQqppnjxE,6575
+ppca_py-1.0.1.dist-info/WHEEL,sha256=LIrydfVXIQZCYHHYt4EvMdM8Vj8KvI9goZ8ya8gIfwM,157
+ppca_py-1.0.1.dist-info/RECORD,,
+ppca_py-1.0.1.dist-info/licenses/LICENSE,sha256=Kq1Nyp4kat7MmFTtTJgxosNZnDygtQ65fmXpTgNYptg,1062
