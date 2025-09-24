@@ -1,0 +1,2 @@
+[console_scripts]
+inkdna = inkdna_fingerprint_legacy.__main__:main
