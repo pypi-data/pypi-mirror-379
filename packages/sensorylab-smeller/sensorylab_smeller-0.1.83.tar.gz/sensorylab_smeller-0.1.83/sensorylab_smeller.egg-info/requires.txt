@@ -1,0 +1,10 @@
+future>=1.0.0
+iso8601>=2.1.0
+pybluez2>=0.46
+pyserial>=3.5
+PyYAML>=6.0.2
+paho-mqtt==2.1.0
+
+[gui]
+PyQt6
+PyQtGraph
