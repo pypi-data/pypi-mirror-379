@@ -1,0 +1,12 @@
+entangle_matrix/__init__.py,sha256=b8dPNx6CKSDxS_xmtdij6iHMMF51QRaEqy4ePUAq8tU,801
+entangle_matrix/client.py,sha256=ht5g2594JnnzOHwk7diYXomi28U14h738jr6uFMqh3o,15966
+entangle_matrix/exceptions.py,sha256=rPFtPLvlqG5qE4nXu6JmpcAPTADQbszxzAAPgQsDVRY,1610
+entangle_matrix/models.py,sha256=ePtL60GzjmsP2HOZe1mX_OstJ74QMabkjOV_wiq0bd0,4196
+entangle_matrix/utils.py,sha256=BkIz9ygQdJmzN-qriLiaGGDBAfX6Ofc1Om27lIzJWcI,2654
+entangle_matrix-0.1.0.dist-info/licenses/LICENSE,sha256=eij3ZSHYvVUG16TA2sy2aH7ws2E-E_SJPGt28aLDOPs,1066
+tests/__init__.py,sha256=4qE3YuRexl6SOf-xyuG0BfzMrd-Dg-qHTr4IubO-QkU,14
+tests/test_client.py,sha256=6zL4UeGXA4j6-dpxL8R4AIuZm1lvoZLm6Uln5IhQhS4,7040
+entangle_matrix-0.1.0.dist-info/METADATA,sha256=NTOWL2Dti40f-yqG3g8tdprQ_1fpggZwhyC3py6Ioao,9846
+entangle_matrix-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+entangle_matrix-0.1.0.dist-info/top_level.txt,sha256=WLirf7_QVrV89Gm1EpFXaevn6_MTYxOT64QnvPVgfhE,22
+entangle_matrix-0.1.0.dist-info/RECORD,,
