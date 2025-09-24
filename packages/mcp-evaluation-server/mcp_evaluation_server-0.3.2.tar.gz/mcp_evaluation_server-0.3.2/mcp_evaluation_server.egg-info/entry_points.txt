@@ -1,0 +1,4 @@
+[console_scripts]
+mcp-eval = mcp_evaluation_server.main:main
+mcp-eval-server = mcp_evaluation_server.main:main
+mcp-evaluation-server = mcp_evaluation_server.main:main
