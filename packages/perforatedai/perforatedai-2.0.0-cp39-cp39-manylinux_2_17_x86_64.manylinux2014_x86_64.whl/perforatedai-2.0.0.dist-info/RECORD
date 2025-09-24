@@ -1,0 +1,10 @@
+perforatedai/__init__.cpython-39-x86_64-linux-gnu.so,sha256=H0QLNz1hzQ3pMcgEh459iSWiAqaM7uQV5Gs02xoGfEQ,66608
+perforatedai/library_classes.cpython-39-x86_64-linux-gnu.so,sha256=zUGgJQ1LhCjIUMFP6Fe6Y_VxMVpgbX0q98wt-59N1IQ,817360
+perforatedai/modules_perforatedai.cpython-39-x86_64-linux-gnu.so,sha256=RjjNNBcHt20r2bquZIoQVWOYj3JjKqhl189xk2_mIiA,3647400
+perforatedai/tracker_perforatedai.cpython-39-x86_64-linux-gnu.so,sha256=ukLyGDUCMjFIa0sq4W92qvcEve7vafPGtl0riXWFMOQ,8409928
+perforatedai/globals_perforatedai.cpython-39-x86_64-linux-gnu.so,sha256=_-Suj9DnR68UUU81Q__HSoeO7FNSaILMv5XJcmT85d0,2205224
+perforatedai/utils_perforatedai.cpython-39-x86_64-linux-gnu.so,sha256=AudsmpauGoDLpihSmLiBgi232mtAZ5LxEX-8izPrfqU,3359952
+perforatedai-2.0.0.dist-info/METADATA,sha256=m4yump-zdwUopcpYgREaY5YV69YdHlnW-Ex-hh5hlOo,411
+perforatedai-2.0.0.dist-info/top_level.txt,sha256=aN-RVGd9_0L1QRPEzUSfJ-EKxXmsNTx-bmWXqby6zro,13
+perforatedai-2.0.0.dist-info/WHEEL,sha256=Ft74NvtoNijofVH75P0XscwV2WwZEQ7H3KvuAet57MU,148
+perforatedai-2.0.0.dist-info/RECORD,,
