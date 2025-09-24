@@ -1,0 +1,10 @@
+zeptomail/__init__.py,sha256=id3FWTzK3AagaCr3RUp3RQ3dhPoxKoTkB1KqwOloMPQ,118
+zeptomail/client.py,sha256=yLNWv-VJGdRTPQRWX8fVXZZcAUC15gkaCChhp3CX7uE,20667
+zeptomail/errors.py,sha256=defhaDMnbkfQ_nPfLCtKA6XNWPYqx-F_9xX3G9Vqbj4,5789
+zeptomail/webhooks/__init__.py,sha256=UIaMUIUcCLg6nWO1wlhDEzP28Q8iRqzt7RGmuGHArxk,552
+zeptomail/webhooks/models.py,sha256=9zI9AbLr0-SaY4K37mLJ8eDAembPgikA4gHfIgOf2zE,2623
+zeptomail/webhooks/router.py,sha256=w7eBquioKosrOmt0EXqXqkhlp1_cHRD1L381jhmIN6A,3303
+zeptomail_python_api-0.1.5.dist-info/METADATA,sha256=om7zm5I7T0X8flqKiy_-2Jw-uvr2StTX7FRAdLhatiw,9984
+zeptomail_python_api-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+zeptomail_python_api-0.1.5.dist-info/licenses/LICENSE,sha256=FHu33Y3OXu91zSZRTECumVQGMSVMlO3S1bV3n3B9HMA,1070
+zeptomail_python_api-0.1.5.dist-info/RECORD,,
