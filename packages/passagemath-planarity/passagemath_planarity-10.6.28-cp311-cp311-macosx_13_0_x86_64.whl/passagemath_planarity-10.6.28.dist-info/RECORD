@@ -1,0 +1,9 @@
+passagemath_planarity.dylibs/libplanarity.2.dylib,sha256=MEczI-OBWDjorrq0eE3wQBMUVmU7dBrTAqLPNli9m58,217328
+sage/all__sagemath_planarity.py,sha256=dECwfNACjxwWI9PD5V5iC7MyTSIFTCHmJxryPSf2Cqw,109
+sage/graphs/planarity.pyx,sha256=2OQXReYJKYQ6MjVMO0uAj3I-z_X7fN4nau1aCfe_EUU,7093
+sage/graphs/all__sagemath_planarity.py,sha256=CYZamBzI163p8V2TX9c1rV2S9cGAOxEOhc82QQkpTvQ,48
+sage/graphs/planarity.cpython-311-darwin.so,sha256=23wzkurf6IMTnHXT_c6NYQ2bDhQtcwebDicspZtFJIA,116608
+passagemath_planarity-10.6.28.dist-info/RECORD,,
+passagemath_planarity-10.6.28.dist-info/WHEEL,sha256=RyxoEM-DdYra2rgZTpxdiJkmjbwgUQ_Obk5UCeDLiEQ,137
+passagemath_planarity-10.6.28.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_planarity-10.6.28.dist-info/METADATA,sha256=Snh9HM5E_r3xXZ73RFkW7rbHMHD9xOVBIzsbtv5_ePU,4859
