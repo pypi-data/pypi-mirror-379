@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ParaMorse"
+version: "0.1.0"
+date-released: "2025-09-23"
+authors:
+  - family-names: "Toshev"
+    given-names: "Peter"
+    orcid: https://orcid.org/0000-0003-1053-8747
+repository-code: "https://github.com/petertoshev/paramorse"
+url: "https://github.com/petertoshev/paramorse/releases/tag/0.1.0"
+keywords:
+  - super language
+  - Morse code
+  - paralinguistics
+preferred-citation:
+  type: software
+  title: "ParaMorse"
+  authors:
+    - family-names: "Toshev"
+      given-names: "Peter"
+  year: 2025
+  version: "0.1.0"
+  url: "https://github.com/petertoshev/paramorse/releases/tag/0.1.0"
+  repository-code: "https://github.com/petertoshev/paramorse"
