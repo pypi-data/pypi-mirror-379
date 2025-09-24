@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chart Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    <style>
+        .chart-container {
+            width: 400px;
+            height: 300px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Chart Test</h1>
+
+    <div class="chart-container">
+        <canvas id="simpleChart"></canvas>
+    </div>
+
+    <div id="status"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const status = document.getElementById('status');
+
+            function updateStatus(message) {
+                status.innerHTML += '<p>' + message + '</p>';
+                console.log(message);
+            }
+
+            updateStatus('DOM loaded');
+            updateStatus('Chart.js available: ' + (typeof Chart !== 'undefined'));
+
+            if (typeof Chart === 'undefined') {
+                updateStatus('ERROR: Chart.js not loaded');
+                return;
+            }
+
+            const canvas = document.getElementById('simpleChart');
+            if (!canvas) {
+                updateStatus('ERROR: Canvas not found');
+                return;
+            }
+
+            updateStatus('Canvas found');
+
+            const ctx = canvas.getContext('2d');
+            if (!ctx) {
+                updateStatus('ERROR: Cannot get 2D context');
+                return;
+            }
+
+            updateStatus('2D context available');
+
+            try {
+                const chart = new Chart(canvas, {
+                    type: 'line',
+                    data: {
+                        labels: ['A', 'B', 'C', 'D'],
+                        datasets: [{
+                            label: 'Test Data',
+                            data: [1, 2, 3, 2],
+                            borderColor: 'blue',
+                            backgroundColor: 'rgba(0, 0, 255, 0.1)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        devicePixelRatio: 1,
+                        animation: { duration: 0 }
+                    }
+                });
+
+                updateStatus('SUCCESS: Chart created successfully');
+            } catch (error) {
+                updateStatus('ERROR creating chart: ' + error.message);
+                console.error('Full error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
