@@ -1,0 +1,11 @@
+inspect_ai>=0.3.133
+pydantic<3,>=2.11
+pydantic-settings
+wandb
+
+[viz]
+inspect-viz
+playwright
+
+[weave]
+weave>=0.52.1
