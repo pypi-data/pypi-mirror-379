@@ -1,0 +1,2 @@
+[console_scripts]
+seasenselib = seasenselib.__main__:main
