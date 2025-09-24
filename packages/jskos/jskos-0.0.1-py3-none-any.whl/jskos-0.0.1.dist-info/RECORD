@@ -1,0 +1,11 @@
+jskos/__init__.py,sha256=HL410a_gEFVXtbWeH5sGfdIpcjua4vEylWRcUDZWne4,220
+jskos/__main__.py,sha256=2Uh17pujbEyfyQMYdWbBJsoViU9RY7i0xvFaOgyszZA,122
+jskos/api.py,sha256=0TThwJ-PY5JH7jwPetZxyrNYBdm7bdq1hlp4EELmXIs,2760
+jskos/cli.py,sha256=B2-5Q1sbBpgXv9aRDAoDxhVGLp_4kETS-wVrcgLYObs,192
+jskos/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+jskos/version.py,sha256=6vtxK1b7N-15Dj4ZKurGdjnLwiuJSBoSdNRhE_NX-a4,945
+jskos-0.0.1.dist-info/licenses/LICENSE,sha256=S-DsND478R_VQyGmtXbVYW67fRiJj3QfY8UXIJ4zvLI,1076
+jskos-0.0.1.dist-info/WHEEL,sha256=9sngUSrBGcqa7Cqf5vlj5tQYMBt8bCfIU4h7UcwAFM0,79
+jskos-0.0.1.dist-info/entry_points.txt,sha256=mvKkGKAKD2i1iBmQ_GSc3cGhdOOYY9oXjSZxEfeGUD4,42
+jskos-0.0.1.dist-info/METADATA,sha256=r_P9QvfpxEJ_GJKd_iNDfGqj7lINrEukyOTgxBdNreY,12505
+jskos-0.0.1.dist-info/RECORD,,
