@@ -1,0 +1,8 @@
+django>=4.2
+django-braces>=1.8.1
+django-downloadview>=2.4.0
+pytest>=8.4.2
+pytest-cov>=7.0.0
+
+[drf]
+djangorestframework>=3.14
