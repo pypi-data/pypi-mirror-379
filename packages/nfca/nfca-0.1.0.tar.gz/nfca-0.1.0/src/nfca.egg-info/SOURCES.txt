@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/nfca/__init__.py
+src/nfca/main.py
+src/nfca.egg-info/PKG-INFO
+src/nfca.egg-info/SOURCES.txt
+src/nfca.egg-info/dependency_links.txt
+src/nfca.egg-info/requires.txt
+src/nfca.egg-info/top_level.txt
