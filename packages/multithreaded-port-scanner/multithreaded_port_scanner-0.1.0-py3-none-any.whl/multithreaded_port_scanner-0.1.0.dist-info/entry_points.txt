@@ -1,0 +1,2 @@
+[console_scripts]
+scanner = multithreaded_port_scanner:main
