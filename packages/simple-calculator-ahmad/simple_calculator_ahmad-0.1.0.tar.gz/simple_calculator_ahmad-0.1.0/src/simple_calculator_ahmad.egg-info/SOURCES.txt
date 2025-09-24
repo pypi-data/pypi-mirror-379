@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/simple_calculator_ahmad.egg-info/PKG-INFO
+src/simple_calculator_ahmad.egg-info/SOURCES.txt
+src/simple_calculator_ahmad.egg-info/dependency_links.txt
+src/simple_calculator_ahmad.egg-info/entry_points.txt
+src/simple_calculator_ahmad.egg-info/top_level.txt

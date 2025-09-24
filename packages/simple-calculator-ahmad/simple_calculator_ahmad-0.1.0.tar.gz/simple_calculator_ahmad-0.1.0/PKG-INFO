@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: simple_calculator_ahmad
+Version: 0.1.0
+Summary: أداة بسيطة لسطر الأوامر للحساب (جمع، طرح، ضرب، قسمة)
+Home-page: https://example.com/simple_calculator_ahmad
+Author: أحمد الماخذي
+Author-email: ahmad@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# simple_calculator_ahmad
+
+حاسبة بسيطة لسطر الأوامر مكتوبة بالبايثون (جمع، طرح، ضرب، قسمة).
+
+التشغيل محلياً:
+- python -m simple_calculator_ahmad.cli
+
+بعد التثبيت:
+- simple-calculator
+
+المؤلف: أحمد الماخذي
