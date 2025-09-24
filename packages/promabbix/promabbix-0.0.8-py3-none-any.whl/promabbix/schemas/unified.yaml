@@ -1,0 +1,351 @@
+title: Alert Configuration Schema
+description: JSON Schema for unified YAML alert configuration format combining alerts, zabbix, and wiki sections
+type: object
+required:
+  - groups
+  - zabbix
+additionalProperties: false
+properties:
+  additionalProperties: false
+  groups:
+    type: array
+    items: false
+    prefixItems:
+      - type: object
+        additionalProperties: false
+        required: ["name", "rules"]
+        properties:
+          name:
+            type: string
+            enum: ['recording_rules']
+            description: |
+              Predefined key value *name* with enum values:
+              * recording_rules
+          rules:
+            type: array
+            items:
+              type: object
+              required: ["expr", "record"]
+              additionalProperties: false
+              properties:
+                expr:
+                  type: string
+                  description: PromQL expression to evaluate (recording_rules)
+                record:
+                  type: string
+                  description: |-
+                    Predefined key value *record*. A record should have a unique value for all record list.
+                    Available delimiter: `:`. The maximum value length is 160 chars.
+                    Example: wrike_log_events_total:syslog_level:3
+                  minLength: 3
+                  maxLength: 160
+                labels:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  description: Key-value pairs to attach metadata to alerts
+      - type: object
+        required: ["name", "rules"]
+        properties:
+          name:
+            type: string
+            description: |
+              Predefined key value *name* with enum values:
+              * alerting_rules
+            enum: ['alerting_rules']
+          rules:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required: ["alert", "expr"]
+              properties:
+                expr:
+                  type: string
+                  description: PromQL expression to evaluate (recording_rules) or Zabbix expression (alerting_rules)
+                alert:
+                  type: string
+                  description: Referring to recording_rules.record
+                  minLength: 3
+                  maxLength: 160
+                for:
+                  type: string
+                  description: Optional duration the expression must be true before firing the alert
+                labels:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  description: Key-value pairs to attach metadata to alerts
+                annotations:
+                  type: object
+                  additionalProperties: false
+                  description: Key-value pairs for alert description and summary
+                  properties:
+                    description:
+                      type: string
+                      description: Alert description
+                    summary:
+                      type: string
+                      description: Alert description
+  prometheus:
+    type: object
+    additionalProperties: false
+    properties:
+      api:
+        type: object
+        required:
+          - url
+        properties:
+          url:
+            type: string
+            format: uri
+            description: Prometheus/VictoriaMetrics API endpoint
+      labels_to_zabbix_macros:
+        type: array
+        items:
+          type: object
+          required:
+            - pattern
+            - value
+          properties:
+            pattern:
+              type: string
+              description: Regex pattern to match in alert templates
+            value:
+              type: string
+              description: Zabbix macro replacement value
+      query_chars_encoding:
+        type: array
+        items:
+          type: object
+          required:
+            - char
+            - encode
+          properties:
+            char:
+              type: string
+              maxLength: 1
+            encode:
+              type: string
+  promabbix:
+    type: object
+    additionalProperties: false
+    properties:
+      zabbix_depend_item_preprocessing:
+        type: string
+        description: JSONPath expression for dependent item preprocessing
+      zabbix_master_item_preprocessing:
+        type: string
+        description: JavaScript code for master item preprocessing
+  zabbix:
+    type: object
+    additionalProperties: false
+    properties:
+      template:
+        type: string
+        description: Zabbix template name
+      name:
+        type: string
+        description: Human-readable template name
+      labels:
+        type: object
+        additionalProperties:
+          type: string
+      lld_filters:
+        type: object
+        required:
+          - filter
+        additionalProperties: false
+        properties:
+          filter:
+            type: object
+            required:
+              - conditions
+              - evaltype
+            additionalProperties: false
+            properties:
+              conditions:
+                type: array
+                minItems: 1
+                items:
+                  type: object
+                  required:
+                    - formulaid
+                    - macro
+                    - value
+                  additionalProperties: false
+                  properties:
+                    formulaid:
+                      type: string
+                      pattern: ^[A-Z]$
+                      description: Single uppercase letter A-Z
+                    macro:
+                      type: string
+                      pattern: ^\{#[A-Z0-9_]+\}$
+                      description: LLD macro like {#LABEL_NAME}
+                    value:
+                      type: string
+                      description: Regex pattern or macro reference
+                    operator:
+                      type: string
+              evaltype:
+                type: string
+                enum:
+                  - AND
+                  - OR
+                description: How to combine multiple conditions
+      macros:
+        type: array
+        items:
+          type: object
+          required:
+            - macro
+            - value
+          additionalProperties: false
+          properties:
+            macro:
+              type: string
+              description: Zabbix macro like {$THRESHOLD} or {$THRESHOLD:"context"}
+            value:
+              type: [string, number]
+              description: Macro value
+            description:
+              type: string
+              description: Human-readable macro description
+      tags:
+        type: array
+        items:
+          type: object
+          required:
+            - tag
+            - value
+          additionalProperties: false
+          properties:
+            tag:
+              type: string
+              minLength: 1
+              description: Tag name
+            value:
+              type: string
+              description: Tag value
+      hosts:
+        type: array
+        items:
+          type: object
+          required:
+            - host_name
+            - visible_name
+            - host_groups
+            - link_templates
+          additionalProperties: false
+          properties:
+            host_name:
+              type: string
+              pattern: ^[a-zA-Z0-9._-]+$
+              description: Zabbix host name
+            visible_name:
+              type: string
+              minLength: 1
+              description: Human-readable host name
+            host_groups:
+              type: array
+              items:
+                type: string
+                minLength: 1
+              description: List of Zabbix host groups
+            link_templates:
+              type: array
+              items:
+                type: string
+              description: List of template names to link to this host
+            status:
+              type: string
+              enum:
+                - enabled
+                - disabled
+              default: enabled
+              description: Host monitoring status
+            state:
+              type: string
+              enum:
+                - present
+                - absent
+              default: present
+              description: Whether host should exist or be removed
+            proxy:
+              type: [string, "null"]
+              description: Zabbix proxy name or null for direct monitoring
+            macros:
+              type: array
+              items:
+                type: object
+                required:
+                  - macro
+                  - value
+                additionalProperties: false
+                properties:
+                  macro:
+                    type: string
+                    description: Zabbix macro like {$THRESHOLD} or {$THRESHOLD:"context"}
+                  value:
+                    type: [string, number]
+                    description: Macro value
+                  description:
+                    type: string
+                    description: Human-readable macro description
+              description: Host-specific macro overrides
+  wiki:
+    type: object
+    additionalProperties: false
+    properties:
+      templates:
+        type: object
+        additionalProperties: false
+        properties:
+          wrike_alert_config:
+            type: object
+            properties:
+              templates:
+                type: array
+                items:
+                  type: object
+                  required:
+                    - name
+                    - title
+                  additionalProperties: false
+                  properties:
+                    name:
+                      type: string
+                      minLength: 1
+                      description: Template identifier
+                    title:
+                      type: string
+                      minLength: 1
+                      description: Template display title
+      knowledgebase:
+        type: object
+        additionalProperties: false
+        properties:
+          alerts:
+            type: object
+            additionalProperties: false
+            properties:
+              alertings:
+                type: object
+                patternProperties:
+                  "^[a-zA-Z][-a-zA-Z:_0-9]*$":  # any alert key (e.g., kube_metrics_lag, opensearch_cluster_health_red)
+                    type: object
+                    required:
+                      - title
+                      - content
+                    properties:
+                      title:
+                        type: string
+                        minLength: 1
+                        description: Alert documentation title
+                      content:
+                        type: string
+                        minLength: 1
+                        description: Alert documentation content
+                additionalProperties: false
+                description: Documentation for each alert rule by alert name
