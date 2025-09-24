@@ -1,0 +1,7 @@
+duck_client/__init__.py,sha256=jWzejgVk9TgdoFxBIKbhnJE7_gGKO8EjLlqveO6joLQ,217
+duck_client/_db.py,sha256=CwNrnd-mlZfSTKgQxJ-kfe3UyCRA_m4GlIhriGQTk8o,25311
+duck_client/db.py,sha256=Td0oBeGUUSBpdz_N8FIadgCgbPkjPYXPh9UmUpfOEm4,41998
+duck_client/error.py,sha256=3HQF5gN1OWRQGaeszcEQjUnerBb3CFL91C29O4m_4TM,78
+duck_client-0.1.27.dist-info/METADATA,sha256=LlAIZkpPVrx7lno7vUtdsq0b_nhkBUmHYYJPbdSaSz0,5505
+duck_client-0.1.27.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+duck_client-0.1.27.dist-info/RECORD,,
