@@ -1,0 +1,13 @@
+kbot_client/__init__.py,sha256=KX8nUDheoooq66-AnqqfumjuKpkg0a3bYOzX-sOD888,95
+kbot_client/callback_chat.py,sha256=chXk-ufKsjVtBd_MvCZsxaeR8NOY0Q0Z7VOdLhhPqxk,6573
+kbot_client/chatbot_client/__init__.py,sha256=m4_Pzop5NLnlr__G7ct0jt_qVRGjs1lSdZBS1r6cT3Q,1117
+kbot_client/chatbot_client/chat_client.py,sha256=_p2yq920oEny2dR5ZIrSYej4X5krpGcsj7oP6MvrnbI,7805
+kbot_client/chatbot_client/chat_client_2.py,sha256=xOzSONBIG2d1W4X_fAfvEfX0ZRJHL-jHnJJtu9K8Gi4,8413
+kbot_client/client.py,sha256=VuDs5LRXqg582KrF1X9w8thGgOoQY5jGswS-iK8-Rrk,10929
+kbot_client/client_group.py,sha256=8ytoj7zw57yHppMI2loMiko4PSqyTE8GHWfxBlmCT-8,541
+kbot_client/folder_sync.py,sha256=APIjkzIUUrypCHmhSggc3bXtUURiANQNzeVUQeTZN0Q,4159
+kbot_client/test.py,sha256=m5OxMPUOFouCUdFl4Ul2J57Tbp5QxMBUau60PS0iEKE,593
+kbot_py_client-2.1.2.dist-info/LICENSE,sha256=hrwZLRMGGJT0NRKG-zkI4dnbZVtz9CKWkDuP0Q5MrXQ,1065
+kbot_py_client-2.1.2.dist-info/METADATA,sha256=9y7OurGgh6BX9iQPkF9focv2fIsuWAGCtLaJZpVRBho,10001
+kbot_py_client-2.1.2.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+kbot_py_client-2.1.2.dist-info/RECORD,,
