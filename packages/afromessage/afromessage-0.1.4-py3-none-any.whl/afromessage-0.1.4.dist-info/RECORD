@@ -1,0 +1,14 @@
+afromessage/__init__.py,sha256=J6PuA3p_IuqWCymA377pUoCwqb6sU4NFAeI8hlqQ1H8,172
+afromessage/client.py,sha256=5Zg35ZRk2ObTTdIORU1j4WO0_cArg3bkNuSSB3tdgrw,1705
+afromessage/otp.py,sha256=bIyTHs_-hBOklvPCN2XK-WG1t_l8aVTMcQixB2E5w0s,1525
+afromessage/sms.py,sha256=jJh81zV54YXmkTQVolfirUOwK_NAz_8yUUCt3KJzfEw,2552
+afromessage/utils.py,sha256=louGRXvqad1l77jbTbN3TqS1S4TvdR4JjMjolhI78qw,1391
+afromessage/models/__init__.py,sha256=yMMMluA-0JQVfxPmfyTUCN9u4cdaENxYMp8qZ5jikVo,202
+afromessage/models/otp_models.py,sha256=a2ywLbz8KlTHDanrQzb1j89uPF6zMnsLiPUwIacmiVU,3055
+afromessage/models/sms_models.py,sha256=JgSWgDBSxqJxMDbpCvSW-yJHFnqDZd3TSRFxaoRf21k,5772
+afromessage-0.1.4.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+afromessage-0.1.4.dist-info/METADATA,sha256=5bVq-11L3HSJ80d3ZDKkxcnaKx5WW2c-VfVv2vpJ52A,6952
+afromessage-0.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+afromessage-0.1.4.dist-info/entry_points.txt,sha256=XkQBDT-KKSbeQUxf1fvXrHoWUae9mbSd87ORl119Nfo,58
+afromessage-0.1.4.dist-info/top_level.txt,sha256=RnGlfoYqJAawumEqro_JNui-Xt6UzwimmSrEBis0unc,12
+afromessage-0.1.4.dist-info/RECORD,,
