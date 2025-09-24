@@ -1,0 +1,6 @@
+pydantic>=2.11.7
+pydantic-core>=2.33.2
+browser-use>=0.5.11
+fastmcp>=2.12.3
+uvicorn[standard]>=0.35.0
+starlette>=0.27
