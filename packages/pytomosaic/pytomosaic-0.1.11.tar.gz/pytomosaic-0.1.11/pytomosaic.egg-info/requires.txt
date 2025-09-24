@@ -1,0 +1,5 @@
+tqdm
+numpy
+Pillow
+requests
+os
