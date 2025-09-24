@@ -1,0 +1,2 @@
+[console_scripts]
+mcgt = mcgt.__main__:main
