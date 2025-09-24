@@ -1,0 +1,9 @@
+README.rst
+setup.py
+bf_metric.egg-info/PKG-INFO
+bf_metric.egg-info/SOURCES.txt
+bf_metric.egg-info/dependency_links.txt
+bf_metric.egg-info/top_level.txt
+bf_metric.egg-info/zip-safe
+scrapy_metric/__init__.py
+scrapy_metric/metric.py

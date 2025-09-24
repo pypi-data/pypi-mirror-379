@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: bf_metric
+Version: 0.1.1
+Summary: this is a tool package for metric.
+Home-page: https://github.com/pypa/sampleproject
+Author: Gie
+Author-email: 593443714@qq.com
+License: MIT
+Keywords: utils
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
