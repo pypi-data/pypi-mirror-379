@@ -1,0 +1,172 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tashan-scispark"
+version = "1.0.6"
+description = "TaShan SciSpark - Academic Research Assistant MCP Server"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "TaShan SciSpark Team"}
+]
+maintainers = [
+    {name = "TaShan SciSpark Team"}
+]
+keywords = [
+    "mcp",
+    "academic",
+    "research",
+    "papers",
+    "ai",
+    "assistant",
+    "arxiv",
+    "claude"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = [
+    # Web框架
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0",
+    "starlette>=0.27.0",
+    
+    # 异步任务队列
+    "celery>=5.3.4",
+    "redis>=5.0.1",
+    
+    # 数据处理
+    "pandas>=2.1.3",
+    "numpy>=1.25.2",
+    "openpyxl>=3.1.2",
+    
+    # HTTP请求
+    "requests>=2.31.0",
+    "httpx>=0.25.2",
+    
+    # AI/机器学习API
+    "openai>=1.3.7",
+    "dashscope==1.14.1",
+    "tiktoken>=0.5.2",
+    
+    # 多智能体框架
+    "agentscope==0.1.0",
+    
+    # 学术资源获取
+    "arxiv>=2.1.0",
+    "beautifulsoup4>=4.12.2",
+    
+    # 数据库
+    "py2neo>=2021.2.4",
+    
+    # 配置管理
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    
+    # 模板引擎
+    "jinja2>=3.1.2",
+    
+    # 系统监控
+    "psutil>=5.9.6",
+    
+    # 日志
+    "loguru==0.6.0",
+    
+    # MCP协议支持 - 添加缺失的关键依赖
+    "fastmcp>=2.0.0",
+    "mcp>=1.0.0",
+    
+    # 文件处理
+    "python-multipart>=0.0.6",
+    
+    # 其他工具库
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tashan-scispark/tashan-scispark"
+Repository = "https://github.com/tashan-scispark/tashan-scispark"
+Documentation = "https://github.com/tashan-scispark/tashan-scispark#readme"
+"Bug Tracker" = "https://github.com/tashan-scispark/tashan-scispark/issues"
+
+[project.scripts]
+tashan-scispark = "tashan_scispark.cli:main"
+tashan-scispark-mcp = "tashan_scispark.mcp_server:main"
+tashan-scispark-worker = "tashan_scispark.celery_worker:main"
+
+[tool.setuptools]
+packages = ["tashan_scispark", "tashan_scispark.app", "tashan_scispark.app.api", "tashan_scispark.app.core", "tashan_scispark.app.task", "tashan_scispark.app.utils"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["tashan_scispark"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "arxiv.*",
+    "dashscope.*",
+    "neo4j.*",
+    "celery.*",
+    "fastmcp.*",
+]
+ignore_missing_imports = true
