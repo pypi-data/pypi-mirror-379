@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: em_map_utils
+Version: 0.0.3
+Summary: Python package for creating and manipulating cryoEM maps in EMDB (mrc) map format.
+Home-page: https://github.com/ardanpat/em-map-utils.git
+Author: Ardan Patwardhan
+Author-email: ardan@ebi.ac.uk
+License: Apache License 2.0
+Description: # em_map_utils
+        Python package for create and manipulating cryoEM maps in EMDB (mrc) map format.
+        
+        ## Features
+        * Calculate and align the principal axes of a structure.
+        * Calculate the lengths of a structure along the principal axes.
+        * Calculate the asphericity (shape) of a structure.
+        * Calculate line (1D) projections from a map.
+        * Threshold masked and unmasked maps.
+        * Rotate maps.
+        * Use multiprocessing to efficiently download multiple maps from EMDB.
+        * Generate synthetic maps containing a cuboid, cylinder or sphere.
+        
+        ## [API documentation](https://em-map-utils.readthedocs.io/en/latest/index.html)
+        
+        ## Installation
+        For multiprocessing to work on a Mac, set:
+        OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+        
+        in your .zshrc file or equivalent and source it.
+        
+        ## In development - prerelease version!
+        
+Keywords: 3D,CCP4 format,EMDB,EMDB format,MRC format,asphericity,contour,covariance,cryo EM,cryo electron microscopy,cuboid,cylinder,download map,electron cryo microscopy,electron microscopy data bankelectron microscopy,line projection,map,map alignment,map principal axes,multiprocessingrotate,sphere,structure shape,structure size,structure,threshold,volume
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Description-Content-Type: text/markdown
