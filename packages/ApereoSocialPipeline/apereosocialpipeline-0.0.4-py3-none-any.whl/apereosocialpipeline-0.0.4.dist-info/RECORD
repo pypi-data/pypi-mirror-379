@@ -1,0 +1,8 @@
+apereo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apereo/pipelines/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apereo/pipelines/groups.py,sha256=OeuJB_lOo0DW0ubZpxTh6cvO-yFPu-LINlu6k-okjac,3184
+apereo/pipelines/test_groups.py,sha256=k2KdueSHMEb23PS-A1f7oxDWOJKmieNCjIeFHDKT5JU,6908
+apereosocialpipeline-0.0.4.dist-info/METADATA,sha256=mXLNEzZ1PvRMad8FzQwRSPDyOoZ2C_Amqrh4mQ6UO2Y,2628
+apereosocialpipeline-0.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+apereosocialpipeline-0.0.4.dist-info/top_level.txt,sha256=T5Vkr-v9YZKX4TRbHRt_4PRKTjsWApnO0JYEDDP43QM,7
+apereosocialpipeline-0.0.4.dist-info/RECORD,,
