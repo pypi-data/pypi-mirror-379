@@ -1,0 +1,13 @@
+affine
+h5py
+ipyleaflet
+leafmap
+numpy
+rioxarray
+xarray
+
+[all]
+prismatools[extra]
+
+[extra]
+pandas
