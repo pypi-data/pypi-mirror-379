@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "travelpy"
+version = "0.1.0"
+description = "Python wrapper for TRAVEL particle tracking simulations"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Veliko Dimov", email = "veliko.dimov@protonmail.com"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.20",
+    "matplotlib>=3.5",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "pytest-mock",
+    "pytest-timeout",
+    "hypothesis",
+]
+dev = [
+    "ruff",
+    "black",
+    "pre-commit",
+]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+]
+
+[project.urls]
+Homepage = "https://github.com/velikodimov/travelpy"
+Repository = "https://github.com/velikodimov/travelpy"
+Documentation = "https://velikodimov.github.io/travelpy"
+Issues = "https://github.com/velikodimov/travelpy/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]  # Let Black handle line length
+line-length = 88
+target-version = "py38"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+pythonpath = ["src"]
+addopts = "--cov=travelpy --cov-report=term-missing"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
