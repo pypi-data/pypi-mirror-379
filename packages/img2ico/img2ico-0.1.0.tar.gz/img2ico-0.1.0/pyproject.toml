@@ -1,0 +1,65 @@
+# https://packaging.python.org/ja/latest/guides/writing-pyproject-toml/
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "img2ico"
+dynamic = ["version"]
+dependencies = ["pillow>=10.0.0"]
+requires-python = ">= 3.8"
+authors = [{ name = "yu9824" }]
+maintainers = [{ name = "yu9824" }]
+description = "img2ico provides an easy way to generate favicon .ico files from various image formats."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+keywords = ["icon"]
+# https://pypi.org/classifiers/
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+] # https://pypi.org/classifiers/
+
+[project.optional-dependencies]
+test = ["pytest"]
+dev = ["build"]
+svg = ["cairosvg>=2.7.0"]
+optional = ["colorlog", "tqdm"]
+docs = ["sphinx", "sphinx_rtd_theme", "sphinx-markdown-tables", "recommonmark"]
+gui = ["TkEasyGUI"]
+
+[project.urls]
+Homepage = "https://github.com/yu9824/img2ico"
+Documentation = "https://yu9824.github.io/img2ico/"
+PyPI = "https://pypi.org/project/img2ico/"
+Source = "https://github.com/yu9824/img2ico"
+Tracker = "https://github.com/yu9824/img2ico/issues"
+Changelog = "https://github.com/yu9824/img2ico/blob/main/CHANGELOG.md"
+
+[project.scripts]
+img2ico = "img2ico.__main__:entrypoint"
+
+# [project.gui-scripts]
+# img2ico-gui = "img2ico:main_gui"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.dynamic]
+version = { attr = "img2ico.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+
+[tool.ruff]
+line-length = 79
+indent-width = 4
+
+[tool.ruff.lint]
+unfixable = ["F401"]
