@@ -1,0 +1,13 @@
+/.venv
+/.idea
+**/__pycache__/**
+/test_dir/.pypp/cpp/.clang-format
+/test_dir/.pypp/cpp/build/
+/test_dir/.pypp/cpp/pypp/
+/test_dir/.venv
+/test_dir/.idea
+/test_dir2
+/pypp_cli/test_dir3
+/test_dir/.pypp/file_timestamps.json
+dist/
+pypp_cli.egg-info/
