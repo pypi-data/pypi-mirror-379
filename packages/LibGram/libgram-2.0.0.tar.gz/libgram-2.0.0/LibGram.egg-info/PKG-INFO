@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: LibGram
+Version: 2.0.0
+Summary: Simple and powerful data management library with decorators
+Home-page: https://github.com/yourusername/gramlib
+Author: GramLib Team
+Author-email: gramlib@telegram.com
+Project-URL: Bug Reports, https://github.com/yourusername/gramlib/issues
+Project-URL: Source, https://github.com/yourusername/gramlib
+Keywords: database,async,decorators,simple,json,gram
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
