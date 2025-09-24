@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: sdm-ore
+Version: 0.1.0
+Summary: Loader that assembles a zstd-sharded binary asset and restores the original file
+Author: OREYH
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: sdm-ore-shard01==0.1.0
+Requires-Dist: zstandard>=0.22.0
+
+# sdm-ore
+Loader for shards: sdm-ore-shard01
+Restores `SDM.zip` via ensure_asset().

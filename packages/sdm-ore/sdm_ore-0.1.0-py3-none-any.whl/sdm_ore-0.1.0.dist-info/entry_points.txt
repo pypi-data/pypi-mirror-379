@@ -1,0 +1,2 @@
+[console_scripts]
+install-asset = sdm_ore.install_asset:main
