@@ -1,0 +1,44 @@
+name: Publish Python 🐍 distributions 📦 to PyPI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-n-publish:
+    name: Build and publish Python 🐍 distributions 📦 to PyPI
+    runs-on: ubuntu-latest
+    # PyPI Trusted Publishing用の権限設定
+    permissions:
+      id-token: write
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # 全履歴取得
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+    - name: Install pypa/build
+      run: >-
+        python -m
+        pip install
+        build
+        --user
+    - name: Remove old build artifacts
+      run: rm -rf dist/
+    - name: Build a binary wheel and a source tarball
+      run: >-
+        python -m
+        build
+        --sdist
+        --wheel
+        --outdir dist/
+        .
+    # - name: Publish distribution 📦 to Test PyPI
+    #   uses: pypa/gh-action-pypi-publish@release/v1
+    #   with:
+    #     repository-url: https://test.pypi.org/legacy/
+    - name: Publish distribution 📦 to PyPI
+      if: "!github.event.release.prerelease"
+      uses: pypa/gh-action-pypi-publish@release/v1

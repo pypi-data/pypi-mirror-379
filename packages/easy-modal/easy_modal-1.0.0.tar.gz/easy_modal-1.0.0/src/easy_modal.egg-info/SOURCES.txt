@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/pypi.yml
+src/easy_modal/__init__.py
+src/easy_modal/gui.py
+src/easy_modal/tui.py
+src/easy_modal.egg-info/PKG-INFO
+src/easy_modal.egg-info/SOURCES.txt
+src/easy_modal.egg-info/dependency_links.txt
+src/easy_modal.egg-info/top_level.txt

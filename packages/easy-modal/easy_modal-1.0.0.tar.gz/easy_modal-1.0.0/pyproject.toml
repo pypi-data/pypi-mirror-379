@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy-modal"
+description = "A library for easily implementing dialog boxes and file pickers."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Keisuke Magara", email = "61485115+kei-mag@users.noreply.github.com" },
+]
+keywords = ["dialog box", "file picker", "modal", "gui", "tui", "cui", "tkinter"]
+classifiers = ["Programming Language :: Python :: 3"]
+requires-python = ">=3.9"
+dependencies = []
+version = "1.0.0"
+
+[project.urls]
+Source = "https://github.com/kei-mag/python-easy-modal"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+profile = "black"
+line_length = 119
+
+[tool.ruff]
+line-length = 119
+
+[tool.mypy]
+mypy_path = ["src"]
+disallow_incomplete_defs = true
