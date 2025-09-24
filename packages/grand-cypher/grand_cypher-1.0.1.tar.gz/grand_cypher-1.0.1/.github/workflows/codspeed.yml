@@ -1,0 +1,39 @@
+name: codspeed-benchmarks
+
+on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  benchmarks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Cache virtual environment
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/pyproject.toml') }}
+          restore-keys: |
+            venv-${{ runner.os }}-
+
+      - name: Set up uv venv and install dependencies
+        run: |
+          uv venv
+          uv pip install pytest pytest-cov pytest-codspeed
+          uv pip install -e .
+
+      - name: Run benchmarks
+        uses: CodSpeedHQ/action@v3
+        with:
+          run: .venv/bin/pytest . --codspeed
