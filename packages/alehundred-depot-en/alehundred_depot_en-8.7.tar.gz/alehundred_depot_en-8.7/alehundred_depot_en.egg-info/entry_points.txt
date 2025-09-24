@@ -1,0 +1,2 @@
+[console_scripts]
+alehundred-depot-en = alehundred_depot_en.main:main

@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+alehundred_depot_en/__init__.py
+alehundred_depot_en/main.py
+alehundred_depot_en/p4_manager.py
+alehundred_depot_en/tui.py
+alehundred_depot_en/tui_help.py
+alehundred_depot_en/tui_status.py
+alehundred_depot_en/tui_user.py
+alehundred_depot_en/utils.py
+alehundred_depot_en.egg-info/PKG-INFO
+alehundred_depot_en.egg-info/SOURCES.txt
+alehundred_depot_en.egg-info/dependency_links.txt
+alehundred_depot_en.egg-info/entry_points.txt
+alehundred_depot_en.egg-info/requires.txt
+alehundred_depot_en.egg-info/top_level.txt
