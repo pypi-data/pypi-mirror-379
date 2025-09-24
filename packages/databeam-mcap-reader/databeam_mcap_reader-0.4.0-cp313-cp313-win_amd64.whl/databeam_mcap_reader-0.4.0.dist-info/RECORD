@@ -1,0 +1,10 @@
+databeam_mcap_reader/__init__.py,sha256=A1bLkhm1rMI_F1WmYt0HI-tDQiNtV8wYBJibpSRtQUk,444
+databeam_mcap_reader/__init__.pyi,sha256=oc4rWkeTOWoawZBGcX__pVKZ47Al-K60mQaLgWMpM8w,430
+databeam_mcap_reader/_core.cp313-win_amd64.pyd,sha256=nD3e55NmN-BXzUrLVuEEXEhScaet9Jhq0KFEXVKiGZU,541184
+databeam_mcap_reader/collector.py,sha256=StVsj0NTkj91GWkoYC6nYFzuLqXF-3MVP4lEU7cI9Fg,7317
+databeam_mcap_reader/mcap_cli.exe,sha256=6FtN0eSbiG5iwBPNiLY2XxWTQFS1_-lhW2QtA7pkiKg,19097600
+databeam_mcap_reader/reader.py,sha256=qoRBv5PazM_LtRdhRRPbfkBDqx3F8TfZHcfkeGC3dpo,24008
+databeam_mcap_reader-0.4.0.dist-info/METADATA,sha256=JuNwWVOWMmjsLbEUZwzizmZyl-ZAwDvqgpaFDHwy71A,5916
+databeam_mcap_reader-0.4.0.dist-info/WHEEL,sha256=vkL3wTIkhjZa3RmEXX20hldNp6Q8qtwRjrXW6K5sw_Q,106
+databeam_mcap_reader-0.4.0.dist-info/licenses/LICENSE.txt,sha256=Vo40HU-zHlp4JhLjSlReLeF9CAia-30KD1Abf_IIyyE,1107
+databeam_mcap_reader-0.4.0.dist-info/RECORD,,
