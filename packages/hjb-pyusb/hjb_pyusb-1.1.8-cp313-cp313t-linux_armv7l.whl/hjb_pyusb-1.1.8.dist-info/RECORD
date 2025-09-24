@@ -1,0 +1,10 @@
+hjb_pyusb/__init__.py,sha256=AncHq5ncAoqLaXYQ2_5ezmuM0xeZhd-FzuVxlXQfbhQ,1503
+hjb_pyusb/_lib_build/hjb_pyusb/_pyusb.so,sha256=MJQK628EJfcToKUYUEa5os5w_QeiPmtH79fFyh7mQXg,31996
+hjb_pyusb/_lib_build/hjb_pyusb/libutcl-2.so,sha256=MFzhue77cY78-iaAR6YZ4rPNG7WyE6bFa7QscvbX4Ak,11180
+hjb_pyusb/_lib_build/hjb_pyusb/libutcl-2.so.0,sha256=MFzhue77cY78-iaAR6YZ4rPNG7WyE6bFa7QscvbX4Ak,11180
+hjb_pyusb/_lib_build/hjb_pyusb/libutcl-2.so.0.0.0,sha256=MFzhue77cY78-iaAR6YZ4rPNG7WyE6bFa7QscvbX4Ak,11180
+hjb_pyusb/_lib_build/hjb_pyusb/pyusb.py,sha256=ApIYPGarHTguciKwqVKsvMN6CRkpXEIJ7hZ-SvRu0ys,3668
+hjb_pyusb-1.1.8.dist-info/METADATA,sha256=1D4ifIIlkRnMozWa-ETbGf8vJsCGzdWypaQGsos6340,532
+hjb_pyusb-1.1.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+hjb_pyusb-1.1.8.dist-info/top_level.txt,sha256=JNOCSHuQujxPhXe7_ouI3_CAmhnGpNnCsa541Tessts,10
+hjb_pyusb-1.1.8.dist-info/RECORD,,
