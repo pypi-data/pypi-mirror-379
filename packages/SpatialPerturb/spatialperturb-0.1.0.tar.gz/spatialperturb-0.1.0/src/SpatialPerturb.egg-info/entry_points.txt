@@ -1,0 +1,2 @@
+[console_scripts]
+spatialperturb = spatialperturb.cli:app
