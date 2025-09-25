@@ -1,0 +1,5 @@
+geno_reader-0.1.0.dist-info/METADATA,sha256=hnyrWr0AP4zdtRwJFMOtGYkp_RuN9k2hdprN6y6EmZU,263
+geno_reader-0.1.0.dist-info/WHEEL,sha256=gZaViF7zym0NE1Rwv6RkZrDM7gwu4p13n4N6WRcS0d4,104
+geno_reader/__init__.py,sha256=2MXAYYMJpKplcAXAzarnqz8ShuN40HmF8Y-mra5xEDU,127
+geno_reader/geno_reader.cpython-313-darwin.so,sha256=ol6wFjVFhbxg_o-Fj7A0i9UMFTI6oCpxGVzQYiy_1Yw,818240
+geno_reader-0.1.0.dist-info/RECORD,,
