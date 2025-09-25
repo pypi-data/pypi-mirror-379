@@ -1,0 +1,11 @@
+antiseptic-0.2.0.dist-info/METADATA,sha256=z6oR71AMYIV1NxCZGWUmzJMx_aNtDrnJs7y_T9IqEog,1965
+antiseptic-0.2.0.dist-info/WHEEL,sha256=bgTkYy6WDcrBUcn3yPMKrJLK9WbS_1gd7qfpNa1sC6A,106
+antiseptic-0.2.0.dist-info/entry_points.txt,sha256=LtolX6OtpxJ7PSG72DPCMS-odZCxiL1En1kKdyZRSNU,45
+antiseptic-0.2.0.dist-info/licenses/LICENSE.txt,sha256=QcRUmEzLA-FbkP7NSsZEBd3bG2Hoqrp-aq225Uo0RW4,34021
+antiseptic/__init__.py,sha256=Vhb5gyN_yCPE2uMxV_WMLzGpjwIC5uyJsLiqA68dvGM,661
+antiseptic/_lowlevel.cpython-38-x86_64-linux-gnu.so,sha256=DE5TpSAiivGaftcERQQzMV6-PE4Mm-HtojtYxQ5G0EI,33358904
+antiseptic/_lowlevel.pyi,sha256=_9KrzD-vfmW4PmNoLkHAaUcBbQCEIDzHGweKXjUUkWA,329
+antiseptic/assets/dictionaries/en.txt,sha256=QpWTFNpgeVwph5uzJNFS11xSWTGe5_7TL8Nv9ufcObY,1576775
+antiseptic/assets/logo/logo-dark.svg,sha256=7zIf9CsrpHVy4EjrhtMjdOKFEeRP5K-pnrQ9mt9sM6A,6916
+antiseptic/assets/logo/logo-light.svg,sha256=EjsEfspDJwNuvMcMDZHWsNLOwMBlI8i7usCmMlgq3eE,6896
+antiseptic-0.2.0.dist-info/RECORD,,
