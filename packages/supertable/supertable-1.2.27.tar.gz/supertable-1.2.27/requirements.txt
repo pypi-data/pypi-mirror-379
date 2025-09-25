@@ -1,0 +1,28 @@
+# Base (provider-agnostic) dependencies only
+polars~=1.27.1
+python-dateutil~=2.9.0.post0
+setuptools~=78.1.0
+duckdb~=1.2.2
+pandas~=2.2.3
+sqlglot~=26.14.0
+
+# Pin NumPy to <2.0 for Synapse compatibility (sklearn, scipy, matplotlib, etc.)
+numpy>=1.26.4,<2.0
+
+colorlog~=6.9.0
+python-dotenv~=1.0.1
+
+# Ensure ListViewType is available and avoid old Arrow
+pyarrow>=21,<23
+
+# Avoid mlflow-skinny conflict warning in Synapse images
+pytz<2024
+
+# NOTE:
+# Redis and cloud SDKs are NOT installed by default.
+# Install them via extras, e.g.:
+#   pip install 'supertable[minio]'   -> minio backend + redis
+#   pip install 'supertable[s3]'      -> AWS S3 backend + redis
+#   pip install 'supertable[azure]'   -> Azure Blob backend + redis
+#   pip install 'supertable[gcp]'     -> GCS backend + redis
+#   pip install 'supertable[all-cloud]' -> all cloud backends (each brings redis)
