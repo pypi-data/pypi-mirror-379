@@ -1,0 +1,7 @@
+README.md
+cfcontext.py
+setup.py
+cfcontext.egg-info/PKG-INFO
+cfcontext.egg-info/SOURCES.txt
+cfcontext.egg-info/dependency_links.txt
+cfcontext.egg-info/top_level.txt
