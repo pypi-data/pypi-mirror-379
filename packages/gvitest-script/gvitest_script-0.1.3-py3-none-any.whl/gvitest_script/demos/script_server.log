@@ -1,0 +1,144 @@
+2025-09-25 14:34:37,408 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:34:37,408 - root - INFO - 文件服务器未配置，跳过图像预处理
+2025-09-25 14:34:37,409 - root - INFO - 文件服务器未配置，跳过预期结果图像预处理
+2025-09-25 14:34:37,449 - root - INFO - 已清理 2 个旧的执行结果文件
+2025-09-25 14:34:40,496 - root - INFO - 文件服务器未配置，跳过结果上传
+2025-09-25 14:43:32,860 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:43:32,861 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:43:32,906 - root - INFO - 已清理 4 个旧的执行结果文件
+2025-09-25 14:43:38,025 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step1_20250925_144336_826.png -> /static/uploads/20250925144338_bf496b09.png
+2025-09-25 14:43:38,026 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_144337_818.png -> /static/uploads/20250925144337_7a9919e1.png
+2025-09-25 14:43:38,030 - root - INFO - 结果文件上传成功 [execution_screenshots]: before_step2_20250925_143439_134.png -> script_basic_execution_screenshots_before_step2_20250925_143439_134.png
+2025-09-25 14:43:38,039 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_142708_501.png -> script_basic_execution_screenshots_after_step1_20250925_142708_501.png
+2025-09-25 14:43:38,049 - root - INFO - 结果文件上传成功 [execution_images]: 0_20250925_143250_617.png -> script_basic_execution_images_0_20250925_143250_617.png
+2025-09-25 14:43:38,049 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_144334_381.png -> /static/uploads/20250925144337_7a9919e1.png
+2025-09-25 14:43:38,050 - root - INFO - 结果文件使用缓存 [execution_images]: 0_20250925_143439_058.png -> /static/uploads/20250925144338_7c47dd99.png
+2025-09-25 14:43:38,058 - root - INFO - 结果文件上传成功 [execution_images]: 2_20250925_142709_887.png -> script_basic_execution_images_2_20250925_142709_887.png
+2025-09-25 14:43:38,065 - root - INFO - 结果文件上传成功 [execution_images]: 1_20250925_143440_255.png -> script_basic_execution_images_1_20250925_143440_255.png
+2025-09-25 14:43:38,068 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_143440_133.png -> /static/uploads/20250925144338_5fd53956.png
+2025-09-25 14:43:38,071 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_142709_567.png -> /static/uploads/20250925144338_8662aa20.png
+2025-09-25 14:43:38,071 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_144334_943.png -> /static/uploads/20250925144337_7a9919e1.png
+2025-09-25 14:43:38,075 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_143254_060.png -> script_basic_execution_screenshots_after_step1_20250925_143254_060.png
+2025-09-25 14:43:38,081 - root - INFO - 结果文件上传成功 [execution_images]: 0_20250925_141257_245.png -> script_basic_execution_images_0_20250925_141257_245.png
+2025-09-25 14:43:38,083 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_142706_159.png -> /static/uploads/20250925144338_8662aa20.png
+2025-09-25 14:43:38,087 - root - INFO - 结果文件使用缓存 [execution_images]: 0_20250925_142706_465.png -> /static/uploads/20250925144338_8662aa20.png
+2025-09-25 14:43:38,088 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_144337_599.png -> /static/uploads/20250925144337_7a9919e1.png
+2025-09-25 14:43:38,091 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_141258_593.png -> script_basic_execution_screenshots_after_step1_20250925_141258_593.png
+2025-09-25 14:43:38,093 - root - INFO - 结果文件使用缓存 [execution_images]: 1_20250925_143440_368.png -> /static/uploads/20250925144338_5fd53956.png
+2025-09-25 14:43:38,096 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_141300_051.png -> /static/uploads/20250925144338_c15cadb1.png
+2025-09-25 14:43:38,097 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_144337_709.png -> /static/uploads/20250925144337_7a9919e1.png
+2025-09-25 14:43:38,098 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_141257_387.png -> /static/uploads/20250925144338_c15cadb1.png
+2025-09-25 14:43:38,100 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_141257_016.png -> /static/uploads/20250925144338_c15cadb1.png
+2025-09-25 14:43:38,102 - root - INFO - 结果文件使用缓存 [execution_images]: 0_20250925_144334_788.png -> /static/uploads/20250925144337_7a9919e1.png
+2025-09-25 14:43:38,103 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_141259_940.png -> /static/uploads/20250925144338_c15cadb1.png
+2025-09-25 14:43:38,105 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_142706_600.png -> /static/uploads/20250925144338_8662aa20.png
+2025-09-25 14:43:38,106 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_143438_902.png -> /static/uploads/20250925144338_7c47dd99.png
+2025-09-25 14:43:38,108 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_143250_955.png -> /static/uploads/20250925144338_ce7c0dcd.png
+2025-09-25 14:43:38,110 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_143250_184.png -> /static/uploads/20250925144338_ce7c0dcd.png
+2025-09-25 14:43:38,112 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_141259_822.png -> /static/uploads/20250925144338_c15cadb1.png
+2025-09-25 14:43:38,114 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_142709_725.png -> /static/uploads/20250925144338_8662aa20.png
+2025-09-25 14:43:38,115 - root - INFO - 任务 script_basic 结果上传完成，共处理 31 个文件（新上传: 8, 缓存复用: 23）：
+2025-09-25 14:43:38,115 - root - INFO -   执行截图: 18 个文件
+2025-09-25 14:43:38,115 - root - INFO -   其他图像: 13 个文件
+2025-09-25 14:44:30,662 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:44:30,662 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:44:30,708 - root - INFO - 已清理 4 个旧的执行结果文件
+2025-09-25 14:44:35,630 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_144336_826.png -> script_basic_execution_screenshots_after_step1_20250925_144336_826.png
+2025-09-25 14:44:35,640 - root - INFO - 结果文件上传成功 [execution_images]: 2_20250925_144337_818.png -> script_basic_execution_images_2_20250925_144337_818.png
+2025-09-25 14:44:35,646 - root - INFO - 结果文件上传成功 [execution_screenshots]: before_step2_20250925_143439_134.png -> script_basic_execution_screenshots_before_step2_20250925_143439_134.png
+2025-09-25 14:44:35,653 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_142708_501.png -> script_basic_execution_screenshots_after_step1_20250925_142708_501.png
+2025-09-25 14:44:35,669 - root - INFO - 结果文件上传成功 [execution_images]: 0_20250925_143250_617.png -> script_basic_execution_images_0_20250925_143250_617.png
+2025-09-25 14:44:35,671 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_144334_381.png -> /static/uploads/20250925144435_c2cb9fb8.png
+2025-09-25 14:44:35,672 - root - INFO - 结果文件使用缓存 [execution_images]: 0_20250925_143439_058.png -> /static/uploads/20250925144435_1d767e43.png
+2025-09-25 14:44:35,682 - root - INFO - 结果文件上传成功 [execution_images]: 2_20250925_142709_887.png -> script_basic_execution_images_2_20250925_142709_887.png
+2025-09-25 14:44:35,692 - root - INFO - 结果文件上传成功 [execution_images]: 1_20250925_143440_255.png -> script_basic_execution_images_1_20250925_143440_255.png
+2025-09-25 14:44:35,697 - root - INFO - 结果文件上传成功 [execution_screenshots]: checkpoint_before_step1_20250925_144432_198.png -> script_basic_execution_screenshots_checkpoint_before_step1_20250925_144432_198.png
+2025-09-25 14:44:35,698 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_144432_544.png -> /static/uploads/20250925144435_7946e89e.png
+2025-09-25 14:44:35,700 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_143440_133.png -> /static/uploads/20250925144435_16be0f5b.png
+2025-09-25 14:44:35,704 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_142709_567.png -> /static/uploads/20250925144435_f881330a.png
+2025-09-25 14:44:35,706 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_144334_943.png -> /static/uploads/20250925144435_c2cb9fb8.png
+2025-09-25 14:44:35,710 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_143254_060.png -> script_basic_execution_screenshots_after_step1_20250925_143254_060.png
+2025-09-25 14:44:35,716 - root - INFO - 结果文件上传成功 [execution_images]: 0_20250925_141257_245.png -> script_basic_execution_images_0_20250925_141257_245.png
+2025-09-25 14:44:35,718 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_142706_159.png -> /static/uploads/20250925144435_f881330a.png
+2025-09-25 14:44:35,721 - root - INFO - 结果文件使用缓存 [execution_images]: 0_20250925_142706_465.png -> /static/uploads/20250925144435_f881330a.png
+2025-09-25 14:44:35,722 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_144435_000.png -> /static/uploads/20250925144435_7946e89e.png
+2025-09-25 14:44:35,725 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_144435_274.png -> /static/uploads/20250925144435_7946e89e.png
+2025-09-25 14:44:35,729 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_144337_599.png -> /static/uploads/20250925144435_c2cb9fb8.png
+2025-09-25 14:44:35,731 - root - INFO - 结果文件使用缓存 [execution_images]: 0_20250925_144432_413.png -> /static/uploads/20250925144435_7946e89e.png
+2025-09-25 14:44:35,738 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_141258_593.png -> script_basic_execution_screenshots_after_step1_20250925_141258_593.png
+2025-09-25 14:44:35,740 - root - INFO - 结果文件使用缓存 [execution_images]: 1_20250925_143440_368.png -> /static/uploads/20250925144435_16be0f5b.png
+2025-09-25 14:44:35,742 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_141300_051.png -> /static/uploads/20250925144435_4e1e3685.png
+2025-09-25 14:44:35,745 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_144337_709.png -> /static/uploads/20250925144435_c2cb9fb8.png
+2025-09-25 14:44:35,747 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_141257_387.png -> /static/uploads/20250925144435_4e1e3685.png
+2025-09-25 14:44:35,749 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_141257_016.png -> /static/uploads/20250925144435_4e1e3685.png
+2025-09-25 14:44:35,751 - root - INFO - 结果文件使用缓存 [execution_images]: 0_20250925_144334_788.png -> /static/uploads/20250925144435_c2cb9fb8.png
+2025-09-25 14:44:35,753 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_141259_940.png -> /static/uploads/20250925144435_4e1e3685.png
+2025-09-25 14:44:35,755 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_142706_600.png -> /static/uploads/20250925144435_f881330a.png
+2025-09-25 14:44:35,756 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_143438_902.png -> /static/uploads/20250925144435_1d767e43.png
+2025-09-25 14:44:35,768 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_144434_055.png -> script_basic_execution_screenshots_after_step1_20250925_144434_055.png
+2025-09-25 14:44:35,771 - root - INFO - 结果文件使用缓存 [execution_screenshots]: before_step1_20250925_143250_955.png -> /static/uploads/20250925144435_9cdac57a.png
+2025-09-25 14:44:35,773 - root - INFO - 结果文件使用缓存 [execution_screenshots]: checkpoint_before_step1_20250925_143250_184.png -> /static/uploads/20250925144435_9cdac57a.png
+2025-09-25 14:44:35,774 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_144435_136.png -> /static/uploads/20250925144435_7946e89e.png
+2025-09-25 14:44:35,777 - root - INFO - 结果文件使用缓存 [execution_screenshots]: after_step2_20250925_141259_822.png -> /static/uploads/20250925144435_4e1e3685.png
+2025-09-25 14:44:35,779 - root - INFO - 结果文件使用缓存 [execution_images]: 2_20250925_142709_725.png -> /static/uploads/20250925144435_f881330a.png
+2025-09-25 14:44:35,781 - root - INFO - 任务 script_basic 结果上传完成，共处理 38 个文件（新上传: 12, 缓存复用: 26）：
+2025-09-25 14:44:35,781 - root - INFO -   执行截图: 22 个文件
+2025-09-25 14:44:35,781 - root - INFO -   其他图像: 16 个文件
+2025-09-25 14:47:37,774 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:47:37,774 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:47:42,412 - root - INFO - 结果文件上传成功 [execution_screenshots]: checkpoint_before_step1_20250925_144739_254.png -> script_basic_execution_screenshots_checkpoint_before_step1_20250925_144739_254.png
+2025-09-25 14:47:42,423 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_144741_068.png -> script_basic_execution_screenshots_after_step1_20250925_144741_068.png
+2025-09-25 14:47:42,424 - root - INFO - 任务 script_basic 结果上传完成，共处理 7 个文件（新上传: 2, 缓存复用: 5）：
+2025-09-25 14:47:42,424 - root - INFO -   执行截图: 4 个文件
+2025-09-25 14:47:42,424 - root - INFO -   其他图像: 3 个文件
+2025-09-25 14:51:10,608 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:51:10,609 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:51:10,609 - root - INFO - 🌐 启动纯WebSocket服务器: 127.0.0.1:8090
+2025-09-25 14:51:10,609 - root - INFO - 📡 WebSocket端点:
+2025-09-25 14:51:10,609 - root - INFO -    - 全局日志流: ws://127.0.0.1:8090/logs/realtime
+2025-09-25 14:51:10,609 - root - INFO -    - 任务日志流: ws://127.0.0.1:8090/logs/{script_id}/realtime
+2025-09-25 14:51:10,609 - root - INFO -    - 全局状态流: ws://127.0.0.1:8090/status/realtime
+2025-09-25 14:51:10,609 - root - INFO -    - 任务状态流: ws://127.0.0.1:8090/status/{script_id}/realtime
+2025-09-25 14:51:10,609 - websockets.server - INFO - server listening on 127.0.0.1:8090
+2025-09-25 14:51:10,609 - root - INFO - ✅ WebSocket服务器已启动: 127.0.0.1:8090
+2025-09-25 14:51:12,623 - websockets.server - INFO - connection open
+2025-09-25 14:51:12,624 - root - INFO - 🌐 全局日志WebSocket连接: client=127.0.0.1:60617
+2025-09-25 14:51:17,637 - websockets.server - INFO - connection open
+2025-09-25 14:51:17,637 - root - INFO - 📡 日志WebSocket连接: script_id=script_basic, client=127.0.0.1:60628
+2025-09-25 14:51:17,915 - websockets.server - INFO - connection rejected (400 Bad Request)
+2025-09-25 14:51:17,915 - websockets.server - INFO - connection closed
+2025-09-25 14:51:22,644 - websockets.server - INFO - connection open
+2025-09-25 14:51:22,645 - root - INFO - 🌐 全局状态WebSocket连接: client=127.0.0.1:60651
+2025-09-25 14:51:27,649 - websockets.server - INFO - connection open
+2025-09-25 14:51:27,650 - root - INFO - 📊 状态WebSocket连接: script_id=script_basic, client=127.0.0.1:60671
+2025-09-25 14:51:27,749 - websockets.server - INFO - connection open
+2025-09-25 14:51:27,750 - root - INFO - 🌐 全局日志WebSocket连接: client=127.0.0.1:60672
+2025-09-25 14:51:32,654 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:51:32,654 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:51:33,241 - root - ERROR - 发送全局日志更新失败: received 1000 (OK); then sent 1000 (OK)
+2025-09-25 14:51:34,243 - root - ERROR - 发送全局增量日志内容失败: received 1000 (OK); then sent 1000 (OK)
+2025-09-25 14:51:34,744 - root - ERROR - 发送全局增量日志内容失败: received 1000 (OK); then sent 1000 (OK)
+2025-09-25 14:51:35,745 - root - ERROR - 发送全局增量日志内容失败: received 1000 (OK); then sent 1000 (OK)
+2025-09-25 14:51:36,747 - root - ERROR - 发送全局增量日志内容失败: received 1000 (OK); then sent 1000 (OK)
+2025-09-25 14:51:36,759 - asyncio - WARNING - Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 57569 is closed
+2025-09-25 14:52:18,103 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:52:18,103 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:52:18,148 - root - INFO - 已清理 4 个旧的执行结果文件
+2025-09-25 14:52:54,812 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:52:54,812 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:52:54,857 - root - INFO - 已清理 4 个旧的执行结果文件
+2025-09-25 14:53:16,101 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:53:16,101 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:53:21,022 - root - INFO - 结果文件上传成功 [execution_images]: 0_20250925_145317_781.png -> script_basic_execution_images_0_20250925_145317_781.png
+2025-09-25 14:53:21,034 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_145319_673.png -> script_basic_execution_screenshots_after_step1_20250925_145319_673.png
+2025-09-25 14:53:21,035 - root - INFO - 任务 script_basic 结果上传完成，共处理 7 个文件（新上传: 2, 缓存复用: 5）：
+2025-09-25 14:53:21,035 - root - INFO -   其他图像: 3 个文件
+2025-09-25 14:53:21,035 - root - INFO -   执行截图: 4 个文件
+2025-09-25 14:53:28,775 - gvitest_script.core.template_engine - INFO - 模板引擎初始化完成，模板目录: [PosixPath('/Users/ken/Documents/xibu/HMI/script_server/src/gvitest_script/templates')]
+2025-09-25 14:53:28,775 - root - INFO - 脚本生成服务已初始化，工作空间: /Users/ken/Documents/xibu/HMI/script_server/script_workspace
+2025-09-25 14:53:28,817 - root - INFO - 已清理 4 个旧的执行结果文件
+2025-09-25 14:53:33,553 - root - INFO - 结果文件上传成功 [execution_images]: 2_20250925_145333_289.png -> script_basic_execution_images_2_20250925_145333_289.png
+2025-09-25 14:53:33,562 - root - INFO - 结果文件上传成功 [execution_screenshots]: after_step1_20250925_145332_357.png -> script_basic_execution_screenshots_after_step1_20250925_145332_357.png
+2025-09-25 14:53:33,566 - root - INFO - 任务 script_basic 结果上传完成，共处理 7 个文件（新上传: 2, 缓存复用: 5）：
+2025-09-25 14:53:33,566 - root - INFO -   其他图像: 3 个文件
+2025-09-25 14:53:33,566 - root - INFO -   执行截图: 4 个文件
