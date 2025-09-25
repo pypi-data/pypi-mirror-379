@@ -1,0 +1,17 @@
+yapcad/__init__.py,sha256=CUEd7EOL-ne31ggDprsi4lwLWMV1SRV5KYqkuDTdxrQ,400
+yapcad/combine.py,sha256=uC8QsFRGa198rIkKhNIOm-GhuDvezlGcX3nhEY2N2YE,13993
+yapcad/drawable.py,sha256=RKG8emMC0E6__-L89zrBVxAB1JiFUPA51cAweCu7zP8,14605
+yapcad/ezdxf_drawable.py,sha256=pZGLS9Dw108GG6ItahszSkkRopYLtgP9CDVWxHCrMrs,5948
+yapcad/geom.py,sha256=YSqG-C7Ti9VCkSyIC3VggJImx_tAlyxtN38SNUdGM5Q,108843
+yapcad/geom3d.py,sha256=W6gmo8UifgFwy3HHQvgvvgp96l2ahMqTVyTmbXqNEd8,2865
+yapcad/geometry.py,sha256=H-ahJG2nsXvV__6TqWf_ReRWVFZdL4bBPPPTYEnPvi0,2564
+yapcad/poly.py,sha256=Fku0ynBzYUSb5UZA6WY0yLPmDTc_Eg6BVE3DUKqiJqo,21447
+yapcad/pyglet_drawable.py,sha256=dV9dcwzZRlPwhx18Dv0CX7wQOCxnxwk4Si_FL9heNs8,18475
+yapcad/xform.py,sha256=It95Ql9JpMFqk95X8MvAmqYpCQu0VKp-JShmRTC0Ztk,9538
+yapcad-0.3.0.dist-info/licenses/AUTHORS.rst,sha256=JzvJA3p1aSIOTaaB3aCtB-ZrUQrVm869gdROUV5bRh8,84
+yapcad-0.3.0.dist-info/licenses/LICENSE,sha256=NkGvciCD5MEHmCtnivAi2PqcEhBYAkSAarP-bWAoknM,1071
+yapcad-0.3.0.dist-info/licenses/LICENSE.txt,sha256=FyT_Hxn5USuJ1Mu3-4Ou4T2x-Dzfiy06ZOnWkfdJ33o,1081
+yapcad-0.3.0.dist-info/METADATA,sha256=zfvxqcMOeJJsH2yp5Mw4TJkGeuyIAbeQ507n4f7PTdY,18999
+yapcad-0.3.0.dist-info/WHEEL,sha256=JNWh1Fm1UdwIQV075glCn4MVuCRs0sotJIq-J6rbxCU,109
+yapcad-0.3.0.dist-info/top_level.txt,sha256=NAtnfsyeALrvhI63FGS3_TEUh26OKRvnm1_lCOOgjKA,7
+yapcad-0.3.0.dist-info/RECORD,,
