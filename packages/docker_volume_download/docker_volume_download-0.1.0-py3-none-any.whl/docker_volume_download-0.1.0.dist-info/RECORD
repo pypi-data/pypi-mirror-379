@@ -1,0 +1,7 @@
+docker_volume_download/__init__.py,sha256=2yx5CO0ogpOwxmmow-ADF8VvRco6kWA5dcsWiejVKjU,1962
+docker_volume_download/__main__.py,sha256=zc3jF5_PWD2l8-HO1-gp7X8hghTDPWs_SPlXosfSmCc,2138
+docker_volume_download/config.py,sha256=YeCn9aSiqf6ECdLfIaaQank1Oo1kxq9nv17Qpu5H6ME,1254
+docker_volume_download-0.1.0.dist-info/METADATA,sha256=T-exwhhd64vPWnqpc9jOT3PV-PWEjhehJv6cz2yDJCo,1382
+docker_volume_download-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+docker_volume_download-0.1.0.dist-info/entry_points.txt,sha256=9g9HO-5usD15hzzeNoK5ZmvpLanjtJaR_efmbPlwJPo,62
+docker_volume_download-0.1.0.dist-info/RECORD,,

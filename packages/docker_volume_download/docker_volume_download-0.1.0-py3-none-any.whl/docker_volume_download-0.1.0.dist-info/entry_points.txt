@@ -1,0 +1,2 @@
+[console_scripts]
+dvpy = docker_volume_download.__main__:main
