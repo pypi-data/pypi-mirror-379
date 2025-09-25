@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+WordCountLibRS.egg-info/PKG-INFO
+WordCountLibRS.egg-info/SOURCES.txt
+WordCountLibRS.egg-info/dependency_links.txt
+WordCountLibRS.egg-info/entry_points.txt
+WordCountLibRS.egg-info/top_level.txt
+word_count_lib/__init__.py
+word_count_lib/__main__.py
+word_count_lib/core.py
