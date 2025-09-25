@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: msfastpbkdf2
+Version: 0.6.0
+Summary: A faster implementation of PBKDF2 with Python 3.12+ support
+Home-page: https://github.com/Ayrx/python-fastpbkdf2
+Author: Terry Chia
+Author-email: terrycwk1994@gmail.com
+License: BSD or Apache License, Version 2.0
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Security :: Cryptography
+License-File: LICENSE.APACHE
+License-File: LICENSE.BSD
+Requires-Dist: cffi>=1.1
+Requires-Dist: six>=1.4.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
