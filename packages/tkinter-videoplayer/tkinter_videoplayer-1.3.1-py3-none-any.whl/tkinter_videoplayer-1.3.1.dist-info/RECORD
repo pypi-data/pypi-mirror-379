@@ -1,0 +1,13 @@
+tkinter_videoplayer/__init__.py,sha256=6JU59cgwwwLIWj5wws3z6PP9VfKQdSawCMhr-kcjgQQ,32
+tkinter_videoplayer/controls.py,sha256=loFrFJDZ3kxUDz3_C0h4pJxp1By_AZDTHBebLLfGkGQ,7949
+tkinter_videoplayer/events.py,sha256=GnAccP4cCl74dlI7mdKj7dLzFg87d6Bz3lrNFJwoH6Y,761
+tkinter_videoplayer/player.py,sha256=3G4WSJfFuC8Y2PGtqBU33rV4lTpzyJNht95_AUtuSP0,5214
+tkinter_videoplayer/theme.py,sha256=qVZiFqbiBpdj6e5w107Aum9QlOF73UOqLBi3WhtfYMI,221
+tkinter_videoplayer/video.py,sha256=WW3AUOkN3e_0me1g6uUQD5x6dOZrV2E__zNlzNN3Y2w,11536
+tkinter_videoplayer/media/pause.png,sha256=IKpw5cSaEaqS6gtzANc-EGbT7PCVHiWU7C26ir7g8h4,248
+tkinter_videoplayer/media/play.png,sha256=TzSjXufdE410n3ITRCQgNXZdF4KjbLsMvfkSR5srvMk,272
+tkinter_videoplayer-1.3.1.dist-info/licenses/LICENSE,sha256=RGDlJQEPUhsjUJAhPYBJuBvOF2cDozW6bH1Hn5gpV6c,1062
+tkinter_videoplayer-1.3.1.dist-info/METADATA,sha256=yMeK6omIqio2oyWsugh-GtpqxPPj_1qcAyH_4xGfBMQ,5290
+tkinter_videoplayer-1.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tkinter_videoplayer-1.3.1.dist-info/top_level.txt,sha256=yrvYb5zuRsJYccu8IspenhYSlhk_cFl8SboL20LlGVY,20
+tkinter_videoplayer-1.3.1.dist-info/RECORD,,
