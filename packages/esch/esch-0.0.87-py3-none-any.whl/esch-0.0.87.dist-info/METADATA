@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: esch
+Version: 0.0.87
+Summary: esch (v.) : to turn matricies into high quality svg (animations)
+Author-email: Noah Syrkis <noah@syrkis.com>
+License-File: LICENSE
+Requires-Python: <3.12,>=3.11
+Requires-Dist: darkdetect>=0.8.0
+Requires-Dist: einops<0.9,>=0.8.0
+Requires-Dist: ipython<9,>=8.29.0
+Requires-Dist: ipywidgets>=8.1.7
+Requires-Dist: jupyterlab>=4.4.7
+Requires-Dist: matplotlib<4,>=3.9.2
+Requires-Dist: pdf2image<2,>=1.17.0
+Requires-Dist: svglib<2,>=1.5.1
+Requires-Dist: svgwrite<2,>=1.4.3
+Requires-Dist: tqdm<5,>=4.66.5
+Description-Content-Type: text/markdown
+
+# esch
+
+`esch` is a layered visualization library, supporting SVG animation.
+
+```python
+import esch
+import numpy as np
+
+x = np.random.randn((3, 100, 100))  # <- init data
+e = esch.init(x.shape)              # <- make a plot object with shape (small_multiples x height x width)
+e = esch.tile(e, x)                 # <- add data to the e object
+```
+
+`esch` is best used by making a function constructuor
+
+```python
+def tile_fn(x):
+    return esch.tile(esch.init(x.shape), x)
+```
+
+TODO:
+
+0. [ ] sims stuff variable pos.
+1. [ ] Default font size to 12pt across sizes
+2. [x] Add mesh plot for
+3. [ ] Known issue is that for animation, fill is determined by first value
+       (and will thus not flip if sign changes during animation).
+4. [ ] Logic to infer if we have animation is dump.
+       Assumes one dim is 20x times another. Many times that is not the case
+5. [ ] Minimise svg size with rounded floats.
