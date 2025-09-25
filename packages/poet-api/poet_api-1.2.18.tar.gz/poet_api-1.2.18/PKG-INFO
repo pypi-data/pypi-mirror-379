@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: poet-api
+Version: 1.2.18
+Summary: Requests for all
+License: BSD-3-Clause
+License-File: LICENSE
+Author: raratiru
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: aiohttp (>=3.11.13,<4.0.0)
+Requires-Dist: filelock (>=3.12.3,<4.0.0)
+Requires-Dist: pyrate-limiter (>=2,<3)
+Description-Content-Type: text/markdown
+
+# poet-api
+Requests with Limiter
+
+## class Communicate
+  ### __init__
+    
+  * `session: requests.Session` (**Required**)
+  * `caller_name: str  (limiter id)` (**Required**)
+  * `limiter: Optional[Limiter] = None` (Default limiter uses `FileLockSQLiteBucket`56 requests/minute)
+  * `stream: bool = False`
+  * `timeout: Union[float, tuple] = 5`
+  * `allow_redirects: bool = True`
+
+  ### send
+  * `method: str` (**Required**)
+  * `url: str` (**Required**)
+  * `headers: Optional[dict] = None` (default headers are sent if None)
+  * `**kwargs` (accepted by `requests.Request`)
+
+## Examples
+- Simplest:
+  ```
+  from api import Communicate
+  from requests import Session
+  
+  session = Session()
+  
+  response = Communicate(session=session, caller_name="simple_john").send(
+      method="GET", url="https://john-site.com"
+  )
+  ```
+
+- With limiter:
+
+  ```
+  from api import Communicate
+  from pyrate_limiter import Duration, FileLockSQLiteBucket, Limiter, RequestRate
+  from requests import Session
+  
+  session = Session()
+  limiter = Limiter(RequestRate(0.5, Duration.SECOND), bucket_class=FileLockSQLiteBucket)
+  headers = {"User-Agent": ("My Dear Agent v.1")}
+  
+  response = Communicate(session=session, caller_name="John", limiter=limiter).send(
+      method="GET", url="https://mysite.com", headers=headers
+  )
+  ```
+
