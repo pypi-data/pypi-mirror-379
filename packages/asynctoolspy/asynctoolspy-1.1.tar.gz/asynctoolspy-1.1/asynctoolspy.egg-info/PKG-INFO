@@ -1,0 +1,121 @@
+Metadata-Version: 2.4
+Name: asynctoolspy
+Version: 1.1
+Summary: asynctoolspy is a set of simple tools to speed up Python async development. It includes the appoint_limit_async decorator to limit how often an async function can be called by setting max attempts and intervals, useful for APIs with rate limits. The decorator handles errors with retries and pauses to improve reliability. It also features AsyncIterWrapper, an async iterator supporting optional delays and sync/async callbacks for flexible data processing.
+Home-page: https://gitlab.com/asurnovsurnov/asynctoolspy/
+Author: Aleksei Surnov
+Author-email: asurnovsurnov@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# asynctoolspy
+
+Asynctoolspy is a collection of simple tools to speed up Python async development. \
+This project contains a **appoint_limit_async** decorator that limits the frequency of calls to the function to which it is applied.\
+The decorator allows you to set the maximum number of attempts to call a function and the time interval between them.\
+This is useful when the API has restrictions on the number of requests per unit of time.\
+The decorator wraps the function call in a try-except block, which allows you to handle possible exceptions that occur when executing the request.\
+This can be useful when dealing with unreliable or temporarily unavailable APIs, where retries can help ensure the request succeeds.If an error occurs and the number of attempts does not exceed the set limit, the decorator pauses and re-calls the function.\
+Now features **AsyncIterWrapper** an async iterator for any iterable, supporting optional delays and sync/async callbacks for flexible data processing.
+
+
+
+### Requirements
+
+Python >=3.8.
+
+
+### Install
+
+```pip install asynctoolspy```  or  ```uv install asynctoolspy```
+
+
+
+### Usage example №1
+
+```
+from asynctoolspy import appoint_limit_async
+
+
+class MyClient:
+    @appoint_limit_async(limit=5, interval=10, pause=2)
+    async def my_method(self):
+          # Your code for making an API request or I/O operation.
+
+@appoint_limit_async(limit=5, interval=10, pause=2)
+async def my_function():
+      # your code for making I/O operation
+```
+
+
+
+### Usage example №2
+
+```
+import asyncio 
+import httpx 
+import sys
+from asynctoolspy import AsyncIterWrapper
+
+
+async def check_url(url):
+    methods = AsyncIterWrapper(['GET', 'HEAD', 'OPTIONS', 'POST', 'PUT', 'DELETE', 'PATCH'])
+    available_methods = {}
+
+    async with httpx.AsyncClient() as client:
+        async for method in methods:
+            try:
+                response = await client.request(method, url)
+                if response.status_code != 405:
+                    available_methods[method] = response.status_code
+            except httpx.RequestError:
+                continue
+
+    return available_methods
+
+async def main(urls):
+    results = {}
+    async for url in urls:
+        if url.startswith(('http://', 'https://')):
+            results[url] = await check_url(url)
+        else:
+            print(f'String "{url}" is not url.')
+
+    print(results)
+
+if __name__ == "__main__":
+
+    with open('data_link.txt', 'r') as file:
+        lines = [line.strip() for line in file]
+    urls_data = AsyncList(lines)
+    asyncio.run(main(urls_data))
+
+```
+
+
+
+### Usage example №3
+
+```
+from asynctoolspy import AsyncIterWrapper
+
+async def multiply(x):
+     await asyncio.sleep(0.1)
+     return x * 2
+
+data = [1, 2, 3]
+
+async for item in AsyncIterWrapper(data, delay=0.5, callback=multiply):
+     print(item)  # Outputs 2, 4, 6 with a 0.5 second delay between items
+```
+
