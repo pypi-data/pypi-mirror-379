@@ -1,0 +1,31 @@
+[project]
+name = "brotli-stubs"
+version = "1.1.0"
+requires-python = ">=3.8"
+description = "Type stubs for the brotli library"
+readme = "README.md"
+authors = [
+  { name = "Thomas Carroll", email = "tcarroll@snufk.in" },
+]
+license = { file = "LICENSE.md" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Typing :: Stubs Only", # This classifier is important!
+]
+dependencies = [
+    "brotli==1.1.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "brotli-stubs"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.31.4",
+    "ruff>=0.13.1",
+]
