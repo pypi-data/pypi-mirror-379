@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: simplematchcalc
+Version: 0.1.0
+Summary: A simple calculator SDK for add, sub, mul, div, mod
+Author: Your Name
+Requires-Python: >=3.7
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary

@@ -1,0 +1,7 @@
+setup.py
+simplematchcalc/__init__.py
+simplematchcalc/calculator.py
+simplematchcalc.egg-info/PKG-INFO
+simplematchcalc.egg-info/SOURCES.txt
+simplematchcalc.egg-info/dependency_links.txt
+simplematchcalc.egg-info/top_level.txt
