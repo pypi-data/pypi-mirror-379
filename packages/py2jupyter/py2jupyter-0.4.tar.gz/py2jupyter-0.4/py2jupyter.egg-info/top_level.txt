@@ -1,0 +1,4 @@
+dist
+htmlcov
+py2jupyter
+tests
