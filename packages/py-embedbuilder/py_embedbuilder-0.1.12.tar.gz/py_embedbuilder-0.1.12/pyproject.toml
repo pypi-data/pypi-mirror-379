@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-embedbuilder"
+version = "0.1.12"
+description = "Cool embedbuilder with support for every source, pagination and lots of QoL"
+authors = [{ name="Ypuf", email="ypuf@jpuf.xyz" }]
+readme = "README.md"
+license = "LGPL-2.1"
+requires-python = ">=3.11"
+dependencies = ["discord.py>=2.5", "pytz"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/Ypuf/embedbuilder"
+Issues = "https://github.com/Ypuf/embedbuilder/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["embedbuilder"]
