@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "niaclass"
+version = "0.2.4"
+description = "Python framework for building classifiers using nature-inspired algorithms"
+license = "MIT"
+authors = ["Luka Pečnik <lukapecnik96@gmail.com>", "Iztok Fister Jr. <iztok.fister1@um.si>"]
+keywords = ['classification', 'machine learning', 'NiaPy', 'nature-inspired algorithms', 'optimization']
+homepage = "https://github.com/firefly-cpp/NiaClass"
+repository = "https://github.com/firefly-cpp/NiaClass"
+readme = "README.md"
+include = [
+    { path="LICENSE", format="sdist" },
+    { path="CITATION.cff", format="sdist" },
+    { path="README.md", format="sdist" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14"
+niapy = "^2.5.2"
+pandas = "^2.1.1"
+numpy = "^1.26.1"
+scikit-learn = "^1.6.1"
+
+[tool.poetry.dev-dependencies]
+coveralls = "^3.0.1"
+Sphinx = "^3.5.1"
+sphinx-rtd-theme = "^0.5.1"
+autoflake = "^1.4"
+black = "^21.5b1"
+pre-commit = "^2.13.0"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
