@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: m3-django-compatibility
+Version: 1.12.0
+Summary: Библиотека обеспечения совместимости с разными версиями Django.
+Author-email: БАРС Груп <dev@bars-open.ru>
+Project-URL: Homepage, https://stash.bars-open.ru/projects/M3/repos/m3-django-compatibility
+Project-URL: Repository, https://stash.bars-open.ru/scm/m3/m3-django-compatibility.git
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.0
+Classifier: Framework :: Django :: 4.1
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: six<2,>=1.11.0
+Requires-Dist: django<5.1,>=1.4
+Provides-Extra: dev
+Requires-Dist: fabric3; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pycodestyle; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: ipdb; extra == "dev"
+Requires-Dist: pudb; extra == "dev"
+Dynamic: license-file
+
+# m3-django-compatibility
+
+`m3-django-compatibility` - это библиотека для обеспечения совместимости кода с разными версиями Django. Использование 
+инструментов библиотеки позволяет писать код, работающий без изменений в разных версиях Django.
+
+Поддерживаемые версии Django: 1.4 - 2.2.
