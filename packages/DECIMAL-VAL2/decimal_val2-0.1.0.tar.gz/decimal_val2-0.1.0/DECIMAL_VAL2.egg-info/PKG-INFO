@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: DECIMAL_VAL2
+Version: 0.1.0
+Summary: A Python package to round values to 2 decimal places with typing support.
+Author-email: Shaiju <your-email@example.com>
+License: MIT
+Project-URL: Homepage, https://pypi.org/project/DECIMAL_VAL2/
+Keywords: decimal,rounding,money,precision,math
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# DECIMAL_VAL2
+
+A simple Python package to round values to **2 decimal places** with typing support (`py.typed` included).
+
+---
+
+## 📦 Installation
+```bash
+pip install DECIMAL_VAL2

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DECIMAL_VAL2"
+version = "0.1.0"
+description = "A Python package to round values to 2 decimal places with typing support."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  { name="Shaiju", email="your-email@example.com" }
+]
+keywords = ["decimal", "rounding", "money", "precision", "math"]
+
+[tool.setuptools.package-data]
+decimal_val2 = ["py.typed"]
+
+[project.urls]
+Homepage = "https://pypi.org/project/DECIMAL_VAL2/"
