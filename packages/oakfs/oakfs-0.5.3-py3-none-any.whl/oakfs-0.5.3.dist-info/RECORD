@@ -1,0 +1,10 @@
+oakfs/__init__.py,sha256=PUDwfxBiB_6nS1expWMtka-HpmSEt3SLc-RTk4DJBSo,97
+oakfs/cli.py,sha256=C7HmS3YsTsuAshAmeSxOQFk3pQMM6ldc8K1J-h0OwQc,7100
+oakfs/filesystem.py,sha256=V56e7I3HSui57rJV6mKD_3y5sUobOtaM4aRr03DenWQ,17698
+oakfs/logroller.py,sha256=sVA3NytWawxI9GDXz7p-a_GyZeltrJD5tv5QE7yPTZU,1680
+oakfs/oak.py,sha256=Wn-9EpRn0pfvdqI3y_IIeneXZGCLsGtAsuiCYKKpziM,5588
+oakfs-0.5.3.dist-info/METADATA,sha256=NopQIR-oDqOOEqgO482P_veBVX22AYn9ZCObvbZbTAs,5948
+oakfs-0.5.3.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+oakfs-0.5.3.dist-info/entry_points.txt,sha256=dCMkwxkgh7RFEo1ixA_qhDOpXAzDewvZOyu9fUYnO1k,90
+oakfs-0.5.3.dist-info/licenses/LICENSE,sha256=8tb8dcAbhkXz8cKQSBeOo-EHlWSkzUwOts4lk7mqBt4,1091
+oakfs-0.5.3.dist-info/RECORD,,
