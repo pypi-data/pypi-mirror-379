@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: caesar_cipher_cli_wail
+Version: 0.1.0
+Summary: Simple Caesar Cipher CLI (Arabic UI)
+Author: Wael Nassar
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# caesar_cipher_cli_wail
+
+Simple Caesar Cipher CLI with Arabic UI.
+
+Author: Wael Nassar
+
+Usage (development):
+- Create and activate venv.
+- Run: `python -m caesar_cipher_cli_wail.cli`
+
+After installing the package (from wheel):
+- Run command: `caesar-cipher-wail`
+
+This package provides:
+- `encrypt(text, key)` and `decrypt(cipher_text, key)` functions.
+- A CLI interactive flow: `caesar_cipher_cli_wail.cli:main`
