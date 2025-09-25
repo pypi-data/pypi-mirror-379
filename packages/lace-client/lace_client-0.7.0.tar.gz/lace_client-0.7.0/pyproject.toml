@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lace-client"
+version = "0.7.0"
+description = "Lace SDS generator (EU AI Act Article 53 public summary) — online-only CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [{ name = "Matthew Hansen" }]
+keywords = ["AI Act", "SDS", "EU", "compliance", "docx"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Environment :: Console",
+  "License :: Other/Proprietary License",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools"
+]
+# Minimal deps for thin HTTP client
+dependencies = [
+  "click>=8.1,<9",
+  "httpx>=0.27,<0.28",
+  "PyYAML>=6,<7",
+  "pathspec>=0.12,<0.13"
+]
+
+[project.scripts]
+lace = "lace.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"lace.wizard" = ["*.yaml", "schemas/*.json"]
