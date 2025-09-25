@@ -1,0 +1,154 @@
+# TinyArgs
+
+*A micro command-line argument helper for tiny Python scripts.*
+
+TinyArgs gives you the 80/20 of CLI parsing in a few functions—no boilerplate, no dependencies. It’s perfect for quick utilities where `argparse` or `click` feel like overkill.
+
+---
+
+## ✨ Features
+
+- Parse flags in **1–3 lines** instead of 20+
+- Accepts both `--key value` and `--key=value`
+- **Types**, **defaults**, and **required** args
+- Simple boolean flags via `flag("--debug")`
+- Minimal, readable API built on `sys.argv`
+- Zero dependencies, tiny footprint
+
+---
+
+## 📦 Installation
+
+Add `tinyargs.py` to your project (or install from your own distribution, if you publish it). Then:
+
+```python
+from tinyargs import args, get, flag, TinyArgsError
+```
+
+> Tip: If you prefer a package layout, place the code in a module (e.g., `tinyargs/__init__.py`) and install locally with `pip install -e .`.
+
+---
+
+## 🚀 Quick Start
+
+### Single value with type, default, and required
+
+```python
+# script.py
+from tinyargs import get, TinyArgsError
+
+try:
+    port = get("--port", type=int, default=8000)
+    host = get("--host", default="127.0.0.1")
+    api_key = get("--api-key", required=True)  # raises TinyArgsError if missing
+    print(host, port, api_key)
+except TinyArgsError as e:
+    print(f"Error: {e}")
+    raise SystemExit(2)
+```
+
+Run it:
+
+```bash
+python script.py --host 0.0.0.0 --port=8080 --api-key secret
+```
+
+---
+
+### Boolean flag
+
+```python
+from tinyargs import flag
+verbose = flag("--verbose")  # True if provided, else False
+```
+
+CLI:
+
+```bash
+python script.py --verbose
+```
+
+---
+
+### Unpack multiple at once
+
+```python
+from tinyargs import args
+
+name, age = args(
+    "--name", "--age",
+    types={"--age": int},
+    defaults={"--age": 18}
+)
+
+print(name, age)
+```
+
+Run:
+
+```bash
+python script.py --name Alice --age=21
+```
+
+---
+
+## 🧠 API Reference
+
+### `get(key, type=str, default=None, required=False)`
+
+Fetch a single argument.
+
+- **Parameters**
+  - `key` (`str`): e.g., `"--host"`.
+  - `type` (`type`): caster for the value. Defaults to `str`. Use `int`, `float`, `bool`, etc.
+  - `default` (`Any`): returned when the key is not present (unless `required=True`).
+  - `required` (`bool`): if `True` and the key is missing, raises `TinyArgsError`.
+
+- **Returns**: casted value or default.  
+- **Raises**: `TinyArgsError` if a required key is missing or casting fails.
+
+⚠️ **Note on booleans**  
+If you set `type=bool` and pass the flag without a value (e.g., `--flag`), TinyArgs returns `True`.  
+If you pass `--flag false`, Python’s `bool("false")` is `True`—avoid that style.
+
+---
+
+### `flag(key)`
+
+Shorthand for boolean flags.
+
+- **Returns**: `True` if `--key` appears on the command line, else `False`.
+
+---
+
+### `args(*keys, types=None, defaults=None, required=None)`
+
+Fetch multiple arguments in one call and unpack them.
+
+- **Parameters**
+  - `*keys` (`str`): e.g., `"--name", "--age"`.
+  - `types` (`dict`): optional per-key type mapping, e.g. `{"--age": int}`.
+  - `defaults` (`dict`): default values per key.
+  - `required` (`list[str]`): keys that must appear.
+
+- **Returns**: tuple of parsed values in the same order as keys.  
+- **Raises**: `TinyArgsError` if a required key is missing or a cast fails.
+
+---
+
+## ⚠️ Error Handling
+
+All errors raise `TinyArgsError` with a descriptive message. Wrap calls in `try/except` for robustness.
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome!  
+Open an issue or PR with improvements, bug fixes, or new features.
+
+---
+
+## 📜 License
+
+MIT License. See [LICENSE](LICENSE) for details.
