@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "head-hunter-job-bot-auth-tool"
+version = "1.0.3"
+description = "GUI инструмент для авторизации в HeadHunter API через OAuth"
+authors = [
+    {name = "HeadHunter Job Bot", email = "noreply@example.com"}
+]
+maintainers = [
+    {name = "HeadHunter Job Bot", email = "noreply@example.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+keywords = ["headhunter", "hh", "api", "oauth", "authorization", "gui", "job", "bot"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "requests>=2.28.0",
+    "PyQt6>=6.4.0",
+    "PyQt6-WebEngine>=6.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=0.10.0",
+    "twine>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/head-hunter-job-bot-auth-tool"
+Repository = "https://github.com/your-username/head-hunter-job-bot-auth-tool"
+Documentation = "https://github.com/your-username/head-hunter-job-bot-auth-tool#readme"
+"Bug Tracker" = "https://github.com/your-username/head-hunter-job-bot-auth-tool/issues"
+
+[project.scripts]
+head-hunter-job-bot-auth-tool = "head_hunter_job_bot_auth_tool.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["head_hunter_job_bot_auth_tool*"]
+
+[tool.setuptools.package-data]
+head_hunter_job_bot_auth_tool = ["py.typed"]

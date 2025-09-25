@@ -1,0 +1,193 @@
+Metadata-Version: 2.4
+Name: head-hunter-job-bot-auth-tool
+Version: 1.0.3
+Summary: GUI инструмент для авторизации в HeadHunter API через OAuth
+Author-email: HeadHunter Job Bot <noreply@example.com>
+Maintainer-email: HeadHunter Job Bot <noreply@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 HeadHunter Job Bot
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/your-username/head-hunter-job-bot-auth-tool
+Project-URL: Repository, https://github.com/your-username/head-hunter-job-bot-auth-tool
+Project-URL: Documentation, https://github.com/your-username/head-hunter-job-bot-auth-tool#readme
+Project-URL: Bug Tracker, https://github.com/your-username/head-hunter-job-bot-auth-tool/issues
+Keywords: headhunter,hh,api,oauth,authorization,gui,job,bot
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Office/Business
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.28.0
+Requires-Dist: PyQt6>=6.4.0
+Requires-Dist: PyQt6-WebEngine>=6.4.0
+Provides-Extra: dev
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Dynamic: license-file
+
+# HeadHunter Job Bot Auth Tool
+
+[![PyPI version](https://badge.fury.io/py/head-hunter-job-bot-auth-tool.svg)](https://badge.fury.io/py/head-hunter-job-bot-auth-tool)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)(https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+GUI инструмент для авторизации в HeadHunter API через OAuth с графическим интерфейсом.
+
+## 🚀 Возможности
+
+- **Простая авторизация**: Графический интерфейс для OAuth авторизации в API hh.ru
+- **Кроссплатформенность**: Работает на Windows, macOS и Linux
+- **Автоматическое получение токена**: Выводит готовый к использованию токен в формате JSON
+- **Безопасность**: Использует официальные OAuth параметры HeadHunter API
+- **Простая установка**: Устанавливается через `pipx` одной командой
+
+## 📦 Установка
+
+### Установка через pipx (рекомендуется)
+
+#### Установка pipx (если не установлен)
+
+**На Windows:**
+
+Сначала установите Scoop:
+```powershell
+# Разрешить выполнение скриптов
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Установить Scoop
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+После установки Scoop откройте консоль заново и установите pipx:
+```cmd
+scoop install pipx
+pipx ensurepath
+
+# Перезапустите командную строку после установки
+```
+
+**На Linux/macOS:**
+```bash
+# Ubuntu/Debian
+sudo apt install pipx
+
+# macOS (через Homebrew)
+brew install pipx
+pipx ensurepath
+```
+
+#### Установка пакета
+
+**На Linux/macOS:**
+```bash
+pipx install head-hunter-job-bot-auth-tool
+```
+
+**На Windows:**
+```cmd
+pipx install head-hunter-job-bot-auth-tool
+```
+
+## 🔧 Требования
+
+- **Python**: 3.9 или выше
+- **PyQt6**: Для графического интерфейса
+- **PyQt6-WebEngine**: Для веб-компонентов
+- **requests**: Для HTTP запросов
+
+Все зависимости устанавливаются автоматически.
+
+## 🏃‍♂️ Использование
+
+### Базовое использование
+
+**Важно**: После установки утилиты перед первым запуском необходимо открыть консоль заново.
+
+После установки запустите инструмент командой:
+
+**На Linux/macOS:**
+```bash
+head-hunter-job-bot-auth-tool
+```
+
+**На Windows:**
+```cmd
+head-hunter-job-bot-auth-tool
+```
+
+### Опции командной строки
+
+**На Linux/macOS:**
+```bash
+# Показать справку
+head-hunter-job-bot-auth-tool --help
+
+# Показать версию
+head-hunter-job-bot-auth-tool --version
+```
+
+**На Windows:**
+```cmd
+# Показать справку
+head-hunter-job-bot-auth-tool --help
+
+# Показать версию
+head-hunter-job-bot-auth-tool --version
+```
+
+### Процесс авторизации
+
+1. **Запуск**: Выполните команду `head-hunter-job-bot-auth-tool`
+2. **Авторизация**: Откроется окно браузера с формой входа на hh.ru
+3. **Вход**: Введите ваши учетные данные HeadHunter
+4. **Разрешение**: Подтвердите доступ к API
+5. **Получение токена**: Токен будет выведен в консоль в формате JSON
+
+### Пример результата
+
+```json
+{
+  "access_token": "v3.r.123456789.abc...",
+  "refresh_token": "v3.r.987654321.def...",
+  "access_expires_at": 1705234567
+}
+```
+
+## 🔐 Безопасность
+
+- Инструмент использует официальные OAuth параметры HeadHunter API
+- Токены не сохраняются автоматически - вы контролируете их хранение
+- Поддерживается стандартный OAuth 2.0 flow
+- Все соединения осуществляются через HTTPS
+
+## 📄 Лицензия
+
+Этот проект распространяется под лицензией MIT. См. файл [LICENSE](LICENSE) для подробностей.
