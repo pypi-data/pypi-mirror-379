@@ -1,0 +1,15 @@
+optimal_classification_cutoffs-0.2.0.dist-info/licenses/LICENSE,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+optimal_cutoffs/__init__.py,sha256=BqRbOfN5K5AzER9rf8PR8mDISlmRgcUKfRIYCAIo57s,1851
+optimal_cutoffs/cv.py,sha256=9_J3fJec_knvfr19T1wZ_c1kxEubw9Rc5mGkoqIjREc,5156
+optimal_cutoffs/metrics.py,sha256=TTmIabeWNqC04Mv9nnamWOSh2ywxsy9Vb01ukF5nVuo,22921
+optimal_cutoffs/multiclass_coord.py,sha256=Tzy4Gz2WcSigwrRGA7wWKpgZuFhOzYhfxRv_4_XrsS4,10528
+optimal_cutoffs/optimizers.py,sha256=jjefW37B5hXNM9uBS5MUNv5HDoOQpokwrEyt7W09VD0,30987
+optimal_cutoffs/piecewise.py,sha256=voousUSOzlnLhBoUng3DKt6H1gBTvvmybHnvdhiO2Cg,17974
+optimal_cutoffs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimal_cutoffs/types.py,sha256=s0heF0zsjLvP764oVIV-eauaNb2sSl3BMXt0jApWJsY,2933
+optimal_cutoffs/validation.py,sha256=8NvKP6gVAVrdoyF27wbxBxkJytBYIALZM40V4hGoJi4,10160
+optimal_cutoffs/wrapper.py,sha256=unCogSbF6p_ppNRKBVPgxJ6k-uMwASrbt2Julbwwad0,6250
+optimal_classification_cutoffs-0.2.0.dist-info/METADATA,sha256=9T1ottGc0fwQ3UplFafNRyxRWzKsdZtJ83M0ayYDkxs,15956
+optimal_classification_cutoffs-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+optimal_classification_cutoffs-0.2.0.dist-info/top_level.txt,sha256=Vjgzvn80t_BEJJZ1ERgMsXbrg_AYLIyPDoLwx9yFdpQ,16
+optimal_classification_cutoffs-0.2.0.dist-info/RECORD,,
