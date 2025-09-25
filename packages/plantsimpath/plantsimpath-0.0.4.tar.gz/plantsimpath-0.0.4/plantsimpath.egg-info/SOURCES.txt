@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+plantsimpath/__init__.py
+plantsimpath/path.py
+plantsimpath/py.typed
+plantsimpath.egg-info/PKG-INFO
+plantsimpath.egg-info/SOURCES.txt
+plantsimpath.egg-info/dependency_links.txt
+plantsimpath.egg-info/top_level.txt
