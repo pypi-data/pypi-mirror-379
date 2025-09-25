@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: SquareRootLib
+Version: 0.1.0
+Summary: Calculate the square root of a number
+Author: Your Name
+Author-email: Your Name <you@example.com>
+License: MIT License
+        Copyright (c) 2025
+        Permission is hereby granted...
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# SquareRootLib
+مكتبة لحساب الجذر التربيعي لعدد.
+
+## التثبيت
+pip install SquareRootLib
+
+## CMD
+squarerootlib 16
+# Square root: 4.0
+
+## Python
+from square_root_lib import sqrt_number
+print(sqrt_number(16))  # 4.0

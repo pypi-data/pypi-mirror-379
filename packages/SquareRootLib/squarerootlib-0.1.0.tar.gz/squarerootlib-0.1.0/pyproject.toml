@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SquareRootLib"
+version = "0.1.0"
+description = "Calculate the square root of a number"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+squarerootlib = "square_root_lib.__main__:main"

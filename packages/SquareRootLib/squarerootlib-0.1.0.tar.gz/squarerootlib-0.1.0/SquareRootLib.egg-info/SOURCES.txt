@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+SquareRootLib.egg-info/PKG-INFO
+SquareRootLib.egg-info/SOURCES.txt
+SquareRootLib.egg-info/dependency_links.txt
+SquareRootLib.egg-info/entry_points.txt
+SquareRootLib.egg-info/top_level.txt
+square_root_lib/__init__.py
+square_root_lib/__main__.py
+square_root_lib/core.py
