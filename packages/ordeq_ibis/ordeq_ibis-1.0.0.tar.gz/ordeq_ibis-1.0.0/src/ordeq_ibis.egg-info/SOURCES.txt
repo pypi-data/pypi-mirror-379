@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/ordeq_ibis/__init__.py
+src/ordeq_ibis/_version.py
+src/ordeq_ibis/py.typed
+src/ordeq_ibis.egg-info/PKG-INFO
+src/ordeq_ibis.egg-info/SOURCES.txt
+src/ordeq_ibis.egg-info/dependency_links.txt
+src/ordeq_ibis.egg-info/requires.txt
+src/ordeq_ibis.egg-info/top_level.txt
+src/ordeq_ibis/io/__init__.py
+src/ordeq_ibis/io/parquet.py
+tests/io/conftest.py
+tests/io/test_parquet.py
