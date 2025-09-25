@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: khatab_library
+Version: 0.1
+Summary: مكتبة بسيطة تعرض رسالة ترحيب باسم خطاب
+Home-page: https://github.com/Khatab/khatab_library
+Author: Khatab
+Author-email: example@email.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
