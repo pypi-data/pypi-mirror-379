@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: prints_utils
+Version: 0.5.0
+Summary: Librería de utilidades para prints en consola con colores
+Author-email: Edinson Tunjano <juanmadiaz108@gmail.com>
+License: MIT
+Keywords: prints,colores,consola,utilidades
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlalchemy
+Dynamic: license-file
+
+# prints_utils
+
+Librería de utilidades para imprimir en consola con colores y formatos personalizados.
+
+## Instalación
+
+```bash
+pip install prints-utils
+```
+
+## Uso básico
+
+```python
+from prints_utils.prints import Prints
+
+p = Prints()
+
+# Imprimir un título en verde
+p.printTitle("Título de ejemplo", color="green")
+
+# Imprimir un subtítulo en azul
+p.printSubTitle("Subtítulo", color="blue")
+
+# Imprimir un diccionario clave-valor en magenta
+p.printDict("Clave", "Valor", color="magenta")
+
+# Imprimir un texto simple en rojo
+p.printText("Este es un texto en rojo", color="red")
+```
+
+## Métodos disponibles
+
+- `printTitle(title, color="None")`: Imprime un título centrado y resaltado.
+- `printSubTitle(subTitle, color="None")`: Imprime un subtítulo con formato.
+- `printSubTitle2(subTitle, color="None")`: Variante de subtítulo.
+- `printClass(nameClass, color="None")`: Imprime el nombre de una clase.
+- `printMethod(method, color="None")`: Imprime el nombre de un método.
+- `printDict(key, value, color="None")`: Imprime una clave y valor.
+- `printText(text, color="None")`: Imprime un texto simple.
+- `printObject(name, object, color="None")`: Imprime un objeto (dict o list).
+- `printList(title=None, request=None, color="None")`: Imprime una lista o diccionario.
+- `printError(text, error)`: Imprime un mensaje de error.
+- `printEnd()`: Imprime una línea en blanco.
+- `testColor()`: Muestra ejemplos de todos los colores y formatos.
+
+## Colores disponibles
+
+- black, red, darkred, green, darkgreen, yellow, darkyellow, blue, darkblue, magenta, darkmagenta, cyan, darkcyan, white, darkwhite, gray, none
+
+## Requisitos
+
+- Python >= 3.8
+- [SQLAlchemy](https://www.sqlalchemy.org/) (se instala automáticamente)
+
+## Licencia
+
+MIT
+
+---
+
+**Autor:** Edinson Tunjano
