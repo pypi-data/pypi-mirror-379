@@ -1,0 +1,5 @@
+aws_cloudtrail_tk/cli.py,sha256=CahMw6TlJ578cA8wzLIjR9KNM6Ar_4_4NB9PrJeCOIM,151
+aws_cloudtrail_tk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_cloudtrail_tk-0.0.0.dist-info/METADATA,sha256=kBPO1nsLf5aja-kp0q-OuP-2YqQ0lw6WdAiFT4BCNXE,431
+aws_cloudtrail_tk-0.0.0.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+aws_cloudtrail_tk-0.0.0.dist-info/RECORD,,
