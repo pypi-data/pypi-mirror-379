@@ -1,0 +1,2 @@
+[console_scripts]
+cleanuri-url-shortener-mcp = main:main
