@@ -1,0 +1,13 @@
+xcpcio/__init__.py,sha256=kjd6itqBRSQ-OT83qUJXHt81KQQDRUtaIuykzfaWXLM,121
+xcpcio/__version__.py,sha256=0Inh2IrO1TDWHZQNNWZG7RQoT8GKZUEeRoZnIhcVdWI,23
+xcpcio/constants.py,sha256=MjpAgNXiBlUsx1S09m7JNT-nekNDR-aE6ggvGL3fg0I,2297
+xcpcio/types.py,sha256=AkYby2haJgxwtozlgaPMG2ryAZdvsSc3sH-p6qXcM4g,6575
+xcpcio/ccs/__init__.py,sha256=qjkSo9lS8dJyNqiGljCnbS1cr7J8jj72pqcCzf_v0Ig,75
+xcpcio/ccs/contest_archiver.py,sha256=FKpUn1IGfa-UNf63OJ5eff7rxOEqXCvFYRLsvkMbUJc,16203
+xcpcio/ccs/model/__init__.py,sha256=cZE1q5JY-iHDEKZpsx0UZaMhH-23H4oAHaYOkW7dZ5s,43
+xcpcio/ccs/model/model_2023_06/__init__.py,sha256=OmDQZqmigBpL64LXk5lIOGoQ3Uqis8-2z6qQpOO5aJc,167
+xcpcio/ccs/model/model_2023_06/model.py,sha256=bVMDWpJTwPSpz1fHPxWrWerxCBIboH3LKVZpIZGQ2pY,15287
+xcpcio-0.63.5.dist-info/METADATA,sha256=KK0d6SVxSWCkNyD-6fYSO5GZnV2L9dT8FA_hE7o2hp0,950
+xcpcio-0.63.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+xcpcio-0.63.5.dist-info/entry_points.txt,sha256=qvzh8oDJxIHqTN-rg2lRN6xR99AqxbWnlAQI7uzDibI,59
+xcpcio-0.63.5.dist-info/RECORD,,
