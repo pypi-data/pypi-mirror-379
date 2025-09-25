@@ -1,0 +1,137 @@
+# Nitro
+
+A shared library for common utilities, including LLM management.
+
+## Installation
+
+```bash
+pip install nitrotools
+```
+
+For LLM functionality with LangChain and OpenAI support:
+
+```bash
+pip install nitrotools[llm]
+```
+
+## Usage
+
+### Core Utilities
+
+```python
+from nitro.core import hello
+
+print(hello())
+```
+
+### LLM Management
+
+Nitro provides a configurable LLM factory for easy integration with multiple providers.
+
+#### Setup
+
+1. Copy the sample config and customize it:
+
+```bash
+cp /path/to/site-packages/nitro/llm_config.yaml.sample llm_config.yaml
+# Or create llm_config.yaml in your project root (or set NITRO_CONFIG_PATH env var)
+```
+
+Example `llm_config.yaml`:
+
+```yaml
+servers:
+  llamacpp:
+    - endpoint: "http://your-llamacpp-server:11435"
+      interface: "langchain"
+      models:
+        - name: "qwen"
+          model_name: "gpt-oss-20b-Q6_K.gguf"
+          temperature: 0.7
+          max_tokens: 1000
+  openrouter:
+    endpoint: "https://openrouter.ai/api/v1"
+    api_key: "${OPENROUTER_API_KEY}"
+    interface: "openai_compatible"
+    headers:
+      HTTP-Referer: "${OPENROUTER_HTTP_REFERER}"
+      X-Title: "${OPENROUTER_X_TITLE}"
+    models:
+      - name: "grok-fast-free"
+        model: "x-ai/grok-4-fast:free"
+        temperature: 0.3
+        max_tokens: 1000
+      - name: "nemotron-nano-free"
+        model: "nvidia/nemotron-nano-9b-v2:free"
+        temperature: 0.1
+        max_tokens: 1500
+
+purposes:
+  general: "llamacpp:qwen"
+  coding: "llamacpp:qwen"
+  reasoning: "openrouter:grok-fast-free"
+  analysis: "openrouter:nemotron-nano-free"
+  assistant: "openrouter:grok-fast-free"
+```
+
+2. Set environment variables in `.env`:
+
+```bash
+OPENROUTER_API_KEY=your_key_here
+OPENROUTER_HTTP_REFERER=https://your-site.com
+OPENROUTER_X_TITLE=Your App
+LLAMACPP_BASE_URL=http://localhost:11435
+```
+
+#### Basic Usage
+
+```python
+from nitro import get_llm
+
+# Get LLM for a purpose
+llm = get_llm("coding")
+
+# Generate text
+response = llm.generate([
+    {"role": "user", "content": "Write a Python function to reverse a string."}
+])
+print(response)
+
+# Full chat response
+full_response = llm.chat([
+    {"role": "user", "content": "Explain recursion."}
+])
+print(full_response)  # Raw response object
+```
+
+#### Advanced Usage
+
+```python
+from nitro import LLMFactory
+
+factory = LLMFactory()
+
+# Health check
+status = factory.health_check()
+print(status)  # {'general': '✅ llamacpp:qwen', ...}
+
+# Direct factory usage
+llm = factory.get_llm("assistant")
+```
+
+### Testing with Real LLMs
+
+To run integration tests with real endpoints:
+
+1. Set credentials in `.env` as above.
+2. Run tests: `pytest tests/test_llm.py::TestLLMIntegration -v`
+
+Tests will skip if credentials are not provided.
+
+## Contributing
+
+Contributions are welcome!
+
+## License
+
+MIT
