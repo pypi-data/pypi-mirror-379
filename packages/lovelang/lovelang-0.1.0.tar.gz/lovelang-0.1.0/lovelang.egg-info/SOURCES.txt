@@ -1,0 +1,10 @@
+LICENSE
+README.md
+lovelang.py
+pyproject.toml
+setup.py
+lovelang.egg-info/PKG-INFO
+lovelang.egg-info/SOURCES.txt
+lovelang.egg-info/dependency_links.txt
+lovelang.egg-info/entry_points.txt
+lovelang.egg-info/top_level.txt

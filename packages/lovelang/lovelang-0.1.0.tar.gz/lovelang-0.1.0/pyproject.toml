@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lovelang"
+version = "0.1.0"
+description = "LoveLang - A Hinglish-based programming language"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Gourahari", email = "codegoura+lovelang@gmail.com"}
+]
+
+[project.scripts]
+lovelang = "lovelang:main"
