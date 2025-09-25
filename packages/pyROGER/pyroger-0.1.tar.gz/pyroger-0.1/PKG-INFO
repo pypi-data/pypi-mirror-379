@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: pyROGER
+Version: 0.1
+Summary: Implementation of phase function for asteroids in Python
+Home-page:  https://github.com/martindelosrios/pyROGER
+Author: Martin de los Rios
+Author-email:  martindelosrios13@gmail.com 
+License: The MIT License
+Keywords: pyROGER,backsplash,galaxies
+Classifier:  Development Status :: 4 - Beta
+Classifier:  Intended Audience :: Education
+Classifier:  Intended Audience :: Science/Research
+Classifier:  License :: OSI Approved :: MIT License
+Classifier:  Operating System :: OS Independent
+Classifier:  Programming Language :: Python
+Classifier:  Programming Language :: Python :: 3.8
+Classifier:  Programming Language :: Python :: Implementation :: CPython
+Classifier:  Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: mlxtend
+Requires-Dist: pandas
+Requires-Dist: joblib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# pyROGER pacakage
+## Installation
+
+As this is a dev version for installing pyROGER package you have to download the source doing:
+
+`git clone https://github.com/Martindelosrios/pyROGER.git`
+
+Then, in the pyROGER directory just do
+
+`pip install .`
+
+Soon you will be able to do
+
+`pip install pyROGER`
+
+## Tutorial
+
+In [Examples](https://github.com/Martindelosrios/pyROGER/tree/dev/EXAMPLES) you can find some examples to start playing with pyROGER
