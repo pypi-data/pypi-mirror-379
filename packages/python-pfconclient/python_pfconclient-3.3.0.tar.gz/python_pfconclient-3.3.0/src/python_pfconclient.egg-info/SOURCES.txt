@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+src/pfconclient/__init__.py
+src/pfconclient/__main__.py
+src/pfconclient/client.py
+src/pfconclient/exceptions.py
+src/python_pfconclient.egg-info/PKG-INFO
+src/python_pfconclient.egg-info/SOURCES.txt
+src/python_pfconclient.egg-info/dependency_links.txt
+src/python_pfconclient.egg-info/entry_points.txt
+src/python_pfconclient.egg-info/requires.txt
+src/python_pfconclient.egg-info/top_level.txt
+tests/test_client.py
