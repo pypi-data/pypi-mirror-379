@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: my-maths
+Version: 0.0.1
+Summary: PYPI tutorial package creation written by TeddyNote
+Author: junhyungkim
+Author-email: wnsgud4553@naver.com
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+
