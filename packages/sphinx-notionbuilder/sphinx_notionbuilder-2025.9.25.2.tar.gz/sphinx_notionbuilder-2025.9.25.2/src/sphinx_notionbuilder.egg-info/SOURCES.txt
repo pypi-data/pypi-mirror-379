@@ -1,0 +1,15 @@
+README.rst
+pyproject.toml
+src/_notion_scripts/__init__.py
+src/_notion_scripts/upload.py
+src/sphinx_notion/__init__.py
+src/sphinx_notion/py.typed
+src/sphinx_notionbuilder.egg-info/PKG-INFO
+src/sphinx_notionbuilder.egg-info/SOURCES.txt
+src/sphinx_notionbuilder.egg-info/dependency_links.txt
+src/sphinx_notionbuilder.egg-info/entry_points.txt
+src/sphinx_notionbuilder.egg-info/not-zip-safe
+src/sphinx_notionbuilder.egg-info/requires.txt
+src/sphinx_notionbuilder.egg-info/top_level.txt
+tests/test_builder.py
+tests/test_integration.py
