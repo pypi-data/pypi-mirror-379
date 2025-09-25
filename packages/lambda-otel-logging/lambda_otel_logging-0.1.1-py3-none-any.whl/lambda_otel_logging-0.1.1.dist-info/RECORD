@@ -1,0 +1,8 @@
+lambda_otel_logging/__init__.py,sha256=qxonrCTKPwRdekbxhoy81VL0EdUhiNJFVpTmSn-VQTQ,67
+lambda_otel_logging/_version.py,sha256=lFB9nR4WN0iXcp5UpfmTfw1Z2jWBDmClLEWF046NHmc,171
+lambda_otel_logging/logging.py,sha256=KKErxeO9TpdfJa70OiKlCZtE9EpU_vvM6kIxl75X15Y,5001
+lambda_otel_logging/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lambda_otel_logging-0.1.1.dist-info/METADATA,sha256=WH1vIMRcOxi--9XQ7b2CDaCby3XQqqBBhF8IaQwlQxE,1127
+lambda_otel_logging-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lambda_otel_logging-0.1.1.dist-info/licenses/LICENSE,sha256=usYrIZbd1gS6LZvndRImnOeF9IM_73-i8r-0clJAnfw,11357
+lambda_otel_logging-0.1.1.dist-info/RECORD,,
