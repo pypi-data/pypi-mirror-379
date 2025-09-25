@@ -1,0 +1,31 @@
+[project]
+name = "dosivuav-proj"
+version = "0.1.0"
+description = "A Python project for road lane detection"
+authors = [
+    {name = "wompbreaker",email = "wompbreaker@gmail.com"}
+]
+maintainers = [
+    {name = "chedadsp"},
+    {name = "igordinic"}
+]
+license = {text = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python (>=4.12.0.88,<5.0.0.0)",
+    "matplotlib (>=3.10.6,<4.0.0)",
+    "moviepy (>=2.2.1,<3.0.0)"
+]
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

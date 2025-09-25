@@ -1,0 +1,75 @@
+"""Configuration file for the project"""
+
+import os
+import pathlib
+
+current_directory = pathlib.Path(__file__).parent.resolve()
+ROOT_DIR = (current_directory.parent).resolve()
+DEBUG = False
+STORE = False
+
+# Camera calibration parameters
+ROWS = 6
+COLS = 9
+CALIBRATION_IMAGES = str(ROOT_DIR / 'camera_cal/calibration*.jpg')
+CALIBRATION_DATA_PATH = str(ROOT_DIR / 'outputs/calibration_data.npz')
+CALIBRATED = False
+
+BASE_IMAGE_NAME = 'test1'
+BASE_VIDEO_NAME = 'project_video01'
+
+# Undistorted image output path
+IMAGE_TO_UNDISTORT = str(ROOT_DIR / 'test_images/{name}.jpg')
+
+# Output path for the undistorted image
+UNDISTORTED_IMAGE_PATH = str(ROOT_DIR / 'outputs/undistorted/{name}_undistorted.jpg')
+
+# Output path for the thresholded image
+THRESHOLDED_IMAGE_PATH = str(ROOT_DIR / 'outputs/thresholded/{name}_thresholded.jpg')
+
+# Output path for the perspective transformed image
+PERSPECTIVE_IMAGE_PATH = str(ROOT_DIR / 'outputs/warped/{name}_warped.jpg')
+
+# Output path for the image with lines
+IMAGE_WITH_LINES_PATH = str(ROOT_DIR / 'outputs/lines/{name}_lines.jpg')
+
+# Output path for the final image
+FINAL_IMAGE_PATH = str(ROOT_DIR / 'outputs/final/{name}_final.jpg')
+
+# Source points
+_SRC_TOP_RIGHT = (731, 477)
+_SRC_BOTTOM_RIGHT = (1056, 689)
+_SRC_BOTTOM_LEFT = (260, 689)
+_SRC_TOP_LEFT = (556, 477)
+SRC_POINTS = [
+    _SRC_TOP_RIGHT,
+    _SRC_BOTTOM_RIGHT,
+    _SRC_BOTTOM_LEFT,
+    _SRC_TOP_LEFT
+]
+
+# Destination points
+_DST_TOP_RIGHT = (900, 0)
+_DST_BOTTOM_RIGHT = (900, 689)
+_DST_BOTTOM_LEFT = (250, 689)
+_DST_TOP_LEFT = (250, 0)
+DST_POINTS = [
+    _DST_TOP_RIGHT,
+    _DST_BOTTOM_RIGHT,
+    _DST_BOTTOM_LEFT,
+    _DST_TOP_LEFT
+]
+
+# Project video path
+PROJECT_VIDEO_PATH = str(ROOT_DIR / 'test_videos/{name}.mp4')
+
+# Output path for the project video
+VIDEO_OUTPUT_PATH = str(ROOT_DIR / 'outputs/videos/{name}_output.mp4')
+
+# Line finding parameters
+MARGIN = 100
+MINIMUM_PIXELS = 50
+
+# Pixel to meter conversion
+YM_PER_PIX = 30 / 720
+XM_PER_PIX = 3.7 / 700
