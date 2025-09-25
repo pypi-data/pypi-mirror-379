@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+langextract_azureopenai/__init__.py
+langextract_azureopenai/provider.py
+langextract_azureopenai/schema.py
+langextract_azureopenai_benjikcf.egg-info/PKG-INFO
+langextract_azureopenai_benjikcf.egg-info/SOURCES.txt
+langextract_azureopenai_benjikcf.egg-info/dependency_links.txt
+langextract_azureopenai_benjikcf.egg-info/entry_points.txt
+langextract_azureopenai_benjikcf.egg-info/requires.txt
+langextract_azureopenai_benjikcf.egg-info/top_level.txt
