@@ -1,0 +1,8 @@
+student_package/__init__.py,sha256=K3fsK_kv5i0hJA0sVNh8BoWP6aQwhPQ9DqI-YoYxHXM,204
+student_package/extended_student.py,sha256=mmpURGx2ppBQMV2zwjYwVqR5CxRcH7D5bIFDd_3gwrg,763
+student_package/student.py,sha256=wa_yXI6djNGHSK4v0uno1sAS2vS0x6ngRVkivMgOFKw,595
+student_package/student_manager.py,sha256=YlgM3dKoFnPUJKeX6RXB-Phrq30Enqb6f3E3FJn8FlY,575
+students_management-0.1.0.dist-info/METADATA,sha256=3rR0h0YaiR-XMFc8S3VcUjNzkbA5h6VsvPNh1yJb6KI,284
+students_management-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+students_management-0.1.0.dist-info/top_level.txt,sha256=b8b4i0RBp4r-n9SeBv8Dl_UcWzwBAFnPJ-wXXiIAB0c,16
+students_management-0.1.0.dist-info/RECORD,,
