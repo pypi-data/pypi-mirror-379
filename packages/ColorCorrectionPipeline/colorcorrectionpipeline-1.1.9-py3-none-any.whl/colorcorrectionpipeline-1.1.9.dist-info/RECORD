@@ -1,0 +1,17 @@
+ColorCorrectionPipeline/__init__.py,sha256=XACETl6Ee-uTD8nhcfDdF192yqkJzmBwljgdzZoNuIc,1632
+ColorCorrectionPipeline/ccp.py,sha256=qYtLzjo8Kr7Kp-V0EqQN7KswD-eFpLeqr1eKWvIK-GA,27638
+ColorCorrectionPipeline/key_functions.py,sha256=LUS5tru8kXIbaViJYyoz-lDlEGbYGpES2WNUetWc5Uo,74507
+ColorCorrectionPipeline/models.py,sha256=EOXk7t1PAmyIHS4TMIgDq7SKGmZ6Un37flzVaccSuTs,1435
+ColorCorrectionPipeline/quick_run.py,sha256=fsCyy9hBXqB9oQ1spGC81YyADsGmWT_Ut0wndQejeZs,3530
+ColorCorrectionPipeline/Configs/__init__.py,sha256=8CwlwMlx2LQYSii9YbQdKYksxo5A8gbu5vMjcTpcxsA,49
+ColorCorrectionPipeline/Configs/configs.py,sha256=bF6jrDN3aM0I1sgSp5J6biR2XBb3PjVE2MkLITY_ED4,1134
+ColorCorrectionPipeline/FFC/FF_correction.py,sha256=7dITDUe_8rVQj0IT2dDvzzX-3Dh2cod137FJa6AXAno,17727
+ColorCorrectionPipeline/FFC/__init__.py,sha256=ByA6-1nzFn7u00wFgM49dkbjmeria4OHydpLUrcYB8o,81
+ColorCorrectionPipeline/utils/__init__.py,sha256=n32vFp4IIr0BYEWRnXsKTHm4hvFQSKXbh-5lEF0EoDc,168
+ColorCorrectionPipeline/utils/logger_.py,sha256=wkPvL8OAYsuftdXlaK3VfhcKUHavSy14aB4mJfWeX9I,9610
+ColorCorrectionPipeline/utils/metrics_.py,sha256=Wqu1QK6yY7bteaTJqk-Nfxsp-jfxsc2MClR6tjnG-MQ,5811
+colorcorrectionpipeline-1.1.9.dist-info/licenses/LICENSE,sha256=kw-zhwdBa0yoRy2UlqsrGUVTrWVJCYN_TShQ0PkRPwY,1080
+colorcorrectionpipeline-1.1.9.dist-info/METADATA,sha256=zF8kDuhDVigEdFTCmwUthWcYqz6SQp8xh4NBryIalAE,13008
+colorcorrectionpipeline-1.1.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+colorcorrectionpipeline-1.1.9.dist-info/top_level.txt,sha256=2NEDZ_1wo9q4eXShYsCuomoXAbKJWQO9OEkV1QgdUUc,24
+colorcorrectionpipeline-1.1.9.dist-info/RECORD,,
