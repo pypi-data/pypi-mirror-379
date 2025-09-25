@@ -1,0 +1,11 @@
+pyturtle3d-1.0.0.dist-info/licenses/LICENSE,sha256=JzFsNT_H2dgpXyVn12SaqA2iBog-vgydUntpJIbq2z4,1110
+turtle3d/__init__.py,sha256=oYbbP-ji0YX0olPr6x5hz86hQiBK8puX6J6irod_f7U,1675
+turtle3d/camera.py,sha256=kBngFKq_YCXQT34bLNNtbrX5JQam2_Uar78A4-hD4gg,3753
+turtle3d/collision.py,sha256=fI0o6IckZQXuc_8UlCPSKtPoYeHGHnbCFH9rdXo62rk,1629
+turtle3d/engine.py,sha256=jta04kulmVEWiXtx-JNEUOjqrpT4i6lgGAty86VEJzE,11614
+turtle3d/texture.py,sha256=UqNcj-p5s-sQC_73QzFA_HYkpAXaTlbA-t5xrqMhIIM,7307
+turtle3d/vector.py,sha256=r4FHCIa0WIosw5ztPU_-fkEULl7TXMXMbqugfRLgQNU,2017
+pyturtle3d-1.0.0.dist-info/METADATA,sha256=aJ8VYzZ53CXG5zT7s7mfmcnh7z7N95_RnRnNTwdF5qU,9171
+pyturtle3d-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyturtle3d-1.0.0.dist-info/top_level.txt,sha256=gIdMTIo-ja9voo7ZH-nZ2wPfyVTeI-FNhsbisigEYJY,9
+pyturtle3d-1.0.0.dist-info/RECORD,,
