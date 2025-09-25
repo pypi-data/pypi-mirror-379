@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: emojify-asid
+Version: 0.1.0
+Summary: A smart text emojifier
+Author: Your Name
+Classifier: Programming Language :: Python :: 3
+Dynamic: author
+Dynamic: classifier
+Dynamic: summary

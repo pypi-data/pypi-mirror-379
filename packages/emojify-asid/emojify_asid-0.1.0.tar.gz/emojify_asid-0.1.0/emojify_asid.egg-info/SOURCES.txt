@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+emojify/__init__.py
+emojify/core.py
+emojify/emoji_map.py
+emojify_asid.egg-info/PKG-INFO
+emojify_asid.egg-info/SOURCES.txt
+emojify_asid.egg-info/dependency_links.txt
+emojify_asid.egg-info/entry_points.txt
+emojify_asid.egg-info/top_level.txt
+tests/test_emoji.py
