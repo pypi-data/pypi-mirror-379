@@ -1,0 +1,10 @@
+taskwarrior_scheduler/core.py,sha256=NluGL-4lo22NN_1Lo9lpaPQJvfwScuDIHx_1lAXZM_U,3958
+taskwarrior_scheduler/main.py,sha256=h8CrvJ8eI763wsIQ2iY9UW20AeiySjjeFlK7ExcFxo8,2805
+taskwarrior_scheduler/stats.py,sha256=19PumkA_saoJD0PxV1JfV2aAoPcGoE5vsT4vWf_F3Jg,2386
+taskwarrior_scheduler/timewarrior.py,sha256=ayiwcDiUjz10nzMlfjkNamnfKZbGNK7_YwtNbMs2gpc,252
+taskwarrior_scheduler/utils.py,sha256=vSceoGCfy0MQbgU147gCXDwU5FfrF9Hd6Fg7cPnwdMU,3438
+taskwarrior_scheduler-0.1.0.dist-info/METADATA,sha256=JcPq-eWJV4k710t-sjpXl5U3bvdti_nvhkcvbsIphRI,7628
+taskwarrior_scheduler-0.1.0.dist-info/WHEEL,sha256=M5asmiAlL6HEcOq52Yi5mmk9KmTVjY2RDPtO4p9DMrc,88
+taskwarrior_scheduler-0.1.0.dist-info/entry_points.txt,sha256=d_SfnNqcyUfcle3iAjOoaieEhE2xEcmvHiXhzz72t8o,98
+taskwarrior_scheduler-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+taskwarrior_scheduler-0.1.0.dist-info/RECORD,,
