@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: mcp-serializer
+Version: 0.1.0
+Summary: A serialization library for Model Context Protocol
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/mdamire/mcp-serializer
+Project-URL: Repository, https://github.com/mdamire/mcp-serializer
+Project-URL: Issues, https://github.com/mdamire/mcp-serializer/issues
+Keywords: mcp,serialization,model-context-protocol
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pre-commit>=2.0.0; extra == "dev"
+Dynamic: license-file
+
+# MCP Serializer
+
+A serialization library for Model Context Protocol.
+
+## Installation
+
+```bash
+pip install mcp-serializer
+```
+
+## Usage
+
+This package is currently in early development. More documentation will be added as features are implemented.
+
+## Development
+
+To set up for development:
+
+```bash
+# Clone the repository
+git clone https://github.com/mdamire/mcp-serializer.git
+cd mcp-serializer
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Install package in development mode
+pip install -e .
+
+# Run tests
+pytest
+
+# Run code formatting
+black src tests
+isort src tests
+
+# Run type checking
+mypy src
+```
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
