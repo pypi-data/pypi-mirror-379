@@ -1,0 +1,2 @@
+[console_scripts]
+minnumberlib = min_number_lib.__main__:main

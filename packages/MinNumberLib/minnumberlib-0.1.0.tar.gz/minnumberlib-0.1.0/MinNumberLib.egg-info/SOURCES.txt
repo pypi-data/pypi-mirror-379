@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+MinNumberLib.egg-info/PKG-INFO
+MinNumberLib.egg-info/SOURCES.txt
+MinNumberLib.egg-info/dependency_links.txt
+MinNumberLib.egg-info/entry_points.txt
+MinNumberLib.egg-info/top_level.txt
+min_number_lib/__init__.py
+min_number_lib/__main__.py
+min_number_lib/core.py

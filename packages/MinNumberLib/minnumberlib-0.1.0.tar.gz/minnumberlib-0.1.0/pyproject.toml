@@ -1,0 +1,17 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MinNumberLib"
+version = "0.1.0"
+description = "Find the smallest number from a list"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Mohammed Abdo Aljamal", email = "aljmal7722@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+minnumberlib = "min_number_lib.__main__:main"
