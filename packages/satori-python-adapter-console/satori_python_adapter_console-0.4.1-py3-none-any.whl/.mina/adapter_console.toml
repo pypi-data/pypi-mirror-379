@@ -1,0 +1,32 @@
+includes = ["src/satori/adapters/console"]
+raw-dependencies = [
+    "satori-python-server >= 0.17.2",
+    "nonechat<0.7.0,>=0.6.0",
+]
+
+[project]
+name = "satori-python-adapter-console"
+version = "0.4.1"
+authors = [
+  {name = "RF-Tar-Railt", email = "rf_tar_railt@qq.com"}
+]
+dependencies = []
+description = "Satori Protocol SDK for python, adapter for Nonechat"
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+classifiers = [
+    "Typing :: Typed",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/RF-Tar-Railt/satori-python"
+repository = "https://github.com/RF-Tar-Railt/satori-python"
