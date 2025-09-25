@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: id-recognizer
+Version: 0.1.0
+Summary: Extract sid from ANSWER SHEET.
+Project-URL: Homepage, https://github.com/your/repo
+Author-email: asan <your@email.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Requires-Dist: numpy~=2.2.4
+Requires-Dist: opencv-python~=4.11.0.86
+Requires-Dist: requests>=2.28.1
