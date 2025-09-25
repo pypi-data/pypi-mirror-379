@@ -1,0 +1,13 @@
+label_accelerator/__init__.py,sha256=G5Qi0HRbf2tiUgHYAaV04VFt5cv_6KujmmcApeNKaEg,836
+label_accelerator/core.cp38-win_amd64.pyd,sha256=W-BYpEnJdY2Qohkbv4xOl0-2gdevvzg0Nqc-yhNVIYo,108544
+label_accelerator/core.cpp,sha256=uXQzxpaW9GdPUd5Q4tXJeK2e_SJjiuO2rYB-k8tnk8E,870502
+label_accelerator/core.pyx,sha256=91uZzxJoKwaDommWzpcXct5_oXLDx1ZrQXqouA2dy6g,14691
+label_accelerator/core_py.py,sha256=r5sNyUdgyLRIUOVNsiw3Z6rnrnxiYIgs0-EE_hP9N5Q,13769
+label_accelerator/heuristics.py,sha256=-XRaDoeKcieQNi_XhdL4MCNv9LlFWXNp6D4tU-6coAE,1352
+label_accelerator/labeler.py,sha256=CA-0KanUm_BlBPmjlc9KfGZ08vvY520a1VPTUXUtduA,3579
+label_accelerator/license_validator.py,sha256=CarxCsXe9vqg7kGcs1tZb1xynYl9a-YPndlV5hFLhNw,1359
+label_accelerator/models.py,sha256=T23jCrYgs51LJ2MasHzbr2KbXEWEIWz-Vz-My5bYtBg,755
+label_accelerator_sdk-1.0.0.dist-info/METADATA,sha256=688BnQzVs4kbs_MeWJZgRgua1Q6kmJL99v6ekCmLElk,17390
+label_accelerator_sdk-1.0.0.dist-info/WHEEL,sha256=2M046GvC9RLU1f1TWyM-2sB7cRKLhAC7ucAFK8l8f24,99
+label_accelerator_sdk-1.0.0.dist-info/top_level.txt,sha256=9f0acZaX8aEdvSRhKuyga4hyYHsQEXe7WNxXxdH2D08,18
+label_accelerator_sdk-1.0.0.dist-info/RECORD,,
