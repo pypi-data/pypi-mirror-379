@@ -1,0 +1,15 @@
+nless/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nless/autocomplete.py,sha256=u5EA-JdXF8_58FkN8V4xAfr0Ek50W54DJMKCiFczTYo,1401
+nless/cli.py,sha256=Z-KcQe2Gcjngf3w6MjKMcemqhoXzGtvj3TKAN6sLvYI,70363
+nless/delimiter.py,sha256=M3lg60bP5Mn_zbgeo86YQ0_TVR9-x4wEKtucTH9a3uA,6649
+nless/help.py,sha256=4PRkso07BjAEf8fWPyaUA9gF4mCmvGbfUBBeOvuvq6Y,709
+nless/input.py,sha256=e1L6wrb2EJrPKd_s5V2jO-BDciS3cGhGcJBZqCdWiKc,3041
+nless/nless.tcss,sha256=Du162q-YlsAN62v5KJyug1EjKgwPpJ5me0ty1NkIZ1c,517
+nless/nlesstable.py,sha256=rWlTELqknAYGoTa-xFMGH_fJccr4NZ7Kgp1fX1VMd0c,5216
+nless/types.py,sha256=DSbHSsb08gagxhpYc37IZNdgboUXNNjiabALCuidW4I,507
+nless/version.py,sha256=0SG5rYXFVrC-feHBFneqTequSviIhw_0y0oqgeqnZ9c,449
+nothing_less-0.1.8.dist-info/LICENSE,sha256=jyl4tCZlxSv5xhwdC0OIw70ehKhy9GKxjTSPDnolGKU,1050
+nothing_less-0.1.8.dist-info/METADATA,sha256=Zg7z9-g3_5I8qJx-9FBAZNnzgsVBVFAFQm5YuyHzjKk,4438
+nothing_less-0.1.8.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+nothing_less-0.1.8.dist-info/entry_points.txt,sha256=K1HzaV-IH0kueIvd96PbK7-tqKCIqPtNIL-26u0Mw5k,40
+nothing_less-0.1.8.dist-info/RECORD,,
