@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VizlyChart - Advanced Python Visualization Library</title>
+    <meta name="description" content="Professional Python visualization library with AI-powered features, multiple backend support, and enterprise-grade exports">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --light-blue: #dbeafe;
+            --dark-blue: #1e3a8a;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --green-500: #10b981;
+            --orange-500: #f59e0b;
+            --red-500: #ef4444;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background: var(--light-blue);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .hero-demo {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .code-example {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--gray-200);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .feature-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-code {
+            background: var(--gray-100);
+            padding: 1rem;
+            border-radius: 6px;
+            font-family: 'Monaco', monospace;
+            font-size: 0.85rem;
+            color: var(--gray-800);
+            overflow-x: auto;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--gray-200);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .gallery-content {
+            padding: 1.5rem;
+        }
+
+        .gallery-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .gallery-content p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+
+        /* Documentation Section */
+        .docs {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .doc-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--gray-200);
+        }
+
+        .doc-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .doc-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .doc-card a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--gray-400);
+        }
+
+        /* Status badges */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin: 2px;
+        }
+
+        .status-ready {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--green-500);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .status-beta {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--orange-500);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">VizlyChart</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#docs">Documentation</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="https://github.com/infinidatum/vizlychart">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Python Visualization</h1>
+            <p>A modern Python visualization library combining traditional charting with AI-powered features, multiple backend support, and enterprise-grade capabilities.</p>
+
+            <div class="cta-buttons">
+                <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
+                <a href="#features" class="btn btn-secondary">View Features</a>
+            </div>
+
+            <div class="hero-demo">
+                <div class="code-example">
+<span style="color: #7c3aed;">import</span> <span style="color: #06b6d4;">vizlychart</span> <span style="color: #7c3aed;">as</span> <span style="color: #06b6d4;">vc</span>
+
+<span style="color: #64748b;"># Create charts with natural language</span>
+chart = vc.ai.create(<span style="color: #10b981;">"scatter plot of sales vs price"</span>)
+
+<span style="color: #64748b;"># Switch backends seamlessly</span>
+vc.set_backend(<span style="color: #10b981;">'plotly'</span>)  <span style="color: #64748b;"># Interactive web charts</span>
+vc.set_backend(<span style="color: #10b981;">'matplotlib'</span>)  <span style="color: #64748b;"># Publication quality</span>
+
+<span style="color: #64748b;"># Enterprise exports</span>
+chart.export(<span style="color: #10b981;">'presentation.pptx'</span>, branded=<span style="color: #7c3aed;">True</span>)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <p class="section-subtitle">
+                VizlyChart extends traditional visualization capabilities with modern features for data science, enterprise use, and AI-assisted chart creation.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Assisted Chart Creation</h3>
+                    <p>Generate charts from natural language descriptions and get intelligent recommendations based on your data characteristics.</p>
+                    <div class="feature-code">
+# Smart recommendations
+rec = vc.recommend_chart(data, intent='correlation')
+print(f"Suggested: {rec.chart_type}")
+
+# Natural language generation
+chart = vc.ai.create("line chart of revenue over time")</div>
+                    <div class="status-badge status-ready">Production Ready</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Multiple Backend Support</h3>
+                    <p>Switch between matplotlib, Plotly, and pure Python backends without changing your code. Each backend optimized for different use cases.</p>
+                    <div class="feature-code">
+# Same API, different outputs
+vc.set_backend('matplotlib')  # Static, high-quality
+vc.set_backend('plotly')      # Interactive, web-ready
+vc.set_backend('pure')        # Lightweight, fast</div>
+                    <div class="status-badge status-ready">Stable</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Specialized Chart Types</h3>
+                    <p>Advanced visualizations for machine learning, causal inference, financial analysis, and engineering applications.</p>
+                    <div class="feature-code">
+# Causal inference
+dag = vc.CausalDAGChart()
+dag.add_node("Treatment", "treatment")
+
+# ML explainability
+chart = vc.FeatureImportanceChart()
+chart.plot(features, shap_values)</div>
+                    <div class="status-badge status-ready">Available</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Enterprise Features</h3>
+                    <p>Professional exports to PowerPoint, Excel, and PDF with customizable branding, compliance tracking, and audit trails.</p>
+                    <div class="feature-code">
+# Enterprise export
+exporter = vc.EnterpriseExporter(branding)
+exporter.export_chart(
+    chart,
+    format='pptx',
+    branded=True
+)</div>
+                    <div class="status-badge status-ready">Available</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Performance Optimization</h3>
+                    <p>GPU acceleration support and optimized rendering for large datasets with automatic performance scaling.</p>
+                    <div class="feature-code">
+# GPU-accelerated rendering
+renderer = vc.AcceleratedRenderer()
+renderer.scatter_gpu(x, y)  # Handle large datasets
+
+# Performance monitoring
+stats = renderer.get_performance_stats()</div>
+                    <div class="status-badge status-beta">Beta</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Natural Language Styling</h3>
+                    <p>Apply styling and themes using natural language descriptions, making chart customization intuitive and accessible.</p>
+                    <div class="feature-code">
+# Style with natural language
+vc.style_chart(chart, "professional blue theme")
+vc.style_chart(chart, "minimal design with thin lines")
+
+# Parse styling descriptions
+style = vc.parse_style("elegant pastel colors")</div>
+                    <div class="status-badge status-ready">Ready</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Chart Gallery</h2>
+            <p class="section-subtitle">
+                Explore examples of charts and visualizations created with VizlyChart across different domains and use cases.
+            </p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">📈 Line Chart</div>
+                    <div class="gallery-content">
+                        <h4>Time Series Analysis</h4>
+                        <p>Interactive line charts with trend analysis, perfect for financial data and temporal patterns.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">📊 Scatter Plot</div>
+                    <div class="gallery-content">
+                        <h4>Correlation Analysis</h4>
+                        <p>Advanced scatter plots with regression lines, confidence intervals, and interactive features.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">📋 Bar Chart</div>
+                    <div class="gallery-content">
+                        <h4>Categorical Comparison</h4>
+                        <p>Professional bar charts with grouping, stacking, and custom styling options.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">🌊 Surface Plot</div>
+                    <div class="gallery-content">
+                        <h4>3D Visualization</h4>
+                        <p>Interactive 3D surface plots for complex data relationships and mathematical functions.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">🔥 Heatmap</div>
+                    <div class="gallery-content">
+                        <h4>Correlation Matrix</h4>
+                        <p>Professional heatmaps for correlation analysis, confusion matrices, and pattern detection.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">🕸️ Causal DAG</div>
+                    <div class="gallery-content">
+                        <h4>Causal Inference</h4>
+                        <p>Directed Acyclic Graphs for causal analysis with automatic layout and interactive features.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">🎯 Feature Importance</div>
+                    <div class="gallery-content">
+                        <h4>ML Explainability</h4>
+                        <p>Feature importance charts with SHAP values, permutation importance, and model insights.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">💹 Financial Charts</div>
+                    <div class="gallery-content">
+                        <h4>Trading Analysis</h4>
+                        <p>Candlestick charts with technical indicators, volume profiles, and trading signals.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">📈 ROC Curves</div>
+                    <div class="gallery-content">
+                        <h4>Model Performance</h4>
+                        <p>ROC curves, precision-recall analysis, and comprehensive model evaluation metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <h2 class="section-title">Documentation & Resources</h2>
+            <p class="section-subtitle">
+                Get started quickly with comprehensive guides, API documentation, and example notebooks.
+            </p>
+
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h4>📚 Getting Started</h4>
+                    <p>Installation guide and basic usage examples to get you up and running quickly.</p>
+                    <a href="#getting-started">View Guide →</a>
+                </div>
+
+                <div class="doc-card">
+                    <h4>🔧 API Reference</h4>
+                    <p>Complete API documentation with method signatures and parameter details.</p>
+                    <a href="#api-reference">Browse API →</a>
+                </div>
+
+                <div class="doc-card">
+                    <h4>💡 Examples</h4>
+                    <p>Jupyter notebooks with practical examples and use cases across different domains.</p>
+                    <a href="#examples">View Examples →</a>
+                </div>
+
+                <div class="doc-card">
+                    <h4>🏢 Enterprise Guide</h4>
+                    <p>Advanced features for enterprise use including branding, exports, and compliance.</p>
+                    <a href="#enterprise">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>VizlyChart</h4>
+                    <p style="color: var(--gray-300); margin-bottom: 1rem;">
+                        Professional Python visualization library for modern data science and enterprise applications.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#ai-features">AI-Assisted Creation</a></li>
+                        <li><a href="#backends">Multiple Backends</a></li>
+                        <li><a href="#enterprise">Enterprise Features</a></li>
+                        <li><a href="#performance">Performance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#api-reference">API Reference</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/infinidatum/vizlychart">GitHub</a></li>
+                        <li><a href="#issues">Issues</a></li>
+                        <li><a href="#discussions">Discussions</a></li>
+                        <li><a href="#contributing">Contributing</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 VizlyChart. Professional visualization library for Python developers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.feature-card, .gallery-item, .doc-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

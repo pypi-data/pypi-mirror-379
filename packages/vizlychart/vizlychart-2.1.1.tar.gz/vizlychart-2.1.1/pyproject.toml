@@ -1,0 +1,117 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vizlychart"
+version = "2.1.1"
+description = "Ultra-high performance visualization library with 4000x speed improvement, GPU acceleration, and professional-quality output"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Infinidatum Corporation", email = "durai@infinidatum.net"},
+]
+maintainers = [
+    {name = "Infinidatum Corporation", email = "durai@infinidatum.net"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+]
+keywords = [
+    "visualization", "plotting", "charts", "graphs", "data-science",
+    "ultra-fast", "high-performance", "gpu-acceleration", "svg-rendering",
+    "hdr-colors", "professional-typography", "precision-rendering",
+    "matplotlib-alternative", "plotly-alternative", "colab-ready",
+    "scientific-visualization", "engineering-plots", "dashboard",
+    "real-time-plotting", "publication-quality", "vizlyengine",
+    "cupy", "jax", "nvidia-gpu", "performance-optimization"
+]
+requires-python = ">=3.7"
+dependencies = [
+    # Core ultra-performance dependencies
+    "numpy>=1.24.0",
+
+    # Optional for extended functionality
+    "matplotlib>=3.7.0; extra == 'extended'",
+    "scipy>=1.11.0; extra == 'extended'",
+]
+
+[project.optional-dependencies]
+# Extended functionality with matplotlib integration
+extended = [
+    "matplotlib>=3.7.0",
+    "scipy>=1.11.0",
+]
+
+# GPU acceleration for ultra-high performance
+gpu = [
+    "cupy-cuda11x>=12.0.0",
+    "jax>=0.4.0",
+    "jaxlib>=0.4.0",
+]
+
+# Development and testing
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "twine>=4.0.0",
+    "build>=0.10.0",
+]
+
+# Complete package with all features
+all = [
+    "matplotlib>=3.7.0",
+    "scipy>=1.11.0",
+    "cupy-cuda11x>=12.0.0",
+    "jax>=0.4.0",
+    "jaxlib>=0.4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/vizlychart/vizlychart"
+Documentation = "https://vizlychart.readthedocs.io/"
+Repository = "https://github.com/vizlychart/vizlychart"
+"Bug Tracker" = "https://github.com/vizlychart/vizlychart/issues"
+Examples = "https://github.com/vizlychart/vizlychart/tree/main/examples"
+
+[project.scripts]
+vizlychart-demo = "vizlychart.cli:demo_command"
+vizlychart-gallery = "vizlychart.cli:gallery_command"
+vizlychart-server = "vizlychart.cli:server_command"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vizlychart = [
+    "templates/*.html",
+    "static/*.js",
+    "static/*.css",
+    "themes/*.json",
+    "examples/*.py",
+]
