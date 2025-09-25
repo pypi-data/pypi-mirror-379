@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: basitcrypto
+Version: 0.1.0
+Summary: Simple encryption library (XOR, Caesar)
+Home-page: https://github.com/yourusername/basitcrypto
+Author: Al-Junaid
+Author-email: Al-Junaid@google.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# BasitCrypto
+
+A simple encryption library for Python that supports XOR and Caesar cipher.
+
+## Installation
+
+```bash
+pip install basitcrypto
+```
+
+
+## Installation Local
+
+```bash
+pip install dist/basitcrypto-0.1.0-py3-none-any.whl
+```
