@@ -1,0 +1,2 @@
+[console_scripts]
+caesar-cipher-wail = caesar_cipher_cli_wail.cli:main
