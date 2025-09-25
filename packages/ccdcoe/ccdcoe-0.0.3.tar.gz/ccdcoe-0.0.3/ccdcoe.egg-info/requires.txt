@@ -1,0 +1,15 @@
+setuptools>=68.1.0
+
+[all]
+requests>=2.31.0
+ansicolors>=1.1.8
+
+[gitlab_bot]
+requests>=2.31.0
+ansicolors>=1.1.8
+
+[http_apis]
+requests>=2.31.0
+
+[loggers]
+ansicolors>=1.1.8
