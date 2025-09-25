@@ -1,0 +1,9 @@
+localcurl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localcurl/cli.py,sha256=LGwOLZkHDc7FcJX0068Sh08zqZ3I2-sXUCyHED27Rjw,4058
+localcurl/parsers.py,sha256=0eTP8vEBOYyrwKl5bhYOkng1w5nVZCb06V3HnXKerfM,3223
+localcurl/request_adapters.py,sha256=_mrPgtxdfKHESj5senMfHfyaN2N8lohTafXg4sKvGJc,1905
+localcurl-0.3.0.dist-info/METADATA,sha256=j0EFaYVHd2NsedkXwsZS9ke8dSjp47JeyRXZWZrRZO4,2101
+localcurl-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+localcurl-0.3.0.dist-info/entry_points.txt,sha256=Ry6t86R0VJJ6xB-WG-4M8N1nOmuPYYeFNRxsEoCSCEM,73
+localcurl-0.3.0.dist-info/licenses/LICENSE,sha256=k_bu7Hk5H53Xra--NCWzbPF_oTp9acb1arVZuhX-y3w,1070
+localcurl-0.3.0.dist-info/RECORD,,
