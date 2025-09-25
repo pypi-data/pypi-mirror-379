@@ -1,0 +1,12 @@
+numpy
+scipy
+scikit-learn
+
+[fql]
+tensorflow
+keras
+fastquantilelayer
+
+[keras]
+tensorflow
+keras
