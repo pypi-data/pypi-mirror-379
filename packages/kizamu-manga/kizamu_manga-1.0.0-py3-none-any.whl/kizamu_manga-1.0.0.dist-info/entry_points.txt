@@ -1,0 +1,2 @@
+[console_scripts]
+kizamumanga = kizamumanga.main:cli

@@ -1,0 +1,39 @@
+# ===============================
+# 📁 Output Paths
+# ===============================
+
+# Path to the directory where CBZ files will be saved.
+# If empty (""), defaults to: <user_home>/Documents/manga_downloads 
+cbz_path = ""
+
+
+# ===============================
+# ⚙️  Engine Settings
+# ===============================
+
+# Website to scrape manga from.
+# Example: "weeb_central", "inmanga", "leermangaesp"
+website = "weeb_central"
+
+# Number of simultaneous tasks the engine can run.
+# If empty (""), defaults to 5.
+multiple_tasks = 5
+
+
+# ===============================
+# 🎨 Image Export Settings
+# ===============================
+
+# Whether the exported images will be in color.
+# true = color | false = grayscale
+# If empty (""), defaults to true.
+color = false
+
+# Enable or disable automatic image cropping.
+# If empty (""), defaults to true.
+cropping_mode = true
+
+# Viewer resolution settings.
+# Set to null to use the original image dimensions.
+height = 1680
+width = 1264
