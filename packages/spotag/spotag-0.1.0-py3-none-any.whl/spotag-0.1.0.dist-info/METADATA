@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: spotag
+Version: 0.1.0
+Summary: Tag your songs with Spotify metadata
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mutagen>=1.47.0
+
+# Spotag
+Tag your songs with Spotify metadata

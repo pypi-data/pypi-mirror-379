@@ -1,0 +1,11 @@
+spotag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotag/app.py,sha256=XBhgawtGCQn9UAjtvsZjZ6tC0WcRRLuA6MR4DBZNv5E,927
+spotag/m4a.py,sha256=AMhZ5kaF4KvO95Ca-f4_2GN8vp7PPahIKKtH_fJ6wKY,669
+spotag/main.py,sha256=9xa-upbK-48aSz8hG24Y8uxj8JnNcEILpAndf1Vzfp4,657
+spotag/models.py,sha256=A9hZTzuoq_EhOpdhw7Jq1faX254brxgRdrAX5HzFLnE,782
+spotag/spotify.py,sha256=5p8m0mYknmOg-TwlcsVBTuEmTg_i2WFkT_fDtLnIs-0,6139
+spotag-0.1.0.dist-info/METADATA,sha256=zHmcunoAcXMlp4gVqIOqGl_NvGzB5MuX3sD8r0tt4w0,238
+spotag-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+spotag-0.1.0.dist-info/entry_points.txt,sha256=NFibrz9-WTcoNsLisRmGv_efDQb2tTi65gvu3x9zM6U,51
+spotag-0.1.0.dist-info/top_level.txt,sha256=CMkmLHDU1KGvVme2ymKz-cUoWW23CX-oppENH3L7xVE,7
+spotag-0.1.0.dist-info/RECORD,,

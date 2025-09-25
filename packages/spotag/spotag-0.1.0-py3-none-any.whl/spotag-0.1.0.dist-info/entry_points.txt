@@ -1,0 +1,2 @@
+[console_scripts]
+spotag = spotag.main:entry_point
