@@ -1,0 +1,10 @@
+accurpy/__init__.py,sha256=t8D89d-cWbKMj0mzMxRygmemEcYpymnsrHIsIBhi-g4,65
+accurpy/_dd_fallback.py,sha256=tZLwiVvNeW0GwQ7RP-UoqWksRTnM4e-Skc9PdyOgLkc,7955
+accurpy/_fm.c,sha256=5uc80fjsOhqAckmRcMfAdGQbNwOg7beMyUQK26KIMEU,17575
+accurpy/_fm.cp313-win_amd64.pyd,sha256=48-b_z71YsdXlXOvicgycwKtvPbmyPdeDm99NQI3nts,29696
+accurpy/fm.py,sha256=1kw8TSJAEmOhpgK4AhWCGdbqA-utGNtg2XnLzVQbALg,3402
+accurpy-0.1.1.dist-info/licenses/LICENSE,sha256=Btzdu2kIoMbdSp6OyCLupB1aRgpTCJ_szMimgEnpkkE,1056
+accurpy-0.1.1.dist-info/METADATA,sha256=iETiA4AVogNJBfcs52tGr8EmmLe0TTdk8u18HhFXmyk,1978
+accurpy-0.1.1.dist-info/WHEEL,sha256=qV0EIPljj1XC_vuSatRWjn02nZIz3N1t8jsZz7HBr2U,101
+accurpy-0.1.1.dist-info/top_level.txt,sha256=nDd9912MO-oePVcXbBakFo18KvsJbsuCdBGDY44Z_EM,8
+accurpy-0.1.1.dist-info/RECORD,,
