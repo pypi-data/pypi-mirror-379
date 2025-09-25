@@ -1,0 +1,9 @@
+pyproject.toml
+src/weldkit/__init__.py
+src/weldkit/cli.py
+src/weldkit.egg-info/PKG-INFO
+src/weldkit.egg-info/SOURCES.txt
+src/weldkit.egg-info/dependency_links.txt
+src/weldkit.egg-info/top_level.txt
+src/weldkit/core/__init__.py
+src/weldkit/intergrations/__init__.py
