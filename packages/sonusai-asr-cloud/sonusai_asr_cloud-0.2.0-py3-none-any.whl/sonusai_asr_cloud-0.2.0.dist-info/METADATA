@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: sonusai-asr-cloud
+Version: 0.2.0
+Summary: Cloud ASR tools for SonusAI
+Project-URL: Homepage, https://aaware.com
+Author-email: Chris Eddington <chris@aaware.com>, Jason Calderwood <jason@aaware.com>
+License-Expression: GPL-3.0-only
+Requires-Python: <3.12,>=3.11
+Requires-Dist: aixplain<0.3.0,>=0.2.20
+Requires-Dist: deepgram-sdk<4.0.0,>=3.7.3
+Requires-Dist: sonusai<2.0,>=1.1
+Requires-Dist: speechrecognition<4.0.0,>=3.10.4
+Description-Content-Type: text/x-rst
+
+SonusAI ASR Cloud Whisper: Cloud Whisper tools for SonusAI
+* aiXplain (Whisper)
+* Deepgram
+* SpeechRecognition (Google Cloud Speech API)

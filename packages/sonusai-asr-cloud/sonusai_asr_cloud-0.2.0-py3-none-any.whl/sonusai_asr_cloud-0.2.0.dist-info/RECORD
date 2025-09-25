@@ -1,0 +1,8 @@
+sonusai_asr_cloud/__init__.py,sha256=XnKfr0phEFa7fSLpIS1EP40dJm22Ulw7fAff6YBAiq8,172
+sonusai_asr_cloud/asr_functions/__init__.py,sha256=8Pqbf0MFlb9lhEjSiNumoZqDJTs-271ASGieN7oF3z8,257
+sonusai_asr_cloud/asr_functions/aixplain_whisper.py,sha256=2ucwf7itpSDlagnCPaRFY8nL3dA8IvI6CL-jRXueoXk,2065
+sonusai_asr_cloud/asr_functions/deepgram.py,sha256=cNIRMjjQE-TJaKgqSC2BZssIM4G6_X4XNM0qULMPENQ,5779
+sonusai_asr_cloud/asr_functions/google.py,sha256=jTehwubasNLXVmgdU4LYRrbGgjPLB2wWPsOAEVsWFUo,3572
+sonusai_asr_cloud-0.2.0.dist-info/METADATA,sha256=q9xh7vobj1gmcAROR8ySKfoqTEVZzVehW2MkcesSJU8,626
+sonusai_asr_cloud-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sonusai_asr_cloud-0.2.0.dist-info/RECORD,,
