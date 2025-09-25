@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: keyauth_renee
+Version: 0.2.0
+Summary: FastAPI-compatible API key validator client
+Home-page: https://github.com/Caseymaill/keyauth_renee
+Author: Renee
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: FastAPI
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# keyauth_renee
+
+A lightweight Python module for validating API keys against a FastAPI backend. Designed for simple integration with scripts, CLI tools, and FastAPI routes.
+
+## ðŸ”§ Installation
+
+```bash
+pip install keyauth_renee
