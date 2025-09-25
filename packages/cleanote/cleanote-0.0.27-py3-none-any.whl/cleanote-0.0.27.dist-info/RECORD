@@ -1,0 +1,12 @@
+cleanote/__init__.py,sha256=Ghl0Z0JUoP5hELBVMkfBfXPFaANMOPd2m3k60Mr1xpk,71
+cleanote/data_downloader.py,sha256=3cKD6Uc_NA2HDgnR8n5eJ8zAPQlnvBF-BbJJ5YhIsSQ,1994
+cleanote/homogeniser.py,sha256=WY7DjUZkW29rAF6R-OTccHrE5Rr2XVJKADLvS7mpS2Q,1533
+cleanote/model.py,sha256=xPRLfa5lPjp-ZiDAXjj3mPDEskB0QidPjh3RudzT2LI,8627
+cleanote/pipeline.py,sha256=sq5XA9D6wAcc6HnakEsVqWW0-rSTX0cJt120wNwWpaQ,1859
+cleanote/types.py,sha256=Oc2fVnQOLARrr-OZP0bXL4w02jNPJcw7YoH5NgeZoiw,539
+cleanote/verifier.py,sha256=P8_z_gtVgZODMGhHKmeU-XXm7ayns6xxvfKhkra66oI,1041
+cleanote-0.0.27.dist-info/licenses/LICENSE,sha256=PtcELXqMDwnnbuckbxqGr674aQFw3-sz77E6vYWReyk,1071
+cleanote-0.0.27.dist-info/METADATA,sha256=uI5tzf0Vq_o2lLGNXbUERwgnTpvtStmkOOyRwOCHx7g,1481
+cleanote-0.0.27.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cleanote-0.0.27.dist-info/top_level.txt,sha256=B5NuFSqdTSJZApRFc9pPxPdSCwyo4dbu_ymuXTyhR2Y,9
+cleanote-0.0.27.dist-info/RECORD,,
