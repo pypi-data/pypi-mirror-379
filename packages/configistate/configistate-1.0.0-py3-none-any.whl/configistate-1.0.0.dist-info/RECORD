@@ -1,0 +1,9 @@
+configistate/__init__.py,sha256=E-el7YMVjf9zbMM-JSgsCtPnPiqnliiL8hVQKcVImJo,258
+configistate/cli.py,sha256=PUN0Sv77AB_N-myR4n_J36dl_YMd9cbF-r-NLwjm4pU,5198
+configistate/config.py,sha256=hy16vzWbsK0DYNN6Fn5UowG3xw7rmazISQTYkalBs6A,9845
+configistate-1.0.0.dist-info/licenses/LICENSE,sha256=1aR8zD1qOmIlsaxUjDgZxSkKp9ldxXr7wAsYUmn4Wus,1067
+configistate-1.0.0.dist-info/METADATA,sha256=NwibwU_POL_T6QhEP1dNEhH2hpww0hnt5ITJ-zgw-6k,3459
+configistate-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+configistate-1.0.0.dist-info/entry_points.txt,sha256=48CitbHwI6eTbF5F9zFyC7DN6H_q1_jxId3GWcSSrUk,48
+configistate-1.0.0.dist-info/top_level.txt,sha256=Yrcv_liKW7hWehdHYGJlMfCf9Ltsodbd1pff8yv6SaM,13
+configistate-1.0.0.dist-info/RECORD,,
