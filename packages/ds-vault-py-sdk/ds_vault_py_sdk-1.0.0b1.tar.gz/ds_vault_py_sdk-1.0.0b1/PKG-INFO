@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: ds-vault-py-sdk
+Version: 1.0.0b1
+Summary: Python SDK for DS Vault - (envelope pattern)
+Author-email: Aider AS <hello@grasplabs.no>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/grasp-labs/ds-vault-py-sdk.git
+Project-URL: Issues, https://github.com/grasp-labs/ds-vault-py-sdk.git/issues
+Keywords: ds-vault,envelope-encryption,sdk,vault,ksm
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3<2,>=1.40.0
+Requires-Dist: cryptography<47,>=46.0.0
+Provides-Extra: test
+Requires-Dist: pytest<9,>=8.3; extra == "test"
+Requires-Dist: coverage<8,>=7.10.7; extra == "test"
+Provides-Extra: postgres
+Requires-Dist: psycopg[binary]<4,>=3.1; extra == "postgres"
+Dynamic: license-file
+
+# DS Vault Python SDK
+
+## Features
+
+- GetSecret
+- TTL + LRD Cache (KEK & records)
+- Psql and Memory repositories
+
+## Quickstart
+
+### Install
+
+`With postgres`:
+
+```bash
+pip install "ds-vault-py-sdk[postgres]"
+```
+
+`Memory only`:
+
+```bash
+pip install ds-vault-py-sdk
+```
+
+### Usage
+
+Postgres - plain:
+
+```python
+from vault import DSVaultClient
+from vault.repositories.postgres import PostgresSecretRepository
+
+repo = PostgresSecretRepository(
+    dsn="postgresql://user:pass@host:5432/db",
+    table="public.secrets",
+)
+
+client = DSVaultClient(repository=repo)
+
+secret_bytes = client.get_secret(key=key)
+print(secret_bytes.decode())
+```
+
+Managed KMS context:
+
+```python
+client = DSVaultClient(
+    repository=repo,
+    encryption_context_defaults={"app": "payments-api", "env": "prod"},
+)
+```
+
+### Tests
+
+Execute tests by setting environment variables to
+manage import paths, and call pytest.
+
+```bash
+export PYTHONPATH="src"
+pipenv run pytest
+```
+
+## Environment
+
+Currently support `dev` and `prod` environment,
+defined by setting environment variable `BUILDING_MODE`,
+e.g.:
+
+```bash
+export BUILDING_MODE="dev"
+```
