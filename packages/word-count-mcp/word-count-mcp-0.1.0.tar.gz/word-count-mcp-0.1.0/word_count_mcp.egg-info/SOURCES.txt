@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+word_count_mcp.egg-info/PKG-INFO
+word_count_mcp.egg-info/SOURCES.txt
+word_count_mcp.egg-info/dependency_links.txt
+word_count_mcp.egg-info/entry_points.txt
+word_count_mcp.egg-info/requires.txt
+word_count_mcp.egg-info/top_level.txt
