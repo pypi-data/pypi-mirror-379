@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: sonusai-asr-faster-whisper
+Version: 0.2.0
+Summary: Faster-whisper ASR tools for SonusAI
+Project-URL: Homepage, https://aaware.com
+Author-email: Chris Eddington <chris@aaware.com>, Jason Calderwood <jason@aaware.com>
+License-Expression: GPL-3.0-only
+Requires-Python: <3.12,>=3.11
+Requires-Dist: aixplain<0.3.0,>=0.2.20
+Requires-Dist: ctranslate2<5.0.0,>=4.2.1
+Requires-Dist: deepgram-sdk<4.0.0,>=3.7.3
+Requires-Dist: faster-whisper<2.0.0,>=1.0.2
+Requires-Dist: sonusai<2.0,>=1.1
+Description-Content-Type: text/x-rst
+
+SonusAI ASR Faster Whisper: Faster Whisper tools for SonusAI
