@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: mensajes-jcorredor
+Version: 6.0
+Summary: Un paquete para saludar y despedir
+Home-page: https://www.google.com
+Author: Zotyx
+Author-email: zotyxdk@gmail.com
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy==2.3.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# Mensajes
+
+El paquete de mensajería para pruebas de José Corredor.
