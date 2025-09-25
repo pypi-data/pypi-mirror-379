@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: qnvip-tools-sets-mcp
+Version: 0.0.1
+Summary: 青年优品mcp工具集
+Home-page: https://github.com/yourusername/my-web-service
+Author: lichaojie
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 青年优品mcp工具集
+
+## 支持功能
+1. markdown的table 转 excel `python util/md2excel.py xxx.md xxx.xlsx` 
