@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: ccx-messaging
+Version: 4.3.3
+Author-email: CCX Processing Team <ccx-core-processing-team@redhat.com>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/RedHatInsights/insights-ccx-messaging
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: app-common-python>=0.2.3
+Requires-Dist: boto3<1.40.36,>=1.34.1
+Requires-Dist: confluent-kafka>=2.0.0
+Requires-Dist: insights-core>=3.1.2
+Requires-Dist: insights-core-messaging>=1.2.15
+Requires-Dist: jsonschema>=4.0.0
+Requires-Dist: prometheus-client>=0.16.0
+Requires-Dist: python-json-logger<4,>=2.0.7
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: sentry-sdk>=1.37.1
+Requires-Dist: watchtower>=3.0.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: freezegun; extra == "test"
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: pycco; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: license-file
+
+# insights-ccx-messaging
+
+[![GitHub Pages](https://img.shields.io/badge/%20-GitHub%20Pages-informational)](https://redhatinsights.github.io/insights-ccx-messaging/)
+[![codecov](https://codecov.io/gh/RedHatInsights/insights-ccx-messaging/branch/main/graph/badge.svg?token=G00EQ808EP)](https://codecov.io/gh/RedHatInsights/insights-ccx-messaging)
+[![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/RedHatInsights/insights-ccx-messaging/blob/main/LICENSE)
+
+Stub for all CCX services based on Insights Core Messaging framework
+
+<!-- vim-markdown-toc GFM -->
+
+* [Makefile targets](#makefile-targets)
+
+<!-- vim-markdown-toc -->
+
+## Makefile targets
+
+```
+Available targets are:
+
+unit_tests           Run unit tests
+coverage             Run unit tests, display code coverage on terminal
+coverage-report      Run unit tests, generate code coverage as a HTML report
+documentation        Generate documentation for all sources
+shellcheck           Run shellcheck
+pyformat             Reformat all Python sources
+help                 Show this help screen
+```
