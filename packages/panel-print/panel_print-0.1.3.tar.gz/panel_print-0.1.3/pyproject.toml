@@ -1,0 +1,8 @@
+[project]
+name = "panel-print"
+version = "0.1.3"
+description = "A Python library that provides beautiful console output using Rich panels for enhanced debugging and data visualization."
+authors = [{ name = "Haotian Deng", email = "haotiandeng@stu.sufe.edu.cn" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["itables>=2.5.2", "rich>=14.1.0"]
