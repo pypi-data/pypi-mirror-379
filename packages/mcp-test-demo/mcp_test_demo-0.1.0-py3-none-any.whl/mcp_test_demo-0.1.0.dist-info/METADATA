@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: mcp-test-demo
+Version: 0.1.0
+Summary: 一个简单的MCP服务器示例
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Keywords: demo,mcp,server
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: mcp[cli]>=1.14.1

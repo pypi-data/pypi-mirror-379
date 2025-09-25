@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-test-demo = mcp_test.server:main
