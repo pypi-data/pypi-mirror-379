@@ -1,0 +1,14 @@
+pdf2-0.2.1.dist-info/METADATA,sha256=z63vQuEZTM0O85O-re78Q4O_aCDAg3rVekqfmqyW06w,1096
+pdf2-0.2.1.dist-info/WHEEL,sha256=wvPMIrp4MafmZyLFFKa_Gu58t57iXPruL8GrrDqQ9eI,131
+pdf2-0.2.1.dist-info/licenses/LICENSE,sha256=LyxUUJZGb1yBuEeiYL3kToLHmN9T17Ay30hzYBNCk48,1090
+pdf2/__init__.py,sha256=M3acQ8jgLWloHgE_c7Boi7ApHFG9QtyVqqszcrb7oAA,453
+pdf2/_core.pyi,sha256=9kLsEG3PqFLDUy_sgNrStmSZTROxZHGO2js-lfPf8uk,1818
+pdf2/generator.rs,sha256=KAIUoBqaWp4m5DMGA9XAChA9YIRq0HTYsL2mL5de32o,1078
+pdf2/parser.rs,sha256=l99QfN9iryxl4BYcSDuhoGlY0IzPnXvNXHnckF2Ak8s,1490
+pdf2/pdf2.cpython-313-aarch64-linux-gnu.so,sha256=EXdRd9XaxfKpUiQDMSRGGhLAHOjXP7PF971SnRNbjOE,4153144
+pdf2/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf2/structure.rs,sha256=uVlP5LzROhL_LZjvtykem3-1-xZNpeQ4WdQtES-L5gE,2827
+pdf2/test_generator.rs,sha256=h8zk7gzcZ5vSCfvhCeMOa2TSOuiqKr7eOuuPJJSgoLs,3321
+pdf2/test_parser.rs,sha256=CHMlo-BwZCUH0sbl7L4kTn1nez9rl_4uQbvEcW1uzNY,3006
+pdf2/test_structure.rs,sha256=-EIZg9YrgqHYBlaQROkxKJMbzHROXZq1sPEFju30TjU,6005
+pdf2-0.2.1.dist-info/RECORD,,
