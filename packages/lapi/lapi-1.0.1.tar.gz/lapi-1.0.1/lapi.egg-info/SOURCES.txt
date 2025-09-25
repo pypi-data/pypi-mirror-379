@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+llms.json
+llms.py
+pyproject.toml
+requirements.txt
+setup.py
+lapi.egg-info/PKG-INFO
+lapi.egg-info/SOURCES.txt
+lapi.egg-info/dependency_links.txt
+lapi.egg-info/entry_points.txt
+lapi.egg-info/not-zip-safe
+lapi.egg-info/requires.txt
+lapi.egg-info/top_level.txt
