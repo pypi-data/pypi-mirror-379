@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Test GPX" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>City Tour</name>
+    <desc>Urban cycling route through downtown</desc>
+  </metadata>
+  <trk>
+    <name>Downtown Route</name>
+    <desc>Main cycling path through the city</desc>
+    <trkseg>
+      <trkpt lat="47.6097" lon="-122.3331">
+        <ele>20</ele>
+        <time>2023-01-03T14:00:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6107" lon="-122.3321">
+        <ele>22</ele>
+        <time>2023-01-03T14:02:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6117" lon="-122.3311">
+        <ele>24</ele>
+        <time>2023-01-03T14:04:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6127" lon="-122.3301">
+        <ele>26</ele>
+        <time>2023-01-03T14:06:00Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+  <wpt lat="47.6112" lon="-122.3316">
+    <name>Coffee Shop</name>
+    <desc>Great place for a break</desc>
+    <ele>23</ele>
+  </wpt>
+</gpx>

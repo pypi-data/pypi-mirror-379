@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Test GPX" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Morning Jog</name>
+    <desc>Daily morning running route</desc>
+  </metadata>
+  <trk>
+    <name>Neighborhood Loop</name>
+    <desc>Quick loop around the neighborhood</desc>
+    <trkseg>
+      <trkpt lat="47.6500" lon="-122.3000">
+        <ele>30</ele>
+        <time>2023-01-04T07:00:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6510" lon="-122.3010">
+        <ele>32</ele>
+        <time>2023-01-04T07:02:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6520" lon="-122.3000">
+        <ele>34</ele>
+        <time>2023-01-04T07:04:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6510" lon="-122.2990">
+        <ele>32</ele>
+        <time>2023-01-04T07:06:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6500" lon="-122.3000">
+        <ele>30</ele>
+        <time>2023-01-04T07:08:00Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

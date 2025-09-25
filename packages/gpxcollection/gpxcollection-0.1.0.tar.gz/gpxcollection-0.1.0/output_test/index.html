@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPX Collections Overview</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 8px 16px;
+            background: #2c5aa0;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .back-link:hover {
+            background: #1e3d6f;
+        }
+
+        /* Shared sidebar and layout styles */
+        .main-container {
+            display: flex;
+            height: 100vh;
+            gap: 0;
+        }
+        .map-container {
+            flex: 1;
+            position: relative;
+        }
+        .sidebar {
+            width: 350px;
+            background: #f8f9fa;
+            border-left: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            transition: margin-right 0.3s ease;
+        }
+        .sidebar.collapsed {
+            margin-right: -349px;
+        }
+        .left-sidebar {
+            width: 400px;
+            background: white;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            transition: margin-left 0.3s ease;
+        }
+        .left-sidebar.collapsed {
+            margin-left: -399px;
+        }
+        .sidebar-header {
+            padding: 15px;
+            background: #2c5aa0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-shrink: 0;
+        }
+        .sidebar-header h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+        }
+        .sidebar-header small {
+            opacity: 0.9;
+            font-size: 0.85em;
+        }
+        .sidebar-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .sidebar-toggle:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+        .toggle-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #aaaaaa;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+        .toggle-btn:hover {
+            background: #1e3d6f;
+        }
+        .left-toggle-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: #aaaaaa;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+        .left-toggle-btn:hover {
+            background: #1e3d6f;
+        }
+        .left-sidebar-header {
+            padding: 15px;
+            background: #2c5aa0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-shrink: 0;
+        }
+        .left-sidebar-header h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+        }
+        .left-sidebar-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .left-sidebar-toggle:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .left-sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .left-sidebar-content h1,
+        .left-sidebar-content h2,
+        .left-sidebar-content h3 {
+            color: #2c5aa0;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .left-sidebar-content h1:first-child,
+        .left-sidebar-content h2:first-child,
+        .left-sidebar-content h3:first-child {
+            margin-top: 0;
+        }
+        .left-sidebar-content ul,
+        .left-sidebar-content ol {
+            margin: 1em 0;
+            padding-left: 1.5em;
+        }
+        .left-sidebar-content li {
+            margin: 0.5em 0;
+        }
+        .left-sidebar-content code {
+            background: #e8e8e8;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .left-sidebar-content pre {
+            background: #f5f5f5;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .left-sidebar-content blockquote {
+            border-left: 4px solid #2c5aa0;
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            background: #f9f9f9;
+        }
+        .left-sidebar-content a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+        .left-sidebar-content a:hover {
+            color: #1e3d6f;
+            text-decoration: underline;
+        }
+
+        /* Move layer control when sidebar is collapsed */
+        .sidebar.collapsed ~ .map-container .leaflet-control-layers {
+            left: 70px !important;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                order: 3;
+                border-left: none;
+                border-top: 1px solid #ddd;
+                max-height: 30vh;
+            }
+            .sidebar.collapsed {
+                margin-right: 0;
+                margin-top: -30vh;
+            }
+            .left-sidebar {
+                width: 100%;
+                order: 2;
+                border-right: none;
+                border-top: 1px solid #ddd;
+                max-height: 30vh;
+            }
+            .left-sidebar.collapsed {
+                margin-left: 0;
+                margin-top: -30vh;
+            }
+            .map-container {
+                order: 1;
+            }
+            .toggle-btn {
+                display: none;
+            }
+            .left-toggle-btn {
+                display: none;
+            }
+        }
+
+        
+/* Overview-specific styles */
+.collections-list {
+    margin: 0;
+}
+.collection-card {
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.2s ease;
+}
+.collection-card:hover {
+    background: rgba(44, 90, 160, 0.05);
+}
+.collection-card:last-child {
+    border-bottom: none;
+}
+.collection-card h3 {
+    margin: 0 0 5px 0;
+    color: #2c5aa0;
+    font-size: 1.1em;
+}
+.collection-card a {
+    text-decoration: none;
+    color: inherit;
+}
+.collection-card p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+    </style>
+</head>
+<body>
+    
+    
+    
+<div class="main-container">
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div>
+                <h3>GPX Collections</h3>
+                <small>3 collections • Click markers or list items to explore</small>
+            </div>
+        </div>
+        <div class="sidebar-content">
+            <div class="collections-list">
+                
+                <div class="collection-card">
+                    <a href="hiking-trails/">
+                        <h3>hiking-trails</h3>
+                        <p>2 GPX files</p>
+                        <p>2 tracks, 3 waypoints</p>
+                    </a>
+                </div>
+                
+                <div class="collection-card">
+                    <a href="cycling-routes/">
+                        <h3>cycling-routes</h3>
+                        <p>1 GPX files</p>
+                        <p>1 tracks, 1 waypoints</p>
+                    </a>
+                </div>
+                
+                <div class="collection-card">
+                    <a href="running-tracks/">
+                        <h3>running-tracks</h3>
+                        <p>1 GPX files</p>
+                        <p>1 tracks, 0 waypoints</p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        <button class="toggle-btn" id="sidebarToggle">☰</button>
+</div>
+
+    
+    
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        
+        var map = L.map('map').setView([0, 0], 2);
+        
+        // Add OpenStreetMap tile layer
+        var osm_layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap contributors'
+        });
+        
+        
+
+        
+        
+        // Set default layer
+        osm_layer.addTo(map);
+        
+        // Define base maps for layer control
+        var baseMaps = {
+            "OpenStreetMap": osm_layer
+        };
+        
+        // Add layer control
+        L.control.layers(baseMaps).addTo(map);
+        
+        
+        
+var collections = [{"count": 2, "lat": 47.6141, "lon": -122.33654999999999, "name": "hiking-trails"}, {"count": 1, "lat": 47.6112, "lon": -122.33160000000001, "name": "cycling-routes"}, {"count": 1, "lat": 47.650999999999996, "lon": -122.30000000000001, "name": "running-tracks"}];
+var markers = [];
+
+collections.forEach(function(collection) {
+    var marker = L.marker([collection.lat, collection.lon])
+        .addTo(map)
+        .on('click', function() {
+            window.location.href = collection.name + '/';
+        });
+    
+    // Add popup for hover info but don't require clicking it
+    marker.bindPopup('<b>' + collection.name + '</b><br>' + 
+                    collection.count + ' GPX file(s)');
+    markers.push(marker);
+});
+
+if (markers.length > 0) {
+    var group = new L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.1));
+}
+
+// Sidebar toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    var sidebar = document.getElementById('sidebar');
+    var sidebarToggle = document.getElementById('sidebarToggle');
+    var sidebarClose = document.getElementById('sidebarClose');
+    
+    function toggleSidebar() {
+        sidebar.classList.toggle('collapsed');
+        // Trigger map resize after sidebar animation
+        setTimeout(function() {
+            map.invalidateSize();
+        }, 300);
+    }
+    
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    sidebarClose.addEventListener('click', toggleSidebar);
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block title %}{{ collection_name }} - GPX Collection{% endblock %}
+
+{% block map_height %}70vh{% endblock %}
+{% block initial_zoom %}10{% endblock %}
+
+{% block extra_css %}
+/* Collection-specific styles */
+.back-link-sidebar {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+.back-link-sidebar:hover {
+    background: rgba(255,255,255,0.3);
+}
+.file-list {
+    margin: 0;
+}
+.file-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+.file-item:hover {
+    background: rgba(44, 90, 160, 0.05);
+}
+.file-item:last-child {
+    border-bottom: none;
+}
+.file-item-content {
+    flex: 1;
+}
+.download-link {
+    background: #CCCCCC;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+.download-link:hover {
+    background: #1e3d6f;
+}
+.file-name-link {
+    color: #2c5aa0;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.file-name-link:hover {
+    color: #1e3d6f;
+    text-decoration: underline;
+}
+{% endblock %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block map_container %}
+<div class="main-container">
+    {% if markdown_content %}
+    <div class="left-sidebar" id="leftSidebar">
+        <div class="left-sidebar-content">
+            {{ markdown_content|safe }}
+        </div>
+    </div>
+    {% endif %}
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div>
+                <a href="../" class="back-link-sidebar">← Overview</a>
+                <h3>{{ collection_name }}</h3>
+                <small>{{ gpx_files|length }} files • {{ tracks|length }} tracks • {{ waypoints|length }} waypoints</small>
+            </div>
+        </div>
+        <div class="sidebar-content">
+            <div class="file-list">
+                {% for gpx_file in gpx_files %}
+                <div class="file-item">
+                    <div class="file-item-content">
+                        <div><a href="#" class="file-name-link" data-file="{{ gpx_file.file_name }}">{{ gpx_file.file_name }}</a></div>
+                        <small>{{ gpx_file.tracks|length }} track(s), {{ gpx_file.waypoints|length }} waypoint(s)</small>
+                    </div>
+                    <a href="{{ gpx_file.file_name }}" download class="download-link" title="Download GPX file">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M13 8V2H7v6H2l8 8l8-8h-5zM0 18h20v2H0v-2z"/></svg> 
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% if markdown_content %}
+    <button class="left-toggle-btn" id="leftSidebarToggle">📝</button>
+    {% endif %}
+    <button class="toggle-btn" id="sidebarToggle">☰</button>
+</div>
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block map_script %}
+var tracks = {{ tracks | tojson }};
+var waypoints = {{ waypoints | tojson }};
+var gpxFiles = {{ gpx_files | tojson }};
+var allBounds = [];
+var fileElements = {}; // Store map elements by filename
+
+// Add tracks
+var colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
+tracks.forEach(function(track, index) {
+    if (track.points && track.points.length > 0) {
+        var polyline = L.polyline(track.points, {
+            color: colors[index % colors.length],
+            weight: 3,
+            opacity: 0.7
+        }).addTo(map);
+        
+        polyline.bindPopup('<b>' + track.name + '</b>');
+        allBounds = allBounds.concat(track.points);
+        
+        // Use the exact filename from the track data
+        var fileName = track.file_name;
+        if (!fileElements[fileName]) {
+            fileElements[fileName] = { tracks: [], waypoints: [], bounds: [] };
+        }
+        fileElements[fileName].tracks.push(polyline);
+        fileElements[fileName].bounds = fileElements[fileName].bounds.concat(track.points);
+    }
+});
+
+// Add waypoints
+waypoints.forEach(function(waypoint) {
+    var marker = L.marker([waypoint.lat, waypoint.lon])
+        .addTo(map)
+        .bindPopup('<b>' + waypoint.name + '</b>');
+    allBounds.push([waypoint.lat, waypoint.lon]);
+    
+    // Use the exact filename from the waypoint data
+    var fileName = waypoint.file_name;
+    if (!fileElements[fileName]) {
+        fileElements[fileName] = { tracks: [], waypoints: [], bounds: [] };
+    }
+    fileElements[fileName].waypoints.push(marker);
+    fileElements[fileName].bounds.push([waypoint.lat, waypoint.lon]);
+});
+
+// Fit map to show all tracks and waypoints
+if (allBounds.length > 0) {
+    var bounds = L.latLngBounds(allBounds);
+    map.fitBounds(bounds.pad(0.1));
+}
+
+// Add click handlers for filename links and sidebar toggle
+document.addEventListener('DOMContentLoaded', function() {
+    var fileNameLinks = document.querySelectorAll('.file-name-link');
+    fileNameLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var fileName = this.getAttribute('data-file');
+            
+            if (fileElements[fileName] && fileElements[fileName].bounds.length > 0) {
+                var fileBounds = L.latLngBounds(fileElements[fileName].bounds);
+                map.fitBounds(fileBounds.pad(0.3));
+                
+                // Highlight the file's elements briefly
+                fileElements[fileName].tracks.forEach(function(track) {
+                    var originalWeight = track.options.weight;
+                    track.setStyle({ weight: 6 });
+                    setTimeout(function() {
+                        track.setStyle({ weight: originalWeight });
+                    }, 2000);
+                });
+                
+                fileElements[fileName].waypoints.forEach(function(marker) {
+                    marker.openPopup();
+                    setTimeout(function() {
+                        marker.closePopup();
+                    }, 2000);
+                });
+            }
+        });
+    });
+    
+    // Right sidebar toggle functionality
+    var rightSidebar = document.getElementById('sidebar');
+    var rightSidebarToggle = document.getElementById('sidebarToggle');
+    var rightSidebarClose = document.getElementById('sidebarClose');
+
+    function toggleRightSidebar() {
+        rightSidebar.classList.toggle('collapsed');
+        // Trigger map resize after sidebar animation
+        setTimeout(function() {
+            map.invalidateSize();
+        }, 300);
+    }
+
+    if (rightSidebarToggle) {
+        rightSidebarToggle.addEventListener('click', toggleRightSidebar);
+    }
+    if (rightSidebarClose) {
+        rightSidebarClose.addEventListener('click', toggleRightSidebar);
+    }
+
+    // Left sidebar toggle functionality (only if left sidebar exists)
+    var leftSidebar = document.getElementById('leftSidebar');
+    if (leftSidebar) {
+        var leftSidebarToggle = document.getElementById('leftSidebarToggle');
+        var leftSidebarClose = document.getElementById('leftSidebarClose');
+
+        function toggleLeftSidebar() {
+            leftSidebar.classList.toggle('collapsed');
+            // Trigger map resize after sidebar animation
+            setTimeout(function() {
+                map.invalidateSize();
+            }, 300);
+        }
+
+        if (leftSidebarToggle) {
+            leftSidebarToggle.addEventListener('click', toggleLeftSidebar);
+        }
+        if (leftSidebarClose) {
+            leftSidebarClose.addEventListener('click', toggleLeftSidebar);
+        }
+    }
+});
+{% endblock %}

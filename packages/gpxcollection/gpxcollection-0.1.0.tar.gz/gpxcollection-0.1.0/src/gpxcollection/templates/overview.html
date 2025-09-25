@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}GPX Collections Overview{% endblock %}
+
+{% block extra_css %}
+/* Overview-specific styles */
+.collections-list {
+    margin: 0;
+}
+.collection-card {
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.2s ease;
+}
+.collection-card:hover {
+    background: rgba(44, 90, 160, 0.05);
+}
+.collection-card:last-child {
+    border-bottom: none;
+}
+.collection-card h3 {
+    margin: 0 0 5px 0;
+    color: #2c5aa0;
+    font-size: 1.1em;
+}
+.collection-card a {
+    text-decoration: none;
+    color: inherit;
+}
+.collection-card p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block map_container %}
+<div class="main-container">
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div>
+                <h3>GPX Collections</h3>
+                <small>{{ collections|length }} collections • Click markers or list items to explore</small>
+            </div>
+        </div>
+        <div class="sidebar-content">
+            <div class="collections-list">
+                {% for collection in collections %}
+                <div class="collection-card">
+                    <a href="{{ collection.name }}/">
+                        <h3>{{ collection.name }}</h3>
+                        <p>{{ collection.gpx_count }} GPX files</p>
+                        <p>{{ collection.track_count }} tracks, {{ collection.waypoint_count }} waypoints</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+        <button class="toggle-btn" id="sidebarToggle">☰</button>
+</div>
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block map_script %}
+var collections = {{ collection_markers | tojson }};
+var markers = [];
+
+collections.forEach(function(collection) {
+    var marker = L.marker([collection.lat, collection.lon])
+        .addTo(map)
+        .on('click', function() {
+            window.location.href = collection.name + '/';
+        });
+    
+    // Add popup for hover info but don't require clicking it
+    marker.bindPopup('<b>' + collection.name + '</b><br>' + 
+                    collection.count + ' GPX file(s)');
+    markers.push(marker);
+});
+
+if (markers.length > 0) {
+    var group = new L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.1));
+}
+
+// Sidebar toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    var sidebar = document.getElementById('sidebar');
+    var sidebarToggle = document.getElementById('sidebarToggle');
+    var sidebarClose = document.getElementById('sidebarClose');
+    
+    function toggleSidebar() {
+        sidebar.classList.toggle('collapsed');
+        // Trigger map resize after sidebar animation
+        setTimeout(function() {
+            map.invalidateSize();
+        }, 300);
+    }
+    
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    sidebarClose.addEventListener('click', toggleSidebar);
+});
+{% endblock %}

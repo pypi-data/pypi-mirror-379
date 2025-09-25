@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Test GPX" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Lake Loop</name>
+    <desc>Easy loop around the lake</desc>
+  </metadata>
+  <trk>
+    <name>Lake Loop Trail</name>
+    <desc>Circular trail around the lake</desc>
+    <trkseg>
+      <trkpt lat="47.6200" lon="-122.3400">
+        <ele>50</ele>
+        <time>2023-01-02T09:00:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6210" lon="-122.3390">
+        <ele>52</ele>
+        <time>2023-01-02T09:05:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6220" lon="-122.3400">
+        <ele>54</ele>
+        <time>2023-01-02T09:10:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6210" lon="-122.3410">
+        <ele>52</ele>
+        <time>2023-01-02T09:15:00Z</time>
+      </trkpt>
+      <trkpt lat="47.6200" lon="-122.3400">
+        <ele>50</ele>
+        <time>2023-01-02T09:20:00Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+  <wpt lat="47.6205" lon="-122.3395">
+    <name>Lake Center</name>
+    <desc>Center of the lake</desc>
+    <ele>45</ele>
+  </wpt>
+  <wpt lat="47.6215" lon="-122.3405">
+    <name>Picnic Area</name>
+    <desc>Good spot for lunch</desc>
+    <ele>55</ele>
+  </wpt>
+</gpx>
