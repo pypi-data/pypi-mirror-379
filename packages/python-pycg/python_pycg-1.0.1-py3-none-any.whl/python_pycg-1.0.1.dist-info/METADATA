@@ -1,0 +1,82 @@
+Metadata-Version: 2.4
+Name: python-pycg
+Version: 1.0.1
+Summary: PyCG: Toolbox for CG-related visualizations and computations
+Author-email: Jiahui Huang <huangjh.work@outlook.com>
+License: MIT
+Project-URL: Homepage, https://github.com/heiwang1997/pycg
+Project-URL: Repository, https://github.com/heiwang1997/pycg
+Keywords: pycg,graphics,3d,visualization
+Classifier: Operating System :: Unix
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pyquaternion
+Requires-Dist: pyyaml
+Requires-Dist: omegaconf
+Requires-Dist: tqdm
+Requires-Dist: pynvml
+Requires-Dist: calmsize
+Requires-Dist: rich
+Requires-Dist: plyfile
+Requires-Dist: trimesh
+Requires-Dist: imageio
+Requires-Dist: screeninfo
+Requires-Dist: pillow
+Requires-Dist: usd-core
+Requires-Dist: scipy
+Provides-Extra: all
+Requires-Dist: open3d_pycg_cpu; extra == "all"
+Dynamic: license-file
+
+# PyCG: Toolbox for CG-related visualizations and computations
+
+[![Publish to PyPI.org](https://github.com/heiwang1997/pycg/actions/workflows/publish.yml/badge.svg)](https://github.com/heiwang1997/pycg/actions/workflows/publish.yml)
+[![Documentation Status](https://readthedocs.org/projects/pycg/badge/?version=latest)](https://pycg.readthedocs.io/en/latest/?badge=latest)
+
+PyCG is there for people to accelerate their 3D visualizations and computations, aiming at implementing complicated functions with as few lines as possible.
+The toolbox is created from the perspective of researchers and would hopefully accelerate your daily pipeline.
+
+## Install
+
+```shell
+pip install -U python-pycg[all]
+```
+
+For developers, clone this repository and install it if you want to use newest features:
+```shell
+git clone --recursive https://github.com/heiwang1997/pycg
+pip install -e .[all]
+```
+
+## Using PyCG
+
+PyCG contains many submodules which could be easily imported via `from pycg import xxx`.
+These different modules span a wide range of functionalities from visualizing 3D assets to creating nice html tables for comparing results.
+Please refer to the individual documentation of each submodule to get started.
+
+- 3D Visualization `pycg.vis`
+- Render 3D Scenes `pycg.render`
+- Handling 3D Transformations `pycg.isometry`
+- Compress Videos `pycg.video`
+- Compress PDF Files `pycg.pdf`
+- Experiment Utilities `pycg.exp`
+- Manipulating Images `pycg.image`
+- ... and so on to be added!
+
+## Gallery
+
+![](docs/demo/render.png)
+
+<video src="https://github.com/heiwang1997/pycg/raw/master/docs/demo/scene_show.mp4" controls autoplay></video>
+
+<video src="https://github.com/heiwang1997/pycg/raw/master/docs/demo/selection.mp4" controls autoplay></video>
+
+<video src="https://github.com/heiwang1997/pycg/raw/master/docs/demo/animation_light.mp4" controls autoplay></video>
+
+<video src="https://github.com/heiwang1997/pycg/raw/master/docs/demo/animation_arrow.mp4" controls autoplay></video>
