@@ -1,0 +1,12 @@
+
+---
+
+## ✅ Como aplicar
+
+1. Substitua o conteúdo atual do `README.md` pelo texto acima.  
+2. Atualize a versão no `pyproject.toml` para `0.0.2`.  
+3. Refaça o build e publique no PyPI → assim sua página oficial mostrará o README bilíngue.  
+
+---
+
+👉 você quer que eu já prepare o **passo exato para lançar a versão `0.0.2`** no PyPI com esse novo README?
