@@ -1,0 +1,2 @@
+[console_scripts]
+vatify = vatify.cli:main
