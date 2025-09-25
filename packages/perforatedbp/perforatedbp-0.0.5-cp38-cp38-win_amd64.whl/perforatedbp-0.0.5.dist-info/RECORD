@@ -1,0 +1,13 @@
+perforatedbp/__init__.cp38-win_amd64.pyd,sha256=L2RpKYVfgkDwYgOvtec0SFaVZExYUD1IJMZ7c_BwcJA,18944
+perforatedbp/blockwise_pbp.cp38-win_amd64.pyd,sha256=qYUByr0-jzWGq0Zq1ez1_9snkIlr0d9-gLI_JyclKF4,144896
+perforatedbp/check_license.cp38-win_amd64.pyd,sha256=9eN0PLoBsqaJNkOImN68ktJ3IWUcuCFJM1aw7MhfL5s,77824
+perforatedbp/clean_load.cp38-win_amd64.pyd,sha256=jqzo5gyK1Wh9b8nnZclwhvGdeuZ3EWoWXzhZwBKYF9I,112128
+perforatedbp/globals_pbp.cp38-win_amd64.pyd,sha256=QSy6Mq87Ii-oakwU5T4OyZAR3jreZW06D119mfLm88Y,29184
+perforatedbp/modules_pbp.cp38-win_amd64.pyd,sha256=YOnYyT-GGaUccgiGDPAwQO6spG5fMh7JP8ZJzBnIhDg,279552
+perforatedbp/network_pbp.cp38-win_amd64.pyd,sha256=5NsdJ7_MpyYF2SsEpNG7BBaApOILq_CQkV2q2R6IKCU,139264
+perforatedbp/tracker_pbp.cp38-win_amd64.pyd,sha256=I2JlKbDCm6YjDkIolmzGUBmf9oFv-cPq7PTakYxxVT8,136192
+perforatedbp/utils_pbp.cp38-win_amd64.pyd,sha256=D7yqTUmVgRSg3w7vB93b4HJwvZZOZ-ERbClN_bJIcdE,117760
+perforatedbp-0.0.5.dist-info/METADATA,sha256=9Y0MTrz3KPb807OD9axuqGcOlU_eo3rHMOspZAYbeJA,537
+perforatedbp-0.0.5.dist-info/WHEEL,sha256=N6sQ21sT3WcdJJLEJNx13ERof8WaAHD2AD1HUbWJ67E,100
+perforatedbp-0.0.5.dist-info/top_level.txt,sha256=vymX1tN98EJMl_IuPCF3x4XiXYhLC_cB25NXXVJ8G2M,13
+perforatedbp-0.0.5.dist-info/RECORD,,
