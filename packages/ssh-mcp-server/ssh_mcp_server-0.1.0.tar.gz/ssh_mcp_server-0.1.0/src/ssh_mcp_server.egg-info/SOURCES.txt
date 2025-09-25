@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/ssh_mcp_server/__init__.py
+src/ssh_mcp_server/auth_cli.py
+src/ssh_mcp_server/credentials.py
+src/ssh_mcp_server/server.py
+src/ssh_mcp_server.egg-info/PKG-INFO
+src/ssh_mcp_server.egg-info/SOURCES.txt
+src/ssh_mcp_server.egg-info/dependency_links.txt
+src/ssh_mcp_server.egg-info/entry_points.txt
+src/ssh_mcp_server.egg-info/requires.txt
+src/ssh_mcp_server.egg-info/top_level.txt
+tests/test_basic.py
+tests/test_credentials.py
+tests/test_server.py
