@@ -1,0 +1,12 @@
+cf_pve/__init__.py,sha256=WJa2QqzdSxYOYkws5bNGcyy86GPKd33jeF4YsikG6Lk,419
+cf_pve/cloudflare_client.py,sha256=hFJeoRMEfYCF9J6_dyuw4pvnaOuUVA6_dLDXQouBz6c,10926
+cf_pve/commands.py,sha256=_RNOMyPiiph6FO1XbDCMBKJ5bwm9vG9wVwjkt3rwy4o,14235
+cf_pve/config.py,sha256=YOTvOxapajOItkPcNgQC7gpyA5KF0xtqsRdM-84BLUw,6652
+cf_pve/main.py,sha256=vbRRKZonHIwM9HpOZGEKBrt_tcwQkqCqu3XnsftFOlw,8425
+cf_pve/proxmox_client.py,sha256=570pdJhZqIqdL32cEb653_GV4_SNzgegQ1m4NsMYzxw,10442
+cf_pve-0.1.0.dist-info/licenses/LICENSE,sha256=OLbcDGY0U6TB5CFxoY1skALPB26QP6QCPAC6LdZeM_Y,1097
+cf_pve-0.1.0.dist-info/METADATA,sha256=qJmqRfbiEfjzQ3p1jfo4gDI8Rciw2xJ-lewsq3-V90I,1928
+cf_pve-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cf_pve-0.1.0.dist-info/entry_points.txt,sha256=wxEcoB8EMYWzdHSZeP2YBnPXQ9RqNXmmnYBBbT1VLTI,43
+cf_pve-0.1.0.dist-info/top_level.txt,sha256=z7cIyIVZhF3C5My2Olvxwmi56hWCTjL8ZQIunIx0EQw,7
+cf_pve-0.1.0.dist-info/RECORD,,
