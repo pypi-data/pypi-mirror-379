@@ -1,0 +1,389 @@
+{
+    "protocol": {
+        "name": "Custom_IoT",
+        "version": "2.1",
+        "description": "Custom IoT protocol with mesh networking and adaptive features",
+        "category": "iot"
+    },
+    "protocol_config": {
+        "network_type": "mesh",
+        "max_hops": 5,
+        "encryption": "aes_128",
+        "authentication": "hmac_sha256",
+        "power_class": "battery",
+        "sleep_mode": "deep_sleep",
+        "wake_interval": 30000
+    },
+    "variables": {
+        "NODE_ID": "IOT_NODE_001",
+        "NETWORK_KEY": "0123456789ABCDEF0123456789ABCDEF",
+        "PARENT_NODE": "",
+        "ROUTING_TABLE": [],
+        "SEQUENCE_NUMBER": 0
+    },
+    "functions": {
+        "encrypt_payload": "lambda data, key: aes_encrypt(data, key)",
+        "calculate_hmac": "lambda data, key: hmac_sha256(data, key)",
+        "next_sequence": "lambda x: (x + 1) % 65536",
+        "select_parent": "lambda nodes: min(nodes, key=lambda n: n.hop_count + n.rssi_penalty)"
+    },
+    "transports": {
+        "wireless_mesh": {
+            "type": "lora",
+            "frequency": 868000000,
+            "spreading_factor": 7,
+            "bandwidth": 125000,
+            "tx_power": 14
+        }
+    },
+    "behaviors": {
+        "network_join": {
+            "type": "triggered",
+            "trigger_event": "startup",
+            "timeout": 30000,
+            "payload": [
+                {
+                    "packet_type": "JOIN_REQUEST"
+                },
+                {
+                    "node_id": "[NODE_ID]"
+                },
+                {
+                    "protocol_version": "2.1"
+                },
+                {
+                    "capabilities": "0x0F"
+                },
+                {
+                    "security_level": "HIGH"
+                },
+                {
+                    "power_class": "BATTERY"
+                },
+                {
+                    "max_children": "5"
+                }
+            ]
+        },
+        "sensor_data_tx": {
+            "type": "periodic",
+            "interval": 60000,
+            "active_states": [
+                "JOINED",
+                "OPERATIONAL"
+            ],
+            "payload": [
+                {
+                    "packet_type": "SENSOR_DATA"
+                },
+                {
+                    "node_id": "[NODE_ID]"
+                },
+                {
+                    "sequence": "[SEQUENCE_NUMBER:2:next_sequence]"
+                },
+                {
+                    "parent_node": "[PARENT_NODE]"
+                },
+                {
+                    "hop_count": "[HOP_COUNT:1]"
+                },
+                {
+                    "timestamp": "[TIMESTAMP:8:current_time]"
+                },
+                {
+                    "temperature": "[TEMP:2:read_temperature]"
+                },
+                {
+                    "humidity": "[HUMIDITY:2:read_humidity]"
+                },
+                {
+                    "battery_voltage": "[BATTERY:2:read_battery]"
+                },
+                {
+                    "signal_strength": "[RSSI:1:get_rssi]"
+                },
+                {
+                    "encrypted_data": "[DATA:encrypt_payload]"
+                },
+                {
+                    "message_auth": "[HMAC:16:calculate_hmac]"
+                }
+            ]
+        },
+        "route_discovery": {
+            "type": "triggered",
+            "trigger_event": "route_needed",
+            "payload": [
+                {
+                    "packet_type": "ROUTE_REQUEST"
+                },
+                {
+                    "request_id": "[REQ_ID:4:generate_request_id]"
+                },
+                {
+                    "source_node": "[NODE_ID]"
+                },
+                {
+                    "destination_node": "[TARGET_NODE]"
+                },
+                {
+                    "hop_count": "00"
+                },
+                {
+                    "route_metric": "00"
+                },
+                {
+                    "broadcast_id": "[BROADCAST_ID:2]"
+                }
+            ]
+        },
+        "route_maintenance": {
+            "type": "periodic",
+            "interval": 300000,
+            "payload": [
+                {
+                    "packet_type": "ROUTE_UPDATE"
+                },
+                {
+                    "node_id": "[NODE_ID]"
+                },
+                {
+                    "routing_table_size": "[TABLE_SIZE:1]"
+                },
+                {
+                    "routing_entries": "[ROUTING_TABLE]"
+                },
+                {
+                    "link_quality": "[LINK_METRICS]"
+                }
+            ]
+        },
+        "emergency_alert": {
+            "type": "triggered",
+            "trigger_event": "emergency_detected",
+            "priority": "critical",
+            "payload": [
+                {
+                    "packet_type": "EMERGENCY"
+                },
+                {
+                    "node_id": "[NODE_ID]"
+                },
+                {
+                    "emergency_type": "[ALERT_TYPE:1]"
+                },
+                {
+                    "severity": "[SEVERITY:1]"
+                },
+                {
+                    "location": "[GPS_COORDS:8]"
+                },
+                {
+                    "description": "[ALERT_MSG:32]"
+                },
+                {
+                    "timestamp": "[TIMESTAMP:8:current_time]"
+                }
+            ]
+        }
+    },
+    "adaptive_features": {
+        "adaptive_sf": {
+            "enabled": true,
+            "sf_selection": {
+                "close_nodes": {
+                    "spreading_factor": 7,
+                    "data_rate": "high"
+                },
+                "medium_distance": {
+                    "spreading_factor": 9,
+                    "data_rate": "medium"
+                },
+                "far_nodes": {
+                    "spreading_factor": 12,
+                    "data_rate": "low"
+                }
+            }
+        },
+        "duty_cycle_mgmt": {
+            "enabled": true,
+            "regulation": "ETSI_EN300220",
+            "sub_bands": {
+                "g1_band": {
+                    "duty_cycle": 1.0,
+                    "max_power": 14
+                },
+                "g3_band": {
+                    "duty_cycle": 10.0,
+                    "max_power": 27
+                }
+            }
+        },
+        "power_optimization": {
+            "enabled": true,
+            "power_states": {
+                "active": {
+                    "duration": 5000,
+                    "current_consumption": 50
+                },
+                "listening": {
+                    "duration": 1000,
+                    "current_consumption": 15
+                },
+                "deep_sleep": {
+                    "duration": 54000,
+                    "current_consumption": 0.01
+                }
+            }
+        }
+    },
+    "security": {
+        "key_management": {
+            "network_key": "[NETWORK_KEY:32]",
+            "session_keys": true,
+            "key_rotation": 86400
+        },
+        "encryption": {
+            "algorithm": "AES-128-CTR",
+            "iv_size": 16
+        },
+        "authentication": {
+            "algorithm": "HMAC-SHA256",
+            "truncated_mac": 8
+        },
+        "anti_replay": {
+            "sequence_window": 64,
+            "duplicate_detection": true
+        }
+    },
+    "state_machine": {
+        "initial_state": "INITIALIZING",
+        "states": {
+            "INITIALIZING": {
+                "description": "Device startup"
+            },
+            "DISCOVERING": {
+                "description": "Network discovery"
+            },
+            "JOINING": {
+                "description": "Network join process"
+            },
+            "JOINED": {
+                "description": "Successfully joined network"
+            },
+            "OPERATIONAL": {
+                "description": "Normal operation"
+            },
+            "ROUTING": {
+                "description": "Acting as router"
+            },
+            "SLEEPING": {
+                "description": "Power save mode"
+            },
+            "EMERGENCY": {
+                "description": "Emergency mode"
+            },
+            "ERROR": {
+                "description": "Error state"
+            }
+        },
+        "transitions": [
+            {
+                "from": "INITIALIZING",
+                "to": "DISCOVERING",
+                "trigger": "startup_complete"
+            },
+            {
+                "from": "DISCOVERING",
+                "to": "JOINING",
+                "trigger": "network_found"
+            },
+            {
+                "from": "JOINING",
+                "to": "JOINED",
+                "trigger": "join_accepted"
+            },
+            {
+                "from": "JOINED",
+                "to": "OPERATIONAL",
+                "trigger": "configuration_complete"
+            },
+            {
+                "from": "OPERATIONAL",
+                "to": "ROUTING",
+                "trigger": "become_router"
+            },
+            {
+                "from": "OPERATIONAL",
+                "to": "SLEEPING",
+                "trigger": "enter_sleep_mode"
+            },
+            {
+                "from": "*",
+                "to": "EMERGENCY",
+                "trigger": "emergency_detected"
+            }
+        ]
+    },
+    "qos": {
+        "priorities": {
+            "emergency": 1,
+            "route_maintenance": 2,
+            "sensor_data": 3,
+            "heartbeat": 4
+        },
+        "reliability": {
+            "best_effort": 0,
+            "acknowledged": 1,
+            "confirmed": 2
+        }
+    },
+    "topology_management": {
+        "parent_selection": {
+            "factors": [
+                {
+                    "hop_count": 0.4
+                },
+                {
+                    "rssi": 0.3
+                },
+                {
+                    "battery_level": 0.2
+                },
+                {
+                    "load": 0.1
+                }
+            ]
+        },
+        "load_balancing": {
+            "enabled": true,
+            "max_children": 10,
+            "load_threshold": 80
+        },
+        "fault_tolerance": {
+            "redundant_paths": 2,
+            "path_quality_monitoring": true,
+            "automatic_rerouting": true
+        }
+    },
+    "orchestration": {
+        "startup_phase": {
+            "duration": 60000,
+            "sequence": [
+                "network_join",
+                "route_discovery",
+                "security_handshake"
+            ],
+            "next_phase": "operational_phase"
+        },
+        "operational_phase": {
+            "type": "parallel",
+            "parallel_behaviors": [
+                "sensor_data_tx",
+                "route_maintenance",
+                "emergency_monitoring"
+            ]
+        }
+    }
+}

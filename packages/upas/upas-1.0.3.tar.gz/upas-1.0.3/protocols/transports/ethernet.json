@@ -1,0 +1,86 @@
+{
+    "transport": {
+        "name": "Standard_Ethernet",
+        "type": "ethernet",
+        "description": "Standard Ethernet with UDP/TCP support"
+    },
+    "services": {
+        "http_server": {
+            "type": "tcp_server",
+            "bind": "0.0.0.0:80",
+            "max_connections": 100,
+            "keepalive": true
+        },
+        "https_server": {
+            "type": "tcp_server",
+            "bind": "0.0.0.0:443",
+            "max_connections": 100,
+            "keepalive": true,
+            "ssl_enabled": true
+        },
+        "dns_server": {
+            "type": "udp_unicast",
+            "bind": "0.0.0.0:53"
+        },
+        "dhcp_server": {
+            "type": "udp_unicast",
+            "bind": "0.0.0.0:67"
+        },
+        "dhcp_client": {
+            "type": "udp_unicast",
+            "bind": "0.0.0.0:68"
+        },
+        "snmp_agent": {
+            "type": "udp_unicast",
+            "bind": "0.0.0.0:161"
+        },
+        "snmp_manager": {
+            "type": "udp_unicast",
+            "bind": "0.0.0.0:162"
+        },
+        "syslog": {
+            "type": "udp_unicast",
+            "bind": "0.0.0.0:514"
+        },
+        "ntp": {
+            "type": "udp_unicast",
+            "bind": "0.0.0.0:123"
+        },
+        "modbus_tcp": {
+            "type": "tcp_server",
+            "bind": "0.0.0.0:502"
+        },
+        "mdns": {
+            "type": "udp_multicast",
+            "bind": "0.0.0.0:5353",
+            "multicast_groups": [
+                "224.0.0.251"
+            ]
+        },
+        "upnp_discovery": {
+            "type": "udp_multicast",
+            "bind": "0.0.0.0:1900",
+            "multicast_groups": [
+                "239.255.255.250"
+            ]
+        },
+        "iot_discovery": {
+            "type": "udp_multicast",
+            "bind": "0.0.0.0:7001",
+            "multicast_groups": [
+                "224.0.10.13",
+                "239.255.42.99"
+            ]
+        }
+    },
+    "performance": {
+        "buffer_size": 65536,
+        "socket_reuse": true,
+        "nodelay": true
+    },
+    "security": {
+        "allow_broadcast": true,
+        "allow_multicast": true,
+        "packet_size_limit": 65535
+    }
+}

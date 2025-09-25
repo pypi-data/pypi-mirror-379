@@ -1,0 +1,279 @@
+{
+    "behavior": {
+        "name": "Generic_Heartbeat",
+        "type": "keepalive",
+        "description": "Generic heartbeat mechanism for service monitoring"
+    },
+    "heartbeat_config": {
+        "interval": 5000,
+        "timeout": 2000,
+        "max_missed": 3,
+        "payload_type": "simple",
+        "health_check": true,
+        "health_metrics": [
+            "cpu",
+            "memory",
+            "disk",
+            "network"
+        ]
+    },
+    "behavior_type": "periodic",
+    "interval": "[HEARTBEAT_INTERVAL]",
+    "repeat_count": -1,
+    "variables": {
+        "SERVICE_ID": "SERVICE_001",
+        "INSTANCE_ID": "INSTANCE_001",
+        "HEARTBEAT_ID": 0,
+        "SYSTEM_STATUS": "HEALTHY",
+        "LAST_HEARTBEAT": 0,
+        "MISSED_COUNT": 0
+    },
+    "functions": {
+        "generate_heartbeat_id": "lambda: str(uuid.uuid4())",
+        "get_system_load": "lambda: psutil.cpu_percent()",
+        "get_memory_usage": "lambda: psutil.virtual_memory().percent",
+        "get_disk_usage": "lambda: psutil.disk_usage('/').percent",
+        "increment_counter": "lambda x: x + 1"
+    },
+    "simple_heartbeat": {
+        "enabled": true,
+        "payload": [
+            {
+                "message_type": "HEARTBEAT"
+            },
+            {
+                "service_id": "[SERVICE_ID]"
+            },
+            {
+                "instance_id": "[INSTANCE_ID]"
+            },
+            {
+                "heartbeat_id": "[HEARTBEAT_ID:increment_counter]"
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_time]"
+            },
+            {
+                "status": "[SYSTEM_STATUS]"
+            }
+        ]
+    },
+    "detailed_heartbeat": {
+        "enabled": false,
+        "payload": [
+            {
+                "message_type": "HEARTBEAT_DETAILED"
+            },
+            {
+                "service_id": "[SERVICE_ID]"
+            },
+            {
+                "instance_id": "[INSTANCE_ID]"
+            },
+            {
+                "heartbeat_id": "[HEARTBEAT_ID:increment_counter]"
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_time]"
+            },
+            {
+                "status": "[SYSTEM_STATUS]"
+            },
+            {
+                "cpu_usage": "[CPU:1:get_system_load]"
+            },
+            {
+                "memory_usage": "[MEMORY:1:get_memory_usage]"
+            },
+            {
+                "disk_usage": "[DISK:1:get_disk_usage]"
+            },
+            {
+                "uptime": "[UPTIME:8:get_uptime]"
+            },
+            {
+                "active_connections": "[CONNECTIONS:4]"
+            },
+            {
+                "requests_per_second": "[RPS:4]"
+            },
+            {
+                "error_rate": "[ERRORS:2]"
+            },
+            {
+                "response_time": "[RESPONSE_TIME:4]"
+            }
+        ]
+    },
+    "health_assessment": {
+        "cpu_threshold": {
+            "warning": 70,
+            "critical": 90
+        },
+        "memory_threshold": {
+            "warning": 80,
+            "critical": 95
+        },
+        "disk_threshold": {
+            "warning": 85,
+            "critical": 95
+        },
+        "status_rules": [
+            {
+                "condition": "cpu > 90 OR memory > 95 OR disk > 95",
+                "status": "CRITICAL"
+            },
+            {
+                "condition": "cpu > 70 OR memory > 80 OR disk > 85",
+                "status": "WARNING"
+            },
+            {
+                "condition": "error_rate > 5",
+                "status": "DEGRADED"
+            },
+            {
+                "default": "HEALTHY"
+            }
+        ]
+    },
+    "response_monitoring": {
+        "expected_ack": {
+            "enabled": true,
+            "message_type": "HEARTBEAT_ACK",
+            "match_fields": [
+                {
+                    "service_id": "[SERVICE_ID]"
+                },
+                {
+                    "heartbeat_id": "[SENT_HEARTBEAT_ID]"
+                }
+            ]
+        },
+        "timeout_handling": {
+            "timeout_duration": "[HEARTBEAT_TIMEOUT]",
+            "on_timeout": [
+                "increment_missed_counter",
+                "log_missed_heartbeat",
+                "check_alert_threshold"
+            ]
+        },
+        "success_handling": {
+            "on_response": [
+                "reset_missed_counter",
+                "update_last_heartbeat_time",
+                "log_successful_heartbeat"
+            ]
+        }
+    },
+    "adaptive_frequency": {
+        "enabled": true,
+        "frequency_rules": {
+            "healthy_state": {
+                "condition": "status == HEALTHY AND missed_count == 0",
+                "interval": 10000
+            },
+            "warning_state": {
+                "condition": "status == WARNING OR missed_count > 0",
+                "interval": 5000
+            },
+            "critical_state": {
+                "condition": "status == CRITICAL OR missed_count > 1",
+                "interval": 2000
+            }
+        }
+    },
+    "service_discovery": {
+        "enabled": true,
+        "registration": {
+            "service_name": "[SERVICE_ID]",
+            "service_port": 8080,
+            "health_check_endpoint": "/health",
+            "tags": [
+                "production",
+                "api",
+                "v1"
+            ]
+        },
+        "registry_heartbeat": {
+            "enabled": true,
+            "registry_url": "http://consul:8500",
+            "ttl": 15
+        }
+    },
+    "clustering": {
+        "enabled": false,
+        "leader_election": {
+            "enabled": true,
+            "election_timeout": 10000,
+            "heartbeat_as_leader": true
+        },
+        "failover": {
+            "peer_monitoring": true,
+            "peer_timeout": 15000,
+            "automatic_promotion": true
+        }
+    },
+    "alerting": {
+        "enabled": true,
+        "alert_conditions": {
+            "missed_heartbeats": {
+                "threshold": "[MAX_MISSED]",
+                "severity": "CRITICAL",
+                "message": "Service {service_id} missed {count} consecutive heartbeats"
+            },
+            "degraded_performance": {
+                "condition": "status != HEALTHY",
+                "severity": "WARNING",
+                "message": "Service {service_id} status: {status}"
+            },
+            "recovery": {
+                "condition": "missed_count reset to 0",
+                "severity": "INFO",
+                "message": "Service {service_id} heartbeat recovered"
+            }
+        },
+        "notifications": {
+            "email": {
+                "enabled": false,
+                "recipients": [
+                    "admin@example.com"
+                ]
+            },
+            "slack": {
+                "enabled": false,
+                "webhook_url": "https://hooks.slack.com/...",
+                "channel": "#alerts"
+            },
+            "webhook": {
+                "enabled": true,
+                "url": "http://monitoring:8080/webhooks/alerts"
+            }
+        }
+    },
+    "metrics": {
+        "collect_metrics": true,
+        "performance": [
+            "heartbeat_success_rate",
+            "average_response_time",
+            "missed_heartbeat_count",
+            "system_health_score"
+        ],
+        "business": [
+            "uptime_percentage",
+            "availability_sla",
+            "recovery_time"
+        ],
+        "export": {
+            "prometheus": {
+                "enabled": true,
+                "port": 9090,
+                "metrics_path": "/metrics"
+            },
+            "influxdb": {
+                "enabled": false,
+                "url": "http://influxdb:8086",
+                "database": "heartbeats"
+            }
+        }
+    }
+}

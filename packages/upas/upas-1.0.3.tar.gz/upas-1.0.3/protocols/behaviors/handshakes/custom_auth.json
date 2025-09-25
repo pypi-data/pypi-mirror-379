@@ -1,0 +1,110 @@
+{
+    "behavior": {
+        "name": "Custom_Authentication",
+        "type": "handshake",
+        "description": "Custom challenge-response authentication protocol"
+    },
+    "auth_config": {
+        "method": "challenge_response",
+        "hash_algorithm": "SHA256",
+        "key_size": 32,
+        "challenge_size": 16,
+        "timeout": 10000
+    },
+    "parameters": {
+        "shared_secret": "MySecretKey123!",
+        "salt": "RandomSalt456",
+        "iterations": 1000
+    },
+    "behavior_type": "triggered",
+    "trigger_event": "auth_handshake_start",
+    "variables": {
+        "CLIENT_ID": "CLIENT_001",
+        "SERVER_ID": "SERVER_001",
+        "SESSION_ID": "",
+        "CHALLENGE": "",
+        "RESPONSE_HASH": "",
+        "AUTH_TOKEN": "",
+        "AUTH_STATE": "INIT"
+    },
+    "functions": {
+        "generate_challenge": "lambda size: os.urandom(size).hex()",
+        "generate_session_id": "lambda: str(uuid.uuid4())",
+        "compute_hash": "lambda data, key: hmac.new(key.encode(), data.encode(), hashlib.sha256).hexdigest()",
+        "derive_key": "lambda password, salt: pbkdf2_hmac('sha256', password.encode(), salt.encode(), 1000)"
+    },
+    "auth_init": {
+        "payload": [
+            {
+                "message_type": "AUTH_INIT"
+            },
+            {
+                "protocol_version": "1.0"
+            },
+            {
+                "client_id": "[CLIENT_ID]"
+            },
+            {
+                "session_id": "[SESSION_ID:generate_session_id]"
+            },
+            {
+                "supported_methods": [
+                    "challenge_response",
+                    "token_based"
+                ]
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_time]"
+            }
+        ]
+    },
+    "challenge_request": {
+        "trigger": "auth_init_ack_received",
+        "expected_response": [
+            {
+                "message_type": "AUTH_CHALLENGE"
+            },
+            {
+                "session_id": "[SESSION_ID]"
+            },
+            {
+                "challenge": "[CHALLENGE:32]"
+            },
+            {
+                "challenge_id": "[CHALLENGE_ID:8]"
+            },
+            {
+                "hash_method": "SHA256"
+            },
+            {
+                "expires_at": "[EXPIRY:8]"
+            }
+        ]
+    },
+    "states": {
+        "INIT": "Initial state",
+        "CHALLENGE_SENT": "Challenge sent to client",
+        "RESPONSE_RECEIVED": "Response received from client",
+        "AUTHENTICATED": "Authentication successful",
+        "FAILED": "Authentication failed",
+        "TIMEOUT": "Authentication timeout"
+    },
+    "transitions": {
+        "INIT -> CHALLENGE_SENT": "send_auth_challenge",
+        "CHALLENGE_SENT -> RESPONSE_RECEIVED": "receive_auth_response",
+        "RESPONSE_RECEIVED -> AUTHENTICATED": "valid_response",
+        "RESPONSE_RECEIVED -> FAILED": "invalid_response",
+        "* -> TIMEOUT": "timeout_exceeded"
+    },
+    "error_handling": {
+        "timeout": 10000,
+        "max_retries": 3,
+        "error_codes": {
+            "0x01": "Invalid challenge",
+            "0x02": "Authentication failed",
+            "0x03": "Timeout exceeded",
+            "0x04": "Invalid session ID",
+            "0x05": "Unsupported method"
+        }
+    }
+}

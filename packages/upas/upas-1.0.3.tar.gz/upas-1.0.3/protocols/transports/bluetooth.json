@@ -1,0 +1,50 @@
+{
+    "transport": {
+        "name": "Bluetooth_Classic",
+        "type": "bluetooth",
+        "description": "Bluetooth Classic (BR/EDR) transport layer"
+    },
+    "bluetooth_config": {
+        "mode": "classic",
+        "discoverable": true,
+        "connectable": true,
+        "device_name": "UPAS_Device",
+        "device_class": 7936,
+        "max_connections": 7,
+        "connection_timeout": 10000,
+        "authentication": false,
+        "encryption": false,
+        "pairing_required": false
+    },
+    "services": {
+        "serial_port": {
+            "type": "rfcomm_server",
+            "channel": 1,
+            "uuid": "00001101-0000-1000-8000-00805F9B34FB",
+            "service_name": "Serial Port"
+        },
+        "data_service": {
+            "type": "rfcomm_server",
+            "channel": 2,
+            "uuid": "12345678-1234-5678-9ABC-DEF012345678",
+            "service_name": "Custom Data Service"
+        },
+        "object_push": {
+            "type": "obex_server",
+            "channel": 3,
+            "uuid": "00001105-0000-1000-8000-00805F9B34FB",
+            "service_name": "Object Push"
+        }
+    },
+    "discovery": {
+        "inquiry_length": 10240,
+        "inquiry_mode": "general",
+        "scan_mode": "connectable_discoverable"
+    },
+    "power": {
+        "sniff_mode": true,
+        "sniff_interval": 800,
+        "hold_mode": false,
+        "park_mode": false
+    }
+}

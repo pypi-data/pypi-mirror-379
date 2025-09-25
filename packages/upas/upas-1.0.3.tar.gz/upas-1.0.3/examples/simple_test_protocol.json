@@ -1,0 +1,34 @@
+{
+    "protocol": {
+        "name": "SimpleTestProtocol",
+        "version": "1.0",
+        "description": "Simple test protocol for UDP multicast",
+        "category": "test"
+    },
+    "variables": {
+        "DEVICE_ID": "TEST001",
+        "MESSAGE_PREFIX": "HELLO"
+    },
+    "transports": {
+        "test_network": {
+            "type": "ethernet",
+            "services": {
+                "udp_service": {
+                    "type": "udp_unicast",
+                    "bind": "0.0.0.0:0"
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "simple_heartbeat": {
+            "type": "periodic",
+            "interval": 1000,
+            "transport": "test_network",
+            "destination": "224.0.10.13:7001",
+            "payload": [
+                "[MESSAGE_PREFIX][DEVICE_ID][COUNTER_4:increment]"
+            ]
+        }
+    }
+}
