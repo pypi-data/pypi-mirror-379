@@ -1,0 +1,135 @@
+[build-system]
+requires = ["poetry-core >=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "pytorch-ie"
+version = "0.33.0"
+description  = "State-of-the-art Information Extraction in PyTorch"
+license = { text = "MIT" }
+readme = "README.md"
+authors = [
+    {name = "Arne Binder", email = "arne.b.binder@gmail.com"},
+    {name = "Christoph Alt", email = "christoph.alt@posteo.de"},
+]
+# To support automatic classifiers based on dependencies and license see https://python-poetry.org/docs/pyproject/#classifiers
+dynamic = [ "classifiers" ]
+
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "pie-core >=0.2.1, <0.4.0",
+    "pie-documents >=0.1.0, <0.2.0",
+    "torch >=1.10",
+    "pytorch-lightning >=2, <3",
+    "torchmetrics[text] >=1.5, <2",
+    # >=4.35 because of BartModelWithDecoderPositionIds,
+    # <4.37 because of generation config created from model config in BartAsPointerNetwork
+    # TODO: check the upper bound, since this should be already fixed (https://github.com/ArneBinder/pie-modules/pull/205)
+    "transformers >=4.35.0,<4.37.0",
+]
+
+[project.urls]
+homepage = "https://github.com/arnebinder/pytorch-ie"
+repository = "https://github.com/arnebinder/pytorch-ie"
+documentation = "https://pytorch-ie.readthedocs.io"
+"Bug Tracker" = "https://github.com/arnebinder/pytorch-ie/issues"
+"Changelog" = "https://github.com/arnebinder/pytorch-ie/releases"
+
+[tool.poetry]
+packages = [
+    { include = "pytorch_ie", from = "src" },
+]
+classifiers = [
+    "Framework :: Pytest",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/arnebinder/pytorch-ie/issues"
+"Changelog" = "https://github.com/arnebinder/pytorch-ie/releases"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+
+# lazily imported packges
+# for taskmodule tests with collect statistics
+tabulate = "^0.9"
+# for TokenClassificationModelWithSeq2SeqEncoderAndCrf
+pytorch-crf = ">=0.7.2"
+
+# testing utilities (with coverage and run-time type checking)
+pytest = ">=6.2.5"
+pytest-xdist = "^3.8.0"
+pytest-cov = "^6.2.1"
+typeguard = ">=2.13.3"
+sh = "^2"
+types-requests = "^2.27.7"
+python-dotenv = "^0.20.0"
+
+# code quality and static type checking (via pre-commit)
+pre-commit = ">=2.16.0"
+pre-commit-hooks = ">=4.1.0"
+black = ">=21.12b0"
+isort = ">=5.12.0"
+pyupgrade = ">=2.29.1"
+mypy = ">=0.930"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
+
+[tool.black]
+line-length = 99
+target-version = ["py38", "py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 99
+known_first_party = ["pytorch_ie"]
+
+[tool.mypy]
+files = [
+    "src",
+    "tests",
+    "examples",
+    "docs/conf.py"
+]
+warn_unreachable = false
+# warn_unreachable = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+ignore_missing_imports = true
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["pytorch_ie"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 40
+
+[tool.pytest.ini_options]
+testpaths = "tests/"
+log_cli = true
+markers = [
+    "slow"
+]
+addopts = [
+    "--durations=0",
+    "--strict-markers",
+    "--doctest-modules",
+    "-n=auto",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning"
+]
