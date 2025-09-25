@@ -1,0 +1,13 @@
+apify_fingerprint_datapoints/CHANGELOG.md,sha256=gRUoTO-vMGhRDwjoClvH4ZXiB0QN5Uhh6gBZDR4QeE4,539
+apify_fingerprint_datapoints/README.md,sha256=_4-Z1ZW91Iq-RSc4Zn1nvgrCWz9ELp7mWNnjjKKMyI4,401
+apify_fingerprint_datapoints/__init__.py,sha256=RLZTK6iV9bKdrQCmVkbEGmkzUWuox99RUxKzKMR90jc,844
+apify_fingerprint_datapoints/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apify_fingerprint_datapoints/data/browser-helper-file.json,sha256=OjcdzZpgpD5p1YV4HuYtGLcRQmG_inzYekLiEue-AfI,2054
+apify_fingerprint_datapoints/data/fingerprint-network-definition.zip,sha256=Pk2xTK1aRneIYjlelIIKH-Q_NnMzCKezYMxyKajBJLE,271850
+apify_fingerprint_datapoints/data/header-network-definition.zip,sha256=sIzNf2NE5JQDSWRJvMm2KpygU4EwAqQuM-Tu_oqzoVo,34304
+apify_fingerprint_datapoints/data/headers-order.json,sha256=Pom_z49ki9XfdqpF2A4HXGU0GgQCtkudecltvAD7TbY,3691
+apify_fingerprint_datapoints/data/input-network-definition.zip,sha256=DYXZQqqjjwPbCrQVNt8TZMQM3j9ln2w8xzra78KBgP8,3556
+apify_fingerprint_datapoints-0.2.0.dist-info/METADATA,sha256=oomoPfB0xSY6gELl4gyqY3EgvGynGyUAA-WvEgWtEYk,14315
+apify_fingerprint_datapoints-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+apify_fingerprint_datapoints-0.2.0.dist-info/licenses/LICENSE.md,sha256=dZ_yW0RBkmBJqaxccrlxcmO_8-i7jvsajeVAwTb-pKo,10878
+apify_fingerprint_datapoints-0.2.0.dist-info/RECORD,,
