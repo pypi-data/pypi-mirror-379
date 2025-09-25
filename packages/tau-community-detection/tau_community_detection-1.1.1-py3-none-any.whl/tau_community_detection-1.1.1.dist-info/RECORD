@@ -1,0 +1,12 @@
+tau_community_detection/__init__.py,sha256=_J9BiR5k4NII3aIUa16X6zegl797cx345xmZzh1O-iE,182
+tau_community_detection/algorithm.py,sha256=pRAgoMPdxGld0cyMBHNgeESK9LWehUEwLY-VUxF_X6s,13567
+tau_community_detection/config.py,sha256=dI7e-xtjX0LdK8cFgCCO5van3fY0sFUsehsMvCNFvSE,1665
+tau_community_detection/graph.py,sha256=8n4Ec1RbpyEVfIomI6ghwMwNp80Sh7UVmNmokBXlCNg,3162
+tau_community_detection/partition.py,sha256=nt1IvGtsBcDg-Sy0bOBQX-yztFUXt6hdHb9Wkv9SCK0,9367
+tau_community_detection/profile_tau.py,sha256=WL0IjRdoO9MN-6Otz7CnWuhCP9ct-jFVLTgMSbsodNA,4597
+tau_community_detection/run_clustering.py,sha256=PLbKpuc2uB8VV5jxjdLzbhmZFHlIkoYKcJg7KAewUFY,3464
+tau_community_detection-1.1.1.dist-info/METADATA,sha256=j3WB8KMuCW-Id7hB0IffnWafZ40n9-fcPf5jNrHwGA0,4553
+tau_community_detection-1.1.1.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+tau_community_detection-1.1.1.dist-info/entry_points.txt,sha256=ENCaObT68MQIXB2FpgpIiCy28aeYUCVMzByYpKz-w2o,60
+tau_community_detection-1.1.1.dist-info/top_level.txt,sha256=VGyAp1P1hc5akTO_R86FCZuAAPWWwZZk3NONqTi_SAk,24
+tau_community_detection-1.1.1.dist-info/RECORD,,
