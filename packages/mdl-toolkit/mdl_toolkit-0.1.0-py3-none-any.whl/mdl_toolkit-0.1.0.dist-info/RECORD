@@ -1,0 +1,11 @@
+mdl_toolkit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdl_toolkit/cli.py,sha256=Mcl4Y0CkK8ZXlLvMuoDJ5mHOt3VsmYIEXpzQKe2YM3o,552
+mdl_toolkit/conversation.py,sha256=NhRgcB00UESLYWfiEHxKJS_8vmbD7jkh9fLWMzB3sCY,1839
+mdl_toolkit/convert_dataset.py,sha256=tG0LnMoSiCmGesHRDZ9-2bahRq0XtsTng5cweduZlN8,6590
+mdl_toolkit/inference.py,sha256=Q-_ZRI6NgONDtps7Evr3tYB-Cj6TsSYjNm1NjF4DCCc,2305
+mdl_toolkit/train.py,sha256=oUg0ewr7hFaExb3IdSCufsFu9iMOif8xiz7hBWogsWI,7137
+mdl_toolkit-0.1.0.dist-info/METADATA,sha256=mbU0zW44tJiy7HgBoIWBfxetOkPgVAcFxFvJk1QD7h8,10934
+mdl_toolkit-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mdl_toolkit-0.1.0.dist-info/entry_points.txt,sha256=CvFI-m_H4644eVFXavfbDDd1888UWRT0oGBjqLVGYqo,53
+mdl_toolkit-0.1.0.dist-info/top_level.txt,sha256=HEAt-0xOFRJcJMTbIk2SpQEvo4MOLNhB6OwuGmHsVvU,12
+mdl_toolkit-0.1.0.dist-info/RECORD,,
