@@ -1,0 +1,12 @@
+[project]
+name = "primus-lens-training-toolkit"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "wandb>=0.21.4",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
