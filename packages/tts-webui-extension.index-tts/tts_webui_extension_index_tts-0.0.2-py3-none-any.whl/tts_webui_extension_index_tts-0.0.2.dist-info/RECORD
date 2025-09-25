@@ -1,0 +1,11 @@
+tts_webui_extension/index_tts/__init__.py,sha256=OA8gZErI-P8fRLB17yZ62MPYkYGSeFJ7rvSJNv8ZtkU,22
+tts_webui_extension/index_tts/main.py,sha256=jkysLO_XckipCzWnIG1bw1fPcvMI68a-wYTFaEPC6SU,1054
+tts_webui_extension/index_tts/ui.py,sha256=HbXkH-f27-mTxKAejneFqMQ_UGodtovkbwncdwVIEmE,17033
+tts_webui_extension/index_tts/loader/__init__.py,sha256=OA8gZErI-P8fRLB17yZ62MPYkYGSeFJ7rvSJNv8ZtkU,22
+tts_webui_extension/index_tts/loader/download_indextts_checkpoint.py,sha256=UvPmo4OSvGQoXhIKuY0XoTT8R2bw9AAMCoAgKTI-n0Q,1616
+tts_webui_extension/index_tts/loader/get_model.py,sha256=teWVeHpmGz9Hn26ujB6x6zrOVkBs4240GS765xYyyYs,1257
+tts_webui_extension_index_tts-0.0.2.dist-info/licenses/LICENSE,sha256=l6425dmjnidzk4JQwhT01C8SpICmjSBMNREAdPnPA9E,1087
+tts_webui_extension_index_tts-0.0.2.dist-info/METADATA,sha256=FmvSoowj72HvIrHrJ9mmsnofj298wEH6x3rtdULZ4dw,1174
+tts_webui_extension_index_tts-0.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tts_webui_extension_index_tts-0.0.2.dist-info/top_level.txt,sha256=K_JKsKEyaZs5RnmdAjEe1w7Tk6Yd6s1aL3ZHi3IlBwA,25
+tts_webui_extension_index_tts-0.0.2.dist-info/RECORD,,
