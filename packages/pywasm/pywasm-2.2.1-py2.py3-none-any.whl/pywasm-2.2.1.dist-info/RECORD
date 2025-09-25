@@ -1,0 +1,12 @@
+pywasm/__init__.py,sha256=FkBGa9Qc5vcyPb0CZUESimBIyIKrrvuG5CKtv_uNG5I,231
+pywasm/__main__.py,sha256=Bclr0vC2Xj8S3a8YETnzCQauYimsDHcXsHI3A__eGn4,2218
+pywasm/arith.py,sha256=OXYkm63gd_kMyjaNLMqA2-I2IE1QyuK5YGTiTFS6prs,6118
+pywasm/core.py,sha256=6CeAxQtNJOiHWTGVZfsz-sYo9-2gLTV7E94LSvfRz-k,203541
+pywasm/leb128.py,sha256=yNvSJhi3yG5JG04oiQhRamHpiwKHq7NXdqc9SerSMZE,2177
+pywasm/log.py,sha256=Kb4NRy8eyAw8blGg3eOk3bP6ATW92CjDXF879T1ZwF4,205
+pywasm/opcode.py,sha256=ETLRHH5e959gxCifYlzH_cvuCesFUKFFcQJ6cNIukx4,25146
+pywasm/wasi.py,sha256=wdx-6cNcS_PPFWhrg5DpHk-HNT2hk66C4qPX_YdYbag,67693
+pywasm-2.2.1.dist-info/METADATA,sha256=ntsSjPv6BHRykS00AgaRXgeFf6IgUCnMpUoRits_D8I,4961
+pywasm-2.2.1.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+pywasm-2.2.1.dist-info/licenses/LICENSE,sha256=SQfZivC1jpcv-aicHtP-kFBcHw2ZOeLEBNB9MjAfhbk,1067
+pywasm-2.2.1.dist-info/RECORD,,
