@@ -1,0 +1,8 @@
+qat/linalgutil/linalgutil.so,sha256=b0y7w8cVyiIXMAErB9KGnyNEYkDm2Lr586h0m0oir24,121744
+qat/linalgutil/version.so,sha256=egE6sKiwE7zN68srtXARIMrxO3Yy7CMlrC4H84ioSLk,36992
+qat/linalgutil/wobservable.so,sha256=med5n2c2Zyk--b-brpLBS3ZcSvjJ-M2P7YFEE0M2vg4,232368
+qat_linalg_util-1.0.0.dist-info/licenses/LICENSE.txt,sha256=Vl03FJBySK7FEYdw_Y0dV66UAVedEyIuqJTJxREyRgs,4752
+qat_linalg_util-1.0.0.dist-info/METADATA,sha256=8HdD9IdN469Z_syCqCe7SjtOeIb11Ki7QekKVw9nLyk,1108
+qat_linalg_util-1.0.0.dist-info/WHEEL,sha256=XzZflqtMhHvmUA9qQHnnplAlB_TcUlfNCJgLvRHKLzE,113
+qat_linalg_util-1.0.0.dist-info/top_level.txt,sha256=EtiE-lzXpV6tDPK3leIRADd9p6cOal7g6fxvqQ-u_yc,4
+qat_linalg_util-1.0.0.dist-info/RECORD,,
