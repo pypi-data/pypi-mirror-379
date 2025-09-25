@@ -1,0 +1,27 @@
+# Include documentation and metadata
+include README.md
+include LICENSE
+
+# Include core package only
+recursive-include src/vizlychart *.py
+
+# Exclude everything else
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude *.egg-info
+global-exclude docs/*
+global-exclude examples/*
+global-exclude website/*
+global-exclude test*
+global-exclude *node_modules*
+global-exclude *.md
+include README.md
+global-exclude requirements*.txt
+global-exclude *.toml
+exclude CLAUDE.md
+exclude PYPI_UPLOAD_INSTRUCTIONS.md
+exclude *.ipynb
+exclude *.php
