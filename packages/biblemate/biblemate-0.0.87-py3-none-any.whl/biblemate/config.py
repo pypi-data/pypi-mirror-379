@@ -1,0 +1,14 @@
+agent_mode=False
+prompt_engineering=False
+max_steps=30
+lite=True
+hide_tools_order=True
+default_bible="NET"
+default_commentary="CBSC"
+default_encyclopedia="ISB"
+default_lexicon="Morphology"
+max_semantic_matches=15
+max_log_lines=2000
+mcp_port=33333
+embedding_model="paraphrase-multilingual"
+disabled_tools=['uba']
