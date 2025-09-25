@@ -1,0 +1,15 @@
+pandoc
+sphinx
+sphinx-autodoc-typehints
+nbsphinx
+pydata-sphinx-theme
+
+ipython
+markupsafe==2.0.1
+pygments >= 2.7
+
+# # Additional dependencies
+# sphinx-rtd-theme  # Optional: ReadTheDocs theme
+# sphinxcontrib-napoleon  # For Google and NumPy style docstrings
+# sphinx-copybutton  # For adding copy buttons to code blocks
+# sphinxcontrib-mermaid  # For Mermaid diagrams
