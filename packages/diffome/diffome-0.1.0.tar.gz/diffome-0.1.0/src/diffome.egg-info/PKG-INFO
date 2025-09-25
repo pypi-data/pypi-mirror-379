@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: diffome
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: dipy>=1.11.0
+Requires-Dist: fury>=0.12.0
+Requires-Dist: gudhi>=3.11.0
+Requires-Dist: matplotlib>=3.10.5
+Requires-Dist: nibabel>=5.3.2
+Requires-Dist: nilearn>=0.12.1
+Requires-Dist: pot>=0.9.5
+
+# Diffome
+
+Python library to compare connectomes in various ways.

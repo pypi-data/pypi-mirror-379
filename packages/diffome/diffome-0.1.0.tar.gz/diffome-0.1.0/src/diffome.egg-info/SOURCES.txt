@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/diffome/__init__.py
+src/diffome.egg-info/PKG-INFO
+src/diffome.egg-info/SOURCES.txt
+src/diffome.egg-info/dependency_links.txt
+src/diffome.egg-info/requires.txt
+src/diffome.egg-info/top_level.txt
+src/diffome/connectome/__init__.py
+src/diffome/connectome/base.py
+src/diffome/tda/__init__.py
+src/diffome/tda/barcode.py
+src/diffome/tda/compare.py
+src/diffome/tda/wasser.py
+src/diffome/viz/__init__.py
