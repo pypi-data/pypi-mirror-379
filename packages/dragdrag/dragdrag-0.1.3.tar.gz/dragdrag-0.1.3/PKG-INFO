@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dragdrag
+Version: 0.1.3
+Summary: 局域网文件拖拽上传/下载/删除的Web应用
+Author: linmy
+Author-email: 657894692@qq.com
+Requires-Python: >=3.6
+Requires-Dist: Flask
+Requires-Dist: Werkzeug
