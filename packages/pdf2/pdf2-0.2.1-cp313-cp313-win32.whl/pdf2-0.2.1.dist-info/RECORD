@@ -1,0 +1,14 @@
+pdf2-0.2.1.dist-info/METADATA,sha256=z63vQuEZTM0O85O-re78Q4O_aCDAg3rVekqfmqyW06w,1096
+pdf2-0.2.1.dist-info/WHEEL,sha256=L9CeDSmk2JG28_YW__9h9YKD-W_tuh_gIre6BQtyKm0,92
+pdf2-0.2.1.dist-info/licenses/LICENSE,sha256=LyxUUJZGb1yBuEeiYL3kToLHmN9T17Ay30hzYBNCk48,1090
+pdf2/__init__.py,sha256=M3acQ8jgLWloHgE_c7Boi7ApHFG9QtyVqqszcrb7oAA,453
+pdf2/_core.pyi,sha256=9kLsEG3PqFLDUy_sgNrStmSZTROxZHGO2js-lfPf8uk,1818
+pdf2/generator.rs,sha256=wDAGgKgqTvkXHA1bHV7tYT0EjQVwjG92bUhxEjGgjow,1116
+pdf2/parser.rs,sha256=1ztrdSnoV50oNXmYvhq2HeBcBJSH7iamqHuNl1wE8Oo,1534
+pdf2/pdf2.cp313-win32.pyd,sha256=kZFOepGtoi3A5Kh71Cawv_o4aPwVbsG_0JH0NOCYzG0,2876416
+pdf2/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf2/structure.rs,sha256=LTRIZwFvJgviAR7ZsagVVjRpc7TrzBOFDwiP1rfazcw,2948
+pdf2/test_generator.rs,sha256=yvqdLseuJuqOMT3NfkoRhdJ8_aIYmslNqDrTcplUQ5g,3448
+pdf2/test_parser.rs,sha256=MPH_miET4zaGVCz8fU6yhV3tTrsWcHyiIpxozqTNso8,3111
+pdf2/test_structure.rs,sha256=0SL11b4_vlTEgo8Q376C9yUzZlWmqssjJAqVR8UaG-s,6222
+pdf2-0.2.1.dist-info/RECORD,,
