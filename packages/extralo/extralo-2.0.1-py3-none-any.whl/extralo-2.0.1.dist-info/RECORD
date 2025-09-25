@@ -1,0 +1,16 @@
+extralo/__init__.py,sha256=GJBAwnWrmRChezjMpC8r8VOUtLT20XDTmKc0KTVGCxI,933
+extralo/destination.py,sha256=BQ-tCXa2n-Mgqv93PoKrNtzr68VbDH-LELPoOHOLO4o,433
+extralo/etl.py,sha256=_MD7g4s-_LGisslczUA9YYnhXpeXOmbB7xqXcvuO26Y,9640
+extralo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extralo/source.py,sha256=IevvSbmj6c1Ekrf82bViCUDLLX_hqcOKXHsYTLWTabo,391
+extralo/destinations/__init__.py,sha256=EnLeiDkODz3A0JdmPlPYc2vwos-Io05XBdU1c01jzAA,564
+extralo/destinations/delta_lake.py,sha256=ycvzWeXeiCQOsYl6BeDIYlIEhAGy-9i6LcZYQBGQ9xs,3501
+extralo/destinations/file.py,sha256=vZzXgztUSXwZXH9tXs3wJdCODjjiiwCKIDJla1vedJU,4328
+extralo/destinations/sql.py,sha256=Fzum1oqbSAbrJcunhqu0u3PNcFjmi84tUyL44LFc3ak,3466
+extralo/sources/__init__.py,sha256=1DDkBr_0LVtwJxcPc-yNBnybozgzSSTaoDyu_2m9JlI,274
+extralo/sources/delta_lake.py,sha256=7I9hG62V1gL2jdxYd-UCfNFrVrXDDpHDXB-g_U9P6sg,2125
+extralo/sources/file.py,sha256=TANXnbJHSJAaZIWZsjtt_xGGa2cN3haw1j2vAwhY6RA,2507
+extralo/sources/sql.py,sha256=k0CNVKW-Tmjs6YFIRuOULC3Ves1_me_0OcOnD37BoDk,2414
+extralo-2.0.1.dist-info/METADATA,sha256=FbsRe0N4N6_VywEskd_fUP51QpH61PMrlqhsod4J-iA,2189
+extralo-2.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+extralo-2.0.1.dist-info/RECORD,,
