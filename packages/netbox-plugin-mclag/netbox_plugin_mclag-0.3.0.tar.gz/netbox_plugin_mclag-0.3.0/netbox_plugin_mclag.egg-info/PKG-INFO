@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: netbox-plugin-mclag
+Version: 0.3.0
+Summary: Manage Multi-Chassis Link Aggregation Groups in Netbox (MC-LAG / MLAG / vPC / etc)
+License-File: LICENSE
+Dynamic: license-file
+Dynamic: summary
