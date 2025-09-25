@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: emojify-asid
+Version: 0.1.1
+Summary: Turn your boring text into expressive emoji-enhanced messages using NLP 🎉
+Author: Your Name
+Author-email: Your Name <you@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/emojify-asid
+Project-URL: Repository, https://github.com/yourusername/emojify-asid
+Project-URL: Documentation, https://github.com/yourusername/emojify-asid#readme
+Project-URL: Issues, https://github.com/yourusername/emojify-asid/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: spacy>=3.0.0
+Dynamic: author
+
+# emojify-nlp
+Creating text with emojis based on input text with the help of NLP
