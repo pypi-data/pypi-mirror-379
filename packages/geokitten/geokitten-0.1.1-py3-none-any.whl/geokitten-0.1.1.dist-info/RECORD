@@ -1,0 +1,9 @@
+geokitten/__init__.py,sha256=8JiWVEpBCZEF3Osj_c-KMJwpGNdsIYaWPyUNTwoUGro,858
+geokitten/gdf_kml_converter.py,sha256=rkXL0A8mSgh0GZwJhEfaMaWJLbP0u-5ZbOFXu39dPUA,29813
+geokitten/gdf_standardization.py,sha256=HSR7z4dNUcpVqVHdReC_pe-E-Afj1afOL1strJRd6Wc,46845
+geokitten/html_generator.py,sha256=JW3sOK1ydVOBqli2g5exr-qOcM9ZRMIvd6XX3d0t-W4,52388
+geokitten-0.1.1.dist-info/licenses/LICENSE,sha256=VxrFICfH7lQZCwZorYY5v1baWS6JT3mhtkSEubjKuuo,1086
+geokitten-0.1.1.dist-info/METADATA,sha256=MEAM5h63cP-whleJJRgrTk7xBFQeJ4JAYl3Xu8LfCLI,19952
+geokitten-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+geokitten-0.1.1.dist-info/top_level.txt,sha256=iFpuLFh6r6kM4PveX6fqzeJ2ZeN74hfMOQGWlORKGlY,10
+geokitten-0.1.1.dist-info/RECORD,,
