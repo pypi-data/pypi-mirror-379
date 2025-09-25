@@ -1,0 +1,15 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "geno-reader"
+version = "0.1.0"
+description = "A tool to read invididual-level genotype data."
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "maturin>=1.9.4",
+    "numpy>=2.3.0",
+]
