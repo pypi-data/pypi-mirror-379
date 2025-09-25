@@ -1,0 +1,12 @@
+nless/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nless/cli.py,sha256=xYwHhvh7jLmrJ3531tRcdjQI8Vqx6jpwEAU90slhECc,59560
+nless/delimiter.py,sha256=4AfZ8z03ZtgZpZYwA1eT7Um5kM0hDq1Bo878HwZJ0fQ,4811
+nless/help.py,sha256=4PRkso07BjAEf8fWPyaUA9gF4mCmvGbfUBBeOvuvq6Y,709
+nless/input.py,sha256=e1L6wrb2EJrPKd_s5V2jO-BDciS3cGhGcJBZqCdWiKc,3041
+nless/nless.tcss,sha256=Du162q-YlsAN62v5KJyug1EjKgwPpJ5me0ty1NkIZ1c,517
+nless/nlesstable.py,sha256=2fSro3pE9JrxTm-1cNCxf8--jgrTFs4TKLxXa6ujg5A,5206
+nothing_less-0.1.6.dist-info/LICENSE,sha256=jyl4tCZlxSv5xhwdC0OIw70ehKhy9GKxjTSPDnolGKU,1050
+nothing_less-0.1.6.dist-info/METADATA,sha256=qWkPVyGBokymEhjMrGsq2P6uPN4GQe5nJ1HQE7cC-do,4438
+nothing_less-0.1.6.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+nothing_less-0.1.6.dist-info/entry_points.txt,sha256=K1HzaV-IH0kueIvd96PbK7-tqKCIqPtNIL-26u0Mw5k,40
+nothing_less-0.1.6.dist-info/RECORD,,
