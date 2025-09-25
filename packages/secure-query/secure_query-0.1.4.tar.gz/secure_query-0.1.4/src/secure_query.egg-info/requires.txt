@@ -1,0 +1,10 @@
+cryptography<45,>=42
+
+[fastapi]
+fastapi<1.0,>=0.110
+
+[test]
+pytest>=7.0
+pytest-cov>=4.0
+fastapi<1.0,>=0.110
+httpx>=0.24.0
