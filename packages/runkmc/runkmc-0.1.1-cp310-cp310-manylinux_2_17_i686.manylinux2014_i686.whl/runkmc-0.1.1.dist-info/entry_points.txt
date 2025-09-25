@@ -1,0 +1,2 @@
+[console_scripts]
+runkmc = runkmc.cli:main
