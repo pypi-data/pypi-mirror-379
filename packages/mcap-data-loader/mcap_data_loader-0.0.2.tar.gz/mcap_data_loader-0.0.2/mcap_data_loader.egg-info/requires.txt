@@ -1,0 +1,11 @@
+pydantic
+pydantic-settings
+numpy
+more-itertools
+typing-extensions
+flatbuffers
+foxglove-schemas-flatbuffer
+mcap
+flatten-dict
+av
+PyTurboJPEG
