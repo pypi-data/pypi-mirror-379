@@ -1,0 +1,17 @@
+marci/__init__.py,sha256=oUbraOUWKbil-Nv30xt4oaiNiDdI3L2OivCYCK_7mgA,370
+marci/_version.py,sha256=w1ioEASp8Qaj8dWa_X64TeMMGz1p2EtlBy1RlfdGtL0,109
+marci/campaigns.py,sha256=RAVl0zPWtiwCR9qTx-5bg0UXD1Fa7yeHmxDW1OZjNBE,7468
+marci/core.py,sha256=W9O54b6YAuiKOB1yMAFhb85Y8_8mVa9KXWe4F5Z0taQ,74
+marci/utils/__init__.py,sha256=3-444afDxVjokWMKI4u4eXHLssFi7Nq70MVddlvEFPA,453
+marci/utils/conversion_delay.py,sha256=tKjnA6HX4pWYtUnJ2EJ2-Ppx77O_B843smxSiWG0oLM,3565
+marci/utils/distributions.py,sha256=VYez4o9mINKt0I0cJgNsU2pL6bp7fXQOltyynVX4sSU,14212
+marci/utils/elasticity.py,sha256=kmgtoGUnSV8fiCTDM7dPsCp_fIkuq06wxfYpcdABu-E,3837
+marci/utils/math_utils.py,sha256=knEtQOG2LDR1qlIXP_wCw8RkcwcuJB7lRB4D77PCQx4,490
+marci/utils/plot_utils.py,sha256=F0gyFfsqub2fQVkPU1KeqefgxLl0EsbJDfEPqMVa66A,3146
+marci/utils/portfolio.py,sha256=o00Off4KUtygEjjHjgXP8oHngH914I6OcGG4T3urYAs,5621
+marci/utils/seasonality.py,sha256=Os_LxV_gGTOXp4cVaQXuqXKfdaIM778BQAcLLOYuiUc,4531
+marci-0.2.0.dist-info/licenses/LICENSE,sha256=qmTsZQrkhyDb74Xl-Ki6Y4Ls9XODsW161kBMtO0-Dlc,1097
+marci-0.2.0.dist-info/METADATA,sha256=ujWKkf_Opf_jngyj_mXl0TigVzQf7_P1iRoNoxtvJQs,8935
+marci-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+marci-0.2.0.dist-info/top_level.txt,sha256=uSAJvs-gYx8nlmO5xvFEp5e-OGrnNHEYZWyp5RxdiVg,6
+marci-0.2.0.dist-info/RECORD,,
