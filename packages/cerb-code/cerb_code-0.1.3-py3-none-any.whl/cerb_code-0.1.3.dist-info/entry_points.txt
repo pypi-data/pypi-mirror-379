@@ -1,0 +1,4 @@
+[console_scripts]
+cerb = cerb_code.cerb_launcher:main
+cerb-monitor = cerb_code.monitor:main
+cerb-sidebar = cerb_code.kerberos:main
