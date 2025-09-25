@@ -1,0 +1,111 @@
+"""Scenario 4: Real-world patterns from actual projects."""
+
+
+def find_files(directory, pattern="*.py", recursive=True):
+    """Find files matching pattern in directory.
+
+    Args:
+        directory: Directory to search
+        pattern: File pattern to match
+        recursive: Whether to search recursively
+
+    Returns:
+        List of matching file paths
+    """
+    import glob
+    import os
+
+    if recursive:
+        return glob.glob(os.path.join(directory, "**", pattern), recursive=True)
+    else:
+        return glob.glob(os.path.join(directory, pattern))
+
+
+def parse_config_file(filepath):
+    """Parse configuration file and return settings.
+
+    Args:
+        filepath: Path to config file
+
+    Returns:
+        Dictionary of configuration settings
+    """
+    import json
+    import yaml
+    
+    with open(filepath, 'r') as f:
+        if filepath.endswith('.json'):
+            return json.load(f)
+        elif filepath.endswith(('.yml', '.yaml')):
+            return yaml.safe_load(f)
+        else:
+            raise ValueError("Unsupported config file format")
+
+
+def send_notification(message, recipients, priority="normal"):
+    """Send notification to recipients.
+
+    Args:
+        message: Message to send
+        recipients: List of recipient addresses
+        priority: Priority level
+
+    Returns:
+        Success status
+    """
+    import smtplib
+    from email.mime.text import MIMEText
+    
+    try:
+        msg = MIMEText(message)
+        msg['Subject'] = f"[{priority.upper()}] Notification"
+        msg['To'] = ', '.join(recipients)
+        
+        # In real implementation, would connect to SMTP server
+        return True
+    except Exception as e:
+        print(f"Failed to send notification: {e}")
+        return False
+
+
+class DatabaseManager:
+    """Manage database connections and operations."""
+
+    def __init__(self, connection_string):
+        self.connection_string = connection_string
+        self.connection = None
+
+    def connect(self):
+        """Establish database connection.
+
+        Returns:
+            Connection status
+        """
+        try:
+            # In real implementation, would use actual database driver
+            self.connection = "mock_connection"
+            return True
+        except Exception as e:
+            print(f"Connection failed: {e}")
+            return False
+
+    def execute_query(self, query, params=None):
+        """Execute SQL query.
+
+        Args:
+            query: SQL query string
+            params: Query parameters
+
+        Returns:
+            Query results
+        """
+        if not self.connection:
+            raise RuntimeError("No database connection")
+        
+        # Mock implementation
+        return [{"id": 1, "name": "test"}]
+
+    def close(self):
+        """Close database connection."""
+        if self.connection:
+            self.connection = None
