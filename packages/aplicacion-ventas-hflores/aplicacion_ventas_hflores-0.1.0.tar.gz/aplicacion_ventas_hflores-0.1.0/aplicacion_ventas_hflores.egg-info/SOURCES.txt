@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+aplicacion_ventas_hflores.egg-info/PKG-INFO
+aplicacion_ventas_hflores.egg-info/SOURCES.txt
+aplicacion_ventas_hflores.egg-info/dependency_links.txt
+aplicacion_ventas_hflores.egg-info/top_level.txt
+tests/__init__.py
+tests/test_aplicacion_ventas.py
