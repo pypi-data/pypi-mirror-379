@@ -1,0 +1,45 @@
+name: testapp
+
+services:
+  redis-1:
+    image: redis
+  redis-2:
+    image: redis:5
+  redis-3:
+    image: redis@sha256:0ed5d5928d4737458944eb604cc8509e245c3e19d02ad83935398bc4b991aac7
+  redis-4:
+    image: library/redis
+  redis-5:
+    image: docker.io/library/redis
+  redis-6:
+    image: my_private.registry:5000/redis
+  redis-7:
+    image: my_private.registry:5000/redis:5
+  redis-8:
+    image: my_private.registry:5000/redis@sha256:0ed5d5928d4737458944eb604cc8509e245c3e19d02ad83935398bc4b991aac7
+  redis-9:
+    image: "${REDIS_IMAGE:-redis}:6"
+  redis-10:
+    image: "${REDIS_IMAGE:-redis}:${REDIS_TAG:-latest}"
+  redis-11:
+    image: "${REDIS_IMAGE:-redis}:${REDIS_TAG:-latest}-dev"
+  redis-12:
+    image: "${ECR_ACCOUNT_ID:-111111111111}.dkr.ecr.us-east-1.amazonaws.com/namespace/redis:7.0"
+  redis-13:
+    image: redis:6.2.6-alpine3.15
+  redis-14:
+    image: redis@sha256:abcdef1234567890
+  redis-15:
+    image: ghcr.io/org/repo/redis:9
+  redis-16:
+    image: gcr.io/google-containers/redis
+  redis-17:
+    image: docker.io/library/redis:latest
+  redis-18:
+    image: "redis:tag:extra"  # malformed, extra colon
+  redis-19:
+    image: "redis:"           # empty tag
+  redis-20:
+    image: ":latest"          # empty name
+  redis-21:
+    image: "${MISSING}"       # unresolved variable
