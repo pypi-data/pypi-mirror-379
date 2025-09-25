@@ -1,0 +1,167 @@
+
+---
+
+# Möbius Activations
+
+**A 3D activation function for PyTorch and TensorFlow with learnable geometric and quantum-like properties.**
+
+This package provides `MobiusActivation`, a novel 3D activation layer designed to perform complex geometric transformations on feature vectors. It allows neural networks to learn the intrinsic rotational symmetries and interference patterns within data.
+
+## Core Concepts
+
+The `MobiusActivation` layer operates in two conceptual modes:
+
+1.  **ReMU (Rectified Möbius Unit):** Performs a magnitude-preserving rotational twist on a 3D vector. This is ideal for learning stable, pure geometric transformations.
+2.  **S-ReMU (Superposition ReMU):** Models the interference of multiple ReMU "realities," allowing for complex stretching, squashing, and folding of the feature space to untangle highly complex data manifolds.
+
+## Installation
+
+The base package is lightweight. Install it along with the deep learning framework and optional visualization tools you need.
+
+```bash
+# For PyTorch + Visualization
+pip install mobius-activations[torch,viz]
+
+# For TensorFlow + Visualization
+pip install mobius-activations[tensorflow,viz]
+```
+
+## 1. Basic Usage: Fixed Mode
+
+In "Fixed Mode," you manually define the geometric transformations. This is useful when you want to inject a specific, known symmetry into your model.
+
+### PyTorch Example (Fixed)
+
+```python
+import torch
+import torch.nn as nn
+from mobius_activations.torch import MobiusActivation
+
+# Define a fixed S-ReMU configuration with two interfering realities
+realities_sremu = [
+    {'axis': 'z', 'k': 2.0, 'w': 1.0}, # Dominant Z-twist
+    {'axis': 'y', 'k': 2.5, 'w': 0.8}  # Subordinate Y-twist
+]
+
+model = nn.Sequential(
+    nn.Linear(50, 3),                 # 1. Project input to 3D space
+    nn.BatchNorm1d(3),                # 2. Stabilize the activations
+    MobiusActivation(realities=realities_sremu), # 3. Apply the fixed twist
+    nn.Linear(3, 1)                   # 4. Final output layer
+)
+```
+
+### TensorFlow / Keras Example (Fixed)
+
+```python
+import tensorflow as tf
+from tensorflow.keras import layers, Sequential
+from mobius_activations.tensorflow import MobiusActivation
+
+# Define a fixed ReMU configuration with a single reality
+realities_remu = [
+    {'axis': 'z', 'k': 2.5, 'w': 1.0}
+]
+
+model_tf = Sequential([
+    layers.Input(shape=(50,)),
+    layers.Dense(3),
+    layers.BatchNormalization(),
+    MobiusActivation(realities=realities_remu),
+    layers.Dense(1)
+])
+```
+
+## 2. Advanced Usage: Learnable Mode
+
+The true power of `MobiusActivation` is unlocked when the network itself learns the optimal geometric transformations for the data. To enable this, simply set `learnable=True`.
+
+### PyTorch Example (Learnable)
+
+```python
+from mobius_activations.torch import MobiusActivation
+
+model = nn.Sequential(
+    nn.Linear(50, 3),
+    nn.BatchNorm1d(3),
+    # Let the network learn the best 3-state S-ReMU for the job
+    MobiusActivation(learnable=True), 
+    nn.Linear(3, 1)
+)
+```
+
+### TensorFlow / Keras Example (Learnable)
+
+You can also specify which axes to learn. For instance, to learn a 2-state interference pattern on only the x and y axes:
+
+```python
+from mobius_activations.tensorflow import MobiusActivation
+
+model = Sequential([
+    layers.Input(shape=(50,)),
+    layers.Dense(3),
+    layers.BatchNormalization(),
+    # Let the network learn a 2-state interference pattern
+    MobiusActivation(learnable=True, axes=['x', 'y']),
+    layers.Dense(1)
+])
+```
+
+## 3. Visualization: Understanding the Transformation
+
+The package includes powerful visualization tools to help you understand what your trained layer is doing.
+
+### Visualizing the Global Flow Field
+
+
+```python
+import torch
+import torch.nn as nn
+from torch.optim import Adam
+import numpy as np
+# Import from our package
+from mobius_activations.torch import MobiusActivation
+from mobius_activations.visualize import visualize_transformation_flow
+
+# --- Example: Train a model and visualize its learned strategy ---
+# 1. Create a Toy Dataset (e.g., generate_spiral_data)
+# 2. Create and Train the Model, keeping a reference to the mobius_layer
+# 3. Visualize the flow of the trained layer
+# visualize_transformation_flow(mobius_layer, density=8, grid_range=1.5)
+```
+
+### Visualizing the Local Effect at a Single Point
+
+To perform a deep, microscopic analysis of the transformation at a specific location, use `visualize_neuron_state`. This is perfect for debugging, analysis, and understanding the core mechanics. It answers three key questions:
+1.  **Global:** Where does this point end up?
+2.  **Conceptual:** Why is it being twisted this way? (Shows position on the Möbius strip)
+3.  **Local:** What is the exact mathematical transformation (the gradient) at this spot?
+
+```python
+from mobius_activations.torch import MobiusActivation
+from mobius_activations.visualize import visualize_neuron_state
+
+# Create an activation layer to inspect (can be fixed or trained)
+sremu_activation = MobiusActivation(realities=[
+    {'axis': 'z', 'k': 2.0, 'w': 1.0},
+    {'axis': 'y', 'k': 3.0, 'w': 0.8}
+])
+
+# Choose a point in the 3D feature space to analyze
+point_of_interest = [1.2, 0.8, -0.4]
+
+# Generate the complete dashboard for that point
+visualize_neuron_state(sremu_activation, point_of_interest)
+```
+
+## 4. Key Use Cases
+
+This is a specialized tool best suited for problems with underlying geometric properties.
+
+*   **Images & Video:** Learning rotational invariance; modeling complex transformations of shape and texture.
+*   **Audio & Signals:** Modeling phase shifts, harmonic interference, and timbre.
+*   **Text (NLP):** Modeling semantic relationships as rotations in "meaning space" (e.g., learning a "negation" rotation).
+*   **Physics & Robotics:** Modeling systems with real-world rotational dynamics and competing forces.
+
+## License
+This project is licensed under the MIT License.
