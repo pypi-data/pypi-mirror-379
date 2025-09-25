@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astroalign"
+authors = [{ name = "Martin Beroiz", email = "martinberoiz@gmail.com" }]
+description = "Astrometric Alignment of Images"
+maintainers = [{ name = "Martin Beroiz", email = "martinberoiz@gmail.com" }]
+readme = "README.md"
+dynamic = ["version"]
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "scikit-image", "sep>=1.4.0"]
+license = { file = "LICENSE.txt" }
+keywords = [
+    "astronomy",
+    "registration",
+    "alignment",
+    "asterism-matching",
+    "stellar-astronomical-images"
+]
+
+[project.urls]
+homepage = "https://astroalign.quatrope.org"
+documentation = "https://astroalign.readthedocs.io/"
+source = "https://github.com/quatrope/astroalign"
+
+[tool.setuptools]
+py-modules = ["astroalign"]
+# Ref: https://github.com/pypa/setuptools/issues/4759
+license-files = []
+
+[tool.setuptools.dynamic]
+version = {attr = "astroalign.__version__"}
