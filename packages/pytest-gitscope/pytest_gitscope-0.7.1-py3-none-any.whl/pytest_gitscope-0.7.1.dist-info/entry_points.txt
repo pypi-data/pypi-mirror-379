@@ -1,0 +1,2 @@
+[pytest11]
+pytest_gitscope = pytest_gitscope.plugin
