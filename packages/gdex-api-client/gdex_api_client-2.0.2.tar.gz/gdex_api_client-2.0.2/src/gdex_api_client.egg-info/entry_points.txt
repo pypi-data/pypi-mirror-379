@@ -1,0 +1,2 @@
+[console_scripts]
+gdex_client = gdex_api_client.gdex_client:main
