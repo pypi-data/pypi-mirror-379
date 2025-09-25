@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/ordeq_matplotlib/__init__.py
+src/ordeq_matplotlib/_version.py
+src/ordeq_matplotlib/figure.py
+src/ordeq_matplotlib/py.typed
+src/ordeq_matplotlib.egg-info/PKG-INFO
+src/ordeq_matplotlib.egg-info/SOURCES.txt
+src/ordeq_matplotlib.egg-info/dependency_links.txt
+src/ordeq_matplotlib.egg-info/requires.txt
+src/ordeq_matplotlib.egg-info/top_level.txt
+tests/test_figure.py
