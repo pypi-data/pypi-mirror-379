@@ -1,0 +1,5 @@
+astodojo
+dist
+test
+tests
+venv
