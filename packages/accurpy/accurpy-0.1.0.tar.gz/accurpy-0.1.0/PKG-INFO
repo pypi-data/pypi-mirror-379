@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: accurpy
+Version: 0.1.0
+Summary: Ultra-accurate and fast double-double FM_new approximation with ≤1 ULP guarantees
+Author: AccurPy Authors
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/yourname/accurpy
+Project-URL: Issues, https://github.com/yourname/accurpy/issues
+Project-URL: Source, https://github.com/yourname/accurpy
+Keywords: numerics,double-double,special functions,accuracy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20
+Dynamic: license-file
+
+# accurpy
+
+Ultra-accurate and fast **double-double** (≈106-bit) approximation for the “new FM” function, with:
+
+- **STRICT** mode (≤ 1 ULP across a broad domain), mirroring a validated Python DD algorithm
+- **OPT** mode (FMA + 1-step `cbrt`), validated ≤ 1 ULP against STRICT on a dense 120k grid
+
+## Install
+```bash
+pip install accurpy
+```
+
+## Usage
+```python
+import numpy as np
+from accurpy import approx_FM_new
+
+y_strict = approx_FM_new(10.0, skip_exp=False, mode="strict")
+y_opt    = approx_FM_new(10.0, skip_exp=False, mode="opt")
+
+x = np.geomspace(1e-12, 300.0, 1_000_000)
+y = approx_FM_new(x, skip_exp=True, mode="opt")
+```
+
+## Modes
+- `mode="strict"` — full double-double path with exact operation order (≤ 1 ULP).
+- `mode="opt"` — faster path (FMA-based DD; 1-step `cbrt`), validated ≤ 1 ULP vs STRICT.
+
+If the extension is unavailable, `accurpy` falls back to Python DD (slow but ≥ STRICT accuracy).
+
+## License
+MIT
