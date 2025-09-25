@@ -1,0 +1,24 @@
+name: fiat_toolbox
+
+channels:
+  - conda-forge
+
+dependencies:
+  - black
+  - ipykernel
+  - numpy
+  - pandas < 2.0.0
+  - tomli
+  - pip
+  - pytest # tests
+  - pytest-cov # tests
+  - pytest-benchmark # tests
+  - python>=3.8
+  - plotly
+  - parse
+  - seaborn # examples
+  - gdal
+  - pydantic
+  - pip:
+    - duckdb
+    - git+https://github.com/Deltares/Delft-FIAT.git
