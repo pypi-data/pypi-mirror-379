@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/fineio/__init__.py
+src/fineio/cpu_detect.py
+src/fineio/executor.py
+src/fineio/shutdown.py
+src/fineio.egg-info/PKG-INFO
+src/fineio.egg-info/SOURCES.txt
+src/fineio.egg-info/dependency_links.txt
+src/fineio.egg-info/top_level.txt

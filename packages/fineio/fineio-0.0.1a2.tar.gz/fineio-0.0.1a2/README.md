@@ -1,0 +1,51 @@
+# FineIO
+
+**FineIO** — async foundation library for [finesql](https://pypi.org/project/finesql) and [fynor](https://pypi.org/project/fynor).  
+It provides helpers that work in both **sync** and **async** code, making it easy to adopt async gradually.
+
+## Installation
+
+```bash
+pip install fineio
+```
+
+## Quick Start
+
+### Hello Example
+
+```python
+from fineio import hello
+
+# ✅ Sync usage
+print(hello())  # -> "fineio is alive!"
+
+# ✅ Async usage
+import asyncio
+
+async def main():
+    print(await hello())  # -> "fineio is alive!"
+
+asyncio.run(main())
+```
+
+## How It Works
+
+The same function **`hello()`** works in both contexts:
+
+- If called **outside** an event loop → it runs async code with `asyncio.run()` and returns the result directly.  
+- If called **inside** an event loop → it returns a coroutine, so you can `await` it.  
+
+This dual-mode design makes it possible to:
+- Start with **synchronous code**.  
+- Move to **async gradually** without changing APIs.  
+
+## Roadmap
+
+- ✅ `hello()` demo function with dual sync/async support.  
+- 🚧 Core utilities for running coroutines from sync code.  
+- 🚧 Async helpers for finesql (database operations).  
+- 🚧 Integration with fynor (web framework).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

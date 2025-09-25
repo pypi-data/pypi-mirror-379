@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=65", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fineio"
+version = "0.0.1a2"
+description = "FineIO: User-friendly sync/async Python execution"
+authors = [
+    { name = "Abdulmajid Yunusov", email = "you@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/goldendevuz/fineio"
