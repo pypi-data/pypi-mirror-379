@@ -1,0 +1,16 @@
+jinja2
+rich
+toml
+
+[all]
+nagra[pandas,pg,polars]
+
+[pandas]
+pandas
+
+[pg]
+psycopg
+
+[polars]
+polars
+connectorx
