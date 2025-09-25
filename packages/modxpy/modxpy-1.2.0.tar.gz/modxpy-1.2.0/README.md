@@ -1,0 +1,142 @@
+# 🌟 ModXPy — The Python Module Universe at Your Fingertips 🌟
+
+Welcome to **ModXPy**, the ultimate playground for Python’s modules.  
+With ModXPy you can instantly import, explore, and experiment with the entire Python standard library — plus any installed third-party modules — all from one simple interface.
+
+UPDATE 1.2.0---HUGE UPDATE! BIGGEST ONE YET!
+
+import_all() now imports new modules! Full list:
+'autocomplete','autocomplete_w','autoexpand','browser','build','calltip','calltip_w','charset_normalizer','codecontext','colorizer','config','config_key','configdialog','curses','debugger','debugger_r','debugobj','debugobj_r','delegator','direct','dynoption','editor','filelist','format','grep','help','help_about','history','hyperparser','id','idle_test','iomenu','keyring','mainmenu','more_itertools','multicall','outwin','parenmatch','pathbrowser','percolator','pyparse','pyshell','query','redirector','replace','rpc','run','runscript','screeninfo','scrolledlist','search','searchbase','searchengine','sidebar','squeezer','stackviewer','statusbar','textview','tooltip','tree','undo','util','window','zoomheight','zzdummy'. 
+;
+
+New Function! Introducing nonimported(): returns a list of STANDARD LIBRARY modules that have NOT been imported into shell yet.
+
+Major bug fixes, including recursion bugs, data loss bugs and much more!
+
+---
+
+## 🚀 Installation
+
+Install directly from PyPI:
+
+```bash
+pip install modxpy
+
+In Python, import as import modx (not modxpy)
+
+
+Functions: 
+
+
+import_all()
+
+Imports about every standard library module at once.
+
+🔹 import_random(n)
+
+Imports n random modules from the standard library.
+
+🔹 import_letter(letter)
+
+Imports all standard library modules whose names start with the given letter.
+
+🔹 import_external()
+
+Attempts to import every third-party module you currently have installed.
+
+🔹 import_screen()
+
+Imports every module that uses a screen/GUI (like pygame or turtle).
+
+🔹 list_importall()
+
+Returns a list of modules that would be imported by import_all().
+
+🔹 modules_loaded()
+
+Shows how many modules you currently have downloaded on your device.
+
+🔹 imported()
+
+Lists the modules imported since ModX loaded (user + ModX), including dependencies.
+
+🔹 modximported()
+
+Lists the modules that were ONLY imported by ModX, NOT including user imports
+and dependencies.
+
+🔹 import_letter(letter)
+
+Import every standard library module from the ModX 'modules' list
+whose name starts with the given letter (case-insensitive).
+
+🔹 search_modules(keyword)
+
+Search for modules whose names contain the keyword.
+
+🔹 info(module_name)
+
+SHows basic info about typed module: file path, built-in status, docstring.
+
+
+Example Code:
+
+
+import modx  # import ModX module
+
+# Import almost every standard library module at once
+modx.import_all()
+
+# Show all modules imported after ModX loaded (user + ModX)
+modx.imported()
+
+# Show only modules imported via ModX functions
+modx.modximported()
+
+# Import 5 random modules from ModX list
+random_modules = modx.import_random(5)  # returns list of module names
+
+# Import all modules starting with letter 't'
+t_modules = modx.import_letter('t')  # returns list of module names
+
+# Import all installed third-party modules (if any)
+modx.import_external()
+
+# Import common screen/GUI/game modules if available
+modx.import_screen()
+
+# Get the list of modules import_all() would import
+modx.list_importall()  # returns list of module names
+
+# Get list of standard library modules NOT yet imported
+modx.nonimported()  # returns list of unimported modules
+
+# Search for modules containing the keyword 'json'
+modx.search_modules('json')  # returns list of module names
+
+# Show information about a specific module
+modx.info('random')  # prints path and docstring snippet
+
+# Show ModX built-in help screen
+modx.modxhelp()
+
+
+💡 Why Use ModX?
+
+
+
+Explore the Python standard library in seconds
+
+Stress-test your environment by bulk importing modules
+
+See hidden dependencies that load behind the scenes
+
+Experiment with random imports for fun or testing
+
+Discover new modules you didn’t know existed
+
+
+ModXPy turns Python’s module system into a playground — 
+perfect for learning, testing, or just satisfying your curiosity.
+Install it today with pip install modxpy, import it with import modx,
+and start discovering how many modules Python already has waiting for you!
