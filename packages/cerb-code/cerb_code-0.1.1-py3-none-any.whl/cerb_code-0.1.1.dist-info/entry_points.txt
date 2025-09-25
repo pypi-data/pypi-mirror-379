@@ -1,0 +1,3 @@
+[console_scripts]
+cerb = cerb_launcher:main
+cerb-sidebar = kerberos:main
