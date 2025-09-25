@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: rosmock
+Version: 0.0.1
+Summary: A package that allows simple interactions with ROS2 nodes
+Author-email: depetrol <depetrol@outlook.com>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/depetrol/rosmock
+Project-URL: Issues, https://github.com/depetrol/rosmock/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# rosmock
