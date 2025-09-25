@@ -1,0 +1,14 @@
+lark
+lark-cython
+openpyxl
+pandas
+
+[dev]
+pytest
+pylint
+setuptools
+twine
+build
+
+[test]
+pytest
