@@ -1,0 +1,9 @@
+boto3<2,>=1.40.0
+cryptography<47,>=46.0.0
+
+[postgres]
+psycopg[binary]<4,>=3.1
+
+[test]
+pytest<9,>=8.3
+coverage<8,>=7.10.7
