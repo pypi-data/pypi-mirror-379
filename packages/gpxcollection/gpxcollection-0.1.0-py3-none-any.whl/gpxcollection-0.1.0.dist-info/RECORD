@@ -1,0 +1,9 @@
+gpxcollection/__init__.py,sha256=lCMult_wJwVtTxJlMzPqtuhYJcoPlUsY4Y-f3DosA3I,241
+gpxcollection/main.py,sha256=nhoG_FuQWa08TyCQEDlKQmscBkgYJs9kbyEbUzLEC5Y,11352
+gpxcollection/templates/base.html,sha256=ZTXdNlvcooQqsaEi1_-fPCbUsLbjLGDkVme473b7eTE,9383
+gpxcollection/templates/collection.html,sha256=dUPvGJpNUw7zSPEM03aDAtExlzq5zqCLiNlUeis_7z4,8119
+gpxcollection/templates/overview.html,sha256=-nYapxYTdA9C4CRX1HJ0Qw1s7zeaq_Bm5TG6LGxioi4,3133
+gpxcollection-0.1.0.dist-info/METADATA,sha256=x2Wies7O4FeEg6lM3aQz8MbhK7ptw-yilloQQIOt7C8,3329
+gpxcollection-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gpxcollection-0.1.0.dist-info/entry_points.txt,sha256=P_pfplP1PH3S2AythWpN7-hOg1Tw_OWy2kd-nvCPYL4,53
+gpxcollection-0.1.0.dist-info/RECORD,,
