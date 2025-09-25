@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: posttroll
+Version: 1.13.1
+Summary: Messaging system for pytroll
+Project-URL: Homepage, https://github.com/pytroll/posttroll
+Project-URL: Bug Tracker, https://github.com/pytroll/posttroll/issues
+Project-URL: Documentation, https://posttroll.readthedocs.io/
+Project-URL: Source Code, https://github.com/pytroll/posttroll
+Project-URL: Organization, https://pytroll.github.io/
+Project-URL: Slack, https://pytroll.slack.com/
+Project-URL: Release Notes, https://github.com/pytroll/posttroll/blob/main/CHANGELOG.md
+Author-email: The Pytroll Team <pytroll@googlegroups.com>
+License-Expression: Apache-2.0
+License-File: LICENSE.txt
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Communications
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Requires-Dist: donfig
+Requires-Dist: netifaces-plus
+Requires-Dist: pyzmq
+Description-Content-Type: text/markdown
+
+posttroll
+=========
+
+[![Coverage Status](https://coveralls.io/repos/mraspaud/posttroll/badge.png?branch=feature-no-datatypes)](https://coveralls.io/r/mraspaud/posttroll?branch=feature-no-datatypes)
+
+High-level messaging system for pytroll.
