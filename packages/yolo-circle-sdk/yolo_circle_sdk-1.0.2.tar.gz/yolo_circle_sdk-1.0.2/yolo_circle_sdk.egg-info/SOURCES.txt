@@ -1,0 +1,16 @@
+README.md
+setup.py
+yolo_circle_sdk/__init__.py
+yolo_circle_sdk/api.py
+yolo_circle_sdk/cli.py
+yolo_circle_sdk/config.py
+yolo_circle_sdk/detector.py
+yolo_circle_sdk/model_manager.py
+yolo_circle_sdk.egg-info/PKG-INFO
+yolo_circle_sdk.egg-info/SOURCES.txt
+yolo_circle_sdk.egg-info/dependency_links.txt
+yolo_circle_sdk.egg-info/entry_points.txt
+yolo_circle_sdk.egg-info/not-zip-safe
+yolo_circle_sdk.egg-info/requires.txt
+yolo_circle_sdk.egg-info/top_level.txt
+yolo_circle_sdk/models/best1.pt
