@@ -1,0 +1,3 @@
+[console_scripts]
+mcp-ticketer = mcp_ticketer.cli.main:main
+mcp-ticketer-server = mcp_ticketer.mcp.server:main
