@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "RangeNumbersSumLibrary"
+version = "0.1.0"
+description = "Calculate sum of numbers in a range from a to b"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Suhail Nabil Alansi", email = "suhail09t12@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+rangesumnumbers = "range_numbers_sum_lib.__main__:main"

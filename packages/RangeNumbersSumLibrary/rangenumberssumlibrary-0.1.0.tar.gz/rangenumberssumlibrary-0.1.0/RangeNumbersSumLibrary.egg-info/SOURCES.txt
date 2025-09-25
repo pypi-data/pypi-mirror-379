@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+RangeNumbersSumLibrary.egg-info/PKG-INFO
+RangeNumbersSumLibrary.egg-info/SOURCES.txt
+RangeNumbersSumLibrary.egg-info/dependency_links.txt
+RangeNumbersSumLibrary.egg-info/entry_points.txt
+RangeNumbersSumLibrary.egg-info/top_level.txt
+range_numbers_sum_lib/__init__.py
+range_numbers_sum_lib/__main__.py
+range_numbers_sum_lib/core.py
