@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "hatchling >= 1.26",
+    "numpy",
+    "scipy",
+    "mpmath"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mechanical_model"
+version = "0.0.1"
+authors = [
+  { name="Mathieu Leocmach", email="mathieu.leocmachr@univ-lyon1.fr" },
+]
+description = "A package to deal with mechanical models and their linear response in oscillations, creep, microrheology, etc."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/MathieuLeocmach/mechanical_model"
+Issues = "https://github.com/MathieuLeocmach/mechanical_model/issues"
