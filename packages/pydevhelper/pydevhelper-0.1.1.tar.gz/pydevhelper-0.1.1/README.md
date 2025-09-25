@@ -1,0 +1,52 @@
+# PyDevHelper 🛠️
+
+[![PyPI version](https://img.shields.io/pypi/v/pydevhelper)](https://pypi.org/project/pydevhelper/)
+[![Python versions](https://img.shields.io/pypi/pyversions/pydevhelper)](https://pypi.org/project/pydevhelper/)
+[![License](https://img.shields.io/github/license/seuuser/pydevhelper)](LICENSE)
+
+Um **toolkit leve para desenvolvedores Python**, com utilitários práticos que ajudam no dia a dia.  
+A lightweight **developer toolkit for Python**, with practical utilities to make coding easier.
+
+---
+
+## 🇧🇷 Recursos (Features in Portuguese)
+
+- ✅ Logging configurado em 1 linha  
+- ✅ Verificação de variáveis de ambiente (`require_vars`)  
+- ✅ Medição de tempo de execução com `@timer`  
+- ✅ Impressão de tabelas no terminal (`print_table`)  
+
+---
+
+## 🇺🇸 Features (English)
+
+- ✅ Logging setup in one line  
+- ✅ Environment variable checking (`require_vars`)  
+- ✅ Execution time measurement with `@timer`  
+- ✅ Pretty-printing tables in the terminal (`print_table`)  
+
+---
+
+## 🚀 Instalação | Installation
+
+```bash
+pip install pydevhelper
+
+
+
+## ⚡ Uso rápido | Quick Usage
+from dev_helper import setup_logging, require_vars, timer, print_table
+
+# Setup logging
+setup_logging()
+
+# Ensure required environment variables exist
+require_vars(["PATH"])
+
+# Measure execution time
+@timer
+def main():
+    data = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
+    print_table(data)
+
+main()
