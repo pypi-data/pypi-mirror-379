@@ -1,0 +1,7 @@
+dist
+docs
+ibm_watsonx_ai
+ibmfl
+sample_notebooks
+scripts
+supporting_materials
