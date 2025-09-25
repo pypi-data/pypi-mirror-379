@@ -1,0 +1,4 @@
+ordeq>=0.2.1
+polars>=1.0
+fastexcel
+xlsxwriter

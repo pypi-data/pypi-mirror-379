@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ordeq_polars
+Version: 1.0.0
+Author: Niels Neerhoff, Simon Brugman
+Maintainer: Niels Neerhoff, Simon Brugman
+License-Expression: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ordeq>=0.2.1
+Requires-Dist: polars>=1.0
+Requires-Dist: fastexcel
+Requires-Dist: xlsxwriter
+Dynamic: license-file
+
+../../README.md
