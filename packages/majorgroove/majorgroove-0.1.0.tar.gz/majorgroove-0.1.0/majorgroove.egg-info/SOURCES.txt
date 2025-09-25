@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+majorgroove/__init__.py
+majorgroove/client.py
+majorgroove.egg-info/PKG-INFO
+majorgroove.egg-info/SOURCES.txt
+majorgroove.egg-info/dependency_links.txt
+majorgroove.egg-info/requires.txt
+majorgroove.egg-info/top_level.txt
