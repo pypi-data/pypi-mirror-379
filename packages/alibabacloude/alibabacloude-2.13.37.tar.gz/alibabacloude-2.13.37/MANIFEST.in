@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include setup.py
+recursive-include alibabacloud *.py
+exclude test_sample.py
+exclude test_sample.res
+exclude data_processor.py
+exclude 快速开始.md
+global-exclude __pycache__
+global-exclude *.py[co]
