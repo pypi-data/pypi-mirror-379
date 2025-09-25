@@ -1,0 +1,2 @@
+[console_scripts]
+wordcountrs = word_count_lib.__main__:main
