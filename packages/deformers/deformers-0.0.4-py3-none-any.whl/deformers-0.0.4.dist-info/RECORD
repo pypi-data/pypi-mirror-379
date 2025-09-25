@@ -1,0 +1,7 @@
+deformers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deformers/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deformers/models/openai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deformers/models/openai/gptoss.py,sha256=lxjrRylyN4LszZ8bYylk4uRrJKxFOO4M0dzPDXNRYcw,3266
+deformers-0.0.4.dist-info/METADATA,sha256=QbTxNlhr2rgkZ6wNuOX6PYzBqKFYAEqixoTrRKMyYOE,729
+deformers-0.0.4.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+deformers-0.0.4.dist-info/RECORD,,
