@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+send_recv_json.py
+setup.cfg
+send_recv_json.egg-info/PKG-INFO
+send_recv_json.egg-info/SOURCES.txt
+send_recv_json.egg-info/dependency_links.txt
+send_recv_json.egg-info/requires.txt
+send_recv_json.egg-info/top_level.txt
