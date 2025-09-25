@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+ag2_persona/__init__.py
+ag2_persona/persona_agent.py
+ag2_persona/py.typed
+ag2_persona.egg-info/PKG-INFO
+ag2_persona.egg-info/SOURCES.txt
+ag2_persona.egg-info/dependency_links.txt
+ag2_persona.egg-info/requires.txt
+ag2_persona.egg-info/top_level.txt
+tests/__init__.py
+tests/test_persona_agent.py
