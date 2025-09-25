@@ -1,0 +1,11 @@
+mlx/jira_traceability/__init__.py,sha256=bl3YXQFKzmrVySzandNYP7duiI_irhxESdHHs_FMu_k,260
+mlx/jira_traceability/_version.py,sha256=MTEGh8CFqeAM8LBM2ml2OO7XFtPMsADbS8ISAaOcMhk,704
+mlx/jira_traceability/jira_interaction.py,sha256=mxLlBrVchio9-lxcBnxn91lCaeg_zGXIHmTj6q-3kPI,11692
+mlx/jira_traceability/jira_traceability.py,sha256=xPJId8j47PXo9MtURUhrePVepY526MHIsLoovZX6A3Q,1372
+mlx/jira_traceability/jira_utils.py,sha256=XAX0wdQ-OGf137-EFBse4xvYcMMtqAt17zgCh30HXgY,2735
+mlx_jira_traceability-2.2.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tests/test_jira_interaction.py,sha256=9eUtOEG2q7SolUGkEVeNKqIUAtDB6T9trdk9r0GKiv4,25745
+mlx_jira_traceability-2.2.2.dist-info/METADATA,sha256=yuHk4CDsNyO6mPYDLAjiZPRSzZkTsYg2Cz1oX7W-j6I,7166
+mlx_jira_traceability-2.2.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mlx_jira_traceability-2.2.2.dist-info/top_level.txt,sha256=v2RrbbBgJksAVczZx5Au-ygGMKD0UTgYIuKV2bEPQSE,10
+mlx_jira_traceability-2.2.2.dist-info/RECORD,,
