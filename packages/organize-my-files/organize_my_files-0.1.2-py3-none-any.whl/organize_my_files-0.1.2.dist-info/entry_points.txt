@@ -1,0 +1,2 @@
+[console_scripts]
+organize-my-files = organizer.cli:main
