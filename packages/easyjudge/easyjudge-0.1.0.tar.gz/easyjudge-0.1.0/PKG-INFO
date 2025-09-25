@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: easyjudge
+Version: 0.1.0
+Summary: 通用机器学习测评平台（Flask）
+Author: linmy
+Author-email: 657894692@qq.com
+License: MIT
+Keywords: machine-learning,evaluation,flask,education
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask==2.3.3
+Requires-Dist: pandas==2.0.3
+Requires-Dist: numpy==1.24.4
+Requires-Dist: jinja2==3.1.2
+Requires-Dist: Werkzeug==2.3.7
+Requires-Dist: itsdangerous==2.1.2
+Requires-Dist: MarkupSafe==2.1.3
+Requires-Dist: python-dateutil==2.8.2
+Requires-Dist: pytz==2023.3
+Requires-Dist: six==1.16.0
+Requires-Dist: click>=8.1.3
+Requires-Dist: blinker>=1.6.2
+
+通用机器学习测评平台（Flask）

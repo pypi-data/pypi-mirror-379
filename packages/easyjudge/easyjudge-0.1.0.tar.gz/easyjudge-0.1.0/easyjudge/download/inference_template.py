@@ -1,0 +1,2 @@
+print('inference template placeholder')
+
