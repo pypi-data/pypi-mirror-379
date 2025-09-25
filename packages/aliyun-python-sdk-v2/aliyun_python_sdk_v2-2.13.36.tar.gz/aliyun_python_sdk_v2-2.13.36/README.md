@@ -1,0 +1,147 @@
+# 阿里云Python SDK v2
+
+阿里云官方Python SDK第二代版本，支持ECS、OSS、RDS等云服务。
+
+## 安装
+
+```bash
+pip install alibabacloud-python3
+```
+
+## 快速开始
+
+### ECS 弹性计算服务
+
+```python
+from alibabacloud.ecs import get_client
+
+# 创建ECS客户端
+client = get_client('ecs', region_id='cn-hangzhou')
+
+# 查询实例
+result = client.describe_instances()
+print(f"实例数量: {result['TotalCount']}")
+
+# 创建实例
+result = client.run_instances(
+    image_id='centos_7_9_x64_20G_alibase_20210318.vhd',
+    instance_type='ecs.g6.large',
+    security_group_id='sg-bp1fg655nh68xyz9jabq'
+)
+```
+
+### OSS 对象存储服务
+
+```python
+from alibabacloud.oss import get_oss_client
+
+# 创建OSS客户端
+client = get_oss_client('your-access-key', 'your-secret-key')
+
+# 列举存储空间
+result = client.list_buckets()
+print(f"存储空间: {len(result['buckets'])}")
+
+# 上传文件
+result = client.put_object('my-bucket', 'file.txt', 'Hello World!')
+```
+
+### RDS 数据库服务
+
+```python
+from alibabacloud.rds import get_rds_client
+
+# 创建RDS客户端
+client = get_rds_client('your-access-key', 'your-secret-key')
+
+# 查询数据库实例
+result = client.describe_db_instances()
+print(f"数据库实例: {result['total_record_count']}")
+
+# 创建数据库
+result = client.create_database('rm-bp1234567890', 'myapp')
+```
+
+### VPC 专有网络
+
+```python
+from alibabacloud.vpc import get_vpc_client
+
+# 创建VPC客户端
+client = get_vpc_client('your-access-key', 'your-secret-key')
+
+# 创建VPC
+result = client.create_vpc(cidr_block='192.168.0.0/16')
+print(f"VPC ID: {result['vpc_id']}")
+
+# 创建交换机
+result = client.create_vswitch(
+    vpc_id='vpc-bp15zckdt37pq72zvw3',
+    zone_id='cn-hangzhou-a',
+    cidr_block='192.168.1.0/24'
+)
+```
+
+### SLB 负载均衡
+
+```python
+from alibabacloud.slb import get_slb_client
+
+# 创建SLB客户端
+client = get_slb_client('your-access-key', 'your-secret-key')
+
+# 创建负载均衡
+result = client.create_load_balancer(
+    vpc_id='vpc-bp15zckdt37pq72zvw3',
+    vswitch_id='vsw-bp1s5fnvk4gn2tws03624'
+)
+
+# 添加后端服务器
+result = client.add_backend_servers(
+    'lb-bp1o94dp5i6earrmq7g1d',
+    [{'server_id': 'i-bp1234567890', 'weight': 100}]
+)
+```
+
+### 命令行工具
+
+```bash
+# 查询实例
+python -m alibabacloud describe-instances
+
+# 运行云资源
+python -m alibabacloud app.res
+```
+
+## 支持的服务
+
+- **ECS** (弹性计算服务) - 虚拟服务器管理
+- **OSS** (对象存储服务) - 海量数据存储
+- **RDS** (关系型数据库服务) - 托管数据库服务
+- **VPC** (专有网络) - 私有网络环境
+- **SLB** (负载均衡) - 应用负载分发
+- **CDN** (内容分发网络) - 全球加速服务
+- **DNS** (域名解析服务) - 智能DNS解析
+
+## 地域支持
+
+- cn-hangzhou (华东1)
+- cn-shanghai (华东2)
+- cn-beijing (华北2)
+- cn-shenzhen (华南1)
+- ap-southeast-1 (新加坡)
+- us-west-1 (美国西部)
+
+## 版本历史
+
+- v2.13.36 - 最新稳定版
+- v2.13.35 - 性能优化
+- v2.13.34 - 安全更新
+
+## 官方文档
+
+访问 [阿里云官方文档](https://help.aliyun.com/document_detail/101286.html) 获取更多信息。
+
+## 许可证
+
+Copyright (c) 2009-2023 Alibaba Cloud All rights reserved.

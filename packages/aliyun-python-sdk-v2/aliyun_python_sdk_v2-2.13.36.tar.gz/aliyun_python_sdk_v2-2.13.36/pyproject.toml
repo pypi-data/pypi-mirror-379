@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aliyun-python-sdk-v2"
+description = "阿里云Python SDK v2"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    {name = "Alibaba Cloud", email = "sdk-team@alibabacloud.com"},
+]
+keywords = ["alibaba-cloud", "aliyun", "sdk", "ecs", "oss", "rds", "vpc", "slb"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Distributed Computing",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0", 
+    "flake8>=3.8"
+]
+
+[project.urls]
+Homepage = "https://github.com/aliyun/alibabacloud-python-sdk-v2"
+Documentation = "https://help.aliyun.com/document_detail/101286.html"
+Repository = "https://github.com/aliyun/alibabacloud-python-sdk-v2"
+"Bug Tracker" = "https://github.com/aliyun/alibabacloud-python-sdk-v2/issues"
+
+[project.scripts]
+aliyun = "alibabacloud.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["alibabacloud*"]
+exclude = ["tests*"]
