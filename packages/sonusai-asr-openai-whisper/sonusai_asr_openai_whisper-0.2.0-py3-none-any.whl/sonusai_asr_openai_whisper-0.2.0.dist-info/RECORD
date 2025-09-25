@@ -1,0 +1,6 @@
+sonusai_asr_openai_whisper/__init__.py,sha256=XnKfr0phEFa7fSLpIS1EP40dJm22Ulw7fAff6YBAiq8,172
+sonusai_asr_openai_whisper/asr_functions/__init__.py,sha256=_KuT7fHjkQOKl5ULDxQ59JUpNflVKljRfKl7wbhC3ME,43
+sonusai_asr_openai_whisper/asr_functions/openai_whisper.py,sha256=AEXjxuwoPVax12YSPKcuaV4ZFXd4444lW1crF-AYEpw,1110
+sonusai_asr_openai_whisper-0.2.0.dist-info/METADATA,sha256=Jug-JzU0BnEzMaKxZGEAG7Q_E5AVvqLekoDO2ozUHI0,469
+sonusai_asr_openai_whisper-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sonusai_asr_openai_whisper-0.2.0.dist-info/RECORD,,
