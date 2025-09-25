@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/ordeq_boto3/__init__.py
+src/ordeq_boto3/_version.py
+src/ordeq_boto3/py.typed
+src/ordeq_boto3/s3_object.py
+src/ordeq_boto3.egg-info/PKG-INFO
+src/ordeq_boto3.egg-info/SOURCES.txt
+src/ordeq_boto3.egg-info/dependency_links.txt
+src/ordeq_boto3.egg-info/requires.txt
+src/ordeq_boto3.egg-info/top_level.txt
+tests/conftest.py
+tests/test_s3_object.py
