@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+mcp_data_analyzer/__init__.py
+mcp_data_analyzer/__main__.py
+mcp_data_analyzer/cli.py
+mcp_data_analyzer/core.py
+zgy_mcp_data_analzyer.egg-info/PKG-INFO
+zgy_mcp_data_analzyer.egg-info/SOURCES.txt
+zgy_mcp_data_analzyer.egg-info/dependency_links.txt
+zgy_mcp_data_analzyer.egg-info/entry_points.txt
+zgy_mcp_data_analzyer.egg-info/requires.txt
+zgy_mcp_data_analzyer.egg-info/top_level.txt
