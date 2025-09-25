@@ -1,0 +1,49 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Zariadenie u\u017e je nakonfigurovan\u00e9"
+        },
+        "error": {
+            "cannot_connect": "Nepodarilo sa pripoji\u0165",
+            "invalid_auth": "Neplatn\u00e9 overenie",
+            "timeout_connect": "\u010casov\u00fd limit na nadviazanie spojenia",
+            "unknown": "Neo\u010dak\u00e1van\u00e1 chyba"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API k\u013e\u00fa\u010d",
+                    "host": "Hostite\u013e"
+                },
+                "data_description": {
+                    "api_key": "K\u013e\u00fa\u010d API na overenie pomocou slu\u017eby Portainer",
+                    "host": "Hostite\u013e/URL vr\u00e1tane portu va\u0161ej in\u0161tancie Portainer"
+                },
+                "description": "K\u013e\u00fa\u010d API m\u00f4\u017eete vytvori\u0165 v pou\u017e\u00edvate\u013eskom rozhran\u00ed aplik\u00e1cie Portainer. Prejdite na **M\u00f4j \u00fa\u010det > K\u013e\u00fa\u010de API** a vyberte **Pridanie k\u013e\u00fa\u010da API**"
+            }
+        }
+    },
+    "device": {
+        "unknown_container": {
+            "name": "Nezn\u00e1my kontajner"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "status": {
+                "name": "Stav"
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "Pri pokuse o pripojenie k in\u0161tancii Portainer do\u0161lo k chybe: {error}"
+        },
+        "invalid_auth": {
+            "message": "Pri pokuse o overenie nastala chyba: {error}"
+        },
+        "timeout_connect": {
+            "message": "Pri pokuse o pripojenie k in\u0161tancii Portainer do\u0161lo k \u010dasov\u00e9mu limitu: {error}"
+        }
+    }
+}
