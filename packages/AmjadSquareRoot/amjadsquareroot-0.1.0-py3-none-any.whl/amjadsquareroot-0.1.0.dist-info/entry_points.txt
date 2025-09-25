@@ -1,0 +1,2 @@
+[console_scripts]
+amjadsqrt = square_root_lib_amjad.__main__:main
