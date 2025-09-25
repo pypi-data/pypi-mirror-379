@@ -1,0 +1,9 @@
+postal_regex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+postal_regex/validator.py,sha256=T39awjzb6O8xCvI3SIKWe3Go0mntpo0O3wN9g6yOJtU,1661
+postal_regex/data/postal_codes.json,sha256=ERluSYTjMxR9jqm8nQP8jIhtkUJpGuiQtyZl83H8BzQ,3892
+postal_regex/data/schema.json,sha256=p96fXn6lfqrOe2fuqGq_L8NLWFHiY1pIQ5PmAJgsjkQ,972
+postal_regex-1.0.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+postal_regex-1.0.0.dist-info/METADATA,sha256=9RxdnqvQNjNazBD7ZZ1YKdZrp03JM0t0YDOa37NWSJM,1489
+postal_regex-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+postal_regex-1.0.0.dist-info/top_level.txt,sha256=esuCd_Rxh2v30oT0YJebkKctU2UvivLr3wVcWdcZjME,13
+postal_regex-1.0.0.dist-info/RECORD,,
