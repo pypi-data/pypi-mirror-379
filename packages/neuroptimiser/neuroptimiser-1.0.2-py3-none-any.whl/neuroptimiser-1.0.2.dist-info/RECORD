@@ -1,0 +1,11 @@
+neuroptimiser/__init__.py,sha256=DNIZ-vUKMe5_T_Eix4UcvJLpXhLp5Z9u8r7dKh2BZkc,401
+neuroptimiser/solvers.py,sha256=0YMf32EdENCEOa4ODeOnHsX8bluVpT8ZRuxIQHYFhN8,28431
+neuroptimiser/utils.py,sha256=-bNHCQrJUT444EBMoqOzx-KJdA8yq6SIUo32feruz4M,20385
+neuroptimiser/core/__init__.py,sha256=IdYpVHx3zi-qVmPsYZwwDGo_LIsUCJYjwQpgpTWnvf4,224
+neuroptimiser/core/models.py,sha256=c2tHJWy3O6SfTlMFtrIkKVVwS8edqOpvkx0ALnV6G2s,72471
+neuroptimiser/core/processes.py,sha256=pVy_SPbbCWV_CGZoIRzT8k-IIwZT-DPLyTIycViZL_k,36651
+neuroptimiser-1.0.2.dist-info/licenses/LICENSE,sha256=sEBivB7Lrg_vJPQHcIdO4AegTWdlQbr1SQNWrpTHz58,1080
+neuroptimiser-1.0.2.dist-info/METADATA,sha256=PtDLvNSc7YpWXc6eF1anAf3koDvLKijHcOdw4wAJYT4,5884
+neuroptimiser-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+neuroptimiser-1.0.2.dist-info/top_level.txt,sha256=Uczsl1lUBKzWJMRF5Dr7IkbVlzrpe3Zah8gCdp297Zk,14
+neuroptimiser-1.0.2.dist-info/RECORD,,
