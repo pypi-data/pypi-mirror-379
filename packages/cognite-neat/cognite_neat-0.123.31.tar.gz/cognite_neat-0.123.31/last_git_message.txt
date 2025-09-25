@@ -1,0 +1,16 @@
+Removing object oriented Neat session endpoints (#1288)
+
+# Description
+
+New object oriented session endpoints are removed due to agreed strategy
+for neat version 1, which will be based on this new approach.
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Removed
+- Object oriented session endpoints
