@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: dataimport_aicare
+Version: 0.1.3
+Summary: Small package for frequently used functions for the AI-CARE dataset
+Project-URL: Repository, https://github.com/AI-CARE-Consortium/dataimport_aicare
+Author-email: Sebastian Germer <sebastian.germer@dfki.de>, Nina Cassandra Wiegers <nina.wiegers@dfki.de>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.12
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: scikit-learn>=1.7.1
+Requires-Dist: ydata-profiling>=4.16.1
+Description-Content-Type: text/markdown
+
+# Dataimport_AICARE
+
+Submodule for frequently used data loading and preprocessing methods inside of the AI-CARE project.
+
+To include it in your project use ```pip install dataimport-aicare```.
