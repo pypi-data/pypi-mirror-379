@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/dummy_massivekit.egg-info/PKG-INFO
+src/dummy_massivekit.egg-info/SOURCES.txt
+src/dummy_massivekit.egg-info/dependency_links.txt
+src/dummy_massivekit.egg-info/requires.txt
+src/dummy_massivekit.egg-info/top_level.txt
+src/mkit/api/__init__.py
+src/mkit/api/dummy.py
+src/mkit/core/__init__.py
