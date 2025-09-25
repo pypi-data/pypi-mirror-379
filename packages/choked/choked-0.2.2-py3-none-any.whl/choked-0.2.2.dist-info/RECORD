@@ -1,0 +1,8 @@
+token_bucket/__init__.py,sha256=FUP5ulH7RypeY7OlgOim07mlS6k4Q5MZd4LcKBBrl94,398
+token_bucket/proxy_token_bucket.py,sha256=Ho59dkkEFCJQwpw9PgfTJKv4Rn4T2qnENKz1RP1gZbg,896
+token_bucket/redis_token_bucket.py,sha256=3MTb7806yqDc892jHTCD__RDPQLwC1i9ZCiLZLeqBZE,1697
+token_bucket/test_token_bucket.py,sha256=1bQzcHBSbtW7jary0R-jnAoGRdtuEByiqTr-AjmPmSw,1151
+choked-0.2.2.dist-info/METADATA,sha256=9laexK_Mb62fjizrIVxJ0hm_m878ZurDe65xilDXbrE,217
+choked-0.2.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+choked-0.2.2.dist-info/top_level.txt,sha256=NhXGdH_jH4KpgC9DU6CDq1VoU6q3u1zWQaTnyXE2bIo,13
+choked-0.2.2.dist-info/RECORD,,
