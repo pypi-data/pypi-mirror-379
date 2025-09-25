@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cartagon-monday-client"
+version = "0.1.12"
+description = "Cliente Python para integraciones con la API GraphQL de Monday.com"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+authors = [
+  { name="Miguel Diaz", email="mpsdiaz@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+  "requests>=2.25.0",
+]
+
+keywords = ["monday", "monday.com", "graphql", "api", "cliente", "integración"]
+
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/MiguelDN/cartagon-monday-client/settings"
+Documentation = "https://github.com/tu-usuario/cartagon-monday-client#readme"
+Source = "https://github.com/MiguelDN/cartagon-monday-client/settings"
+"Bug Tracker" = "https://github.com/tu-usuario/cartagon-monday-client/issues"
+
+# Descubrimiento automático de paquetes (setuptools)
+[tool.setuptools.packages.find]
+where = ["."]
+
+# (Opcional) extras de desarrollo, NO van a producción
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "responses>=0.18"]
+
