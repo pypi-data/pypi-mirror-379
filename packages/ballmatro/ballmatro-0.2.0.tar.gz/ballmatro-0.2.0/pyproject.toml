@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "ballmatro"
+version = "0.2.0"
+description = "A challenging task for LLMs in which they need to create high-scoring Ballatro-like hands"
+authors = ["Álvaro Barbero Jiménez"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+datasets = "^3.6.0"
+python = ">=3.9,<3.14"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3"
+pytest-cov = "^6.0.0"
+ruff = "^0.0.241"
+openai = "^1.98.0"
+ipykernel = "^6.30.0"
+plotly = "^6.2.0"
+nbformat = "^5.10.4"
+transformers = "^4.54.1"
+huggingface-hub = "^0.34.3"
+torch = "^2.7.1"
+accelerate = "^1.9.0"
+trl = "^0.21.0"
+peft = "^0.17.1"
+rich = "^14.1.0"
+kaleido = "^1.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W"]
+ignore = ["E501"]
