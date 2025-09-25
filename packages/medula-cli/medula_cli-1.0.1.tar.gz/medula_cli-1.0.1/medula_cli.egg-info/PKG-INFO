@@ -1,0 +1,250 @@
+Metadata-Version: 2.4
+Name: medula-cli
+Version: 1.0.1
+Summary: Command-line interface for Medula AI Agent Platform
+Home-page: https://github.com/Subomi-olagoke/studious-rotary-phone
+Author: Medula Team
+Author-email: support@medula.ai
+Project-URL: Documentation, https://docs.medula.ai/cli
+Project-URL: Source, https://github.com/Subomi-olagoke/studious-rotary-phone
+Project-URL: Bug Reports, https://github.com/Subomi-olagoke/studious-rotary-phone/issues
+Keywords: ai,cli,agent,medula,chatbot,automation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.0.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: keyring>=24.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Medula CLI
+
+A command-line interface for the Medula AI Agent Platform, designed for developers who want to manage their AI agents from the terminal.
+
+## Installation
+
+### From PyPI (when published)
+```bash
+pip install medula-cli
+```
+
+### Development Installation
+```bash
+git clone https://github.com/Subomi-olagoke/studious-rotary-phone
+cd studious-rotary-phone
+pip install -e .
+```
+
+### Quick Install (Local)
+```bash
+pip install -r requirements.txt
+chmod +x medula_cli.py
+ln -s $(pwd)/medula_cli.py /usr/local/bin/medula
+```
+
+## Quick Start
+
+### 1. Login
+```bash
+medula auth login
+# Enter your Medula email and password
+```
+
+### 2. List Your Agents
+```bash
+medula agents list
+```
+
+### 3. Create a New Agent
+```bash
+medula agents create --name "Support Bot" --model claude-3-haiku
+```
+
+### 4. Chat with Your Agent
+```bash
+medula chat start <agent-id>
+```
+
+### 5. Initialize a New Project
+```bash
+medula init my-ai-project
+cd my-ai-project
+```
+
+## Commands
+
+### Authentication
+```bash
+medula auth login               # Login to Medula platform
+medula auth logout              # Logout and clear credentials  
+medula auth whoami              # Show current user info
+```
+
+### Agent Management
+```bash
+medula agents list              # List all your agents
+medula agents create            # Create a new agent
+medula agents show <agent-id>   # Show agent details
+medula agents list --format json  # Output as JSON
+```
+
+### Interactive Chat
+```bash
+medula chat start <agent-id>           # Start interactive chat
+medula chat start <agent-id> --save-session name  # Save conversation
+```
+
+Chat commands while in session:
+- `/exit` - End the conversation
+- `/save` - Save current conversation  
+- `/help` - Show help
+
+### Training Data
+```bash
+medula data upload <agent-id> --text "Training content"
+medula data upload <agent-id> --file document.pdf  # Coming soon
+```
+
+### Project Management
+```bash
+medula init <project-name>      # Initialize new project
+```
+
+## Configuration
+
+The CLI stores configuration in `~/.medula/`:
+- `config.json` - General configuration
+- Secure token storage via system keyring
+
+### Configuration Options
+```json
+{
+  "endpoint": "https://your-medula-instance.com",
+  "tenant_id": "your-tenant-id", 
+  "user_email": "you@company.com"
+}
+```
+
+## Examples
+
+### Developer Workflow
+```bash
+# Initialize new project
+medula init customer-support-bot
+cd customer-support-bot
+
+# Create agent
+medula agents create --name "Customer Support" --model claude-3-sonnet
+
+# Upload training data
+medula data upload <agent-id> --text "Return Policy: Items can be returned within 30 days..."
+
+# Test the agent
+medula chat start <agent-id>
+```
+
+### CI/CD Integration
+```bash
+# In your CI pipeline
+export MEDULA_TOKEN="your-api-token"
+medula agents list --format json | jq '.[] | select(.status=="active")'
+```
+
+## Advanced Usage
+
+### Multiple Environments
+```bash
+# Development
+medula auth login --endpoint https://dev-api.medula.ai
+
+# Production  
+medula auth login --endpoint https://api.medula.ai
+```
+
+### JSON Output for Scripting
+```bash
+# Get all agents as JSON
+medula agents list --format json
+
+# Parse with jq
+medula agents list --format json | jq '.[] | select(.model=="claude-3-haiku")'
+```
+
+## API Integration
+
+The CLI leverages your existing Medula API:
+- `POST /login` - Authentication
+- `GET /api/v1/tenants/{tenant_id}/agents` - List agents
+- `POST /api/v1/tenants/{tenant_id}/agents` - Create agents
+- `POST /api/v1/tenants/{tenant_id}/agents/{agent_id}/chat` - Chat
+
+## Troubleshooting
+
+### Authentication Issues
+```bash
+# Clear stored credentials
+medula auth logout
+medula auth login
+
+# Check current status
+medula auth whoami
+```
+
+### Connection Issues
+```bash
+# Verify endpoint
+medula auth whoami
+
+# Test with different endpoint
+medula auth login --endpoint https://your-instance.com
+```
+
+### Debug Mode
+```bash
+# Enable verbose output
+export MEDULA_DEBUG=1
+medula agents list
+```
+
+## Development
+
+### Project Structure
+```
+cli/
+├── medula_cli.py      # Main CLI application
+├── requirements.txt   # Dependencies
+├── setup.py          # Package setup
+└── README.md         # This file
+```
+
+### Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+MIT License - see LICENSE file for details.
+
+
+
