@@ -1,0 +1,88 @@
+Process bigwig and bigbed files.
+
+## Usage
+
+### Read values from BigWig
+
+```python
+reader = bigwig_io.Reader(path)
+values = reader.read_values(chr_ids, start, span)
+```
+
+Parameters:
+- `chr_ids` `starts` Chromosomes ids and starts of locations.
+- `span` Reading window in bp from locations starts. 1 by default.
+- `bin_size` Output bin size in bp. 1 by default.
+- `bin_mode` Method to aggregate bin values, either "mean" or "single" (one value per bin). "mean" by default.
+- `def_value` Default value to use when no intreval overlap a bin. 0 by default.
+- `zoom` Zoom level to use. Use full data if -1. Auto-detect the best level if 0 by selecting the larger level whose bin size is lower that the third of `bin_size` (may be the full data). 0 by default.
+- `progress` Function called during data extraction. Takes the extracted coverage and the total coverage as parameters. None by default.
+
+Outputs a numpy float32 array of shape (locations, span//bin_size).
+
+### Quantify signal
+
+```python
+reader = bigwig_io.Reader(path)
+values = reader.quantify(chr_ids, start, ends/span)
+```
+
+Parameters:
+- `chr_ids` `starts` `span` `bin_size` `def_value` `zoom` `progress` Identical to `read_values` method.
+- `ends` Ends of locations. Takes precedence over `span` is specified. None by default.
+- `reduce` Method to aggregate values over span, either "mean", "sd", "sem", "min" or "max". "mean" by default.
+
+Outputs a numpy float32 array of shape (locations).
+
+### Signal profile
+
+```python
+reader = bigwig_io.Reader(path)
+values = reader.profile(chr_ids, start, span)
+```
+
+Parameters:
+- `chr_ids` `starts` `span` `bin_size` `bin_mode` `def_value` `zoom` `progress` Identical to `read_values` method.
+- `reduce` Method to aggregate values over locations, either "mean", "sd", "sem", "min" or "max". "mean" by default.
+
+Outputs a numpy float32 array of shape (span//bin_size).
+
+### Extract reads from BigBed
+
+```python
+reader = bigwig_io.Reader(path)
+values = reader.read_entries(chr_ids, start, ends/span)
+```
+
+Parameters:
+- `chr_ids` `starts` Chromosomes ids and starts of locations.
+- `span` Reading window in bp from locations starts. 1 by default.
+- `ends` Ends of locations. Takes precedence over `span` is specified. None by default.
+- `progress` Function called during data extraction. Takes the extracted coverage and the total coverage as parameters. None by default.
+
+Outputs a list (locations) of list of entries (dict with at least "chr", "start" and "end" keys).
+
+### Convert BigWig to bedGraph or WIG
+
+```python
+reader = bigwig_io.Reader(path)
+reader.to_bedgraph(output_path)
+reader.to_wig(output_path)
+```
+
+Parameters:
+- `output_path` Path to output file.
+- `chr_ids` Only extract data from these chromomes. All by default.
+- `zoom` Zoom level to use. Full data by default.
+- `progress` Function called during data extraction. Takes the extracted coverage and the total coverage as parameters. None by default.
+
+### Convert BigBed to BED
+
+```python
+reader = bigwig_io.Reader(path)
+reader.to_bed(output_path)
+```
+
+Parameters:
+- `output_path` `chr_ids` `progress` Identical to `to_bedgraph` and `to_wig` methods.
+- `col_count` Only write this number of columns (eg, 3 for chr, start, end). All by default.
