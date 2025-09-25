@@ -1,0 +1,11 @@
+embedbuilder/__init__.py,sha256=zj_oWWBffguibG7BGlyHcw1XXGtOCmhEE7nP8l9DQPo,251
+embedbuilder/core.py,sha256=cLk60x7YX1ZAtF_gSSHmkt6FTrH_i-6-6VC0GrT21CM,24857
+embedbuilder/customization.py,sha256=0rfOJotaCjDm9Ts_yg-u25RiaD-einq61zVcrvDioiA,3613
+embedbuilder/messagesender.py,sha256=37kmR7xOSlnxLVLBDlvDlxWnt2H-PpUKhM5Bm2iWMiY,6039
+embedbuilder/pagination.py,sha256=2fslvKATydz6PYKWnqKLoUOytB7eSfTvyomt_PLgGsE,3331
+embedbuilder/utils.py,sha256=pG9rf9HJ_iSCMScl4FUJkkv13v3sABjRqb6x5NsVHso,2243
+py_embedbuilder-0.1.12.dist-info/licenses/LICENSE,sha256=f_4ZVFh8d9-6HPjrmy6nQ2cfpuY_nnovJYEZ1C4U7v4,27030
+py_embedbuilder-0.1.12.dist-info/METADATA,sha256=yeZ-VMWy87PgM0hebtpopdlj-iM-7xfejZn0Md1fCNY,8433
+py_embedbuilder-0.1.12.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+py_embedbuilder-0.1.12.dist-info/top_level.txt,sha256=MxDNf6nya9Iy5pkcVy5Ti_eoe6PTTrciAmY9eQCvEXY,13
+py_embedbuilder-0.1.12.dist-info/RECORD,,
