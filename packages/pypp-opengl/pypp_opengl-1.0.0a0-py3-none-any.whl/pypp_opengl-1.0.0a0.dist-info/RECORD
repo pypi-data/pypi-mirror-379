@@ -1,0 +1,15 @@
+pypp_opengl/__init__.py,sha256=m0HQ3f5iPDBP0J_5vLqWAXlDGQyl65oxp02PL5RAbuA,856
+pypp_opengl/custom.py,sha256=11wgCuF3-kqKBl8vfIgwp_1sLfGReKwj34UWejPDNGg,1432
+pypp_opengl/glad_loader.py,sha256=zrDBZNlFZbZfX8SuYquU6sa6I1tCbYjW4JftbljdsVM,46
+pypp_opengl/pypp_data/cpp/pypp_opengl/custom.cpp,sha256=bqn0gfIZpCPjyIfKcdpBwiHxes4ftdG5qVK99lgFz4E,2151
+pypp_opengl/pypp_data/cpp/pypp_opengl/custom.h,sha256=gC7o6pQmUEgYqgBytHCfrmM6Sm4UaW4h0_ynpnshMso,771
+pypp_opengl/pypp_data/transpiler_config/always_pass_by_value.json,sha256=8c9gkISXmFlnhMZUiT8uige2EwYf9gKTKOGlp0lnwjU,3094
+pypp_opengl/pypp_data/transpiler_config/attr_map.json,sha256=Ac5i1U4QYXZyN8wgCsGPsuVyuFOCz9s8Yc9_IZaZiM0,326
+pypp_opengl/pypp_data/transpiler_config/call_map.json,sha256=Apo9PK-2rpICqrI0-PG1fKN3oAGxSp-bZ3148Qrq8Yo,4334
+pypp_opengl/pypp_data/transpiler_config/cmake_lists.json,sha256=yldNuR42suJh2jMpNz2NDqwlX1Ca0gIoWP4Qv-dY6FI,495
+pypp_opengl/pypp_data/transpiler_config/mapping_functions/gl_attr.py,sha256=gbcRHQ3-aEZops4tIqDR-L-s_fEwvvBlsGlYdUSwsJE,115
+pypp_opengl/pypp_data/transpiler_config/mapping_functions/glad_load_gl.py,sha256=4XDsHO9gsWQAePnKVyess_Jqp3-5j0tKavot8ZvwdpI,110
+pypp_opengl/pypp_data/transpiler_config/mapping_functions/np_array.py,sha256=dlNM0F8zF2ebZ0njtOs0vIZ-4WGMUkwsolLKhuE-O3o,197
+pypp_opengl-1.0.0a0.dist-info/METADATA,sha256=qDvO72vZYdJBBZQ3CgbSvlFveI7pVBdu5ADhKKisQC8,5890
+pypp_opengl-1.0.0a0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pypp_opengl-1.0.0a0.dist-info/RECORD,,
