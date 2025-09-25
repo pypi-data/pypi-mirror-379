@@ -1,0 +1,13 @@
+mixpanel/__init__.py,sha256=ocesLed0s5Ayw4onB940QEZwayuXzIlA6Vc_IgSgMxo,31039
+mixpanel/flags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mixpanel/flags/local_feature_flags.py,sha256=06f2E417600HyM_HagTXogiXTf7gVaudvJXX_92Y65o,14758
+mixpanel/flags/remote_feature_flags.py,sha256=wy7v_RoMHnaA29mqti1oxYSMnExeNQAKY55NeiOvNb8,9283
+mixpanel/flags/test_local_feature_flags.py,sha256=DpheJHb1m8rD73RA4qK2TTG63l3YEZlj2u9j3Zfsr6c,14524
+mixpanel/flags/test_remote_feature_flags.py,sha256=Suk8YnAszx20QNysHM8rHDxJzIUz-piLpHDl1kPst0I,7087
+mixpanel/flags/types.py,sha256=6zJPcroBphsOPBcxECAtcyrNSzJXQrCWfhOo5qdM2U4,1450
+mixpanel/flags/utils.py,sha256=nKEYrpLnd28ZFVdfGL7SvcQ_FuxKJy8OYB27H51ar70,1346
+mixpanel-5.0.0b2.dist-info/licenses/LICENSE.txt,sha256=VovJbNhe6cFm12Q04KYnX8_QemA0BaBGeE7k67PcW94,590
+mixpanel-5.0.0b2.dist-info/METADATA,sha256=_ShI9lD99HSSKS4FLDEBPjkfRS-sqhANOCtRUrDKMyQ,3282
+mixpanel-5.0.0b2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mixpanel-5.0.0b2.dist-info/top_level.txt,sha256=Zpx54skc0HViFrmTZfxx_ktnvk8do-7zwKfChwTxCLw,9
+mixpanel-5.0.0b2.dist-info/RECORD,,
