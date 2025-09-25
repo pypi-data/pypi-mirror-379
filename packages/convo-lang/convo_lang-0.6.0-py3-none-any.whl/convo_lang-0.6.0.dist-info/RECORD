@@ -1,0 +1,10 @@
+convo_lang/__init__.py,sha256=RAzmnINEWvurZSmPltBVQpqem2kEWP__IGSsJj2xg6M,234
+convo_lang/conversation.py,sha256=QK8l3s4z4JkknAO2OgvBRgJb9ywMclTXNHzYfojRquc,4095
+convo_lang/convo_cli_path.py,sha256=5-0tmFuSwzvf35ioPjoRvuXtQq0uzX8P-GLmu0j2B2A,949
+convo_lang/convo_cli_runner.py,sha256=JXhpDhmToI-IcDs97qsefOJIiAoUM-csnOT832wbV38,4198
+convo_lang/errors.py,sha256=Ptgmiira1-5oPr52eQ8gkYOF_cWGs9y7VKttdVcdw7A,499
+convo_lang/utils/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+convo_lang-0.6.0.dist-info/METADATA,sha256=Yj7E7hsMu8TjBMfHEY4R-vK_ZgCkb5ooqeS4IeztRxM,42322
+convo_lang-0.6.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+convo_lang-0.6.0.dist-info/licenses/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+convo_lang-0.6.0.dist-info/RECORD,,
