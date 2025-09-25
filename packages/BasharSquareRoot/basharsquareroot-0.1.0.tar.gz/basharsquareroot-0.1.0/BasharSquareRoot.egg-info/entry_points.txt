@@ -1,0 +1,2 @@
+[console_scripts]
+basharsqrt = square_root_lib_bashar.__main__:main

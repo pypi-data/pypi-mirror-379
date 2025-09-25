@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+BasharSquareRoot.egg-info/PKG-INFO
+BasharSquareRoot.egg-info/SOURCES.txt
+BasharSquareRoot.egg-info/dependency_links.txt
+BasharSquareRoot.egg-info/entry_points.txt
+BasharSquareRoot.egg-info/top_level.txt
+square_root_lib_bashar/__init__.py
+square_root_lib_bashar/__main__.py
+square_root_lib_bashar/core.py

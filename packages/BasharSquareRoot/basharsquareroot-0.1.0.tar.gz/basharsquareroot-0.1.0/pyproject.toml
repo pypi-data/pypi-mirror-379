@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "BasharSquareRoot"
+version = "0.1.0"
+description = "Calculate the square root of a number"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    { name = "Bashar Mohammed", email = "bsharmshrh00@gmail.com" }
+]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+basharsqrt = "square_root_lib_bashar.__main__:main"
