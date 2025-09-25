@@ -1,0 +1,22 @@
+[project]
+name = "pyhom"
+version = "1.0.0"
+authors = [
+  { name="Oscar L. Cruz Gonzalez", email="oscar.lcg93@gmail.com" },
+]
+description = "PyHom: a Python library for homogenization"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/olcruzgonzalez/pypa/sampleproject"
+Issues = "https://github.com/olcruzgonzalez/pypa/sampleproject/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
