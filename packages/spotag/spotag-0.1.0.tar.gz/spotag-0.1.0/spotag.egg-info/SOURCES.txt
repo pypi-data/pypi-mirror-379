@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+spotag/__init__.py
+spotag/app.py
+spotag/m4a.py
+spotag/main.py
+spotag/models.py
+spotag/spotify.py
+spotag.egg-info/PKG-INFO
+spotag.egg-info/SOURCES.txt
+spotag.egg-info/dependency_links.txt
+spotag.egg-info/entry_points.txt
+spotag.egg-info/requires.txt
+spotag.egg-info/top_level.txt
