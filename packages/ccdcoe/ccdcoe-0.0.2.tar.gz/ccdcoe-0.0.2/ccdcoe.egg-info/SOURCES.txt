@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ccdcoe/__init__.py
+ccdcoe.egg-info/PKG-INFO
+ccdcoe.egg-info/SOURCES.txt
+ccdcoe.egg-info/dependency_links.txt
+ccdcoe.egg-info/entry_points.txt
+ccdcoe.egg-info/requires.txt
+ccdcoe.egg-info/top_level.txt
+ccdcoe/http_apis/__init__.py
+ccdcoe/http_apis/base_class/__init__.py
+ccdcoe/http_apis/base_class/api_base_class.py
+ccdcoe/http_apis/providentia/__init__.py
+ccdcoe/http_apis/providentia/providentia_api.py

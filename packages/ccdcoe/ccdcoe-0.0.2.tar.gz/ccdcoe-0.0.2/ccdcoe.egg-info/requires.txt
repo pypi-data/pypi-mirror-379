@@ -1,0 +1,10 @@
+setuptools>=68.1.0
+
+[all]
+requests>=2.31.0
+
+[gitlab_bot]
+requests>=2.31.0
+
+[http_apis]
+requests>=2.31.0
