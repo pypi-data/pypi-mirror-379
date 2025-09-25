@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/jupyter_ai_debugger/__init__.py
+src/jupyter_ai_debugger/config.py
+src/jupyter_ai_debugger/core.py
+src/jupyter_ai_debugger.egg-info/PKG-INFO
+src/jupyter_ai_debugger.egg-info/SOURCES.txt
+src/jupyter_ai_debugger.egg-info/dependency_links.txt
+src/jupyter_ai_debugger.egg-info/requires.txt
+src/jupyter_ai_debugger.egg-info/top_level.txt
+tests/test_import.py
