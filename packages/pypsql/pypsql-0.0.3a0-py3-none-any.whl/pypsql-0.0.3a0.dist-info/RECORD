@@ -1,0 +1,8 @@
+pypsql/__init__.py,sha256=lNdjsXbnamaM-zzJoS05Xi9_tNNLULKR5jRYVs0X88Q,210
+pypsql/connect.py,sha256=_fTKcjw00mgMSsRgZ5Ya9gl3E20vyTnAQ0HWP5XUl-0,12113
+pypsql/ssh_connect.py,sha256=yzflxSZAuF39gnhH-qWvVSp-GiwQxKor6e777jp6BcM,6921
+pypsql-0.0.3a0.dist-info/licenses/LICENSE.txt,sha256=32SiAi157EYC53X5_LgmMlpBjNiJuk8kq8Kv1adLHrk,1081
+pypsql-0.0.3a0.dist-info/METADATA,sha256=7_Ht8tCATr5QqUIpxO5wI1G0VraMQgf4afvBiMuAJ5s,3860
+pypsql-0.0.3a0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pypsql-0.0.3a0.dist-info/top_level.txt,sha256=EF6Y7BmD2cor-dURn92hSk-lVwsegcb5ETv9CIe8qDk,7
+pypsql-0.0.3a0.dist-info/RECORD,,
