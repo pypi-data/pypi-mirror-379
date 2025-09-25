@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/student_package/__init__.py
+src/student_package/extended_student.py
+src/student_package/student.py
+src/student_package/student_manager.py
+src/students_management.egg-info/PKG-INFO
+src/students_management.egg-info/SOURCES.txt
+src/students_management.egg-info/dependency_links.txt
+src/students_management.egg-info/top_level.txt
