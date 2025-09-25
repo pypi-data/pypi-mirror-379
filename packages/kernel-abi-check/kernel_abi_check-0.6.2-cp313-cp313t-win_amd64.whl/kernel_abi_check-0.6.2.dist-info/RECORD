@@ -1,0 +1,7 @@
+kernel_abi_check-0.6.2.dist-info/METADATA,sha256=hG5T5vAuva0SOVNKSr7mZqZqu7ZSS4exh_UUtaKFyCE,291
+kernel_abi_check-0.6.2.dist-info/WHEEL,sha256=NIX3GH-EI7FzrKEcrM4JPmD21jlBdrrjPRxjD1D-qeI,97
+kernel_abi_check/__init__.py,sha256=PQtGn24XgibIwz9IMJDZtkppfGvBh9Dlj98R0eiNZ3s,147
+kernel_abi_check/__init__.pyi,sha256=XYpRiHjrWBC6ihaR9NEseWTxWKPtp8VJNy4G5FeT--0,5769
+kernel_abi_check/kernel_abi_check.cp313t-win_amd64.pyd,sha256=mCvw3XKRtQxeA02avMTppOooJCwbc_9vCPTujyJa8r8,1203712
+kernel_abi_check/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kernel_abi_check-0.6.2.dist-info/RECORD,,
