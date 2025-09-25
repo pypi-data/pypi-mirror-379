@@ -1,0 +1,140 @@
+{
+    "GLuint": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLenum": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLboolean": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLbitfield": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLvoid": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLbyte": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLubyte": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLshort": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLushort": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLint": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLclampx": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLsizei": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLfloat": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLclampf": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLdouble": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLclampd": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLchar": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLcharARB": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLhalf": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLhalfARB": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLfixed": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLint64": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    },
+    "GLint64EXT": {
+        "required_py_import": {
+            "module": "pypp_opengl",
+            "name": "GL"
+        }
+    }
+}

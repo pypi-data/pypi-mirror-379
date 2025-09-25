@@ -1,0 +1,143 @@
+{
+    "custom_mapping": {
+        "glad_load_gl": {
+            "mapping_function": "glad_load_gl.py",
+            "angle_includes": [
+                "glad/gl.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "glad_load_gl"
+            }
+        },
+        "np.array": {
+            "mapping_function": "np_array.py",
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "np"
+            }
+        }
+    },
+    "to_string": {
+        "gl_gen_buffer": {
+            "to": "gl_gen_buffer",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_gen_buffer"
+            }
+        },
+        "gl_gen_buffers": {
+            "to": "gl_gen_buffers",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_gen_buffers"
+            }
+        },
+        "gl_delete_buffer": {
+            "to": "gl_delete_buffer",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_delete_buffer"
+            }
+        },
+        "gl_delete_buffers": {
+            "to": "gl_delete_buffers",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_delete_buffers"
+            }
+        },
+        "gl_gen_vertex_array": {
+            "to": "gl_gen_vertex_array",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_gen_vertex_array"
+            }
+        },
+        "gl_gen_vertex_arrays": {
+            "to": "gl_gen_vertex_arrays",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_gen_vertex_arrays"
+            }
+        },
+        "gl_shader_source": {
+            "to": "gl_shader_source",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_shader_source"
+            }
+        },
+        "gl_shader_sources": {
+            "to": "gl_shader_sources",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_shader_sources"
+            }
+        },
+        "gl_get_shader_iv": {
+            "to": "gl_get_shader_iv",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_get_shader_iv"
+            }
+        },
+        "gl_get_program_iv": {
+            "to": "gl_get_program_iv",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_get_program_iv"
+            }
+        },
+        "gl_get_shader_info_log": {
+            "to": "gl_get_shader_info_log",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_get_shader_info_log"
+            }
+        },
+        "gl_get_program_info_log": {
+            "to": "gl_get_program_info_log",
+            "quote_includes": [
+                "pypp_opengl/custom.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "gl_get_program_info_log"
+            }
+        }
+    }
+}
