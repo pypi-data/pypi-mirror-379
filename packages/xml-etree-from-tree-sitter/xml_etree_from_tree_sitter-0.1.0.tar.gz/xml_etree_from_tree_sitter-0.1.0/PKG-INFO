@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: xml-etree-from-tree-sitter
+Version: 0.1.0
+Summary: A library for reading XML files as an etree from a tree-sitter parse
+Project-URL: Repository, https://gitlab.com/dawalters/xml-etree-from-tree-sitter
+Author: Dom Walters
+License-File: LICENSE
+Keywords: etree,tree-sitter,xml
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.10
+Requires-Dist: tree-sitter-xml==0.7.0
+Requires-Dist: tree-sitter==0.24.0
+Provides-Extra: dev
+Requires-Dist: coverage==7.10.6; extra == 'dev'
+Requires-Dist: h11>=0.16.0; extra == 'dev'
+Requires-Dist: hatch==1.14.1; extra == 'dev'
+Requires-Dist: lxml-stubs==0.5.1; extra == 'dev'
+Requires-Dist: mypy==1.18.1; extra == 'dev'
+Requires-Dist: pre-commit==4.3.0; extra == 'dev'
+Requires-Dist: pytest-cov==7.0.0; extra == 'dev'
+Requires-Dist: pytest-sugar==1.1.1; extra == 'dev'
+Requires-Dist: pytest-xdist==3.8.0; extra == 'dev'
+Requires-Dist: pytest==8.4.2; extra == 'dev'
+Requires-Dist: ruff==0.13.0; extra == 'dev'
+Requires-Dist: uv>=0.8.6; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# `xml-etree-from-tree-sitter`
+
+[![PyPI](https://img.shields.io/pypi/v/xml-etree-from-tree-sitter)](https://pypi.org/project/xml-etree-from-tree-sitter/)
+[![release](https://gitlab.com/dawalters/xml-etree-from-tree-sitter/-/badges/release.svg)](https://gitlab.com/dawalters/xml-etree-from-tree-sitter/-/releases)
+[![Gitlab](https://gitlab.com/dawalters/xml-etree-from-tree-sitter/badges/develop/pipeline.svg)](https://gitlab.com/dawalters/xml-etree-from-tree-sitter/-/pipelines?page=1&scope=all&ref=develop)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Codecov](https://codecov.io/gitlab/dawalters/xml-etree-from-tree-sitter/branch/develop/graph/badge.svg)](https://codecov.io/gitlab/dawalters/xml-etree-from-tree-sitter)
+
+## Dependencies
+
+## Installation
+
+### `pip`
+
+You can install the latest release from [PyPI](https://pypi.org/project/xml-etree-from-tree-sitter):
+
+```bash
+pip install xml-etree-from-tree-sitter
+```
+
+Or, you can install this repository directly:
+
+```bash
+# Installs `develop` branch
+pip install git+https://gitlab.com/dawalters/xml-etree-from-tree-sitter
+
+# Installs `v0.1.0` tag
+pip install git+https://gitlab.com/dawalters/xml-etree-from-tree-sitter@v0.1.0
+```
+
+### Source tarball
+
+You can download source releases from the
+[Gitlab Releases page](https://gitlab.com/dawalters/xml-etree-from-tree-sitter/-/releases).

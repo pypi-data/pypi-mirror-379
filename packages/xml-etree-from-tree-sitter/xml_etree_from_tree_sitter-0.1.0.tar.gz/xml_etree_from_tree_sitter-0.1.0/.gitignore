@@ -1,0 +1,17 @@
+# Python
+/dist/
+__pycache__/
+.mypy_cache/
+/.ruff_cache/
+/.venv/
+
+# Other
+/.aider*
+.token
+
+# Tests
+/.coverage
+/.coverage.xml
+/.htmlcov/
+/.junit.xml
+/.pytest_cache/
