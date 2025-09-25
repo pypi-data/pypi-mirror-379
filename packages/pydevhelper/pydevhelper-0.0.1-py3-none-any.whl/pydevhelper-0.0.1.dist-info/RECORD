@@ -1,0 +1,9 @@
+dev_helper/__init__.py,sha256=u-Y7a7ucm2wKX3BKW4Mq_Vo9QEOuji3M8CwZhFqh97k,303
+dev_helper/config.py,sha256=wcop38ZL6OaytWtioX9kePfHnFbWj_8MfOqwOB8Rgm0,762
+dev_helper/formatting.py,sha256=EwF_WbFsieKZ5FAQ1GDGE7TQ3WUdmE-QKVVzsP3qUX8,594
+dev_helper/logging.py,sha256=-NAKGOSxOQb0iJGLlEA8X1tCgHxrtrAOeE1YSaYLtgA,556
+dev_helper/timing.py,sha256=-PaUkjxQjUlsgrotCi9zdrvBiwcjMJ0q2hAUpYAj0HY,442
+pydevhelper-0.0.1.dist-info/METADATA,sha256=TenUZM30aWJd7KxQTQB0RfuSIpRMCC8-aiQA2z-k8t8,595
+pydevhelper-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydevhelper-0.0.1.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydevhelper-0.0.1.dist-info/RECORD,,
