@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: tagforge
+Version: 0.1.0
+Summary: An open-source tool that uses LLMs + dspy to automatically generate smart, context-aware tags for blog posts, articles, and other written content
+License: MIT
+License-File: LICENSE
+Author: Matt Struble
+Author-email: 4325029+mattstruble@users.noreply.github.com
+Requires-Python: <3.14,>=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: dspy (>=3.0.3,<4.0.0)
+Requires-Dist: pydantic (>=2.11.7,<3.0.0)
+Requires-Dist: tenacity (>=9.1.2,<10.0.0)
+Description-Content-Type: text/markdown
+
+# 🏷️ TagForge
+
+<p align="center">
+  <img src="docs/assets/banner.png" alt="TagForge Logo" width="600"/>
+</p>
+
+**Forge meaningful tags from raw content with AI.**
+
+TagForge is an open-source tool that uses **LLMs + dspy** to automatically generate smart, context-aware tags for blog posts, articles, and other written content.
+It helps writers, developers, and teams improve discoverability and organization with **semantic tagging** powered by AI.
+
+## Installation
+
+TagForge prefers to use a local LLM for preserving PII information.
+
+### Macos
+
+```bash
+brew install ollama
+brew services start ollama
+ollama pull llama3.1:8b
+```
+
+## Privacy Preservation (PAPILLON-Inspired)
+
+This project implements a privacy-preserving pipeline inspired by:
+
+- **PAPILLON: PrivAcy Preservation from Internet-based and Local Language Model Ensembles**
+  Antoine Bosselut, et al.
+  arXiv: [2410.17127](https://arxiv.org/abs/2410.17127)
+
+Our implementation adapts their core methodology (local filtering + remote API model + evaluation on QUAL/LEAK) within a DSPy framework.
+

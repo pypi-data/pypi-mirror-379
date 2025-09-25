@@ -1,0 +1,69 @@
+{
+  "prompt_creator.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "user_query": "翻译2.1 Human AAA tissue samples RNA sequence Five human AAA tissues and their adjacent normal aortic tissue were collected for sequencing. Human AAA samples were obtained with the approval of the Ethics Committee of the Affiliated Hospital of Qingdao University. The diagnosis of AAA was confirmed by computed tomography angiography prior to surgery in all patients. Adjacent normal aortic tissue and AAA samples were obtained from 5 patients with elevated IgE who underwent open surgery. All tissue samples were frozen in liquid nitrogen immediately after resection and stored at −80°C until further processing. Detailed information of patients was shown in Table 1. Quality control, sequencing and further analysis of AAA tissue samples were carried out.",
+        "reasoning": "The user's request is a passage describing an experiment involving human tissue samples and their analysis. To generate a prompt for the large language model that preserves user privacy, I will rephrase the input to focus on general information about experimental procedures without referencing specific individuals or institutions.",
+        "curated_prompt": "Describe a typical procedure for obtaining and processing human AAA (abdominal aortic aneurysm) tissue samples for RNA sequencing. Please outline the steps involved in collecting, storing, and preparing the samples for analysis."
+      }
+    ],
+    "signature": {
+      "instructions": "You are a helpful assistant that is very mindful of user privacy.\nYou have access to a powerful large language model that you can query.\nGiven a user request, create a prompt for your large language model that preserves\nuser privacy, so that this model can help you complete the user request.\nProvide the prompt directly without any preamble.\nDO NOT COMPLETE THE USER QUERY, ONLY GENERATE A PROMPT.\n\nTo improve the performance of the prompt creator module, consider using more advanced natural language processing techniques to generate more informative and specific prompts. Additionally, ensure that the input data is properly preprocessed to remove any irrelevant or redundant information.",
+      "fields": [
+        {
+          "prefix": "User Query:",
+          "description": "The user's request to be fulfilled."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Curated Prompt:",
+          "description": "${curated_prompt}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "info_aggregator": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "user_query": "翻译2.1 Human AAA tissue samples RNA sequence Five human AAA tissues and their adjacent normal aortic tissue were collected for sequencing. Human AAA samples were obtained with the approval of the Ethics Committee of the Affiliated Hospital of Qingdao University. The diagnosis of AAA was confirmed by computed tomography angiography prior to surgery in all patients. Adjacent normal aortic tissue and AAA samples were obtained from 5 patients with elevated IgE who underwent open surgery. All tissue samples were frozen in liquid nitrogen immediately after resection and stored at −80°C until further processing. Detailed information of patients was shown in Table 1. Quality control, sequencing and further analysis of AAA tissue samples were carried out.",
+        "related_llm_response": "Obtaining and processing human abdominal aortic aneurysm (AAA) tissue samples for RNA sequencing involves several critical steps, from collection to analysis. Below is a typical procedure outlining these steps:\n\n### 1. Ethical Approval and Patient Consent\n- **Obtain Ethical Approval**: Ensure that the study has received approval from an Institutional Review Board (IRB) or Ethics Committee.\n- **Informed Consent**: Obtain informed consent from patients undergoing surgical repair of AAA. Explain the purpose of the study and how their tissue will be used.\n\n### 2. Tissue Collection\n- **Surgical Procedure**: During the surgical repair of the AAA, the surgeon will excise the aneurysmal tissue.\n- **Immediate Collection**: Collect the AAA tissue immediately after excision. Use sterile instruments to minimize contamination.\n- **Sample Identification**: Label the samples with unique identifiers, including patient ID, date, and type of tissue.\n\n### 3. Sample Storage\n- **Preservation**: \n  - For RNA analysis, it is crucial to preserve the integrity of RNA. Place the tissue samples in RNA stabilization solution (e.g., RNAlater) immediately after collection.\n  - Alternatively, snap-freeze the tissue in liquid nitrogen if RNA stabilization solution is not available.\n- **Short-term Storage**: Store samples at 4°C for short-term (up to a week) or at -80°C for long-term storage.\n\n### 4. Tissue Processing\n- **Thawing**: If samples were frozen, thaw them on ice before processing.\n- **Dissection**: Using sterile tools, dissect the tissue to remove any non-aneurysmal areas or contaminants (e.g., fat, blood).\n- **Homogenization**: \n  - Cut the tissue into small pieces and homogenize using a tissue homogenizer or a mortar and pestle in a suitable lysis buffer (e.g., TRIzol or RNeasy lysis buffer) to extract RNA.\n  - Ensure that the homogenization is thorough to achieve a uniform sample.\n\n### 5. RNA Extraction\n- **RNA Isolation**: Follow the manufacturer’s protocol for the chosen RNA extraction kit (e.g., RNeasy Mini Kit, TRIzol method).\n- **Quality Control**: Assess RNA quality and quantity using a spectrophotometer (e.g., NanoDrop) and an RNA bioanalyzer (e.g., Agilent Bioanalyzer) to check for integrity (RIN value).\n\n### 6. Library Preparation for RNA Sequencing\n- **Library Construction**: Prepare RNA sequencing libraries using a library preparation kit (e.g., Illumina TruSeq, NEBNext). This typically involves:\n  - mRNA enrichment or rRNA depletion.\n  - cDNA synthesis.\n  - Fragmentation and adapter ligation.\n  - PCR amplification.\n- **Quality Control of Libraries**: Assess the quality and quantity of the libraries using a bioanalyzer or qPCR.\n\n### 7. Sequencing\n- **Sequencing Platform**: Load the prepared libraries onto a sequencing platform (e.g., Illumina NovaSeq, HiSeq) according to the manufacturer’s instructions.\n- **Run Sequencing**: Perform the sequencing run, ensuring to follow the appropriate settings for read length and depth based on the experimental design.\n\n### 8. Data Analysis\n- **Data Processing**: After sequencing, process the raw data using bioinformatics tools for quality control, alignment, and quantification of gene expression.\n- **Statistical Analysis**: Perform differential expression analysis and other relevant statistical analyses to interpret the results.\n\n### 9. Data Storage and Sharing\n- **Data Storage**: Store raw and processed data securely, following data management protocols.\n- **Sharing**: Consider sharing data in public repositories (e.g., GEO, ArrayExpress) to promote transparency and reproducibility.\n\n### Conclusion\nThis procedure outlines the essential steps for obtaining and processing AAA tissue samples for RNA sequencing. Each step must be performed with care to ensure the integrity of the samples and the reliability of the resulting data.",
+        "response": "The protocol for obtaining and processing human abdominal aortic aneurysm (AAA) tissue samples for RNA sequencing involves several critical steps. These include ethical approval, patient consent, tissue collection during surgery, immediate freezing or preservation of the tissue in RNAlater, short-term storage at 4°C, long-term storage at -80°C, thawing, dissection to remove contaminants, homogenization to extract RNA, quality control of RNA integrity and quantity, library preparation for sequencing, and finally, sequencing and data analysis.\n\nIt's crucial that each step is performed with care to ensure the integrity of the samples and the reliability of the resulting data. After sequencing, the raw data will be processed using bioinformatics tools for quality control, alignment, and quantification of gene expression. The final step involves statistical analysis to interpret the results.\n\nConsidering your question about obtaining and processing human AAA tissue samples for RNA sequencing, I've outlined the steps in detail based on the related LLM response. These procedures are essential for ensuring that the samples are handled correctly from collection through data storage and sharing.\n\nHowever, if you're looking for specific information or modifications to these protocols, please let me know so I can better assist you with your research needs."
+      }
+    ],
+    "signature": {
+      "instructions": "You are a helpful assistant.\nFor inspiration, we found a potentially related response from a powerful large language model.\nGiven the original user query and the remote model’s response, produce a final answer.\nYou may re-use non-sensitive details from the original query.\nDo not introduce any extra PII.\n\nFor the info aggregator module, focus on improving the extraction of relevant information from the input text. This can be achieved by fine-tuning the model's attention mechanism to better capture key points and details. Furthermore, consider incorporating more advanced entity recognition techniques to accurately identify important entities in the text.",
+      "fields": [
+        {
+          "prefix": "User Query:",
+          "description": "The user's request to be fulfilled."
+        },
+        {
+          "prefix": "Related Llm Response:",
+          "description": "information from a powerful LLM responding to a related request"
+        },
+        {
+          "prefix": "Response:",
+          "description": "your final response to the user's request."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}
