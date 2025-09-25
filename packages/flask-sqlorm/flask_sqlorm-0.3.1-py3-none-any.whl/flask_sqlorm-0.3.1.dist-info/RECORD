@@ -1,0 +1,5 @@
+flask_sqlorm/__init__.py,sha256=tKcQrEVJz-LLLl0nEfJ5qGQj3T7ufRJq0InQuK5FnnM,6235
+flask_sqlorm/encrypted.py,sha256=RyLFaszPyy1Fw1zpTH4sTvPCYF7z50vCAwLI-3UQnO4,365
+flask_sqlorm-0.3.1.dist-info/WHEEL,sha256=Pi5uDq5Fdo_Rr-HD5h9BiPn9Et29Y9Sh8NhcJNnFU1c,79
+flask_sqlorm-0.3.1.dist-info/METADATA,sha256=SdSOUUmytw4pJlRnbcE8o08za2QWSU6G9nCnZncpKwI,4626
+flask_sqlorm-0.3.1.dist-info/RECORD,,
