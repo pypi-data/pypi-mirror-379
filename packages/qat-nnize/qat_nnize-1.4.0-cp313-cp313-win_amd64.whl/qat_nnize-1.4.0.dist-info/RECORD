@@ -1,0 +1,17 @@
+qat/nnize/__init__.pyd,sha256=hDjWSxTyE0drCa63cUeTvGCx4yXpmBOAhLWNAWPkQDI,91045
+qat/nnize/definition.pyd,sha256=dP6tQxYWMPSSo_JWKw_aaYJRI8y3hDOcpPW_rZBUSPU,141964
+qat/nnize/expand_swaps.pyd,sha256=JiIsnifNg6oLZ8djC_pXig-veQ2ZTgLzi-yS8XKsgWk,225404
+qat/nnize/libastar.pyd,sha256=7GO_1Wee_6DSoQKcPzRva83Qezo1FNtgmf3j1KDYNGU,12377060
+qat/nnize/libcpp_nnize.pyd,sha256=J_1xBHLBi9Myir2YrelAmiYM1gQCx7s6bynM6ejuSSY,12689861
+qat/nnize/libpattern.pyd,sha256=q6dkGO1noz7LLeyfydpGLlmpyyNprdd3Zr9qEfOZBsg,172802
+qat/nnize/libsabre.pyd,sha256=3JgDfqiJmwv2tA8D8IA4qjQlnFHx39qyGIqN20jiDoE,2242386
+qat/nnize/mapping.pyd,sha256=wbT6HHrJKQnV_Nma_YJYJn60EAnm6DvREFSDGkMrfNA,250042
+qat/nnize/plugin.pyd,sha256=nswXTkzdJMadAPzOL8T709bFjSxE3VxYYFEkuurSlEs,423976
+qat/nnize/version.pyd,sha256=q0nhtmi8SpxC9maWEH-lNwK_gd4h0u27wLMO3etkN7o,78478
+qat/nnize/metrics/__init__.pyd,sha256=jx82x1HZGEPRBCJsmeE2KkT0v0fmp0tAFaFQYEnDC5c,82230
+qat/plugins/hook_nnize.pyd,sha256=R4iC5kGq1PsIsbLQaHMYvL0gHgQ-V5VETCK7hkF8TaQ,82067
+qat_nnize-1.4.0.dist-info/licenses/LICENSE.txt,sha256=Vl03FJBySK7FEYdw_Y0dV66UAVedEyIuqJTJxREyRgs,4752
+qat_nnize-1.4.0.dist-info/METADATA,sha256=7gPcqHHeouTJhAncRLcBt9cgGTiJXNfpzTxY-idlU1o,1894
+qat_nnize-1.4.0.dist-info/WHEEL,sha256=hR65IZdh7GShbH3PhB3P8-LyXuWFs_3RKI9T3I6KMKA,100
+qat_nnize-1.4.0.dist-info/top_level.txt,sha256=EtiE-lzXpV6tDPK3leIRADd9p6cOal7g6fxvqQ-u_yc,4
+qat_nnize-1.4.0.dist-info/RECORD,,
