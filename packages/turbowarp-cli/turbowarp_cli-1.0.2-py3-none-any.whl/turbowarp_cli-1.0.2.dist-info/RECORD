@@ -1,0 +1,11 @@
+twcli/__init__.py,sha256=Y3LSfRioSl2xch70pq_ULlvyECXyEtN3krVaWeGyaxk,22
+twcli/__main__.py,sha256=wyzpO5NXPwW6UOPOjYO0CFz9xVCLqW8kgemkC6Cw1As,1561
+twcli/run.html,sha256=4q6S8QwdtxcujI0dyWE5GPowT1ZUZ4At-D5zxulGAzQ,5088
+twcli/run.py,sha256=7mHrpmJlEZkEmAQejtY9SOcZ40QemTyrGX5VTgFgTx8,4374
+twcli/scaffolding-with-music.js,sha256=qbavW6gzgRXymXTZL_TuIf98wURHHVprZuv-kSsTSXs,4280932
+twcli/version.py,sha256=RSZc6Ig81cEvoiicC43gNM4HOcKCsnEovgAreR2k6DA,23
+turbowarp_cli-1.0.2.dist-info/METADATA,sha256=x75kBSN68AzsAsvb4VQD0Z3EIw8cCXf5Chf76qs0fvY,2002
+turbowarp_cli-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+turbowarp_cli-1.0.2.dist-info/entry_points.txt,sha256=Jd5Ro-2rrMtLPbUHbIcY8Q2CiNa2mQ6f5hFq5mH9CIU,46
+turbowarp_cli-1.0.2.dist-info/top_level.txt,sha256=EoAMV3knY5gySnXDHKIt15mtqzyNUat45hPpcc7HT0s,6
+turbowarp_cli-1.0.2.dist-info/RECORD,,
