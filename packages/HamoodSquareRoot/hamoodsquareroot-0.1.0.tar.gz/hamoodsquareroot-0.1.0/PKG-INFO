@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: HamoodSquareRoot
+Version: 0.1.0
+Summary: Calculate the square root of a number
+Author: Hamood Ali Albukhaiti
+Author-email: Hamood Ali Albukhaiti <hamoodalbukhity2000@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Hamood Ali Albukhaiti
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        [...]
+        
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# HamoodSquareRoot
+مكتبة لحساب الجذر التربيعي لعدد.
+
+## التثبيت
+```bash
+pip install HamoodSquareRoot
+```
+
+## CMD
+```bash
+hamoodsqrt 16
+# Square root: 4.0
+```
+
+## Python
+```python
+from square_root_lib import sqrt_number
+print(sqrt_number(16))  # 4.0
+```
