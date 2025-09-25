@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: injectionkit
+Version: 0.0.1
+Summary: Dependency Injection framework for Python
+Author-email: Cylix Lee <cylix.lee@outlook.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# InjectionKit
+
+![Status](https://img.shields.io/badge/Status-Work_in_progress-yellow)
+
+Dependency Injection framework for Python.
