@@ -1,0 +1,22 @@
+{
+    "services": {
+        "log": {
+            "fields": {
+                "domain": {
+                    "name": "Dominio"
+                },
+                "entity_id": {
+                    "name": "ID de entidad"
+                },
+                "message": {
+                    "name": "Mensaje"
+                },
+                "name": {
+                    "description": "Nombre personalizado para una entidad, al que se puede hacer referencia mediante el campo 'ID de entidad'.",
+                    "name": "Nombre"
+                }
+            },
+            "name": "Registro"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "services": {
+        "log": {
+            "fields": {
+                "domain": {
+                    "name": "Domeen"
+                },
+                "entity_id": {
+                    "name": "Olemi ID"
+                },
+                "message": {
+                    "name": "S\u00f5num"
+                },
+                "name": {
+                    "description": "Olemi kohandatud nimele saab viidata \"Entity ID\" abil.",
+                    "name": "Nimi"
+                }
+            },
+            "name": "Logikirjed"
+        }
+    }
+}
