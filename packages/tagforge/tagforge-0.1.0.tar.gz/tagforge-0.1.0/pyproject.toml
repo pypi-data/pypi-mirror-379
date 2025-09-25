@@ -1,0 +1,26 @@
+[project]
+name = "tagforge"
+version = "0.1.0"
+description = "An open-source tool that uses LLMs + dspy to automatically generate smart, context-aware tags for blog posts, articles, and other written content"
+authors = [
+  { name = "Matt Struble", email = "4325029+mattstruble@users.noreply.github.com" },
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = "<3.14,>=3.10"
+dependencies = [
+  "pydantic (>=2.11.7,<3.0.0)",
+  "tenacity (>=9.1.2,<10.0.0)",
+  "dspy (>=3.0.3,<4.0.0)",
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+mlflow = "^3.3.2"
+datasets = "^4.0.0"
+huggingface = "^0.0.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
