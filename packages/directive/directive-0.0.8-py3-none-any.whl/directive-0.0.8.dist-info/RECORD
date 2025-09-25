@@ -1,0 +1,15 @@
+directive/__init__.py,sha256=-R9ByHk_BdDiJZJd_xAEG86ViELYzrtcvgK3xsYAWEc,51
+directive/bundles.py,sha256=DXTLTBEGiCEfY6GqcRQsp_TtMSBGX3rKSj9JidB-isA,3287
+directive/cli.py,sha256=SMdPDXabOpHV20AgvRKsDwsQXutEvsXogkf0Ku4jAJI,8290
+directive/release.py,sha256=Jh7zWBD2vx4kW7Qkus_QVe-I9NVkIfNvaMW3J2U8-40,8465
+directive/server.py,sha256=SSzBTRjgvq7eXgrij8aEc2D2peZQzHGBudlOd-ZaNQU,9945
+directive/data/directive/reference/agent_context.md,sha256=PhAIMoNFToE6zgyH8iPxKeYBqSrhEJ_YDAKzxCGiiPE,1677
+directive/data/directive/reference/agent_operating_procedure.md,sha256=gwHkX9ARJHfJDtG_h6nwav_vWKAtVNm3L_oR_ND5wOU,3574
+directive/data/directive/reference/templates/impact_template.md,sha256=qnhFJfHSeuXnJzZF4oBKp9xCsYH0yIMdd378vFSxFgo,272
+directive/data/directive/reference/templates/spec_template.md,sha256=KF747eNHgmP4Lnsk1soHfNrPWjHQtvj_-tVkbuqwQMs,963
+directive/data/directive/reference/templates/tdr_template.md,sha256=J4QlAKzRGqQkjHckBzSl-q_XETxsa2cXK1DXq_4MTlA,2612
+directive-0.0.8.dist-info/METADATA,sha256=4xHmeqXkL3KkWLoyHQP360UZX-4m_xjNXLCz-pijIxc,10547
+directive-0.0.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+directive-0.0.8.dist-info/entry_points.txt,sha256=tFWh_NKETiazcjJIfAYngijPabX40phSyFZl_uUjGVk,92
+directive-0.0.8.dist-info/licenses/LICENSE,sha256=cwiSMMGiM0azGYvmnApwSPpRu0yQZzHLvAF9_eta-GY,1068
+directive-0.0.8.dist-info/RECORD,,
