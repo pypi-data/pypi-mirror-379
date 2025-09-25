@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "chatline"
+version = "0.4.0"
+description = "A pretty command line interface for LLM chat."
+authors = ["Alex Basile <basileaw@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+boto3 = "*"
+aioboto3 = ">=13.0.0"
+httpx = "*"
+rich = "*"
+prompt-toolkit = "*"
+terminaide = ">=0.1.6"
+
+[tool.poetry.group.dev.dependencies]
+fastapi = "*"
+uvicorn = "*"
+requests = ">=2.32.3"
+pytest = "*"
+pytest-asyncio = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
