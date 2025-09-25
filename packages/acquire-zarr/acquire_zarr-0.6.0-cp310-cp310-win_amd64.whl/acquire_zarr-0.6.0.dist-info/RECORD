@@ -1,0 +1,8 @@
+acquire_zarr/__init__.cp310-win_amd64.pyd,sha256=63FjXMEaTfiK7VOWeHbA2CwhE6OKeUtjgiCqqWWL3R0,6846464
+acquire_zarr/__init__.pyi,sha256=kMtY8lVeuHVMunxs484x21mtYRUy0IEqmfAnrNuYNGw,16163
+acquire_zarr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acquire_zarr-0.6.0.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+acquire_zarr-0.6.0.dist-info/METADATA,sha256=Iet6880UhhlRr8M3zUpbvJS5v8G3b1zTSay22jvOAIw,21685
+acquire_zarr-0.6.0.dist-info/WHEEL,sha256=KUuBC6lxAbHCKilKua8R9W_TM71_-9Sg5uEP3uDWcoU,101
+acquire_zarr-0.6.0.dist-info/top_level.txt,sha256=zS6_D1eEaWxLSkNZl5PCEaDm3WePSqjGLlaKQJTx9dA,13
+acquire_zarr-0.6.0.dist-info/RECORD,,
