@@ -1,0 +1,16 @@
+nemorosa/__init__.py,sha256=QCbOmiJd_WPTuBpZAzND5IGyFjy7rtsr4fffCQ5TRVI,411
+nemorosa/api.py,sha256=2Zz7XK4OsPXlfubGBrdRDI5KqBe--1VbN5uY3jqbHc8,19846
+nemorosa/cli.py,sha256=_X18p9xTFpChXzNCXTivaSDNMCe7kyCwZICcZBwSKLU,11720
+nemorosa/config.py,sha256=ixd2rRnku5ydkSyvJkznFjUwQGCvhi3kMCq5Q2fUh1U,12342
+nemorosa/core.py,sha256=g8s4Ar9PXO8Nn0sHsCEAzyAxF6FB57RSNHjguhstAms,43019
+nemorosa/db.py,sha256=jzhvNPFMIRU0qtqG7LD2F_oDzB8r0SEcqojiARAxdws,13021
+nemorosa/filecompare.py,sha256=KDOgI5ptcZO9CqS-Ver1cqAE4cLDtrBjxwh1uVaYt80,9015
+nemorosa/logger.py,sha256=A_81kUQWs93fVt8fCLmfWDuVaYxLhmkzdMBFYnc1iZc,2894
+nemorosa/main.py,sha256=DcrjHgnbSZwEP7ptf98Bj_zmzZyx24ssgsc4SrEDUW8,586
+nemorosa/scheduler.py,sha256=DeuNRFxBZKqmSBdxNOPQJ5R1VeeoI24cuCwfYxJSsuM,8951
+nemorosa/torrent_client.py,sha256=1LTSrg6QYmtetogTm5zdi5TsshhWJYX50ASbV0yFT50,54955
+nemorosa/webserver.py,sha256=1WdUsWnwiXgR-GXj_pCideGvsRVTAl5GfsUQjS1FwiM,11687
+nemorosa-0.1.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+nemorosa-0.1.0.dist-info/entry_points.txt,sha256=Dze_6KCnqM1DOW4hdJqwJyyxTBbH0YY1_kpHiQsKrIQ,44
+nemorosa-0.1.0.dist-info/METADATA,sha256=7VUhsAHiUVsRUZT4bqXDjma5GSEzQQ8poKIaRSHyGsE,5182
+nemorosa-0.1.0.dist-info/RECORD,,
