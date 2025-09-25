@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+StreamTick.egg-info/PKG-INFO
+StreamTick.egg-info/SOURCES.txt
+StreamTick.egg-info/dependency_links.txt
+StreamTick.egg-info/requires.txt
+StreamTick.egg-info/top_level.txt
+streamtick/__init__.py
+streamtick/app.py
+streamtick/arima.py
+streamtick/data_acquisition.py
+streamtick/data_preprocessing.py
+streamtick/ui.py
