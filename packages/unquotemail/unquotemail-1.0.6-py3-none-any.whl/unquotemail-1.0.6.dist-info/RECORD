@@ -1,0 +1,11 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_unquote.py,sha256=Af-ZfHPtDTRNBZwnr6SNXVr34xsBK8-ebk43rwi1Qro,3669
+unquotemail/__init__.py,sha256=8kSGA2hLS_YLc1tcUGSOaVaU3KvETGwS1Wcg_J7yMqA,138
+unquotemail/__version__.py,sha256=fCDDAyG3nMZcE_hvt1RHdxkiFN3DfNSyU_k-rLUDrpE,21
+unquotemail/unquote.py,sha256=b8FhoWUV9In0_HG4N25SmMQxvFJKUKaA_qSoZ4SC430,21193
+unquotemail/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unquotemail-1.0.6.dist-info/licenses/LICENSE,sha256=2CB0cRmh2xG5ljEC39lwTEooEYEwUJ73bB0WemPUmUk,1090
+unquotemail-1.0.6.dist-info/METADATA,sha256=_u5qGCOScd4vZjAvYdk731P1O8g4iPTbZ83NgKTsGXo,7257
+unquotemail-1.0.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+unquotemail-1.0.6.dist-info/top_level.txt,sha256=qFs9jFwZIPGIuAkYJk1Yra_IN4LxzQxa5QfsacnMaH0,18
+unquotemail-1.0.6.dist-info/RECORD,,
