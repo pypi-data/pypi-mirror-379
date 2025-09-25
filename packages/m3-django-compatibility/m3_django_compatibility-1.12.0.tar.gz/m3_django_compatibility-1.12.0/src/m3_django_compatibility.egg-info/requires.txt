@@ -1,0 +1,13 @@
+six<2,>=1.11.0
+django<5.1,>=1.4
+
+[dev]
+fabric3
+tox
+coverage
+isort
+pycodestyle
+pylint
+ipython
+ipdb
+pudb

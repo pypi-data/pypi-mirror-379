@@ -1,0 +1,3 @@
+graft src/m3_django_compatibility
+include README.md
+global-exclude *.pyc

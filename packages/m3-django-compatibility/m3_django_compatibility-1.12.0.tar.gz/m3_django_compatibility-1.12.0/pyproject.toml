@@ -1,0 +1,78 @@
+[build-system]
+requires = [
+    'packaging<25',
+    'wheel<0.46',
+    'setuptools<78',
+    'setuptools-git-versioning>=2,<3',
+]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'm3-django-compatibility'
+description = 'Библиотека обеспечения совместимости с разными версиями Django.'
+license-files = ['LICENSE']
+authors = [
+  {name = 'БАРС Груп', email = 'dev@bars-open.ru'},
+]
+readme = 'README.md'
+requires-python = '>=3.5'
+dependencies = [
+    'six>=1.11.0,<2',
+    'django>=1.4,<5.1',
+]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Framework :: Django :: 1.11',
+    'Framework :: Django :: 2.0',
+    'Framework :: Django :: 2.1',
+    'Framework :: Django :: 2.2',
+    'Framework :: Django :: 3.0',
+    'Framework :: Django :: 3.1',
+    'Framework :: Django :: 3.2',
+    'Framework :: Django :: 4.0',
+    'Framework :: Django :: 4.1',
+    'Framework :: Django :: 4.2',
+    'Framework :: Django :: 5.0',
+    'Intended Audience :: Developers',
+    'Natural Language :: Russian',
+    'Operating System :: OS Independent',
+    'Topic :: Software Development',
+]
+dynamic = ['version']
+
+[project.urls]
+Homepage = 'https://stash.bars-open.ru/projects/M3/repos/m3-django-compatibility'
+Repository = 'https://stash.bars-open.ru/scm/m3/m3-django-compatibility.git'
+
+[project.optional-dependencies]
+dev = [
+    'fabric3',
+    'tox',
+    'coverage',
+    'isort',
+    'pycodestyle',
+    'pylint',
+    'ipython',
+    'ipdb',
+    'pudb',
+]
+
+[tool.setuptools.packages.find]
+where = ['src']
+
+[tool.setuptools.exclude-package-data]
+m3_django_compatibility = ['tests', 'tests.*']
+
+[tool.setuptools-git-versioning]
+enabled = true
