@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+gophr_bridge/__init__.py
+gophr_bridge/client.py
+gophr_bridge/py.typed
+gophr_bridge_sdk.egg-info/PKG-INFO
+gophr_bridge_sdk.egg-info/SOURCES.txt
+gophr_bridge_sdk.egg-info/dependency_links.txt
+gophr_bridge_sdk.egg-info/requires.txt
+gophr_bridge_sdk.egg-info/top_level.txt
+tests/test_client.py

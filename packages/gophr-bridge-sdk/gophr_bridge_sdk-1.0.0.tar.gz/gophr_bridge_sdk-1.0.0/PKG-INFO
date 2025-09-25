@@ -1,0 +1,523 @@
+Metadata-Version: 2.4
+Name: gophr-bridge-sdk
+Version: 1.0.0
+Summary: A simple SDK for interacting with the Gophr Bridge API
+Home-page: https://bitbucket.org/gophrapp/gophr-bridge-py
+Author: Gophr Inc.
+Author-email: "Gophr Inc." <engineering@gophr.com>
+License: Proprietary
+Project-URL: Homepage, https://bitbucket.org/gophrapp/gophr-bridge-py
+Project-URL: Repository, https://bitbucket.org/gophrapp/gophr-bridge-py.git
+Project-URL: Bug Tracker, https://bitbucket.org/gophrapp/gophr-bridge-py/issues
+Project-URL: Documentation, https://bitbucket.org/gophrapp/gophr-bridge-py#readme
+Keywords: gophr,delivery,logistics,api,bridge,shipping,courier
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Office/Business
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.0.0; extra == "dev"
+Requires-Dist: responses>=0.18.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=0.910; extra == "dev"
+Requires-Dist: python-dotenv>=0.19.0; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Gophr Bridge SDK for Python
+
+A simple, lightweight Python SDK for interacting with the Gophr Bridge API. This SDK provides easy-to-use methods for getting delivery quotes and creating shipments.
+
+> **⚠️ CUSTOMER-ONLY SOFTWARE**: This SDK is proprietary software available exclusively to Gophr customers. Valid API credentials and an active Gophr customer account are required. [Contact sales](mailto:sales@gophr.com) to become a customer.
+
+## Installation
+
+Install the package from PyPI:
+
+```bash
+pip install gophr-bridge-sdk
+```
+
+### Getting Started Quickly
+
+```bash
+# 1. Install the SDK
+pip install gophr-bridge-sdk
+
+# 2. Create a basic example file
+cat > gophr_test.py << 'EOF'
+from gophr_bridge import GophrBridge
+
+gophr = GophrBridge({
+    'client_id': 'your_client_id',
+    'client_secret': 'your_client_secret'
+    # testing=True is the default (development API)
+})
+
+def test():
+    try:
+        quote = gophr.get_quote({
+            'first_name': 'John', 'last_name': 'Doe', 'phone': '5555551234',
+            'address_1': '123 Main St', 'city': 'New York', 'state': 'NY', 'zip': '10001',
+            'items': [{'quantity': 1, 'name': 'Test Item', 'weight': 1}]
+        })
+        print('Standard fee:', gophr.get_standard_quote_fee(quote))
+    except Exception as error:
+        print('Error:', str(error))
+
+if __name__ == '__main__':
+    test()
+EOF
+
+# 3. Add your credentials and run
+python gophr_test.py
+```
+
+## Quick Start
+
+### 1. Environment Setup
+
+Create a `.env` file in your project root with your Gophr Bridge API credentials:
+
+```env
+GOPHR_CLIENT_ID=your_client_id_here
+GOPHR_CLIENT_SECRET=your_client_secret_here
+GOPHR_TESTING=true
+```
+
+### 2. Basic Usage
+
+```python
+from gophr_bridge import GophrBridge
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
+
+# Initialize the SDK
+gophr = GophrBridge({
+    'client_id': os.getenv('GOPHR_CLIENT_ID'),
+    'client_secret': os.getenv('GOPHR_CLIENT_SECRET'),
+    'testing': os.getenv('GOPHR_TESTING') == 'true'
+})
+
+# Get a quote
+async def get_quote():
+    try:
+        quote = gophr.get_quote({
+            'first_name': 'John',
+            'last_name': 'Doe',
+            'phone': '5555551234',
+            'email': 'john@example.com',
+            'address_1': '123 Main St',
+            'city': 'New York',
+            'state': 'NY',
+            'zip': '10001',
+            'items': [{
+                'quantity': 1,
+                'name': 'Important Document',
+                'weight': 1
+            }]
+        })
+        
+        print('Quote received:', quote)
+        
+        # Use getter methods to extract specific values
+        standard_quote_id = gophr.get_standard_quote_id(quote)
+        return quote
+    except Exception as error:
+        GophrBridge.log_error(error)
+
+# Create a shipment
+def create_shipment(quote_id):
+    try:
+        shipment = gophr.create_shipment({
+            'quote_id': quote_id,
+            'drop_off_instructions': 'Ring doorbell twice'
+        })
+        return shipment
+    except Exception as error:
+        GophrBridge.log_error(error)
+```
+
+## API Reference
+
+### Constructor
+
+```python
+GophrBridge(config)
+```
+
+**Parameters:**
+- `config['client_id']` (str, required) - Your Gophr client ID
+- `config['client_secret']` (str, required) - Your Gophr client secret  
+- `config['testing']` (bool, optional) - Use development API when `True`, production when `False` (default: `True`)
+
+**API Endpoints:**
+- Development: `https://dev-api-bridge.gophr.app` (default)
+- Production: `https://api-bridge.gophr.app`
+
+### Methods
+
+#### `get_quote(quote_data)`
+
+Get a delivery quote.
+
+**Parameters:**
+- `quote_data` (dict) - Quote request data
+  - `first_name` (str, required) - Customer first name
+  - `last_name` (str, required) - Customer last name
+  - `phone` (str, required) - Customer phone number
+  - `email` (str, optional) - Customer email
+  - `address_1` (str, required) - Delivery address line 1
+  - `address_2` (str, optional) - Delivery address line 2
+  - `city` (str, required) - Delivery city
+  - `state` (str, required) - Delivery state
+  - `zip` (str, required) - Delivery ZIP code
+  - `country` (str, optional, default: 'US') - Delivery country
+  - `pick_up_instructions` (str, optional) - Pickup instructions
+  - `drop_off_instructions` (str, optional) - Drop-off instructions
+  - `scheduled_for` (str|None, optional) - Scheduled delivery date (YYYY-MM-DD format)
+  - `items` (list, required) - Array of items to be delivered
+
+**Returns:** Dictionary with quote response
+
+**Raises:** `GophrBridgeError` if the API request fails
+
+#### `create_shipment(shipment_data)`
+
+Create a shipment from a quote.
+
+**Parameters:**
+- `shipment_data` (dict) - Shipment creation data
+  - `quote_id` (str, required) - Quote ID from previous quote request
+  - `drop_off_instructions` (str, optional) - Drop-off instructions
+
+**Returns:** Dictionary with shipment response
+
+**Raises:** `GophrBridgeError` if the API request fails
+
+#### `build_quote_data(customer_info, address_info, items, options)`
+
+Helper method to build quote data with a more structured approach.
+
+**Parameters:**
+- `customer_info` (dict) - Customer information
+  - `first_name` (str)
+  - `last_name` (str)
+  - `phone` (str)
+  - `email` (str, optional)
+- `address_info` (dict) - Address information
+  - `address_1` (str)
+  - `address_2` (str, optional)
+  - `city` (str)
+  - `state` (str)
+  - `zip` (str)
+  - `country` (str, optional)
+- `items` (list) - Items array
+- `options` (dict, optional) - Additional options
+  - `pickup_instructions` (str)
+  - `dropoff_instructions` (str)
+  - `scheduled_for` (str|None)
+
+#### Static Methods
+
+#### `GophrBridge.log_error(error)`
+
+Utility method to log API errors in a formatted way.
+
+### Getter Methods
+
+The SDK provides convenient instance methods to extract specific values from API responses:
+
+#### Quote Response Getters
+
+- `gophr.get_standard_quote_id(quote_response)` - Extract standard quote ID
+- `gophr.get_expedited_quote_id(quote_response)` - Extract expedited quote ID  
+- `gophr.get_standard_quote_fee(quote_response)` - Extract standard quote fee
+- `gophr.get_expedited_quote_fee(quote_response)` - Extract expedited quote fee
+- `gophr.get_quote_summary(quote_response)` - Get formatted quote summary
+
+#### Shipment Response Getters
+
+- `gophr.get_delivery_id(shipment_response)` - Extract delivery ID
+- `gophr.get_delivery_status(shipment_response)` - Extract delivery status
+- `gophr.get_shipping_fee(shipment_response)` - Extract shipping fee
+- `gophr.get_vehicle_type(shipment_response)` - Extract vehicle type
+- `gophr.get_distance(shipment_response)` - Extract distance in miles
+- `gophr.get_shipment_weight(shipment_response)` - Extract shipment weight
+- `gophr.get_shipment_items(shipment_response)` - Extract items array
+- `gophr.get_pickup_address(shipment_response)` - Extract pickup address object
+- `gophr.get_dropoff_address(shipment_response)` - Extract drop-off address object
+- `gophr.get_scheduled_for(shipment_response)` - Extract scheduled delivery date
+- `gophr.is_expedited(shipment_response)` - Check if shipment is expedited
+- `gophr.get_shipment_summary(shipment_response)` - Get formatted shipment summary
+
+#### Payload Getters
+
+- `gophr.get_quote_payload(quote_response)` - Extract full quote payload
+- `gophr.get_shipment_payload(shipment_response)` - Extract full shipment payload
+
+#### Utility Getters
+
+- `gophr.is_successful(response)` - Check if API response was successful
+
+## Advanced Usage
+
+### Using the Helper Method
+
+```python
+customer_info = {
+    'first_name': 'Jane',
+    'last_name': 'Smith', 
+    'phone': '5555551234',
+    'email': 'jane@example.com'
+}
+
+address_info = {
+    'address_1': '123 Main St',
+    'address_2': 'Apt 4B',
+    'city': 'New York',
+    'state': 'NY', 
+    'zip': '10001'
+}
+
+items = [{
+    'quantity': 2,
+    'name': 'Books',
+    'sku': 'BOOK-001',
+    'weight': 5
+}]
+
+options = {
+    'pickup_instructions': 'Call when arriving',
+    'dropoff_instructions': 'Ring apartment buzzer',
+    'scheduled_for': '2025-09-25'
+}
+
+quote_data = gophr.build_quote_data(customer_info, address_info, items, options)
+quote = gophr.get_quote(quote_data)
+
+# Extract specific values using getter methods
+standard_quote_id = gophr.get_standard_quote_id(quote)
+standard_fee = gophr.get_standard_quote_fee(quote)
+print(f"Standard quote: ${standard_fee} (ID: {standard_quote_id})")
+```
+
+### Using Getter Methods
+
+Extract specific values easily from API responses:
+
+```python
+# Get a quote
+quote = gophr.get_quote(quote_data)
+
+# Extract specific values using getters
+standard_quote_id = gophr.get_standard_quote_id(quote)
+standard_fee = gophr.get_standard_quote_fee(quote)
+expedited_fee = gophr.get_expedited_quote_fee(quote)
+
+print(f"Standard quote: ${standard_fee} (ID: {standard_quote_id})")
+print(f"Expedited quote: ${expedited_fee}")
+
+# Or get a formatted summary
+summary = gophr.get_quote_summary(quote)
+print('Quote Summary:', summary)
+
+# Create shipment using extracted quote ID
+shipment = gophr.create_shipment({
+    'quote_id': standard_quote_id,
+    'drop_off_instructions': 'Updated instructions'
+})
+
+# Extract shipment information
+delivery_id = gophr.get_delivery_id(shipment)
+status = gophr.get_delivery_status(shipment)
+fee = gophr.get_shipping_fee(shipment)
+
+print(f"Shipment {delivery_id} created with status: {status}, fee: ${fee}")
+
+# Access detailed shipment information
+pickup_address = gophr.get_pickup_address(shipment)
+dropoff_address = gophr.get_dropoff_address(shipment)
+items = gophr.get_shipment_items(shipment)
+weight = gophr.get_shipment_weight(shipment)
+is_expedited = gophr.is_expedited(shipment)
+
+print('Pickup:', pickup_address)
+print('Drop-off:', dropoff_address)
+print('Items:', items)
+print(f'Weight: {weight}lbs, Expedited: {is_expedited}')
+
+# Or get the full payload for complete access
+full_payload = gophr.get_shipment_payload(shipment)
+print('Full shipment payload:', full_payload)
+```
+
+### Error Handling
+
+The SDK provides enhanced error handling with the `GophrBridgeError` exception:
+
+```python
+from gophr_bridge import GophrBridge, GophrBridgeError
+
+try:
+    quote = gophr.get_quote(quote_data)
+except GophrBridgeError as error:
+    # Use the built-in error logger
+    GophrBridge.log_error(error)
+    
+    # Or handle manually
+    if error.status_code == 400:
+        print('Bad request:', error.details)
+    elif error.is_network_error:
+        print('Network issue:', error.message)
+except Exception as error:
+    print('Unexpected error:', str(error))
+```
+
+## Examples
+
+### Running the Example
+
+After installing the package, you can run the complete example:
+
+```bash
+# Copy the example to your project
+cp -r $(python -c "import gophr_bridge; print(gophr_bridge.__path__[0])")/../examples .
+cp examples/.env.example .env
+
+# Edit .env with your actual credentials
+# Then run the example
+python examples/basic_example.py
+```
+
+### Example File
+
+The package includes a comprehensive example file:
+- [examples/basic_example.py](./examples/basic_example.py) - Complete SDK demonstration including quotes, shipments, and all getter methods
+
+This single example demonstrates:
+- Getting delivery quotes
+- Creating shipments  
+- Using all getter methods for data extraction
+- Accessing address information and coordinates
+- Using helper methods for structured data
+- Error handling best practices
+- Advanced usage patterns
+
+## Development
+
+### Setting up for Development
+
+```bash
+# Clone the repository
+git clone https://bitbucket.org/gophrapp/gophr-bridge-py.git
+cd gophr-bridge-py
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install in development mode
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Run tests with coverage
+pytest --cov=gophr_bridge --cov-report=html
+
+# Format code
+black gophr_bridge tests examples
+
+# Type checking
+mypy gophr_bridge
+
+# Lint code
+flake8 gophr_bridge tests examples
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage report
+pytest --cov=gophr_bridge --cov-report=term-missing
+
+# Run specific test file
+pytest tests/test_client.py
+
+# Run with verbose output
+pytest -v
+```
+
+## Requirements
+
+- Python 3.8 or higher
+- Valid Gophr Bridge API credentials
+
+## Dependencies
+
+- `requests` - HTTP client for API requests
+
+## Optional Dependencies (Development)
+
+- `pytest` - Testing framework
+- `pytest-cov` - Coverage plugin
+- `pytest-mock` - Mocking support
+- `responses` - HTTP request mocking
+- `black` - Code formatter
+- `flake8` - Linter
+- `mypy` - Type checker
+- `python-dotenv` - Environment variable management
+
+## License
+
+This SDK is proprietary software licensed exclusively to Gophr customers. 
+
+**CUSTOMER REQUIREMENT**: Usage of this SDK requires:
+- A valid Gophr customer account in good standing
+- Valid API credentials issued by Gophr
+- Compliance with Gophr's Terms of Service
+
+For sales inquiries and to become a Gophr customer, contact: sales@gophr.com
+
+See [LICENSE](LICENSE) for full terms and conditions.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Run the test suite
+6. Submit a pull request
+
+## Support
+
+For issues and questions:
+- Repository: https://bitbucket.org/gophrapp/gophr-bridge-py
+- Issues: https://bitbucket.org/gophrapp/gophr-bridge-py/issues
+- Email: engineering@gophr.com
