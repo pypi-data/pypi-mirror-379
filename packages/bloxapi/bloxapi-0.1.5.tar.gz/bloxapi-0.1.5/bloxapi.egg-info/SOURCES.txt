@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bloxapi/__init__.py
+bloxapi/bloxapi.py
+bloxapi.egg-info/PKG-INFO
+bloxapi.egg-info/SOURCES.txt
+bloxapi.egg-info/dependency_links.txt
+bloxapi.egg-info/requires.txt
+bloxapi.egg-info/top_level.txt
