@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/postal_regex/__init__.py
+src/postal_regex/validator.py
+src/postal_regex.egg-info/PKG-INFO
+src/postal_regex.egg-info/SOURCES.txt
+src/postal_regex.egg-info/dependency_links.txt
+src/postal_regex.egg-info/top_level.txt
+src/postal_regex/data/postal_codes.json
+src/postal_regex/data/schema.json
+tests/test_schema.py
+tests/test_validator.py
