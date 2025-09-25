@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: pysparks
+Version: 0.1.1
+Summary: Software for Polymerization and Reaction Kinetics Simulations
+Author-email: Devon Callan <devoncallan@ucsb.edu>
+License: MIT
+Project-URL: Homepage, https://github.com/devoncallan/SPaRKS
+Project-URL: Repository, https://github.com/devoncallan/SPaRKS
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: pyyaml
+Requires-Dist: runkmc==0.1.1
+Requires-Dist: jupyter
+Requires-Dist: notebook
+Requires-Dist: ipykernel
+Dynamic: license-file
+
+# SPARKS - Software for Polymerization and Reaction Kinetics Simulations
+
+**SPaRKS** is a highly-modular framework for deterministic and stochastic simulations of polymerization and general reaction kinetics. It provides a unified interface to define and compare models and simulators, and parameter estimation. Written in Python.
+
+[![PyPI](https://badge.fury.io/py/pysparks.svg)](https://badge.fury.io/py/pysparks)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17172057.svg)](https://doi.org/10.5281/zenodo.17172057)
+[![Python](https://img.shields.io/badge/Python-%3E%3D3.10-blue?logo=python&logoColor=yellow)](https://python.org)
+
+
+## Quick install
+The easiest way to install **SPaRKS** is via pip:
+
+```shell
+pip3 install pysparks
+```
+
+We recommend setting a python virtual environment **before** installing the package.
+```shell
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+## Examples
+
+There are jupyter notebooks in the [docs/notebooks](docs/notebooks/) directory. More relevant examples can be found at the supporting data for the manuscript below. This can be found at [this repository](https://github.com/devoncallan/ReversibleCopolymerizations): [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17172075.svg)](https://doi.org/10.5281/zenodo.17172075)
+
+## How to Cite
+
+**Citeable DOI for this version of SPaRKS:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17172057.svg)](https://doi.org/10.5281/zenodo.17172057)
+
+If you use SPaRKS in your project, please cite
+* Callan, D. H., and Bates, C. M. Efficient Deterministic Modeling of Reversile Copolymerizations, *Macromolecules*, **2025**, [doi:10.1021/acs.macromol.5c01421](https://doi.org/10.1021/acs.macromol.5c01421)

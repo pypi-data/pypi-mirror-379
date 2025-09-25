@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+matplotlib
+tqdm
+pyyaml
+runkmc==0.1.1
+jupyter
+notebook
+ipykernel
