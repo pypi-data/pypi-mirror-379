@@ -1,0 +1,2 @@
+[console_scripts]
+scrapersage = ScraperSage.cli:main

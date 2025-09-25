@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+ScraperSage/__init__.py
+ScraperSage/scraper_sage.py
+ScraperSage.egg-info/PKG-INFO
+ScraperSage.egg-info/SOURCES.txt
+ScraperSage.egg-info/dependency_links.txt
+ScraperSage.egg-info/entry_points.txt
+ScraperSage.egg-info/not-zip-safe
+ScraperSage.egg-info/requires.txt
+ScraperSage.egg-info/top_level.txt
