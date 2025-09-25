@@ -1,0 +1,10 @@
+dissect/ffs/__init__.py,sha256=H1FVg-_wLYxStXPbi0kcHQRI4GanM7I1r3s_GUmT9e4,265
+dissect/ffs/c_ffs.py,sha256=n89YfcmSfFDTROfZSKZthdWp8I4HtxwiK4O8fwEvGlw,24567
+dissect/ffs/exceptions.py,sha256=rVL-M01CBpk74d8VeeeqQuwD5P1WHluvNbAnj5D8BBw,263
+dissect/ffs/ffs.py,sha256=hLrNrU4V1q5OXQDwK5n-tm9wWIck_VpAqnAD1vCNDHg,14169
+dissect_ffs-3.12.dev1.dist-info/licenses/COPYRIGHT,sha256=Y6e955RHURKDsgfjHDf-Z6l_8ZuGMg_OG6mRKAShXQE,298
+dissect_ffs-3.12.dev1.dist-info/licenses/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+dissect_ffs-3.12.dev1.dist-info/METADATA,sha256=6F7PN_u3kO7b66j3wWnlaMCBqKGmib0V076s-RsR3ok,3201
+dissect_ffs-3.12.dev1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dissect_ffs-3.12.dev1.dist-info/top_level.txt,sha256=Mn-CQzEYsAbkxrUI0TnplHuXnGVKzxpDw_po_sXpvv4,8
+dissect_ffs-3.12.dev1.dist-info/RECORD,,
