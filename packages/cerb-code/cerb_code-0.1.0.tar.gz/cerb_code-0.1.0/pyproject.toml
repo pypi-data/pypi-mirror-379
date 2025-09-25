@@ -1,0 +1,24 @@
+[project]
+name = "cerb-code"
+version = "0.1.0"
+description = "Terminal UI for managing multiple Claude sessions with tmux"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "textual>=5.3.0",
+]
+
+[project.scripts]
+cerb = "cerb_launcher:main"
+cerb-sidebar = "kerberos:main"
+
+[tool.setuptools]
+packages = ["lib"]
+py-modules = ["kerberos", "cerb_launcher"]
+
+[tool.setuptools.package-data]
+"*" = ["*.sh"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
