@@ -1,0 +1,10 @@
+intake-esgf
+ipykernel
+ipywidgets
+pandas
+xarray
+xcdat
+tabulate
+
+[dev]
+pytest
