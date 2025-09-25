@@ -1,0 +1,23 @@
+*~
+*.pyc
+/dist
+*.egg-info
+pip-wheel-metadata
+.pytest_cache
+*__pycache__
+.venv
+venv/
+
+# pyct
+.doit.db
+.tox
+
+# autover
+*/.version
+
+build/
+pyct/_version.py
+
+# pixi
+.pixi
+pixi.lock
