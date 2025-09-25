@@ -1,0 +1,83 @@
+LLM Model Comparison Results
+==================================================
+
+Model: GPT-5 Mini
+Provider: openai
+Tier: Premium
+Success: True
+Changes Applied: 11
+Quality Score: 41
+Estimated Cost: $0.004900
+Cost per Change: $0.0004
+Quality per Dollar: 8367.35
+------------------------------
+Model: GPT-5 Nano
+Provider: openai
+Tier: Cost-Effective
+Success: True
+Changes Applied: 11
+Quality Score: 39
+Estimated Cost: $0.000980
+Cost per Change: $0.0001
+Quality per Dollar: 39795.92
+------------------------------
+Model: GPT-4.1 Mini
+Provider: openai
+Tier: Alternative
+Success: True
+Changes Applied: 11
+Quality Score: 41
+Estimated Cost: $0.004320
+Cost per Change: $0.0004
+Quality per Dollar: 9490.74
+------------------------------
+Model: GPT-4.1 Nano
+Provider: openai
+Tier: Alternative
+Success: True
+Changes Applied: 11
+Quality Score: 46
+Estimated Cost: $0.001080
+Cost per Change: $0.0001
+Quality per Dollar: 42592.59
+------------------------------
+Model: Claude Opus 4.1
+Provider: anthropic
+Tier: Premium
+Success: True
+Changes Applied: 11
+Quality Score: 41
+Estimated Cost: $0.195000
+Cost per Change: $0.0177
+Quality per Dollar: 210.26
+------------------------------
+Model: Claude Sonnet 4
+Provider: anthropic
+Tier: High Performance
+Success: True
+Changes Applied: 11
+Quality Score: 41
+Estimated Cost: $0.039000
+Cost per Change: $0.0035
+Quality per Dollar: 1051.28
+------------------------------
+Model: Claude Haiku 3.5
+Provider: anthropic
+Tier: Fast
+Success: True
+Changes Applied: 11
+Quality Score: 67
+Estimated Cost: $0.010400
+Cost per Change: $0.0009
+Quality per Dollar: 6442.31
+------------------------------
+Model: Claude Haiku 3
+Provider: anthropic
+Tier: Budget
+Success: True
+Changes Applied: 11
+Quality Score: 41
+Estimated Cost: $0.003250
+Cost per Change: $0.0003
+Quality per Dollar: 12615.38
+------------------------------

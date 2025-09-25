@@ -1,0 +1,300 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dococtopy"]
+
+[tool.hatch.version]
+path = "src/dococtopy/_version.py"
+
+[project]
+name = "dococtopy"
+dynamic = ["version"]
+description = "A language-agnostic docstyle compliance & remediation tool"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Michael", email = "your-email@example.com" }]
+maintainers = [{ name = "Michael", email = "your-email@example.com" }]
+keywords = ["docstring", "documentation", "linting", "compliance", "llm", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Markup",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "ast-tools>=0.1.8",
+    "docstring-parser>=0.17.0",
+    "pathspec>=0.12.1",
+    "pydantic>=2.11.7",
+    "rich>=14.1.0",
+    "typer>=0.16.1",
+    "tomli>=2.0.0; python_version < '3.11'",
+    "tomli-w>=1.0.0",
+]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.66.0", "openai>=1.107.0", "dspy-ai>=3.0.3"]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.7.5",
+    "black>=25.1.0",
+    "hypothesis>=6.138.15",
+    "isort>=6.0.1",
+    "mypy>=1.17.1",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+    "pytest-xdist>=3.8.0",
+    "radon>=6.0.1",
+    "taskipy>=1.12.0",
+    "pre-commit>=3.0.0",
+    "vulture>=2.10",
+    "dspy-ai>=3.0.3",
+]
+
+[project.scripts]
+dococtopy = "dococtopy.cli.main:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--cov=src/dococtopy",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--strict-markers",
+    "-v",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*", "*/playground/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["dococtopy"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false       # Relaxed for initial release
+disallow_incomplete_defs = false    # Relaxed for initial release
+check_untyped_defs = true
+disallow_untyped_decorators = false # Relaxed for initial release
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = false         # Disabled for initial release
+warn_no_return = true
+warn_unreachable = false            # Disabled for initial release
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = ["docstring_parser.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["dspy.*", "tomllib", "tomli"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["dococtopy.remediation.*"]
+ignore_errors = true
+
+[tool.bandit]
+exclude_dirs = ["tests", "build", "dist"]
+skips = [
+    "B101",
+    "B601",
+    "B110",
+    "B112",
+] # Skip assert_used, shell_injection, try_except_pass, try_except_continue
+
+[tool.vulture]
+exclude = ["tests/", "build/", "dist/"]
+ignore_decorators = [
+    "@app.command",
+    "@app.callback",
+    "@dataclass",
+    "@staticmethod",
+    "@classmethod",
+    "@property",
+]
+ignore_names = [
+    "_*",
+    "test_*",
+    "level_default",
+    "error_count",
+    "warning_count",
+    "files_noncompliant",
+    "has_errors",
+    "get_changes_for_file",
+    "get_changes_for_symbol",
+    "has_changes",
+    "get_changes",
+    "clear_changes",
+    "get_docstring_base_indent",
+    "is_docstring_indentation_consistent",
+    "get_default_config",
+    "get_recommended_models",
+    "get_rule",
+    "api_base",
+]
+min_confidence = 60
+
+[tool.radon]
+exclude = ["tests/", "build/", "dist/"]
+ignore = ["_*", "test_*"]
+min = "B"                               # Minimum grade to show (A-F scale)
+max = "F"                               # Maximum grade to show
+no_assert = true
+show_complexity = true
+show_closure = true
+average = true
+sort = "SCORE"
+
+[tool.taskipy.tasks]
+# Linting tasks
+lint = "task lint:black && task lint:isort && task lint:mypy && task lint:bandit && task lint:vulture && task lint:radon"
+"lint:black" = "black --check src/ tests/"
+"lint:isort" = "isort --check-only src/ tests/"
+"lint:mypy" = "mypy src/"
+"lint:bandit" = "bandit -r src/ -f json -o bandit-report.json || true"
+"lint:vulture" = "vulture src/ --min-confidence 60"
+"lint:radon" = "radon cc src/ --min C --show-complexity --show-closure --average"
+"complexity:report" = "radon cc src/ --min A --show-complexity --show-closure --average --json -o complexity-report.json"
+"complexity:high" = "radon cc src/ --min D --show-complexity --show-closure"
+
+# Formatting tasks
+format = "task format:black && task format:isort"
+"format:black" = "black src/ tests/"
+"format:isort" = "isort src/ tests/"
+
+# Testing tasks
+test = "pytest tests/ -v"
+"test:cov" = "pytest --cov=src/dococtopy --cov-report=term-missing --cov-report=html tests/"
+"test:fast" = "pytest tests/ -v --maxfail=1"
+
+# Version management tasks
+# DocOctopy uses a centralized version management system
+# Version is defined only in src/dococtopy/_version.py
+# Use these commands to manage version consistency:
+#   uv run task version:show           # Show current version
+#   uv run task version:bump:patch     # Bump patch version (0.2.1 → 0.2.2)
+#   uv run task version:bump:minor     # Bump minor version (0.2.1 → 0.3.0)
+#   uv run task version:bump:major     # Bump major version (0.2.1 → 1.0.0)
+#   uv run task version:set 1.0.0      # Set specific version
+"version:show" = "python scripts/manage_version.py show"
+"version:bump:patch" = "python scripts/manage_version.py bump --patch"
+"version:bump:minor" = "python scripts/manage_version.py bump --minor"
+"version:bump:major" = "python scripts/manage_version.py bump --major"
+"version:set" = "python scripts/manage_version.py set"
+"test:unit" = "pytest tests/unit/ -v"
+"test:integration" = "pytest tests/integration/ -v"
+
+# Build and publish tasks
+build = "uv build -o dist"
+check = "uv tool run twine check dist/*"
+publish = "uv tool run twine upload dist/*"
+
+# Development tasks
+dev = "task format && task lint && task test"
+clean = "rm -rf dist/ build/ *.egg-info/ .pytest_cache/ .coverage htmlcov/ .mypy_cache/"
+install = "uv sync --dev"
+"install:llm" = "uv sync --dev --extra llm"
+
+# LLM environment tasks
+"llm:setup" = "uv sync --dev --extra llm && echo 'LLM environment ready!'"
+"llm:test" = "uv run --active python -c 'import dspy; print(\"DSPy available:\", dspy is not None)'"
+"llm:clean" = "uv sync --dev && echo 'LLM dependencies removed'"
+
+# CI/CD tasks
+ci = "task lint && task test:cov"
+pre-commit = "task format && task lint && task test:fast"
+"pre-commit:install" = "pre-commit install"
+"pre-commit:run" = "pre-commit run --all-files"
+"pre-commit:update" = "pre-commit autoupdate"
+
+
+[tool.hatch.envs.default]
+dependencies = ["coverage[toml]>=6.5", "pytest>=6.0", "pytest-cov>=4.0"]
+
+[tool.docguard]
+exclude = [
+    "**/.venv/**",
+    "**/build/**",
+    "**/node_modules/**",
+    "**/docs/model-comparison/**", # Protect model comparison results
+]
+
+[tool.docguard.rules]
+DG101 = "error"   # Missing docstrings
+DG201 = "error"   # Google style parse errors
+DG202 = "error"   # Missing parameters
+DG203 = "error"   # Extra parameters
+DG204 = "warning" # Returns section issues
+DG205 = "info"    # Raises validation
+DG301 = "warning" # Summary style
+DG302 = "warning" # Blank line after summary
+DG211 = "info"    # Yields section validation
+DG212 = "info"    # Attributes section validation
+DG213 = "info"    # Examples section validation
+DG214 = "info"    # Note section validation
+DG215 = "info"    # Private method docstring recommendation
+DG216 = "info"    # Dunder method docstring recommendation
+DG303 = "warning" # Content quality validation
+DG304 = "info"    # Docstring delimiter style
+DG401 = "warning" # Test function docstring style
+DG402 = "warning" # Public API function documentation
+DG403 = "warning" # Exception documentation completeness
+
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/dococtopy {args:tests}"
+cov-report = "coverage report"
+cov-html = "coverage html"
+cov-lcov = "coverage lcov"
+cov-json = "coverage json"
