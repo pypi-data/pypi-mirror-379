@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: jumpstarter-driver-http
+Version: 0.7.0
+Summary: Exporter HTTP service driver
+Project-URL: Homepage, https://jumpstarter.dev
+Project-URL: source_archive, https://github.com/jumpstarter-dev/repo/archive/b96037014dcf5254108ad14b2016b56e95c07fc5.zip
+Author-email: Benny Zlotnik <bzlotnik@redhat.com>
+License-Expression: Apache-2.0
+Requires-Python: >=3.11
+Requires-Dist: anyio>=4.10.0
+Requires-Dist: jumpstarter-driver-composite==0.7.0
+Requires-Dist: jumpstarter-driver-opendal==0.7.0
+Requires-Dist: jumpstarter==0.7.0
+Requires-Dist: yarl>=1.18.3
+Description-Content-Type: text/markdown
+
+# HTTP driver
+
+`jumpstarter-driver-http` provides functionality for HTTP communication.
+
+## Installation
+
+```{code-block} console
+:substitutions:
+$ pip3 install --extra-index-url {{index_url}} jumpstarter-driver-http
+```
+
+## Configuration
+
+Example configuration:
+
+```yaml
+export:
+  http:
+    type: jumpstarter_driver_http.driver.HttpServer
+    config:
+      # Add required config parameters here
+```
+
+## API Reference
+
+Add API documentation here.
