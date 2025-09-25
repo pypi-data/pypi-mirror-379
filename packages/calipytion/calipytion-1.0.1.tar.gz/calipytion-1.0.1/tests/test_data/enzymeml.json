@@ -1,0 +1,424 @@
+{
+    "@context": {
+        "enzml": "http://www.enzymeml.org/v2/",
+        "OBO": "http://purl.obolibrary.org/obo/",
+        "schema": "https://schema.org/",
+        "name": "schema:title",
+        "created": "schema:dateCreated",
+        "modified": "schema:dateModified",
+        "creators": "schema:creator",
+        "references": {
+            "@id": "schema:citation",
+            "@type": "@id"
+        }
+    },
+    "@id": "enzml:EnzymeMLDocument/16401375-019e-4de9-91fd-fbb3b2eeec4c",
+    "@type": [
+        "enzml:EnzymeMLDocument"
+    ],
+    "name": "Test Document",
+    "version": "2",
+    "description": "Test document for verifying the conversion of EnzymeML to Calipytion",
+    "creators": [],
+    "vessels": [],
+    "proteins": [],
+    "complexes": [],
+    "small_molecules": [
+        {
+            "@context": {
+                "enzml": "http://www.enzymeml.org/v2/",
+                "OBO": "http://purl.obolibrary.org/obo/",
+                "schema": "https://schema.org/",
+                "id": {
+                    "@id": "schema:identifier",
+                    "@type": "@id"
+                },
+                "name": "schema:name",
+                "vessel_id": {
+                    "@id": "schema:identifier",
+                    "@type": "@id"
+                },
+                "references": {
+                    "@id": "schema:citation",
+                    "@type": "@id"
+                }
+            },
+            "@id": "enzml:SmallMolecule/ac4ff097-a7e1-4d3f-9d7b-99d650cfb2b5",
+            "@type": [
+                "enzml:SmallMolecule"
+            ],
+            "id": "NADH",
+            "name": "NADH",
+            "constant": false,
+            "synonymous_names": [],
+            "references": []
+        },
+        {
+            "@context": {
+                "enzml": "http://www.enzymeml.org/v2/",
+                "OBO": "http://purl.obolibrary.org/obo/",
+                "schema": "https://schema.org/",
+                "id": {
+                    "@id": "schema:identifier",
+                    "@type": "@id"
+                },
+                "name": "schema:name",
+                "vessel_id": {
+                    "@id": "schema:identifier",
+                    "@type": "@id"
+                },
+                "references": {
+                    "@id": "schema:citation",
+                    "@type": "@id"
+                }
+            },
+            "@id": "enzml:SmallMolecule/41310ced-5b38-456e-847e-dfb2ef9a7a1d",
+            "@type": [
+                "enzml:SmallMolecule"
+            ],
+            "id": "NAD",
+            "name": "NAD",
+            "constant": false,
+            "synonymous_names": [],
+            "references": []
+        }
+    ],
+    "reactions": [],
+    "measurements": [
+        {
+            "@context": {
+                "enzml": "http://www.enzymeml.org/v2/",
+                "OBO": "http://purl.obolibrary.org/obo/",
+                "schema": "https://schema.org/",
+                "id": {
+                    "@id": "schema:identifier",
+                    "@type": "@id"
+                },
+                "group_id": {
+                    "@type": "@id"
+                }
+            },
+            "@id": "enzml:Measurement/29f0d066-56bc-42cf-a69e-7ee387d8cf04",
+            "@type": [
+                "enzml:Measurement"
+            ],
+            "id": "measurement_1",
+            "name": "Measurement 1",
+            "species_data": [
+                {
+                    "@context": {
+                        "enzml": "http://www.enzymeml.org/v2/",
+                        "OBO": "http://purl.obolibrary.org/obo/",
+                        "schema": "https://schema.org/",
+                        "species_id": {
+                            "@type": "@id"
+                        }
+                    },
+                    "@id": "enzml:MeasurementData/90c8ce9d-661c-4f23-902e-570f8c364e04",
+                    "@type": [
+                        "enzml:MeasurementData"
+                    ],
+                    "species_id": "NADH",
+                    "prepared": 200.0,
+                    "initial": 3.0,
+                    "data_unit": {
+                        "id": "mmol / l",
+                        "name": "mmol / l",
+                        "base_units": [
+                            {
+                                "kind": "mole",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": -3.0
+                            },
+                            {
+                                "kind": "litre",
+                                "exponent": -1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data": [
+                        3.0,
+                        2.0,
+                        1.0,
+                        0.0
+                    ],
+                    "time": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0
+                    ],
+                    "time_unit": {
+                        "id": "s",
+                        "name": "s",
+                        "base_units": [
+                            {
+                                "kind": "second",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data_type": "absorbance",
+                    "is_simulated": false
+                },
+                {
+                    "@context": {
+                        "enzml": "http://www.enzymeml.org/v2/",
+                        "OBO": "http://purl.obolibrary.org/obo/",
+                        "schema": "https://schema.org/",
+                        "species_id": {
+                            "@type": "@id"
+                        }
+                    },
+                    "@id": "enzml:MeasurementData/d495c1d4-c236-48be-8315-c321667d8ae2",
+                    "@type": [
+                        "enzml:MeasurementData"
+                    ],
+                    "species_id": "NAD",
+                    "prepared": 0.0,
+                    "initial": 0.0,
+                    "data_unit": {
+                        "id": "mmol / l",
+                        "name": "mmol / l",
+                        "base_units": [
+                            {
+                                "kind": "mole",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": -3.0
+                            },
+                            {
+                                "kind": "litre",
+                                "exponent": -1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0
+                    ],
+                    "time": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0
+                    ],
+                    "time_unit": {
+                        "id": "s",
+                        "name": "s",
+                        "base_units": [
+                            {
+                                "kind": "second",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data_type": "absorbance",
+                    "is_simulated": false
+                }
+            ],
+            "ph": 7.4,
+            "temperature": 25.0,
+            "temperature_unit": {
+                "id": "C",
+                "name": "C",
+                "base_units": [
+                    {
+                        "kind": "ampere",
+                        "exponent": 1,
+                        "multiplier": 1.0,
+                        "scale": 0.0
+                    },
+                    {
+                        "kind": "second",
+                        "exponent": 1,
+                        "multiplier": 1.0,
+                        "scale": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "@context": {
+                "enzml": "http://www.enzymeml.org/v2/",
+                "OBO": "http://purl.obolibrary.org/obo/",
+                "schema": "https://schema.org/",
+                "id": {
+                    "@id": "schema:identifier",
+                    "@type": "@id"
+                },
+                "group_id": {
+                    "@type": "@id"
+                }
+            },
+            "@id": "enzml:Measurement/1da3cdbe-2629-4072-929b-ec8dc6a49e0d",
+            "@type": [
+                "enzml:Measurement"
+            ],
+            "id": "measurement_2",
+            "name": "Measurement 2",
+            "species_data": [
+                {
+                    "@context": {
+                        "enzml": "http://www.enzymeml.org/v2/",
+                        "OBO": "http://purl.obolibrary.org/obo/",
+                        "schema": "https://schema.org/",
+                        "species_id": {
+                            "@type": "@id"
+                        }
+                    },
+                    "@id": "enzml:MeasurementData/d5924151-a02d-47e8-b0e2-e48fc2ba6f2a",
+                    "@type": [
+                        "enzml:MeasurementData"
+                    ],
+                    "species_id": "NADH",
+                    "prepared": 300.0,
+                    "initial": 3.0,
+                    "data_unit": {
+                        "id": "mmol / l",
+                        "name": "mmol / l",
+                        "base_units": [
+                            {
+                                "kind": "mole",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": -3.0
+                            },
+                            {
+                                "kind": "litre",
+                                "exponent": -1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data": [
+                        5.0,
+                        3.0,
+                        2.0,
+                        1.0
+                    ],
+                    "time": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0
+                    ],
+                    "time_unit": {
+                        "id": "s",
+                        "name": "s",
+                        "base_units": [
+                            {
+                                "kind": "second",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data_type": "absorbance",
+                    "is_simulated": false
+                },
+                {
+                    "@context": {
+                        "enzml": "http://www.enzymeml.org/v2/",
+                        "OBO": "http://purl.obolibrary.org/obo/",
+                        "schema": "https://schema.org/",
+                        "species_id": {
+                            "@type": "@id"
+                        }
+                    },
+                    "@id": "enzml:MeasurementData/4bc3a3ee-ef04-4103-a81b-ea84aaec9d68",
+                    "@type": [
+                        "enzml:MeasurementData"
+                    ],
+                    "species_id": "NAD",
+                    "prepared": 0.0,
+                    "initial": 0.0,
+                    "data_unit": {
+                        "id": "mmol / l",
+                        "name": "mmol / l",
+                        "base_units": [
+                            {
+                                "kind": "mole",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": -3.0
+                            },
+                            {
+                                "kind": "litre",
+                                "exponent": -1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data": [
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.4,
+                        0.5
+                    ],
+                    "time": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0
+                    ],
+                    "time_unit": {
+                        "id": "s",
+                        "name": "s",
+                        "base_units": [
+                            {
+                                "kind": "second",
+                                "exponent": 1,
+                                "multiplier": 1.0,
+                                "scale": 0.0
+                            }
+                        ]
+                    },
+                    "data_type": "absorbance",
+                    "is_simulated": false
+                }
+            ],
+            "ph": 7.4,
+            "temperature": 25.0,
+            "temperature_unit": {
+                "id": "C",
+                "name": "C",
+                "base_units": [
+                    {
+                        "kind": "ampere",
+                        "exponent": 1,
+                        "multiplier": 1.0,
+                        "scale": 0.0
+                    },
+                    {
+                        "kind": "second",
+                        "exponent": 1,
+                        "multiplier": 1.0,
+                        "scale": 0.0
+                    }
+                ]
+            }
+        }
+    ],
+    "equations": [],
+    "parameters": [],
+    "references": []
+}
