@@ -1,0 +1,2 @@
+[console_scripts]
+ppe-detector-mcp = mcp_pped:main
