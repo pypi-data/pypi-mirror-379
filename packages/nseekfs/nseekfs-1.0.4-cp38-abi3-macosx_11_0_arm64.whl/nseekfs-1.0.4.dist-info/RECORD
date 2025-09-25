@@ -1,0 +1,10 @@
+LICENSE,sha256=MYfYkTxbwJy3TLhjq6b7aDGt6G-s-ptrj0DCfW_xd_Y,1066
+README.md,sha256=DBqLanyOHs2RvCx2IQPsfT7zzKhMw8x8ibzxutlFn_g,5969
+nseekfs-1.0.4.dist-info/METADATA,sha256=h-dA3Jt26iE20TjcRIItUtsxu1NFDs2vdAxVuJT4GKc,8248
+nseekfs-1.0.4.dist-info/WHEEL,sha256=tDwpVQdIftVdUCGzi9EZxv0g6xpy3EOhhp1xDnIF2OU,102
+nseekfs-1.0.4.dist-info/entry_points.txt,sha256=GQqM8pCzW4if0N1FEIOz0wc13SvprbGJtnCnFvCMUMY,98
+nseekfs-1.0.4.dist-info/licenses/LICENSE,sha256=MYfYkTxbwJy3TLhjq6b7aDGt6G-s-ptrj0DCfW_xd_Y,1066
+nseekfs/__init__.py,sha256=QI4-MIEjNzfhGhyhrjytYxIv9pavbjuedoOk69_k-Y0,5347
+nseekfs/highlevel.py,sha256=DrmAEX5n0JCYfQdvTa0GFWz0rEW_CX6WWg-TgXRxviM,17506
+nseekfs/nseekfs.abi3.so,sha256=bS3cfU9UoBRL969-qwDwQilyzwxII2fy0blTrel2mBc,573648
+nseekfs-1.0.4.dist-info/RECORD,,
