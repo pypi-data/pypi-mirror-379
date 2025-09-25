@@ -1,0 +1,8 @@
+qrgb/__init__.py,sha256=RcgQ4mTJ_S0NTY36_7m80keGKJBJIf0nkBWOcPv_IdA,363
+qrgb/cli.py,sha256=MpXBKQ2ufiEccz5tfpMWv_4E8BdF6FmV8AInQSqaKSs,146
+qrgb/qrgb.py,sha256=q-MiBIlA1F4Kr_U3sqHXkWKTp0irbrNBIDq5MdqpeBI,19356
+qrgb/webapp.py,sha256=JiE-9chWZFt8zbbk54SuIBf__LFnyqo3meUcFAWWMDA,14434
+qrgb-1.0.2.dist-info/METADATA,sha256=5-9-m0NxMuN2UVLVD-Ror3MYVhKNb8IWl8d2KLWHnxg,7115
+qrgb-1.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+qrgb-1.0.2.dist-info/entry_points.txt,sha256=zrFi-PX7DtPqA6WK_IujUBN8yMEQUVlTq7x0Ho2MDtU,38
+qrgb-1.0.2.dist-info/RECORD,,
