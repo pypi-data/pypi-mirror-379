@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+workspace_agent.egg-info/PKG-INFO
+workspace_agent.egg-info/SOURCES.txt
+workspace_agent.egg-info/dependency_links.txt
+workspace_agent.egg-info/top_level.txt

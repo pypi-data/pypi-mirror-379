@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: workspace-agent
+Version: 0.0.0
+Summary: Workspace management package for `out` folder shared between different packages.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# workspace-agent
+ Workspace management package for `out` folder shared between different packages.
