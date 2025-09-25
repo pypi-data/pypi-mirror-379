@@ -1,0 +1,12 @@
+yolo_circle_sdk/__init__.py,sha256=y1S0mlsh8JeG9YdmG9Uf0G-cQIo4zJ62AxR0O_vCHTQ,443
+yolo_circle_sdk/api.py,sha256=cEOkLzTvVxw7di09LmLLRFKmytsNQ45CqL6RmmPKyCM,8484
+yolo_circle_sdk/cli.py,sha256=YEdE0_blkcRYuq9H-dBU-pBdUo2n8DpI5xFaiidaN-8,9835
+yolo_circle_sdk/config.py,sha256=Jw5JtGUzMtxEP1Px4vUhijS15Es5mScJM1p9GDm0STI,7462
+yolo_circle_sdk/detector.py,sha256=_xQ-Sw_hbt4DO2lO57X8AP8U8F1KOXdmyDN-yKfm5sU,16329
+yolo_circle_sdk/model_manager.py,sha256=Ur9s-By0eKmyjcEehwvbuHPFnXk2frtjibJ0XxZQNv0,7158
+yolo_circle_sdk/models/best1.pt,sha256=Fcm3nvEXcreo_OVMDDGe7kWh1ibU5ykHA6oEY5LsdlI,19158099
+yolo_circle_sdk-1.0.2.dist-info/METADATA,sha256=ggBAjk5Lqg-O4QpRS2YyjE5K8fiwSudhwv9TwHnUSoc,9644
+yolo_circle_sdk-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+yolo_circle_sdk-1.0.2.dist-info/entry_points.txt,sha256=jSL3gtT-kz52k5ZqK2y5JbK6ml9syaWgJK-QtSq662g,64
+yolo_circle_sdk-1.0.2.dist-info/top_level.txt,sha256=UgZoXMq1vk_B0N8C16p20Zmt7bR2MZHlL1g-HDc61E4,16
+yolo_circle_sdk-1.0.2.dist-info/RECORD,,

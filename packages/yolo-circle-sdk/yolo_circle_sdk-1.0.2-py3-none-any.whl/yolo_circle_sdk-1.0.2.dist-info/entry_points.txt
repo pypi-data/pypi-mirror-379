@@ -1,0 +1,2 @@
+[console_scripts]
+yolo-circle-detect = yolo_circle_sdk.cli:main
