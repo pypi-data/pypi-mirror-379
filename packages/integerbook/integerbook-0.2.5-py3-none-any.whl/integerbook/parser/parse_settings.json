@@ -1,0 +1,14 @@
+{
+    "scroll": false,
+    "measures_per_line": 4,
+    "alternative_symbols": false,
+    "numbers_relative_to_chord": false,
+    "force_minor": false,
+    "minor_perspective": "parallel",
+    "_minor_perspective_options": ["relative", "parallel", "minor"],
+    "roman_numerals": true,
+    "chord_verbosity": 2,
+    "manual_secondary_chords": [],
+    "apply_preprocessing": true,
+    "chord_progression": false
+}
