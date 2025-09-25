@@ -1,0 +1,10 @@
+README.md
+setup.py
+dynamic_bitmap/__init__.py
+dynamic_bitmap/bitmap.py
+dynamic_bitmap.egg-info/PKG-INFO
+dynamic_bitmap.egg-info/SOURCES.txt
+dynamic_bitmap.egg-info/dependency_links.txt
+dynamic_bitmap.egg-info/requires.txt
+dynamic_bitmap.egg-info/top_level.txt
+tests/test_bitmap.py
