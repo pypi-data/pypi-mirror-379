@@ -1,0 +1,38 @@
+[THIS-733] 🥺 Add toolkit http client (#1287)
+
+# Description
+
+This adds an `HTTPClient` to Neat. 
+
+Why do we need an `HTTPClient` in Neat? Can't we just use the
+`cognite-sdk` client?
+
+* **Performance**. This client uses `httpx` instead of `requests` which
+is faster and more modern. In addition, Neat has pydantic classes for
+all data modeling components. Pydantic has the serialization written in
+rust, which is much faster than having to go via the cognite-sdk data
+classes. Finally, the `cognite-sdk` limits max-workers to 1 when working
+with data modeling, this is first step towards allowing concurrent reads
+and writes to data modeling using neat.
+* **Error handling**: Neat needs to handle errors in the deployment of
+data models, for example, being able to split items into multiple
+requests requests if it returns a 400. If we built on the `cognite-sdk`
+we do not get low level control over the responses.
+
+**Risk-Reviewer**: This is a copy-paste form the Toolkit code base that
+has already been through risk-review. It is not yet adapted for Neat.
+This is such that this can be approved without a new review as this has
+already been reviewed in the Toolkit code base.
+
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+
+## Changelog
+### Added
+
+- `httpx` is now a required dependency for neat.
