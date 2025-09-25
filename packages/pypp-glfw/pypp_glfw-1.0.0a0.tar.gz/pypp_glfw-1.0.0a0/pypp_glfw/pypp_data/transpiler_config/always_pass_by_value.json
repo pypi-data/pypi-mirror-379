@@ -1,0 +1,8 @@
+{
+    "GLFWwindow*": {
+        "required_py_import": {
+            "module": "pypp_glfw",
+            "name": "GLFWwindowPtr"
+        }
+    }
+}
