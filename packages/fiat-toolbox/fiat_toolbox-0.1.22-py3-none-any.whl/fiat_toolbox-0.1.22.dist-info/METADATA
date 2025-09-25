@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: fiat_toolbox
+Version: 0.1.22
+Summary: A collection of modules for post-processing Delft-FIAT output.
+Project-URL: Source, https://github.com/Deltares/fiat_toolbox
+Author-email: Panos Athanasiou <Panos.Athanasiou@deltares.nl>, Luuk Blom <Luuk.Blom@deltares.nl>, Sarah Rautenbach <sarah.rautenbach@deltares.nl>, Daley Adrichem <Daley.Adrichem@deltares.nl>
+License: MIT License
+        
+        Copyright (c) 2023 Deltares
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.10
+Requires-Dist: duckdb<1.3,>=1.0
+Requires-Dist: geopandas
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: parse
+Requires-Dist: pillow
+Requires-Dist: plotly
+Requires-Dist: pydantic
+Requires-Dist: toml
+Requires-Dist: tomli
+Requires-Dist: validators
+Provides-Extra: lint
+Requires-Dist: pre-commit; extra == 'lint'
+Requires-Dist: ruff; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+Delft-FIAT Toolbox
+------------------
+This toolbox contains post-processing modules for Delft-FIAT output.
+
+Installation
+============
+Fiat toolbox uses [uv](https://docs.astral.sh/uv/) to build and manage python environments.
+If you do not have `uv` installed, you can install it using `pip install uv`.
+
+- Install with: `uv sync`
+
+- Run the tests with: `uv run pytest`
+
+- Run the linter with: `uv run pre-commit run --all-files`
+
+Modules:
+
+metrics_writer
+==============
+This module contains functions to write out custom aggregated metrics from Delft-FIAT output for the whole model an/or different aggregation levels.
+
+infographics
+============
+This module contains functions to write customized infographics in html format using metric files .
+
+spatial_output
+==============
+This module contains functions to aggregate point output from FIAT to building footprints. Moreover, it has methods to join aggregated metrics to spatial files.
+
+equity
+======
+This module contains functions to calculate equity weights and equity weighted risk metrics based on socio-economic inputs at an aggregation level.
