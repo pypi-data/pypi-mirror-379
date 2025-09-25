@@ -1,0 +1,10 @@
+resource_segmentation/__init__.py,sha256=nuvFQ8imyKrcElBr5WFqMu5RpgggJjtPS1HyV8OwzsI,71
+resource_segmentation/group.py,sha256=ilcFislK1KvLApGgoo-fdUssTN4wx1z_FiTf2GlT6QI,4301
+resource_segmentation/segment.py,sha256=Y_MlubWQ7zUchHX4QR11PtcLVu-lrxYE7DDtN1J3SZk,3850
+resource_segmentation/splitter.py,sha256=QltAgVkkDuuTvblTxK3SGh8ueURe6OyGhmx6OWsIMzQ,1695
+resource_segmentation/stream.py,sha256=Zhc2u2yg_fyr5o8byFU6gAbEFz9yu_pff4YI49X0W-k,507
+resource_segmentation/types.py,sha256=F60Xu_wmwaZHJIITexl3NgbbauAszJSkLof_SilwQtQ,484
+resource_segmentation-0.0.5.dist-info/LICENSE,sha256=9Zt_a4mrzkvR2rc0UbqTgbboIjWuumDFgeQyKos0H2E,1066
+resource_segmentation-0.0.5.dist-info/METADATA,sha256=ZEtVg_od7Amh6-Dw0wJQWUARyh08ijAjg6sH9K4455Y,6579
+resource_segmentation-0.0.5.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+resource_segmentation-0.0.5.dist-info/RECORD,,
