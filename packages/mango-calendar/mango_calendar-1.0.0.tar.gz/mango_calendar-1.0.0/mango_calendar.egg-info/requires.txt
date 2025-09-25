@@ -1,0 +1,10 @@
+holidays>=0.76
+numpy>=2.2.4
+pandas>=2.3.1
+polars>=1.31.0
+pyarrow>=20.0.0
+pycountry>=24.6.1
+unidecode>=1.4.0
+
+[dev]
+coverage[toml]>=7.0
