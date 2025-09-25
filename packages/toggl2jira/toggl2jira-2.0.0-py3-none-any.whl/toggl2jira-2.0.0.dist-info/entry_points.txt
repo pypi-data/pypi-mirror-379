@@ -1,0 +1,3 @@
+[console_scripts]
+toggl2jira=toggl2jira.cli:main
+
