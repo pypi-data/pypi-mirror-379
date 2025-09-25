@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: nitrotools
+Version: 0.1.0
+Summary: A shared library for common utilities.
+Project-URL: Homepage, https://github.com/introvenk/nitro
+Project-URL: Repository, https://github.com/introvenk/nitro
+Project-URL: Issues, https://github.com/introvenk/nitro/issues
+Author-email: Venkatesh Khatri <venkatesh.khatri@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: library,shared,utilities
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Nitro
+
+A shared library for common utilities.
+
+## Installation
+
+```bash
+pip install nitro
+```
+
+## Usage
+
+```python
+from nitro.core import hello
+
+print(hello())
+```
+
+## Contributing
+
+Contributions are welcome!
+
+## License
+
+MIT
