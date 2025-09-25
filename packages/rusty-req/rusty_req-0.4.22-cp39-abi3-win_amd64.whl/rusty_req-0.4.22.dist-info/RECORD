@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=y8T6bSN7dIQXpXGrw35S8sliYnJnH8H0a8e_s79G1uU,1165
+README.md,sha256=N3X4yNGNoFJ-mNvhP6ACtYYjg29WnbSsRoY3Cuey_HA,21039
+README.zh.md,sha256=m9hBQJczMcIS7UQHLMAYrjEDmZ7ccYZuxCBpyax3JWY,19543
+rusty_req-0.4.22.dist-info/METADATA,sha256=t1VOomeMiTG-WPDbkIW9W3v1YIcBNOhtF6j94mr6EcY,22529
+rusty_req-0.4.22.dist-info/WHEEL,sha256=KP1XRbQ7GUOK0PLztcv6rn22fh7mfz6y3ftv90H-6z4,94
+rusty_req.pyi,sha256=Ihiwx3KNpZb35H31bu3MDxXpQ994S6J2V0jKjmDXp3U,4496
+rusty_req/__init__.py,sha256=XfQUTvk1FFMD7UyS817WUsedia2I8IeuvVba4QktOX0,119
+rusty_req/__init__.pyi,sha256=Ihiwx3KNpZb35H31bu3MDxXpQ994S6J2V0jKjmDXp3U,4496
+rusty_req/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rusty_req/rusty_req.pyd,sha256=dj6ChMpjUB7y_CAhKXOy6JIRW_oN-0ZHqg9oXRF-dq0,4272128
+rusty_req-0.4.22.dist-info/RECORD,,
