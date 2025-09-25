@@ -1,0 +1,89 @@
+name: Publish Python Package to PyPI
+
+on:
+  release:
+    types: [created]
+  workflow_run:
+    workflows: ["Bump Version"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    if: ${{ (github.event_name == 'release' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')) && github.ref == 'refs/heads/main' }}
+    steps:
+    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+      with:
+        ref: ${{ github.event.release.tag_name || 'main' }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6
+      with:
+        python-version: '3.13'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install uv twine toml
+    
+    - name: Build package
+      run: |
+        rm -rf dist/
+        uv build --no-sources
+        
+    - name: Check distribution with twine
+      run: |
+        twine check dist/*
+        
+    - name: Publish to PyPI
+      env:
+        PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        twine upload dist/* -u __token__ -p $PYPI_API_TOKEN
+    
+    - name: Install MCP Publisher
+      run: |
+        curl -L "https://github.com/modelcontextprotocol/registry/releases/download/v1.0.0/mcp-publisher_1.0.0_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz" | tar xz mcp-publisher
+
+    - name: Login to MCP Registry (OIDC)
+      run: ./mcp-publisher login github-oidc
+
+    - name: Publish to MCP Registry
+      run: ./mcp-publisher publish
+        
+    - name: Extract package version
+      id: get_version
+      run: |
+        PACKAGE_VERSION=$(python -c "import toml; print(toml.load('pyproject.toml')['project']['version'])")
+        echo "version=$PACKAGE_VERSION" >> $GITHUB_OUTPUT
+    
+    - name: Notify Slack about PyPI release
+      id: slack
+      uses: slackapi/slack-github-action@91efab103c0de0a537f72a35f6b8cda0ee76bf0a # v2.1.1
+      with:
+        method: chat.postMessage
+        token: ${{ secrets.SLACK_BOT_TOKEN }}
+        payload-templated: true
+        payload: |
+          {
+            "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+            "text": "New Release Published to PyPI: codelogic-mcp-server v${{ steps.get_version.outputs.version }}",
+            "blocks": [
+              {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": ":rocket: *New Release Published to PyPI!*"}
+              },
+              {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": "*Package:* codelogic-mcp-server v${{ steps.get_version.outputs.version }}\n*Published by:* ${{ github.actor }}"}
+              },
+              {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": ":link: <https://pypi.org/project/codelogic-mcp-server/${{ steps.get_version.outputs.version }}|View on PyPI>"}
+              }
+            ]
+          }
