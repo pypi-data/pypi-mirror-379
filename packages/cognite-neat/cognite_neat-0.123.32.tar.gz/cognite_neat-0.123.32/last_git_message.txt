@@ -1,0 +1,20 @@
+THIS-738: Fix case sensitivity issue in direction definitions (#1290)
+
+# Description
+
+Up until now we were case-sensitive when providing input for edge
+directionality , which had to be specified in lower case as either
+`inwards` or `outwards`. With this PR we are fixing this issue, i.e.
+being case-insensitive.
+
+## Bump
+
+- [X] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Improved
+
+- No more case-sensitive input needed for edge definition of
+directionality
