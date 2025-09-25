@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: MinNumberLib
+Version: 0.1.0
+Summary: Find the smallest number from a list
+Author: Mohammed Abdo Aljamal
+Author-email: Mohammed Abdo Aljamal <aljmal7722@gmail.com>
+License: 
+        
+        MIT License
+        
+        Copyright (c)2025 Mohammed Abdo Aljamal.
+        
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+
+# MinNumberLib
+مكتبة لإيجاد أصغر رقم من قائمة أعداد.
+
+## التثبيت
+py -m pip install MinNumberLib
+
+## CMD
+minnumberlib 5 3 9 1
+# Smallest number: 1
+
+## Python
+from min_number_lib import find_min
+print(find_min([5,3,9,1]))  # 1
