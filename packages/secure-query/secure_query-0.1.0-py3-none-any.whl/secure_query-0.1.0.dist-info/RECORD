@@ -1,0 +1,9 @@
+secure_query/__init__.py,sha256=creuE9dT5eeIVi-jpMbz1BjvQpT1XdD-AxE5C41TSX8,355
+secure_query/crypto.py,sha256=4DEYY3Lt0fhRKqoiQnOEi7MfopKeBLC8rYfKl4HfanA,1874
+secure_query/router.py,sha256=Z50DFX4nK6CxovHQegiYzuSp6MoQtC-W8N4d7mC1edM,1917
+secure_query/settings.py,sha256=kqw8yxcPEnM3Rljfx0ZxHHkBwceLwypkObShbiMeKSA,681
+secure_query-0.1.0.dist-info/licenses/LICENSE,sha256=10x6qjD2g-Mmoxf_Oh-hoWzNafaKUjExtD394fnQIT8,1081
+secure_query-0.1.0.dist-info/METADATA,sha256=JZOnlGvJaKooPqzdk9g6CUC40KJD4_WYUYhq_sMVN5g,15517
+secure_query-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+secure_query-0.1.0.dist-info/top_level.txt,sha256=Qa1AI4uYbn-upr_-RADPxSMLjnQzcmqSVEbNkRxjfQ0,13
+secure_query-0.1.0.dist-info/RECORD,,
