@@ -1,0 +1,15 @@
+dash_panels/GroupPanel.py,sha256=s0Y0_4zS1cjf2JZz6uA3PnVy6h1Wx8ixUj8I5yjDdIY,2210
+dash_panels/Panel.py,sha256=OHgDPYn4bp4cbzQHsjZfjfhUuM-4PNqBEs3rhoPc13M,3753
+dash_panels/PanelGroup.py,sha256=Iw_lFHpxGw5ZWCDVaqVKdAaXNrjl_7dBXjbnUGlKwLs,2210
+dash_panels/PanelResizeHandle.py,sha256=e1pc9ZkevQwXigrGZUBmAKTp5dMJLh-Mjq75rEGEcB0,2033
+dash_panels/__init__.py,sha256=RqyBe-vBL4NKTBtZYxuX2lv_4CiXxULVuV4DIA-t-b4,2251
+dash_panels/_imports_.py,sha256=k7U_03iED6Fpe9p8eVceG_oUMFjcUqVQPrUv7ivqQDs,178
+dash_panels/dash_panels.min.js,sha256=DuSiFny_hOXWnFf5sl-9dY2gu4djDnouV-0_Ne0uTsk,30134
+dash_panels/dash_panels.min.js.map,sha256=cJyOGeCjKhyYtsBru2MwW6xmpFy1raUmzanqwPwGP4I,142113
+dash_panels/metadata.json,sha256=Bm5Gxx-V-2jtRqq8rv9yRKzktTZLaApy6mXF2ua1UD0,3566
+dash_panels/package-info.json,sha256=GIQeuFmefq2MlnMlgMVMzlUoUWVUKa7WTTsP1E1c3QY,2044
+dash_panels-0.0.1.dist-info/licenses/LICENSE,sha256=kZ6tREYor-Ze_frliiHtr7erdildoPU8shHt2wP81Ks,1064
+dash_panels-0.0.1.dist-info/METADATA,sha256=t8HuFRUX8h9qAEWa9H95VTQxXawbTl6-Ve6_fXaEghA,527
+dash_panels-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dash_panels-0.0.1.dist-info/top_level.txt,sha256=dS3EDp3A5A1MPjcxkWxK5YAURQOVmzwj65cQjdAcrWw,12
+dash_panels-0.0.1.dist-info/RECORD,,
