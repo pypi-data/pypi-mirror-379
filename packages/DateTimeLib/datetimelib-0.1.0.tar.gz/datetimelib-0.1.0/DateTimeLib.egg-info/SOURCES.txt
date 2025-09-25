@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+DateTimeLib.egg-info/PKG-INFO
+DateTimeLib.egg-info/SOURCES.txt
+DateTimeLib.egg-info/dependency_links.txt
+DateTimeLib.egg-info/entry_points.txt
+DateTimeLib.egg-info/top_level.txt
+datetime_lib/__init__.py
+datetime_lib/__main__.py
+datetime_lib/core.py

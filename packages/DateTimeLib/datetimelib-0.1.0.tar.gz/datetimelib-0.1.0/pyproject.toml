@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DateTimeLib"
+version = "0.1.0"
+description = "Library to get current date and time"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    { name = "Adel Amin Alashmouri", email = "ashmouri12ty@gmail.com" }
+]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+datetimelib = "datetime_lib.__main__:main"
+
+[project.urls]
+Homepage = "https://pypi.org/project/DateTimeLib/"
