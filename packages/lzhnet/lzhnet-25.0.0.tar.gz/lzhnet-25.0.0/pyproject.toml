@@ -1,0 +1,18 @@
+[project]
+name="lzhnet"
+version="25.0.0"
+authors=[
+    { name="zhlei", email="leizuoho@mail.ustc.edu.cn" }
+]
+dependencies=[
+    "scipy"
+]
+description=""
+requires-python=">=3.10"
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
