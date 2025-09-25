@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lace Preflight Report",
+  "description": "Pre-training compliance check report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "dataset",
+    "config",
+    "registry",
+    "policy",
+    "signals",
+    "verdict",
+    "budget_exhausted",
+    "network_used_ms",
+    "created_at",
+    "tool"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "preflight.v0.1"
+    },
+    "dataset": {
+      "type": "object",
+      "required": ["locator", "files", "bytes"],
+      "properties": {
+        "locator": {"type": "string"},
+        "files": {"type": "integer", "minimum": 0},
+        "bytes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "config": {
+      "type": "object",
+      "required": ["budget_s", "sample_rate", "pii_mode"],
+      "properties": {
+        "budget_s": {"type": "integer", "minimum": 1, "maximum": 3600},
+        "sample_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "pii_mode": {"type": "string", "enum": ["off", "light", "standard"]},
+        "max_concurrency": {"type": "integer", "minimum": 1, "maximum": 100}
+      }
+    },
+    "registry": {
+      "type": "object",
+      "required": ["version", "sources", "verified"],
+      "properties": {
+        "version": {"type": "string"},
+        "sources": {"type": "array", "items": {"type": "string"}},
+        "verified": {"type": "boolean"}
+      }
+    },
+    "policy": {
+      "type": "object",
+      "required": ["mode", "version"],
+      "properties": {
+        "mode": {"type": "string", "enum": ["default", "strict", "lenient"]},
+        "version": {"type": "string"}
+      }
+    },
+    "signals": {
+      "type": "object",
+      "required": ["opt_out", "license", "pii"],
+      "properties": {
+        "file_count": {"type": "integer", "minimum": 0},
+        "byte_count": {"type": "integer", "minimum": 0},
+        "opt_out": {
+          "type": "object",
+          "required": ["deny_domains", "suspect_domains", "summary"],
+          "properties": {
+            "deny_domains": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["domain", "verdict", "source", "confidence"],
+                "properties": {
+                  "domain": {"type": "string"},
+                  "verdict": {"type": "string"},
+                  "source": {"type": "string"},
+                  "evidence": {"type": "string"},
+                  "rule": {"type": "string"},
+                  "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+                }
+              }
+            },
+            "suspect_domains": {"type": "array"},
+            "summary": {
+              "type": "object",
+              "properties": {
+                "deny": {"type": "integer", "minimum": 0},
+                "suspect": {"type": "integer", "minimum": 0}
+              }
+            }
+          }
+        },
+        "license": {
+          "type": "object",
+          "required": ["summary"],
+          "properties": {
+            "summary": {
+              "type": "object",
+              "properties": {
+                "spdx": {"type": "object"},
+                "noassertion": {"type": "integer", "minimum": 0}
+              }
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {"type": "string"},
+                  "identifier": {"type": "string"},
+                  "file": {"type": "string"},
+                  "confidence": {"type": "number"},
+                  "hint": {"type": "string"},
+                  "where": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "pii": {
+          "type": "object",
+          "required": ["coverage", "findings", "severity"],
+          "properties": {
+            "coverage": {
+              "type": "object",
+              "properties": {
+                "sample_rate": {"type": "number"},
+                "files_scanned": {"type": "integer", "minimum": 0}
+              }
+            },
+            "findings": {"type": "object"},
+            "severity": {"type": "string", "enum": ["none", "low", "medium", "high"]}
+          }
+        },
+        "pdf": {
+          "type": "object",
+          "properties": {
+            "with_origin": {"type": "integer", "minimum": 0},
+            "examples": {"type": "array"}
+          }
+        }
+      }
+    },
+    "verdict": {
+      "type": "object",
+      "required": ["status", "confidence", "rationale"],
+      "properties": {
+        "status": {"type": "string", "enum": ["allow", "suspect", "deny", "unknown"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "rationale": {
+          "type": "array",
+          "items": {"type": "string"},
+          "maxItems": 5
+        }
+      }
+    },
+    "budget_exhausted": {"type": "boolean"},
+    "network_used_ms": {"type": "integer", "minimum": 0},
+    "created_at": {"type": "string", "format": "date-time"},
+    "tool": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"}
+      }
+    }
+  }
+}
