@@ -1,0 +1,266 @@
+Metadata-Version: 2.4
+Name: point-topic-mcp
+Version: 0.1.4
+Summary: UK broadband data analysis MCP server with Snowflake integration
+Project-URL: Homepage, https://github.com/point-topic/point-topic-mcp
+Project-URL: Repository, https://github.com/point-topic/point-topic-mcp
+Author-email: Peter Donaghey <peter.donaghey@point-topic.com>
+License: MIT
+Keywords: broadband,data-analysis,mcp,snowflake
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.14.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: snowflake-connector-python[pandas]>=3.17.3
+Description-Content-Type: text/markdown
+
+# Point Topic MCP Server
+
+UK broadband data analysis server via Model Context Protocol with API key authentication and user permissions.
+
+## ✅ what's implemented
+
+**three server modes**:
+
+- **local development** (`server_local.py`) - stdio transport, no auth, claude desktop
+- **remote http** (`server_remote.py`) - streamable-http transport, api key auth, modern clients
+- **remote sse** (`server_remote_sse.py`) - sse transport, api key auth, broader compatibility
+
+**core tools**:
+
+- `assemble_dataset_context()` - gets database schemas and examples for datasets (upc, upc_take_up, upc_forecast)
+- `execute_query()` - runs safe read-only sql queries with user-based row limits
+- `check_user_permissions()` - shows user access levels and restrictions
+
+**user permissions**: email-based access control via `config/users.yaml` with three levels (basic, premium, full)
+
+**authentication**: API key based with bearer token format
+
+## installation (for end users)
+
+**simple pip install**:
+
+```bash
+pip install point-topic-mcp
+```
+
+**add to your MCP client** (Claude Desktop, Cursor, etc.):
+
+```json
+{
+  "mcpServers": {
+    "point-topic": {
+      "command": "point-topic-mcp",
+      "env": {
+        "SNOWFLAKE_ACCOUNT": "your_account",
+        "SNOWFLAKE_USER": "your_user", 
+        "SNOWFLAKE_PASSWORD": "your_password",
+        "SNOWFLAKE_WAREHOUSE": "your_warehouse",
+        "SNOWFLAKE_DATABASE": "your_database",
+        "SNOWFLAKE_SCHEMA": "your_schema"
+      }
+    }
+  }
+}
+```
+
+**Claude Desktop config location**:
+- Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+## quick start - local development
+
+setup: `uv sync`
+
+**for claude desktop**:
+
+```bash
+./deploy.sh
+```
+
+**for mcp inspector**:
+
+```bash
+uv run mcp dev server.py
+```
+
+## network access with api key authentication
+
+### for colleagues to use your server
+
+**they just need**:
+
+1. your server URL (http or sse)
+2. their API key from `config/users.yaml`
+3. configure their MCP client with URL + API key
+
+### server setup (run locally or on network)
+
+**1. environment configuration**:
+
+create `.env` file with your snowflake credentials:
+
+```bash
+# Your Snowflake credentials
+SNOWFLAKE_ACCOUNT=your_account
+SNOWFLAKE_USER=your_user
+SNOWFLAKE_PASSWORD=your_password
+SNOWFLAKE_WAREHOUSE=your_warehouse
+SNOWFLAKE_DATABASE=your_database
+SNOWFLAKE_SCHEMA=your_schema
+```
+
+**2. add colleague emails and generate API keys**:
+
+edit `config/users.yaml`:
+
+```yaml
+users:
+  colleague1@gmail.com:
+    access_level: premium
+    name: "Colleague Name"
+    api_key: "pt_live_sk_abc123..." # Generate unique API key
+
+  colleague2@company.com:
+    access_level: basic
+    name: "Another Colleague"
+    api_key: "pt_live_sk_def456..." # Generate unique API key
+```
+
+**3. choose and start your server**:
+
+**option a: streamable http (modern, recommended)**
+
+```bash
+python server_remote.py
+# runs on http://localhost:8000/mcp
+# colleagues use: Authorization: Bearer pt_live_sk_...
+```
+
+**option b: sse transport (broader compatibility)**
+
+```bash
+python server_remote_sse.py
+# runs on http://localhost:8001/sse
+# colleagues use: Authorization: Bearer pt_live_sk_...
+```
+
+**find your IP**: `ifconfig` (mac/linux) or `ipconfig` (windows)
+
+**share with colleagues**: server URL + their API key from users.yaml
+
+### deployment options
+
+**local network**: colleagues on same wifi can access via your IP
+
+**cloud deployment**: vps/cloud hosting for internet access
+
+**testing**:
+
+- **http server**: `uv run mcp dev http://localhost:8000/mcp`
+- **sse server**: `uv run mcp dev http://localhost:8001/sse`
+
+## user permissions system
+
+**three access levels** defined in `config/users.yaml`:
+
+- **basic**: limited datasets, 1000 row limit
+- **premium**: more datasets, 50000 row limit
+- **full**: all datasets, unlimited rows
+
+**example configuration**:
+
+```yaml
+# config/users.yaml
+users:
+  peter.donaghey@point-topic.com:
+    access_level: full
+    name: "Peter Donaghey"
+
+  colleague@gmail.com:
+    access_level: premium
+    datasets: ["upc", "upc_take_up"]
+    expires: "2025-12-31"
+
+access_levels:
+  basic:
+    description: "Aggregated data only"
+    datasets: ["upc"]
+    row_limit: 1000
+    tools: ["assemble_dataset_context", "execute_query"]
+
+  premium:
+    description: "Detailed data access"
+    datasets: ["upc", "upc_take_up"]
+    row_limit: 50000
+    tools: ["assemble_dataset_context", "execute_query"]
+
+  full:
+    description: "Complete access"
+    datasets: ["upc", "upc_take_up", "upc_forecast"]
+    row_limit: null
+    tools: ["*"]
+```
+
+## architecture
+
+**three server modes**:
+
+- `server_local.py` - stdio transport, no auth, claude desktop integration
+- `server_remote.py` - streamable-http transport, api key auth, network access
+- `server_remote_sse.py` - sse transport, api key auth, broader compatibility
+
+**authentication flow**:
+
+1. user configures MCP client with server URL + API key
+2. client sends API key in Authorization header: `Bearer pt_live_sk_...`
+3. server validates API key against `config/users.yaml`
+4. tools enforce user restrictions (datasets, row limits)
+
+**transport comparison**:
+
+- **streamable-http**: newest MCP standard, better performance, fewer clients support
+- **sse**: traditional MCP transport, broader client compatibility, server-sent events
+
+## publishing to PyPI (for maintainers)
+
+**build and test locally**:
+
+```bash
+# Build the package with UV (super fast!)
+uv build
+
+# Test installation locally
+uv add ./dist/point_topic_mcp-*.whl
+
+# Test the command works
+point-topic-mcp --help
+```
+
+**publish to PyPI**:
+
+```bash
+# Set up PyPI credentials in ~/.pypirc first (one time setup)
+# [pypi]
+#   username = __token__
+#   password = pypi-xxxxx...
+
+# Upload to PyPI with UV
+uv publish
+
+# Or use the publish script
+./publish.sh
+```
+
+**test installation from PyPI**:
+
+```bash
+pip install point-topic-mcp
+point-topic-mcp
+```
