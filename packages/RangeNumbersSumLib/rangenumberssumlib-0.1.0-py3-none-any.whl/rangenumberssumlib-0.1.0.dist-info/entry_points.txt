@@ -1,0 +1,2 @@
+[console_scripts]
+rangesumlibsn = range_sum_lib.__main__:main

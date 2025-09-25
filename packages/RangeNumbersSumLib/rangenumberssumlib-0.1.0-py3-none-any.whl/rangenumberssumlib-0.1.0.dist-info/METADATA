@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: RangeNumbersSumLib
+Version: 0.1.0
+Summary: Calculate sum from a to b
+Author-email: Suhail Nabil Alansi <suhail09t12@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Suhail Nabil Alansi
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# RangeNumbersSumLib
+A simple Python library to calculate the sum of numbers from a to b.
