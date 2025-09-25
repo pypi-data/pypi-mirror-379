@@ -1,0 +1,4 @@
+[console_scripts]
+el1xr-install-solvers=el1xr_opt.solver_setup:ensure_ampl_solvers
+el1xr-run=el1xr_opt.oM_Main:main
+
