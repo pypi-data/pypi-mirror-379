@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: lace-client
+Version: 0.7.0
+Summary: Lace SDS generator (EU AI Act Article 53 public summary) — online-only CLI
+Author: Matthew Hansen
+License: Proprietary
+Keywords: AI Act,SDS,EU,compliance,docx
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Environment :: Console
+Classifier: License :: Other/Proprietary License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: click<9,>=8.1
+Requires-Dist: httpx<0.28,>=0.27
+Requires-Dist: PyYAML<7,>=6
+Requires-Dist: pathspec<0.13,>=0.12
+
+# Lace Client (SDS Generator)
+
+Thin, online-only CLI that generates the EU AI Act Article 53(1)(d) public training summary (DOCX) via the Lace Cloud. No local DOCX generation; `--dry-run` assembles payloads for CI/review.
+
+## Install
+```bash
+python -m venv .venv && . .venv/bin/activate
+pip install -U pip
+pip install -e .
+```
+
+## Quickstart
+```bash
+# Dry-run (no network)
+python -m lace.cli pack examples/sample \
+  --answers-file examples/answers_sample.json \
+  --dry-run
+
+# Real run (requires API key)
+export LACE_API_KEY=lace_sk_...
+python -m lace.cli pack /path/to/dataset \
+  --answers-file examples/answers_sample.json \
+  --out ./examples/output/summary.docx
+```
+Notes:
+- Online-only: real runs call the Lace API.
+- --dry-run prints the payload and EU answers summary without network calls.
+- Override base URL with `--api-base` if needed.
