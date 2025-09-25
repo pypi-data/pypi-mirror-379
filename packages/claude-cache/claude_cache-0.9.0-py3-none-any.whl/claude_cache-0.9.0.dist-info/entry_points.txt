@@ -1,0 +1,4 @@
+[console_scripts]
+cache = claude_cache.cli:main
+cache-mcp = claude_cache.claude_code_mcp:main
+cache-mcp-legacy = claude_cache.fastmcp_server:main
