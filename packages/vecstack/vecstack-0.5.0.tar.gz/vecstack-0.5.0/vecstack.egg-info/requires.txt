@@ -1,0 +1,9 @@
+numpy
+scipy
+scikit-learn>=0.18
+
+[test]
+pytest
+pytest-cov
+pandas
+pyarrow
