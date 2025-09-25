@@ -1,0 +1,14 @@
+companion/config.py,sha256=rRlS8ZZsdnBaU5SYWVby89FnTl1NDjYrsKzz6Y2RxyA,4288
+companion/genconfig.py,sha256=8B26Uyg4Hflo6yakJseB23byQDkLFEi-SaZpGLXE-uA,3428
+companion/ipcext.py,sha256=gvFsoO7BW80-nXh_8HKXzoonnDoOCdWdq80JRdzUQoA,1488
+companion/workspaces.py,sha256=fowE0knLV1KNZMQGICZdIdF-MqC88Ylnh_sz2w2EhEc,1225
+companion/models/config.py,sha256=M_fxhGJKmKyb362M9Up5Q7c-e3nsg0wJfGmdTuRQu2A,736
+companion/utils/genconfig.py,sha256=FOKct-Enuw59MuJAXqKJQox65DrTxrwCkrKSC1asp6o,547
+companion/utils/general.py,sha256=Wenpr6fa1uTnbgfktgKsyBxzfNoUzyg128PvHhM-9Fs,222
+companion/utils/logger.py,sha256=TQh35ZlFpEvZIicnotpvbKm0OyFtSldrejksbds5Lk8,334
+niri_companion-2.3.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+niri_companion-2.3.0.dist-info/METADATA,sha256=wMGy31nwEXLSAtNrR8mYIGrnQC7ZYkEwCkNeS9Ln1C4,1848
+niri_companion-2.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+niri_companion-2.3.0.dist-info/entry_points.txt,sha256=RTaPdnQQW8i-pJg8lbL_5z2rb6RAP-1AXC1A7iKuKew,138
+niri_companion-2.3.0.dist-info/top_level.txt,sha256=KbgWY0vLOhOeRXAAnrtM-UnFEsZiL-ehmBYwPGVfY28,10
+niri_companion-2.3.0.dist-info/RECORD,,
