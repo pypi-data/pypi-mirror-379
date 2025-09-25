@@ -1,0 +1,37 @@
+Project description
+===================
+
+Sequensign provides ...
+
+* A standard way for the creation of a text string from a sequence (DNA, RNA or protein), for digital signature purposes.
+* A standard way to store a signature in a sequence file (Genbank).
+* Functionalities to add and read signatures in a (Genbank) sequence file.
+
+
+**Install:**
+
+.. code:: bash
+
+  pip install sequensign
+
+
+**Web documentation:**
+
+`<https://edinburgh-genome-foundry.github.io/Sequensign/>`_
+
+
+**Github page:**
+
+`<https://github.com/Edinburgh-Genome-Foundry/Sequensign>`_
+
+
+**License:** GPLv3, Copyright 2025 Edinburgh Genome Foundry
+
+
+More biology software
+---------------------
+
+.. image:: https://raw.githubusercontent.com/Edinburgh-Genome-Foundry/Edinburgh-Genome-Foundry.github.io/master/static/imgs/logos/egf-codon-horizontal.png
+  :target: https://edinburgh-genome-foundry.github.io/
+
+Sequensign is part of the `EGF Codons <https://edinburgh-genome-foundry.github.io/>`_ synthetic biology software suite for DNA design, manufacturing and validation.

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pypi-readme.rst
+pyproject.toml
+sequensign/__init__.py
+sequensign/tools.py
+sequensign.egg-info/PKG-INFO
+sequensign.egg-info/SOURCES.txt
+sequensign.egg-info/dependency_links.txt
+sequensign.egg-info/requires.txt
+sequensign.egg-info/top_level.txt
+tests/test_tools.py
