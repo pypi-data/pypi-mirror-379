@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+UpperLowerLib.egg-info/PKG-INFO
+UpperLowerLib.egg-info/SOURCES.txt
+UpperLowerLib.egg-info/dependency_links.txt
+UpperLowerLib.egg-info/entry_points.txt
+UpperLowerLib.egg-info/top_level.txt
+upper_lower_lib/__init__.py
+upper_lower_lib/__main__.py
+upper_lower_lib/core.py

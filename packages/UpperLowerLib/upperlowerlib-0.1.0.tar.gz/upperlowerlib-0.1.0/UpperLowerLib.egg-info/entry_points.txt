@@ -1,0 +1,2 @@
+[console_scripts]
+upperlowerlib = upper_lower_lib.__main__:main

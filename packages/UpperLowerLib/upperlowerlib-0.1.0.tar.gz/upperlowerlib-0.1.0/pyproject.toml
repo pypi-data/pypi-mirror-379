@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta" 
+
+[project]
+name = "UpperLowerLib"
+version = "0.1.0"
+description = "Convert text to upper or lower case"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Amal Ahmed Mohammed Al-Sharif", email = "alsharif5433@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = [] 
+
+[project.scripts]
+upperlowerlib = "upper_lower_lib.__main__:main"
