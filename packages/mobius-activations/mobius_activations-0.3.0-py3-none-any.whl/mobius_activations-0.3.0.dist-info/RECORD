@@ -1,0 +1,9 @@
+mobius_activations/__init__.py,sha256=bkRtGQhDfthqKDBUR3rRWiYcChBlirjUABBtnb4sJpM,57
+mobius_activations/tensorflow.py,sha256=CW2tCUf0Y984d6ZN3hdk3WJ_U_gPAOpjhOHd3ydRF6M,3785
+mobius_activations/torch.py,sha256=yBD5zsHLJX_hv8xr16o_PgAUzHyjbU8AQKQ6ExED7DA,4758
+mobius_activations/visualize.py,sha256=zq2eFDabtBAOYANSpFTTZ0niOC1D9mltORJK744LtzY,12023
+mobius_activations-0.3.0.dist-info/licenses/LICENSE,sha256=Oc3mDF5K6R6MHbWW_aNfIXgBzRFVfKt1MjWOqGxqJek,1071
+mobius_activations-0.3.0.dist-info/METADATA,sha256=bFFOtHQ7zDwUPoA0MfblrOfR2L4amINQ57udkBJ5cqQ,6891
+mobius_activations-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mobius_activations-0.3.0.dist-info/top_level.txt,sha256=bibm_arpOPfbXqc4FdU8_zUQxfonTCN_3mmHtF2KoNY,19
+mobius_activations-0.3.0.dist-info/RECORD,,
