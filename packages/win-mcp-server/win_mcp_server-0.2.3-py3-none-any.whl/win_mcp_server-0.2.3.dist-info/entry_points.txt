@@ -1,0 +1,2 @@
+[console_scripts]
+win-mcp-server = win_mcp_server:main
