@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+setuptools = "*"
+pylint = "*"
+yapf = "*"
+redhat_osv = {path = "."}
+
+[packages]
+requests = "*"
+setuptools = "*"
+packageurl-python = "*"
+redhat-osv = {file = ".", editable = true}
