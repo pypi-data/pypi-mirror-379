@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+mbu_msoffice_integration/__init__.py
+mbu_msoffice_integration/excel_reader.py
+mbu_msoffice_integration/sharepoint_class.py
+mbu_msoffice_integration.egg-info/PKG-INFO
+mbu_msoffice_integration.egg-info/SOURCES.txt
+mbu_msoffice_integration.egg-info/dependency_links.txt
+mbu_msoffice_integration.egg-info/requires.txt
+mbu_msoffice_integration.egg-info/top_level.txt
