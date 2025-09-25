@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gana"
+version = "1.0.0"
+authors = [
+  { name="Rahul Kakodkar", email="cacodcar@gmail.com" },
+]
+maintainers = [
+  { name="Rahul Kakodkar", email="cacodcar@gmail.com" },
+]
+description = "A barebones mathematical programming package"
+requires-python = ">=3.13"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["modeling", "optimization", "programming", "aml"]
+
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = ["ppopt", "IPython", "numpy", "pandas"]
+[project.optional-dependencies]
+all = ["gurobipy",  "pyomo", "sympy"]
+test = ["coverage", "pytest"]
+docs = [
+    "sphinx",            
+    "sphinx_book_theme",  
+    "nbsphinx",          
+    'sphinx_mdinclude',     
+]
+[project.urls]
+Homepage = "https://github.com/cacodcar/gana"
+Issues = "https://github.com/cacodcar/gana/issues"
