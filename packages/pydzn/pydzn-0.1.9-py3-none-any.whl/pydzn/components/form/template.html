@@ -1,0 +1,11 @@
+<{{ tag }} {{ attrs|safe }}>
+  {% if feedback_pos == 'before' %}
+  <div id="{{ feedback_id }}" class="{{ dzn_feedback }}">{{ feedback|safe }}</div>
+  {% endif %}
+
+  {{ children|safe }}
+
+  {% if feedback_pos != 'before' %}
+  <div id="{{ feedback_id }}" class="{{ dzn_feedback }}">{{ feedback|safe }}</div>
+  {% endif %}
+</{{ tag }}>
