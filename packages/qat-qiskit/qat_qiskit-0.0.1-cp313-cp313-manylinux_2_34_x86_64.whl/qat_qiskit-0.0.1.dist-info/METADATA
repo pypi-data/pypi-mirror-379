@@ -1,0 +1,119 @@
+Metadata-Version: 2.4
+Name: qat-qiskit
+Version: 0.0.1
+Summary: Module qat-qiskit [138716b] - Compiled by Eviden
+Home-page: https://atos.net/en/lp/myqlm
+Author: Eviden Quantum Lab
+Author-email: myqlm@atos.net
+License: Eviden myQLM EULA
+Project-URL: Documentation, https://myqlm.github.io
+Project-URL: Bug Tracker, https://github.com/myQLM/myqlm-issues/issues
+Project-URL: Community, https://myqlmworkspace.slack.com
+Keywords: Quantum,myQLM,QLM,Atos,Eviden
+Platform: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: Other/Proprietary License
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=2.0
+Requires-Dist: qat-comm
+Requires-Dist: qat-core
+Requires-Dist: qat-hardware
+Requires-Dist: qat-lang
+Requires-Dist: qat-quops
+Requires-Dist: qlmaas
+Requires-Dist: qlmaas
+Requires-Dist: qlmaas
+Requires-Dist: qlmaas
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+# qat-qiskit
+
+This Python package contains binders between qiskit 2.0 and a Qaptiva Access server.
+It provides implementations for several qiskit primitives.
+
+
+## Installation
+
+```bash
+pip install qat-qiskit
+```
+
+This command will also install the dependencies `myqlm` and `qlmaas`.
+
+
+## Usage
+
+As an example, we will create a simple Bell pair with `qiskit`.
+
+```python
+from qiskit import QuantumRegister, ClassicalRegister
+from qiskit import QuantumCircuit
+
+q = QuantumRegister(2,'q')
+c = ClassicalRegister(2,'c')
+circuit = QuantumCircuit(q,c)
+circuit.h(q[0])
+circuit.cx(q[0],q[1])
+circuit.measure(q,c)
+```
+
+This circuit can then be submitted, for a sampling job, to a Qaptiva Access server.
+A `QaptivaService` object can be used for listing the available backends, and to get one.
+For this example, we will use the `LinAlg` (Linear Algebra) simulator.
+
+*Note that the code samples below will only work if a connection to a Qaptiva Access server is available and configured.*
+
+
+```python
+from qat.qiskit import QaptivaService, Sampler
+
+service = QaptivaService()
+
+# Print available backends
+for backend in service.backends():
+    print(backend.name)
+# "QutipQPU"
+# "AnalogQPU"
+# ...
+# "LinAlg"
+# ...
+
+# Initialize the Sampler with the LinAlg backend
+backend = service.backend("LinAlg")
+sampler = Sampler(backend)
+
+job = sampler.run([circuit], shots=10)
+# "Submitted a new batch: Job11"
+```
+
+We can then query the job for its status or result.
+The circuit only has a single quantum register, so measured bitstrings can be found in the *register_0* field of the `DataBin`.
+
+```python
+print(job.status())
+# "JobStatus.DONE"
+print(job.result())
+# "PrimitiveResult([SamplerPubResult(data=DataBin(register_0=np.ndarray(<shape=(10,), dtype=<U2>)))], metadata={'single_job': 'False'})"
+print(job.result()[0].data.register_0)
+# "['00' '00' '00' '11' '00' '00' '11' '00' '11' '00']"
+```
+
+
+## License
+
+[myQLM EULA](https://myqlm.github.io/01_getting_started/%3Amyqlm%3Alicense.html#proprietary-part)
