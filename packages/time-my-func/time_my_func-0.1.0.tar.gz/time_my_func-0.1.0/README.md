@@ -1,0 +1,102 @@
+# time_my_func
+
+A lightweight Python decorator for measuring and printing function execution time.  
+It provides a convenient `@timeit()` decorator that works on any function (sync or async) and prints execution time in the most appropriate unit, even if the function raises an exception.
+Supports Python 3.7 and newer (recommended)
+May work in 3.6 if perf_counter_ns() is adjusted to have a fallback.
+
+---
+
+## Installation
+
+```bash
+# Install from PyPI
+pip install time_my_func
+
+# Or install from source
+git clone https://github.com/DeathlyDestiny/function_timer
+cd time_my_func
+pip install .
+
+```
+
+## Usage Synchronous functions
+
+```bash
+from time_my_func import timeit
+import time
+
+@timeit()
+def fast_function():
+    sum(range(100))
+
+@timeit(decimals=5, unit="ms")
+def slow_function():
+    time.sleep(0.123)
+
+fast_function()
+slow_function()
+
+```
+
+## Usage Asynchronous functions
+
+```bash
+import asyncio
+from time_my_func import timeit
+
+@timeit(unit="ms", decimals=4)
+async def async_task():
+    await asyncio.sleep(0.05)
+
+asyncio.run(async_task())
+
+```
+
+## Handling exceptions
+```bash
+import asyncio
+from time_my_func import timeit
+
+@timeit(unit="ms", decimals=4)
+async def async_task():
+    await asyncio.sleep(0.05)
+
+asyncio.run(async_task())
+
+
+## Example Output
+[fast_function] Execution time: 12.345 µs
+[slow_function] Execution time: 123.45678 ms
+[async_task] Execution time: 50.1234 ms
+[failing] Execution time: 0.001 ms
+
+```
+
+## Options
+
+The decorator accepts two optional arguments:
+
+```bash
+
+decimals (int, default = 3)
+Number of decimal places to display.
+
+unit (str, default = "auto")
+Force the time unit. Options:
+
+"auto" → automatically choose the best unit based on elapsed time
+"ns" → nanoseconds
+"us" or "µs" → microseconds
+"ms" → milliseconds
+"s" → seconds
+"m" → minutes
+
+```
+The decorator works for both synchronous and asynchronous functions, and will always print execution time, even if the function raises an exception.
+
+## Contributing
+Contributions are welcome!
+
+## License
+This project is licensed under the MIT License – see the LICENSE file for details.
