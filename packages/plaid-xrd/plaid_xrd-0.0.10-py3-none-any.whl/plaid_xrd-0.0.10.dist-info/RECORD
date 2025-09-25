@@ -1,0 +1,16 @@
+plaid/__init__.py,sha256=4hmW1tq690XGT2jdJx7Yd0eS1YXRu0sG8g2wUS_Cg-Y,858
+plaid/data_containers.py,sha256=i0a_ARXszPtN6LW1ugSMfOQsxwOJDf1lF7xEM5wyJMU,20118
+plaid/dialogs.py,sha256=WFmzs2yOd4Ai2x-waE6AM41z88QhjIqIDY1O6WrI-gc,42771
+plaid/misc.py,sha256=XYXIZhZwg_Qp1Ojbxg-f8AKNPtu5KNWanxySd3C_Na4,736
+plaid/nexus.py,sha256=jVva7WgumMQPfanYXfVcyvH_4RTH2j0j7UXoiiDu4Oc,7180
+plaid/plaid.py,sha256=jwJfOGanIrRuG_MSDYfW99_OyRu2DLWfV89BGMw65Do,80972
+plaid/plot_widgets.py,sha256=52uG8rYFo2pg3Aq_TJEz9CywaEO4Ghx-9I7YGu-JVOw,34217
+plaid/reference.py,sha256=78bpZ506c2H-cyzxc2sUVNaHXh5RvJzvUWL5IygND1A,2396
+plaid/resources.py,sha256=RoUVhHt66s6NZ2-BjE1HRvbCOjEWidi9xS6y3m-c-u4,134506
+plaid/trees.py,sha256=sFjjw-M9N8m2W-e1GhDHDDG_s1jHfkM3NvqfugadYaQ,18275
+plaid_xrd-0.0.10.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+plaid_xrd-0.0.10.dist-info/METADATA,sha256=RoP_GMl17PVMbp4_xW8T3qrgPV7PlPwaJgYoMw83ZK4,4917
+plaid_xrd-0.0.10.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+plaid_xrd-0.0.10.dist-info/entry_points.txt,sha256=ESuR6z4H1T8OIfYvnZy5CXNZYG4KTVBZzfbQwSmujFM,43
+plaid_xrd-0.0.10.dist-info/top_level.txt,sha256=TiC9gFlqzczM43lBKc3ydcz_8cMQ2NfNsHZwgzTkHiM,6
+plaid_xrd-0.0.10.dist-info/RECORD,,
