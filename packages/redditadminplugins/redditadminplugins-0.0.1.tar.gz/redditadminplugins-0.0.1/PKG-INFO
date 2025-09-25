@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: redditadminplugins
+Version: 0.0.1
+Summary: Miscellaneous custom plugins for redditadmin bot
+Project-URL: Homepage, https://github.com/Grod56/reddit-admin-plugins
+Project-URL: Issues, https://github.com/Grod56/reddit-admin-plugins/issues
+Author-email: Grod56 <providenceuniversalstudios@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+Miscellaneous custom plugins for redditadmin bot.
