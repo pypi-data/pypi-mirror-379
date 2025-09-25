@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: programgarden-finance
+Version: 0.1.0
+Summary: 프로그램 동산 운영진이 관리하는 증권사 데이터 오픈소스
+Author: 프로그램동산
+Author-email: coding@programgarden.com
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.10.0,<4.0.0)
+Requires-Dist: programgarden-core (>=0.1.0,<0.2.0)
+Requires-Dist: pydantic (>=2.11.7,<3.0.0)
+Requires-Dist: redis (>=6.4.0,<7.0.0)
+Requires-Dist: requests (>=2.32.4,<3.0.0)
+Requires-Dist: websockets (>=15.0.1,<16.0.0)
+Description-Content-Type: text/markdown
+
+증권사 데이터를 관리
+LS증권사를 대표 증권사로 프로그램 동산이 직접 데이터를 관리하고 있습니다.
+
+타 증권사도 커밋 요청이 가능합니다. 지속적인 업데이트를 하고 있습니다.
