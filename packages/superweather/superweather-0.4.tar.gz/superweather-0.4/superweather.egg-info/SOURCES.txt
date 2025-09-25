@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+superweather/__init__.py
+superweather/main.py
+superweather.egg-info/PKG-INFO
+superweather.egg-info/SOURCES.txt
+superweather.egg-info/dependency_links.txt
+superweather.egg-info/entry_points.txt
+superweather.egg-info/requires.txt
+superweather.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+superweather = superweather.superweather:terminal_mode
