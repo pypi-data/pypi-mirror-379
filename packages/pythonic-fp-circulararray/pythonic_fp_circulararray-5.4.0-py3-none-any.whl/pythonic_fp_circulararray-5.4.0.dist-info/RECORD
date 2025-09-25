@@ -1,0 +1,11 @@
+pythonic_fp/circulararray/__init__.py,sha256=uR0KASmw1Zraz9l3VPbqPm9WUKzWk-0_tUGT0opabzQ,1515
+pythonic_fp/circulararray/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_fp/circulararray/auto.py,sha256=mM5kAZnSo4etgA0uSp05VUMGpIOeKXIoCCQ1C3pIETo,19457
+pythonic_fp/circulararray/auto.pyi,sha256=DegIbRFv66Ws4N1J1dExQ6cQJOTZw-XXUEJHi1OgIBk,1861
+pythonic_fp/circulararray/fixed.py,sha256=VhCWBcE0C8toYqGyd9aKJ1bSJu8sHA46AQGJ7mGxYBE,15700
+pythonic_fp/circulararray/fixed.pyi,sha256=Uk0QnXn3_q_6urXeRFEMxsL0gS-3Xa4UsyDRVXk8YoY,1648
+pythonic_fp/circulararray/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_fp_circulararray-5.4.0.dist-info/licenses/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+pythonic_fp_circulararray-5.4.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+pythonic_fp_circulararray-5.4.0.dist-info/METADATA,sha256=x6ZQX_ItPF3ndJZFS15JOOqKPK01yM6YEf0Y3e9PsK8,2761
+pythonic_fp_circulararray-5.4.0.dist-info/RECORD,,
