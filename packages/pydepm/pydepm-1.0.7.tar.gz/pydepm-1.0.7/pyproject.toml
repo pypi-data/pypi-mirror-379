@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydepm"
+version = "1.0.7"
+description = "PyDepM — Python Dependency Manager"
+readme = "README.md"
+authors = [
+  { name = "ZtaDev" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+  "typer>=0.12.3",
+  "rich>=13.7.0",
+  "packaging>=24.0",
+  "build>=1.2.1",
+  "twine>=5.0.0",
+  "pip-audit>=2.9.0",
+  "pyinstaller>=6.0.0",
+  "pytest>=8.3.4",
+  "toml>=0.10.2"
+]
+
+[project.scripts]
+pydep = "pydepm.cli:app"
+pydepx = "pydepm.pydepx:main"
+
+[project.urls]
+Homepage = "https://github.com/ZtaMDev/PyDepM"
+Repository = "https://github.com/ZtaMDev/PyDepM.git"
+Issues = "https://github.com/ZtaMDev/PyDepM/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
