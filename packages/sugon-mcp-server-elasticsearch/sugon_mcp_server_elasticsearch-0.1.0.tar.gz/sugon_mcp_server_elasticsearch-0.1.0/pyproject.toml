@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sugon-mcp-server-elasticsearch"
+version = "0.1.0"
+description = "MCP server for core Elasticsearch features"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [
+    { name = "sugoncloud" }
+]
+maintainers = [
+    { name = "sugoncloud" }
+]
+keywords = ["elasticsearch", "mcp", "model-context-protocol", "search", "server"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Database :: Database Engines/Servers",
+]
+dependencies = [
+    "elasticsearch>=8.0.0,<9.0.0",
+    "mcp>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "click>=8.0.0",
+    "aiohttp>=3.8.0",
+    "python-dotenv>=1.0.0",
+    "pyjson5>=1.6.0",
+    "structlog>=23.0.0",
+    "anyio>=4.0.0",
+    "uvicorn>=0.24.0",
+    "starlette>=0.27.0",
+]
+
+
+[project.scripts]
+elasticsearch-mcp-server = "elasticsearch_mcp_server.cli:cli_main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/elasticsearch_mcp_server"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/README.md",
+    "/LICENSE", 
+    "/pyproject.toml",
+]
+
+[dependency-groups]
+dev = [
+    "twine>=6.2.0",
+]
