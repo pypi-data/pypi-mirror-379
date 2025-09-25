@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: prints_utils
+Version: 0.4.0
+Summary: Librería de utilidades para prints en consola con colores
+Author-email: Edinson Tunjano <juanmadiaz108@gmail.com>
+License: MIT
+Keywords: prints,colores,consola,utilidades
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlalchemy
+Dynamic: license-file
+
+# Prints
+
+Bienvenido a la librería **prints**.
+
+## Descripción
+
+Esta librería proporciona utilidades para mejorar y personalizar la impresión de mensajes en la consola, facilitando el desarrollo y la depuración de tus proyectos.
+
+## Características
+
+- Funciones de impresión personalizadas
+- Soporte para colores y estilos
+- Formateo avanzado de mensajes
+
+## Instalación
+
+```bash
+pip install prints-utils
+```
+
+## Uso básico
+
+```python
+from prints import print_info, print_error
+
+print_info("Este es un mensaje informativo.")
+print_error("Este es un mensaje de error.")
+```
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request.
+
+## Licencia
+
+MIT
