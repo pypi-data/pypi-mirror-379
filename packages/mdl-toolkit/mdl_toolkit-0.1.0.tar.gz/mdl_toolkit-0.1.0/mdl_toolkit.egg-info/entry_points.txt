@@ -1,0 +1,2 @@
+[console_scripts]
+mdl-toolkit = mdl_toolkit.cli:main

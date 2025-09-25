@@ -1,0 +1,12 @@
+datasets[audio]>=3.6.0
+peft>=0.16.0
+pydantic>=2.11.7
+pydantic-settings[yaml]>=2.10.1
+transformers[torch,torch-speech]>=4.56.2
+typing-extensions>=4.14.1
+
+[modelscope]
+modelscope>=1.29.1
+
+[quantization]
+bitsandbytes>=0.47.0
