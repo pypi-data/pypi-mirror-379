@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: easy-utility
+Version: 0.1.1
+Summary: Utilities for text detection & document processing 
+Author-email: Rishabh <rishabhislive@gmail.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: google-auth>=2.40.3
+Requires-Dist: google-cloud-documentai>=3.6.0
+Requires-Dist: google-cloud-storage>=3.4.0
+Requires-Dist: google-cloud-vision>=3.10.2
