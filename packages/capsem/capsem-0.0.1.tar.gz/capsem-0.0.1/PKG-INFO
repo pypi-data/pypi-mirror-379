@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: capsem
+Version: 0.0.1
+Summary: CAPSEM: Contextual Agent Privacy and Security Manager
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown

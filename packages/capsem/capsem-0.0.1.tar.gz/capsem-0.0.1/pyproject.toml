@@ -1,0 +1,9 @@
+[project]
+name = "capsem"
+version = "0.0.1"
+description = "CAPSEM: Contextual Agent Privacy and Security Manager"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+include = ["capsem*"]

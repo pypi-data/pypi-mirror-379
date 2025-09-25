@@ -1,0 +1,6 @@
+pyproject.toml
+capsem/__init__.py
+capsem.egg-info/PKG-INFO
+capsem.egg-info/SOURCES.txt
+capsem.egg-info/dependency_links.txt
+capsem.egg-info/top_level.txt
