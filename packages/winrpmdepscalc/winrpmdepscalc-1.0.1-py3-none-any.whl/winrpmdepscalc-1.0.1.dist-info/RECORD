@@ -1,0 +1,13 @@
+winrpmdepscalc/__init__.py,sha256=BAO40Ju6IvodbKTn7d9MzM4tHMJC3ZM0wQdY4yGAAno,586
+winrpmdepscalc/cli.py,sha256=2WK1fm97-0pXltfgquQRX28RTHhHCh1S9x6CZ3UGLpY,4778
+winrpmdepscalc/config.py,sha256=0Y0aBDRZvVKm4LvjLkGMYXvw8zj2Ec8DNsGvHttxrWs,1829
+winrpmdepscalc/downloader.py,sha256=AtpDyDL-8hdoMg8taDN9D0B21lpMuVddS2hk6c2MYR8,3199
+winrpmdepscalc/metadata_manager.py,sha256=DeBDXKmk-ouovbGUp55T8ev8_IooR2RYTKusR6wZy0M,8520
+winrpmdepscalc/operations.py,sha256=zZflEHjVxSOn4PJ7O_PeA2pBZyiOCCTZJbZrwtwKo2E,13896
+winrpmdepscalc/utils.py,sha256=pm7EQFvl8yzU58n2huo1u5Vm1juRHk5WqrZrxUUgXyc,918
+winrpmdepscalc-1.0.1.dist-info/licenses/LICENSE,sha256=k2Ip1SC9mWJmYNr5yt8tO55zuhiJ1iYvDlNjSayXgBk,475
+winrpmdepscalc-1.0.1.dist-info/METADATA,sha256=BBkyZofq120qfTw2OohW5owOp4PuX0v1DxLirSQ_Ggk,612
+winrpmdepscalc-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+winrpmdepscalc-1.0.1.dist-info/entry_points.txt,sha256=TuOA50fIQeDKN2scPetNv2MS34oxpvU74sHcCj0I2bs,59
+winrpmdepscalc-1.0.1.dist-info/top_level.txt,sha256=D_jOAItJPrrCzvWc5oc8rrz019sMs7SYoH0jzaApL78,15
+winrpmdepscalc-1.0.1.dist-info/RECORD,,
