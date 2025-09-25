@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: MoxQtRadar
+Version: 0.0.1rc3
+Summary: MoxQtRadar - Python tools
+Author: MorganChen
+Description-Content-Type: text/markdown
+
+# MoxQtRadar
+
+MoxQtRadar is a library for Qt Radar UI Operation
+
+## 📌 Features
+
+
+## 🛠️ Supported Tools
+- `UniRadar`: 
+
+## 📦 Installation
+```bash
+pip install MoxQtRadar
+pip install --upgrade MoxQtRadar
+```
+
+## 🚀 Usage
+```bash
+```
+
+## 📜 version
+
+
+🧪 0.0.1    1st version
