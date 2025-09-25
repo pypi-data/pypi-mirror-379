@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+fastapi_bgtasks_dashboard/__init__.py
+fastapi_bgtasks_dashboard/core.py
+fastapi_bgtasks_dashboard/dashboard.py
+fastapi_bgtasks_dashboard/route.py
+fastapi_bgtasks_dashboard/utils.py
+fastapi_bgtasks_dashboard.egg-info/PKG-INFO
+fastapi_bgtasks_dashboard.egg-info/SOURCES.txt
+fastapi_bgtasks_dashboard.egg-info/dependency_links.txt
+fastapi_bgtasks_dashboard.egg-info/requires.txt
+fastapi_bgtasks_dashboard.egg-info/top_level.txt
