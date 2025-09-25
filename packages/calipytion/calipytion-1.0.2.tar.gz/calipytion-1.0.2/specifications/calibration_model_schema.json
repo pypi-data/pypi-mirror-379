@@ -1,0 +1,363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/FAIRChemistry/CaliPytion",
+  "title": "Calibration",
+  "type": "object",
+  "description": "The Calibration contains information on the molecule for which the calibration was performed, its measurements alongside measurement conditions, and the fitted calibration model.",
+  "properties": {
+    "calibration_id": {
+      "title": "calibration_id",
+      "type": "string",
+      "description": "Unique identifier of the calibration."
+    },
+    "molecule_id": {
+      "title": "molecule_id",
+      "type": "string",
+      "description": "Short ID how the molecule should be referenced in equations. E.g., s1."
+    },
+    "molecule_name": {
+      "title": "molecule_name",
+      "type": "string",
+      "description": "Name of the molecule."
+    },
+    "ph": {
+      "title": "ph",
+      "type": "number",
+      "description": "pH value of the solution."
+    },
+    "pubchem_cid": {
+      "title": "pubchem_cid",
+      "type": "integer",
+      "description": "PubChem Compound Identifier."
+    },
+    "result": {
+      "title": "result",
+      "type": "object",
+      "description": "The model that was used for concentration determination.",
+      "$ref": "#/$defs/CalibrationModel"
+    },
+    "retention_time": {
+      "title": "retention_time",
+      "type": "number",
+      "description": "The retention time of the molecule in minutes."
+    },
+    "samples": {
+      "title": "samples",
+      "type": "array",
+      "description": "Measured signal at a given concentration of the molecule.",
+      "items": {
+        "$ref": "#/$defs/Sample"
+      }
+    },
+    "temp_unit": {
+      "title": "temp_unit",
+      "type": "object",
+      "description": "Temperature unit.",
+      "$ref": "#/$defs/UnitDefinitionAnnot"
+    },
+    "temperature": {
+      "title": "temperature",
+      "type": "number",
+      "description": "Temperature during calibration."
+    },
+    "wavelength": {
+      "title": "wavelength",
+      "type": "number",
+      "description": "Detection wavelength in nm."
+    }
+  },
+  "$defs": {
+    "BaseUnit": {
+      "title": "BaseUnit",
+      "type": "object",
+      "description": "Represents a base unit in the unit definition.",
+      "properties": {
+        "exponent": {
+          "title": "exponent",
+          "type": "integer",
+          "description": "Exponent of the base unit in the unit definition."
+        },
+        "kind": {
+          "title": "kind",
+          "description": "Kind of the base unit (e.g., meter, kilogram, second).",
+          "$ref": "#/$defs/UnitType"
+        },
+        "multiplier": {
+          "title": "multiplier",
+          "type": "number",
+          "description": "Multiplier of the base unit in the unit definition."
+        },
+        "scale": {
+          "title": "scale",
+          "type": "number",
+          "description": "Scale of the base unit in the unit definition."
+        }
+      },
+      "required": [
+        "kind",
+        "exponent"
+      ],
+      "additionalProperties": false
+    },
+    "CalibrationModel": {
+      "title": "CalibrationModel",
+      "type": "object",
+      "description": "The CalibrationModel describes the calibration model fitted to the calibration data. The calibration model consists of the signal law and equation parameters. The calibration range defines the concentration and signal bounds in which the calibration model is valid.",
+      "properties": {
+        "calibration_range": {
+          "title": "calibration_range",
+          "type": "object",
+          "description": "Concentration and signal bounds in which the calibration model is valid.",
+          "$ref": "#/$defs/CalibrationRange"
+        },
+        "molecule_id": {
+          "title": "molecule_id",
+          "type": "string",
+          "description": "ID of the molecule like ChEBI ID."
+        },
+        "name": {
+          "title": "name",
+          "type": "string",
+          "description": "Name of the calibration model."
+        },
+        "parameters": {
+          "title": "parameters",
+          "type": "array",
+          "description": "Parameters of the calibration equation.",
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          }
+        },
+        "signal_law": {
+          "title": "signal_law",
+          "type": "string",
+          "description": "Law describing the signal intensity as a function of the concentration."
+        },
+        "statistics": {
+          "title": "statistics",
+          "type": "object",
+          "description": "Fit statistics of the calibration model.",
+          "$ref": "#/$defs/FitStatistics"
+        },
+        "was_fitted": {
+          "title": "was_fitted",
+          "type": "boolean",
+          "default": false,
+          "description": "Indicates if the model was fitted to the data."
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "CalibrationRange": {
+      "title": "CalibrationRange",
+      "type": "object",
+      "description": "The CalibrationRange defines the concentration and signal bounds in which the calibration model is valid.",
+      "properties": {
+        "conc_lower": {
+          "title": "conc_lower",
+          "type": "number",
+          "description": "Lower concentration bound of the model."
+        },
+        "conc_upper": {
+          "title": "conc_upper",
+          "type": "number",
+          "description": "Upper concentration bound of the model."
+        },
+        "signal_lower": {
+          "title": "signal_lower",
+          "type": "number",
+          "description": "Lower signal bound of the model."
+        },
+        "signal_upper": {
+          "title": "signal_upper",
+          "type": "number",
+          "description": "Upper signal bound of the model."
+        }
+      },
+      "required": [
+        "conc_lower",
+        "conc_upper",
+        "signal_lower",
+        "signal_upper"
+      ],
+      "additionalProperties": false
+    },
+    "FitStatistics": {
+      "title": "FitStatistics",
+      "type": "object",
+      "description": "The  contains statistical parameters of the fitted calibration model.",
+      "properties": {
+        "aic": {
+          "title": "aic",
+          "type": "number",
+          "description": "Akaike information criterion."
+        },
+        "bic": {
+          "title": "bic",
+          "type": "number",
+          "description": "Bayesian information criterion."
+        },
+        "r2": {
+          "title": "r2",
+          "type": "number",
+          "description": "Coefficient of determination."
+        },
+        "rmsd": {
+          "title": "rmsd",
+          "type": "number",
+          "description": "Root mean square deviation between model and measurement data."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Parameter": {
+      "title": "Parameter",
+      "type": "object",
+      "description": "A Parameter describes a parameter's value, standard error, and bounds, which is part of the signal law.",
+      "properties": {
+        "init_value": {
+          "title": "init_value",
+          "type": "number",
+          "description": "Initial value of the parameter."
+        },
+        "lower_bound": {
+          "title": "lower_bound",
+          "type": "number",
+          "description": "Lower bound of the parameter before fitting."
+        },
+        "stderr": {
+          "title": "stderr",
+          "type": "number",
+          "description": "1-sigma standard error of the parameter."
+        },
+        "symbol": {
+          "title": "symbol",
+          "type": "string",
+          "description": "Name of the parameter."
+        },
+        "upper_bound": {
+          "title": "upper_bound",
+          "type": "number",
+          "description": "Upper bound of the parameter before fitting."
+        },
+        "value": {
+          "title": "value",
+          "type": "number",
+          "description": "Value of the parameter."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Sample": {
+      "title": "Sample",
+      "type": "object",
+      "description": "A Sample describes individual measured signal-concentration pairs of a molecule.",
+      "properties": {
+        "conc_unit": {
+          "title": "conc_unit",
+          "type": "object",
+          "description": "Concentration unit.",
+          "$ref": "#/$defs/UnitDefinitionAnnot"
+        },
+        "concentration": {
+          "title": "concentration",
+          "type": "number",
+          "description": "Concentration of the molecule."
+        },
+        "signal": {
+          "title": "signal",
+          "type": "number",
+          "description": "Measured signals at a given concentration of the molecule."
+        }
+      },
+      "required": [
+        "concentration",
+        "conc_unit",
+        "signal"
+      ],
+      "additionalProperties": false
+    },
+    "UnitDefinitionAnnot": {
+      "title": "UnitDefinitionAnnot",
+      "type": "object",
+      "description": "Represents a unit definition that is based on the SI unit system.",
+      "properties": {
+        "base_units": {
+          "title": "base_units",
+          "type": "array",
+          "description": "Base units that define the unit.",
+          "items": {
+            "$ref": "#/$defs/BaseUnit"
+          }
+        },
+        "id": {
+          "title": "id",
+          "type": "string",
+          "description": "Unique identifier of the unit definition."
+        },
+        "name": {
+          "title": "name",
+          "type": "string",
+          "description": "Common name of the unit definition."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "UnitType": {
+      "title": "UnitType",
+      "type": "string",
+      "enum": [
+        "ampere",
+        "avogadro",
+        "becquerel",
+        "candela",
+        "celsius",
+        "coulomb",
+        "dimensionless",
+        "farad",
+        "gram",
+        "gray",
+        "henry",
+        "hertz",
+        "item",
+        "joule",
+        "katal",
+        "kelvin",
+        "kilogram",
+        "litre",
+        "lumen",
+        "lux",
+        "metre",
+        "mole",
+        "newton",
+        "ohm",
+        "pascal",
+        "radian",
+        "second",
+        "siemens",
+        "sievert",
+        "steradian",
+        "tesla",
+        "volt",
+        "watt",
+        "weber"
+      ]
+    }
+  },
+  "required": [
+    "calibration_id",
+    "molecule_id",
+    "pubchem_cid",
+    "molecule_name",
+    "ph",
+    "temperature",
+    "temp_unit"
+  ],
+  "additionalProperties": false
+}
