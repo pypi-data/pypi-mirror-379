@@ -1,0 +1,106 @@
+Metadata-Version: 2.4
+Name: dbxparams
+Version: 0.1.17
+Summary: Manage Databricks notebook parameters as Python classes
+Author-email: Víctor Ferron <victordevaut@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Víctor Ferrón Álvarez
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# dbxparams
+
+[![PyPI version](https://badge.fury.io/py/dbxparams.svg)](https://pypi.org/project/dbxparams/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/dbxparams.svg)](https://pypi.org/project/dbxparams/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A lightweight library for managing **Databricks notebook parameters** with type safety, defaults, and automatic widget creation.
+
+---
+
+## ✨ Features
+
+- Auto-create and populate **Databricks widgets**
+- Type-safe parameter casting (`int`, `float`, `bool`, `date`, `datetime`)
+- Support for **defaults dict** and class defaults
+- Custom error handling: `MissingParameterError`, `InvalidTypeError`
+- Cleaner, more maintainable notebooks (no more repetitive `dbutils.widgets.get`!)
+
+---
+
+## 📦 Installation
+
+```bash
+pip install dbxparams
+```
+
+---
+
+## 🚀 Quick Start
+
+```python
+from dbxparams import NotebookParams
+
+class MyParams(NotebookParams):
+    market: str              # required
+    env: str = "dev"         # optional with default
+    retries: int = 3         # optional with default
+
+# Pass dbutils to auto-create widgets and populate values
+params = MyParams(dbutils)
+
+print(params.market)   # Read from widget
+print(params.env)      # Uses default "dev" if not set
+print(params.retries)  # Uses default 3
+```
+
+---
+
+## 🔒 Error Handling
+
+- **MissingParameterError** → Raised when a required parameter is missing
+- **InvalidTypeError** → Raised when a value cannot be cast to the expected type
+
+Example:
+```python
+class TypedParams(NotebookParams):
+    threshold: float
+    active: bool
+
+# If "threshold" widget is "not-a-float" → InvalidTypeError
+```
+
+---
+
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Copyright (c) 2025 Víctor Ferrón Álvarez
+https://vicferron.github.io/
