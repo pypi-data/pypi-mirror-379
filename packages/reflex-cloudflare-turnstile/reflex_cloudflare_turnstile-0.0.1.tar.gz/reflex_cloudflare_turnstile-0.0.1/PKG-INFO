@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: reflex-cloudflare-turnstile
+Version: 0.0.1
+Summary: Reflex custom component cloudflare-turnstile
+Author-email: Tamilselvan K <tamilselvan@codeplugtech.in>
+License: Apache-2.0
+Project-URL: homepage, https://github.com/codeplugtech/reflex-cloudflare-turnstile
+Keywords: reflex,reflex-custom-components
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: reflex>=0.8.12
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# cloudflare-turnstile
+
+A Reflex custom component cloudflare-turnstile.
+
+## Installation
+
+```bash
+pip install reflex-cloudflare-turnstile
+```
