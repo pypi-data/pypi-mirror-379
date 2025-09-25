@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the dibisoplot package.
+# Romain Thomas <contact@romainthomas.net>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-24 17:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Romain Thomas <contact@romainthomas.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: biso/biso.py:310
+msgid ""
+"The data processing was limited by the maximum number of downloadable "
+"entities ("
+msgstr ""
+"Le traitement des données a été limité par le nombre maximal d'entités "
+"téléchargeables ("
+
+#: biso/biso.py:312
+msgid "). Data can be missing or values can be lower than the real values. "
+msgstr ""
+"). Des données peuvent être manquantes ou les valeurs peuvent être "
+"inférieures aux valeurs réelles. "
+
+#: biso/biso.py:317
+msgid "The number of displayed projects was limited to "
+msgstr "Le nombre de projets affichés a été limité à "
+
+#: biso/biso.py:319
+msgid "The number of displayed chapters was limited to "
+msgstr "Le nombre de chapitres affichés a été limité à "
+
+#: biso/biso.py:322
+msgid "The number of displayed collaborations was limited to "
+msgstr "Le nombre de collaborations affichées a été limité à "
+
+#: biso/biso.py:324
+msgid "The number of displayed conferences was limited to "
+msgstr "Le nombre de conférences affichées a été limité à "
+
+#: biso/biso.py:326
+msgid "The number of displayed journals was limited to "
+msgstr "Le nombre de revues affichées a été limité à "
+
+#: biso/biso.py:328
+msgid "The number of displayed work types was limited to "
+msgstr "Le nombre de types de travaux affichés a été limité à "
+
+#: biso/biso.py:330
+msgid "The number of displayed entities was limited to "
+msgstr "Le nombre d'entités affichées a été limité à "
+
+#: biso/biso.py:332
+msgid ". In the API, "
+msgstr ". Dans l'API, "
+
+#: biso/biso.py:335
+msgid " projects were found."
+msgstr " projets ont été trouvés."
+
+#: biso/biso.py:337
+msgid " chapters were found."
+msgstr " chapitres ont été trouvés."
+
+#: biso/biso.py:340
+msgid " collaborations were found."
+msgstr " collaborations ont été trouvées."
+
+#: biso/biso.py:342
+msgid " conferences were found."
+msgstr " conférences ont été trouvées."
+
+#: biso/biso.py:344
+msgid " journals were found."
+msgstr " revues ont été trouvées."
+
+#: biso/biso.py:346
+msgid " work types were found."
+msgstr " types de travaux ont été trouvés."
+
+#: biso/biso.py:348
+msgid " entities were found."
+msgstr " entités ont été trouvées."
+
+#: biso/biso.py:354 biso/biso.py:364 biso/biso.py:435
+msgid "No data"
+msgstr "Pas de données"
+
+#: biso/biso.py:359
+msgid "Error while making the plot"
+msgstr "Erreur lors de la création du graphique"
+
+#: biso/biso.py:369
+msgid "Error while making the table"
+msgstr "Erreur lors de la création du tableau"
+
+#: biso/biso.py:489 biso/biso.py:506
+msgid "Only"
+msgstr "Seulement"
+
+#: biso/biso.py:489 biso/biso.py:506
+msgid "displayed lines out of"
+msgstr "lignes affichées sur"
+
+#: biso/biso.py:856 biso/biso.py:930 biso/biso.py:1180 biso/biso.py:1181
+#: biso/biso.py:1182 biso/biso.py:1183 biso/biso.py:1422 biso/biso.py:1515
+#: biso/biso.py:1571 biso/biso.py:1637 biso/biso.py:1638 biso/biso.py:1639
+#: biso/biso.py:1641 biso/biso.py:1798 biso/biso.py:1799 biso/biso.py:1800
+#: biso/biso.py:1802 biso/biso.py:1898 biso/biso.py:2029 biso/biso.py:2154
+#: biso/biso.py:2202 biso/biso.py:2263
+msgid "Error"
+msgstr "Erreur"
+
+#: biso/biso.py:917
+msgid "Chapter title"
+msgstr "Titre du chapitre"
+
+#: biso/biso.py:918
+msgid "Book title"
+msgstr "Titre du livre"
+
+#: biso/biso.py:919 biso/biso.py:1825
+msgid "Publisher"
+msgstr "Éditeur"
+
+#: biso/biso.py:950
+msgid "List of chapters entered in HAL"
+msgstr "Liste des chapitres renseignés dans HAL"
+
+#: biso/biso.py:1471
+msgid "Unspecified country"
+msgstr "Pays non spécifié"
+
+#: biso/biso.py:1502
+msgid "Unspecified conference"
+msgstr "Conférence non spécifiée"
+
+#: biso/biso.py:1739 biso/biso.py:1768 biso/biso.py:1775
+msgid "Unspecified journal"
+msgstr "Revue non spécifiée"
+
+#: biso/biso.py:1740
+msgid "Unspecified publisher"
+msgstr "Éditeur non spécifié"
+
+#: biso/biso.py:1824
+msgid "Journal"
+msgstr "Revue"
+
+#: biso/biso.py:1826
+msgid "Number of works"
+msgstr "Nombre de travaux"
+
+#: biso/biso.py:1827
+msgid "Is open access on the journal"
+msgstr "Est en accès ouvert sur le journal"
+
+#: biso/biso.py:1828
+msgid "Is open access on a repository"
+msgstr "Est en accès ouvert sur une archive"
+
+#: biso/biso.py:1829
+msgid "Paid APC"
+msgstr "APC payés"
+
+#: biso/biso.py:1835
+msgid "List of journals, publishers, open access status and paid APC"
+msgstr ""
+"Liste des revues, des éditeurs, des statuts d'accès ouvert et des APC payés"
+
+#: biso/biso.py:1836
+msgid "From the list of publications in HAL and the data of the BSO"
+msgstr "D'après la liste des publications dans HAL et les données du BSO"
+
+#: biso/biso.py:2051
+msgid "Full text in HAL"
+msgstr "TI dans HAL"
+
+#: biso/biso.py:2052
+msgid "OA outside HAL"
+msgstr "OA hors HAL"
+
+#: biso/biso.py:2053
+msgid "Closed access"
+msgstr "Accès fermé"
+
+#~ msgid "Chapters list"
+#~ msgstr "Liste des chapitres"
