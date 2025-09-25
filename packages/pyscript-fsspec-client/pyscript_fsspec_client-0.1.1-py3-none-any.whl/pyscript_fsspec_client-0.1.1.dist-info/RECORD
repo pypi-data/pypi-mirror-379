@@ -1,0 +1,8 @@
+pyscript_fsspec_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyscript_fsspec_client/_version.py,sha256=lFB9nR4WN0iXcp5UpfmTfw1Z2jWBDmClLEWF046NHmc,171
+pyscript_fsspec_client/client.py,sha256=d4LZ85Qpzsdd6hbTXL59YiYZCATXjFBX0REkmKwKjh0,3304
+pyscript_fsspec_client/io.py,sha256=ZHomXlMxmlxVgj3QwO0-lVRDH_QfwQZiJtjhm3V6xTU,739
+pyscript_fsspec_client-0.1.1.dist-info/METADATA,sha256=2MtSUiA0lUHJ-gZyI_yo9dd268RUEDUZvo78QtZV5cg,3265
+pyscript_fsspec_client-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyscript_fsspec_client-0.1.1.dist-info/licenses/LICENSE,sha256=m4PGWPwc3-2-qGBZGryAi3NmpPRWsrbp_1RlmiA4fz0,1535
+pyscript_fsspec_client-0.1.1.dist-info/RECORD,,
