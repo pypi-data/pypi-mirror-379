@@ -1,0 +1,2 @@
+[console_scripts]
+abstractcore-server = abstractllm.server.cli:serve
