@@ -1,0 +1,16 @@
+oauthlib>=3.2.2
+pyramid
+requests_oauthlib>=2.0.0
+requests
+typing_extensions
+
+[testing]
+pyramid_formencode_classic>=0.10.0
+pyramid_mako
+pyramid_tm
+pyramid
+pytest
+responses
+sqlalchemy>2.0
+webtest
+zope.sqlalchemy
