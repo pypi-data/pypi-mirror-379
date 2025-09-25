@@ -1,0 +1,2 @@
+[console_scripts]
+harmonizeds-cli = harmonize_ds.cli:cli
