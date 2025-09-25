@@ -1,0 +1,17 @@
+libonvif/__init__.py,sha256=tAjFGJYa1cs-Ct7ZYiFRBVxfLlp0Bbbj_jUi1DS12WE,575
+libonvif/ld-linux-x86-64.so.2,sha256=XattKeQOpyPLWQF6UrU9c3UYYooona6gE5WLGNdUFYo,243160
+libonvif/libc.so.6,sha256=UuZlRyqgn-YmuboURUtBMbI_MWcaejBnl72rdh-_SPA,2275456
+libonvif/libgcc_s.so.1,sha256=iq3m3wMB-M5kxcZxx99D3TZ1zvLteEhuj0qyVED6M6E,131392
+libonvif/libicudata.so.70,sha256=76FEQTJeYflYnx_9aiG2hKkfMBwQfykZ5jtmQmXd7Hw,29479648
+libonvif/libicuuc.so.70,sha256=OiiMhSgT8LmdLDrq7NtsFLCcmn5klBYMyLj1YQ0mZgE,2240408
+libonvif/liblzma.so.5,sha256=uf2-8_wYPVksRVZlcK65F-gm5liIoL_SgVU2f35eVYQ,176296
+libonvif/libm.so.6,sha256=-fu-WNy94GKPKr_voB_4hh9jAezLka5aQCX6ILFiBus,962856
+libonvif/libonvif.cpython-310-x86_64-linux-gnu.so,sha256=m3XDTzTZYmRI9YEb2NT-2k2AWJZIMV98Z9A1rj_Fkno,1017216
+libonvif/libstdc++.so.6,sha256=alrQ_G5wPYhpEndL8ZzmY9E6JNr0UBJpTl8GvTXvx0A,2600304
+libonvif/libxml2.so.2,sha256=6HlArzV5mjAzeclJQowGsxhc2SzUXEtzn1GzA6WqyII,2021360
+libonvif/libz.so.1,sha256=FBSHr9TrqdLsTBBdPAljqfTsEu3O3BGNNvNvD_5Ggwg,113536
+libonvif-3.2.8.dist-info/licenses/LICENSE,sha256=kqdZ7A_r3kdQghc2u95kKjuDXAYE_IG-5i-eQo-GmB8,27028
+libonvif-3.2.8.dist-info/METADATA,sha256=qu9P878k9w2kuO1eRmsNc_NowU81qDOEvQF4QevOSy8,2779
+libonvif-3.2.8.dist-info/WHEEL,sha256=0-G7woG4LgutcYzUGJCOYFgoh749-FtfhSMeIPLVGS0,104
+libonvif-3.2.8.dist-info/top_level.txt,sha256=pf0figrDNi5Rdxv3hFdJtMFBoK_L2tx3QTde9_mxMrA,9
+libonvif-3.2.8.dist-info/RECORD,,
