@@ -1,0 +1,2 @@
+[console_scripts]
+itr = itr.cli.main:main
