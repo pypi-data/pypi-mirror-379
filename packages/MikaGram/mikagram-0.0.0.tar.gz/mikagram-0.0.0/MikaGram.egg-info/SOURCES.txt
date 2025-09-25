@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+MikaGram.egg-info/PKG-INFO
+MikaGram.egg-info/SOURCES.txt
+MikaGram.egg-info/dependency_links.txt
+MikaGram.egg-info/top_level.txt
+mikagram/__init__.py

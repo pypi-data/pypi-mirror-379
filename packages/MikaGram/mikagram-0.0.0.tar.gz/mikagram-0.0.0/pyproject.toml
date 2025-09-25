@@ -1,0 +1,7 @@
+[project]
+name = "MikaGram"
+version = "0.0.0"
+description = "Reserved"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
