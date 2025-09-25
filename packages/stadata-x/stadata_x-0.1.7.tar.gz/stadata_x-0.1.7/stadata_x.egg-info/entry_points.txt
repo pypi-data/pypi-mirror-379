@@ -1,0 +1,2 @@
+[console_scripts]
+stadata-x = stadata_x.main:run
