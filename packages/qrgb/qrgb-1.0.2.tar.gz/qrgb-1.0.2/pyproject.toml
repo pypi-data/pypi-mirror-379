@@ -1,0 +1,57 @@
+[project]
+name = "qrgb"
+version = "1.0.2"
+description = "Multi-color QR codes that store 3x more data using RGB channels"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "Eli McRae", email = "shyft@shyft.us"}
+]
+license = {text = "MIT"}
+keywords = ["qr", "qrcode", "rgb", "color", "encoding"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11", 
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pillow",
+    "numpy",
+    "qrcode",
+    "pyzbar",
+    "typer",
+    "rich",
+    "gunicorn>=23.0.0",
+    "flask",
+    "werkzeug",
+]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/shyftxero/qrgb"
+Repository = "https://github.com/shyftxero/qrgb"
+Issues = "https://github.com/shyftxero/qrgb/issues"
+
+[project.scripts]
+qrgb = "qrgb.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qrgb"]
