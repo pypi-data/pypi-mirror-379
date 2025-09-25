@@ -1,0 +1,15 @@
+beaver/__init__.py,sha256=qyEzF1Os7w4b4Hijgz0Y0R4zTrRBrHIGT1mEkZFl2YM,101
+beaver/blobs.py,sha256=5yVDzWyqi6Fur-2r0gaeIjEKj9fUPXb9hPulCTknJJI,3355
+beaver/channels.py,sha256=jKL1sVLOe_Q_pP0q1-iceZbPe8FOi0EwqJtOMOe96f4,8675
+beaver/collections.py,sha256=SZcaZnhcTpKb2OfpZOpFiVxh4-joYAJc6U98UeIhMuU,24247
+beaver/core.py,sha256=xoWqmumhm969UPwzqb40Tl--KSqumMN4tyP_WVfu8GQ,11980
+beaver/dicts.py,sha256=1BQ9A_cMkJ7l5ayWbDG-4Wi3WtQ-9BKd7Wj_CB7dGlU,5410
+beaver/lists.py,sha256=0LT2XjuHs8pDgvW48kk_lfVc-Y-Ulmym0gcVWRESPtA,9708
+beaver/queues.py,sha256=SFu2180ONotnZOcYp1Ld5d8kxzYxaOlgDdcr70ZoBL8,3641
+beaver/types.py,sha256=65rDdj97EegghEkKCNjI67bPYtTTI_jyB-leHdIypx4,1249
+beaver/vectors.py,sha256=j7RL2Y_xMAF2tPTi6E2LdJqZerSQXlnEQJOGZkefTsA,18358
+beaver_db-0.13.0.dist-info/licenses/LICENSE,sha256=1xrIY5JnMk_QDQzsqmVzPIIyCgZAkWCC8kF2Ddo1UT0,1071
+beaver_db-0.13.0.dist-info/METADATA,sha256=zGcAeV9HSyTaAuQO0YYEzB7SfqJeRVjR3tBoX3HPiaY,14928
+beaver_db-0.13.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+beaver_db-0.13.0.dist-info/top_level.txt,sha256=FxA4XnX5Qm5VudEXCduFriqi4dQmDWpQ64d7g69VQKI,7
+beaver_db-0.13.0.dist-info/RECORD,,
