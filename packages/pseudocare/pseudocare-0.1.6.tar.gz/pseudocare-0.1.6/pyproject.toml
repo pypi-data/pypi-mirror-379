@@ -1,0 +1,38 @@
+[project]
+name = "pseudocare"
+version = "0.1.6"
+authors = [
+    { name="Youssouf Anis DAHLOUK", email="ydahlouk@chu-reims.fr" },
+    { name="Rudy MERIEUX", email="rmerieux@chu-reims.fr" },
+    { name="Seydou KANE", email="skane@chu-reims.fr" },
+]
+description = "Pseudonymization of medical reports using a named entity recognition model and the Faker library"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "edsnlp[ml]>=0.15.0",
+    "faker>=35.2.0",
+    "pylint>=3.3.4",
+    "tqdm>=4.67.1",
+    "unidecode>=1.3.8",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/IIAS-Research/PseudoCare"
+"Issues" = "https://github.com/IIAS-Research/PseudoCare/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pseudocare", "pseudocare.providers"]
+include-package-data = false
+
+[tool.uv]
+dev-dependencies = [
+    "build>=1.2.2.post1",
+    "ipykernel>=6.29.5",
+    "twine>=6.1.0",
+]
