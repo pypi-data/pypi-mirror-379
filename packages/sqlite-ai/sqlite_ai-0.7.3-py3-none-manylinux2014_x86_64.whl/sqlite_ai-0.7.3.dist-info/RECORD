@@ -1,0 +1,9 @@
+sqlite_ai-0.7.3.data/purelib/sqliteai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlite_ai-0.7.3.data/purelib/sqliteai/_version.py,sha256=6zzTaqQSqZIah99N7EMsQh_S-AYnZgOVSjoqZ79J1_E,67
+sqlite_ai-0.7.3.data/purelib/sqliteai/binaries/cpu/ai.so,sha256=Gv3glSv1atuUDIQVeo3-SF5MmkNcGz99CdUT56EPkPg,4762752
+sqlite_ai-0.7.3.data/purelib/sqliteai/binaries/gpu/ai.so,sha256=nVlTBlwlieEXGoyv2vgjm2I8X97FAvS1s53eBsl-pDQ,50044032
+sqlite_ai-0.7.3.dist-info/licenses/LICENSE.md,sha256=SB3cxwqwiNyHoEpSeR7OyErtoNbR5uWLlzD6xMO3xyg,1831
+sqlite_ai-0.7.3.dist-info/METADATA,sha256=C0SXUNzd28SuZOJyeYsBlw2QJv0cdGRCEhPCqK9giVQ,3084
+sqlite_ai-0.7.3.dist-info/WHEEL,sha256=cX6tzU6mqudTikwsDGWhfNWl6mEeHLXf9Ous3BJbSTo,109
+sqlite_ai-0.7.3.dist-info/top_level.txt,sha256=_uPq8pm06R7zBj-QjzdqedSw48NANMoGxRDsgGMGl4M,9
+sqlite_ai-0.7.3.dist-info/RECORD,,
