@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: bsbt
+Version: 0.1.2
+Summary: BSBT: Binding Sequence Benchmarking Tool - A Python package for benchmarking protein language models and predicting antibody-antigen binding.
+Author-email: Ayush Laware <ayushlaware@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/ayushlaware/BSBT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# 🧬 BSBT – Antibody to Antigen Prediction
+
+BSBT (Biological Sequence Binding Tool) is a Python package designed to **predict antigen sequences given antibody sequences**.  
+The package is structured to allow easy experimentation and integration of **protein language models (PLMs)** or **large language models (LLMs)** in the future.
+
+At the moment, BSBT provides a **mock implementation** using hardcoded antibody–antigen sequence mappings. This enables developers and researchers to test the pipeline structure before connecting it to real machine learning models.
+
+---
+
+## ✨ Features
+
+- 🔹 Simple **antibody → antigen prediction** interface (`findAntigen`)
+- 🔹 Current backend: **mock hardcoded mappings**
+- 🔹 Future backend: **LLM or fine-tuned PLM integration**
+- 🔹 Modular design (easy to extend, swap components)
+- 🔹 Unit tests included (`pytest`-ready)
+
+---
+
+## 📦 Installation
+
+You can install directly from PyPI (after publishing):
+
+```bash
+pip install bsbt

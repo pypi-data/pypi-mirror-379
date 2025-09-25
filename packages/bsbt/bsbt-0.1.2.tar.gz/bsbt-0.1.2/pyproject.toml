@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsbt"
+version = "0.1.2"
+description = "BSBT: Binding Sequence Benchmarking Tool - A Python package for benchmarking protein language models and predicting antibody-antigen binding."
+readme = "README.md"
+authors = [
+  { name="Ayush Laware", email="ayushlaware@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = []
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/ayushlaware/BSBT"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bsbt*"]
