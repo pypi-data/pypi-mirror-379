@@ -1,0 +1,5 @@
+# MANIFEST.in
+
+recursive-include * *.json
+recursive-include * *.ttf
+
