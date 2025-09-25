@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: cfcontext
+Version: 1.2
+Summary: `cfcontext` is a lightweight library for managing shared contexts within a Python application. It allows you to create, replace, and handle dynamic contextual objects that are inherited across the call stack frames, ensuring consistency throughout nested function calls and asynchronous tasks.
+Home-page: https://git.jimw.fr/cfcontext
+Author: Jimw
+Author-email: jimmy.c@jimw.fr
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
