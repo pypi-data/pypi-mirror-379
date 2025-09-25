@@ -1,0 +1,2 @@
+[console_scripts]
+synthetic-face-masks = main:main
