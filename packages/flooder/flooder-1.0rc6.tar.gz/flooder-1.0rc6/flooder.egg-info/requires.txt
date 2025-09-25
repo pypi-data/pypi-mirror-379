@@ -1,0 +1,8 @@
+torch
+gudhi
+numpy
+pandas
+fpsample
+scipy
+rich
+rich_argparse
