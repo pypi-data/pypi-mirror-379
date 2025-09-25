@@ -1,0 +1,11 @@
+hierarchical/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hierarchical/enums.py,sha256=WIMumriKag-PlOpg13gdQEob2c36WcWF5cASt5JexkE,255
+hierarchical/hierarchy_builder.py,sha256=ltzoXECXUre6QSl4ZvslGdOlx-E3tFZYt6yU9Kd3ejY,16320
+hierarchical/parsers.py,sha256=FOu3k4jsm3yZ--6vQa08-5nm2-RfIL0NzLP1c5x2Kt0,3307
+hierarchical/postprocessor.py,sha256=61mOVQBXDl53qEGrV045_wbmR0YjIwceqKqM7-WmEd8,8839
+hierarchical/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hierarchical/types/hierarchical_header.py,sha256=EzriTgceww2FjgGbTLWJucpDiJeftSRIRS0Dwr2arMQ,1783
+docling_hierarchical_pdf-0.0.1.dist-info/METADATA,sha256=BTEfSGvYaeeybUxANQncR1TEWGTLjLTyOi-DoMoxM_E,6205
+docling_hierarchical_pdf-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+docling_hierarchical_pdf-0.0.1.dist-info/licenses/LICENSE,sha256=HE3Hak1Qlusb7Lc8LuBrMthktQg6jUEoW4HSbLGCLNk,1068
+docling_hierarchical_pdf-0.0.1.dist-info/RECORD,,
