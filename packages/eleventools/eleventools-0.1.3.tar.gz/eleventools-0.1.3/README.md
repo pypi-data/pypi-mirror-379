@@ -1,0 +1,200 @@
+# ElevenTools
+
+**Take a shortcut in working with ElevenLabs agents by using your local Python functions as conversational AI tools.**
+
+## Overview
+
+ElevenTools is a Python library that provides a convenient path to use your local functions with ElevenLabs conversational AI agents. Instead of manually designing endpoints, using the UI or CLI to create/update agent configurations and tools, or assigning tools through the dashboard, this library allows you to:
+
+- **Define tools with simple Python decorators** - Turn any function into an ElevenLabs agent tool
+- **Automatically sync with ElevenLabs API** - Creates and updates tools seamlessly
+- **Skip manual configuration** - No need to manually design webhooks or configure the dashboard
+- **Focus on business logic** - Write your tool functionality, let ElevenTools handle the integration
+
+## How It Works
+
+1. **Agent-Specific Tool Management**: Each WebhookToolset instance is tied to a specific ElevenLabs agent
+2. **Automatic Tool Naming**: Tools are created with the pattern `{agentName}_{toolName}` to avoid conflicts
+3. **Intelligent Sync**: Only creates new tools or updates existing ones when changes are detected
+4. **Automatic Assignment**: Tools are automatically assigned to the specified agent after sync
+
+## Quick Start
+
+### Installation
+
+```bash
+pip install eleventools
+```
+
+### Basic Usage
+
+```python
+from eleventools import WebhookToolset
+import asyncio
+
+# Initialize for a specific agent
+toolset = WebhookToolset(
+    base_url="https://your-webhook-server.com",
+    xi_api_key="your_elevenlabs_api_key", 
+    agent_id="your_agent_id",
+    agent_name="your_agent_name"
+)
+
+# Define tools using the @toolset.tool() decorator
+@toolset.tool(description="Get current weather for any city")
+def get_weather(city: str, units: str = "celsius"):
+    """Get weather information for a city."""
+    # Your weather API logic here
+    return {"weather": f"Sunny in {city}", "temperature": "22°C"}
+
+@toolset.tool(description="Perform mathematical calculations")
+def calculate(expression: str):
+    """Safely evaluate mathematical expressions."""
+    # Your calculation logic here
+    return {"result": eval(expression), "expression": expression}
+
+# Sync tools with ElevenLabs (creates/updates as needed)
+async def main():
+    result = await toolset.sync_tools()
+    print(f"Sync result: {result}")
+    
+    # Start the webhook server
+    await toolset.serve(port=8000)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Key Features
+
+### 🎯 **Agent-Specific Tools**
+Tools are automatically prefixed with the agent name (`agentName_toolName`) and assigned only to the specified agent.
+
+### 🔄 **Intelligent Synchronization** 
+- Compares local tool configurations with remote ones
+- Only creates new tools or updates changed ones
+- Validates agent existence and name matching
+
+### 🚀 **Zero-Configuration Webhooks**
+- Automatically generates FastAPI endpoints for each tool
+- Handles JSON request/response serialization
+- Supports all Python function parameter types
+
+### 📝 **Type-Safe Configuration**
+- Full TypedDict implementation matching ElevenLabs API schema
+- Comprehensive parameter validation
+- IDE support with proper type hints
+
+## Advanced Usage
+
+### Custom Tool Configuration
+
+```python
+@toolset.tool(
+    name="advanced_search",
+    description="Advanced search with custom parameters",
+    path="/custom/search",
+    response_timeout_secs=30,
+    disable_interruptions=True,
+    force_pre_tool_speech="enabled",
+    auth_connection_id="your_auth_id"
+)
+def search_database(query: str, limit: int = 10, include_metadata: bool = False):
+    """Perform advanced database search."""
+    results = perform_search(query, limit, include_metadata)
+    return {"results": results, "count": len(results)}
+```
+
+### Function Parameter Handling
+
+ElevenTools automatically converts Python function signatures to ElevenLabs tool schemas:
+
+```python
+@toolset.tool()
+def process_order(
+    customer_id: str,           # Required parameter
+    items: list,                # Required parameter  
+    discount_code: str = None,  # Optional parameter
+    priority: bool = False      # Optional parameter with default
+):
+    """Process customer order with items and optional discount."""
+    # Function logic here
+    return {"order_id": "12345", "status": "processing"}
+```
+
+**Result**: Creates a tool named `{agentName}_process_order` with proper JSON schema validation.
+
+### Sync Results
+
+The `sync_tools()` method returns detailed information about the sync operation:
+
+```python
+result = await toolset.sync_tools()
+print(result)
+# {
+#     "status": "success",
+#     "agent_id": "agent_xxx",
+#     "agent_name": "my_agent", 
+#     "created": 2,    # Number of new tools created
+#     "updated": 1,    # Number of existing tools updated
+#     "total_tools": 5 # Total tools in toolset
+# }
+```
+
+## Tool Naming Convention
+
+**Pattern**: `{agentName}_{toolName}`
+
+**Examples**:
+- Agent: "customer_service" → Tool: "get_weather" → Created as: "customer_service_get_weather"  
+- Agent: "sales_bot" → Tool: "calculate_discount" → Created as: "sales_bot_calculate_discount"
+
+This ensures tools are properly namespaced and avoid conflicts when multiple agents use similar tool names.
+
+## Error Handling
+
+```python
+try:
+    result = await toolset.sync_tools()
+    if result["status"] == "error":
+        print(f"Sync failed: {result['message']}")
+except Exception as e:
+    print(f"Unexpected error: {e}")
+```
+
+## API Reference
+
+### WebhookToolset
+
+**Constructor**:
+- `base_url`: Your webhook server's public URL
+- `xi_api_key`: ElevenLabs API key
+- `agent_id`: Target agent ID from ElevenLabs
+- `agent_name`: Agent name for validation and tool prefixing
+
+**Methods**:
+- `tool()`: Decorator to register functions as tools
+- `sync_tools()`: Sync local tools with ElevenLabs API  
+- `get_tool_configs()`: Get list of registered tool configurations
+- `run()`: Start webhook server (synchronous)
+- `serve()`: Start webhook server (asynchronous)
+
+## Requirements
+
+- Python 3.8+
+- FastAPI
+- httpx
+- uvicorn
+- ElevenLabs API account with conversational AI access
+
+## License
+
+MIT License - see LICENSE file for details.
+
+## Contributing
+
+Contributions welcome! Please read CONTRIBUTING.md for guidelines.
+
+---
+
+**Need help?** Check out the examples in the `/example` directory or open an issue on GitHub.
