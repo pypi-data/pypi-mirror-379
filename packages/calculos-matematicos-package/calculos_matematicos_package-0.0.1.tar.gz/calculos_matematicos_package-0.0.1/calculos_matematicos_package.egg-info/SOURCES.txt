@@ -1,0 +1,10 @@
+README.md
+setup.py
+calculos_matematicos_package/__init__.py
+calculos_matematicos_package/basico.py
+calculos_matematicos_package/intermediario.py
+calculos_matematicos_package.egg-info/PKG-INFO
+calculos_matematicos_package.egg-info/SOURCES.txt
+calculos_matematicos_package.egg-info/dependency_links.txt
+calculos_matematicos_package.egg-info/requires.txt
+calculos_matematicos_package.egg-info/top_level.txt
