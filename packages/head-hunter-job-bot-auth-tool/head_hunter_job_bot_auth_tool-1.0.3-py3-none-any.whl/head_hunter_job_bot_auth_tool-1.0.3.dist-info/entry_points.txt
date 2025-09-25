@@ -1,0 +1,2 @@
+[console_scripts]
+head-hunter-job-bot-auth-tool = head_hunter_job_bot_auth_tool.cli:main
