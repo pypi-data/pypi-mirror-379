@@ -1,0 +1,2 @@
+[console_scripts]
+robosandbox = robosandbox.__main__:main

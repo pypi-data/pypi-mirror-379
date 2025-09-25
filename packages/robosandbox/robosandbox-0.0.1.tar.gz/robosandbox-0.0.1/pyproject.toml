@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robosandbox"
+version = "0.0.1"
+description = "An Open-Source Python Framework for Manipulator Design and Analysis"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = { file = "LICENSE.txt" }
+keywords = ["robotics", "manipulator", "design", "analysis", "simulation"]
+authors = [{ name = "Chaoyue Fei", email = "chaoyue.fei@vub.be" }]
+maintainers = [{ name = "Chaoyue Fei", email = "chaoyue.fei@vub.be" }]
+dependencies = [
+    "numpy<2",
+    "websockets<=12.0",
+    "roboticstoolbox_python>=1.1.1",
+    "plotly",
+    "pytest",
+    "pandas",
+    "tqdm",
+    "ipykernel",
+    "kaleido",
+    "nbformat>=4.2.0",
+    "numpy-stl",
+    "dash",
+    "dash-bootstrap-components",
+    "pywebview",
+    "pymoo",
+]
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+collision = ["pybullet<=2.0.0"]
+test = ["pytest>=7.0.0", "pytest-cov>=4.0.0"]
+
+[project.urls]
+# Homepage = "https://github.com/yourusername/robosandbox"
+# Bug_Reports = "https://github.com/yourusername/robosandbox/issues"
+# Funding = "https://donate.pypi.org"
+# Say_Thanks = "http://saythanks.io/to/chaoyue.fei"
+# Source = "https://github.com/yourusername/robosandbox"
+
+[project.scripts]
+robosandbox = "robosandbox.__main__:main"
+
+[tool.hatch.version]
+path = "src/robosandbox/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/robosandbox"]
+
+
+# [tool.setuptools]
+# package-data = { "robosandbox" = ["*.dat"] }
+# packages = [
+#     "robosandbox",
+# "tutorial",
+# "robosandbox.performance",
+# "robosandbox.performance.workspace",
+# "robosandbox.models",
+# "robosandbox.models.URDF",
+# "robosandbox.models.DH",
+# "robosandbox.models.DH.Generic",
+# "robosandbox.models.DHRoboLink",
+# "robosandbox.models.DHRoboLink.Generic",
+# "robosandbox.models.MR",
+# "robosandbox.models.MR.Generic",
+# "robosandbox.geometry",
+# "robosandbox.geometry.Link",
+# "robosandbox.visualization",
+# "robosandbox.optimization",
+# "tests",
+# "rsb-data",
+# ]
