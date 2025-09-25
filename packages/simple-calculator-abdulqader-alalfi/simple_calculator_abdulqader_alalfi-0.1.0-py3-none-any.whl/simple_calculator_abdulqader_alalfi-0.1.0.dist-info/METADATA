@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: simple-calculator-abdulqader-alalfi
+Version: 0.1.0
+Summary: A simple calculator package for basic math operations
+Home-page: https://github.com/abdulqader-alalfi/simple-calculator
+Author: Abdulqader Alalfi
+Author-email: abdulqader.alalfi@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# حاسبة بسيطة - عبدالقادر العلفي
+
+مكتبة بايثون بسيطة تحتوي على عمليات الجمع والطرح والضرب والقسمة.
+
+## التثبيت
+
+```bash
+pip install simple-calculator-abdulqader-alalfi
+```
+
+## الاستخدام
+
+```python
+from abdulqader_calculator_package import calculator
+
+result = calculator.add(5, 3)
+print(result)  # Output: 8
+```
+
+
