@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AmjadSquareRoot"
+version = "0.1.0"
+description = "Calculate the square root of a number"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    { name = "Amjad Sameer Alnamer", email = "aalnmr392@gmail.com" }
+]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+amjadsqrt = "square_root_lib_amjad.__main__:main"
