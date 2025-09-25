@@ -1,0 +1,4 @@
+[console_scripts]
+best_decoy=RosettaPy.analyser.reu:best_decoy
+whichrosetta=RosettaPy:main
+
