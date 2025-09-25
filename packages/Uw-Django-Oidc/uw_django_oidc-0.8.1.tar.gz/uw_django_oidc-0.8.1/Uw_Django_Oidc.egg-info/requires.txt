@@ -1,0 +1,4 @@
+Django
+UW-RestClients-Core
+pyjwt
+jwcrypto
