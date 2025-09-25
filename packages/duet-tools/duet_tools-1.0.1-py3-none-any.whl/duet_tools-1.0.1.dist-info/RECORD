@@ -1,0 +1,13 @@
+duet_tools/__init__.py,sha256=AAlRAGB8SOpUnO0SbR7TwHSOCReaG_w_Lms4vQ6B3v8,1301
+duet_tools/calibration.py,sha256=4xsGgLx-kPsAxamoDUzIjuxQ4fil4YdkbyFjUybVeFo,37684
+duet_tools/example.py,sha256=3SIyAUDs07OGFJP3RjnpXenApqOQZhUPAtbic6mgYcg,1865
+duet_tools/inputs.py,sha256=qZuBpX7hIGz6OXKplfsrrQPeHcHFTHb2Em-LGweFqqc,5324
+duet_tools/landfire.py,sha256=rRY2KNOJLiOTFJJMqiyAgHb_62skeCuY0suLlaqW2SM,15180
+duet_tools/utils.py,sha256=b79j8x1q3W4iDZd41uL_MF1LWzmQfIFM3nLKVVK1w14,5387
+duet_tools/data/REF_SPECIES.csv,sha256=gCn6UWbo6m93HaXehekUlWzbKSqx0MjCeQI7XZZhBT4,1008630
+duet_tools/data/sb40_parameters.csv,sha256=JpMWBLgrcinR8P29WraJe1V4TJI26JlzObtF3igP0NA,2680
+duet_tools-1.0.1.dist-info/licenses/LICENSE,sha256=MEtZwIZKL0Ui_l20UbZ83iPYdKxKkGGbjUr9fvTlCCw,1078
+duet_tools-1.0.1.dist-info/METADATA,sha256=7WYMSqt6-s9I82Rz11o930BYVJ0pFy_-640nbWN37NI,2863
+duet_tools-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+duet_tools-1.0.1.dist-info/top_level.txt,sha256=8b1pImaLGZIcQJ5AkFtSIJciByD5l0f2Aiw67t_46Xc,11
+duet_tools-1.0.1.dist-info/RECORD,,
