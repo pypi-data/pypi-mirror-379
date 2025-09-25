@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyturtle3d"
+version = "1.0.0"
+description = "A 3D engine built with Python's turtle graphics"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "Turtle3D Team", email = "contact@pyturtle3d.dev"}
+]
+keywords = ["3d", "engine", "turtle", "graphics", "game", "development", "education"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License", 
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8", 
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics :: 3D Modeling",
+    "Topic :: Education",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+[project.urls]
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "examples*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py36']
+
+[tool.mypy] 
+python_version = "3.6"
+warn_return_any = true
+warn_unused_configs = true

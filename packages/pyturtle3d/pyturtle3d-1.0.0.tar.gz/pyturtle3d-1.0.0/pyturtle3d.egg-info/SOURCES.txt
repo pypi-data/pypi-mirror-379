@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pyturtle3d.egg-info/PKG-INFO
+pyturtle3d.egg-info/SOURCES.txt
+pyturtle3d.egg-info/dependency_links.txt
+pyturtle3d.egg-info/not-zip-safe
+pyturtle3d.egg-info/requires.txt
+pyturtle3d.egg-info/top_level.txt
+turtle3d/__init__.py
+turtle3d/camera.py
+turtle3d/collision.py
+turtle3d/engine.py
+turtle3d/texture.py
+turtle3d/vector.py
