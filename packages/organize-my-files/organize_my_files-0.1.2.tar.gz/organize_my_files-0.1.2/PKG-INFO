@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: organize-my-files
+Version: 0.1.2
+Summary: Organize files into extension-based folders
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: tomli; python_version < "3.11"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Dynamic: license-file

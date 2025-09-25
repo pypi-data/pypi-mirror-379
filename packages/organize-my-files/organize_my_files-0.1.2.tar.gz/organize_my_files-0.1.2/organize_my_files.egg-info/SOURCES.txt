@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+organize_my_files.egg-info/PKG-INFO
+organize_my_files.egg-info/SOURCES.txt
+organize_my_files.egg-info/dependency_links.txt
+organize_my_files.egg-info/entry_points.txt
+organize_my_files.egg-info/requires.txt
+organize_my_files.egg-info/top_level.txt
+organizer/__init__.py
+organizer/cli.py
+organizer/core.py
+tests/test_cli_and_config.py
+tests/test_core.py
