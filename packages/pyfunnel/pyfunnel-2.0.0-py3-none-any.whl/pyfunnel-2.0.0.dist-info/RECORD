@@ -1,0 +1,14 @@
+pyfunnel/__init__.py,sha256=_0BbraswGQT7bKGHUmtmypaQ-tRRNJN9xutBPZEI530,430
+pyfunnel/cli.py,sha256=nA4XYwC4XYCd6qrlxspmqYlrHKhhZXMSAXYuJPESBDk,5077
+pyfunnel/core.py,sha256=VNrCB2Ec3H8RJPgxAq7PJkJ9lEOK0re9p_WNvg4A4Sk,18745
+pyfunnel/lib/darwin64/libfunnel.dylib,sha256=hDUgosjDQ9IhDL3ISzOblFVSL3aP4GJBf8gWn2KM6uM,101536
+pyfunnel/lib/linux64/libfunnel.so,sha256=Iq7LfgbfuLltZBNkkYUpLfeBQMO5dsjwKq4IBSE5JG4,42968
+pyfunnel/lib/win64/funnel.dll,sha256=rOK-9dqiCu41EcA1UfgNpaWrY9Ybgw_wC9pTnqsbAhU,37376
+pyfunnel/lib/win64/funnel.lib,sha256=jyUOWWJJsazrPxzRREWMkZpYWip-4M15kxoL2yhIG98,8002
+pyfunnel/templates/plot.html,sha256=H7qTpN_7rAeG1GUouINVONjNeZjW2b_3q1mCzjAPYh8,3702
+pyfunnel-2.0.0.dist-info/licenses/LICENSE.txt,sha256=cK--mGgGooNn-4yvlxuL0TYOH-DTcUkj8KMt8zHqHK8,2425
+pyfunnel-2.0.0.dist-info/METADATA,sha256=vTuS2z_l06QPjQVCRT0ZlHRZs2r5ej-nZ5Hn3oCckaE,9099
+pyfunnel-2.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyfunnel-2.0.0.dist-info/entry_points.txt,sha256=i1sOusLpD397CTGdQ2qXI6e410lpBzWU1zjB2MpMypA,45
+pyfunnel-2.0.0.dist-info/top_level.txt,sha256=P1g8OLPhP6SkocXfGF-SKAXTx-li7XNhudpXABI1lvU,9
+pyfunnel-2.0.0.dist-info/RECORD,,
