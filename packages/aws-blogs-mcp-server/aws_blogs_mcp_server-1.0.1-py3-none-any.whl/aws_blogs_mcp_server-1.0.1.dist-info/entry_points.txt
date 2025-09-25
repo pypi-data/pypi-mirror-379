@@ -1,0 +1,2 @@
+[console_scripts]
+aws-blogs-mcp-server = aws_blogs_mcp_server.server:main
