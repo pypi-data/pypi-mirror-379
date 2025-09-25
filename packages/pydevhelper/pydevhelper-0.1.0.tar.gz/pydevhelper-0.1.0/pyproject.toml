@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydevhelper"
+version = "0.1.0"
+description = "A lightweight developer toolkit: logging, env checker, timing, formatting, and more."
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [{ name = "juliobrige", email = "juliobenjamimbernardo36@gmail.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/seuuser/devhelper"
+Issues = "https://github.com/seuuser/devhelper/issues"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["dev_helper"]
+include = ["README.md"]
