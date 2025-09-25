@@ -1,0 +1,15 @@
+epub2speech/__init__.py,sha256=3qu_5_dtrsr3HZoe3gHHgqeO4z_ix5sjebm4PYJv4cI,240
+epub2speech/chapter_tts.py,sha256=XCZhaEkzQXQvz3_dY5PMOu-oHbapPYVFTZx_-i-Izo8,5985
+epub2speech/cli.py,sha256=lkQ7nbXlyYo4a9yxwKNji7PbgeIAn7nF7lKh1m76SUA,4532
+epub2speech/convertor.py,sha256=1sqamfQEB8Ef1NFhRbGRgOuZXTMl6anVCB2q9PcXWO8,4561
+epub2speech/epub_picker.py,sha256=cl8frvgbGZVgfTq3tS1-1d1fVsyk_WwuwpvT-klO_Q0,7830
+epub2speech/extractor.py,sha256=FmqCiOODIJ2Tk2nPte47UBKnuw8jQA1ncIm3MVryc4o,2654
+epub2speech/m4b_generator.py,sha256=yE4NsY3jwbvicKI-p1yTEl7x62CB-RI9xtqNwMEPgkk,5845
+epub2speech/tts/__init__.py,sha256=bCx7vw5A8X8AbfVL9Y3-_rtBzWaUpI_oR2-KyiIxkTA,155
+epub2speech/tts/azure_provider.py,sha256=uOzTmTNFnSVPb__LC_7vJBKcaiEYSBg-0_hylr5OE5s,5000
+epub2speech/tts/protocol.py,sha256=miJnuTs2sol5ZW5lbB1TYGzIe3H_jgbnwrSWqWqtvls,395
+epub2speech-0.0.1.dist-info/LICENSE,sha256=5RF32sL3LtMOJIErdDKp1ZEYPGXS8WPpsiSz_jMBnGI,1066
+epub2speech-0.0.1.dist-info/METADATA,sha256=wfAmY2K5QNKR2gxOeI0oY8uG6wGWGxW50VCwOxQXQQQ,5096
+epub2speech-0.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+epub2speech-0.0.1.dist-info/entry_points.txt,sha256=M0wgeD_4boY9y2J_Zww_uyyyLRS9lBEcl9nXMahnVIw,52
+epub2speech-0.0.1.dist-info/RECORD,,
