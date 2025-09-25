@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+lazyimp/__init__.py
+lazyimp/_capture.cc
+lazyimp/capture.py
+lazyimp/lazyglobals.py
+lazyimp/proxy.py
+lazyimp.egg-info/PKG-INFO
+lazyimp.egg-info/SOURCES.txt
+lazyimp.egg-info/dependency_links.txt
+lazyimp.egg-info/top_level.txt
