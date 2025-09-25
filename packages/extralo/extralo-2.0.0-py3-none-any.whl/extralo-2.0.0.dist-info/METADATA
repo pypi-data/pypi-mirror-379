@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: extralo
+Version: 2.0.0
+Summary: ETL for Python
+Author-email: Vitor Capdeville <vgcapdeville@hotmail.com>
+Maintainer-email: Vitor Capdeville <vgcapdeville@hotmail.com>
+Keywords: data,data-engineering,etl
+Requires-Python: >=3.9
+Requires-Dist: loguru
+Provides-Extra: all
+Requires-Dist: delta-spark; extra == 'all'
+Requires-Dist: deltalake; extra == 'all'
+Requires-Dist: openpyxl; extra == 'all'
+Requires-Dist: pandas; extra == 'all'
+Requires-Dist: pandas-stubs; extra == 'all'
+Requires-Dist: pyspark; extra == 'all'
+Requires-Dist: sqlalchemy; extra == 'all'
+Requires-Dist: sqlparse; extra == 'all'
+Provides-Extra: deltalake
+Requires-Dist: deltalake; extra == 'deltalake'
+Provides-Extra: pandas
+Requires-Dist: openpyxl; extra == 'pandas'
+Requires-Dist: pandas; extra == 'pandas'
+Requires-Dist: pandas-stubs; extra == 'pandas'
+Provides-Extra: spark
+Requires-Dist: delta-spark; extra == 'spark'
+Requires-Dist: pyspark; extra == 'spark'
+Provides-Extra: sql
+Requires-Dist: sqlalchemy; extra == 'sql'
+Requires-Dist: sqlparse; extra == 'sql'
+Description-Content-Type: text/markdown
+
+# ETL using python
+
+Python package for extracting data from a source, transforming it and loading it to a destination, with validation in between.
+
+The provided ETL pipeline provides useful functionality on top of the usual operations:
+
+- **Extract**: Extract data from multiples sources, in parallel (using threads).
+- **Validate**: Validate the extracted data, to make sure it matches what will be required by the transform step, using pandera schemas. This provide early fail if there is any unexpected change in the sources.
+- **Transform**: Define the logic for transformation of the data, making it reusable, and allowing multiple data frames as input and multiple data frames as output.
+- **Validate again**: Validate the transformed data, to make sure it matches your expectation, and what the destination will require.
+- **Load**: Load multiple data, each to one or more destination, and load diferent data to diferent destinations in parallel (using threads).
+
+## Installation
+
+The package is available at PyPI, so you can install it using pip:
+
+```bash
+pip install extralo
+```
