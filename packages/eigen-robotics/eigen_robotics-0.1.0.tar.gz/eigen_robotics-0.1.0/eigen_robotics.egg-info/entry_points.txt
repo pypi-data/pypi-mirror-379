@@ -1,0 +1,2 @@
+[console_scripts]
+improved-fortnight = improved_fortnight.cli:main
