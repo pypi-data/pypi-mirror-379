@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: autocontour
+Version: 0.0.1
+Summary: Auxiliary tool to generate image boundaries for the Typst package Meander
+Author-email: Neven Villani <vanille@crans.org>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Vanille-N/meander.typ/tree/master/autocontour
+Project-URL: Issues, https://github.com/Vanille-N/meander.typ/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Autocontour
+
+This package is an auxiliary tool for [Meander](https://typst.app/universe/package/meander).
+It can generate contours for images so that Meander knows how to wrap text around them.
+
+## Requirements
+
+This project assumes that you have ImageMagick installed.

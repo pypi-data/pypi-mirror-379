@@ -1,0 +1,2 @@
+[console_scripts]
+autocontour = autocontour.main:main

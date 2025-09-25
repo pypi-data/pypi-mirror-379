@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/autocontour/__init__.py
+src/autocontour/__main__.py
+src/autocontour/main.py
+src/autocontour.egg-info/PKG-INFO
+src/autocontour.egg-info/SOURCES.txt
+src/autocontour.egg-info/dependency_links.txt
+src/autocontour.egg-info/entry_points.txt
+src/autocontour.egg-info/top_level.txt
