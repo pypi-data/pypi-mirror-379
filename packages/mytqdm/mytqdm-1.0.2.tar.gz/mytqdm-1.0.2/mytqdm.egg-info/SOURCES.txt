@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+mytqdm.egg-info/PKG-INFO
+mytqdm.egg-info/SOURCES.txt
+mytqdm.egg-info/dependency_links.txt
+mytqdm.egg-info/requires.txt
+mytqdm.egg-info/top_level.txt
+source/__init__.py
+source/mytqdm.py
