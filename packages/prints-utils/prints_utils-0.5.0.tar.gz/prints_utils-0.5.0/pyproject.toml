@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prints_utils"
+version = "0.5.0"
+description = "Librería de utilidades para prints en consola con colores"
+readme = "README.md"
+authors = [
+  { name="Edinson Tunjano", email="juanmadiaz108@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["prints", "colores", "consola", "utilidades"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "sqlalchemy"
+]
+
+requires-python = ">=3.8"
