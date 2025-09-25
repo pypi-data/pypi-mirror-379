@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: wztools
+Version: 0.2.2
+Summary: 个人用工具库
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+
+
+```bash
+uv run python -m build   
+
+```
