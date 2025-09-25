@@ -1,0 +1,10 @@
+label_accelerator/__init__.py,sha256=G5Qi0HRbf2tiUgHYAaV04VFt5cv_6KujmmcApeNKaEg,836
+label_accelerator/core_py.py,sha256=r5sNyUdgyLRIUOVNsiw3Z6rnrnxiYIgs0-EE_hP9N5Q,13769
+label_accelerator/heuristics.py,sha256=-XRaDoeKcieQNi_XhdL4MCNv9LlFWXNp6D4tU-6coAE,1352
+label_accelerator/labeler.py,sha256=sW3NjvnN48nxBKmT9Q5EYkQ3VB0XZ0clLMXFFYtOV4U,4167
+label_accelerator/license_validator.py,sha256=BXPB-h_GQt0r-zPfKTdbq9012fRknh-UnyIDM-h-5DU,2588
+label_accelerator/models.py,sha256=T23jCrYgs51LJ2MasHzbr2KbXEWEIWz-Vz-My5bYtBg,755
+dsf_label_sdk-1.0.0.dist-info/METADATA,sha256=J2QsC4nKC3iqZF1ENKj76L6iF67aYt3l17cRCBpCCGs,18996
+dsf_label_sdk-1.0.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+dsf_label_sdk-1.0.0.dist-info/top_level.txt,sha256=9f0acZaX8aEdvSRhKuyga4hyYHsQEXe7WNxXxdH2D08,18
+dsf_label_sdk-1.0.0.dist-info/RECORD,,
