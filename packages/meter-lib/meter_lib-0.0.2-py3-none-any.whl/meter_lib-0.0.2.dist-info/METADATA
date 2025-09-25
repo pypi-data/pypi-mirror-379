@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: meter-lib
+Version: 0.0.2
+Summary: A litewave library to collect the customer credit usage
+Project-URL: Homepage, https://github.com/aiorch/meter-lib
+Project-URL: Repository, https://github.com/aiorch/meter-lib
+Project-URL: Issues, https://github.com/aiorch/meter-lib/issues
+Author-email: Sruthi <sruthi@litewave.ai>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: requests>=2.28
+Description-Content-Type: text/markdown
+
+# meter-lib
