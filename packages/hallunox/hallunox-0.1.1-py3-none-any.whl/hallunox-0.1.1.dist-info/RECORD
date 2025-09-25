@@ -1,0 +1,10 @@
+hallunox/__init__.py,sha256=-9fMfbN08Obb8kmGW2y4a-t4I7qWawG-AXT0cuLJaXY,939
+hallunox/detector.py,sha256=mvzVbso05tN1tE7uzm7WLHOs2kp6pLDZfIzUgCNuKnA,13238
+hallunox/inference.py,sha256=-8lTXA4Sn9sDYqMYki4nSr4i9zKzc5WSW0fjX2qGuyM,13263
+hallunox/training.py,sha256=nd3QJYfOugk1W279CGv5pE0U8_1mg-hr5BLdaC2gtuc,34498
+hallunox/utils.py,sha256=xlv4-qHfayR7F-uZHo43LerH86YTZOTXC4Tif4NX-XM,8812
+hallunox-0.1.1.dist-info/METADATA,sha256=G6XoXTZ4NIoQubb9ph2offW6NwijOQnLRIuMFPc2CiM,11396
+hallunox-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+hallunox-0.1.1.dist-info/entry_points.txt,sha256=C57jf86a2k6Q-wkot8eVm8dsS07cl2mtaWvE5bhgATI,99
+hallunox-0.1.1.dist-info/top_level.txt,sha256=fLlJpsDiCYYcaBYFF5PJGKEm_hE0a8mWSzwMnE7sQZc,9
+hallunox-0.1.1.dist-info/RECORD,,
