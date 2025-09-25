@@ -1,0 +1,2 @@
+[console_scripts]
+reVRt=revrt._cli:main
