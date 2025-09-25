@@ -1,0 +1,6 @@
+torch
+safetensors
+transformers
+loguru
+pyyaml
+tqdm

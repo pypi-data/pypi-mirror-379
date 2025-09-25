@@ -1,0 +1,33 @@
+[build-system]
+requires = [
+  "setuptools>=61",
+  "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qgemm"
+version = "0.0.2"
+description = "INT4 quantization tooling and CUDA extension"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "Proprietary"}
+authors = [{ name = "qgemm" }]
+dependencies = [
+  "torch",
+  "safetensors",
+  "transformers",
+  "loguru",
+  "pyyaml",
+  "tqdm",
+]
+
+[tool.setuptools]
+py-modules = ["quantize", "convert_llama"]
+
+[tool.setuptools.package-dir]
+"" = "python"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["qgemm*"]

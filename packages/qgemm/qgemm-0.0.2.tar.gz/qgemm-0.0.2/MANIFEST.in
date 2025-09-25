@@ -1,0 +1,19 @@
+include README.md
+include pyproject.toml
+include setup.py
+include CMakeLists.txt
+
+# Python sources
+recursive-include python *.py
+
+# C++/CUDA extension sources
+recursive-include cpp *.cpp *.hpp
+recursive-include cuda *.cu *.cuh
+
+# Tests (optional but helpful for source dists)
+recursive-include tests *.py
+
+# Exclude common junk
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.so
