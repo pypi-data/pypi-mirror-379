@@ -1,0 +1,11 @@
+decorator_framework-1.0.4.dist-info/licenses/LICENSE,sha256=qq37ZxPbCbyNN-nJQsjm5VnMkFSFPw-0lKiFmOiRIzs,1082
+decorators/__init__.py,sha256=KWvMVtmXXV7p4sG2YLwXeNF3Nry-V3NeP3_W18N-Ljo,122
+decorators/on.py,sha256=v-XNhB62WiIG4S1NqyWA_TTTk9b0iT_b0KYW5n3jIGc,3571
+nucleus/Myclass.py,sha256=KMD7lD5xOeW7_yYWMN_uMwXL8hiw3bM5lRsBv2-xzjw,1042
+nucleus/__init__.py,sha256=sYurRohQjCN0r6e_XrP9NmzEsyWvZz6LNtey3wAM588,382
+nucleus/dispatcher.py,sha256=3lxPjc1W-BKgctyiCz2ao4dKWPnjn412P7frakHP4ts,12370
+tests/__init__.py,sha256=sNGbUOvaxQ62VeWuodJKqq0szvg92tKEOWuh_tQ3Fs8,15
+decorator_framework-1.0.4.dist-info/METADATA,sha256=PM7tAAnDkSBx1NI-fiVQVLZyzhgq8CC2A-SJlgr0KVw,10498
+decorator_framework-1.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+decorator_framework-1.0.4.dist-info/top_level.txt,sha256=pk5wFhnQrRf5Std2BYtTAMMeodIzwiOqxAArafpJA0w,25
+decorator_framework-1.0.4.dist-info/RECORD,,
