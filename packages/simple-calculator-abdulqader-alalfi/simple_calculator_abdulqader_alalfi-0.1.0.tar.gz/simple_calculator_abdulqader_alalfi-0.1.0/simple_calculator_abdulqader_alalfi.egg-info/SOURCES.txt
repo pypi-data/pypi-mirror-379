@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+abdulqader_calculator_package/__init__.py
+abdulqader_calculator_package/calculator.py
+simple_calculator_abdulqader_alalfi.egg-info/PKG-INFO
+simple_calculator_abdulqader_alalfi.egg-info/SOURCES.txt
+simple_calculator_abdulqader_alalfi.egg-info/dependency_links.txt
+simple_calculator_abdulqader_alalfi.egg-info/top_level.txt
