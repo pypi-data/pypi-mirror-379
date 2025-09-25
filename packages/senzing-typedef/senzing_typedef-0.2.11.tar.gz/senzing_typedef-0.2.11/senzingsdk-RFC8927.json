@@ -1,0 +1,4358 @@
+{
+    "definitions": {
+        "AdditionalScores": {
+            "properties": {
+                "FULL_SCORE": {
+                    "type": "int32"
+                },
+                "GENERATION_MATCH": {
+                    "type": "int32"
+                },
+                "GNR_FN": {
+                    "type": "int32"
+                },
+                "GNR_GN": {
+                    "type": "int32"
+                },
+                "GNR_ON": {
+                    "type": "int32"
+                },
+                "GNR_SN": {
+                    "type": "int32"
+                }
+            }
+        },
+        "AffectedEntity": {
+            "properties": {
+                "ENTITY_ID": {
+                    "metadata": {
+                        "description": "The ENTITY_ID is the Senzing-generated identifier for the discovered entity. It may change when new information is added.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_ATTR": {
+            "properties": {
+                "ADVANCED": {
+                    "type": "string"
+                },
+                "ATTR_CLASS": {
+                    "type": "string"
+                },
+                "ATTR_CODE": {
+                    "type": "string"
+                },
+                "ATTR_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "DEFAULT_VALUE": {
+                    "type": "string"
+                },
+                "FELEM_CODE": {
+                    "type": "string"
+                },
+                "FELEM_REQ": {
+                    "type": "string"
+                },
+                "FTYPE_CODE": {
+                    "type": "string"
+                },
+                "INTERNAL": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_CFBOM": {
+            "properties": {
+                "CFCALL_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_CFCALL": {
+            "properties": {
+                "CFCALL_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "CFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_CFRTN": {
+            "properties": {
+                "CFRTN_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "CFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "CFUNC_RTNVAL": {
+                    "type": "string"
+                },
+                "CLOSE_SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LIKELY_SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "PLAUSIBLE_SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SAME_SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "UN_LIKELY_SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_CFUNC": {
+            "properties": {
+                "ANON_SUPPORT": {
+                    "type": "string"
+                },
+                "CFUNC_CODE": {
+                    "type": "string"
+                },
+                "CFUNC_DESC": {
+                    "type": "string"
+                },
+                "CFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "CONNECT_STR": {
+                    "type": "string"
+                },
+                "FUNC_LIB": {
+                    "type": "string"
+                },
+                "FUNC_VER": {
+                    "type": "string"
+                },
+                "JAVA_CLASS_NAME": {
+                    "type": "string"
+                },
+                "LANGUAGE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_DFBOM": {
+            "properties": {
+                "DFCALL_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_DFCALL": {
+            "properties": {
+                "DFCALL_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "DFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_DFUNC": {
+            "properties": {
+                "ANON_SUPPORT": {
+                    "type": "string"
+                },
+                "CONNECT_STR": {
+                    "type": "string"
+                },
+                "DFUNC_CODE": {
+                    "type": "string"
+                },
+                "DFUNC_DESC": {
+                    "type": "string"
+                },
+                "DFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FUNC_LIB": {
+                    "type": "string"
+                },
+                "FUNC_VER": {
+                    "type": "string"
+                },
+                "JAVA_CLASS_NAME": {
+                    "type": "string"
+                },
+                "LANGUAGE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_DSRC": {
+            "properties": {
+                "CONVERSATIONAL": {
+                    "type": "string"
+                },
+                "DSRC_CODE": {
+                    "type": "string"
+                },
+                "DSRC_DESC": {
+                    "type": "string"
+                },
+                "DSRC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "DSRC_RELY": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "RETENTION_LEVEL": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_DSRC_INTEREST": {
+            "properties": {
+                "DSRC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "INTEREST_FLAG": {
+                    "type": "string"
+                },
+                "MAX_DEGREE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_EBOM": {
+            "properties": {
+                "ETYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "UTYPE_CODE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_ECLASS": {
+            "properties": {
+                "ECLASS_CODE": {
+                    "type": "string"
+                },
+                "ECLASS_DESC": {
+                    "type": "string"
+                },
+                "ECLASS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "RESOLVE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_EFBOM": {
+            "properties": {
+                "EFCALL_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FELEM_REQ": {
+                    "type": "string"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_EFCALL": {
+            "properties": {
+                "EFCALL_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EFEAT_FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "IS_VIRTUAL": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_EFUNC": {
+            "properties": {
+                "CONNECT_STR": {
+                    "type": "string"
+                },
+                "EFUNC_CODE": {
+                    "type": "string"
+                },
+                "EFUNC_DESC": {
+                    "type": "string"
+                },
+                "EFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FUNC_LIB": {
+                    "type": "string"
+                },
+                "FUNC_VER": {
+                    "type": "string"
+                },
+                "JAVA_CLASS_NAME": {
+                    "type": "string"
+                },
+                "LANGUAGE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_ERFRAG": {
+            "properties": {
+                "ERFRAG_CODE": {
+                    "type": "string"
+                },
+                "ERFRAG_DEPENDS": {
+                    "type": "string"
+                },
+                "ERFRAG_DESC": {
+                    "type": "string"
+                },
+                "ERFRAG_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ERFRAG_SOURCE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_ERRULE": {
+            "properties": {
+                "DISQ_ERFRAG_CODE": {
+                    "type": "string"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "ERRULE_DESC": {
+                    "type": "string"
+                },
+                "ERRULE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ERRULE_TIER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "QUAL_ERFRAG_CODE": {
+                    "type": "string"
+                },
+                "REF_SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "RELATE": {
+                    "type": "string"
+                },
+                "RESOLVE": {
+                    "type": "string"
+                },
+                "RTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_ETYPE": {
+            "properties": {
+                "ECLASS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ETYPE_CODE": {
+                    "type": "string"
+                },
+                "ETYPE_DESC": {
+                    "type": "string"
+                },
+                "ETYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_FBOM": {
+            "properties": {
+                "DERIVED": {
+                    "type": "string"
+                },
+                "DISPLAY_DELIM": {
+                    "type": "string"
+                },
+                "DISPLAY_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_FBOVR": {
+            "properties": {
+                "ECLASS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_EXCL": {
+                    "type": "string"
+                },
+                "FTYPE_FREQ": {
+                    "type": "string"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_STAB": {
+                    "type": "string"
+                },
+                "UTYPE_CODE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_FCLASS": {
+            "properties": {
+                "FCLASS_CODE": {
+                    "type": "string"
+                },
+                "FCLASS_DESC": {
+                    "type": "string"
+                },
+                "FCLASS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_FELEM": {
+            "properties": {
+                "DATA_TYPE": {
+                    "type": "string"
+                },
+                "FELEM_CODE": {
+                    "type": "string"
+                },
+                "FELEM_DESC": {
+                    "type": "string"
+                },
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "TOKENIZE": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_FTYPE": {
+            "properties": {
+                "ANONYMIZE": {
+                    "type": "string"
+                },
+                "DERIVATION": {
+                    "type": "string"
+                },
+                "DERIVED": {
+                    "type": "string"
+                },
+                "FCLASS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_CODE": {
+                    "type": "string"
+                },
+                "FTYPE_DESC": {
+                    "type": "string"
+                },
+                "FTYPE_EXCL": {
+                    "type": "string"
+                },
+                "FTYPE_FREQ": {
+                    "type": "string"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_STAB": {
+                    "type": "string"
+                },
+                "PERSIST_HISTORY": {
+                    "type": "string"
+                },
+                "RTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SHOW_IN_MATCH_KEY": {
+                    "type": "string"
+                },
+                "USED_FOR_CAND": {
+                    "type": "string"
+                },
+                "VERSION": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_GENERIC_THRESHOLD": {
+            "properties": {
+                "BEHAVIOR": {
+                    "type": "string"
+                },
+                "CANDIDATE_CAP": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "GPLAN_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SCORING_CAP": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SEND_TO_REDO": {
+                    "type": "string"
+                }
+            }
+        },
+        "CFG_GPLAN": {
+            "properties": {
+                "GPLAN_CODE": {
+                    "type": "string"
+                },
+                "GPLAN_DESC": {
+                    "type": "string"
+                },
+                "GPLAN_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_LENS": {
+            "properties": {
+                "LENS_CODE": {
+                    "type": "string"
+                },
+                "LENS_DESC": {
+                    "type": "string"
+                },
+                "LENS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_LENSRL": {
+            "elements": {
+                "ref": "Fixme"
+            }
+        },
+        "CFG_RCLASS": {
+            "properties": {
+                "IS_DISCLOSED": {
+                    "metadata": {
+                        "description": "Indicates if this is a disclosed relationship."
+                    },
+                    "type": "string"
+                },
+                "RCLASS_CODE": {
+                    "type": "string"
+                },
+                "RCLASS_DESC": {
+                    "type": "string"
+                },
+                "RCLASS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_RTYPE": {
+            "properties": {
+                "BREAK_RES": {
+                    "type": "string"
+                },
+                "RCLASS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "REL_STRENGTH": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "RTYPE_CODE": {
+                    "type": "string"
+                },
+                "RTYPE_DESC": {
+                    "type": "string"
+                },
+                "RTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_SFCALL": {
+            "properties": {
+                "EXEC_ORDER": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SFCALL_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CFG_SFUNC": {
+            "properties": {
+                "CONNECT_STR": {
+                    "type": "string"
+                },
+                "FUNC_LIB": {
+                    "type": "string"
+                },
+                "FUNC_VER": {
+                    "type": "string"
+                },
+                "JAVA_CLASS_NAME": {
+                    "type": "string"
+                },
+                "LANGUAGE": {
+                    "type": "string"
+                },
+                "SFUNC_CODE": {
+                    "type": "string"
+                },
+                "SFUNC_DESC": {
+                    "type": "string"
+                },
+                "SFUNC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "CONFIG_BASE_VERSION": {
+            "properties": {
+                "BUILD_DATE": {
+                    "type": "string"
+                },
+                "BUILD_NUMBER": {
+                    "type": "string"
+                },
+                "BUILD_VERSION": {
+                    "type": "string"
+                },
+                "COMPATIBILITY_VERSION": {
+                    "ref": "CompatibilityVersion"
+                },
+                "PRODUCT_NAME": {
+                    "type": "string"
+                },
+                "VERSION": {
+                    "type": "string"
+                }
+            }
+        },
+        "Caches": {
+            "properties": {
+                "libFeatCacheHit": {
+                    "type": "int32"
+                },
+                "libFeatCacheMiss": {
+                    "type": "int32"
+                },
+                "libFeatInsert": {
+                    "type": "int32"
+                },
+                "resFeatStatCacheHit": {
+                    "type": "int32"
+                },
+                "resFeatStatCacheMiss": {
+                    "type": "int32"
+                },
+                "resFeatStatInsert": {
+                    "type": "int32"
+                },
+                "resFeatStatUpdateAttempt": {
+                    "type": "int32"
+                },
+                "resFeatStatUpdateFail": {
+                    "type": "int32"
+                }
+            }
+        },
+        "CandidateKeysForMatchInfo": {
+            "values": {
+                "elements": {
+                    "ref": "MatchInfoForAttribute"
+                }
+            }
+        },
+        "CandidateKeysForSearchStatistic": {
+            "properties": {
+                "FEATURE_TYPES": {
+                    "elements": {
+                        "ref": "FeatureType"
+                    }
+                },
+                "SUMMARY": {
+                    "ref": "Summary"
+                }
+            }
+        },
+        "Candidates": {
+            "properties": {
+                "candidateBuilders": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                },
+                "suppressedCandidateBuilders": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                }
+            }
+        },
+        "CompatibilityVersion": {
+            "properties": {
+                "CONFIG_VERSION": {
+                    "type": "string"
+                }
+            }
+        },
+        "Config": {
+            "properties": {
+                "CONFIG_COMMENTS": {
+                    "type": "string"
+                },
+                "CONFIG_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SYS_CREATE_DT": {
+                    "type": "string"
+                }
+            }
+        },
+        "Confirmation": {
+            "properties": {
+                "ADDITIONAL_SCORES": {
+                    "ref": "AdditionalScores"
+                },
+                "CANDIDATE_FEAT_DESC": {
+                    "type": "string"
+                },
+                "CANDIDATE_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "CANDIDATE_FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "FTYPE_CODE": {
+                    "type": "string"
+                },
+                "INBOUND_FEAT_DESC": {
+                    "type": "string"
+                },
+                "INBOUND_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "INBOUND_FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SCORE_BEHAVIOR": {
+                    "type": "string"
+                },
+                "SCORE_BUCKET": {
+                    "type": "string"
+                },
+                "SOURCE": {
+                    "type": "string"
+                },
+                "TOKEN": {
+                    "type": "string"
+                }
+            }
+        },
+        "Contention": {
+            "properties": {
+                "feature": {
+                    "ref": "Fixme"
+                },
+                "resEnt": {
+                    "ref": "Fixme"
+                },
+                "valuelatch": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "CurrResources": {
+            "properties": {
+                "activeThreads": {
+                    "type": "int32"
+                },
+                "availableMemory": {
+                    "type": "string"
+                },
+                "processMemory": {
+                    "type": "string"
+                },
+                "workerThreads": {
+                    "type": "int32"
+                }
+            }
+        },
+        "DataSource": {
+            "properties": {
+                "DSRC_CODE": {
+                    "metadata": {
+                        "description": "The text representation of the datasource."
+                    },
+                    "type": "string"
+                },
+                "DSRC_ID": {
+                    "metadata": {
+                        "description": "The unique identifier of the datasource.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "DisclosedRelationsForMatchInfo": {
+            "properties": {
+                "REL_ANCHOR": {
+                    "elements": {
+                        "ref": "RelAnchor"
+                    }
+                },
+                "REL_LINK": {
+                    "elements": {
+                        "ref": "RelLink"
+                    }
+                },
+                "REL_POINTER": {
+                    "elements": {
+                        "ref": "RelPointer"
+                    }
+                }
+            }
+        },
+        "DisclosedRelationsForMatchInfoForWhy": {
+            "properties": {
+                "DOMAIN": {
+                    "type": "string"
+                },
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_DESC": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LINKED_FEAT_TYPE": {
+                    "type": "string"
+                },
+                "REL_ANCHOR": {
+                    "elements": {
+                        "ref": "RelAnchor"
+                    }
+                }
+            }
+        },
+        "Entity": {
+            "properties": {
+                "RELATED_ENTITIES": {
+                    "elements": {
+                        "ref": "RelatedEntity"
+                    }
+                },
+                "RESOLVED_ENTITY": {
+                    "ref": "ResolvedEntity"
+                }
+            }
+        },
+        "EntityForResolvedEntity": {
+            "properties": {
+                "RELATED_ENTITIES": {
+                    "elements": {
+                        "ref": "RelatedEntity"
+                    }
+                },
+                "RESOLVED_ENTITY": {
+                    "ref": "ResolvedEntity"
+                }
+            }
+        },
+        "EntityForWhySearch": {
+            "properties": {
+                "RELATED_ENTITIES": {
+                    "elements": {
+                        "ref": "RelatedEntity"
+                    }
+                },
+                "RESOLVED_ENTITY": {
+                    "ref": "ResolvedEntity"
+                }
+            }
+        },
+        "EntityNetworkLink": {
+            "properties": {
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "IS_AMBIGUOUS": {
+                    "metadata": {
+                        "description": "Indicates if this is an ambiguous relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "IS_DISCLOSED": {
+                    "metadata": {
+                        "description": "Indicates if this is a disclosed relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "MAX_ENTITY_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MIN_ENTITY_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "EntityPath": {
+            "properties": {
+                "END_ENTITY_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ENTITIES": {
+                    "elements": {
+                        "metadata": {
+                            "goType": "int64"
+                        },
+                        "type": "int32"
+                    }
+                },
+                "START_ENTITY_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "EntityPathLink": {
+            "properties": {
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "IS_AMBIGUOUS": {
+                    "metadata": {
+                        "description": "Indicates if this is an ambiguous relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "IS_DISCLOSED": {
+                    "metadata": {
+                        "description": "Indicates if this is a disclosed relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "MAX_ENTITY_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MIN_ENTITY_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "ExpressedFeatures": {
+            "properties": {
+                "calls": {
+                    "elements": {
+                        "ref": "ExpressedFeaturesCall"
+                    }
+                },
+                "created": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                }
+            }
+        },
+        "ExpressedFeaturesCall": {
+            "properties": {
+                "EFCALL_ID": {
+                    "type": "int32"
+                },
+                "EFUNC_CODE": {
+                    "type": "string"
+                },
+                "numCalls": {
+                    "type": "int32"
+                }
+            }
+        },
+        "Feature": {
+            "properties": {
+                "FELEM_CODE": {
+                    "type": "string"
+                },
+                "FELEM_VALUE": {
+                    "type": "string"
+                }
+            }
+        },
+        "FeatureDescriptionValue": {
+            "properties": {
+                "ATTRIBUTES": {
+                    "values": {
+                        "type": "string"
+                    }
+                },
+                "CANDIDATE_CAP_REACHED": {
+                    "type": "string"
+                },
+                "ENTITY_COUNT": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "LIB_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SCORING_CAP_REACHED": {
+                    "type": "string"
+                },
+                "SUPPRESSED": {
+                    "type": "string"
+                },
+                "USED_FOR_CAND": {
+                    "type": "string"
+                },
+                "USED_FOR_SCORING": {
+                    "type": "string"
+                }
+            }
+        },
+        "FeatureForAttributes": {
+            "properties": {
+                "ATTRIBUTES": {
+                    "ref": "SenzingEntitySpecification"
+                },
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "FEAT_DESC_VALUES": {
+                    "elements": {
+                        "ref": "FeatureDescriptionValue"
+                    },
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    }
+                },
+                "LIB_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "USAGE_TYPE": {
+                    "metadata": {
+                        "description": "Label to identify how some features are being used (can also change some features behavior)."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "FeatureForGetEntity": {
+            "properties": {
+                "ATTRIBUTES": {
+                    "elements": {
+                        "ref": "SenzingEntitySpecification"
+                    }
+                },
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "FEAT_DESC_VALUES": {
+                    "elements": {
+                        "ref": "FeatureDescriptionValue"
+                    },
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    }
+                },
+                "LIB_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "USAGE_TYPE": {
+                    "metadata": {
+                        "description": "Label to identify how some features are being used (can also change some features behavior)."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "FeatureID": {
+            "properties": {
+                "LIB_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "USAGE_TYPE": {
+                    "metadata": {
+                        "description": "Label to identify how some features are being used (can also change some features behavior)."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "FeatureScoreForAttribute": {
+            "properties": {
+                "ADDITIONAL_SCORES": {
+                    "ref": "AdditionalScores"
+                },
+                "CANDIDATE_FEAT_DESC": {
+                    "type": "string"
+                },
+                "CANDIDATE_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "CANDIDATE_FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "INBOUND_FEAT_DESC": {
+                    "type": "string"
+                },
+                "INBOUND_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "INBOUND_FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "SCORE": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "SCORE_BEHAVIOR": {
+                    "type": "string"
+                },
+                "SCORE_BUCKET": {
+                    "type": "string"
+                }
+            }
+        },
+        "FeatureScores": {
+            "values": {
+                "elements": {
+                    "ref": "FeatureScoreForAttribute"
+                }
+            }
+        },
+        "FeatureType": {
+            "properties": {
+                "FOUND": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_CODE": {
+                    "type": "string"
+                },
+                "GENERIC": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "NOT_FOUND": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "FinalState": {
+            "properties": {
+                "NEED_REEVALUATION": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "VIRTUAL_ENTITIES": {
+                    "elements": {
+                        "ref": "VirtualEntitySynopsis"
+                    }
+                }
+            }
+        },
+        "Fixme": {
+            "properties": {
+                "FIXME_KEY": {
+                    "metadata": {
+                        "goType": "any"
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "FocusRecord": {
+            "properties": {
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "G2Config": {
+            "properties": {
+                "CFG_ATTR": {
+                    "elements": {
+                        "ref": "CFG_ATTR"
+                    }
+                },
+                "CFG_CFBOM": {
+                    "elements": {
+                        "ref": "CFG_CFBOM"
+                    }
+                },
+                "CFG_CFCALL": {
+                    "elements": {
+                        "ref": "CFG_CFCALL"
+                    }
+                },
+                "CFG_CFRTN": {
+                    "elements": {
+                        "ref": "CFG_CFRTN"
+                    }
+                },
+                "CFG_CFUNC": {
+                    "elements": {
+                        "ref": "CFG_CFUNC"
+                    }
+                },
+                "CFG_DFBOM": {
+                    "elements": {
+                        "ref": "CFG_DFBOM"
+                    }
+                },
+                "CFG_DFCALL": {
+                    "elements": {
+                        "ref": "CFG_DFCALL"
+                    }
+                },
+                "CFG_DFUNC": {
+                    "elements": {
+                        "ref": "CFG_DFUNC"
+                    }
+                },
+                "CFG_DSRC": {
+                    "elements": {
+                        "ref": "CFG_DSRC"
+                    }
+                },
+                "CFG_DSRC_INTEREST": {
+                    "elements": {
+                        "ref": "CFG_DSRC_INTEREST"
+                    }
+                },
+                "CFG_EBOM": {
+                    "elements": {
+                        "ref": "CFG_EBOM"
+                    }
+                },
+                "CFG_ECLASS": {
+                    "elements": {
+                        "ref": "CFG_ECLASS"
+                    }
+                },
+                "CFG_EFBOM": {
+                    "elements": {
+                        "ref": "CFG_EFBOM"
+                    }
+                },
+                "CFG_EFCALL": {
+                    "elements": {
+                        "ref": "CFG_EFCALL"
+                    }
+                },
+                "CFG_EFUNC": {
+                    "elements": {
+                        "ref": "CFG_EFUNC"
+                    }
+                },
+                "CFG_ERFRAG": {
+                    "elements": {
+                        "ref": "CFG_ERFRAG"
+                    }
+                },
+                "CFG_ERRULE": {
+                    "elements": {
+                        "ref": "CFG_ERRULE"
+                    }
+                },
+                "CFG_ETYPE": {
+                    "elements": {
+                        "ref": "CFG_ETYPE"
+                    }
+                },
+                "CFG_FBOM": {
+                    "elements": {
+                        "ref": "CFG_FBOM"
+                    }
+                },
+                "CFG_FBOVR": {
+                    "elements": {
+                        "ref": "CFG_FBOVR"
+                    }
+                },
+                "CFG_FCLASS": {
+                    "elements": {
+                        "ref": "CFG_FCLASS"
+                    }
+                },
+                "CFG_FELEM": {
+                    "elements": {
+                        "ref": "CFG_FELEM"
+                    }
+                },
+                "CFG_FTYPE": {
+                    "elements": {
+                        "ref": "CFG_FTYPE"
+                    }
+                },
+                "CFG_GENERIC_THRESHOLD": {
+                    "elements": {
+                        "ref": "CFG_GENERIC_THRESHOLD"
+                    }
+                },
+                "CFG_GPLAN": {
+                    "elements": {
+                        "ref": "CFG_GPLAN"
+                    }
+                },
+                "CFG_LENS": {
+                    "elements": {
+                        "ref": "CFG_LENS"
+                    }
+                },
+                "CFG_LENSRL": {
+                    "elements": {
+                        "ref": "CFG_LENSRL"
+                    }
+                },
+                "CFG_RCLASS": {
+                    "elements": {
+                        "ref": "CFG_RCLASS"
+                    }
+                },
+                "CFG_RTYPE": {
+                    "elements": {
+                        "ref": "CFG_RTYPE"
+                    }
+                },
+                "CFG_SFCALL": {
+                    "elements": {
+                        "ref": "CFG_SFCALL"
+                    }
+                },
+                "CFG_SFUNC": {
+                    "elements": {
+                        "ref": "CFG_SFUNC"
+                    }
+                },
+                "CONFIG_BASE_VERSION": {
+                    "ref": "CONFIG_BASE_VERSION"
+                },
+                "SETTINGS": {
+                    "properties": {
+                        "METAPHONE_VERSION": {
+                            "type": "int32"
+                        }
+                    }
+                },
+                "SYS_OOM": {
+                    "elements": {
+                        "ref": "SYS_OOM"
+                    }
+                }
+            }
+        },
+        "HowResults": {
+            "properties": {
+                "FINAL_STATE": {
+                    "ref": "FinalState"
+                },
+                "RESOLUTION_STEPS": {
+                    "elements": {
+                        "ref": "ResolutionStep"
+                    }
+                }
+            }
+        },
+        "InitResources": {
+            "properties": {
+                "availableMemory": {
+                    "type": "string"
+                },
+                "logicalCores": {
+                    "type": "int32"
+                },
+                "physicalCores": {
+                    "type": "int32"
+                },
+                "totalMemory": {
+                    "type": "string"
+                }
+            }
+        },
+        "InterestingEntities": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "InterestingEntity"
+                    }
+                },
+                "NOTICES": {
+                    "elements": {
+                        "ref": "Notice"
+                    }
+                }
+            }
+        },
+        "InterestingEntity": {
+            "properties": {
+                "DEGREES": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ENTITY_ID": {
+                    "metadata": {
+                        "description": "The ENTITY_ID is the Senzing-generated identifier for the discovered entity. It may change when new information is added.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FLAGS": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "SAMPLE_RECORDS": {
+                    "elements": {
+                        "ref": "SampleRecord"
+                    }
+                }
+            }
+        },
+        "License": {
+            "properties": {
+                "dsrLimit": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "LockWaits": {
+            "properties": {
+                "refreshLocks": {
+                    "ref": "RefreshLocks"
+                }
+            }
+        },
+        "MatchInfo": {
+            "properties": {
+                "CANDIDATE_KEYS": {
+                    "ref": "CandidateKeysForMatchInfo"
+                },
+                "DISCLOSED_RELATIONS": {
+                    "ref": "DisclosedRelationsForMatchInfo"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "FEATURE_SCORES": {
+                    "ref": "FeatureScores"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_KEY_DETAILS": {
+                    "ref": "MatchKeyDetails"
+                },
+                "MATCH_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "WHY_ERRULE_CODE": {
+                    "type": "string"
+                },
+                "WHY_KEY": {
+                    "type": "string"
+                }
+            }
+        },
+        "MatchInfoForAttribute": {
+            "properties": {
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "MatchInfoForWhy": {
+            "properties": {
+                "CANDIDATE_KEYS": {
+                    "values": {
+                        "elements": {
+                            "ref": "MatchInfoForAttribute"
+                        }
+                    }
+                },
+                "DISCLOSED_RELATIONS": {
+                    "ref": "DisclosedRelationsForMatchInfoForWhy"
+                },
+                "FEATURE_SCORES": {
+                    "ref": "FeatureScores"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "WHY_ERRULE_CODE": {
+                    "type": "string"
+                },
+                "WHY_KEY": {
+                    "type": "string"
+                },
+                "WHY_KEY_DETAILS": {
+                    "ref": "WhyKeyDetails"
+                }
+            }
+        },
+        "MatchKeyDetails": {
+            "properties": {
+                "CONFIRMATIONS": {
+                    "elements": {
+                        "ref": "Confirmation"
+                    }
+                },
+                "DENIALS": {
+                    "elements": {
+                        "ref": "Confirmation"
+                    }
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "MemberRecord": {
+            "properties": {
+                "INTERNAL_ID": {
+                    "metadata": {
+                        "description": "Internal identifier for the record.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "RECORDS": {
+                    "elements": {
+                        "ref": "Record"
+                    }
+                }
+            }
+        },
+        "Notice": {
+            "properties": {
+                "CODE": {
+                    "type": "string"
+                },
+                "DESCRIPTION": {
+                    "type": "string"
+                }
+            }
+        },
+        "Object": {
+            "metadata": {
+                "goType": "any",
+                "javaJacksonType": "Object",
+                "pythonType": "object"
+            },
+            "type": "string"
+        },
+        "ParamDetails": {
+            "properties": {
+                "NAME": {
+                    "type": "string"
+                },
+                "VALUE": {
+                    "ref": "Object"
+                }
+            }
+        },
+        "Params": {
+            "properties": {
+                "PARAM": {
+                    "ref": "ParamDetails"
+                }
+            }
+        },
+        "Processing": {
+            "properties": {
+                "addedRecords": {
+                    "type": "int32"
+                },
+                "ambiguous": {
+                    "ref": "ProcessingAmbiguous"
+                },
+                "batchAddedRecords": {
+                    "type": "int32"
+                },
+                "deletedRecords": {
+                    "type": "int32"
+                },
+                "details": {
+                    "ref": "ProcessingDetails"
+                },
+                "reevaluations": {
+                    "type": "int32"
+                },
+                "repairedEntities": {
+                    "type": "int32"
+                }
+            }
+        },
+        "ProcessingAmbiguous": {
+            "properties": {
+                "actualTest": {
+                    "type": "int32"
+                },
+                "cachedTest": {
+                    "type": "int32"
+                }
+            }
+        },
+        "ProcessingDetails": {
+            "properties": {
+                "addedRecords": {
+                    "type": "int32"
+                },
+                "candidates": {
+                    "type": "int32"
+                },
+                "changeDeletes": {
+                    "type": "int32"
+                },
+                "duration": {
+                    "type": "int32"
+                },
+                "filteredObsFeat": {
+                    "type": "int32"
+                },
+                "newObsEnt": {
+                    "type": "int32"
+                },
+                "obsEntHashDiff": {
+                    "type": "int32"
+                },
+                "obsEntHashSame": {
+                    "type": "int32"
+                },
+                "optimizedOut": {
+                    "type": "int32"
+                },
+                "optimizedOutSkipped": {
+                    "type": "int32"
+                },
+                "partiallyResolved": {
+                    "type": "int32"
+                },
+                "retries": {
+                    "type": "int32"
+                }
+            }
+        },
+        "Record": {
+            "properties": {
+                "ADDRESS_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "ATTRIBUTE_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "ENTITY_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "ENTITY_DESC": {
+                    "type": "string"
+                },
+                "ENTITY_KEY": {
+                    "type": "string"
+                },
+                "ENTITY_TYPE": {
+                    "type": "string"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "FEATURES": {
+                    "values": {
+                        "elements": {
+                            "ref": "FeatureForAttributes"
+                        }
+                    }
+                },
+                "FEATURE_IDS": {
+                    "elements": {
+                        "ref": "FeatureID"
+                    }
+                },
+                "FIRST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "IDENTIFIER_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "INTERNAL_ID": {
+                    "metadata": {
+                        "description": "Internal identifier for the record.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "JSON_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                },
+                "LAST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "NAME_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "OTHER_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "PHONE_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                },
+                "RELATIONSHIP_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "UNMAPPED_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                }
+            }
+        },
+        "RecordForGetEntity": {
+            "properties": {
+                "ADDRESS_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "ATTRIBUTE_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "ENTITY_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "ENTITY_DESC": {
+                    "type": "string"
+                },
+                "ENTITY_KEY": {
+                    "type": "string"
+                },
+                "ENTITY_TYPE": {
+                    "type": "string"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "FEATURES": {
+                    "values": {
+                        "elements": {
+                            "ref": "FeatureForAttributes"
+                        }
+                    }
+                },
+                "FEATURE_IDS": {
+                    "elements": {
+                        "ref": "FeatureID"
+                    }
+                },
+                "FIRST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "IDENTIFIER_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "INTERNAL_ID": {
+                    "metadata": {
+                        "description": "Internal identifier for the record.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "JSON_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                },
+                "LAST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "NAME_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "OTHER_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "PHONE_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                },
+                "RELATIONSHIP_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "UNMAPPED_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                }
+            }
+        },
+        "RecordKey": {
+            "properties": {
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "RecordKeys": {
+            "properties": {
+                "RECORDS": {
+                    "elements": {
+                        "ref": "RecordKey"
+                    },
+                    "metadata": {
+                        "description": "A list of (data source code, record id) pairs."
+                    }
+                }
+            }
+        },
+        "RecordSummary": {
+            "properties": {
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "FIRST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "LAST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "RECORD_COUNT": {
+                    "metadata": {
+                        "description": "The number of records for the entity with the same data source code.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "RefreshLocks": {
+            "properties": {
+                "count": {
+                    "type": "int32"
+                },
+                "maxMS": {
+                    "type": "int32"
+                },
+                "totalMS": {
+                    "type": "int32"
+                }
+            }
+        },
+        "RelAnchor": {
+            "properties": {
+                "DOMAIN": {
+                    "type": "string"
+                },
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LINKED_FEAT_DESC": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LINKED_FEAT_TYPE": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "REL_POINTER": {
+                    "elements": {
+                        "ref": "RelPointer"
+                    }
+                }
+            }
+        },
+        "RelLink": {
+            "properties": {
+                "DOMAIN": {
+                    "type": "string"
+                },
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_DESC": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LINKED_FEAT_TYPE": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_USAGE_TYPE": {
+                    "type": "string"
+                }
+            }
+        },
+        "RelPointer": {
+            "properties": {
+                "DOMAIN": {
+                    "type": "string"
+                },
+                "FEAT_DESC": {
+                    "metadata": {
+                        "description": "Describes the attributes that make up the feature."
+                    },
+                    "type": "string"
+                },
+                "FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FEAT_USAGE_TYPE": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_DESC": {
+                    "type": "string"
+                },
+                "LINKED_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LINKED_FEAT_TYPE": {
+                    "type": "string"
+                }
+            }
+        },
+        "RelatedEntity": {
+            "properties": {
+                "ENTITY_ID": {
+                    "metadata": {
+                        "description": "The ENTITY_ID is the Senzing-generated identifier for the discovered entity. It may change when new information is added.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ENTITY_NAME": {
+                    "metadata": {
+                        "description": "A name this entity goes by. An entity could have multiple names."
+                    },
+                    "type": "string"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "IS_AMBIGUOUS": {
+                    "metadata": {
+                        "description": "Indicates if this is an ambiguous relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "IS_DISCLOSED": {
+                    "metadata": {
+                        "description": "Indicates if this is a disclosed relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LAST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "RECORDS": {
+                    "elements": {
+                        "ref": "Record"
+                    }
+                },
+                "RECORD_SUMMARY": {
+                    "elements": {
+                        "ref": "RecordSummary"
+                    },
+                    "metadata": {
+                        "description": "Overview of the source systems the records came from comprising this related entity."
+                    }
+                }
+            }
+        },
+        "RepairDiagnosis": {
+            "properties": {
+                "types": {
+                    "type": "int32"
+                }
+            }
+        },
+        "Repository": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "Reresolve": {
+            "properties": {
+                "newFeatureFTypes": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                },
+                "suppressedCandidateBuildersForReresolve": {
+                    "ref": "Fixme"
+                },
+                "suppressedScoredFeatureTypeForReresolve": {
+                    "ref": "Fixme"
+                },
+                "triggers": {
+                    "ref": "ReresolveTriggers"
+                }
+            }
+        },
+        "ReresolveTriggers": {
+            "properties": {
+                "abortRetry": {
+                    "type": "int32"
+                },
+                "multipleResolvableCandidates": {
+                    "type": "int32"
+                },
+                "resolveNewFeatures": {
+                    "type": "int32"
+                },
+                "skipped": {
+                    "type": "int32"
+                },
+                "unresolveMovement": {
+                    "type": "int32"
+                }
+            }
+        },
+        "ResolutionStep": {
+            "properties": {
+                "INBOUND_VIRTUAL_ENTITY_ID": {
+                    "type": "string"
+                },
+                "MATCH_INFO": {
+                    "ref": "MatchInfo"
+                },
+                "RESULT_VIRTUAL_ENTITY_ID": {
+                    "type": "string"
+                },
+                "STEP": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "VIRTUAL_ENTITY_1": {
+                    "ref": "VirtualEntitySynopsis"
+                },
+                "VIRTUAL_ENTITY_2": {
+                    "ref": "VirtualEntitySynopsis"
+                }
+            }
+        },
+        "ResolvedEntity": {
+            "properties": {
+                "ENTITY_ID": {
+                    "metadata": {
+                        "description": "The ENTITY_ID is the Senzing-generated identifier for the discovered entity. It may change when new information is added.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ENTITY_NAME": {
+                    "metadata": {
+                        "description": "A name this entity goes by. An entity could have multiple names."
+                    },
+                    "type": "string"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "FEATURES": {
+                    "values": {
+                        "elements": {
+                            "ref": "FeatureForAttributes"
+                        }
+                    }
+                },
+                "FEATURE_IDS": {
+                    "elements": {
+                        "ref": "FeatureID"
+                    }
+                },
+                "IS_AMBIGUOUS": {
+                    "metadata": {
+                        "description": "Indicates if this is an ambiguous relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "IS_DISCLOSED": {
+                    "metadata": {
+                        "description": "Indicates if this is a disclosed relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LAST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "RECORDS": {
+                    "elements": {
+                        "ref": "Record"
+                    }
+                },
+                "RECORD_SUMMARY": {
+                    "elements": {
+                        "ref": "RecordSummary"
+                    },
+                    "metadata": {
+                        "description": "Overview of the source systems the records came from comprising this related entity."
+                    }
+                },
+                "RECORD_TYPES": {
+                    "elements": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "ResolvedEntityAndMatchInfo": {
+            "properties": {
+                "ENTITY": {
+                    "ref": "EntityForResolvedEntity"
+                },
+                "MATCH_INFO": {
+                    "ref": "MatchInfo"
+                }
+            }
+        },
+        "ResolvedEntityForGetEntity": {
+            "properties": {
+                "ENTITY_ID": {
+                    "metadata": {
+                        "description": "The ENTITY_ID is the Senzing-generated identifier for the discovered entity. It may change when new information is added.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ENTITY_NAME": {
+                    "metadata": {
+                        "description": "A name this entity goes by. An entity could have multiple names."
+                    },
+                    "type": "string"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "FEATURES": {
+                    "values": {
+                        "elements": {
+                            "ref": "FeatureForGetEntity"
+                        }
+                    }
+                },
+                "FEATURE_IDS": {
+                    "elements": {
+                        "ref": "FeatureID"
+                    }
+                },
+                "IS_AMBIGUOUS": {
+                    "metadata": {
+                        "description": "Indicates if this is an ambiguous relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "IS_DISCLOSED": {
+                    "metadata": {
+                        "description": "Indicates if this is a disclosed relationship.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LAST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "RECORDS": {
+                    "elements": {
+                        "ref": "RecordForGetEntity"
+                    }
+                },
+                "RECORD_SUMMARY": {
+                    "elements": {
+                        "ref": "RecordSummary"
+                    },
+                    "metadata": {
+                        "description": "Overview of the source systems the records came from comprising this related entity."
+                    }
+                },
+                "RECORD_TYPES": {
+                    "elements": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "SYS_OOM": {
+            "properties": {
+                "FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FTYPE_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LENS_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LIB_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "LIB_FELEM_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "NEXT_THRESH": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "OOM_LEVEL": {
+                    "type": "string"
+                },
+                "OOM_TYPE": {
+                    "type": "string"
+                },
+                "THRESH1_CNT": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "THRESH1_OOM": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "SampleRecord": {
+            "properties": {
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "FLAGS": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "SchemaVersion": {
+            "properties": {
+                "ENGINE_SCHEMA_VERSION": {
+                    "type": "string"
+                },
+                "MAXIMUM_REQUIRED_SCHEMA_VERSION": {
+                    "type": "string"
+                },
+                "MINIMUM_REQUIRED_SCHEMA_VERSION": {
+                    "type": "string"
+                }
+            }
+        },
+        "Scoring": {
+            "properties": {
+                "cacheHit": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                },
+                "cacheMiss": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                },
+                "scoredPairs": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                },
+                "suppressedDisclosedRelationshipDomainCount": {
+                    "type": "int32"
+                },
+                "suppressedScoredFeatureType": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SearchRequest": {
+            "properties": {
+                "FEATURES": {
+                    "values": {
+                        "elements": {
+                            "ref": "FeatureDescriptionValue"
+                        }
+                    }
+                },
+                "JSON_DATA": {
+                    "type": "string"
+                },
+                "SEARCH_PROFILE": {
+                    "type": "string"
+                }
+            }
+        },
+        "SearchStatistic": {
+            "properties": {
+                "CANDIDATE_KEYS": {
+                    "ref": "CandidateKeysForSearchStatistic"
+                }
+            }
+        },
+        "SenzingEntitySpecification": {
+            "properties": {
+                "ACCOUNT_DOMAIN": {
+                    "type": "string"
+                },
+                "ACCOUNT_NUMBER": {
+                    "type": "string"
+                },
+                "ADDR_CITY": {
+                    "type": "string"
+                },
+                "ADDR_COUNTRY": {
+                    "type": "string"
+                },
+                "ADDR_FROM_DATE": {
+                    "type": "string"
+                },
+                "ADDR_FULL": {
+                    "type": "string"
+                },
+                "ADDR_LINE1": {
+                    "type": "string"
+                },
+                "ADDR_LINE2": {
+                    "type": "string"
+                },
+                "ADDR_LINE3": {
+                    "type": "string"
+                },
+                "ADDR_LINE4": {
+                    "type": "string"
+                },
+                "ADDR_LINE5": {
+                    "type": "string"
+                },
+                "ADDR_LINE6": {
+                    "type": "string"
+                },
+                "ADDR_POSTAL_CODE": {
+                    "type": "string"
+                },
+                "ADDR_STATE": {
+                    "type": "string"
+                },
+                "ADDR_THRU_DATE": {
+                    "type": "string"
+                },
+                "ADDR_TYPE": {
+                    "type": "string"
+                },
+                "CITIZENSHIP": {
+                    "type": "string"
+                },
+                "DATE_OF_BIRTH": {
+                    "type": "string"
+                },
+                "DATE_OF_DEATH": {
+                    "type": "string"
+                },
+                "DRIVERS_LICENSE_NUMBER": {
+                    "type": "string"
+                },
+                "DRIVERS_LICENSE_STATE": {
+                    "type": "string"
+                },
+                "DUNS_NUMBER": {
+                    "type": "string"
+                },
+                "EMAIL_ADDRESS": {
+                    "type": "string"
+                },
+                "EMPLOYER": {
+                    "type": "string"
+                },
+                "EMPLOYER_NAME": {
+                    "type": "string"
+                },
+                "FACEBOOK": {
+                    "type": "string"
+                },
+                "GENDER": {
+                    "type": "string"
+                },
+                "GROUP_ASSN_ID_NUMBER": {
+                    "type": "string"
+                },
+                "GROUP_ASSN_ID_TYPE": {
+                    "type": "string"
+                },
+                "GROUP_ASSOCIATION_ORG_NAME": {
+                    "type": "string"
+                },
+                "GROUP_ASSOCIATION_TYPE": {
+                    "type": "string"
+                },
+                "INSTAGRAM": {
+                    "type": "string"
+                },
+                "LEI_NUMBER": {
+                    "type": "string"
+                },
+                "LINKEDIN": {
+                    "type": "string"
+                },
+                "NAME_FIRST": {
+                    "type": "string"
+                },
+                "NAME_FULL": {
+                    "type": "string"
+                },
+                "NAME_LAST": {
+                    "type": "string"
+                },
+                "NAME_ORG": {
+                    "type": "string"
+                },
+                "NAME_PREFIX": {
+                    "type": "string"
+                },
+                "NAME_SUFFIX": {
+                    "type": "string"
+                },
+                "NAME_TYPE": {
+                    "type": "string"
+                },
+                "NATIONALITY": {
+                    "type": "string"
+                },
+                "NATIONAL_ID_COUNTRY": {
+                    "type": "string"
+                },
+                "NATIONAL_ID_NUMBER": {
+                    "type": "string"
+                },
+                "NATIVE_NAME_FULL": {
+                    "type": "string"
+                },
+                "NPI_NUMBER": {
+                    "type": "string"
+                },
+                "OTHER_ID_COUNTRY": {
+                    "type": "string"
+                },
+                "OTHER_ID_NUMBER": {
+                    "type": "string"
+                },
+                "OTHER_ID_TYPE": {
+                    "type": "string"
+                },
+                "PASSPORT_COUNTRY": {
+                    "type": "string"
+                },
+                "PASSPORT_NUMBER": {
+                    "type": "string"
+                },
+                "PHONE_FROM_DATE": {
+                    "type": "string"
+                },
+                "PHONE_NUMBER": {
+                    "type": "string"
+                },
+                "PHONE_THRU_DATE": {
+                    "type": "string"
+                },
+                "PHONE_TYPE": {
+                    "type": "string"
+                },
+                "PLACE_OF_BIRTH": {
+                    "type": "string"
+                },
+                "PRIMARY_NAME_FIRST": {
+                    "type": "string"
+                },
+                "PRIMARY_NAME_FULL": {
+                    "type": "string"
+                },
+                "PRIMARY_NAME_LAST": {
+                    "type": "string"
+                },
+                "PRIMARY_NAME_MIDDLE": {
+                    "type": "string"
+                },
+                "PRIMARY_NAME_ORG": {
+                    "type": "string"
+                },
+                "RECORD_TYPE": {
+                    "type": "string"
+                },
+                "REGISTRATION_COUNTRY": {
+                    "type": "string"
+                },
+                "REGISTRATION_DATE": {
+                    "type": "string"
+                },
+                "REL_ANCHOR_KEY": {
+                    "type": "string"
+                },
+                "REL_POINTER_KEY": {
+                    "type": "string"
+                },
+                "SECONDARY_NAME_ORG": {
+                    "type": "string"
+                },
+                "SIGNAL": {
+                    "type": "string"
+                },
+                "SKYPE": {
+                    "type": "string"
+                },
+                "SSN_NUMBER": {
+                    "type": "string"
+                },
+                "TANGO": {
+                    "type": "string"
+                },
+                "TAX_ID_COUNTRY": {
+                    "type": "string"
+                },
+                "TAX_ID_NUMBER": {
+                    "type": "string"
+                },
+                "TAX_ID_TYPE": {
+                    "type": "string"
+                },
+                "TELEGRAM": {
+                    "type": "string"
+                },
+                "TRUSTED_ID_NUMBER": {
+                    "type": "string"
+                },
+                "TRUSTED_ID_TYPE": {
+                    "type": "string"
+                },
+                "TWITTER": {
+                    "type": "string"
+                },
+                "VIBER": {
+                    "type": "string"
+                },
+                "WEBSITE_ADDRESS": {
+                    "type": "string"
+                },
+                "WECHAT": {
+                    "type": "string"
+                },
+                "WHATSAPP": {
+                    "type": "string"
+                },
+                "ZOOMROOM": {
+                    "type": "string"
+                }
+            }
+        },
+        "Summary": {
+            "properties": {
+                "FOUND": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "GENERIC": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "NOT_FOUND": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "SystemLoad": {
+            "properties": {
+                "cpuIdle": {
+                    "type": "string"
+                },
+                "cpuSystem": {
+                    "type": "string"
+                },
+                "cpuUser": {
+                    "type": "string"
+                },
+                "cpuWait": {
+                    "type": "string"
+                }
+            }
+        },
+        "SystemResources": {
+            "properties": {
+                "currResources": {
+                    "ref": "CurrResources"
+                },
+                "initResources": {
+                    "ref": "InitResources"
+                },
+                "systemLoad": {
+                    "ref": "SystemLoad"
+                }
+            }
+        },
+        "SzConfigExportResponse": {
+            "properties": {
+                "G2_CONFIG": {
+                    "ref": "G2Config"
+                }
+            }
+        },
+        "SzConfigGetDataSourceRegistryResponse": {
+            "properties": {
+                "DATA_SOURCES": {
+                    "elements": {
+                        "ref": "DataSource"
+                    }
+                }
+            }
+        },
+        "SzConfigManagerGetConfigRegistryResponse": {
+            "properties": {
+                "CONFIGS": {
+                    "elements": {
+                        "ref": "Config"
+                    }
+                }
+            }
+        },
+        "SzConfigRegisterDataSourceResponse": {
+            "properties": {
+                "DSRC_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "SzConfigUnregisterDataSourceResponse": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzDiagnosticCheckRepositoryPerformanceResponse": {
+            "properties": {
+                "insertTime": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "numRecordsInserted": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "SzDiagnosticGetFeatureResponse": {
+            "properties": {
+                "ELEMENTS": {
+                    "elements": {
+                        "ref": "Feature"
+                    }
+                },
+                "FTYPE_CODE": {
+                    "type": "string"
+                },
+                "LIB_FEAT_ID": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "SzDiagnosticGetRepositoryInfoResponse": {
+            "properties": {
+                "dataStores": {
+                    "elements": {
+                        "ref": "Repository"
+                    }
+                }
+            }
+        },
+        "SzEngineAddRecordResponse": {
+            "properties": {
+                "AFFECTED_ENTITIES": {
+                    "elements": {
+                        "ref": "AffectedEntity"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "INTERESTING_ENTITIES": {
+                    "ref": "InterestingEntities"
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "SzEngineDeleteRecordResponse": {
+            "properties": {
+                "AFFECTED_ENTITIES": {
+                    "elements": {
+                        "ref": "AffectedEntity"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "INTERESTING_ENTITIES": {
+                    "ref": "InterestingEntities"
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "SzEngineExportCsvEntityReportCsvColumnList": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineFetchNextResponse": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineFindInterestingEntitiesByEntityIdResponse": {
+            "properties": {
+                "INTERESTING_ENTITIES": {
+                    "ref": "InterestingEntities"
+                }
+            }
+        },
+        "SzEngineFindInterestingEntitiesByRecordIdResponse": {
+            "properties": {
+                "INTERESTING_ENTITIES": {
+                    "ref": "InterestingEntities"
+                }
+            }
+        },
+        "SzEngineFindNetworkByEntityIdEntityIds": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineFindNetworkByEntityIdResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "Entity"
+                    }
+                },
+                "ENTITY_NETWORK_LINKS": {
+                    "elements": {
+                        "ref": "EntityNetworkLink"
+                    }
+                },
+                "ENTITY_PATHS": {
+                    "elements": {
+                        "ref": "EntityPath"
+                    }
+                },
+                "ENTITY_PATH_LINKS": {
+                    "elements": {
+                        "ref": "EntityPathLink"
+                    }
+                },
+                "MAX_ENTITY_LIMIT_REACHED": {
+                    "type": "string"
+                }
+            }
+        },
+        "SzEngineFindNetworkByRecordIdRecordKeys": {
+            "properties": {
+                "RECORDS": {
+                    "elements": {
+                        "ref": "RecordKey"
+                    },
+                    "metadata": {
+                        "description": "A list of (data source code, record id) pairs."
+                    }
+                }
+            }
+        },
+        "SzEngineFindNetworkByRecordIdResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "Entity"
+                    }
+                },
+                "ENTITY_NETWORK_LINKS": {
+                    "elements": {
+                        "ref": "EntityNetworkLink"
+                    }
+                },
+                "ENTITY_PATHS": {
+                    "elements": {
+                        "ref": "EntityPath"
+                    }
+                },
+                "ENTITY_PATH_LINKS": {
+                    "elements": {
+                        "ref": "EntityPathLink"
+                    }
+                },
+                "MAX_ENTITY_LIMIT_REACHED": {
+                    "type": "string"
+                }
+            }
+        },
+        "SzEngineFindPathByEntityIdAvoidEntityIds": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineFindPathByEntityIdRequiredDataSources": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineFindPathByEntityIdResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "Entity"
+                    }
+                },
+                "ENTITY_PATHS": {
+                    "elements": {
+                        "ref": "EntityPath"
+                    }
+                },
+                "ENTITY_PATH_LINKS": {
+                    "elements": {
+                        "ref": "EntityPathLink"
+                    }
+                }
+            }
+        },
+        "SzEngineFindPathByRecordIdAvoidRecordKeys": {
+            "properties": {
+                "RECORDS": {
+                    "elements": {
+                        "ref": "RecordKey"
+                    },
+                    "metadata": {
+                        "description": "A list of (data source code, record id) pairs."
+                    }
+                }
+            }
+        },
+        "SzEngineFindPathByRecordIdRequiredDataSources": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineFindPathByRecordIdResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "Entity"
+                    }
+                },
+                "ENTITY_PATHS": {
+                    "elements": {
+                        "ref": "EntityPath"
+                    }
+                },
+                "ENTITY_PATH_LINKS": {
+                    "elements": {
+                        "ref": "EntityPathLink"
+                    }
+                }
+            }
+        },
+        "SzEngineGetEntityByEntityIdResponse": {
+            "properties": {
+                "RELATED_ENTITIES": {
+                    "elements": {
+                        "ref": "RelatedEntity"
+                    }
+                },
+                "RESOLVED_ENTITY": {
+                    "ref": "ResolvedEntityForGetEntity"
+                }
+            }
+        },
+        "SzEngineGetEntityByRecordIdResponse": {
+            "properties": {
+                "RELATED_ENTITIES": {
+                    "elements": {
+                        "ref": "RelatedEntity"
+                    }
+                },
+                "RESOLVED_ENTITY": {
+                    "ref": "ResolvedEntityForGetEntity"
+                }
+            }
+        },
+        "SzEngineGetRecordPreviewResponse": {
+            "properties": {
+                "FEATURES": {
+                    "values": {
+                        "elements": {
+                            "ref": "FeatureForAttributes"
+                        }
+                    }
+                },
+                "FEATURE_IDS": {
+                    "elements": {
+                        "ref": "FeatureID"
+                    }
+                },
+                "JSON_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                },
+                "UNMAPPED_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                }
+            }
+        },
+        "SzEngineGetRecordResponse": {
+            "properties": {
+                "ADDRESS_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "ATTRIBUTE_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "ENTITY_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "ENTITY_DESC": {
+                    "type": "string"
+                },
+                "ENTITY_KEY": {
+                    "type": "string"
+                },
+                "ENTITY_TYPE": {
+                    "type": "string"
+                },
+                "ERRULE_CODE": {
+                    "metadata": {
+                        "description": "Identifier of the entity resolution rule that was triggered."
+                    },
+                    "type": "string"
+                },
+                "FEATURES": {
+                    "values": {
+                        "elements": {
+                            "ref": "FeatureForAttributes"
+                        }
+                    }
+                },
+                "FEATURE_IDS": {
+                    "elements": {
+                        "ref": "FeatureID"
+                    }
+                },
+                "FIRST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "IDENTIFIER_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "INTERNAL_ID": {
+                    "metadata": {
+                        "description": "Internal identifier for the record.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "JSON_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                },
+                "LAST_SEEN_DT": {
+                    "type": "timestamp"
+                },
+                "MATCH_KEY": {
+                    "metadata": {
+                        "description": "Representation of matched source record features."
+                    },
+                    "type": "string"
+                },
+                "MATCH_LEVEL": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_LEVEL_CODE": {
+                    "metadata": {
+                        "description": "The type of match that occurred for the record."
+                    },
+                    "type": "string"
+                },
+                "NAME_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "OTHER_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "PHONE_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                },
+                "RELATIONSHIP_DATA": {
+                    "elements": {
+                        "type": "string"
+                    }
+                },
+                "UNMAPPED_DATA": {
+                    "values": {
+                        "ref": "Object"
+                    }
+                }
+            }
+        },
+        "SzEngineGetRedoRecordResponse": {
+            "properties": {
+                "UMF_PROC": {
+                    "ref": "UmfProc"
+                }
+            }
+        },
+        "SzEngineGetStatsResponse": {
+            "properties": {
+                "workload": {
+                    "ref": "Workload"
+                }
+            }
+        },
+        "SzEngineGetVirtualEntityByRecordIdRecordKeys": {
+            "properties": {
+                "RECORDS": {
+                    "elements": {
+                        "ref": "RecordKey"
+                    },
+                    "metadata": {
+                        "description": "A list of (data source code, record id) pairs."
+                    }
+                }
+            }
+        },
+        "SzEngineGetVirtualEntityByRecordIdResponse": {
+            "properties": {
+                "RESOLVED_ENTITY": {
+                    "ref": "ResolvedEntity"
+                }
+            }
+        },
+        "SzEngineHowEntityByEntityIdResponse": {
+            "properties": {
+                "HOW_RESULTS": {
+                    "ref": "HowResults"
+                }
+            }
+        },
+        "SzEngineProcessRedoRecordResponse": {
+            "properties": {
+                "AFFECTED_ENTITIES": {
+                    "elements": {
+                        "ref": "AffectedEntity"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "INTERESTING_ENTITIES": {
+                    "ref": "InterestingEntities"
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "SzEngineReevaluateEntityResponse": {
+            "properties": {
+                "AFFECTED_ENTITIES": {
+                    "elements": {
+                        "ref": "AffectedEntity"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "INTERESTING_ENTITIES": {
+                    "ref": "InterestingEntities"
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "SzEngineReevaluateRecordResponse": {
+            "properties": {
+                "AFFECTED_ENTITIES": {
+                    "elements": {
+                        "ref": "AffectedEntity"
+                    }
+                },
+                "DATA_SOURCE": {
+                    "metadata": {
+                        "description": "A label identifying the provenance of the record."
+                    },
+                    "type": "string"
+                },
+                "INTERESTING_ENTITIES": {
+                    "ref": "InterestingEntities"
+                },
+                "RECORD_ID": {
+                    "metadata": {
+                        "description": "The unique identifier within the set of records in the DATA_SOURCE."
+                    },
+                    "type": "string"
+                }
+            }
+        },
+        "SzEngineSearchByAttributesAttributes": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineSearchByAttributesResponse": {
+            "properties": {
+                "RESOLVED_ENTITIES": {
+                    "elements": {
+                        "ref": "ResolvedEntityAndMatchInfo"
+                    }
+                },
+                "SEARCH_REQUEST": {
+                    "ref": "SearchRequest"
+                },
+                "SEARCH_STATISTICS": {
+                    "elements": {
+                        "ref": "SearchStatistic"
+                    }
+                }
+            }
+        },
+        "SzEngineSearchByAttributesSearchProfile": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineStreamExportJsonEntityReportResponse": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineWhyEntitiesResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "Entity"
+                    }
+                },
+                "WHY_RESULTS": {
+                    "elements": {
+                        "ref": "WhyResult"
+                    }
+                }
+            }
+        },
+        "SzEngineWhyRecordInEntityResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "Entity"
+                    }
+                },
+                "WHY_RESULTS": {
+                    "elements": {
+                        "ref": "WhyResult"
+                    }
+                }
+            }
+        },
+        "SzEngineWhyRecordsResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "Entity"
+                    }
+                },
+                "WHY_RESULTS": {
+                    "elements": {
+                        "ref": "WhyResult"
+                    }
+                }
+            }
+        },
+        "SzEngineWhySearchAttributes": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzEngineWhySearchResponse": {
+            "properties": {
+                "ENTITIES": {
+                    "elements": {
+                        "ref": "EntityForWhySearch"
+                    }
+                },
+                "SEARCH_REQUEST": {
+                    "ref": "SearchRequest"
+                },
+                "SEARCH_STATISTICS": {
+                    "elements": {
+                        "ref": "SearchStatistic"
+                    }
+                },
+                "WHY_RESULTS": {
+                    "elements": {
+                        "ref": "WhyResult"
+                    }
+                }
+            }
+        },
+        "SzEngineWhySearchSearchProfile": {
+            "properties": {
+                "FIXME": {
+                    "ref": "Fixme"
+                }
+            }
+        },
+        "SzProductGetLicenseResponse": {
+            "properties": {
+                "advSearch": {
+                    "type": "int32"
+                },
+                "billing": {
+                    "type": "string"
+                },
+                "contract": {
+                    "type": "string"
+                },
+                "customer": {
+                    "type": "string"
+                },
+                "expireDate": {
+                    "type": "string"
+                },
+                "issueDate": {
+                    "type": "string"
+                },
+                "licenseLevel": {
+                    "type": "string"
+                },
+                "licenseType": {
+                    "type": "string"
+                },
+                "recordLimit": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                }
+            }
+        },
+        "SzProductGetVersionResponse": {
+            "properties": {
+                "BUILD_DATE": {
+                    "type": "string"
+                },
+                "BUILD_NUMBER": {
+                    "type": "string"
+                },
+                "BUILD_VERSION": {
+                    "type": "string"
+                },
+                "COMPATIBILITY_VERSION": {
+                    "ref": "CompatibilityVersion"
+                },
+                "PRODUCT_NAME": {
+                    "type": "string"
+                },
+                "SCHEMA_VERSION": {
+                    "ref": "SchemaVersion"
+                },
+                "VERSION": {
+                    "type": "string"
+                }
+            }
+        },
+        "ThreadState": {
+            "properties": {
+                "active": {
+                    "type": "int32"
+                },
+                "dataLatchContention": {
+                    "type": "int32"
+                },
+                "governorContention": {
+                    "type": "int32"
+                },
+                "idle": {
+                    "type": "int32"
+                },
+                "loader": {
+                    "type": "int32"
+                },
+                "obsEntContention": {
+                    "type": "int32"
+                },
+                "resEntContention": {
+                    "type": "int32"
+                },
+                "resolver": {
+                    "type": "int32"
+                },
+                "scoring": {
+                    "type": "int32"
+                },
+                "sqlExecuting": {
+                    "type": "int32"
+                }
+            }
+        },
+        "UmfProc": {
+            "properties": {
+                "NAME": {
+                    "type": "string"
+                },
+                "PARAMS": {
+                    "elements": {
+                        "ref": "Params"
+                    }
+                }
+            }
+        },
+        "Unresolve": {
+            "properties": {
+                "abortedUnresolve": {
+                    "type": "int32"
+                },
+                "triggers": {
+                    "ref": "UnresolveTriggers"
+                },
+                "unresolveTest": {
+                    "type": "int32"
+                }
+            }
+        },
+        "UnresolveTriggers": {
+            "properties": {
+                "ambiguousMultiResolve": {
+                    "type": "int32"
+                },
+                "ambiguousNoResolve": {
+                    "type": "int32"
+                },
+                "extensiveResolve": {
+                    "type": "int32"
+                },
+                "normalResolve": {
+                    "type": "int32"
+                },
+                "relLink": {
+                    "type": "int32"
+                },
+                "update": {
+                    "type": "int32"
+                }
+            }
+        },
+        "VirtualEntitySynopsis": {
+            "properties": {
+                "MEMBER_RECORDS": {
+                    "elements": {
+                        "ref": "MemberRecord"
+                    }
+                },
+                "VIRTUAL_ENTITY_ID": {
+                    "type": "string"
+                }
+            }
+        },
+        "WhyKeyDetails": {
+            "properties": {
+                "CONFIRMATIONS": {
+                    "elements": {
+                        "ref": "Confirmation"
+                    }
+                },
+                "DENIALS": {
+                    "elements": {
+                        "ref": "Confirmation"
+                    }
+                }
+            }
+        },
+        "WhyResult": {
+            "properties": {
+                "ENTITY_ID": {
+                    "metadata": {
+                        "description": "The ENTITY_ID is the Senzing-generated identifier for the discovered entity. It may change when new information is added.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "ENTITY_ID_2": {
+                    "metadata": {
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "FOCUS_RECORDS": {
+                    "elements": {
+                        "ref": "FocusRecord"
+                    }
+                },
+                "FOCUS_RECORDS_2": {
+                    "elements": {
+                        "ref": "FocusRecord"
+                    }
+                },
+                "INTERNAL_ID": {
+                    "metadata": {
+                        "description": "Internal identifier for the record.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "INTERNAL_ID_2": {
+                    "metadata": {
+                        "description": "Internal identifier for the record.",
+                        "goType": "int64"
+                    },
+                    "type": "int32"
+                },
+                "MATCH_INFO": {
+                    "ref": "MatchInfoForWhy"
+                }
+            }
+        },
+        "Workload": {
+            "properties": {
+                "apiVersion": {
+                    "type": "string"
+                },
+                "caches": {
+                    "ref": "Caches"
+                },
+                "candidates": {
+                    "ref": "Candidates"
+                },
+                "contention": {
+                    "ref": "Contention"
+                },
+                "datetimestamp": {
+                    "type": "string"
+                },
+                "expressedFeatures": {
+                    "ref": "ExpressedFeatures"
+                },
+                "genericDetect": {
+                    "ref": "Fixme"
+                },
+                "license": {
+                    "ref": "License"
+                },
+                "loadedRecords": {
+                    "type": "int32"
+                },
+                "lockWaits": {
+                    "ref": "LockWaits"
+                },
+                "processing": {
+                    "ref": "Processing"
+                },
+                "redoTriggers": {
+                    "metadata": {
+                        "goType": "map[string]int64"
+                    },
+                    "values": {
+                        "type": "int32"
+                    }
+                },
+                "repairDiagnosis": {
+                    "ref": "RepairDiagnosis"
+                },
+                "reresolve": {
+                    "ref": "Reresolve"
+                },
+                "scoring": {
+                    "ref": "Scoring"
+                },
+                "systemResources": {
+                    "ref": "SystemResources"
+                },
+                "threadState": {
+                    "ref": "ThreadState"
+                },
+                "unresolve": {
+                    "ref": "Unresolve"
+                }
+            }
+        }
+    }
+}

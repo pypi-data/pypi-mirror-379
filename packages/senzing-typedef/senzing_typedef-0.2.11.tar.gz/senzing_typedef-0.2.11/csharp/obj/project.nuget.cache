@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1fJv6ICTDyrtoDnNa6ecfjWHcbW60/HmwbDAs4IpjfoPdJODj0HlrngIO41mmkvPlCXpRSIwAfhJDLd1yhjt5A==",
+  "success": true,
+  "projectFilePath": "/home/senzing/senzing-garage.git/sz-sdk-json-type-definition/csharp/csharp.csproj",
+  "expectedPackageFiles": [
+    "/home/senzing/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
