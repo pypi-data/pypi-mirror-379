@@ -1,0 +1,12 @@
+alibabacloud/__init__.py,sha256=2kC30A-4AWCXaaDuJ5d--AY4ZL8fQtFtEDKIXnUa0NQ,3948
+alibabacloud/__main__.py,sha256=jR0Lxw0kZ0ob92t02sLClmudcmDZVfqebv1ho7mE9-Q,4053
+alibabacloud/ecs.py,sha256=1phCGdT-1QuLcEA5_I474t8JkoMhPubuWyFoUhmbzAU,8427
+alibabacloud/oss.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alibabacloud/rds.py,sha256=Q0KSUuNi7ef9QnnrV4Et5qJNCzbPP8vfzSyNvjxlnOE,8462
+alibabacloud/slb.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alibabacloud/vpc.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alibabacloude-2.2.0.dist-info/METADATA,sha256=8OCnYgE454SkXGBQaAqH9TWlcJHON3POOC6l1psHxag,1132
+alibabacloude-2.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+alibabacloude-2.2.0.dist-info/entry_points.txt,sha256=7zkcFl1lPMaLWKxfPzql9F_0dnHKuP-fPa5uTv6ARMU,54
+alibabacloude-2.2.0.dist-info/top_level.txt,sha256=6kg1HvWenU0Plb5-tC42crEMeun1pG4VfHz0KR5l_Eg,13
+alibabacloude-2.2.0.dist-info/RECORD,,
