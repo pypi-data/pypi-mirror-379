@@ -1,0 +1,4 @@
+include akris/c_serpent/*.h
+include akris/c_serpent/*.c
+include akris/c_serpent/lib/*.c
+include akris/c_serpent/lib/*.h

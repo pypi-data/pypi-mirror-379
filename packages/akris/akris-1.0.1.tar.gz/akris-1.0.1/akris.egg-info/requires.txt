@@ -1,0 +1,10 @@
+cffi
+setuptools
+
+[dev]
+black
+pytest
+pylint
+pyinstaller
+staticx
+markdown2
