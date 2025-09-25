@@ -1,0 +1,17 @@
+qat/nnize/__init__.so,sha256=o4KccoxFnYXa_AbfUdZ3Uo0OlCU_7pytgSgny0M-hoU,79848
+qat/nnize/definition.so,sha256=LoDsO-8JiXDz_bgDJ6kBdgHLhsjigfxAgpc-KA4fdds,158344
+qat/nnize/expand_swaps.so,sha256=hohiEl9I1Q8h8x9JjUZYF8O6noIEpJCaSlidvWgOZ_k,228336
+qat/nnize/libastar.so,sha256=02g_r9I8AGGjT5_QirDkcf_2Wkr7-XUH6I1-zbUSvn4,235968
+qat/nnize/libcpp_nnize.so,sha256=RFAw4flXc3BUnuu6Wl5TEVA_1UDixCmHHAXQATDnRu4,543008
+qat/nnize/libpattern.so,sha256=yBHLVOrfrcbbztU9xl6Gg0uKp9CKifnTnxuAxhQWLAE,157976
+qat/nnize/libsabre.so,sha256=ExB7JRlWdCqAzKl1Pcn3p1zNPoIuThCqRU9odOowcrc,167560
+qat/nnize/mapping.so,sha256=zSp-1nTXVI6FypPeiLR2jTuzaBxgK8gPuksYWctYEOs,232104
+qat/nnize/plugin.so,sha256=pxhsxmoGQX_pe57wmcTG00f0VJfL2PSI3evwGHoi51Q,448208
+qat/nnize/version.so,sha256=gdzU_RgY6o-fDe239plSYBza2QJ28-7zkK0RnabJjEc,77912
+qat/nnize/metrics/__init__.so,sha256=w-x1UOrqE9aJOFuG4AfGE4ZCNpy_ieA6d3LfSbRem4w,78536
+qat/plugins/hook_nnize.so,sha256=dShAH7AChM3x5Cv_faPT_orFOwjiyXa7I_HbwqJednU,78400
+qat_nnize-1.4.0.dist-info/licenses/LICENSE.txt,sha256=Vl03FJBySK7FEYdw_Y0dV66UAVedEyIuqJTJxREyRgs,4752
+qat_nnize-1.4.0.dist-info/METADATA,sha256=6lX9Earzbp76q7sT8tSf5TUcZbXGtPmkywUpsjOT97E,1882
+qat_nnize-1.4.0.dist-info/WHEEL,sha256=9J_LXIUWJI9_UAjE72lwCHDHgbu6-FiXQhMCPRDJ9e4,113
+qat_nnize-1.4.0.dist-info/top_level.txt,sha256=EtiE-lzXpV6tDPK3leIRADd9p6cOal7g6fxvqQ-u_yc,4
+qat_nnize-1.4.0.dist-info/RECORD,,
