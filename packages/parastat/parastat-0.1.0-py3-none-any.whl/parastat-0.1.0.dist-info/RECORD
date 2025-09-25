@@ -1,0 +1,17 @@
+parastat/__init__.py,sha256=n4iDia_NmsDB5UqkEaFDpS5zod5c2B6WHZyZyyR1q2s,923
+parastat/cli.py,sha256=braVwnF0kRDgBs4nJGuzqgpXBLk27ejA_BnJpbDL_cA,118
+parastat/decomp.py,sha256=0eEWbaznXxMRfA5Z1sRHIpekHrlqQbjHiO7ix99RfDA,1064
+parastat/errors.py,sha256=kjrh8z3nSh5kiDj0tbcpPvTr8C6W-pd_-5ct3CxVPRk,220
+parastat/formula.py,sha256=rUlaqRglfDTA2IOHAJ6Liaix4t0oTbjb7OhX0G9Al0U,1971
+parastat/io.py,sha256=E_1OPktidbbHi2JbpL39WRAYaIMee9zLIa1usO7wuJg,272
+parastat/models.py,sha256=hBFoAwG-6ipe8A23rmFEqFvfabSWksP9Bc7B2trzwRY,10304
+parastat/resampling.py,sha256=nlP2an5DAfEIK8jLOicSNttdr6hRqnECPy1crjaem-8,1424
+parastat/session.py,sha256=G0GLUvvK49pkNk_bdiZz7_Tlym_vJHTvq9DSy9N3bp8,2012
+parastat/types.py,sha256=PkOt2fGFTGK-UGF8LASdxhH-CD4XE12bO4IQ0op7s78,1557
+parastat/utils.py,sha256=g3KlIfjm_VjslEfFS_VZosMry_8W4vG3CH79WtXPTj0,5092
+parastat-0.1.0.dist-info/licenses/LICENSE,sha256=tNW-rmNex3PCSTv_SBEnNCob48qq9qSywOjbf2Ivlik,955
+parastat-0.1.0.dist-info/METADATA,sha256=MWPxS-zx-Qut2YNzR0iRHFrevuLPBVpX_sev0ZxUvgg,4461
+parastat-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+parastat-0.1.0.dist-info/entry_points.txt,sha256=ec2ptrBADRRlqBeUqn_wAcr54B9oyqgXyMQVP72NCao,47
+parastat-0.1.0.dist-info/top_level.txt,sha256=iieevNOdVXU_gChvjl1A4VyfuOCge8nsKa-JpNglxKc,9
+parastat-0.1.0.dist-info/RECORD,,
