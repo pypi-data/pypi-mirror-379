@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: alibabacloude
+Version: 2.2.0
+Summary: 阿里云Python3 SDK
+Home-page: https://github.com/aliyun/alibabacloud-python-sdk-v2
+Author: Alibaba Cloud
+Author-email: admin@alibabacloud.com
+Keywords: alibaba-cloud,aliyun,sdk,ecs,oss,rds,vpc,slb,cloud-computing
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-python
+Dynamic: summary
+
+阿里云Python SDK，支持ECS、OSS、RDS等云服务

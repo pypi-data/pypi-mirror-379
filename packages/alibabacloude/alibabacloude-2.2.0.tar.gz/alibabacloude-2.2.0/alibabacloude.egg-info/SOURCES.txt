@@ -1,0 +1,14 @@
+setup.py
+alibabacloud/__init__.py
+alibabacloud/__main__.py
+alibabacloud/ecs.py
+alibabacloud/oss.py
+alibabacloud/rds.py
+alibabacloud/slb.py
+alibabacloud/vpc.py
+alibabacloude.egg-info/PKG-INFO
+alibabacloude.egg-info/SOURCES.txt
+alibabacloude.egg-info/dependency_links.txt
+alibabacloude.egg-info/entry_points.txt
+alibabacloude.egg-info/not-zip-safe
+alibabacloude.egg-info/top_level.txt
