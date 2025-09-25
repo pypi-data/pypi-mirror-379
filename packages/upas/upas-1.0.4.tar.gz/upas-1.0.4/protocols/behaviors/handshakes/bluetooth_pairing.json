@@ -1,0 +1,99 @@
+{
+    "behavior": {
+        "name": "Bluetooth_Pairing",
+        "type": "handshake",
+        "description": "Bluetooth device pairing and authentication"
+    },
+    "pairing_config": {
+        "pairing_method": "PIN",
+        "io_capabilities": "DisplayYesNo",
+        "authentication": "MITM_required",
+        "encryption_key_size": 16
+    },
+    "security": {
+        "pin_code": "0000",
+        "passkey": 123456,
+        "oob_data": "",
+        "bond_after_pairing": true
+    },
+    "behavior_type": "triggered",
+    "trigger_event": "pairing_requested",
+    "variables": {
+        "LOCAL_BD_ADDR": "00:1A:2B:3C:4D:5E",
+        "REMOTE_BD_ADDR": "",
+        "PAIRING_STATE": "IDLE",
+        "LINK_KEY": "",
+        "TEMP_KEY": ""
+    },
+    "functions": {
+        "generate_random": "lambda size: [random.randint(0, 255) for _ in range(size)]",
+        "e1_algorithm": "lambda key, rand, addr: bluetooth_e1(key, rand, addr)",
+        "e3_algorithm": "lambda key, rand, addr: bluetooth_e3(key, rand, addr)"
+    },
+    "auth_request": {
+        "hci_command": {
+            "opcode": "0411",
+            "parameters": [
+                {
+                    "connection_handle": "[CONN_HANDLE:2]"
+                }
+            ]
+        }
+    },
+    "pin_exchange": {
+        "pin_request_reply": {
+            "opcode": "040D",
+            "parameters": [
+                {
+                    "bd_addr": "[REMOTE_BD_ADDR:6]"
+                }
+            ]
+        }
+    },
+    "states": {
+        "IDLE": "Waiting for pairing request",
+        "AUTH_REQUESTED": "Authentication request sent",
+        "PIN_REQUESTED": "PIN code requested",
+        "CHALLENGE_SENT": "AU_RAND challenge sent",
+        "RESPONSE_RECEIVED": "SRES response received",
+        "KEY_GENERATED": "Link key generated",
+        "ENCRYPTION_SET": "Encryption enabled",
+        "PAIRED": "Pairing completed successfully",
+        "FAILED": "Pairing failed"
+    },
+    "transitions": {
+        "IDLE -> AUTH_REQUESTED": "authentication_request",
+        "AUTH_REQUESTED -> PIN_REQUESTED": "pin_code_request",
+        "PIN_REQUESTED -> CHALLENGE_SENT": "pin_provided",
+        "CHALLENGE_SENT -> RESPONSE_RECEIVED": "sres_received",
+        "RESPONSE_RECEIVED -> KEY_GENERATED": "valid_response",
+        "KEY_GENERATED -> ENCRYPTION_SET": "encryption_enabled",
+        "ENCRYPTION_SET -> PAIRED": "pairing_complete",
+        "* -> FAILED": "error_occurred"
+    },
+    "error_handling": {
+        "timeout": 30000,
+        "max_retries": 3,
+        "error_codes": {
+            "0x01": "Unknown HCI Command",
+            "0x02": "Unknown Connection Identifier",
+            "0x05": "Authentication Failure",
+            "0x06": "PIN or Key Missing",
+            "0x0E": "Rejected due to Security Reasons",
+            "0x10": "Unsupported Feature",
+            "0x18": "Pairing Not Allowed"
+        }
+    },
+    "security_notes": {
+        "vulnerabilities": [
+            "PIN codes are vulnerable to brute force",
+            "E0 encryption is cryptographically weak",
+            "Recommend using Secure Simple Pairing (SSP)"
+        ],
+        "recommendations": [
+            "Use strong PIN codes (> 4 digits)",
+            "Implement proper key management",
+            "Consider using AES encryption for data"
+        ]
+    }
+}
