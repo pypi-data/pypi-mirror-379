@@ -1,0 +1,22 @@
+# Include documentation and config files
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+
+# Include all Python files
+recursive-include pandas_match_recognize *.py
+recursive-include match_recognize *.py
+recursive-include src *.py
+
+# Include grammar files
+recursive-include src *.g4 *.tokens *.interp
+
+# Include test files
+recursive-include tests *.py
+
+# Exclude cache and build artifacts
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.egg-info
+global-exclude .git*

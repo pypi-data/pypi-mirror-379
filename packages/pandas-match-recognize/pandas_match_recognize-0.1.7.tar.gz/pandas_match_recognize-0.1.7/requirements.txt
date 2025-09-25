@@ -1,0 +1,127 @@
+Putting It All Together
+The full production‑ready module now includes:
+
+A robust expression parser (parse_expression_full).
+An advanced pattern parser with subset expansion (AdvancedPatternVisitor in parse_pattern_full).
+A stub for pattern optimization (optimize_pattern).
+Deep semantic validation in the AST builder.
+Clear integration points for further enhancements (detailed expression sub‑ASTs, further pattern optimizations, and semantic validations).
+
+
+
+SQL Query → Parser (using parser_util and others) → Parse Tree  
+Parse Tree → AST Builder → Raw AST  
+Raw AST → NFA/DFA Module → Pattern Matching  
+Pattern Matching → Optimizer → Optimized AST  
+Optimized AST → Validator → Validated AST  
+Validated AST → Executor → Results
+
+
+
+
+can rebuild ast_builder.py and return full code of files that updated 
+
+
+
+ok , we can go forward in pipeline stages with AST Builder by using the parse trees produced by the parser to build your raw AST 
+aslo will share with old version of implementation we can also make some updates and apply refelctoring to make AST module as we targeted on pipeline.
+
+pipeline we following is 
+SQL Query → Parser (using parser_util and others) → Parse Tree  
+Parse Tree → AST Builder → Raw AST  
+Raw AST → NFA/DFA Module → Pattern Matching  
+Pattern Matching → Optimizer → Optimized AST  
+Optimized AST → Validator → Validated AST  
+Validated AST → Executor → Results
+
+
+
+
+Since the parser stage is now robustly covered by our tests, you can confidently move forward with integrating the subsequent pipeline stages:
+
+AST Builder:
+Use the parse trees produced by the parser to build your raw AST.
+NFA/DFA Module:
+Convert the raw AST for pattern matching into a corresponding automaton.
+Pattern Matching & Optimizer:
+Run optimizations on the AST to improve matching performance.
+Validator:
+Validate the final AST to ensure correctness before execution.
+Executor:
+Execute the validated AST against your dataset.
+This modular approach with thorough testing at the parser level minimizes the risk of errors when integrating later stages.
+
+If you need further test cases or help with the integration of the next stages (e.g., AST building), just
+
+
+
+Key Parameters and Clauses
+PARTITION BY
+
+Divides data into partitions for independent pattern matching.
+Syntax: PARTITION BY column [, ...]
+ORDER BY
+
+Specifies the order of rows within each partition.
+Syntax: ORDER BY column [, ...]
+MEASURES
+
+Defines expressions to compute values from matched rows.
+Syntax: MEASURES measure_expression [, ...]
+ROWS PER MATCH
+
+Determines the number of output rows per match.
+ONE ROW PER MATCH (default) - One row per match.
+ALL ROWS PER MATCH - All rows of the match are output.
+ALL ROWS PER MATCH OMIT EMPTY MATCHES - Excludes empty matches.
+ALL ROWS PER MATCH WITH UNMATCHED ROWS - Includes unmatched rows.
+Syntax: ROWS PER MATCH (ONE ROW PER MATCH | ALL ROWS PER MATCH)
+AFTER MATCH SKIP
+
+Specifies where pattern matching should continue after a match.
+Options: PAST LAST ROW, TO NEXT ROW, TO FIRST pattern_variable, TO LAST pattern_variable.
+Syntax: AFTER MATCH SKIP (PAST LAST ROW | TO NEXT ROW | TO FIRST pattern_variable | TO LAST pattern_variable)
+PATTERN
+
+Defines the row pattern to be matched using regular expression-like syntax.
+Syntax: PATTERN (row_pattern)
+SUBSET
+
+Defines union variables for a set of primary pattern variables.
+Syntax: SUBSET union_variable = (pattern_variable [, ...])
+DEFINE
+
+Specifies the conditions for each row pattern variable.
+Syntax: DEFINE pattern_variable AS condition [, ...]
+AGGREGATE FUNCTIONS
+
+Performs aggregations over matched rows (e.g., COUNT(), AVG(), SUM()).
+Syntax: AGGREGATE FUNCTION(column_name) AS alias
+CLASSIFIER
+
+Identifies which primary pattern variable matched a particular row.
+Syntax: CLASSIFIER(pattern_variable)
+MATCH_NUMBER
+Returns the sequential number of the match within the partition.
+Syntax: MATCH_NUMBER()
+LOGICAL NAVIGATION FUNCTIONS
+Navigates within matched rows (e.g., FIRST(), LAST()).
+Syntax: FIRST(pattern_variable.column, N), LAST(pattern_variable.column, N)
+PHYSICAL NAVIGATION FUNCTIONS
+Navigates to rows before or after the current row (e.g., PREV(), NEXT()).
+Syntax: PREV(pattern_variable.column, N), NEXT(pattern_variable.column, N)
+NESTING OF NAVIGATION FUNCTIONS
+Allows navigation functions to be nested for more complex row searches.
+Syntax: PREV(FIRST(pattern_variable.column, N), M)
+AGGREGATE FUNCTION SEMANTICS
+Defines whether aggregation should consider the current row (RUNNING) or the final match (FINAL).
+Syntax: RUNNING AGGREGATE_FUNCTION(column_name), FINAL AGGREGATE_FUNCTION(column_name)
+EVALUATING EXPRESSIONS IN EMPTY MATCHES AND UNMATCHED ROWS
+Defines how expressions are evaluated when there are empty matches or unmatched rows.
+EXCLUSION SYNTAX
+Excludes specific parts of the match from the output.
+Syntax: {- row_pattern -}
+
+
+
+
