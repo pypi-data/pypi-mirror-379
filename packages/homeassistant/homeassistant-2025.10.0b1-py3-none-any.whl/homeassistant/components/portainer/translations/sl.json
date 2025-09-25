@@ -1,0 +1,49 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Naprava je \u017ee konfigurirana"
+        },
+        "error": {
+            "cannot_connect": "Povezava ni uspela",
+            "invalid_auth": "Neveljavna avtentikacija",
+            "timeout_connect": "\u010cas za vzpostavitev povezave je potekel",
+            "unknown": "Nepri\u010dakovana napaka"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API klju\u010d",
+                    "host": "Gostitelj"
+                },
+                "data_description": {
+                    "api_key": "Klju\u010d API za preverjanje pristnosti s Portainerjem",
+                    "host": "Gostitelj/URL, vklju\u010dno z vrati, va\u0161e namestitve Portainerja"
+                },
+                "description": "Klju\u010d API lahko ustvarite v uporabni\u0161kem vmesniku Portainer. Pojdite v **Moj ra\u010dun > Klju\u010di API** in izberite **Dodaj klju\u010d API**"
+            }
+        }
+    },
+    "device": {
+        "unknown_container": {
+            "name": "Neznan vsebnik"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "status": {
+                "name": "Stanje"
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "Pri poskusu povezave z instanco Portainer je pri\u0161lo do napake: {error}"
+        },
+        "invalid_auth": {
+            "message": "Pri poskusu preverjanja pristnosti je pri\u0161lo do napake: {error}"
+        },
+        "timeout_connect": {
+            "message": "Pri poskusu povezave z instanco Portainer je pri\u0161lo do \u010dasovne omejitve: {error}"
+        }
+    }
+}
