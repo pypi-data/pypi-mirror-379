@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: dynamic_bitmap
+Version: 0.2.0
+Summary: Dynamic Parallel Bitmap para búsquedas y JOINs masivos
+Home-page: https://github.com/JesusDeg8061/Dynamic_bitmap.git
+Author: Jesus Alberto Degollado Lopez
+Author-email: jesusdeg5587@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
