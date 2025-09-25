@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: tlspy
+Version: 0.0.1
+Summary: TLS Implementation
+Project-URL: repository, https://github.com/ksachdeva/tlspy
+Author: Sachdeva, Kapil
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# TLS 1.3 Implementation
