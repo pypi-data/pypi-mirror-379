@@ -1,0 +1,4 @@
+include MANIFEST.in
+include *.cfg
+include *.ini
+include *.txt
