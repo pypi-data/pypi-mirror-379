@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: calculos_matematicos_package
+Version: 0.0.1
+Summary: My short description
+Home-page: https://github.com/wklamorim/simple-package-template.git
+Author: Wilkerson Amorim
+Author-email: wklamorim@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools~=80.9.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# calculos_matematicos_package
+
+Description. 
+
+O calculos_matematicos_package Ã© utilizado para:
+
+    - BÃ¡sico:	
+        - Adicionar,
+	    - Subtrair,
+        - Multiplicar,    
+        - Dividir,
+        - DivisÃ£o inteira,
+        - ExponenciaÃ§Ã£o, e
+        - MÃ³dulo (Resto da DivisÃ£o):
+
+    - IntermediÃ¡rio
+        - Arredondamento,
+        - Raiz quadrada
+
+## InstalaÃ§Ã£o
+
+Use o gerenciado de pacotes [pip](https://pip.pypa.io/en/stable/) para instalar calculos_matematicos_package
+
+```bash
+pip install calculos_matematicos_package
+```
+
+## Usage
+
+```python
+from calculos_matematicos_package import basico
+
+basico.adicionar()
+basico.subtrair()
+basico.multiplicar()
+basico.dividir()
+basico.dividir_inteiro()
+basico.exponencial()
+basico.modulo()
+
+from calculos_matematicos_package import intermediario
+
+intermediario.arredondar()
+intermediario.raiz_quadrada()
+```
+
+## Author
+Wilkerson Amorim
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
