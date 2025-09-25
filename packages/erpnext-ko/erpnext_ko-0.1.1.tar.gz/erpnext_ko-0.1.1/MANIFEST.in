@@ -1,0 +1,6 @@
+include MANIFEST.in
+include README.md
+include license.txt
+recursive-include erpnext_ko *.py
+recursive-include erpnext_ko *.csv
+recursive-include erpnext_ko *.json
