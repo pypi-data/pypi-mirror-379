@@ -1,0 +1,2 @@
+[console_scripts]
+elasticsearch-mcp-server = elasticsearch_mcp_server.cli:cli_main
