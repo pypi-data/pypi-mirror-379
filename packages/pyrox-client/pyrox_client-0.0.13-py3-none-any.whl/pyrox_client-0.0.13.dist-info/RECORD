@@ -1,0 +1,9 @@
+pyrox/__init__.py,sha256=MuD1li96mmqGFjoRQk4dzPK4duirE8RnJe3K3T8QNUU,320
+pyrox/config.py,sha256=hRtRDOmebuUr9UWo7DyWy209G_PrHQMpHQmYsMQ8S2w,998
+pyrox/constants.py,sha256=bTyyDwHdCHq3peRsavcs-7wBwBRD_5oEru2xH4Ro4Xc,409
+pyrox/core.py,sha256=tG4ZwKIURxM7z-ft30TwKu_NAmRsfNVHmrQ9TqyR_UI,16326
+pyrox/errors.py,sha256=OUF2y-utmQaVOzr84xSYLySuI_ljzIhD1eXGCj4whAg,1455
+pyrox/manifest.py,sha256=sZuH9TW0hJ4I9vGHwb45fJbQGRnGLxBwp3AqEW81I2A,5790
+pyrox_client-0.0.13.dist-info/METADATA,sha256=OavSKJ0pDMkpMBjMSfFurxk42gOVyoINbyxujom483g,2696
+pyrox_client-0.0.13.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyrox_client-0.0.13.dist-info/RECORD,,
