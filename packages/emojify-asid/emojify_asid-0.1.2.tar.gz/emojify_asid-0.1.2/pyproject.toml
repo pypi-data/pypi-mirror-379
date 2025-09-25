@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emojify-asid"
+version = "0.1.2"
+description = "Turn your boring text into expressive emoji-enhanced messages using NLP 🎉"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+authors = [
+  { name = "Amandeep Sidhu"}
+]
+
+dependencies = [
+  "spacy>=3.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/AmanSidhu0621/emojify-nlp"
+Repository = "https://github.com/AmanSidhu0621/emojify-nlp"
+Documentation = "https://github.com/AmanSidhu0621/emojify-nlp#readme"
+Issues = "https://github.com/AmanSidhu0621/emojify-nlp/issues"
