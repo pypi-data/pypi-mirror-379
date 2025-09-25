@@ -1,0 +1,12 @@
+ratelimitex/__init__.py,sha256=O9Z4nBVCkWBd9zx4Jmt4rA_bFYFuDO6l9Ng8K5J6Wgw,761
+ratelimitex/client.py,sha256=k8zRWZ1HkI5fgEJo5jZG7q6VxuIFod62AViRTfCkjmo,9542
+ratelimitex/core.py,sha256=jLWDUYmfDNmy6FnQI_x8JbqvsRh9sezvJ0Pa5zJoxCQ,25268
+ratelimitex/decorators.py,sha256=h74xz_tYRXlaBAPptaKceGanT8dLKUmggxBAj5qMndY,5119
+ratelimitex/exceptions.py,sha256=w21c6SsiFKda_s5zNKL1jihaNKRyXbd0uRXGAaJ5U1c,104
+ratelimitex/models.py,sha256=-Y4vfQmMFaHqP2vbg1O-20L440laUjhdV3odgok3F2M,5111
+ratelimitex/py.typed,sha256=f8ABIXYQmdAvQETQ23CQ-SZHBiecbvFabThnmVBmvyc,65
+ratelimitex/utils.py,sha256=X6GR1S1NME6JQTjb7_o5h2_ow0Vz0eLgrES3hfdo9Co,1831
+ratelimitex-0.1.0.dist-info/LICENSE,sha256=rcNzZvQDg1wUcKst-T04N9Rxk3L8HvhZPZIuBvAz-LI,4
+ratelimitex-0.1.0.dist-info/METADATA,sha256=ocZPmGgfIC2-Xw01N5GJyDFa56Iecxm9_UQegQhuPMw,10106
+ratelimitex-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ratelimitex-0.1.0.dist-info/RECORD,,
