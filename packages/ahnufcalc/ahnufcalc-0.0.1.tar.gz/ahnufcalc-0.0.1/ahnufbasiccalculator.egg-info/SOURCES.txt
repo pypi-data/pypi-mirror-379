@@ -1,0 +1,10 @@
+CHANGELOG.txt
+Licence.txt
+MANIFEST.in
+README.txt
+setup.py
+ahnufBasicCalc/__init__.py
+ahnufbasiccalculator.egg-info/PKG-INFO
+ahnufbasiccalculator.egg-info/SOURCES.txt
+ahnufbasiccalculator.egg-info/dependency_links.txt
+ahnufbasiccalculator.egg-info/top_level.txt
