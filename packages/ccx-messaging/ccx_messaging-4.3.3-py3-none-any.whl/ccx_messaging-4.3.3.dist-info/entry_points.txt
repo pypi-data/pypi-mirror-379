@@ -1,0 +1,2 @@
+[console_scripts]
+ccx-messaging = ccx_messaging.command_line:ccx_messaging
