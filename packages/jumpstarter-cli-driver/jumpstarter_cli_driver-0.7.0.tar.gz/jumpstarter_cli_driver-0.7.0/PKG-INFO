@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: jumpstarter-cli-driver
+Version: 0.7.0
+Project-URL: Homepage, https://jumpstarter.dev
+Project-URL: source_archive, https://github.com/jumpstarter-dev/repo/archive/b96037014dcf5254108ad14b2016b56e95c07fc5.zip
+Author-email: Nick Cao <ncao@redhat.com>, Miguel Angel Ajo Pelayo <majopela@redhat.com>, Kirk Brauer <kbrauer@hatci.com>
+License-Expression: Apache-2.0
+Requires-Python: >=3.11
+Requires-Dist: click>=8.1.7.2
+Requires-Dist: jumpstarter-cli-common
+Description-Content-Type: text/markdown
+
+# Jumpstarter Driver CLI
