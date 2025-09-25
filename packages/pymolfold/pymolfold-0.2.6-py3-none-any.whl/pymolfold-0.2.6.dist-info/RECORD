@@ -1,0 +1,17 @@
+pymolfold/__init__.py,sha256=iuITm-1eO1CN4dexoxxxfluR_gHY4S6DtYw28jMwiNs,250
+pymolfold/plugin.py,sha256=g65SSR7ZYc_pvX3ZuzDjH7Jswi7El_cxmjnSA2g9Qfg,15091
+pymolfold/server.py,sha256=-bEr0KHsuESBDDSzT3L98QDygISuZwnNWdLZaTv5SM8,2943
+pymolfold/utils.py,sha256=MAOf3SiG5wRRVZCJCb3hvDW2xdwb0iRFZ8RCC3VNK0U,12246
+pymolfold/version.py,sha256=5ar6L6oZXoSAY5FxQYrPug7_sdElBRKu1VAw8i5wZ8A,50
+pymolfold/gui/app.py,sha256=nF1mARvwKSlL99nerZxkUcYUyMphQ--B3yh5z8bjGvE,20654
+pymolfold/gui/ccd_keys.json,sha256=9nAegZ5Mwrx-yTKxh2mMVvgVpzZHNicOmD-9zhjnvik,302680
+pymolfold/predictors/__init__.py,sha256=kL73Ue9IzoXRWeFW5Ry5NW9yWwg-cTCqbVzuaPbT_7Q,333
+pymolfold/predictors/base.py,sha256=FMt6kqkmpTAhC84X9xol3pT0N3Kg7dH9A4Rq3yW39QU,3028
+pymolfold/predictors/boltz.py,sha256=M40lVvbxacYZ7JB9y63O5_VTJyhRSDw2UOk_3nnAmNc,8600
+pymolfold/predictors/esm.py,sha256=p--piDoOSRgnSo94u1K1S4LKNUtDGKveFh6WV8two-k,4925
+pymolfold-0.2.6.dist-info/licenses/LICENSE,sha256=dv1QqxBmJw6ADTRb2kokW36VuZhukPIj1fJ9nYTpeCQ,1081
+pymolfold-0.2.6.dist-info/METADATA,sha256=JsdodV40w3vXXt-XCU57XK9Ychf3Mob8g0M8ON_nc_4,8051
+pymolfold-0.2.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pymolfold-0.2.6.dist-info/entry_points.txt,sha256=MDN5CzVcEnshu454_GijJ6vy4E_fVE24f28MIlY-5Z8,61
+pymolfold-0.2.6.dist-info/top_level.txt,sha256=0D_QdKPmbobaX8w9R5V3ujtxcCKhtFo_a0NQDGcrKuE,10
+pymolfold-0.2.6.dist-info/RECORD,,
