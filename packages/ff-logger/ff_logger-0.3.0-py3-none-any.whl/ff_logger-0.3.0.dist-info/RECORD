@@ -1,0 +1,14 @@
+ff_logger/__init__.py,sha256=1i6nx2z1BSDtPHUpUdCVUk2e-NUVYD6yuGT3tJGlUQE,655
+ff_logger/base.py,sha256=3H8e9ejW_mDCuexrituGXJgDXEx2MxIZ7M6g6rFuCKE,5382
+ff_logger/console.py,sha256=l4UV4M_-VcGKDZV-8iSoTkejpQLGR_JauzbWeOxPs8I,4782
+ff_logger/database.py,sha256=Ofcpr2Gp5lcvM5xmOB_bSQAK-uVfLPuQr0n133z37a8,8111
+ff_logger/file.py,sha256=TykMOOmJevdo1iR6FrBMtlh9_Z2TAdzvzRHahP_CVNg,5668
+ff_logger/json_logger.py,sha256=xUOpJ5SRX9bc4w4xjiw4DsQIlYfL1vCQGtYDkcGFFhY,4405
+ff_logger/null.py,sha256=eTm0SQdN96xAGZsmuG_LLT9B5b81TJZpbGsdsl2Hpjo,3899
+ff_logger/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ff_logger/utils.py,sha256=EVLUhyrCZQiQcFoGTfQC_RYL5HwXumD9LoQt_tKCWMQ,2874
+ff_logger-0.3.0.dist-info/licenses/LICENSE,sha256=8yslLs0uCESupD7Q9IN1HktYNMmH7rvwKtptgaTCSsA,1076
+ff_logger-0.3.0.dist-info/METADATA,sha256=-64mC_EFzOoz24oM5IdRvTzYJU_egbECnq_D7QXe0CI,9299
+ff_logger-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ff_logger-0.3.0.dist-info/top_level.txt,sha256=nRx2sHgngjk90Ewds1DnjdEpMnVswpPNiFyX0nJBiv0,10
+ff_logger-0.3.0.dist-info/RECORD,,
