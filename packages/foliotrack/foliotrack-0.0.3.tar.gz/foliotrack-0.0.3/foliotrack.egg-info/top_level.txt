@@ -1,0 +1,7 @@
+Portfolios
+Purchases
+Tools
+dist
+foliotrack
+images
+tests
