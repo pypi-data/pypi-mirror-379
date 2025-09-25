@@ -1,0 +1,13 @@
+boto3
+click
+hvac
+psutil
+
+[dev]
+pytest>=7.0
+build
+setuptools
+twine
+
+[test]
+pytest>=7.0

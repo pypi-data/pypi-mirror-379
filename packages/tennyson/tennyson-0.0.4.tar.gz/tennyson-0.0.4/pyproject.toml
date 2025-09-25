@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tennyson"
+version = "0.0.4"
+description = "Your package description"
+readme = "README.md"
+license = {text = "None"}
+requires-python = ">=3.8"
+dependencies = [
+    "boto3",
+    "click",
+    "hvac",
+    "psutil",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "build",
+    "setuptools",
+    "twine",
+    # "pytest-cov>=4.0",
+    # "pytest-mock>=3.0",
+    # "pytest-xdist>=3.0",
+]
+test = [
+    "pytest>=7.0",
+    # "pytest-cov>=4.0",
+]
+
+[project.scripts]
+tennysonpy = "tennyson.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tennyson*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py", "test.py"]
+addopts = [
+    "-v",
+    "--tb=short",
+    # "--cov=tennyson",
+    # "--cov-report=term-missing",
+    # "--cov-report=html:htmlcov",
+]
+# markers = [
+#     "slow: marks tests as slow",
+#     "integration: marks tests as integration tests",
+#     "unit: marks tests as unit tests",
+# ]

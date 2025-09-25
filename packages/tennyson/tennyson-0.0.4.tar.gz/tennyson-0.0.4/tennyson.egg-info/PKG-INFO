@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: tennyson
+Version: 0.0.4
+Summary: Your package description
+License: None
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: click
+Requires-Dist: hvac
+Requires-Dist: psutil
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0; extra == "test"
+
+tennyson.py
+===========
+
+Collection of helpful functions by Tennyson T Bardwell
+
+Development
+-----------
+
+This project has a `shell.nix` for development. A `Makefile` acts as the initial
+interface for all commands, and uses the `shell.nix` under the hood.
+
+### TODO ###
+
+- graceful handling of email errors if no network
+
+Links
+------
+
+- https://github.com/tennysontbardwell/tennyson.py
+- https://pypi.org/project/tennyson/
