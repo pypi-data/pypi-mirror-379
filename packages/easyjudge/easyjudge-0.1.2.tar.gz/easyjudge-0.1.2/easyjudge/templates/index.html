@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>机器学习测评天梯</title>
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #f8f9fa;
+            --accent-color: #6c757d;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.25);
+        }
+        
+        .form-text {
+            color: var(--accent-color);
+            font-size: 0.875rem;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 10px 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            color: white;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a5bef;
+            border-color: #3a5bef;
+        }
+        
+        .login-section {
+            margin-bottom: 30px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        
+        .justify-content-center {
+            justify-content: center;
+        }
+        
+        .col-md-6 {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+        
+        .upload-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 30px 0;
+        }
+        
+        .leaderboard {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-top: 30px;
+        }
+        
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            border-collapse: collapse;
+        }
+        
+        .table th,
+        .table td {
+            padding: 12px;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+            text-align: left;
+        }
+        
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+        
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        .table tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">机器学习通用测评平台</h1>
+        <div class="login-section">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                    <label for="username" class="form-label">账号</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入账号" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">密码</label>
+                    <input type="password" class="form-control" id="password" placeholder="请输入密码" required>
+                </div>
+                                <button type="submit" class="btn btn-primary">登录</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="guide-section" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">📊 测评指南</div>
+                    <div class="mb-4">
+                        <h4 style="margin-bottom: 10px;">1. 数据说明</h4>
+                        <p>本平台支持通用的机器学习模型测评。您需要按照以下步骤准备和提交您的模型：</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li>您将获得一个训练数据集用于模型开发</li>
+                            <li>系统会使用一个隐藏的测试数据集来评估您的模型性能</li>
+                            <li>您的模型需要输出预测结果到指定格式的CSV文件中</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 style="margin-bottom: 10px;">2. 下载资源</h4>
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-md-6">
+                                <a href="/download/training_data" class="btn btn-primary btn-block">📥 下载训练数据集</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="/download/inference_template" class="btn btn-primary btn-block">📝 下载推理脚本模板</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="upload-section" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">📤 上传模型和推理文件</div>
+                    <form id="uploadForm">
+                        <div class="mb-3">
+                            <label for="modelFile" class="form-label">模型文件</label>
+                            <input type="file" class="form-control" id="modelFile" required>
+                            <div class="form-text">支持任意格式的模型文件（如.pkl, .h5, .pt等）</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pythonFile" class="form-label">Python推理文件 <span class="text-danger" title="📝 脚本必须读取data/testB.csv作为输入数据，将预测结果保存到data/预测结果.csv文件中；预测结果文件必须包含 预测值 列">⚠</span></label>
+                            <input type="file" class="form-control" id="pythonFile" accept=".py" required>
+                            <div class="form-text">必须是.py格式的Python文件，需按模板格式编写</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">上传并评估</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="leaderboard">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">🏆 排行榜</div>
+                    <p style="color: #666; margin-bottom: 15px;">注：系统使用RMSE（均方根误差）评估模型性能，值越小表示模型性能越好</p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>排名</th>
+                                <th>姓名</th>
+                                <th>RMSE</th>
+                                <th>提交时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for entry in leaderboard %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ entry.username }}</td>
+                                <td>{{ "%.4f"|format(entry.rmse) }}</td>
+                                <td>{{ entry.timestamp }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentUser = null;
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                currentUser = username;
+                // 显示所有用户区域
+                document.querySelector('.guide-section').style.display = 'block';
+                document.querySelector('.upload-section').style.display = 'block';
+                document.querySelector('.login-section').style.display = 'none';
+            } else {
+                alert('账号或密码错误！');
+            }
+        });
+
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const modelFile = document.getElementById('modelFile').files[0];
+            const pythonFile = document.getElementById('pythonFile').files[0];
+            
+            if (!modelFile || !pythonFile) {
+                alert('请选择所有必需的文件');
+                return;
+            }
+
+            if (!pythonFile.name.endsWith('.py')) {
+                alert('Python文件必须以.py结尾');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('model_file', modelFile);
+            formData.append('python_file', pythonFile);
+            formData.append('username', currentUser);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    alert(`评估完成！\nRMSE: ${data.rmse.toFixed(4)}`);
+                    location.reload();
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                alert('上传失败，请重试');
+            }
+        });
+    </script>
+</body>
+</html>

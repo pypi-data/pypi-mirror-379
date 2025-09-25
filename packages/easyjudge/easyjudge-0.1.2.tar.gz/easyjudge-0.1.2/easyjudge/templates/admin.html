@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员配置界面</title>
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #f8f9fa;
+            --accent-color: #6c757d;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.25);
+        }
+        
+        .form-text {
+            color: var(--accent-color);
+            font-size: 0.875rem;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 10px 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            color: white;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a5bef;
+            border-color: #3a5bef;
+        }
+        
+        .login-section {
+            margin-bottom: 30px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        
+        .justify-content-center {
+            justify-content: center;
+        }
+        
+        .col-md-6 {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+        
+        .config-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 30px 0;
+        }
+        
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            border-collapse: collapse;
+        }
+        
+        .table th,
+        .table td {
+            padding: 12px;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+            text-align: left;
+        }
+        
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+        
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        .table tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+        
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: var(--border-radius);
+        }
+        
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        
+        .section-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">管理员配置界面</h1>
+        
+        <!-- 管理员登录 - 只在需要登录时显示 -->
+        {% if need_login %}
+        <div class="login-section">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="adminLoginForm">
+                                <div class="mb-3">
+                                    <label for="adminPassword" class="form-label">管理员密码</label>
+                                    <input type="password" class="form-control" id="adminPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">登录</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- 配置管理界面 - 只在已登录时显示 -->
+        {% if not need_login %}
+        <div id="configSection">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">⚙️ 系统配置</div>
+                    
+                    <div id="messageBox" class="alert" style="display: none;"></div>
+                    
+                    <form id="configForm" class="mb-3" enctype="multipart/form-data">
+                        <div class="row mb-2">
+                            <div class="col-sm-2" style="white-space: nowrap;">
+                                <label for="trainingDataFile" style="margin-bottom: 0; display: inline-block;">训练数据集:</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input type="file" id="trainingDataFile" class="form-control" accept=".csv">
+                                <input type="hidden" id="trainingDataPath" value="">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                            <div class="col-sm-2" style="white-space: nowrap;">
+                                <label for="testDataFile" style="margin-bottom: 0; display: inline-block;">测试数据集:</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input type="file" id="testDataFile" class="form-control" accept=".csv">
+                                <input type="hidden" id="testDataPath" value="">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-sm-2" style="white-space: nowrap;">
+                                <label for="inferenceTemplateFile" style="margin-bottom: 0; display: inline-block;">推理模板:</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <div style="display: flex; align-items: center; width: 100%; gap: 12px;">
+                                    <input type="file" id="inferenceTemplateFile" class="form-control" style="flex: 1;" accept=".py">
+                                    <input type="hidden" id="inferenceTemplatePath" value="">
+                                    <button type="submit" class="btn btn-primary">更新配置并上传文件</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 参加者名单管理 -->
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title">👥 参加者名单管理</div>
+                    
+                    <!-- 添加参加者表单 -->
+                    <div class="mb-4 bg-light p-4 rounded-lg">
+                        <div class="d-flex justify-content-between items-center mb-3">
+                            <h5 class="mb-0">添加新参加者</h5>
+
+                        </div>
+                        <form id="addParticipantForm" class="row align-items-end gap-2">
+                            <div class="col">
+                                <input type="text" class="form-control" id="newUsername" required placeholder="账号">
+                            </div>
+                            <div class="col">
+                                <input type="password" class="form-control" id="newPassword" required placeholder="密码">
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary">添加</button>
+                            </div>
+                        </form>
+                    </div>
+                          
+                    <!-- 上传模板文件添加参加者 -->
+                    <div class="mb-4 bg-light p-4 rounded-lg">
+                        <div class="d-flex justify-content-between items-center mb-3">
+                            <h5 class="mb-0">批量添加参加者</h5>
+                        </div>
+                        <div class="row gap-2 align-items-center">
+                            <div class="col d-flex align-items-center">
+                                <div class="input-group" style="width: 100%;">
+                                    <input type="file" class="form-control d-none" id="participantsFile" accept=".csv" onchange="document.getElementById('fileNameDisplay').textContent = this.files[0]?.name || '未选择文件';">
+                                </div>
+                            </div>
+                            <div class="col-auto d-flex gap-2">
+                                <a href="/admin/download_participants_template" class="btn btn-sm btn-outline-info text-info">下载模板</a>
+                                <button type="button" id="uploadParticipantsBtn" class="btn btn-sm btn-secondary">上传</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 参加者列表 -->
+                    <div style="max-height: 400px; overflow-y: auto; border: 1px solid #dee2e6; border-radius: 4px; padding: 10px;">
+                        <h5 style="margin-bottom: 15px;">参加者列表</h5>
+                        <div class="mb-2">
+                            <button type="button" id="refreshParticipantsBtn" class="btn btn-sm btn-outline-secondary">🔄 刷新列表</button>
+                        </div>
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>序号</th>
+                                    <th>账号</th>
+                                    <th>密码</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="participantsTable">
+                                <!-- 参加者数据将通过JavaScript动态加载 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 完整排行榜数据 -->
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title">📊 完整排行榜数据</div>
+                    <p style="color: #666; margin-bottom: 15px;">以下是所有学生的提交记录</p>
+                    <div style="max-height: 400px; overflow-y: auto; border: 1px solid #dee2e6; border-radius: 4px; padding: 10px;">
+                        <table class="table table-striped">
+                            <thead class="table-dark sticky-top bg-dark text-white">
+                                <tr>
+                                    <th>排名</th>
+                                    <th>账号</th>
+                                    <th>RMSE</th>
+                                    <th>提交时间</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminLeaderboard">
+                                <!-- 排行榜数据将通过JavaScript动态加载 -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-2">
+                        <button type="button" id="refreshLeaderboardBtn" class="btn btn-sm btn-outline-secondary">🔄 刷新排行榜</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        {% endif %}
+
+        <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 如果已经登录，加载配置和数据
+            {% if not need_login %}
+            loadConfig();
+            loadLeaderboard();
+            loadParticipants();
+            {% endif %}
+        });
+        // 显示消息框
+        function showMessage(message, type = 'success') {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.textContent = message;
+            
+            // 兼容布尔值和字符串类型的参数
+            if (typeof type === 'boolean') {
+                messageBox.className = type ? 'alert alert-success' : 'alert alert-danger';
+            } else {
+                // 接受 'success', 'danger', 'info', 'warning' 等Bootstrap警告类型
+                messageBox.className = 'alert alert-' + type;
+            }
+            
+            messageBox.style.display = 'block';
+            
+            // 3秒后自动隐藏
+            setTimeout(() => {
+                messageBox.style.display = 'none';
+            }, 3000);
+        }
+
+        // 管理员登录
+const adminLoginForm = document.getElementById('adminLoginForm');
+if (adminLoginForm) {
+    adminLoginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const password = document.getElementById('adminPassword').value;
+
+                const response = await fetch('/admin/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                    credentials: 'same-origin',
+                body: JSON.stringify({ password }),
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                // 登录成功后刷新页面，确保配置界面正确加载
+                // 直接页面刷新比手动显示/隐藏元素更可靠
+                window.location.reload();
+            } else {
+                showMessage(data.message, 'danger');
+            }
+        });
+    }
+
+        // 加载配置
+        async function loadConfig() {
+            try {
+                const response = await fetch('/admin/get_config', { credentials: 'same-origin' });
+                const config = await response.json();
+                // 更新表单字段，只显示文件名
+                if (config.training_data_path) {
+                    const trainingFileName = config.training_data_path.split('\\').pop();
+                    document.getElementById('trainingDataPath').value = trainingFileName;
+                }
+                if (config.test_data_path) {
+                    const testFileName = config.test_data_path.split('\\').pop();
+                    document.getElementById('testDataPath').value = testFileName;
+                }
+                if (config.inference_template_path) {
+                    const templateFileName = config.inference_template_path.split('\\').pop();
+                    document.getElementById('inferenceTemplatePath').value = templateFileName;
+                }
+            } catch (error) {
+                console.error('获取配置时出错:', error);
+                showMessage('获取配置失败', false);
+            }
+        }
+        
+        // 文件选择事件处理 - 当用户选择文件时更新隐藏字段
+        document.addEventListener('DOMContentLoaded', function() {
+            // 训练数据集文件选择事件
+            const trainingDataFile = document.getElementById('trainingDataFile');
+            if (trainingDataFile) {
+                trainingDataFile.addEventListener('change', function(e) {
+                    if (e.target.files && e.target.files.length > 0) {
+                        const trainingDataPath = document.getElementById('trainingDataPath');
+                        if (trainingDataPath) {
+                            trainingDataPath.value = e.target.files[0].name;
+                        }
+                    }
+                });
+            }
+            
+            // 测试数据集文件选择事件
+            const testDataFile = document.getElementById('testDataFile');
+            if (testDataFile) {
+                testDataFile.addEventListener('change', function(e) {
+                    if (e.target.files && e.target.files.length > 0) {
+                        const testDataPath = document.getElementById('testDataPath');
+                        if (testDataPath) {
+                            testDataPath.value = e.target.files[0].name;
+                        }
+                    }
+                });
+            }
+            
+            // 推理模板文件选择事件
+            const inferenceTemplateFile = document.getElementById('inferenceTemplateFile');
+            if (inferenceTemplateFile) {
+                inferenceTemplateFile.addEventListener('change', function(e) {
+                    if (e.target.files && e.target.files.length > 0) {
+                        const inferenceTemplatePath = document.getElementById('inferenceTemplatePath');
+                        if (inferenceTemplatePath) {
+                            inferenceTemplatePath.value = e.target.files[0].name;
+                        }
+                    }
+                });
+            }
+        });
+
+        // 加载参加者列表
+    async function loadParticipants() {
+        try {
+            const response = await fetch('/admin/get_participants', { credentials: 'same-origin' });
+            const participants = await response.json();
+            const tbody = document.getElementById('participantsTable');
+            tbody.innerHTML = '';
+            
+            participants.forEach((participant, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${participant.username}</td>
+                    <td>${participant.password}</td>
+                    <td>
+                            <button class="btn btn-danger btn-sm" onclick="deleteParticipant('${participant.username}')">删除</button>
+                        </td>
+                `;
+                tbody.appendChild(row);
+            });
+        } catch (error) {
+            showMessage('加载参加者列表失败', false);
+        }
+    }
+        
+        // 添加参加者
+        document.getElementById('addParticipantForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('newUsername').value;
+            const password = document.getElementById('newPassword').value;
+            
+            try {
+                const response = await fetch('/admin/add_participant', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    credentials: 'same-origin',
+                    body: JSON.stringify({ username, password }),
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    showMessage(data.message);
+                    // 清空表单
+                    document.getElementById('newUsername').value = '';
+                    document.getElementById('newPassword').value = '';
+                    // 重新加载参加者列表
+                    loadParticipants();
+                } else {
+                    showMessage(data.message, false);
+                }
+            } catch (error) {
+                showMessage('添加参加者失败', false);
+            }
+        });
+        
+        // 删除参加者（全局函数，供onclick调用）
+        window.deleteParticipant = async function(username) {
+            if (confirm(`确定要删除账号 "${username}" 吗？`)) {
+                try {
+                    const response = await fetch('/admin/delete_participant', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        credentials: 'same-origin',
+                        body: JSON.stringify({ username }),
+                    });
+                    
+                    const data = await response.json();
+                    if (data.success) {
+                        showMessage(data.message);
+                        // 重新加载参加者列表
+                        loadParticipants();
+                    } else {
+                        showMessage(data.message, false);
+                    }
+                } catch (error) {
+                    showMessage('删除参加者失败', false);
+                }
+            }
+        }
+        
+
+        
+        // 加载排行榜数据
+        async function loadLeaderboard() {
+            try {
+                const response = await fetch('/admin/get_leaderboard', { credentials: 'same-origin' });
+                const leaderboard = await response.json();
+                const tbody = document.getElementById('adminLeaderboard');
+                tbody.innerHTML = '';
+                
+                // 添加错误日志以便调试
+                console.log('排行榜数据:', leaderboard);
+                
+                leaderboard.forEach((entry, index) => {
+                    const row = document.createElement('tr');
+                    // 确保rmse字段存在且是数字类型
+                    const rmseValue = entry.rmse !== undefined && !isNaN(entry.rmse) ? 
+                                     parseFloat(entry.rmse).toFixed(4) : 
+                                     'N/A';
+                    row.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${entry.username || '未知用户'}</td>
+                        <td>${rmseValue}</td>
+                        <td>${entry.timestamp || '未知时间'}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('加载排行榜时出错:', error);
+                showMessage('加载排行榜失败: ' + error.message, false);
+            }
+        }
+
+        // 上传参会者模板文件
+        document.getElementById('uploadParticipantsBtn').addEventListener('click', async () => {
+            const fileInput = document.getElementById('participantsFile');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                showMessage('请选择CSV文件', false);
+                return;
+            }
+            
+            if (!file.name.endsWith('.csv')) {
+                showMessage('请选择CSV格式的文件', false);
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('participants_file', file);
+            
+            try {
+                const response = await fetch('/admin/upload_participants', {
+                    method: 'POST',
+                    body: formData,
+                    credentials: 'same-origin'
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    showMessage(data.message);
+                    fileInput.value = '';
+                    loadParticipants();
+                } else {
+                    showMessage(data.message, false);
+                }
+            } catch (error) {
+                showMessage('上传失败，请重试', false);
+            }
+        });
+        
+        // 更新配置并上传文件
+        document.getElementById('configForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // 获取文件输入元素（使用正确的ID）
+            const trainingDataFile = document.getElementById('trainingDataFile');
+            const testDataFile = document.getElementById('testDataFile');
+            const inferenceTemplateFile = document.getElementById('inferenceTemplateFile');
+            
+            // 检查是否至少选择了一个文件
+            if (trainingDataFile.files.length === 0 && testDataFile.files.length === 0 && inferenceTemplateFile.files.length === 0) {
+                showMessage('请至少选择一个文件上传', 'danger');
+                return;
+            }
+            
+            // 创建FormData对象
+            const formData = new FormData();
+            
+            // 添加文件字段（如果有选择文件）并收集文件名
+            let filesToUpload = [];
+            if (trainingDataFile.files.length > 0) {
+                formData.append('training_data_file', trainingDataFile.files[0]);
+                filesToUpload.push(trainingDataFile.files[0].name);
+                console.log('添加训练数据文件:', trainingDataFile.files[0].name);
+            }
+            
+            if (testDataFile.files.length > 0) {
+                formData.append('test_data_file', testDataFile.files[0]);
+                filesToUpload.push(testDataFile.files[0].name);
+                console.log('添加测试数据文件:', testDataFile.files[0].name);
+            }
+            
+            if (inferenceTemplateFile.files.length > 0) {
+                formData.append('inference_template_file', inferenceTemplateFile.files[0]);
+                filesToUpload.push(inferenceTemplateFile.files[0].name);
+                console.log('添加推理模板文件:', inferenceTemplateFile.files[0].name);
+            }
+            
+            // 获取提交按钮并显示上传中状态
+            const submitButton = e.submitter || document.querySelector('#configForm button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i> 上传中...';
+            
+            try {
+                console.log('开始上传文件:', filesToUpload.join(', '));
+                
+                const response = await fetch('/admin/update_config', { 
+                    method: 'POST',
+                    // 不需要设置Content-Type，浏览器会自动设置为multipart/form-data
+                    body: formData,
+                    credentials: 'same-origin'
+                });
+                
+                console.log('收到响应:', response.status);
+                
+                // 确保响应是JSON格式
+                if (!response.ok) {
+                    throw new Error(`服务器错误: ${response.status}`);
+                }
+                
+                let data;
+                try {
+                    data = await response.json();
+                } catch (jsonError) {
+                    console.error('解析响应JSON失败:', jsonError);
+                    throw new Error('服务器返回格式错误');
+                }
+                
+                console.log('响应数据:', data);
+                
+                if (data.success) {
+                    // 构建成功消息内容
+                    const successMessage = `配置更新成功！\n成功上传了 ${data.uploaded_files ? data.uploaded_files.length : filesToUpload.length} 个文件：\n${(data.uploaded_files || filesToUpload).join('\n')}`;
+                    
+                    // 使用showMessage函数显示成功消息
+                    showMessage(successMessage, 'success');
+                    
+                    // 重置文件输入和隐藏字段
+                    trainingDataFile.value = '';
+                    testDataFile.value = '';
+                    inferenceTemplateFile.value = '';
+                    document.getElementById('trainingDataPath').value = '';
+                    document.getElementById('testDataPath').value = '';
+                    document.getElementById('inferenceTemplatePath').value = '';
+                } else {
+                    // 使用showMessage函数显示错误消息
+                    showMessage(data.message || '配置更新失败', 'danger');
+                    
+                    // 如果有错误详情，记录到控制台
+                    if (data.error_details) {
+                        console.error('错误详情:', data.error_details);
+                    }
+                }
+            } catch (error) {
+                console.error('更新配置时出错:', error);
+                showMessage('网络错误，请检查连接后重试: ' + error.message, 'danger');
+            } finally {
+                // 恢复按钮状态
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
+        });
+        
+        // 刷新参加者列表按钮事件
+        document.getElementById('refreshParticipantsBtn').addEventListener('click', function() {
+            loadParticipants();
+            showMessage('已刷新参加者列表', 'success');
+        });
+        
+        // 刷新排行榜按钮事件
+        document.getElementById('refreshLeaderboardBtn').addEventListener('click', function() {
+            loadLeaderboard();
+            showMessage('已刷新排行榜数据', 'success');
+        });
+    </script>
+</body>
+</html>
