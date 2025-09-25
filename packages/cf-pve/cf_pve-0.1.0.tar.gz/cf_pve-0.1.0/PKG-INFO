@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: cf-pve
+Version: 0.1.0
+Summary: Cloudflare + Proxmox VE Integration Tool
+Author-email: m3wory <m3wory19@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/m3wory/cf-pve
+Project-URL: Documentation, https://github.com/m3wory/cf-pve#readme
+Project-URL: Repository, https://github.com/m3wory/cf-pve
+Project-URL: Issues, https://github.com/m3wory/cf-pve/issues
+Project-URL: Changelog, https://github.com/m3wory/cf-pve/releases
+Keywords: cloudflare,proxmox,tunnel,dns,automation,homelab
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Internet :: Name Service (DNS)
+Classifier: Environment :: Console
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer[all]>=0.9.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: cloudflare>=2.11.0
+Requires-Dist: proxmoxer>=2.0.0
+Requires-Dist: requests>=2.28.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5.0; extra == "docs"
+Requires-Dist: mkdocs-material>=9.0.0; extra == "docs"
+Dynamic: license-file

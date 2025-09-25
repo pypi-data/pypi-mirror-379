@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+cf_pve/__init__.py
+cf_pve/cloudflare_client.py
+cf_pve/commands.py
+cf_pve/config.py
+cf_pve/main.py
+cf_pve/proxmox_client.py
+cf_pve.egg-info/PKG-INFO
+cf_pve.egg-info/SOURCES.txt
+cf_pve.egg-info/dependency_links.txt
+cf_pve.egg-info/entry_points.txt
+cf_pve.egg-info/requires.txt
+cf_pve.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+cf-pve = cf_pve.main:cli
