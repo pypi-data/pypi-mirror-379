@@ -1,0 +1,44 @@
+[package]
+name = "revrt"
+description = "A library for optimizing transmission infrastructure for electrical grid."
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+categories.workspace = true
+keywords.workspace = true
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+derive_builder = { workspace = true }
+ndarray = { workspace = true }
+pathfinding = { workspace = true }
+pyo3 = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tempfile = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+zarrs = { workspace = true }
+
+[build-dependencies]
+pyo3-build-config = { workspace = true }
+
+[dev-dependencies]
+test-case = "3.3.1"
+criterion = { workspace = true }
+
+[[bench]]
+name = "standard"
+path = "benches/standard.rs"
+harness = false
+
+[lints]
+workspace = true
