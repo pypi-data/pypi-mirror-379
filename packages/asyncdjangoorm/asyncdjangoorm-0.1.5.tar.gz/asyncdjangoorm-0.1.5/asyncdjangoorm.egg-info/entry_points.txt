@@ -1,0 +1,2 @@
+[console_scripts]
+asyncdjangoorm-admin = asyncdjangoorm.main:main
