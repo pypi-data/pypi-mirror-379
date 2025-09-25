@@ -1,0 +1,9 @@
+goad_py-0.5.1.dist-info/METADATA,sha256=K7tRbZ6OB21i5UXKQIQo12P2nhgD12d6QSi_D_ntNdw,3181
+goad_py-0.5.1.dist-info/WHEEL,sha256=I6n_DOIvx0gWrzInHIwpUNBBo--a5Zp40iTYUMhiIx0,103
+goad_py.libs/libgcc_s-27e5a392.so.1,sha256=x5sO63liVwXxrjGGP371wB0RyQe1KEnIynYm82T0G0M,449745
+goad_py.libs/libstdc++-00b1837f.so.6,sha256=rynJJ0-57-6xrazov45gUqbyhjOxvJ6XcBrAKYsC1Ig,16284953
+goad_py/__init__.py,sha256=vZn5zZZdTgm1qTQFYCqgNKBKDAoheMo5OvwdLIIl3Dk,242
+goad_py/_goad_py.abi3.so,sha256=PuJT3qloS3mz6_NGmpjYGF9S76E484nI81e6K1RbG9k,2100909
+goad_py/convergence.py,sha256=8HTlrpv3RLD8FfmZuT_2mySVtnpHaPLKx6Rcw-jDgB0,14930
+goad_py/goad_py.pyi,sha256=7Y79-TV-NjEN8DWPEqSRGQ7alCrkylL6y1ZK8d6FYSg,14502
+goad_py-0.5.1.dist-info/RECORD,,
