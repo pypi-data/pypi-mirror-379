@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+basitcrypto/__init__.py
+basitcrypto/crypto.py
+basitcrypto.egg-info/PKG-INFO
+basitcrypto.egg-info/SOURCES.txt
+basitcrypto.egg-info/dependency_links.txt
+basitcrypto.egg-info/top_level.txt

@@ -1,0 +1,75 @@
+# BasitCrypto
+
+مكتبة تشفير بسيطة بلغة بايثون تدعم طريقتي التشفير **XOR** و **شيفرة قيصر**.
+
+
+
+---
+
+## Installation
+
+```bash
+pip install basitcrypto
+```
+
+---
+
+## التثبيت محليًا
+
+إذا كنت تريد تثبيت المكتبة محليًا نفذ الأمر التالي:
+
+```bash
+pip install dist/basitcrypto-0.1.0-py3-none-any.whl
+```
+
+تأكد من تنفيذ الأمر من المجلد الرئيسي للمشروع حيث يوجد مجلد `dist/`.
+
+---
+
+## كيفية الاستخدام
+
+قم باستيراد دوال التشفير وفك التشفير واستخدمها كما في المثال التالي:
+
+```python
+from basitcrypto import encrypt_xor, decrypt_xor, encrypt_caesar, decrypt_caesar
+
+# تجربة تشفير XOR
+text = "فلسطين حرة"
+key = "scret"
+
+encrypted_xor = encrypt_xor(text, key)
+decrypted_xor = decrypt_xor(encrypted_xor, key)
+
+print("تشفير XOR:")
+print("النص المشفر:", encrypted_xor)
+print("النص المفكك:", decrypted_xor)
+print()
+
+# تجربة تشفير قيصر
+shift = 3
+
+encrypted_caesar = encrypt_caesar(text, shift)
+decrypted_caesar = decrypt_caesar(encrypted_caesar, shift)
+
+print("تشفير قيصر:")
+print("النص المشفر:", encrypted_caesar)
+print("النص المفكك:", decrypted_caesar)
+```
+
+---
+
+## ماذا تفعل المكتبة؟
+
+* **تشفير XOR**: تقوم بتشفير النص عبر تطبيق عملية XOR بين حروف النص والمفتاح السري.
+* **شيفرة قيصر**: تقوم بتشفير النص عبر تحريك كل حرف بمقدار ثابت ضمن الأبجدية.
+
+---
+
+## ملاحظات هامة
+
+* تأكد من أن المفتاح في تشفير XOR لا يكون فارغًا.
+* تشفير قيصر مناسب للنصوص التي تحتوي على أحرف أبجدية فقط.
+---
+
+
+# مع تحيات المطور : حسام الجنيد
