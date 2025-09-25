@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: cht_tiling
+Version: 0.1.2
+Summary: CHT Tiling is a package to create and use slippy tiles (xyz)
+Project-URL: Source, https://github.com/Deltares-research/cht_tiling
+Author-email: Maarten van Ormondt <maarten.vanormondt@deltares.nl>
+License: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.10
+Requires-Dist: boto3
+Requires-Dist: cht-bathymetry
+Requires-Dist: cht-utils
+Requires-Dist: contextily
+Requires-Dist: matplotlib>=3.9.0
+Requires-Dist: netcdf4
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: pyproj
+Requires-Dist: rasterio
+Requires-Dist: rioxarray
+Requires-Dist: scipy
+Requires-Dist: toml
+Requires-Dist: xarray
+Description-Content-Type: text/markdown
+
+# Coastal Hazards Toolkit - Tiling
+
+The **Coastal Hazards Toolkit - Tiling (cht-tiling)** is a Python package that provides utilities for creating and managing tiled datasets used in coastal hazard analysis and visualization workflows.
+
+## Features
+- Efficient tiling of large coastal hazard datasets.
+- Tools for generating multi-resolution tile structures.
+- Built-in support for integration with the Coastal Hazards Toolkit ecosystem.
+
+## Installation
+You can install the package from PyPI:
+
+```bash
+pip install cht-tiling
+```
+
+Or with [uv](https://github.com/astral-sh/uv):
+
+```bash
+uv add cht-tiling
+```
+
+## Development
+Clone the repository and install with development dependencies:
+
+```bash
+uv sync --all-extras --dev
+```
+
+Run the test suite:
+
+```bash
+uv run pytest
+```
+
+Build and publish to PyPi:
+```bash
+uv build
+uv publish
+```
+
+## License
+This project is licensed under the [MIT License](LICENSE).
