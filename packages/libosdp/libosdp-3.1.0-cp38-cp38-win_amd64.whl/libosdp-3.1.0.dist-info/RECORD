@@ -1,0 +1,12 @@
+osdp_sys.cp38-win_amd64.pyd,sha256=zwZRoL1vdCuDc6cJKMVloTJDOHJv3OCc7eOLRhbNJ88,103936
+osdp/__init__.py,sha256=Z_WXFXNFcz_bIACI8PSueqFHiUsdftxSNGPsxeNJ4cY,690
+osdp/channel.py,sha256=BJhtx1N7M5f-YHYmiioDLABWp2Fe72tSb_1BzX-6EB4,810
+osdp/constants.py,sha256=DCfns9935h9purI77w_EQj2f5x4n6mblEEmNWFzDgFg,3161
+osdp/control_panel.py,sha256=d75UqLgWWt3LG2Qa-J1vJzJzuO-YxT6_PelvA33p9iQ,8595
+osdp/helpers.py,sha256=3aAvu4UOcGbvykIZDMIh00ollnWuNqq2lpCIujU9Sqk,2581
+osdp/key_store.py,sha256=MFfNzkhPsVzS54MoxxUlpqGEvvvuVq4vtlN1w5o56k4,1946
+osdp/peripheral_device.py,sha256=pFop56tLeLUHmiGkYG1rfW7Ek0hcmRoMdYk6BTNiGUs,4145
+libosdp-3.1.0.dist-info/METADATA,sha256=st8DAoS46_-MmKELvM0O9A0NMawoEU8tlpV7l3CviQI,3113
+libosdp-3.1.0.dist-info/WHEEL,sha256=2M046GvC9RLU1f1TWyM-2sB7cRKLhAC7ucAFK8l8f24,99
+libosdp-3.1.0.dist-info/top_level.txt,sha256=N-WLeQq6NGZMX7FpCcGVHnrUXx2gITbCyPAqenbnWGg,14
+libosdp-3.1.0.dist-info/RECORD,,
