@@ -1,0 +1,11 @@
+histpy/__init__.py,sha256=TB3rs35Fs-2Pl8PRRHdOjvC28xjJbL33raWLgPRuoHk,156
+histpy/__version__.py,sha256=ZOg41aCgKEuObK5WhegikXektFWPJaeZ-TMDh0Ke95M,22
+histpy/axes.py,sha256=Vd8GhXWq-bE-AHunLUuNPMBwg_KB_mb8yaf15498ukY,21994
+histpy/axis.py,sha256=uo_7Wy74idWxDKzp23fZ39bPDy1boUuHtoQymZ5dxKE,21341
+histpy/feature.py,sha256=C9TiYUB4L0O8yfHM4UbO-9PczutUdA0i7x7Mkbp4vg8,487
+histpy/healpix_axis.py,sha256=FVLvKSoWjWR5bR6FxkN8fQ6F_IJhddb-am-yurjZoHM,10322
+histpy/histogram.py,sha256=_UwxOukjnfTy8InWuZ2QpRZ02qbk8qwEtm3Hkv58D8w,114998
+histpy-2.0.4.dist-info/METADATA,sha256=EcLH0fzKUb0F9sqUnGZ0Ia9KghEXEDzlfSsfC-VACbY,2634
+histpy-2.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+histpy-2.0.4.dist-info/top_level.txt,sha256=R5obB4R9EC2tzfhnerBPKgv5mQgnl7PKFSmqhFYYkGo,7
+histpy-2.0.4.dist-info/RECORD,,
