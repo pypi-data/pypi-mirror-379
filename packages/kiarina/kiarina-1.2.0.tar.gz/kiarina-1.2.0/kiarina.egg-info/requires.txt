@@ -1,0 +1,6 @@
+kiarina-lib-falkordb>=1.0.1
+kiarina-lib-redis>=1.0.1
+kiarina-lib-redisearch>=1.0.1
+kiarina-llm>=1.0.1
+kiarina-utils-common>=1.0.1
+kiarina-utils-file>=1.0.1
