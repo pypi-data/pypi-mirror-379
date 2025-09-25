@@ -1,0 +1,15 @@
+CHANGES.rst
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+src/Products/__init__.py
+src/Products.isurlinportal.egg-info/PKG-INFO
+src/Products.isurlinportal.egg-info/SOURCES.txt
+src/Products.isurlinportal.egg-info/dependency_links.txt
+src/Products.isurlinportal.egg-info/namespace_packages.txt
+src/Products.isurlinportal.egg-info/not-zip-safe
+src/Products.isurlinportal.egg-info/requires.txt
+src/Products.isurlinportal.egg-info/top_level.txt
+src/Products/isurlinportal/__init__.py
+src/Products/isurlinportal/tests.py
