@@ -1,0 +1,10 @@
+nc-py-api
+humanize
+panel
+param
+pandas
+IPython
+ipynb-path
+matplotlib
+
+[dev]
