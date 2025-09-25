@@ -1,0 +1,16 @@
+akari_bot_webrender/constants/__init__.py,sha256=7vOkFtblLw5-eGzqXiF9K434FurpHbKYqHhJ3s1UbNU,1089
+akari_bot_webrender/functions/browser.py,sha256=zH2tLEGF9UzcA6d5CwFdJqaFwFHZBb_iw68QMrBqdaY,3586
+akari_bot_webrender/functions/exceptions.py,sha256=NJkzdFaRwPSBirvamT1ZxbKodcwmRc6vWwy0I1AvWbs,84
+akari_bot_webrender/functions/logger.py,sha256=bGOl4K1Fiv4RLoCb9hmcNrrrMftRZuV561mkSyAxZf4,2413
+akari_bot_webrender/functions/main.py,sha256=1Zz-DeLo9LbhljaHeTYgDg_Zu0ZDiaqXpS8Dvko2oZk,14969
+akari_bot_webrender/functions/options.py,sha256=-g3b09VHUfryEjljOi__m9DniEO3qTJ8Vc9cxELCw2Y,900
+akari_bot_webrender/server/main.py,sha256=syL5D5Ip50Lvm_ygo5aZzLDMMqWpvtNIrLfRmVJjV3c,2596
+akari_bot_webrender/templates/add_count_box.js,sha256=BwvDKvNaw4yrWvFckcHO3vkd3oEGBlLHzy2bEXkrO68,740
+akari_bot_webrender/templates/content.html,sha256=NPPHMcCQNN0sfl_mYZACQq6n7HOSU7HT32ktO0WhDO4,1605
+akari_bot_webrender/templates/custom.css,sha256=Trl-zX-hXdrIi7aQ7k9iGaENvi3aeMeBDu0tluCEaRc,406
+akari_bot_webrender/templates/element_screenshot_evaluate.js,sha256=fWMxCyUdHnDWQChKSoTCKDbd6UdKvueOtjY19JTK1rw,1017
+akari_bot_webrender/templates/section_screenshot_evaluate.js,sha256=OPLozVIKWgQo1jbtz_sfXNnZ9IPzj2NywGz5lQ1gBVc,2579
+akari_bot_webrender-0.4.5.dist-info/METADATA,sha256=IC-c-n9J-PdRq_n_UzNTxbQ7Ensw_kye18E-BLnT0K4,2202
+akari_bot_webrender-0.4.5.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+akari_bot_webrender-0.4.5.dist-info/licenses/LICENSE,sha256=FqmN_PhhAH7ZAOSyCIX9FJGoKsBeIWw7FCdqjUTHOHI,1073
+akari_bot_webrender-0.4.5.dist-info/RECORD,,
