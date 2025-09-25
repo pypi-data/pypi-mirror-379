@@ -1,0 +1,6 @@
+project_name_override: templafy
+package_name_override: templafy
+package_version_override: 1.1.0
+post_hooks:
+   - "ruff check . --fix"
+   - "ruff format ."
