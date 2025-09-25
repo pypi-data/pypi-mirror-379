@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: qat-linalg-util
+Version: 1.0.0
+Summary: Module qat-linalg-util [7fd8149] - Compiled by Eviden
+Home-page: https://atos.net/en/lp/myqlm
+Author: Eviden Quantum Lab
+Author-email: myqlm@atos.net
+License: Eviden myQLM EULA
+Project-URL: Documentation, https://myqlm.github.io
+Project-URL: Bug Tracker, https://github.com/myQLM/myqlm-issues/issues
+Project-URL: Community, https://myqlmworkspace.slack.com
+Keywords: Quantum,myQLM,QLM,Atos,Eviden
+Platform: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: Other/Proprietary License
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: qat-comm
+Requires-Dist: qat-core
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+# Module qat-linalg-util
