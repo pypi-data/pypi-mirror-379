@@ -1,0 +1,8 @@
+uv_bump/__init__.py,sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,0
+uv_bump/cli.py,sha256=f9f561b84e10a59e7249496123dde50fb91e2da58307fe6e1193d208d01225e1,518
+uv_bump/main.py,sha256=d5827ca159042a1f54aa3794ee34add730deb6ea76bfce5c7f7c361e8ad2fb85,3465
+uv_bump-0.3.0.dist-info/licenses/LICENSE,sha256=f312d04cb8f7373ee4cc0ab696431fafc930ef1b6a3921bdcbe34cb68bf7ff6d,1075
+uv_bump-0.3.0.dist-info/WHEEL,sha256=66530aef82d5020ef5af27ae0123c71abb9261377c5bc519376c671346b12918,79
+uv_bump-0.3.0.dist-info/entry_points.txt,sha256=3403a79e4cd17fa2b7751da1686f2d653ec74061ddeb29f47d92555df4d9fc4f,45
+uv_bump-0.3.0.dist-info/METADATA,sha256=0f1f0b8472679b17f6a74b14d7ee2426e073408514aa42ef9002bc73ce0a3fd3,4052
+uv_bump-0.3.0.dist-info/RECORD,,
