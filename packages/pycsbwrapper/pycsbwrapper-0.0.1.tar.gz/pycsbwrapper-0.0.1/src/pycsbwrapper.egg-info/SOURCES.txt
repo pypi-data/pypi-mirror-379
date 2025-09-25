@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/pycsbwrapper/__init__.py
+src/pycsbwrapper/csb.py
+src/pycsbwrapper.egg-info/PKG-INFO
+src/pycsbwrapper.egg-info/SOURCES.txt
+src/pycsbwrapper.egg-info/dependency_links.txt
+src/pycsbwrapper.egg-info/top_level.txt
