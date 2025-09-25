@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/win_mcp_server/__init__.py
+src/win_mcp_server/credentials.py
+src/win_mcp_server/server.py
+src/win_mcp_server.egg-info/PKG-INFO
+src/win_mcp_server.egg-info/SOURCES.txt
+src/win_mcp_server.egg-info/dependency_links.txt
+src/win_mcp_server.egg-info/entry_points.txt
+src/win_mcp_server.egg-info/requires.txt
+src/win_mcp_server.egg-info/top_level.txt
+tests/test_basic.py
+tests/test_server.py
