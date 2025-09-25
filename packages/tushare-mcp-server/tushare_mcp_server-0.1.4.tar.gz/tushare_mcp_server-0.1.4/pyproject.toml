@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tushare-mcp-server"
+version = "0.1.4"
+authors = [
+  { name="Michael Feng" },
+]
+description = "A Model Context Protocol (MCP) server for Tushare, providing Chinese financial market data."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "GPL-3.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "tushare>=1.4.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "aiofiles>=23.0.0",
+]
+
+[project.scripts]
+tushare-mcp = "server:cli_main"
+
+[tool.setuptools]
+py-modules = ["server"]

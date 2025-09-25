@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+server.py
+tushare_mcp_server.egg-info/PKG-INFO
+tushare_mcp_server.egg-info/SOURCES.txt
+tushare_mcp_server.egg-info/dependency_links.txt
+tushare_mcp_server.egg-info/entry_points.txt
+tushare_mcp_server.egg-info/requires.txt
+tushare_mcp_server.egg-info/top_level.txt
