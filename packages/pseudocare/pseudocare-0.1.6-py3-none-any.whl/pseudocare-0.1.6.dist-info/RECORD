@@ -1,0 +1,10 @@
+pseudocare/__init__.py,sha256=hd7419XC1sRHPZjgsBFaf4Dg_uqeCCmzusS8QQr-4ME,160
+pseudocare/pseudocare.py,sha256=M_ssaD374wMm8v82j107KGa-5Of9tSbPTasArn_FGc8,15245
+pseudocare/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pseudocare/providers/custom_date_provider.py,sha256=aRccDTEiAFg2j0-R4XFZ2xx7Xk9WiukpOU0LcLwr2_8,21555
+pseudocare/providers/custom_mail_provider.py,sha256=8iFefDyRREjT0rOuXOudV1f0DZa1r2n6slrOgxJHP1I,2911
+pseudocare-0.1.6.dist-info/licenses/LICENSE,sha256=WHEXeXWaroiyypUcMJbKTxwoIyHRlFxBAe9npPtzhLQ,1556
+pseudocare-0.1.6.dist-info/METADATA,sha256=6EPFpDzQv9_t0NN2qpY6cmTSTYdytw6u_R1k7YYXzVI,10928
+pseudocare-0.1.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pseudocare-0.1.6.dist-info/top_level.txt,sha256=6J52XS1-zQ5TlHoHY4nbWOJ0onQEa6fwUih-QsZnLgU,11
+pseudocare-0.1.6.dist-info/RECORD,,
