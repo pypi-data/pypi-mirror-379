@@ -1,0 +1,11 @@
+numpy
+autograd
+KDEpy
+matplotlib
+pykml
+requests
+scipy
+scikit-image
+dill
+tqdm
+rich

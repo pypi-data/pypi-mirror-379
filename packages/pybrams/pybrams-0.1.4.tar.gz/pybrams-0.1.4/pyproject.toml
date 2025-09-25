@@ -1,0 +1,57 @@
+[project]
+name = "pybrams"
+version = "0.1.4"
+description = "BRAMS project Python package"
+authors = [
+  { name = "Antoine Calegaro", email = "antoine.calegaro@aeronomie.be" },
+  { name = "Joachim Balis", email = "joachim.balis@aeronomie.be" },
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = "MIT"
+keywords = ["brams", "meteor"]
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = [
+  "numpy",
+  "autograd",
+  "KDEpy",
+  "matplotlib",
+  "pykml",
+  "requests",
+  "scipy",
+  "scikit-image",
+  "dill",
+  "tqdm",
+  "rich",
+]
+
+[project.urls]
+homepage = "https://brams.aeronomie.be"
+repository = "https://gitlab.aeronomie.be/ae/brams/pybrams"
+documentation = "https://gitlab.aeronomie.be/ae/brams/pybrams"
+
+[project.scripts]
+pybrams = "pybrams.scripts.pybrams:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pybrams = ["config/*.json", "data/**/*"]
+
+[tool.pyright]
+"pythonVersion" = "3.13"
+"include" = ["src"]
+"reportMissingImports" = true
+"useLibraryCodeForTypes" = true
+"typeCheckingMode" = "standard"
+
+[dependency-groups]
+dev = ["ruff", "twine", "docutils"]
