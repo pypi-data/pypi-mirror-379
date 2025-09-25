@@ -1,0 +1,6 @@
+README.md
+setup.py
+khatab.egg-info/PKG-INFO
+khatab.egg-info/SOURCES.txt
+khatab.egg-info/dependency_links.txt
+khatab.egg-info/top_level.txt

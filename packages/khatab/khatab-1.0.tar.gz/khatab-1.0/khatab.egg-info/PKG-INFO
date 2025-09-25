@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: khatab
+Version: 1.0
+Summary: مكتبة بسيطة لعرض رسالة ترحيب باسم خطاب العصري
+Home-page: https://github.com/yourusername/khatab
+Author: خطاب العصري
+Author-email: example@email.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
