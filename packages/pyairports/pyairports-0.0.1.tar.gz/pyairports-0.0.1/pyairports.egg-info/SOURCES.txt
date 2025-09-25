@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pyairports.egg-info/PKG-INFO
+pyairports.egg-info/SOURCES.txt
+pyairports.egg-info/dependency_links.txt
+pyairports.egg-info/entry_points.txt
+pyairports.egg-info/top_level.txt
+sample/__init__.py
+sample/main.py
+tests/__init__.py
+tests/test_simple.py
