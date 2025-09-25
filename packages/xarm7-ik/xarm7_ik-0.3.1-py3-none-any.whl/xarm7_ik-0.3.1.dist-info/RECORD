@@ -1,0 +1,8 @@
+xarm7_ik/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarm7_ik/kinematics.py,sha256=5ihdsFFI7NlkqYU-vRRMkWEmWRHXVTZ8kKMNt31usyk,7446
+xarm7_ik/solver.py,sha256=vLLshifY18QLp_blQeBeXurw0oCpIqJ3TQJpgRM3p_0,12807
+xarm7_ik/utils.py,sha256=ZYqLwO4ch01FJMMYVo4uOizC4yc2JktPnaYKqyJqwws,9045
+xarm7_ik-0.3.1.dist-info/METADATA,sha256=0UgS3TSdJ0HabXWW0UXoEdjUpaq5H82zn5RmiJvCjc8,2909
+xarm7_ik-0.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+xarm7_ik-0.3.1.dist-info/top_level.txt,sha256=GvRjPVwwcWmMPD9F2ck71ALxtnWSSkNHnMIGHi1jH00,9
+xarm7_ik-0.3.1.dist-info/RECORD,,
