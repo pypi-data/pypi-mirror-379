@@ -1,0 +1,2 @@
+[nbdev]
+triggerkit = triggerkit._modidx:d
