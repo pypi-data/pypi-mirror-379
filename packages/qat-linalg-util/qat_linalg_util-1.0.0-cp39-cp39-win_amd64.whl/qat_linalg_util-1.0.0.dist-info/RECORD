@@ -1,0 +1,8 @@
+qat/linalgutil/linalgutil.pyd,sha256=IwrcFBZNzCCUdq_NmQ9Me1ZtbLO6Zp-6iQLTK_eFbno,155604
+qat/linalgutil/version.pyd,sha256=wN5WW6-dyAePSge0uQgnHHIHmJihTh9v2zBtahqpVVk,76861
+qat/linalgutil/wobservable.pyd,sha256=CPo-uIwuQ3_DwvIql7hV-a-7b1YF1kxLqmzlVl1L1g8,12533729
+qat_linalg_util-1.0.0.dist-info/licenses/LICENSE.txt,sha256=Vl03FJBySK7FEYdw_Y0dV66UAVedEyIuqJTJxREyRgs,4752
+qat_linalg_util-1.0.0.dist-info/METADATA,sha256=1hNrBi6X2t7Nisb1nhxav8KfYh29HslEcApmOlKl1ic,1120
+qat_linalg_util-1.0.0.dist-info/WHEEL,sha256=oQPcNLSWEt2pA6CcvSmogwncKA04xkTKoFrk2UP83Ng,98
+qat_linalg_util-1.0.0.dist-info/top_level.txt,sha256=EtiE-lzXpV6tDPK3leIRADd9p6cOal7g6fxvqQ-u_yc,4
+qat_linalg_util-1.0.0.dist-info/RECORD,,
