@@ -1,0 +1,3 @@
+[console_scripts]
+whispering = whisperingscript.main:main
+whisperingscript = whisperingscript.main:main

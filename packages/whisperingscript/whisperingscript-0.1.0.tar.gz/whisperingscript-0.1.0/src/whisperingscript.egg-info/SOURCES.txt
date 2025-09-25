@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+src/whisperingscript/__init__.py
+src/whisperingscript/automation.py
+src/whisperingscript/main.py
+src/whisperingscript.egg-info/PKG-INFO
+src/whisperingscript.egg-info/SOURCES.txt
+src/whisperingscript.egg-info/dependency_links.txt
+src/whisperingscript.egg-info/entry_points.txt
+src/whisperingscript.egg-info/requires.txt
+src/whisperingscript.egg-info/top_level.txt

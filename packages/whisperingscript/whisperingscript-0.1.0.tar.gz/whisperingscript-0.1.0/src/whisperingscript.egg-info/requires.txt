@@ -1,0 +1,10 @@
+selenium>=4.0.0
+pyperclip>=1.8.0
+plyer>=2.0.0
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=1.0.0

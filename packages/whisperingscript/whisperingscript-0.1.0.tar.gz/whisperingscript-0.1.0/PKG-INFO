@@ -1,0 +1,327 @@
+Metadata-Version: 2.4
+Name: whisperingscript
+Version: 0.1.0
+Summary: Browser automation script for whispering.bradenwong.com transcription service
+Author-email: Martin Paul Eve <martin@example.com>
+Maintainer-email: Martin Paul Eve <martin@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/martin/whisperingscript
+Project-URL: Repository, https://github.com/martin/whisperingscript
+Project-URL: Issues, https://github.com/martin/whisperingscript/issues
+Project-URL: Documentation, https://github.com/martin/whisperingscript#readme
+Keywords: automation,transcription,selenium,browser,whisper
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium>=4.0.0
+Requires-Dist: pyperclip>=1.8.0
+Requires-Dist: plyer>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: flake8>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Dynamic: license-file
+
+# WhisperingScript
+
+A Python package that automates browser interactions with [whispering.bradenwong.com](https://whispering.bradenwong.com) for seamless audio recording and transcription. Sorry, lots of AI used to script this at speed.
+
+So why write the script in the first place? The easy answer is that, unfortunately, the Whispering app, or Epicenter, is currently broken on Ubuntu Linux. Nothing I tried could induce the script to record audio and then transcribe it to text. However, it works just fine in the browser, so this script does those calls for you to automate the process.
+
+This script has only been tested on Ubuntu 24.04, on Gnome.
+
+## Features
+
+- 🎙️ **Automated Recording**: Start and stop audio recording with multiple control methods
+- 🔄 **Transcription Integration**: Automatically retrieves transcribed text and copies to clipboard
+- 🌐 **Headless Operation**: Runs in background without GUI interference
+- ⚙️ **Configurable Settings**: Supports OpenAI Whisper API configuration
+- 🔧 **Multiple Stop Methods**: File-based, signal-based, or timer-based recording control
+- 📋 **Clipboard Integration**: Automatically pastes transcribed text where needed
+
+## Installation
+
+### From PyPI (when published)
+
+```bash
+pip install whisperingscript
+```
+
+### From Source
+
+```bash
+git clone https://github.com/martin/whisperingscript.git
+cd whisperingscript
+pip install -e .
+```
+
+## Key Binding
+I then use Gnome custom shortcuts to bind the script to a key combination (CTRL+F11):
+
+The run configuration (for me, please change your paths) is:
+```bash
+/home/martin/Documents/Programming/whisperingscript/.venv/bin/python3 /home/martin/Documents/Programming/whisperingscript/src/whisperingscript/automation.py
+```
+
+I then have a stop configuration (for me, please change your paths):
+
+```bash
+touch /tmp/whispering_stop
+```
+
+This will, also, depend on the stop mechanism that you use. This is file-based stoppage.
+
+## Prerequisites
+
+1. **Chrome Browser**: The script uses Chrome WebDriver
+2. **ChromeDriver**: Must be installed and available in PATH
+3. **OpenAI API Key**: Required for transcription (placed in ~/.openai)
+
+### Installing ChromeDriver
+
+#### Ubuntu/Debian
+```bash
+sudo apt-get update
+sudo apt-get install chromium-chromedriver
+```
+
+#### macOS
+```bash
+brew install chromedriver
+```
+
+#### Windows
+Download from [ChromeDriver Downloads](https://chromedriver.chromium.org/) and add to PATH.
+
+### OpenAI API Key Setup
+
+Create a file at `~/.openai` containing your OpenAI API key:
+
+```bash
+echo "your-openai-api-key-here" > ~/.openai
+```
+
+## Usage
+
+### Command Line Interface
+
+```bash
+# Basic usage with file-based stopping
+whisperingscript
+
+# Or use the shorter alias
+whispering
+
+# Use signal-based stopping
+whisperingscript --stop-method signal
+
+# Use timer-based stopping (30 seconds)
+whisperingscript --stop-method time --duration 30
+
+# Run in non-headless mode (visible browser)
+whisperingscript --headless=false
+```
+
+### Stop Methods
+
+#### 1. File-based (default)
+```bash
+whisperingscript --stop-method file
+```
+To stop recording: `touch /tmp/whispering_stop`
+
+#### 2. Signal-based
+```bash
+whisperingscript --stop-method signal
+```
+To stop recording: `kill -USR1 <process_id>` (process ID is displayed when script starts)
+
+#### 3. Timer-based
+```bash
+whisperingscript --stop-method time --duration 60
+```
+Recording automatically stops after specified duration (60 seconds in this example)
+
+### Python API
+
+```python
+from whisperingscript import WhisperingAutomation
+
+# Create automation instance
+automation = WhisperingAutomation(
+    headless=True,
+    stop_method="file",
+    recording_duration=30
+)
+
+# Run the complete workflow
+transcription = automation.run()
+print(f"Transcribed text: {transcription}")
+```
+
+### Advanced Usage
+
+```python
+from whisperingscript import WhisperingAutomation
+
+# Custom configuration
+automation = WhisperingAutomation(
+    headless=False,  # Show browser window
+    stop_method="signal",  # Use SIGUSR1 signal
+    recording_duration=60  # Fallback duration
+)
+
+try:
+    # Setup browser and configure settings
+    automation.setup_browser()
+    automation.setup_stop_listener()
+    
+    # Navigate and configure
+    automation.navigate_to_site()
+    automation.click_settings()
+    automation.configure_transcription()
+    automation.return_to_home()
+    
+    # Recording workflow
+    automation.start_recording()
+    automation.wait_for_stop_signal()
+    automation.stop_recording()
+    
+    # Get results
+    transcription = automation.get_transcription()
+    print(f"Result: {transcription}")
+    
+finally:
+    automation.cleanup()
+```
+
+## Configuration
+
+### API KEY
+
+- `OPENAI_API_KEY`: Put API key in `~/.openai` file for API key storage
+
+### Browser Options
+
+The script automatically configures Chrome with:
+- Microphone access permissions
+- Disabled notifications and popups
+- Optimized settings for headless operation
+
+## Workflow
+
+1. **Browser Setup**: Initializes Chrome with required permissions
+2. **Navigation**: Opens whispering.bradenwong.com
+3. **Configuration**: 
+   - Navigates to settings
+   - Configures transcription service (OpenAI Whisper)
+   - Enters API key
+4. **Recording**:
+   - Returns to home page
+   - Starts audio recording
+   - Waits for stop signal
+   - Stops recording
+5. **Transcription**:
+   - Waits for transcription to complete
+   - Copies result to clipboard
+   - Optionally pastes using xdotool
+
+## Troubleshooting
+
+### Common Issues
+
+1. **ChromeDriver not found**
+   ```
+   selenium.common.exceptions.WebDriverException: 'chromedriver' executable needs to be in PATH
+   ```
+   **Solution**: Install ChromeDriver and ensure it's in your PATH
+
+2. **Permission denied for microphone**
+   ```
+   The script may fail to access microphone in headless mode
+   ```
+   **Solution**: The script automatically handles microphone permissions
+
+3. **API key not found**
+   ```
+   ⚠ OpenAI API key file not found: ~/.openai
+   ```
+   **Solution**: Create `~/.openai` file with your API key
+
+4. **Transcription timeout**
+   ```
+   ⚠ Timeout waiting for transcription after 60 seconds
+   ```
+   **Solution**: Check your internet connection and API key validity
+
+### Debug Mode
+
+Run with visible browser for debugging:
+```bash
+whisperingscript --headless=false
+```
+
+## Development
+
+### Setup Development Environment
+
+```bash
+git clone https://github.com/martinpauleve/whisperingscript.git
+cd whisperingscript
+pip install -e ".[dev]"
+```
+
+### Code Formatting
+
+```bash
+black src/
+```
+
+## Dependencies
+
+- **selenium**: Browser automation
+- **pyperclip**: Clipboard operations
+- **plyer**: Cross-platform notifications
+
+## License
+
+MIT License - see LICENSE file for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## Support
+
+- **Issues**: [GitHub Issues](https://github.com/martin/whisperingscript/issues)
+- **Documentation**: This README and inline code documentation
+
+## Changelog
+
+### v0.1.0
+- Initial release
+- Basic automation workflow
+- Multiple stop methods
+- OpenAI Whisper integration
+- Clipboard and notification support
