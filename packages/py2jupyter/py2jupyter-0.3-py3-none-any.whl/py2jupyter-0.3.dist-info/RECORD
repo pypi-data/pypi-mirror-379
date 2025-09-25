@@ -1,0 +1,16 @@
+py2jupyter/__init__.py,sha256=Gq1TW39MFV9nwi3qvNaqa_Q3-9xw6zH5p6KWQ5e7vf4,420
+py2jupyter/__main__.py,sha256=XtksUMyHIaZmJLT2I6HJE36ky8ZKRSfzcTyZJuo0N7s,43593
+py2jupyter-0.3.dist-info/licenses/LICENSE,sha256=ljg481CA89vxzzdDgXjXcli83FvOxddYl3Rl-AGFlVI,1074
+tests/__init__.py,sha256=uZOVxMPZ18imWyTsLCut1kSFkH849unFYbce1g48C_g,48
+tests/test_converter.py,sha256=wGF56F_gjT4nEsidU_2MYCrWC6MHu0315WDfkk4yI-M,12111
+tests/test_data/test_case_01.py,sha256=tqFvgg939A9uvubqa-ddOjWBoiNtVf3S2nR-b7kM7Cs,189
+tests/test_data/test_case_02.py,sha256=wWsuE99YeJxagP8iaAwut4LzB_ElhjE4ksJLuM3WCG4,641
+tests/test_data/test_case_03.py,sha256=C820ZhtCLc2qUQChycHZWM0T-G91W35ONLVZElQEACY,651
+tests/test_data/test_case_04.py,sha256=W5FRFou3CBqMesTC3UlDrxYgobSInpasxXoK1Tx-GNM,477
+tests/test_data/test_case_05.py,sha256=NS2H9bcZkIleFH_N8-M4opDW_NqZ_CkY_WIuMKJDXkE,570
+tests/test_data/test_case_06.py,sha256=H1XF7QmKjZgNNrq99UVJYQawybDV8FWqQnuVvzmjagU,500
+py2jupyter-0.3.dist-info/METADATA,sha256=1oZlY_ErH7YThVHhZDmVTGrr72PyGBQdPF6w3t93xgY,11689
+py2jupyter-0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+py2jupyter-0.3.dist-info/entry_points.txt,sha256=_dfDC5S_fHIMpbM1kyI5LQXIUhQhBbyffMloKZWpzVA,56
+py2jupyter-0.3.dist-info/top_level.txt,sha256=XVa2xcI1xfV9xRkOvh3gvZU9xJ2TD31dlN4x1eQjXqc,17
+py2jupyter-0.3.dist-info/RECORD,,
