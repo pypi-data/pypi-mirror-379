@@ -1,0 +1,12 @@
+LICENSE
+pyproject.toml
+docs/README.md
+src/gdex_api_client/__init__.py
+src/gdex_api_client/gdex_client.py
+src/gdex_api_client.egg-info/PKG-INFO
+src/gdex_api_client.egg-info/SOURCES.txt
+src/gdex_api_client.egg-info/dependency_links.txt
+src/gdex_api_client.egg-info/entry_points.txt
+src/gdex_api_client.egg-info/requires.txt
+src/gdex_api_client.egg-info/top_level.txt
+test/test_rdams_client.py
