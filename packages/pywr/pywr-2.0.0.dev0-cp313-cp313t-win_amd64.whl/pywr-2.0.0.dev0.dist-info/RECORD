@@ -1,0 +1,10 @@
+pywr-2.0.0.dev0.dist-info/METADATA,sha256=shZcotSIr-tYWvrcHW09pBKn09Fy4oDjzJJX5wX8RdM,13649
+pywr-2.0.0.dev0.dist-info/WHEEL,sha256=NIX3GH-EI7FzrKEcrM4JPmD21jlBdrrjPRxjD1D-qeI,97
+pywr-2.0.0.dev0.dist-info/licenses/LICENSE,sha256=XYeBp8D-A_-e_GzJ2d-EsvNuHlhbTrDILJfREAPjoiI,1093
+pywr/__init__.py,sha256=fLZHVN_moM7tZULdZCERwb9ThoV1QDyLTUXlUg4FWmc,1481
+pywr/__main__.py,sha256=xkoHzRjxKvsW91lMdPz9ahq91_ZgcL78iJO54j6wNfQ,75
+pywr/cli.py,sha256=nfrM_DWZP3TBDeUsS6gTyJ0cUHvRP-JEtuVdXXmgXT8,1265
+pywr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywr/pywr.cp313t-win_amd64.pyd,sha256=mryUdoHefTJqlIHa2BRpBl5vY4L4B79gupYWQtTICcU,79547904
+pywr/pywr.pyi,sha256=lQOdA8ROqM6corA6YyFcfjD-F0N1KczY6zjrLfIvX2I,7430
+pywr-2.0.0.dev0.dist-info/RECORD,,
