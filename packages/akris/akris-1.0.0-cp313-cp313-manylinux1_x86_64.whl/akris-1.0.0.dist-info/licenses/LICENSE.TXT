@@ -1,0 +1,24 @@
+(C) 2023 Adam Thorsen ( alethepedia.com )
+
+This product is distributed under "The V Public License" ("VPL"; version 0xFF.)
+
+This means that it is a document with a cryptographically-verifiable history of attributable authorship, rather than one of the many vile agglomerations of faecal droppings from anonymous vermin typically met with in public digital cesspools.
+ 
+The V Public License mandates that all redistribution of this product is to take the canonical form of a VTree, which consists of: a Genesis VPatch; zero or more revision VPatches; and one or more VSeals which authenticate each such VPatch, including the Genesis.
+ 
+A VPatch is defined as the output of "VDiff" on a revision against its predecessor: this is presently equivalent to standard Unix "diff -uNr PREDECESSOR SUCCESSOR", where the timestamp normally found in every delta is replaced with a Keccak hash of the original or transformed file. A Genesis VPatch is a VDiff of a "revision" constituting the initial public release of the product against a null predecessor (i.e. an empty directory).
+
+A VSeal is a public key signature (typically generated via GPG or a compatible program) of a particular VPatch, by an author, coauthor, or reviewer who wishes to be known as a signatory. If the creator of a VSeal has a public presence, e.g. a WWW site, the public key against which the VSeal validates must be publicly accessible and publicly associated with said presence (e.g. offered for download on the creator's WWW site.)
+ 
+This product may be used for ANY PURPOSE WHATSOEVER, and is supplied with NO WARRANTY OF ANY KIND, unless otherwise specified by written and signed agreements with all of its VSeal signatories.
+
+However, if you choose to redistribute the product and/or any changes you have made to it, you must do so in VTree form, and the latter must include all VPatches and VSeals you had originally received. The VTree you redistribute must be fully-compatible in every respect with the format of the one you had received.
+
+You may offer copies of a VPL-licensed product for download to third parties in variant (i.e. non-VTree) forms, so long as the canonical VTree form at all times exactly corresponding to every such variant is made readily and conspicuously available. Concretely, this means that if you intend to distribute a binary build of a VPL-licensed computer program, you must not only distribute its VTree with it, but must also include any and all components and instructions required to reproduce a bitwise-identical binary build.
+
+Similarly, if you distribute a VPL-licensed product as a source archive, via a publicly-facing version control interface, as a printed book, inside a physical device, or in any form whatsoever other than a VTree, then a VTree corresponding exactly to the item you are distributing, retaining all of the history which you had originally received, must be distributed along with every such variant copy.
+
+The only permitted exception to the three paragraphs above is that a VPL-licensed product MAY be incorporated whole into a new (i.e. with a novel Genesis) VTree, so long as the latter contains a statement of this fact, along with any information required to locate and retrieve a copy of the original product's canonical VTree. All provisions of the VPL shall apply to the new VTree.
+
+The text of this notice is itself licensed under the VPL, and is to be retained where found.
+
