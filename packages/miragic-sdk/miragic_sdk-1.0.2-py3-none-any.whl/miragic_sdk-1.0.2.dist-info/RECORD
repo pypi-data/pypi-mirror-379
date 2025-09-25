@@ -1,0 +1,13 @@
+miragic_sdk/__init__.py,sha256=wZDHB_wPtAnTLF7STJqhTmhZSovxIzwnWHj9UaQvzVg,736
+miragic_sdk/api_client.py,sha256=Z6vpiLEIGu7S9-4_T8-OF5Iu2a_VzJpI-0Ikl0b8qDA,8209
+miragic_sdk/background_removal.py,sha256=cttAwe4QdkXBG8BfwnKfmyHXfat8LXQpkDtYW0JUoVI,3935
+miragic_sdk/blur_background.py,sha256=B8BFiosvBswOeid9t8ieQY9T09wYM1iy1bgCiuR5U1A,7483
+miragic_sdk/cli.py,sha256=ekrSb3g0SZOMfxhoc44VUDfV79P722QneBwzAh8bUgI,4296
+miragic_sdk/core.py,sha256=MJeJKt8Y0UFdkFTlhf4MOoINjdhSbgpR8hK5XH3-dKk,5974
+miragic_sdk/image_upscaler.py,sha256=89d930hGG3HWwuudbXDHO5hiKaP1tMpQmErbBIALaDY,5015
+miragic_sdk-1.0.2.dist-info/licenses/LICENSE,sha256=tPP3wN002oYbXBRbiQO4UPQz708e_MT76Eppn2NY7u4,1090
+miragic_sdk-1.0.2.dist-info/METADATA,sha256=RHucdCRnTZk4bzkxlSd6hFDaKczCFBRkGwx3KHyOBxA,5623
+miragic_sdk-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+miragic_sdk-1.0.2.dist-info/entry_points.txt,sha256=rGjASuSgSklLREw-K9jqthRpn2M8E96h_LAbtR_wETw,49
+miragic_sdk-1.0.2.dist-info/top_level.txt,sha256=CyMPCy3skmi85peP4O45ioT_9my7DmHdkXPXDEy7jFc,12
+miragic_sdk-1.0.2.dist-info/RECORD,,
