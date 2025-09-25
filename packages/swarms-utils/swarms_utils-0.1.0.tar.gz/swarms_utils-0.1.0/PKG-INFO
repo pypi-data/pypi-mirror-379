@@ -1,0 +1,235 @@
+Metadata-Version: 2.3
+Name: swarms-utils
+Version: 0.1.0
+Summary: Swarms - TGSC
+License: MIT
+Keywords: artificial intelligence,deep learning,optimizers,Prompt Engineering,swarms,agents,llms,transformers,multi-agent,swarms of agents,Enterprise-Grade Agents,Production-Grade Agents,Agents,Multi-Grade-Agents,Swarms,Transformers,LLMs,Prompt Engineering,Agents,Generative Agents,Generative AI,Agent Marketplace,Agent Store,quant,finance,algorithmic trading,portfolio optimization,risk management,financial modeling,machine learning for finance,natural language processing for finance
+Author: Kye Gomez
+Author-email: kye@swarms.world
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: numpy
+Requires-Dist: pydantic
+Requires-Dist: tenacity
+Requires-Dist: torch
+Requires-Dist: transformers
+Project-URL: Documentation, https://docs.swarms.world
+Project-URL: Homepage, https://github.com/The-Swarm-Corporation/swarms-utils
+Project-URL: Repository, https://github.com/The-Swarm-Corporation/swarms-utils
+Description-Content-Type: text/markdown
+
+# Swarms Utils
+
+A utility package hosting complex logic for the Swarms ecosystem. This package provides essential tools for JSON formatting, swarm matching, and logits processing in multi-agent systems.
+
+## Features
+
+- **JSON Formatter**: Structured JSON generation with schema validation
+- **Swarm Matcher**: Intelligent task-to-swarm type matching using embeddings
+- **Logits Processor**: Advanced token filtering and stopping criteria for language models
+
+## Installation
+
+```bash
+pip install swarms-utils
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/The-Swarm-Corporation/swarms-utils.git
+cd swarms-utils
+pip install -e .
+```
+
+## Quick Start
+
+### JSON Formatter
+
+Generate structured JSON output using language models with schema validation:
+
+```python
+from swarms_utils import Jsonformer
+import transformers
+
+# Initialize model and tokenizer
+model = transformers.AutoModelForCausalLM.from_pretrained("gpt2")
+tokenizer = transformers.AutoTokenizer.from_pretrained("gpt2")
+
+# Define JSON schema
+schema = {
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "age": {"type": "number"},
+        "is_active": {"type": "boolean"}
+    }
+}
+
+# Create formatter
+formatter = Jsonformer(
+    model=model,
+    tokenizer=tokenizer,
+    json_schema=schema,
+    prompt="Generate a user profile"
+)
+
+# Generate structured output
+result = formatter()
+print(result)
+# Output: {"name": "John Doe", "age": 30, "is_active": true}
+```
+
+### Swarm Matcher
+
+Intelligently match tasks to appropriate swarm types using semantic similarity:
+
+```python
+from swarms_utils import SwarmMatcher, SwarmMatcherConfig, SwarmType
+
+# Configure the matcher
+config = SwarmMatcherConfig()
+matcher = SwarmMatcher(config)
+
+# Add custom swarm types
+custom_swarm = SwarmType(
+    name="DataAnalysisSwarm",
+    description="Specialized in data analysis, visualization, and statistical modeling"
+)
+matcher.add_swarm_type(custom_swarm)
+
+# Match a task to the best swarm type
+task = "Analyze sales data and create visualizations"
+best_match, confidence = matcher.find_best_match(task)
+print(f"Best match: {best_match} (confidence: {confidence:.2f})")
+```
+
+### Logits Processor
+
+Control language model output with custom stopping criteria and token filtering:
+
+```python
+from swarms_utils import StringStoppingCriteria, NumberStoppingCriteria, OutputNumbersTokens
+
+# String stopping criteria - stops at quotes
+string_criteria = StringStoppingCriteria(tokenizer, prompt_length=10)
+
+# Number stopping criteria - stops at appropriate number precision
+number_criteria = NumberStoppingCriteria(tokenizer, prompt_length=10, precision=2)
+
+# Output only number tokens
+number_warper = OutputNumbersTokens(tokenizer, prompt)
+```
+
+## API Reference
+
+### Jsonformer
+
+The main class for structured JSON generation.
+
+**Parameters:**
+- `model`: Pre-trained language model
+- `tokenizer`: Tokenizer for the model
+- `json_schema`: JSON schema definition
+- `prompt`: Input prompt for generation
+- `debug`: Enable debug mode (default: False)
+- `max_array_length`: Maximum array length (default: 10)
+- `max_number_tokens`: Maximum tokens for numbers (default: 6)
+- `temperature`: Generation temperature (default: 1.0)
+- `max_string_token_length`: Maximum string token length (default: 10)
+
+**Methods:**
+- `generate_number()`: Generate a number value
+- `generate_boolean()`: Generate a boolean value
+- `generate_string()`: Generate a string value
+- `generate_object()`: Generate an object with properties
+- `generate_array()`: Generate an array of items
+- `__call__()`: Generate complete JSON object
+
+### SwarmMatcher
+
+Intelligent task-to-swarm matching using semantic embeddings.
+
+**Parameters:**
+- `config`: SwarmMatcherConfig instance
+
+**Methods:**
+- `add_swarm_type(swarm_type)`: Add a new swarm type
+- `find_best_match(task)`: Find best matching swarm type
+- `auto_select_swarm(task)`: Automatically select swarm type
+- `save_swarm_types(filename)`: Save swarm types to JSON
+- `load_swarm_types(filename)`: Load swarm types from JSON
+
+### SwarmType
+
+Pydantic model for defining swarm types.
+
+**Fields:**
+- `name`: Swarm type name
+- `description`: Detailed description for matching
+- `embedding`: Optional pre-computed embedding
+
+### Logits Processors
+
+**StringStoppingCriteria**: Stops generation at string delimiters
+**NumberStoppingCriteria**: Stops generation at appropriate number precision
+**OutputNumbersTokens**: Filters logits to only allow number tokens
+
+## Use Cases
+
+- **Multi-Agent Systems**: Match tasks to specialized agent swarms
+- **Structured Output**: Generate JSON responses from language models
+- **Content Generation**: Control model output with custom stopping criteria
+- **Workflow Optimization**: Automatically select appropriate processing workflows
+
+## Configuration
+
+The package supports various configuration options:
+
+```python
+from swarms_utils import SwarmMatcherConfig
+
+config = SwarmMatcherConfig(
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    embedding_dim=512
+)
+```
+
+## Contributing
+
+We welcome contributions! Please see our contributing guidelines for details.
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Links
+
+- [Documentation](https://docs.swarms.world)
+- [GitHub Repository](https://github.com/The-Swarm-Corporation/swarms-utils)
+- [Swarms Main Package](https://github.com/The-Swarm-Corporation/swarms)
+
+## Support
+
+For support and questions:
+- Open an issue on GitHub
+- Join our Discord community
+- Check the documentation
+
+---
+
+**Made by the Swarms Team**
