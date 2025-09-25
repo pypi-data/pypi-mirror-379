@@ -1,0 +1,20 @@
+# [2.0.0](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.6.3...2.0.0) (2025-09-24)
+
+
+* feat!: remove deprecated generate_action_summary_message ([33e9f34](https://github.com/phantomcyber/splunk-soar-sdk/commit/33e9f344d950c0ab556730bb506cad1e14042746))
+* feat!: renames generic action to make request ([ddad00e](https://github.com/phantomcyber/splunk-soar-sdk/commit/ddad00ebb1ae9eaccb7bc3ea630806aeeebc9ea7))
+
+
+### Bug Fixes
+
+* rename generic action to make request ([3ddddfc](https://github.com/phantomcyber/splunk-soar-sdk/commit/3ddddfc9897a3a5d21674994a182a2e6d75b7d58))
+
+
+### BREAKING CHANGES
+
+* generate_action_summary_message is replaced by soar.set_message
+* renames the generic_action decorator to make_request
+
+
+
+
