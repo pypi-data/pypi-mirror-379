@@ -1,0 +1,16 @@
+osc_llm/__init__.py,sha256=s5unsIxKV3YNFqnS3yxR6sVFZGitJqf15boYY5BCUkI,144
+osc_llm/__main__.py,sha256=7FOzo_oTs3k1OVAK2R5O6Dso_5dlIvJPeZnTrDC9Px8,1440
+osc_llm/registry.py,sha256=zChnDxeEDUj4MBFZrfZpfBQiOX3nKlhqPKwi2ER69DI,261
+osc_llm/tokenizer.py,sha256=6wx2fYvNQj4eykdA4WCKc5XyRBBxV8XE5tEo8EVm53M,10007
+osc_llm/utils.py,sha256=tG8vjz4GOSNORPkNzTExd_SJtEZqTMoOad6yrCO4kxs,1319
+osc_llm/chat_templates/__init__.py,sha256=BLvLmR2cUAPiCa6-NFb8AQ-qWj7rOnYb5NHbrWZZStk,265
+osc_llm/chat_templates/base.py,sha256=3jynoDp9KdovKzyQl07iiBHOoqTRjqoA5ChjtShLEGA,4018
+osc_llm/chat_templates/chatml.py,sha256=_DNUsH7GftXRdI_B5c_FY2tzrZS3CTSN2QMHbDkIRSw,2315
+osc_llm/chat_templates/llama.py,sha256=m-ZIrRNzvsltVco5_Y3eu255CEZZMYC9MEJOLim2_04,2991
+osc_llm/models/__init__.py,sha256=389XMqEO9w8uZdLl5K29N_rfX8Kvm0OGi4tPWnryGK8,157
+osc_llm/models/base.py,sha256=4rbPVMCPW6-mbAQFMSolLoLbsZxoW-2ddA86OaPss7g,9215
+osc_llm/models/qwen3.py,sha256=36NECfpbrjhwCJi2utsmefGjghJl6kMzNjoLu2OWOts,4241
+osc_llm-0.2.1.dist-info/METADATA,sha256=33rdx3dBBmbxUXYQ6bM89N_M3Lk61TLZSMUZGBuVtb0,2298
+osc_llm-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+osc_llm-0.2.1.dist-info/entry_points.txt,sha256=vCpkWkjiYR7mkFvzmOv0DnMxiiooNmus7-CoytCejEU,49
+osc_llm-0.2.1.dist-info/RECORD,,
