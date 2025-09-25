@@ -1,0 +1,5 @@
+"""
+Browser subpackage
+"""
+
+# $Id$
