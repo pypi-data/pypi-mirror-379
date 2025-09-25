@@ -1,0 +1,9 @@
+fastcore
+nbdev
+pandas
+toml
+snowflake-connector-python
+schedule
+apscheduler
+
+[dev]
