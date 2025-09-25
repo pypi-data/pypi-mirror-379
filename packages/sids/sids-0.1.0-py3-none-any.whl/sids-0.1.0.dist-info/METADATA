@@ -1,0 +1,164 @@
+Metadata-Version: 2.4
+Name: sids
+Version: 0.1.0
+Summary: Selective Interface Design System: TailwindCSS + Python for universal GUIs
+Author-email: SIDS Contributors <contact@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/sids
+Project-URL: Repository, https://github.com/yourusername/sids
+Project-URL: Issues, https://github.com/yourusername/sids/issues
+Keywords: gui,ui,tailwindcss,interface,framework
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2>=3.0.0
+Requires-Dist: flask>=2.0.0
+Provides-Extra: fastapi
+Requires-Dist: fastapi>=0.68.0; extra == "fastapi"
+Requires-Dist: uvicorn>=0.15.0; extra == "fastapi"
+Provides-Extra: jupyter
+Requires-Dist: ipython>=7.0.0; extra == "jupyter"
+Requires-Dist: ipywidgets>=7.0.0; extra == "jupyter"
+Provides-Extra: tkinter
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Provides-Extra: all
+Requires-Dist: fastapi>=0.68.0; extra == "all"
+Requires-Dist: uvicorn>=0.15.0; extra == "all"
+Requires-Dist: ipython>=7.0.0; extra == "all"
+Requires-Dist: ipywidgets>=7.0.0; extra == "all"
+Dynamic: license-file
+
+# SIDS: Selective Interface Design System 🚀
+
+[![PyPI version](https://badge.fury.io/py/sids.svg)](https://badge.fury.io/py/sids)
+[![Python Support](https://img.shields.io/pypi/pyversions/sids.svg)](https://pypi.org/project/sids/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+SIDS (Selective Interface Design System) integrates **TailwindCSS** with **Python** for building beautiful GUIs everywhere - web apps, desktop applications, and Jupyter notebooks.
+
+## 🎯 Features
+
+- **Declarative Python API** - Build UIs like React, but in Python
+- **TailwindCSS Integration** - Beautiful, responsive styling out of the box
+- **Multi-Platform Rendering** - Deploy to Flask, FastAPI, Jupyter, or Tkinter
+- **Component Library** - Pre-built buttons, cards, forms, and more
+- **CLI Tools** - Easy project setup and development
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+pip install sids
+```
+
+### Basic Example
+
+```python
+import sids as ui
+
+# Create an app
+app = ui.App()
+
+# Define your UI
+with app.page("Dashboard"):
+    ui.H1("Welcome to SIDS! 🎉", classes="text-blue-600")
+    ui.Button(
+        "Click Me", 
+        color="blue",
+        on_click=lambda: print("Hello from SIDS!")
+    )
+    ui.Card(
+        "This is a beautiful card styled with Tailwind!",
+        classes="bg-gradient-to-r from-purple-500 to-pink-500"
+    )
+
+# Run anywhere
+app.run("flask")    # Web app
+app.run("jupyter")  # Jupyter notebook
+app.run("tkinter")  # Desktop app
+```
+
+## 📦 Installation Options
+
+```bash
+# Basic installation
+pip install sids
+
+# With FastAPI support
+pip install sids[fastapi]
+
+# With Jupyter support  
+pip install sids[jupyter]
+
+# With everything
+pip install sids[all]
+
+# For development
+pip install sids[dev]
+```
+
+## 🛠️ CLI Usage
+
+```bash
+# Initialize a new SIDS project
+sids init my-app
+
+# Run development server
+sids run
+
+# Build for production
+sids build
+```
+
+## 🏗️ Architecture
+
+SIDS provides a unified API that renders to multiple backends:
+
+```
+┌─────────────────┐
+│   Python API    │  ← Your Code Here
+├─────────────────┤
+│   SIDS Core     │  ← Component System
+├─────────────────┤
+│    Adapters     │  ← Backend Integration
+├─────┬─────┬─────┤
+│Flask│Jptr │Tkntr│  ← Render Targets
+└─────┴─────┴─────┘
+```
+
+## 📚 Documentation
+
+- [Getting Started Guide](docs/getting-started.md)
+- [Component Reference](docs/components.md)
+- [Adapter Guide](docs/adapters.md)
+- [API Documentation](docs/api.md)
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [TailwindCSS](https://tailwindcss.com/)
+- Inspired by [Streamlit](https://streamlit.io/) and [React](https://reactjs.org/)
+- Python packaging with [setuptools](https://setuptools.pypa.io/)

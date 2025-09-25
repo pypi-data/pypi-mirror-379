@@ -1,0 +1,16 @@
+sids/__init__.py,sha256=s7SV5axerbodRQcC7jXRueRolyI99xbXFhyU6ZCOAE8,261
+sids/cli.py,sha256=Hk7mnPs1oSHS_0mw8x7YW4nwyYg67qBVfgesca8Q3Y8,405
+sids/core.py,sha256=I1Cm3gIyQIJg-Sz0dpjynqDWNcXRgtNLRTBOA6Xx9NA,4131
+sids/adapters/fastapi_adapter.py,sha256=EvAvrC2YWHOjH6_Om-TCVZlGkNsqsmknoiHFqHLnEhU,37
+sids/adapters/flask_adapter.py,sha256=_NRaNlXURm_4l7Pgb9HykGeNLaJzeERzwEjfkg6VsFo,1683
+sids/adapters/jupyter_adapter.py,sha256=J-otyG8hU-CUXeLpq4s5w8ayslBx7LGwky8wiHB2mX0,1189
+sids/adapters/tkinter_adapter.py,sha256=PCPu3SWIr24vqvV9BSUL4xfyhxteVZ4b1JayA7i9y3U,2614
+sids/components/__init__.py,sha256=33vYOyQ_wbZ_4GPyp8hQYOBOtEdyu5sMIv2lF5Jxm3c,37
+sids/static/css/tailwind.css,sha256=HmuzyNyUb6tW_VqwFTKntCiKIMVCZMhP8wtj5IOGevE,65
+sids/templates/base.html,sha256=zLmmi5Ab1wHQRe4m-IqCKdBgXA1h19QTaMQLen3toso,356
+sids-0.1.0.dist-info/licenses/LICENSE,sha256=Jq8e6j61aRdk9cFMqsm5fbXTaiubiGymHuT3gsv8mnQ,1093
+sids-0.1.0.dist-info/METADATA,sha256=Cf214Uuiu0-aOsHi786CVkfgaTeSFnYztMxpeRlrUFQ,5116
+sids-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sids-0.1.0.dist-info/entry_points.txt,sha256=v1S-BFyZv-nwDCFXHF7PBAOcgFunRVYYXG1bUuv1CCw,39
+sids-0.1.0.dist-info/top_level.txt,sha256=nbWUJ4lUKg2cuOvExzWpPws5XZhb_PSy-a5YhIgqjhI,5
+sids-0.1.0.dist-info/RECORD,,
