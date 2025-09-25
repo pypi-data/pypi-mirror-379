@@ -1,0 +1,14 @@
+magic/compat.py,sha256=LP7dhZLwGrypQEYPnbZo6J3P2GsTZpo-brf_OFX_8W4,10819
+magic/__init__.pyi,sha256=EgSVU6I2Si5l2uFCQwagFWKCbOiwE-diIv1UR8sMCI8,3050
+magic/__init__.py,sha256=1s5ejAPf9x3DNGPwyt5owQtC1P_9YeSCgWYbtzaTN4Y,16808
+magic/libmagic.dylib,sha256=whSvOTJ6tnZtxytSlTG8F4coHQ1eeYZSQWKA44_nSFc,203984
+magic/magic.mgc,sha256=k3uuA_TERpsqrPFAOMzTlXA4TvTtRsqD2c7LZSdJmZc,10355472
+magic/loader.py,sha256=-RIi3vn1SRWjrJLB7NPKcY3cv1WKDUovN9wR4-eHOmo,3196
+magic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magic/.dylibs/liblzma.5.dylib,sha256=SYX9jSXmKdcVf0JGkiqroHd7WHIf51A1JuEf5YfWyng,185536
+magic/.dylibs/libzstd.1.5.7.dylib,sha256=L9C3QsveR8P8Mubx0GSyGgMfu4TL0G3XFQ8FZNrgx3A,786992
+python_magic_standalone-0.4.28.dist-info/RECORD,,
+python_magic_standalone-0.4.28.dist-info/LICENSE,sha256=UIEFOtOtsEI9wMWByxFVpg5OKgVx1aZB0wg8tlsfS7I,2869
+python_magic_standalone-0.4.28.dist-info/WHEEL,sha256=XEA1N-H7n1w0e_I6nXPkYJabHwYGMtBktotdysrJN4A,111
+python_magic_standalone-0.4.28.dist-info/top_level.txt,sha256=MDDOZCPmPBiPXW10LHC6RzAJaGX08WaDj_oOOo7sQRc,6
+python_magic_standalone-0.4.28.dist-info/METADATA,sha256=-mir5VmGbjuwIaWahRWOqTWKX9Wq8xknB6ib6r7KxUw,8500
