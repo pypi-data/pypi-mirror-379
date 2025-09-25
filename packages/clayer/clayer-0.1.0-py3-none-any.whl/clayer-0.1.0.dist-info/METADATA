@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: clayer
+Version: 0.1.0
+Summary: Build and run custom data sources for PySpark
+Author: Daniel Tom
+Author-email: Daniel Tom <d.e.tom89@gmail.com>
+Requires-Dist: pyspark>=4
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
