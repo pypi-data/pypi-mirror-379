@@ -1,0 +1,2 @@
+[console_scripts]
+dmml-contest = dmml_contest:main
