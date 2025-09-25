@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+truthai_sdk/__init__.py
+truthai_sdk.egg-info/PKG-INFO
+truthai_sdk.egg-info/SOURCES.txt
+truthai_sdk.egg-info/dependency_links.txt
+truthai_sdk.egg-info/top_level.txt
