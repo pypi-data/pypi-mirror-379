@@ -1,0 +1,31 @@
+# Include documentation files
+include README.md
+include README_MCP.md
+include LICENSE
+
+# Include configuration files
+include *.json
+include *.toml
+include *.txt
+include *.env
+
+# Include batch files for Windows
+include *.bat
+
+# Include templates and static files
+recursive-include tashan_scispark/app/templates *
+recursive-include tashan_scispark/app/static *
+
+# Include data files
+recursive-include tashan_scispark/app/data *
+
+# Exclude unnecessary files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude __pycache__
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude *.log
+global-exclude runs/
+global-exclude temp/
