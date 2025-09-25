@@ -1,0 +1,3 @@
+[console_scripts]
+cellpick=cellpick.__main__:main
+
