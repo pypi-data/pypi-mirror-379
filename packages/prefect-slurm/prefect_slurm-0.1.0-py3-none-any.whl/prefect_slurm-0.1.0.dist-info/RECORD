@@ -1,0 +1,10 @@
+prefect_slurm/__init__.py,sha256=MuodgzcKSOnDZgcfj77m9J9-ul0z9RWdA8KAGp--cug,694
+prefect_slurm/cli.py,sha256=iBnphK7bkd19DIHCHdUAHZJV5hc08j7hRvEUzSujp7w,2748
+prefect_slurm/config.py,sha256=2ZuOBcau3jbsDzfIGGtcVcspaKep0lhZPIwxAMBwZrA,6007
+prefect_slurm/settings.py,sha256=8wvzc5kAoinvGxi1jauCLg4BhBKk8V_uoXbDFUlR99s,6368
+prefect_slurm/worker.py,sha256=QNxr7-nGHb_Ef600m9f33XCamToydY75NXfSV0-gVKM,16172
+prefect_slurm-0.1.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+prefect_slurm-0.1.0.dist-info/METADATA,sha256=rM5hdqGMhVqJkcq8d74VIjDz58VDLqzKdANy_k-m8uo,9380
+prefect_slurm-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+prefect_slurm-0.1.0.dist-info/entry_points.txt,sha256=uQL6ECevKyoIGhee9oj_hwbbDr41huCjpDUxEW9de6Y,113
+prefect_slurm-0.1.0.dist-info/RECORD,,
