@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: exiv
+Version: 0.0.1
+Summary: A fast generative ai inference engine
+Author-email: Piyush Kumar <piyush.kumar.iaf@gmail.com>
+License: MIT
+Keywords: diffusion,DiT,AIGC,AI engine
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# exiv
+[WIP]
+This is in active development and will be pusblished soon.
+
+## Install
+```bash
+pip install exiv
+```

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+exiv/__init__.py
+exiv/core.py
+exiv.egg-info/PKG-INFO
+exiv.egg-info/SOURCES.txt
+exiv.egg-info/dependency_links.txt
+exiv.egg-info/top_level.txt
