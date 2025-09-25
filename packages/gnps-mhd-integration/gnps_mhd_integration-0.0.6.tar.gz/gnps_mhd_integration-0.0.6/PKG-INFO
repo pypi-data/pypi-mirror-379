@@ -1,0 +1,229 @@
+Metadata-Version: 2.4
+Name: gnps-mhd-integration
+Version: 0.0.6
+Summary: GNPS = Metabolomics Hub Integration
+Author-email: GNPS Team <gnps-help@gnps.orf>
+License-Expression: Apache-2.0
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asyncpg>=0.30.0
+Requires-Dist: mhd-model>=0.1.22
+Requires-Dist: pydantic>=2.11.7
+Requires-Dist: pydantic-settings>=2.10.1
+Requires-Dist: xmltodict>=0.15.1
+Dynamic: license-file
+
+# MetaboLights - MHD Model Integration Framework
+
+
+
+## Development Environment
+
+
+Development environment for linux or mac
+```bash
+
+# install python package manager uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# add $HOME/.local/bin to your PATH, either restart your shell or run
+export PATH=$HOME/.local/bin:$PATH
+
+# install git from https://git-scm.com/downloads
+# Linux command
+apt update; apt install git -y
+
+# Mac command
+# brew install git
+
+# clone project from github
+git clone https://github.com/MetabolomicsHub/gnps-mhd-integration.git
+
+cd gnps-mhd-integration
+
+# install python if it is not installed
+uv python install 3.12
+
+# install python dependencies
+uv sync
+
+# install pre-commit to check repository integrity and format checking
+uv run pre-commit
+
+# open your IDE (vscode, pycharm, etc.) and set python interpreter as .venv/bin/python
+
+```
+
+## Commandline Usage
+
+
+```bash
+# you can use any python version >= 3.12
+pip install gnps-mhd-integration
+
+gnps-mhd-cli
+####################################################################
+# Usage: gnps-mhd-cli [OPTIONS] COMMAND [ARGS]...
+
+#   GNPS/MassIVE - MHD Integration CLI with subcommands.
+
+# Options:
+#   --version   Show the version and exit.
+#   -h, --help  Show this message and exit.
+
+# Commands:
+#   announcement  Create announcement file from MHD data model file.
+#   download      Download a GNPS/MassIVE study as json file.
+#   mhd           Convert a GNPS/MassIVE study to MHD file format.
+#   validate      Validate MHD model and annoucenment file.
+####################################################################
+
+gnps-mhd-cli download
+
+####################################################################
+# Usage: gnps-mhd-cli download [OPTIONS] STUDY_ID
+
+#   Download a GNPS/MassIVE study as json file.
+
+# Options:
+#   --output-dir TEXT       Output directory for MHD file  [default: outputs]
+#   --output-filename TEXT  MHD filename (e.g., MHD000001_mhd.json,
+#                           ST000001_mhd.json)
+#   -h, --help              Show this message and exit.
+####################################################################
+
+gnps-mhd-cli download MSV000099062
+# MSV000099062 is downloaded
+
+ls outputs
+# MSV000099062.json
+
+gnps-mhd-cli create mhd
+####################################################################
+# Usage: gnps-mhd-cli create mhd [OPTIONS] MASSIVE_STUDY_ID MHD_IDENTIFIER
+
+#   Convert a GNPS/MassIVE study to MHD file format.
+
+#   Args:
+
+#       massive_study_id (str): GNPS/MassIVE study accession id. e.g, ST0000001.
+
+#       mhd_identifier (str): MHD accession number.      Use same value of
+#       massive_study_id if study profile is legacy. e.g., ST0000001.
+
+# Options:
+#   --output-dir TEXT       Output directory for MHD file  [default: outputs]
+#   --output-filename TEXT  MHD filename (e.g., MHD000001_mhd.json,
+#                           ST000001_mhd.json)
+#   --schema_uri TEXT       Target MHD model schema. It defines format of MHD
+#                           model structure.  [default:
+#                           https://metabolomicshub.github.io/mhd-
+#                           model/schemas/v0_1/common-data-
+#                           model-v0.1.schema.json]
+#   --profile_uri TEXT      Target MHD model profile. It is used to validate MHD
+#                           model  [default:
+#                           https://metabolomicshub.github.io/mhd-
+#                           model/schemas/v0_1/common-data-model-v0.1.legacy-
+#                           profile.json]
+#   -h, --help              Show this message and exit.
+####################################################################
+
+gnps-mhd-cli create mhd MSV000099062 MSV000099062
+ls outputs
+# MSV000099062.json  MSV000099062.mhd.json
+
+gnps-mhd-cli validate
+####################################################################
+# Usage: gnps-mhd-cli validate [OPTIONS] COMMAND [ARGS]...
+
+#   Validate MHD model and annoucenment file.
+
+# Options:
+#   -h, --help  Show this message and exit.
+
+# Commands:
+#   announcement  Validate MHD announcement file.
+#   mhd           Validate MHD model file.
+####################################################################
+
+gnps-mhd-cli validate mhd MSV000099062 outputs/MSV000099062.mhd.json
+####################################################################
+# MSV000099062: outputs/MSV000099062.mhd.json MHD file validation started.
+# Used schema: https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json
+# Validation profile: https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json
+# MSV000099062: File 'outputs/MSV000099062.mhd.json' is validated successfully.
+####################################################################
+gnps-mhd-cli create announcement
+
+####################################################################
+# Usage: gnps-mhd-cli create announcement [OPTIONS] MHD_STUDY_ID MHD_MODEL_FILE_PATH
+#                                TARGET_MHD_MODEL_FILE_URL
+
+#   Create announcement file from MHD data model file.
+
+#   Args:
+
+#   mhd_study_id (str): MHD study identifier
+
+#   mhd_model_file_path (str): MHD data model path
+
+#   target_mhd_model_file_url (str): target URL of MHD data model
+
+#   output_dir (str): Output directory of announcement file
+
+#   output_filename (str): Name of MHD announcement file. Default is <repository
+#   identifier>.announcement.json
+
+# Options:
+#   --output-dir TEXT       Output directory for MHD file  [default: outputs]
+#   --output-filename TEXT  MHD announcement filename (e.g.,
+#                           MHD000001.announcement.json,
+#                           ST000001.announcement.json)
+#   -h, --help              Show this message and exit.
+####################################################################
+
+
+# MHD identifier will be reserved for each private study
+# The following command assumes that MHD0123456789 is reserved for MSV000099062
+gnps-mhd-cli create announcement MHD0123456789  outputs/MSV000099062.mhd.json --target_mhd_model_file_url=https://www.metabolomicsworkbench.org/data/study_textformat_list.php?MHD_ID=MHD0123456789
+
+####################################################################
+# MHD0123456789 announcement file conversion completed.
+# MHD identifier will be reserved for each private study
+####################################################################
+
+ls outputs
+####################################################################
+# MHD0123456789.announcement.json  MSV000099062.json  MSV000099062.mhd.json
+####################################################################
+
+gnps-mhd-cli validate announcement
+
+####################################################################
+# Usage: gnps-mhd-cli validate announcement [OPTIONS] MHD_STUDY_ID
+#                                         ANNOUNCEMENT_FILE_PATH
+
+#   Validate MHD announcement file.
+
+#   Args:
+
+#   mhd_study_id (str): MHD study id
+
+#   announcement_file_path (str): MHD announcement file path
+
+#   output_path (None | str): If it is defined, validation results are saved in
+#   output file path.
+
+# Options:
+#   --output-path TEXT  Validation output file path
+#   -h, --help          Show this message and exit.
+####################################################################
+
+gnps-mhd-cli validate announcement MHD0123456789 outputs/MHD0123456789.announcement.json
+
+####################################################################
+# MHD0123456789: File 'outputs/MHD0123456789.announcement.json' is validated successfully.
+####################################################################
+
+```
