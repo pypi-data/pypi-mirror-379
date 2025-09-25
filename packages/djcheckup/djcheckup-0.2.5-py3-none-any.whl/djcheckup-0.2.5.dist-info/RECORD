@@ -1,0 +1,10 @@
+djcheckup/__init__.py,sha256=4U13qxxwsoUp9J3k4Ssr-g4H1XCHCG3mCQCWM5Rmkpk,94
+djcheckup/check_defs.py,sha256=zBxztWizHqYZuzN1-zO-ihkRpXd-kv3lhjYSDwUdOEA,12266
+djcheckup/checks.py,sha256=4enrGycpB_J1v2PNAjGuZWZZZ3hjr0HvMRL_3rEEIVs,12316
+djcheckup/cli.py,sha256=o6MvwF-ikPPDQfqnGh6KiqNmYhizh362NB3hkwpIkH0,754
+djcheckup/outputs.py,sha256=FAq2PqKydWspuWGjxKp1pz-T9PmzNnZHosNLbWIOFLw,1773
+djcheckup/run.py,sha256=N1rAt2bnBvCboqtzkNz8e4jQcNT3V0hx5wPhv7Sw3-k,1420
+djcheckup-0.2.5.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+djcheckup-0.2.5.dist-info/entry_points.txt,sha256=XNa86iVCW65pESRptlQByL9n-bEHCaCSo9PsivAFyvM,49
+djcheckup-0.2.5.dist-info/METADATA,sha256=2bgFHg4UXqp2VA5N_e-d_kWqypuxtrCheEkXhx0v1k0,16448
+djcheckup-0.2.5.dist-info/RECORD,,
