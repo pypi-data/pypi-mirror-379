@@ -1,0 +1,13 @@
+parquetframe/__init__.py,sha256=CfPRI3TYlJUshQDpaJV43mRqSXnCt5_wol7OzKFrGL0,2375
+parquetframe/benchmark.py,sha256=tsxrf-i0a2mgd5HhjF1ByAaigP2UE-vjG4ywPgHpjYw,21615
+parquetframe/bio.py,sha256=UmYcFSb1rENkGlyg_I_UnNfomBYTNqojerICk0h_azM,12725
+parquetframe/cli.py,sha256=a_3M6VcH1ERcJJ5z9CJKzFQiJz4QYEqPb2b1-ghkekE,35157
+parquetframe/core.py,sha256=vQSd0NhdPflm8vCUkiAJI75PiLTAV_fzWUgkMC1rFAg,20404
+parquetframe/exceptions.py,sha256=5n_83GY114LS1F3jPObzg6Q7tLIQHgwW0jv6tjnaOcE,490
+parquetframe/sql.py,sha256=2XCeAD5m_owq7yJeSK4kIVIDi_o4LXdYq18-PwK-jEA,5330
+parquetframe/workflows.py,sha256=mbosO_XqtGfcEE9phJLOSRVPpqGjoGFO5XWCsJ-M-GA,19059
+parquetframe-0.2.1.dist-info/METADATA,sha256=IBEL5e7Y3DRY6Hhvm6aMB8NW_S-ZT0pmtku6wkQ58PE,13400
+parquetframe-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+parquetframe-0.2.1.dist-info/entry_points.txt,sha256=MXPNhaLjEmaeTyRjx_54U8ph1jKFqSHe-G2CaTeuYtg,55
+parquetframe-0.2.1.dist-info/licenses/LICENSE,sha256=T86QmqtsxF-8jJMVk-y24w8JtqkL3idtsTF2UFzBXNk,1069
+parquetframe-0.2.1.dist-info/RECORD,,
