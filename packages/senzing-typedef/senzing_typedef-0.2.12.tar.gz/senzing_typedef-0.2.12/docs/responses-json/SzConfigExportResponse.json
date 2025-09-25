@@ -1,0 +1,337 @@
+{
+    "G2_CONFIG": {
+        "CFG_ATTR": [
+            {
+                "ADVANCED": "string",
+                "ATTR_CLASS": "string",
+                "ATTR_CODE": "string",
+                "ATTR_ID": "int32",
+                "DEFAULT_VALUE": "string",
+                "FELEM_CODE": "string",
+                "FELEM_REQ": "string",
+                "FTYPE_CODE": "string",
+                "INTERNAL": "string"
+            }
+        ],
+        "CFG_CFBOM": [
+            {
+                "CFCALL_ID": "int32",
+                "EXEC_ORDER": "int32",
+                "FELEM_ID": "int32",
+                "FTYPE_ID": "int32"
+            }
+        ],
+        "CFG_CFCALL": [
+            {
+                "CFCALL_ID": "int32",
+                "CFUNC_ID": "int32",
+                "EXEC_ORDER": "int32",
+                "FTYPE_ID": "int32"
+            }
+        ],
+        "CFG_CFRTN": [
+            {
+                "CFRTN_ID": "int32",
+                "CFUNC_ID": "int32",
+                "CFUNC_RTNVAL": "string",
+                "CLOSE_SCORE": "int32",
+                "EXEC_ORDER": "int32",
+                "FTYPE_ID": "int32",
+                "LIKELY_SCORE": "int32",
+                "PLAUSIBLE_SCORE": "int32",
+                "SAME_SCORE": "int32",
+                "UN_LIKELY_SCORE": "int32"
+            }
+        ],
+        "CFG_CFUNC": [
+            {
+                "ANON_SUPPORT": "string",
+                "CFUNC_CODE": "string",
+                "CFUNC_DESC": "string",
+                "CFUNC_ID": "int32",
+                "CONNECT_STR": "string",
+                "FUNC_LIB": "string",
+                "FUNC_VER": "string",
+                "JAVA_CLASS_NAME": "string",
+                "LANGUAGE": "string"
+            }
+        ],
+        "CFG_DFBOM": [
+            {
+                "DFCALL_ID": "int32",
+                "EXEC_ORDER": "int32",
+                "FELEM_ID": "int32",
+                "FTYPE_ID": "int32"
+            }
+        ],
+        "CFG_DFCALL": [
+            {
+                "DFCALL_ID": "int32",
+                "DFUNC_ID": "int32",
+                "EXEC_ORDER": "int32",
+                "FTYPE_ID": "int32"
+            }
+        ],
+        "CFG_DFUNC": [
+            {
+                "ANON_SUPPORT": "string",
+                "CONNECT_STR": "string",
+                "DFUNC_CODE": "string",
+                "DFUNC_DESC": "string",
+                "DFUNC_ID": "int32",
+                "FUNC_LIB": "string",
+                "FUNC_VER": "string",
+                "JAVA_CLASS_NAME": "string",
+                "LANGUAGE": "string"
+            }
+        ],
+        "CFG_DSRC": [
+            {
+                "CONVERSATIONAL": "string",
+                "DSRC_CODE": "string",
+                "DSRC_DESC": "string",
+                "DSRC_ID": "int32",
+                "DSRC_RELY": "int32",
+                "RETENTION_LEVEL": "string"
+            }
+        ],
+        "CFG_DSRC_INTEREST": [
+            {
+                "DSRC_ID": "int32",
+                "INTEREST_FLAG": "string",
+                "MAX_DEGREE": "int32"
+            }
+        ],
+        "CFG_EBOM": [
+            {
+                "ETYPE_ID": "int32",
+                "EXEC_ORDER": "int32",
+                "FTYPE_ID": "int32",
+                "UTYPE_CODE": "string"
+            }
+        ],
+        "CFG_ECLASS": [
+            {
+                "ECLASS_CODE": "string",
+                "ECLASS_DESC": "string",
+                "ECLASS_ID": "int32",
+                "RESOLVE": "string"
+            }
+        ],
+        "CFG_EFBOM": [
+            {
+                "EFCALL_ID": "int32",
+                "EXEC_ORDER": "int32",
+                "FELEM_ID": "int32",
+                "FELEM_REQ": "string",
+                "FTYPE_ID": "int32"
+            }
+        ],
+        "CFG_EFCALL": [
+            {
+                "EFCALL_ID": "int32",
+                "EFEAT_FTYPE_ID": "int32",
+                "EFUNC_ID": "int32",
+                "EXEC_ORDER": "int32",
+                "FELEM_ID": "int32",
+                "FTYPE_ID": "int32",
+                "IS_VIRTUAL": "string"
+            }
+        ],
+        "CFG_EFUNC": [
+            {
+                "CONNECT_STR": "string",
+                "EFUNC_CODE": "string",
+                "EFUNC_DESC": "string",
+                "EFUNC_ID": "int32",
+                "FUNC_LIB": "string",
+                "FUNC_VER": "string",
+                "JAVA_CLASS_NAME": "string",
+                "LANGUAGE": "string"
+            }
+        ],
+        "CFG_ERFRAG": [
+            {
+                "ERFRAG_CODE": "string",
+                "ERFRAG_DEPENDS": "string",
+                "ERFRAG_DESC": "string",
+                "ERFRAG_ID": "int32",
+                "ERFRAG_SOURCE": "string"
+            }
+        ],
+        "CFG_ERRULE": [
+            {
+                "DISQ_ERFRAG_CODE": "string",
+                "ERRULE_CODE": "string",
+                "ERRULE_DESC": "string",
+                "ERRULE_ID": "int32",
+                "ERRULE_TIER": "int32",
+                "QUAL_ERFRAG_CODE": "string",
+                "REF_SCORE": "int32",
+                "RELATE": "string",
+                "RESOLVE": "string",
+                "RTYPE_ID": "int32"
+            }
+        ],
+        "CFG_ETYPE": [
+            {
+                "ECLASS_ID": "int32",
+                "ETYPE_CODE": "string",
+                "ETYPE_DESC": "string",
+                "ETYPE_ID": "int32"
+            }
+        ],
+        "CFG_FBOM": [
+            {
+                "DERIVED": "string",
+                "DISPLAY_DELIM": "string",
+                "DISPLAY_LEVEL": "int32",
+                "EXEC_ORDER": "int32",
+                "FELEM_ID": "int32",
+                "FTYPE_ID": "int32"
+            }
+        ],
+        "CFG_FBOVR": [
+            {
+                "ECLASS_ID": "int32",
+                "FTYPE_EXCL": "string",
+                "FTYPE_FREQ": "string",
+                "FTYPE_ID": "int32",
+                "FTYPE_STAB": "string",
+                "UTYPE_CODE": "string"
+            }
+        ],
+        "CFG_FCLASS": [
+            {
+                "FCLASS_CODE": "string",
+                "FCLASS_DESC": "string",
+                "FCLASS_ID": "int32"
+            }
+        ],
+        "CFG_FELEM": [
+            {
+                "DATA_TYPE": "string",
+                "FELEM_CODE": "string",
+                "FELEM_DESC": "string",
+                "FELEM_ID": "int32",
+                "TOKENIZE": "string"
+            }
+        ],
+        "CFG_FTYPE": [
+            {
+                "ANONYMIZE": "string",
+                "DERIVATION": "string",
+                "DERIVED": "string",
+                "FCLASS_ID": "int32",
+                "FTYPE_CODE": "string",
+                "FTYPE_DESC": "string",
+                "FTYPE_EXCL": "string",
+                "FTYPE_FREQ": "string",
+                "FTYPE_ID": "int32",
+                "FTYPE_STAB": "string",
+                "PERSIST_HISTORY": "string",
+                "RTYPE_ID": "int32",
+                "SHOW_IN_MATCH_KEY": "string",
+                "USED_FOR_CAND": "string",
+                "VERSION": "int32"
+            }
+        ],
+        "CFG_GENERIC_THRESHOLD": [
+            {
+                "BEHAVIOR": "string",
+                "CANDIDATE_CAP": "int32",
+                "FTYPE_ID": "int32",
+                "GPLAN_ID": "int32",
+                "SCORING_CAP": "int32",
+                "SEND_TO_REDO": "string"
+            }
+        ],
+        "CFG_GPLAN": [
+            {
+                "GPLAN_CODE": "string",
+                "GPLAN_DESC": "string",
+                "GPLAN_ID": "int32"
+            }
+        ],
+        "CFG_LENS": [
+            {
+                "LENS_CODE": "string",
+                "LENS_DESC": "string",
+                "LENS_ID": "int32"
+            }
+        ],
+        "CFG_LENSRL": [
+            [
+                {
+                    "FIXME_KEY": "string"
+                }
+            ]
+        ],
+        "CFG_RCLASS": [
+            {
+                "IS_DISCLOSED": "string",
+                "RCLASS_CODE": "string",
+                "RCLASS_DESC": "string",
+                "RCLASS_ID": "int32"
+            }
+        ],
+        "CFG_RTYPE": [
+            {
+                "BREAK_RES": "string",
+                "RCLASS_ID": "int32",
+                "REL_STRENGTH": "int32",
+                "RTYPE_CODE": "string",
+                "RTYPE_DESC": "string",
+                "RTYPE_ID": "int32"
+            }
+        ],
+        "CFG_SFCALL": [
+            {
+                "EXEC_ORDER": "int32",
+                "FELEM_ID": "int32",
+                "FTYPE_ID": "int32",
+                "SFCALL_ID": "int32",
+                "SFUNC_ID": "int32"
+            }
+        ],
+        "CFG_SFUNC": [
+            {
+                "CONNECT_STR": "string",
+                "FUNC_LIB": "string",
+                "FUNC_VER": "string",
+                "JAVA_CLASS_NAME": "string",
+                "LANGUAGE": "string",
+                "SFUNC_CODE": "string",
+                "SFUNC_DESC": "string",
+                "SFUNC_ID": "int32"
+            }
+        ],
+        "CONFIG_BASE_VERSION": {
+            "BUILD_DATE": "string",
+            "BUILD_NUMBER": "string",
+            "BUILD_VERSION": "string",
+            "COMPATIBILITY_VERSION": {
+                "CONFIG_VERSION": "string"
+            },
+            "PRODUCT_NAME": "string",
+            "VERSION": "string"
+        },
+        "SETTINGS": {
+            "METAPHONE_VERSION": "int32"
+        },
+        "SYS_OOM": [
+            {
+                "FELEM_ID": "int32",
+                "FTYPE_ID": "int32",
+                "LENS_ID": "int32",
+                "LIB_FEAT_ID": "int32",
+                "LIB_FELEM_ID": "int32",
+                "NEXT_THRESH": "int32",
+                "OOM_LEVEL": "string",
+                "OOM_TYPE": "string",
+                "THRESH1_CNT": "int32",
+                "THRESH1_OOM": "int32"
+            }
+        ]
+    }
+}
