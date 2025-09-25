@@ -1,0 +1,14 @@
+{
+    "custom_mapping_starts_with": {
+        "glfw.": {
+            "mapping_function": "glfw_call.py",
+            "angle_includes": [
+                "GLFW/glfw3.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_glfw",
+                "name": "glfw"
+            }
+        }
+    }
+}
