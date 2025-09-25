@@ -1,0 +1,14 @@
+cogames/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cogames/game.py,sha256=oQBS2rTRuEt9MVsIsDAMFQnCaQoMotJ9D82W9LsnPic,9428
+cogames/main.py,sha256=EXTbAOvJptDdTBy-qVTiPGCnZSRPc7eoMlRTaH55fsU,8638
+cogames/play.py,sha256=2cNs86VgD9v614rm28K0XDgGJ_q5rxq5Z7PRiJ8Qg3M,2023
+cogames/policy.py,sha256=QXahEobFjWc5W0rkmsx5nzxE1G4dsnk6n5L-St0ApeA,843
+cogames/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cogames/train.py,sha256=VX4SFN8ZFL4Ae2PZntrbwZ2Da2kaweg661-Gn8wuQxU,2774
+cogames/utils.py,sha256=zuTNHmXWfOGrtWGroT6mmBkqk3E9WgDEtcy90DTtn5k,1380
+cogames/cogs_vs_clips/scenarios.py,sha256=hDI2yiW46sjAecXiWE35Lyl9kNun-SG-9j71t8l8XAE,4193
+cogames-0.3.2.dist-info/METADATA,sha256=yDoUk8mojwzSjBvMD-U_X714OC9XLzdmiI5Xxg00OZA,8970
+cogames-0.3.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cogames-0.3.2.dist-info/entry_points.txt,sha256=GTHdgj-RC2hQYmjUMSp9RHX8kbru19k0LS2lAj8DnLE,45
+cogames-0.3.2.dist-info/top_level.txt,sha256=Wzwo0qj8ePPKwqQ0dPbpH2W5ZK40npYCzoTQ-nefqtM,8
+cogames-0.3.2.dist-info/RECORD,,
