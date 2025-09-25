@@ -1,0 +1,4 @@
+[console_scripts]
+nameserver = posttroll.ns:main
+posttroll-generate-keys = posttroll.backends.zmq:generate_keys
+pytroll-logger = posttroll.logger:run
