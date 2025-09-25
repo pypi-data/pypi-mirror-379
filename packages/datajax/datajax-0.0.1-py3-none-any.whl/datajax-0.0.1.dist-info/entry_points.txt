@@ -1,0 +1,3 @@
+[console_scripts]
+datajax-export-wavespec = datajax.cli.export_wavespec:main
+datajax-replay-tuner = datajax.cli.replay_tuner:main
