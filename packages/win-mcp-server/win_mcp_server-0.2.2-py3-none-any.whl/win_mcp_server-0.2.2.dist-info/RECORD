@@ -1,0 +1,9 @@
+win_mcp_server/__init__.py,sha256=IIS5Uq6xxZGi3OqZfP7bO1jRQEg118hI8qEqdHWSJsE,136
+win_mcp_server/credentials.py,sha256=rKn-pd5XRrYddHsjZrmLjju5fCAIzi5ypWbjTgcDb7I,9291
+win_mcp_server/server.py,sha256=yyGUMrDT7wa2a7Gnuh6MJPrTWNPAfPP_Psg7jPo7wtk,9472
+win_mcp_server-0.2.2.dist-info/LICENSE,sha256=VNITDcXGE25_u67roY97CZdat5xGxN4bD2qSSn_ke2g,1069
+win_mcp_server-0.2.2.dist-info/METADATA,sha256=tfeYFfVydn1QdQ245ik9pyTTC3wrmhcrX77sBu-GZCQ,6073
+win_mcp_server-0.2.2.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+win_mcp_server-0.2.2.dist-info/entry_points.txt,sha256=xF6mSoTOAZDAXIKWX1vOqPfxkE4B3f_4S7xeEzeKyrw,55
+win_mcp_server-0.2.2.dist-info/top_level.txt,sha256=82SBuj9_L6ycm9PyQWOmfDxsTYkhB4RpIh0xY_5hy3g,15
+win_mcp_server-0.2.2.dist-info/RECORD,,
