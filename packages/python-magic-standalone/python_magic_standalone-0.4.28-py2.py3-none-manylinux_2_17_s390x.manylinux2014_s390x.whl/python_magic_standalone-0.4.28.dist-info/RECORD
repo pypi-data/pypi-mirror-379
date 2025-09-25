@@ -1,0 +1,12 @@
+magic/magic.mgc,sha256=I-65nbqyNDjEKORzekK8wBCU22j99rae5YMiN9juLVg,10355472
+magic/compat.py,sha256=LP7dhZLwGrypQEYPnbZo6J3P2GsTZpo-brf_OFX_8W4,10819
+magic/__init__.py,sha256=1s5ejAPf9x3DNGPwyt5owQtC1P_9YeSCgWYbtzaTN4Y,16808
+magic/libmagic.so.1,sha256=wCLK4iO4dKrz4c0CZPtCxAwKbjNpQF3dqGs5njNuGWU,910928
+magic/__init__.pyi,sha256=EgSVU6I2Si5l2uFCQwagFWKCbOiwE-diIv1UR8sMCI8,3050
+magic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magic/loader.py,sha256=-RIi3vn1SRWjrJLB7NPKcY3cv1WKDUovN9wR4-eHOmo,3196
+python_magic_standalone-0.4.28.dist-info/METADATA,sha256=-mir5VmGbjuwIaWahRWOqTWKX9Wq8xknB6ib6r7KxUw,8500
+python_magic_standalone-0.4.28.dist-info/LICENSE,sha256=UIEFOtOtsEI9wMWByxFVpg5OKgVx1aZB0wg8tlsfS7I,2869
+python_magic_standalone-0.4.28.dist-info/top_level.txt,sha256=MDDOZCPmPBiPXW10LHC6RzAJaGX08WaDj_oOOo7sQRc,6
+python_magic_standalone-0.4.28.dist-info/WHEEL,sha256=Uh1IA6oJGvQeZWYx2R0jNBCfjL7OOAn5RWmpn0JjzP4,150
+python_magic_standalone-0.4.28.dist-info/RECORD,,
