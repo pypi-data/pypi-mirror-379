@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: weldkit
+Version: 0.1.1
+Summary: Nextgen repository Python welder
+Author: blobycz
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
