@@ -1,0 +1,14 @@
+craft_detector/__init__.py,sha256=J2JWGXZLeBYPRXIqHh95jDBmN_NDjkHxJWWAE1wUQJg,44
+craft_detector/craft.py,sha256=G0FAiO0cM8sa5OVH-F6sjJ_-RfBUzRrAz2Lf3QziqpQ,2663
+craft_detector/craft_utils.py,sha256=QCHfzkswREdxesS4f3lMJBb4VCy514e8oKx9fFTSpd4,11715
+craft_detector/file_utils.py,sha256=3aCrxQSzVqN-fYb6-ortBfLtS00mbvncAP9JVpppT5w,2877
+craft_detector/imgproc.py,sha256=OaldhhfXncwVvaYon5x3Una9JNLiUGG63fe0DS-8pII,1903
+craft_detector/refinenet.py,sha256=KvM_hBcKCPMOiLAQSWOzhh7EmfzJWZkOisQQZk5heOk,2553
+craft_detector/basenet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+craft_detector/basenet/vgg16_bn.py,sha256=UQAn2f9AZtZ4R2lGeUnE8hsXhvniixwe-UwqSik_SOU,2857
+craft_detector/utils/logging.py,sha256=7-ZDv1hJQDlIUaAT2-Cl8F2PsX-f363MUs4AQ-V_ttg,622
+craft_detector/utils/utils.py,sha256=GUwVXFeQH-7ZYAwDDRyhPMd2hMIGqNc0LCuOnQv7UDA,10015
+craft_detector-0.2.1.dist-info/METADATA,sha256=PzoH_Tz78SixipkRMAHP6dHvYrCHg0HKZa_MT8SRFSE,5445
+craft_detector-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+craft_detector-0.2.1.dist-info/licenses/LICENSE,sha256=v-zJfkiIiWt6zwhTQ3K68leWuYwIe6WkJLRu4lreyHE,1064
+craft_detector-0.2.1.dist-info/RECORD,,
