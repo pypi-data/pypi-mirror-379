@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcpstore-wiki": {
+      "url": "https://mcpstore.wiki/mcp"
+    },
+    "mcpstore-wiki_byagent_2": {
+      "url": "https://mcpstore.wiki/mcp"
+    }
+  }
+}
