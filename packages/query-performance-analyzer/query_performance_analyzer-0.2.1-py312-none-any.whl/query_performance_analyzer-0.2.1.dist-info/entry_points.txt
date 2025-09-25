@@ -1,0 +1,2 @@
+[console_scripts]
+lakeperf = perf.cli:main
