@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: RebalancedCV
+Version: 0.1.0
+Home-page: https://github.com/korem-lab/RebalancedCV
+Author: George Austin
+Author-email: gia2105@columbia.edu
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
