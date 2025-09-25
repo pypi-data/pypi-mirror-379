@@ -1,0 +1,2 @@
+pyredis_manager
+tests
