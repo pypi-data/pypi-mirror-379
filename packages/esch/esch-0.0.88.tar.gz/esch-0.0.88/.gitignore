@@ -1,0 +1,15 @@
+target/
+**/*.pdf
+**/*.pkl
+.venv/
+data/
+#**/*.html
+**/*.svg
+**/__pycache__
+**/node_modules/
+**/*.bib
+dist/
+**/dist/
+**/build/
+.DS_Store
+main.typ
