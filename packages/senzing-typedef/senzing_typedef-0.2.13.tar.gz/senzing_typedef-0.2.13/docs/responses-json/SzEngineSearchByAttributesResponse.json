@@ -1,0 +1,665 @@
+{
+    "RESOLVED_ENTITIES": [
+        {
+            "ENTITY": {
+                "RELATED_ENTITIES": [
+                    {
+                        "ENTITY_ID": "int32",
+                        "ENTITY_NAME": "string",
+                        "ERRULE_CODE": "string",
+                        "IS_AMBIGUOUS": "int32",
+                        "IS_DISCLOSED": "int32",
+                        "LAST_SEEN_DT": "timestamp",
+                        "MATCH_KEY": "string",
+                        "MATCH_LEVEL": "int32",
+                        "MATCH_LEVEL_CODE": "string",
+                        "RECORDS": [
+                            {
+                                "ADDRESS_DATA": [
+                                    "string"
+                                ],
+                                "ATTRIBUTE_DATA": [
+                                    "string"
+                                ],
+                                "DATA_SOURCE": "string",
+                                "ENTITY_DATA": [
+                                    "string"
+                                ],
+                                "ENTITY_DESC": "string",
+                                "ENTITY_KEY": "string",
+                                "ENTITY_TYPE": "string",
+                                "ERRULE_CODE": "string",
+                                "FEATURES": {
+                                    "user_defined_json_key": [
+                                        {
+                                            "ATTRIBUTES": {
+                                                "ACCOUNT_DOMAIN": "string",
+                                                "ACCOUNT_NUMBER": "string",
+                                                "ADDR_CITY": "string",
+                                                "ADDR_COUNTRY": "string",
+                                                "ADDR_FROM_DATE": "string",
+                                                "ADDR_FULL": "string",
+                                                "ADDR_LINE1": "string",
+                                                "ADDR_LINE2": "string",
+                                                "ADDR_LINE3": "string",
+                                                "ADDR_LINE4": "string",
+                                                "ADDR_LINE5": "string",
+                                                "ADDR_LINE6": "string",
+                                                "ADDR_POSTAL_CODE": "string",
+                                                "ADDR_STATE": "string",
+                                                "ADDR_THRU_DATE": "string",
+                                                "ADDR_TYPE": "string",
+                                                "CITIZENSHIP": "string",
+                                                "DATE_OF_BIRTH": "string",
+                                                "DATE_OF_DEATH": "string",
+                                                "DRIVERS_LICENSE_NUMBER": "string",
+                                                "DRIVERS_LICENSE_STATE": "string",
+                                                "DUNS_NUMBER": "string",
+                                                "EMAIL_ADDRESS": "string",
+                                                "EMPLOYER": "string",
+                                                "EMPLOYER_NAME": "string",
+                                                "FACEBOOK": "string",
+                                                "GENDER": "string",
+                                                "GROUP_ASSN_ID_NUMBER": "string",
+                                                "GROUP_ASSN_ID_TYPE": "string",
+                                                "GROUP_ASSOCIATION_ORG_NAME": "string",
+                                                "GROUP_ASSOCIATION_TYPE": "string",
+                                                "INSTAGRAM": "string",
+                                                "LEI_NUMBER": "string",
+                                                "LINKEDIN": "string",
+                                                "NAME_FIRST": "string",
+                                                "NAME_FULL": "string",
+                                                "NAME_LAST": "string",
+                                                "NAME_ORG": "string",
+                                                "NAME_PREFIX": "string",
+                                                "NAME_SUFFIX": "string",
+                                                "NAME_TYPE": "string",
+                                                "NATIONALITY": "string",
+                                                "NATIONAL_ID_COUNTRY": "string",
+                                                "NATIONAL_ID_NUMBER": "string",
+                                                "NATIVE_NAME_FULL": "string",
+                                                "NPI_NUMBER": "string",
+                                                "OTHER_ID_COUNTRY": "string",
+                                                "OTHER_ID_NUMBER": "string",
+                                                "OTHER_ID_TYPE": "string",
+                                                "PASSPORT_COUNTRY": "string",
+                                                "PASSPORT_NUMBER": "string",
+                                                "PHONE_FROM_DATE": "string",
+                                                "PHONE_NUMBER": "string",
+                                                "PHONE_THRU_DATE": "string",
+                                                "PHONE_TYPE": "string",
+                                                "PLACE_OF_BIRTH": "string",
+                                                "PRIMARY_NAME_FIRST": "string",
+                                                "PRIMARY_NAME_FULL": "string",
+                                                "PRIMARY_NAME_LAST": "string",
+                                                "PRIMARY_NAME_MIDDLE": "string",
+                                                "PRIMARY_NAME_ORG": "string",
+                                                "RECORD_TYPE": "string",
+                                                "REGISTRATION_COUNTRY": "string",
+                                                "REGISTRATION_DATE": "string",
+                                                "REL_ANCHOR_KEY": "string",
+                                                "REL_POINTER_KEY": "string",
+                                                "SECONDARY_NAME_ORG": "string",
+                                                "SIGNAL": "string",
+                                                "SKYPE": "string",
+                                                "SSN_NUMBER": "string",
+                                                "TANGO": "string",
+                                                "TAX_ID_COUNTRY": "string",
+                                                "TAX_ID_NUMBER": "string",
+                                                "TAX_ID_TYPE": "string",
+                                                "TELEGRAM": "string",
+                                                "TRUSTED_ID_NUMBER": "string",
+                                                "TRUSTED_ID_TYPE": "string",
+                                                "TWITTER": "string",
+                                                "VIBER": "string",
+                                                "WEBSITE_ADDRESS": "string",
+                                                "WECHAT": "string",
+                                                "WHATSAPP": "string",
+                                                "ZOOMROOM": "string"
+                                            },
+                                            "FEAT_DESC": "string",
+                                            "FEAT_DESC_VALUES": [
+                                                {
+                                                    "ATTRIBUTES": {
+                                                        "user_defined_json_key": "string"
+                                                    },
+                                                    "CANDIDATE_CAP_REACHED": "string",
+                                                    "ENTITY_COUNT": "int32",
+                                                    "FEAT_DESC": "string",
+                                                    "LIB_FEAT_ID": "int32",
+                                                    "SCORING_CAP_REACHED": "string",
+                                                    "SUPPRESSED": "string",
+                                                    "USED_FOR_CAND": "string",
+                                                    "USED_FOR_SCORING": "string"
+                                                }
+                                            ],
+                                            "LIB_FEAT_ID": "int32",
+                                            "USAGE_TYPE": "string"
+                                        }
+                                    ]
+                                },
+                                "FEATURE_IDS": [
+                                    {
+                                        "LIB_FEAT_ID": "int32",
+                                        "USAGE_TYPE": "string"
+                                    }
+                                ],
+                                "FIRST_SEEN_DT": "timestamp",
+                                "IDENTIFIER_DATA": [
+                                    "string"
+                                ],
+                                "INTERNAL_ID": "int32",
+                                "JSON_DATA": {
+                                    "user_defined_json_key": "object"
+                                },
+                                "LAST_SEEN_DT": "timestamp",
+                                "MATCH_KEY": "string",
+                                "MATCH_LEVEL": "int32",
+                                "MATCH_LEVEL_CODE": "string",
+                                "NAME_DATA": [
+                                    "string"
+                                ],
+                                "OTHER_DATA": [
+                                    "string"
+                                ],
+                                "PHONE_DATA": [
+                                    "string"
+                                ],
+                                "RECORD_ID": "string",
+                                "RELATIONSHIP_DATA": [
+                                    "string"
+                                ],
+                                "UNMAPPED_DATA": {
+                                    "user_defined_json_key": "object"
+                                }
+                            }
+                        ],
+                        "RECORD_SUMMARY": [
+                            {
+                                "DATA_SOURCE": "string",
+                                "FIRST_SEEN_DT": "timestamp",
+                                "LAST_SEEN_DT": "timestamp",
+                                "RECORD_COUNT": "int32"
+                            }
+                        ]
+                    }
+                ],
+                "RESOLVED_ENTITY": {
+                    "ENTITY_ID": "int32",
+                    "ENTITY_NAME": "string",
+                    "ERRULE_CODE": "string",
+                    "FEATURES": {
+                        "user_defined_json_key": [
+                            {
+                                "ATTRIBUTES": {
+                                    "ACCOUNT_DOMAIN": "string",
+                                    "ACCOUNT_NUMBER": "string",
+                                    "ADDR_CITY": "string",
+                                    "ADDR_COUNTRY": "string",
+                                    "ADDR_FROM_DATE": "string",
+                                    "ADDR_FULL": "string",
+                                    "ADDR_LINE1": "string",
+                                    "ADDR_LINE2": "string",
+                                    "ADDR_LINE3": "string",
+                                    "ADDR_LINE4": "string",
+                                    "ADDR_LINE5": "string",
+                                    "ADDR_LINE6": "string",
+                                    "ADDR_POSTAL_CODE": "string",
+                                    "ADDR_STATE": "string",
+                                    "ADDR_THRU_DATE": "string",
+                                    "ADDR_TYPE": "string",
+                                    "CITIZENSHIP": "string",
+                                    "DATE_OF_BIRTH": "string",
+                                    "DATE_OF_DEATH": "string",
+                                    "DRIVERS_LICENSE_NUMBER": "string",
+                                    "DRIVERS_LICENSE_STATE": "string",
+                                    "DUNS_NUMBER": "string",
+                                    "EMAIL_ADDRESS": "string",
+                                    "EMPLOYER": "string",
+                                    "EMPLOYER_NAME": "string",
+                                    "FACEBOOK": "string",
+                                    "GENDER": "string",
+                                    "GROUP_ASSN_ID_NUMBER": "string",
+                                    "GROUP_ASSN_ID_TYPE": "string",
+                                    "GROUP_ASSOCIATION_ORG_NAME": "string",
+                                    "GROUP_ASSOCIATION_TYPE": "string",
+                                    "INSTAGRAM": "string",
+                                    "LEI_NUMBER": "string",
+                                    "LINKEDIN": "string",
+                                    "NAME_FIRST": "string",
+                                    "NAME_FULL": "string",
+                                    "NAME_LAST": "string",
+                                    "NAME_ORG": "string",
+                                    "NAME_PREFIX": "string",
+                                    "NAME_SUFFIX": "string",
+                                    "NAME_TYPE": "string",
+                                    "NATIONALITY": "string",
+                                    "NATIONAL_ID_COUNTRY": "string",
+                                    "NATIONAL_ID_NUMBER": "string",
+                                    "NATIVE_NAME_FULL": "string",
+                                    "NPI_NUMBER": "string",
+                                    "OTHER_ID_COUNTRY": "string",
+                                    "OTHER_ID_NUMBER": "string",
+                                    "OTHER_ID_TYPE": "string",
+                                    "PASSPORT_COUNTRY": "string",
+                                    "PASSPORT_NUMBER": "string",
+                                    "PHONE_FROM_DATE": "string",
+                                    "PHONE_NUMBER": "string",
+                                    "PHONE_THRU_DATE": "string",
+                                    "PHONE_TYPE": "string",
+                                    "PLACE_OF_BIRTH": "string",
+                                    "PRIMARY_NAME_FIRST": "string",
+                                    "PRIMARY_NAME_FULL": "string",
+                                    "PRIMARY_NAME_LAST": "string",
+                                    "PRIMARY_NAME_MIDDLE": "string",
+                                    "PRIMARY_NAME_ORG": "string",
+                                    "RECORD_TYPE": "string",
+                                    "REGISTRATION_COUNTRY": "string",
+                                    "REGISTRATION_DATE": "string",
+                                    "REL_ANCHOR_KEY": "string",
+                                    "REL_POINTER_KEY": "string",
+                                    "SECONDARY_NAME_ORG": "string",
+                                    "SIGNAL": "string",
+                                    "SKYPE": "string",
+                                    "SSN_NUMBER": "string",
+                                    "TANGO": "string",
+                                    "TAX_ID_COUNTRY": "string",
+                                    "TAX_ID_NUMBER": "string",
+                                    "TAX_ID_TYPE": "string",
+                                    "TELEGRAM": "string",
+                                    "TRUSTED_ID_NUMBER": "string",
+                                    "TRUSTED_ID_TYPE": "string",
+                                    "TWITTER": "string",
+                                    "VIBER": "string",
+                                    "WEBSITE_ADDRESS": "string",
+                                    "WECHAT": "string",
+                                    "WHATSAPP": "string",
+                                    "ZOOMROOM": "string"
+                                },
+                                "FEAT_DESC": "string",
+                                "FEAT_DESC_VALUES": [
+                                    {
+                                        "ATTRIBUTES": {
+                                            "user_defined_json_key": "string"
+                                        },
+                                        "CANDIDATE_CAP_REACHED": "string",
+                                        "ENTITY_COUNT": "int32",
+                                        "FEAT_DESC": "string",
+                                        "LIB_FEAT_ID": "int32",
+                                        "SCORING_CAP_REACHED": "string",
+                                        "SUPPRESSED": "string",
+                                        "USED_FOR_CAND": "string",
+                                        "USED_FOR_SCORING": "string"
+                                    }
+                                ],
+                                "LIB_FEAT_ID": "int32",
+                                "USAGE_TYPE": "string"
+                            }
+                        ]
+                    },
+                    "FEATURE_IDS": [
+                        {
+                            "LIB_FEAT_ID": "int32",
+                            "USAGE_TYPE": "string"
+                        }
+                    ],
+                    "IS_AMBIGUOUS": "int32",
+                    "IS_DISCLOSED": "int32",
+                    "LAST_SEEN_DT": "timestamp",
+                    "MATCH_KEY": "string",
+                    "MATCH_LEVEL": "int32",
+                    "MATCH_LEVEL_CODE": "string",
+                    "RECORDS": [
+                        {
+                            "ADDRESS_DATA": [
+                                "string"
+                            ],
+                            "ATTRIBUTE_DATA": [
+                                "string"
+                            ],
+                            "DATA_SOURCE": "string",
+                            "ENTITY_DATA": [
+                                "string"
+                            ],
+                            "ENTITY_DESC": "string",
+                            "ENTITY_KEY": "string",
+                            "ENTITY_TYPE": "string",
+                            "ERRULE_CODE": "string",
+                            "FEATURES": {
+                                "user_defined_json_key": [
+                                    {
+                                        "ATTRIBUTES": {
+                                            "ACCOUNT_DOMAIN": "string",
+                                            "ACCOUNT_NUMBER": "string",
+                                            "ADDR_CITY": "string",
+                                            "ADDR_COUNTRY": "string",
+                                            "ADDR_FROM_DATE": "string",
+                                            "ADDR_FULL": "string",
+                                            "ADDR_LINE1": "string",
+                                            "ADDR_LINE2": "string",
+                                            "ADDR_LINE3": "string",
+                                            "ADDR_LINE4": "string",
+                                            "ADDR_LINE5": "string",
+                                            "ADDR_LINE6": "string",
+                                            "ADDR_POSTAL_CODE": "string",
+                                            "ADDR_STATE": "string",
+                                            "ADDR_THRU_DATE": "string",
+                                            "ADDR_TYPE": "string",
+                                            "CITIZENSHIP": "string",
+                                            "DATE_OF_BIRTH": "string",
+                                            "DATE_OF_DEATH": "string",
+                                            "DRIVERS_LICENSE_NUMBER": "string",
+                                            "DRIVERS_LICENSE_STATE": "string",
+                                            "DUNS_NUMBER": "string",
+                                            "EMAIL_ADDRESS": "string",
+                                            "EMPLOYER": "string",
+                                            "EMPLOYER_NAME": "string",
+                                            "FACEBOOK": "string",
+                                            "GENDER": "string",
+                                            "GROUP_ASSN_ID_NUMBER": "string",
+                                            "GROUP_ASSN_ID_TYPE": "string",
+                                            "GROUP_ASSOCIATION_ORG_NAME": "string",
+                                            "GROUP_ASSOCIATION_TYPE": "string",
+                                            "INSTAGRAM": "string",
+                                            "LEI_NUMBER": "string",
+                                            "LINKEDIN": "string",
+                                            "NAME_FIRST": "string",
+                                            "NAME_FULL": "string",
+                                            "NAME_LAST": "string",
+                                            "NAME_ORG": "string",
+                                            "NAME_PREFIX": "string",
+                                            "NAME_SUFFIX": "string",
+                                            "NAME_TYPE": "string",
+                                            "NATIONALITY": "string",
+                                            "NATIONAL_ID_COUNTRY": "string",
+                                            "NATIONAL_ID_NUMBER": "string",
+                                            "NATIVE_NAME_FULL": "string",
+                                            "NPI_NUMBER": "string",
+                                            "OTHER_ID_COUNTRY": "string",
+                                            "OTHER_ID_NUMBER": "string",
+                                            "OTHER_ID_TYPE": "string",
+                                            "PASSPORT_COUNTRY": "string",
+                                            "PASSPORT_NUMBER": "string",
+                                            "PHONE_FROM_DATE": "string",
+                                            "PHONE_NUMBER": "string",
+                                            "PHONE_THRU_DATE": "string",
+                                            "PHONE_TYPE": "string",
+                                            "PLACE_OF_BIRTH": "string",
+                                            "PRIMARY_NAME_FIRST": "string",
+                                            "PRIMARY_NAME_FULL": "string",
+                                            "PRIMARY_NAME_LAST": "string",
+                                            "PRIMARY_NAME_MIDDLE": "string",
+                                            "PRIMARY_NAME_ORG": "string",
+                                            "RECORD_TYPE": "string",
+                                            "REGISTRATION_COUNTRY": "string",
+                                            "REGISTRATION_DATE": "string",
+                                            "REL_ANCHOR_KEY": "string",
+                                            "REL_POINTER_KEY": "string",
+                                            "SECONDARY_NAME_ORG": "string",
+                                            "SIGNAL": "string",
+                                            "SKYPE": "string",
+                                            "SSN_NUMBER": "string",
+                                            "TANGO": "string",
+                                            "TAX_ID_COUNTRY": "string",
+                                            "TAX_ID_NUMBER": "string",
+                                            "TAX_ID_TYPE": "string",
+                                            "TELEGRAM": "string",
+                                            "TRUSTED_ID_NUMBER": "string",
+                                            "TRUSTED_ID_TYPE": "string",
+                                            "TWITTER": "string",
+                                            "VIBER": "string",
+                                            "WEBSITE_ADDRESS": "string",
+                                            "WECHAT": "string",
+                                            "WHATSAPP": "string",
+                                            "ZOOMROOM": "string"
+                                        },
+                                        "FEAT_DESC": "string",
+                                        "FEAT_DESC_VALUES": [
+                                            {
+                                                "ATTRIBUTES": {
+                                                    "user_defined_json_key": "string"
+                                                },
+                                                "CANDIDATE_CAP_REACHED": "string",
+                                                "ENTITY_COUNT": "int32",
+                                                "FEAT_DESC": "string",
+                                                "LIB_FEAT_ID": "int32",
+                                                "SCORING_CAP_REACHED": "string",
+                                                "SUPPRESSED": "string",
+                                                "USED_FOR_CAND": "string",
+                                                "USED_FOR_SCORING": "string"
+                                            }
+                                        ],
+                                        "LIB_FEAT_ID": "int32",
+                                        "USAGE_TYPE": "string"
+                                    }
+                                ]
+                            },
+                            "FEATURE_IDS": [
+                                {
+                                    "LIB_FEAT_ID": "int32",
+                                    "USAGE_TYPE": "string"
+                                }
+                            ],
+                            "FIRST_SEEN_DT": "timestamp",
+                            "IDENTIFIER_DATA": [
+                                "string"
+                            ],
+                            "INTERNAL_ID": "int32",
+                            "JSON_DATA": {
+                                "user_defined_json_key": "object"
+                            },
+                            "LAST_SEEN_DT": "timestamp",
+                            "MATCH_KEY": "string",
+                            "MATCH_LEVEL": "int32",
+                            "MATCH_LEVEL_CODE": "string",
+                            "NAME_DATA": [
+                                "string"
+                            ],
+                            "OTHER_DATA": [
+                                "string"
+                            ],
+                            "PHONE_DATA": [
+                                "string"
+                            ],
+                            "RECORD_ID": "string",
+                            "RELATIONSHIP_DATA": [
+                                "string"
+                            ],
+                            "UNMAPPED_DATA": {
+                                "user_defined_json_key": "object"
+                            }
+                        }
+                    ],
+                    "RECORD_SUMMARY": [
+                        {
+                            "DATA_SOURCE": "string",
+                            "FIRST_SEEN_DT": "timestamp",
+                            "LAST_SEEN_DT": "timestamp",
+                            "RECORD_COUNT": "int32"
+                        }
+                    ],
+                    "RECORD_TYPES": [
+                        "string"
+                    ]
+                }
+            },
+            "MATCH_INFO": {
+                "CANDIDATE_KEYS": {
+                    "user_defined_json_key": [
+                        {
+                            "FEAT_DESC": "string",
+                            "FEAT_ID": "int32"
+                        }
+                    ]
+                },
+                "DISCLOSED_RELATIONS": {
+                    "REL_ANCHOR": [
+                        {
+                            "DOMAIN": "string",
+                            "FEAT_DESC": "string",
+                            "FEAT_ID": "int32",
+                            "LINKED_FEAT_DESC": "string",
+                            "LINKED_FEAT_ID": "int32",
+                            "LINKED_FEAT_TYPE": "string",
+                            "LINKED_FEAT_USAGE_TYPE": "string",
+                            "REL_POINTER": [
+                                {
+                                    "DOMAIN": "string",
+                                    "FEAT_DESC": "string",
+                                    "FEAT_ID": "int32",
+                                    "FEAT_USAGE_TYPE": "string",
+                                    "LINKED_FEAT_DESC": "string",
+                                    "LINKED_FEAT_ID": "int32",
+                                    "LINKED_FEAT_TYPE": "string"
+                                }
+                            ]
+                        }
+                    ],
+                    "REL_LINK": [
+                        {
+                            "DOMAIN": "string",
+                            "FEAT_DESC": "string",
+                            "FEAT_ID": "int32",
+                            "FEAT_USAGE_TYPE": "string",
+                            "LINKED_FEAT_DESC": "string",
+                            "LINKED_FEAT_ID": "int32",
+                            "LINKED_FEAT_TYPE": "string",
+                            "LINKED_FEAT_USAGE_TYPE": "string"
+                        }
+                    ],
+                    "REL_POINTER": [
+                        {
+                            "DOMAIN": "string",
+                            "FEAT_DESC": "string",
+                            "FEAT_ID": "int32",
+                            "FEAT_USAGE_TYPE": "string",
+                            "LINKED_FEAT_DESC": "string",
+                            "LINKED_FEAT_ID": "int32",
+                            "LINKED_FEAT_TYPE": "string"
+                        }
+                    ]
+                },
+                "ERRULE_CODE": "string",
+                "FEATURE_SCORES": {
+                    "user_defined_json_key": [
+                        {
+                            "ADDITIONAL_SCORES": {
+                                "FULL_SCORE": "int32",
+                                "GENERATION_MATCH": "int32",
+                                "GNR_FN": "int32",
+                                "GNR_GN": "int32",
+                                "GNR_ON": "int32",
+                                "GNR_SN": "int32"
+                            },
+                            "CANDIDATE_FEAT_DESC": "string",
+                            "CANDIDATE_FEAT_ID": "int32",
+                            "CANDIDATE_FEAT_USAGE_TYPE": "string",
+                            "INBOUND_FEAT_DESC": "string",
+                            "INBOUND_FEAT_ID": "int32",
+                            "INBOUND_FEAT_USAGE_TYPE": "string",
+                            "SCORE": "int32",
+                            "SCORE_BEHAVIOR": "string",
+                            "SCORE_BUCKET": "string"
+                        }
+                    ]
+                },
+                "MATCH_KEY": "string",
+                "MATCH_KEY_DETAILS": {
+                    "CONFIRMATIONS": [
+                        {
+                            "ADDITIONAL_SCORES": {
+                                "FULL_SCORE": "int32",
+                                "GENERATION_MATCH": "int32",
+                                "GNR_FN": "int32",
+                                "GNR_GN": "int32",
+                                "GNR_ON": "int32",
+                                "GNR_SN": "int32"
+                            },
+                            "CANDIDATE_FEAT_DESC": "string",
+                            "CANDIDATE_FEAT_ID": "int32",
+                            "CANDIDATE_FEAT_USAGE_TYPE": "string",
+                            "FTYPE_CODE": "string",
+                            "INBOUND_FEAT_DESC": "string",
+                            "INBOUND_FEAT_ID": "int32",
+                            "INBOUND_FEAT_USAGE_TYPE": "string",
+                            "SCORE": "int32",
+                            "SCORE_BEHAVIOR": "string",
+                            "SCORE_BUCKET": "string",
+                            "SOURCE": "string",
+                            "TOKEN": "string"
+                        }
+                    ],
+                    "DENIALS": [
+                        {
+                            "ADDITIONAL_SCORES": {
+                                "FULL_SCORE": "int32",
+                                "GENERATION_MATCH": "int32",
+                                "GNR_FN": "int32",
+                                "GNR_GN": "int32",
+                                "GNR_ON": "int32",
+                                "GNR_SN": "int32"
+                            },
+                            "CANDIDATE_FEAT_DESC": "string",
+                            "CANDIDATE_FEAT_ID": "int32",
+                            "CANDIDATE_FEAT_USAGE_TYPE": "string",
+                            "FTYPE_CODE": "string",
+                            "INBOUND_FEAT_DESC": "string",
+                            "INBOUND_FEAT_ID": "int32",
+                            "INBOUND_FEAT_USAGE_TYPE": "string",
+                            "SCORE": "int32",
+                            "SCORE_BEHAVIOR": "string",
+                            "SCORE_BUCKET": "string",
+                            "SOURCE": "string",
+                            "TOKEN": "string"
+                        }
+                    ],
+                    "ERRULE_CODE": "string"
+                },
+                "MATCH_LEVEL": "int32",
+                "MATCH_LEVEL_CODE": "string",
+                "WHY_ERRULE_CODE": "string",
+                "WHY_KEY": "string"
+            }
+        }
+    ],
+    "SEARCH_REQUEST": {
+        "FEATURES": {
+            "user_defined_json_key": [
+                {
+                    "ATTRIBUTES": {
+                        "user_defined_json_key": "string"
+                    },
+                    "CANDIDATE_CAP_REACHED": "string",
+                    "ENTITY_COUNT": "int32",
+                    "FEAT_DESC": "string",
+                    "LIB_FEAT_ID": "int32",
+                    "SCORING_CAP_REACHED": "string",
+                    "SUPPRESSED": "string",
+                    "USED_FOR_CAND": "string",
+                    "USED_FOR_SCORING": "string"
+                }
+            ]
+        },
+        "JSON_DATA": "string",
+        "SEARCH_PROFILE": "string"
+    },
+    "SEARCH_STATISTICS": [
+        {
+            "CANDIDATE_KEYS": {
+                "FEATURE_TYPES": [
+                    {
+                        "FOUND": "int32",
+                        "FTYPE_CODE": "string",
+                        "GENERIC": "int32",
+                        "NOT_FOUND": "int32"
+                    }
+                ],
+                "SUMMARY": {
+                    "FOUND": "int32",
+                    "GENERIC": "int32",
+                    "NOT_FOUND": "int32"
+                }
+            }
+        }
+    ]
+}
