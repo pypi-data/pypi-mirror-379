@@ -1,0 +1,9 @@
+./.gitignore,sha256=aPDp6JtRuPYXj6OC-ZqfDB99WzRwVdVFXs4wv1JzqsA,4895
+./LICENSE,sha256=Q2ptU2E48gOsMzhYz_kqVovmJ5d1KzrblLyqD2_-fvY,1235
+./README.rst,sha256=yrF997gToMkJUIAj_eh9eG1iJiN5Eq5mmKabbomz9h0,58
+./__main__.py,sha256=MuYWZ8zdM9X7siretFH7E3u9PcrEM3fXQjsi_VZTZBA,5284
+./pyproject.toml,sha256=z9blAi3msjDSal2NNT0ryz2M4grwC1fRqMLtv3f83fY,738
+wzhmultimap-0.0.1.dist-info/METADATA,sha256=OGps8HQI2zkJ016QSuticsHSRL0zBdzkHef6KTR8u1U,343
+wzhmultimap-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wzhmultimap-0.0.1.dist-info/licenses/LICENSE,sha256=Q2ptU2E48gOsMzhYz_kqVovmJ5d1KzrblLyqD2_-fvY,1235
+wzhmultimap-0.0.1.dist-info/RECORD,,
