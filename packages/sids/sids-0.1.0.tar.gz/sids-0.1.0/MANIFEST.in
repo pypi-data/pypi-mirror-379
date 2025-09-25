@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+recursive-include sids/templates *.html
+recursive-include sids/static *.css *.js
+recursive-include sids/components *.py
+recursive-include sids/adapters *.py
