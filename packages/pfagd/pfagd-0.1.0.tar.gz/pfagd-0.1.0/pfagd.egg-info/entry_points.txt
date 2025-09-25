@@ -1,0 +1,2 @@
+[console_scripts]
+pfagd = pfagd.cli.main:main

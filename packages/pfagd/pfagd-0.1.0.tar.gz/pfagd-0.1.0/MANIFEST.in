@@ -1,0 +1,62 @@
+# Manifest template for PFAGD package
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include pyproject.toml
+include requirements.txt
+
+# Documentation
+recursive-include docs *.md *.rst *.txt *.py
+recursive-include docs/_static *
+recursive-include docs/_templates *
+
+# Examples
+recursive-include examples *.py *.md *.txt *.kv
+recursive-include examples/assets *
+
+# Templates
+recursive-include pfagd/templates *.py *.kv *.txt *.md
+recursive-include pfagd/templates/assets *
+
+# Source code
+recursive-include pfagd *.py *.pyx *.pxd
+recursive-include pfagd *.kv
+
+# Configuration files
+include *.cfg
+include *.ini
+include *.toml
+include *.yaml
+include *.yml
+
+# Tests
+recursive-include tests *.py
+recursive-include tests/fixtures *
+
+# Build and CI configuration
+include .github/workflows/*.yml
+include .github/workflows/*.yaml
+include tox.ini
+include Makefile
+
+# Exclude compiled files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude __pycache__
+global-exclude *.so
+global-exclude *.dylib
+global-exclude *.dll
+
+# Exclude development files
+global-exclude .coverage
+global-exclude .pytest_cache
+global-exclude .mypy_cache
+global-exclude .tox
+global-exclude *.egg-info
+global-exclude build
+global-exclude dist
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude Thumbs.db
