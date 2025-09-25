@@ -1,0 +1,13 @@
+alibabacloud/__init__.py,sha256=p_2Yc7tqzsCw-4NRA1I8WANdnFbLSS7KojQ8MhWGaJ0,3950
+alibabacloud/__main__.py,sha256=SUiExxQ2KOjzzNpYd5xZ9NdS2OFZE-u-2kpNXu4T-xI,3124
+alibabacloud/ecs.py,sha256=SGTMngN4SY0CDnOYTU4sseeZ0VgUUstVEAxP7nAFX08,7505
+alibabacloud/oss.py,sha256=A-G0KnZESEWVz1NeOhlVHTu_oQ-NlsCbBY7Yvm2NDhc,7414
+alibabacloud/rds.py,sha256=Q0KSUuNi7ef9QnnrV4Et5qJNCzbPP8vfzSyNvjxlnOE,8462
+alibabacloud/slb.py,sha256=v339es1DVyxXf4oYG5OVhgfE_TCJX47j6Vzu6WleQhE,9610
+alibabacloud/vpc.py,sha256=ApELkIUA7lAYRC_PMU0hdHSQshaY29wcSegZeQv-_-Y,9395
+aliyun_python_sdk_v2-2.13.36.dist-info/licenses/LICENSE,sha256=RyDKQKi5HWSxi3Jy8wE4uhx-dNvjYmGiYK4M76JvG1c,1091
+aliyun_python_sdk_v2-2.13.36.dist-info/METADATA,sha256=okcdbZvf-UcSMvfO1aR6LXL35Rsq3rmLrbRQDCmKRGg,4814
+aliyun_python_sdk_v2-2.13.36.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+aliyun_python_sdk_v2-2.13.36.dist-info/entry_points.txt,sha256=7zkcFl1lPMaLWKxfPzql9F_0dnHKuP-fPa5uTv6ARMU,54
+aliyun_python_sdk_v2-2.13.36.dist-info/top_level.txt,sha256=6kg1HvWenU0Plb5-tC42crEMeun1pG4VfHz0KR5l_Eg,13
+aliyun_python_sdk_v2-2.13.36.dist-info/RECORD,,
