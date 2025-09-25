@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+oneangstrom/__init__.py
+oneangstrom.egg-info/PKG-INFO
+oneangstrom.egg-info/SOURCES.txt
+oneangstrom.egg-info/dependency_links.txt
+oneangstrom.egg-info/top_level.txt
