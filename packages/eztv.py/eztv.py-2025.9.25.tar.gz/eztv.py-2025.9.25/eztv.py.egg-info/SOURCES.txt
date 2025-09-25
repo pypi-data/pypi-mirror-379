@@ -1,0 +1,9 @@
+LICENSE
+README.md
+eztv.py
+setup.py
+eztv.py.egg-info/PKG-INFO
+eztv.py.egg-info/SOURCES.txt
+eztv.py.egg-info/dependency_links.txt
+eztv.py.egg-info/requires.txt
+eztv.py.egg-info/top_level.txt
