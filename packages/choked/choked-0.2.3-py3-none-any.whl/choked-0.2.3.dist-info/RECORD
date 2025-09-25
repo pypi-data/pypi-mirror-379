@@ -1,0 +1,11 @@
+choked/__init__.py,sha256=l7N-LEadabNx5P0iF3qQngGrtuBZAXtsnpgJh9thNV8,251
+choked/choked.py,sha256=ItAI9jbdcKX6rwz2go0876ARFEPNRDEIFRDd4L1iRSM,8680
+choked/test_choked.py,sha256=WceEZaf1CVl2UvbqhG2j8RERo0iGqZ139JOt0hjkEm0,3125
+choked/token_bucket/__init__.py,sha256=FUP5ulH7RypeY7OlgOim07mlS6k4Q5MZd4LcKBBrl94,398
+choked/token_bucket/proxy_token_bucket.py,sha256=Ho59dkkEFCJQwpw9PgfTJKv4Rn4T2qnENKz1RP1gZbg,896
+choked/token_bucket/redis_token_bucket.py,sha256=3MTb7806yqDc892jHTCD__RDPQLwC1i9ZCiLZLeqBZE,1697
+choked/token_bucket/test_token_bucket.py,sha256=1bQzcHBSbtW7jary0R-jnAoGRdtuEByiqTr-AjmPmSw,1151
+choked-0.2.3.dist-info/METADATA,sha256=uY2PtNLjwQDQd-7nBuueOqoymuJq1wGpOVDhTYqzzn4,269
+choked-0.2.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+choked-0.2.3.dist-info/top_level.txt,sha256=fj8UKkCQzeFZVDkichO-_wletNle1uUkKtLmAQJaVmM,7
+choked-0.2.3.dist-info/RECORD,,
