@@ -1,0 +1,9 @@
+langextract_azureopenai/__init__.py,sha256=ad2qSiSfKkn9queNrxwoz0TlbZSmyphD4mxq-vp8RUw,190
+langextract_azureopenai/provider.py,sha256=TheoY7-YzSVGOfeeTo0ZVMTr0iKpSfajcIzjIFne35U,11309
+langextract_azureopenai/schema.py,sha256=Z3ADSJ6d0JetmrzRQhLOVVI48fFFJgiodMSGHOwu2ek,6275
+langextract_azureopenai_benjikcf-0.1.0.dist-info/licenses/LICENSE,sha256=eSbiH43aX2HXzaSzdFdnnrEOwMYBxUDlN0RGMOL9CgY,302
+langextract_azureopenai_benjikcf-0.1.0.dist-info/METADATA,sha256=rA70cRyZILNw-0NFxE2_3iAYhVgadVjRKTxPyh_29Fk,1407
+langextract_azureopenai_benjikcf-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+langextract_azureopenai_benjikcf-0.1.0.dist-info/entry_points.txt,sha256=AfmCns9p5pbSTSlCGSrq4hHXxz_gih_BuBq0rOhEZ4c,96
+langextract_azureopenai_benjikcf-0.1.0.dist-info/top_level.txt,sha256=qOcCR4xqjatbdFSD7S8SYRDpnOf95444uQuazpbcBvk,24
+langextract_azureopenai_benjikcf-0.1.0.dist-info/RECORD,,
