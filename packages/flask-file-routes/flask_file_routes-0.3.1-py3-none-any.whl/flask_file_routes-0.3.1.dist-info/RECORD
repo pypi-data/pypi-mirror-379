@@ -1,0 +1,6 @@
+flask_file_routes/__init__.py,sha256=y4E4dP31tTmFliL1QAC8MpxdjOkf2pFbHD475z6F3Gw,3109
+flask_file_routes/ctx.py,sha256=avbOjRx2tE921Vu2aaRNXty-IWjXKl46lLwk0g3iGyU,1760
+flask_file_routes/view.py,sha256=ROM9NRd2kZK4b6-2clrlt1chtGZLbNoOe0zWiVYEpiU,4978
+flask_file_routes-0.3.1.dist-info/WHEEL,sha256=Pi5uDq5Fdo_Rr-HD5h9BiPn9Et29Y9Sh8NhcJNnFU1c,79
+flask_file_routes-0.3.1.dist-info/METADATA,sha256=KdZ6-X8aWtHR9Lk13FczrT2d2plPENX583dSY_Tda4Y,4414
+flask_file_routes-0.3.1.dist-info/RECORD,,
