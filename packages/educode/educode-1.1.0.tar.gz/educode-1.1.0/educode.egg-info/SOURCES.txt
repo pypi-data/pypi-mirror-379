@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+educode/__init__.py
+educode/__main__.py
+educode/core.py
+educode/exercises.py
+educode.egg-info/PKG-INFO
+educode.egg-info/SOURCES.txt
+educode.egg-info/dependency_links.txt
+educode.egg-info/entry_points.txt
+educode.egg-info/top_level.txt
