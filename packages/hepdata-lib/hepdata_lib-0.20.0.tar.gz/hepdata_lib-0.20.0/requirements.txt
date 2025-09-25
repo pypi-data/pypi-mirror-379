@@ -1,0 +1,5 @@
+numpy
+PyYAML>=4.0
+hist
+scipy
+hepdata-validator>=0.3.5
