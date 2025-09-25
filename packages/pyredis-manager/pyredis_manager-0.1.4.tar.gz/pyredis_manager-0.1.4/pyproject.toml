@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyredis_manager"
+version = "0.1.4"
+description = "A lightweight Redis client manager with sync/async support"
+readme = "README.md"
+requires-python = ">=3.6"
+authors = [
+    { name = "jack-cizon", email = "jack20021213cn@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["redis", "manager", "flask", "async", "sync"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "redis>=4.3.6"
+]
+
+[project.urls]
+Homepage = "https://github.com/jackcizon/pyredis_manager"

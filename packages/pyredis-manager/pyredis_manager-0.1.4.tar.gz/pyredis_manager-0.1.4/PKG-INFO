@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: pyredis_manager
+Version: 0.1.4
+Summary: A lightweight Redis client manager with sync/async support
+Home-page: https://github.com/jackcizon/pyredis_manager
+Author: jack-cizon
+Author-email: jack-cizon <jack20021213cn@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jackcizon/pyredis_manager
+Keywords: redis,manager,flask,async,sync
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: redis>=4.3.6
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# PyRedisManager
+
+A lightweight, standalone Redis client manager supporting both synchronous and asynchronous operations, multi-alias management, and module-level singleton design.
+Only depends on the official redis / redis.asyncio library—no Flask, Django, or other frameworks required.
+
+
+## install
+
+```bash
+pip install pyredis-manager
+```
+
+Synchronous Example:
+
+```python
+from pyredis_manager import redis_manager
+
+
+redis_manager.set_alias('default', 0)
+default = redis_manager.get('default')
+default.set(name='foo', value='bar', ex=300)
+val = default.get('foo')
+print(val)
+```
+
+Asynchronous Example:
+
+```python
+import asyncio
+
+from pyredis_manager import async_redis_manager
+
+
+async def main():
+    async_redis_manager.set_alias("default", 0)
+    default = async_redis_manager.get("default")
+    await default.set(name="fooo", value="barr", ex=300)
+    val = await default.get("fooo")
+    print(val)
+
+
+asyncio.run(main())
+```
+
+## Features
+
+- Module-level singleton for a globally unique instance
+
+- Multi-alias management, each alias maps to an independent Redis DB
+
+- Supports synchronous and asynchronous Redis clients
+
+- Simple, type-hinted, IDE-friendly API
+
+- Framework-agnostic
