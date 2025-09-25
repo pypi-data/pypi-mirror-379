@@ -1,0 +1,14 @@
+{
+    "custom_mapping_starts_with": {
+        "GL.": {
+            "mapping_function": "gl_attr.py",
+            "angle_includes": [
+                "glad/gl.h"
+            ],
+            "required_py_import": {
+                "module": "pypp_opengl",
+                "name": "GL"
+            }
+        }
+    }
+}
