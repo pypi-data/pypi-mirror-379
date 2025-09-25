@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: wzhmultimap
+Version: 0.0.6
+Summary: The Multimap in Python
+Project-URL: Homepage, https://github.com/wangzhaohan2910/multimap
+Author-email: wangzhaohan2910 <wangcf3000@sina.com>
+License-File: LICENSE
+Requires-Python: >=3.3
+Description-Content-Type: text/x-rst
+
+wzhmultimap
+================
+
+The Multimap in Python.
