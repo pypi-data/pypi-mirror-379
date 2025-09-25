@@ -1,0 +1,52 @@
+GOPHR BRIDGE SDK LICENSE
+
+Copyright (c) 2025 Gophr Inc. All rights reserved.
+
+CUSTOMER-ONLY SOFTWARE LICENSE AGREEMENT
+
+This Gophr Bridge SDK ("Software") is proprietary software owned by Gophr Inc. 
+("Gophr") and is licensed, not sold, to you under the following terms:
+
+1. GRANT OF LICENSE
+   Subject to the terms of this Agreement and your valid Gophr customer account, 
+   Gophr grants you a limited, non-exclusive, non-transferable license to use 
+   this Software solely for the purpose of integrating with Gophr's delivery 
+   services through the Gophr Bridge API.
+
+2. RESTRICTIONS
+   You may NOT:
+   - Use this Software without a valid Gophr customer account and API credentials
+   - Distribute, sublicense, rent, lease, or lend the Software to third parties
+   - Reverse engineer, decompile, or disassemble the Software
+   - Use the Software for any purpose other than integrating with Gophr services
+   - Remove or modify any copyright, trademark, or other proprietary notices
+
+3. CUSTOMER ACCOUNT REQUIREMENT
+   Use of this Software requires:
+   - A valid Gophr customer account in good standing
+   - Valid API credentials issued by Gophr
+   - Compliance with Gophr's Terms of Service and API Usage Policy
+
+4. TERMINATION
+   This license automatically terminates if:
+   - Your Gophr customer account is suspended or terminated
+   - You breach any terms of this Agreement
+   - You cease to be a customer of Gophr
+
+5. DISCLAIMER OF WARRANTIES
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+6. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL GOPHR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+   IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+7. CONTACT
+   For questions about this license or to become a Gophr customer:
+   Email: support@gophr.app
+   Website: https://gophrapp.com
+
+By using this Software, you acknowledge that you have read this Agreement,
+understand it, and agree to be bound by its terms and conditions.
