@@ -1,0 +1,77 @@
+[project]
+name = "nox-pdm"
+version = "0.0.3"
+description = "Use PDM inside Nox sessions"
+authors = [
+    { name = "Ashwin V. Mohanan", email = "dev@fluid.quest" },
+]
+dependencies = [
+    "nox>=2023.4.22",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.license]
+text = "Apache-2.0"
+
+[project.urls]
+Homepage = "https://codeberg.org/ashwinvis/nox-pdm"
+"Bug Tracker" = "https://codeberg.org/ashwinvis/nox-pdm/issues"
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=8.0.0",
+    "urllib3==2.1.0",
+    "pytest-cov>=4.1.0",
+    "pytest-icdiff>=0.8",
+]
+types = [
+    "mypy[reports]>=1.8.0",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.ruff.lint]
+extend-select = [
+    "I",
+    "PLE",
+    "PLC",
+    "PLR",
+    "SIM",
+    "T",
+]
+ignore = [
+    "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [
+    "F401",
+]
+"noxfile.py" = [
+    "T201",
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+show_error_codes = true
+show_column_numbers = true
+sqlite_cache = true
+cache_fine_grained = true
