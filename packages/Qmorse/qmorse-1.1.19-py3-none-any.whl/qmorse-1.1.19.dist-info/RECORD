@@ -1,0 +1,10 @@
+Qmorse/__init__.py,sha256=YvD9mMOvYDh8C9R6oxNSP2v6muZDlGeO02KqS88umVQ,101
+Qmorse/bimorse.py,sha256=yd40QdWRAQC-Y7V_nzthirC5gScGG_6kcopIdreXuXk,6459
+Qmorse/soundmorse.py,sha256=1r8wfvYeK_RHhEkio4dTmDOy_0DLZHaGAsXZmnp6U8A,2340
+Qmorse/sounds/1_long.pcm,sha256=StgeSXPFO17uLZOnYSFefvZTNPs8NV3mfxBGpQlSCqk,131
+Qmorse/sounds/1_short.pcm,sha256=PHKrTFSQlOopw0szbVxSAY-IEGCm0mgO2ins7xE8als,130
+qmorse-1.1.19.dist-info/licenses/LICENSE,sha256=fXrR__F24AoJe8d0R-UV4A_gYEEc_fUztr99d730TLc,1076
+qmorse-1.1.19.dist-info/METADATA,sha256=azfTQ6620jnjdRl4sVq8h9vW7essxsH1j5eQkc0UvkM,2491
+qmorse-1.1.19.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+qmorse-1.1.19.dist-info/top_level.txt,sha256=rZd7rSQqj2jSlARvEOcB3h3NrPAaYlBzSdmDqWB7dOY,7
+qmorse-1.1.19.dist-info/RECORD,,
