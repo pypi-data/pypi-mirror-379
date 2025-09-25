@@ -1,0 +1,22 @@
+[project]
+name = "docker_volume_download"
+version = "0.1.0"
+description = "A tool to download Docker volumes and upload it on to Google Drive."
+authors = [
+  { name = "Pyae Sone Hein", email = "pyaesonehein81998@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+    "docker>=7.1.0",
+    "pydrive2>=1.21.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project.scripts]
+dvpy = "docker_volume_download.__main__:main"
