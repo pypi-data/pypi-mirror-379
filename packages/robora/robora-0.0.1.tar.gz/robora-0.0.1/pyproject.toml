@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robora"
+version = "0.0.1"
+description = "Utilities for research automation and storage providers."
+requires-python = ">=3.11"
+dependencies = [
+    "httpx",
+    "pandas>=2.3.2",
+    "python-dotenv",
+    "pydantic>=2.0.0",
+    "openpyxl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["robora*"]
+[tool.setuptools]
