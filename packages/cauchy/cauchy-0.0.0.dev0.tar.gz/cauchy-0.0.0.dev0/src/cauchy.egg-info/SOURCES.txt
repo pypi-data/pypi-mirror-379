@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/cauchy/__init__.py
+src/cauchy/__main__.py
+src/cauchy.egg-info/PKG-INFO
+src/cauchy.egg-info/SOURCES.txt
+src/cauchy.egg-info/dependency_links.txt
+src/cauchy.egg-info/top_level.txt
+src/cauchy/core/__init__.py
+src/cauchy/tests/__init__.py
+src/cauchy/tests/test_1984.py
