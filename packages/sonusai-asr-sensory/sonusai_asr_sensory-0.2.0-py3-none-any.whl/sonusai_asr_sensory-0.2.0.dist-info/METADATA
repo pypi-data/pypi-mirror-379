@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: sonusai-asr-sensory
+Version: 0.2.0
+Summary: Sensory ASR tools for SonusAI
+Project-URL: Homepage, https://aaware.com
+Author-email: Chris Eddington <chris@aaware.com>, Jason Calderwood <jason@aaware.com>
+License-Expression: GPL-3.0-only
+Requires-Python: <3.12,>=3.11
+Requires-Dist: numpy<2.3,>=2
+Requires-Dist: sonusai<2.0,>=1.1
+Description-Content-Type: text/x-rst
+
+SonusAI ASR Sensory: Sensory tools for SonusAI
