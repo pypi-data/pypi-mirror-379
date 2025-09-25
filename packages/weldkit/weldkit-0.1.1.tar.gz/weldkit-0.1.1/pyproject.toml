@@ -1,0 +1,14 @@
+[project]
+name = "weldkit"
+version = "0.1.1"
+description = "Nextgen repository Python welder"
+authors = [
+    { name = "blobycz" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
