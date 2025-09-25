@@ -1,0 +1,11 @@
+syqlorix/__init__.py,sha256=POpqSXCIgKgsJgRlnKuEa3oUpNxBAVSSYnExrc-3GAw,790
+syqlorix/cli.py,sha256=iwJtd9TM21eqY397Bb1-ujExCwpSpfGqSOpI7sAFeH4,9542
+syqlorix/core.py,sha256=cCUG2Ke3z_vM91DabjYineq4ih9WEDTjnp2lyFawQZc,31860
+syqlorix/core.pyi,sha256=Z4pU-NuEuGABsASr29olTTHMh3huYNq4ZJbUFdvLohA,3440
+syqlorix/tailwind.py,sha256=WNRWQjf441YHYz_xWylr9r4FJEJkyAY4CP2ybpJl0uE,9201
+syqlorix-1.2.3.dist-info/licenses/LICENSE,sha256=Ab-CoEqv86wy1_GYN4HkWsruQSrpRRjuMzOYkVL9UjQ,1079
+syqlorix-1.2.3.dist-info/METADATA,sha256=UIBbCWmtVRCTXrue8X-4YOb6X7hdw0gL2grdQChWeeA,9443
+syqlorix-1.2.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+syqlorix-1.2.3.dist-info/entry_points.txt,sha256=lHncIo8avM_zi1wwkCh2-Sd7wpeN5TlsUfdnnsWMV6k,47
+syqlorix-1.2.3.dist-info/top_level.txt,sha256=g7WoJ_0250zjgGqShiZ2mLWHU2t3EdhENRUxud7Ytak,9
+syqlorix-1.2.3.dist-info/RECORD,,
