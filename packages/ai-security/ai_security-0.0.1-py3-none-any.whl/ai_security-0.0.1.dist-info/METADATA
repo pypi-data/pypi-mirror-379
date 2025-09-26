@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ai-security
+Version: 0.0.1
+Summary: Whitecircle.ai helpers for securing AI pipelines: policy checks, secrets hygiene.
+Author: White Circle
+License: MIT
+Keywords: ai,hardening,policy,secrets,security,whitecircle.ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# ai-security
+
+Whitecircle.ai helpers for securing AI pipelines: policy checks and secrets hygiene.
+
+
