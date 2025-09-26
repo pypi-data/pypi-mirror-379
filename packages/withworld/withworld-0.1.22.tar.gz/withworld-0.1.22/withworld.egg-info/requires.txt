@@ -1,0 +1,6 @@
+pyautogui
+pyperclip
+pynput
+requests
+python-dotenv
+psycopg2-binary
