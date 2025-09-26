@@ -1,0 +1,8 @@
+rusty_tags-0.6.1.dist-info/METADATA,sha256=MyiYZapCFiWf8KtjAKqp-ZSXGcRVF98AOf1dr3RtkUE,16822
+rusty_tags-0.6.1.dist-info/WHEEL,sha256=YCZ9Vxhf2aXNyfoR2QH-PPqnUr48Igr9zjgnGhp3xTc,96
+rusty_tags/__init__.py,sha256=G6llG3YgM6T_WwcFqHCQVMqm8a6KEYEUGl-NvAIu8-w,3944
+rusty_tags/__init__.pyi,sha256=MfIirfsuqdCXTflcw9WRGkbGC81rR6pey2MU5Tn5Dmc,39682
+rusty_tags/core.cp311-win_amd64.pyd,sha256=LAS1_ZUVc4pb-ETOOFrTAEMUVvLQXVGd4xNkly35SoM,3674112
+rusty_tags/datastar.py,sha256=WAwJGRH5UVDTKgnysmg17jTE9CXatfhOcSfLQO5pFJQ,12822
+rusty_tags/utils.py,sha256=Xpj7Gnj8_R3QNm80q8-TF9FMDH9KeG1acViJtDbHCCQ,4825
+rusty_tags-0.6.1.dist-info/RECORD,,
