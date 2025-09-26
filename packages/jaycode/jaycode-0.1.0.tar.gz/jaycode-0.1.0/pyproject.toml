@@ -1,0 +1,20 @@
+[project]
+name = "jaycode"
+version = "0.1.0"
+description = "Jay library"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name="장동혁", email="jangdonghyek@gmail.com" }
+]
+
+#여기에 의존성 적어줌
+dependencies = [
+    "paramiko",
+    "pymysql",
+    "sshtunnel",
+    "ffmpeg-python"
+]
+
+[project.urls]
+Homepage = "https://github.com/JangDongHyek/jaycode?tab=readme-ov-file#jaycode"

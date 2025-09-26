@@ -1,0 +1,4 @@
+paramiko
+pymysql
+sshtunnel
+ffmpeg-python
