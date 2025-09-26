@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: rooster
+Version: 0.1.0
+Summary: 
+Author: Zanie
+Author-email: Zanie <contact@zanie.dev>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Dist: typer>=0.15.0
+Requires-Dist: packaging>=23.1
+Requires-Dist: pygit2>=1.13.1
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: tqdm>=4.66.1
+Requires-Dist: hishel>=0.0.24
+Requires-Dist: pydantic>=2.4.2
+Requires-Dist: marko>=2.0.2
+Description-Content-Type: text/markdown
+
+# Rooster
+
+**This interface provided by this tool is unstable, we highly recommend pinning your version.**
+
+## Usage
+
+### Prepare a new release
+
+Prepares a new release, which:
+
+- Determines a new version number
+- Generates a changelog entry for the release and adds to `CHANGELOG.md`
+- Updates the version number in `pyproject.toml`
+
+```
+rooster release [<path>] [--bump major|minor|patch]
+```
+
+### Caching
+
+Rooster caches responses from the GitHub GraphQL API in `$PWD/.cache`. You may disable this behavior with `ROOSTER_NO_CACHE=1`.
