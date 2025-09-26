@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: fastapi-tools-bootstrap
+Version: 0.1.5
+Summary: Bootstrap tool
+Author: Andrei Churin
+Author-email: aachurin@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+### Bootstrap
+
+```python
+from fastapi import FastAPI
+from fastapi_tools import bootstrap
+
+
+@bootstrap.on_exit(kind=["server"])
+async def shutdown1(app: FastAPI) -> None:
+    print("Shutdown")
+    
+@bootstrap.on_exit
+async def shutdown2(app: FastAPI) -> None:
+    print("Shutdown")
+    
+    
+app = FastAPI(lifespan=bootstrap.lifespan("server"))
+```
