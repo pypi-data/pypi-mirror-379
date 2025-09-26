@@ -1,0 +1,1 @@
+from .Doctor_Doom import multiplication,subtraction,addition,division
