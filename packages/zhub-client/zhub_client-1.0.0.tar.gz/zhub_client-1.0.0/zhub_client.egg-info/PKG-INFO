@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: zhub_client
+Version: 1.0.0
+Summary: Zdek Util libraries for Pythom coding
+Home-page: https://github.com/ZdekPyPi/ZhubPythonClient
+Author: Zdek Development team
+Author-email: melque_ex@yahoo.com.br
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+License-File: LICENCE.txt
+
+# ZhubPythonClient
+
+Change Log
+==========
+
+1.0.0 (2025-09-25)
+------------------
+- First Release

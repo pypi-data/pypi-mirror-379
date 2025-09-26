@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+commands.txt
+requirements.txt
+run.py
+setup.py
+zhub_client/__init__.py
+zhub_client.egg-info/PKG-INFO
+zhub_client.egg-info/SOURCES.txt
+zhub_client.egg-info/dependency_links.txt
+zhub_client.egg-info/top_level.txt
