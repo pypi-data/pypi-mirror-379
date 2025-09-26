@@ -1,0 +1,2 @@
+[console_scripts]
+kmeans-color-palette = kmeans_color_palette.program:main
