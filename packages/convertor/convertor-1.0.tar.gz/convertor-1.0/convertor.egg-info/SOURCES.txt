@@ -1,0 +1,7 @@
+setup.py
+convertor/__init__.py
+convertor/convertor.py
+convertor.egg-info/PKG-INFO
+convertor.egg-info/SOURCES.txt
+convertor.egg-info/dependency_links.txt
+convertor.egg-info/top_level.txt

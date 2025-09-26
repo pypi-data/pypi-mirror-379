@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: convertor
+Version: 1.0
+Summary: This is just a test package
+Author: Fakiya Siddiqui
+Author-email: fakiyasiddiqui25@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
