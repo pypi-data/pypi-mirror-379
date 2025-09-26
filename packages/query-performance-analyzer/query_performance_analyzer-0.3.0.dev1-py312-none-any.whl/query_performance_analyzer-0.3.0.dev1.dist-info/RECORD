@@ -1,0 +1,11 @@
+__init__.pyc,sha256=6g4kYlGUWq5MD-ZcibVsJcrM6z9ilD7F36MeQTWMbH8,142
+perf/__init__.pyc,sha256=J3RxugSzCrovGtPHIdXIhuZQdx-ec1OKnQ82_uGIQyY,147
+perf/__main__.pyc,sha256=pDoSnE1vZMGlFuhcxvLleG9_h7VTz3ympBY9yirUbOw,251
+perf/cli.pyc,sha256=2HPZqqtvc4hEuZo5RwxszgI8ktFrLK2oSuMYLlb4q2g,9849
+perf/runner.pyc,sha256=mojBn6X53TxvWF-FKoMRVAOHZBfCve8Fut4xgzYi-Bs,9713
+perf/yaml_config.pyc,sha256=2vQF00pcKQtztWIgStGQljA6Tks5Fs7tQ4NtVi8aI0M,9871
+query_performance_analyzer-0.3.0.dev1.dist-info/METADATA,sha256=Di6VLtTaUBIxrF2v30cbjCrx-EOY9TEURPFGP9jXhnU,19921
+query_performance_analyzer-0.3.0.dev1.dist-info/WHEEL,sha256=e4c5O_REIW6J88Q7RfT6cVHroyTdfEjJ5_MEQDpxGso,83
+query_performance_analyzer-0.3.0.dev1.dist-info/entry_points.txt,sha256=cz95_MsqBmsi8Tp1ZhxYvNdYKlOX_sNMmGVyENYKWsQ,43
+query_performance_analyzer-0.3.0.dev1.dist-info/top_level.txt,sha256=DQan0VmcoDAuws6-eHn_Bc7XbBRFiTHdip7oBn0dMs4,14
+query_performance_analyzer-0.3.0.dev1.dist-info/RECORD,,
