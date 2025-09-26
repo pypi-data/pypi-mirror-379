@@ -1,0 +1,13 @@
+toml==0.10.2
+platformdirs==4.3.8
+
+[dev]
+black
+isort
+flake8
+
+[mac]
+dmglib==0.9.6
+
+[rich]
+rich==13.7.1

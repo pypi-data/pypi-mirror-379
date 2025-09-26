@@ -1,0 +1,4 @@
+[console_scripts]
+avidconfig = avid.cli.avidconfig:main
+aviddiag = avid.cli.aviddiag:main
+avidsplit = avid.cli.avidsplit:main
