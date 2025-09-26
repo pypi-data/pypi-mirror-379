@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/horizon/Projects/HorizonGUI/python/build/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/pybind11/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/libsndfile/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/glfw/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/glfw/src/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/glfw/docs/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/freetype/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/openal-soft/cmake_install.cmake",
+		"/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/openal-soft/fmt-11.2.0/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

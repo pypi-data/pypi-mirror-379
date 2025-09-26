@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "deps/horizongui/deps/openal-soft/fmt-11.2.0",
+		"source" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/fmt-11.2.0"
+	}
+}

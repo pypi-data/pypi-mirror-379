@@ -1,0 +1,499 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "deps/horizongui/deps/openal-soft/libalsoft.common.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_compile_options",
+			"add_compile_definitions",
+			"target_include_directories",
+			"set_target_properties"
+		],
+		"files" : 
+		[
+			"/Users/horizon/Projects/HorizonGUI/deps/openal-soft/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1483,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1488,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1487,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 193,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 1484,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 1489,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG -std=gnu++20 -arch arm64 -fPIC"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshadow"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wcast-align"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wold-style-cast"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wnon-virtual-dtor"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Woverloaded-virtual"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Werror=undef"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-ftrivial-auto-var-init=pattern"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fno-math-errno"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-pthread"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_FAST"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/horizon/Projects/HorizonGUI/python/build/deps/horizongui/deps/openal-soft"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/fmt-11.2.0/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					6
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				1,
+				5,
+				7,
+				12,
+				15,
+				20,
+				23,
+				27
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "alsoft.fmt::@a2e54c2b8880cd602a0f"
+		}
+	],
+	"id" : "alsoft.common::@ad04254cd06ecd11b9d4",
+	"name" : "alsoft.common",
+	"nameOnDisk" : "libalsoft.common.a",
+	"paths" : 
+	{
+		"build" : "deps/horizongui/deps/openal-soft",
+		"source" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				4,
+				6,
+				8,
+				9,
+				10,
+				11,
+				13,
+				14,
+				16,
+				17,
+				18,
+				19,
+				21,
+				22,
+				24,
+				25,
+				26,
+				28,
+				29,
+				30
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				1,
+				5,
+				7,
+				12,
+				15,
+				20,
+				23,
+				27
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				41,
+				42
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/albit.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/alcomplex.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/alcomplex.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/almalloc.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/alnumeric.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/alstring.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/alstring.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/althrd_setname.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/althrd_setname.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/althreads.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/atomic.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/comptr.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/dynload.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/dynload.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/expected.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/filesystem.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/filesystem.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/flexarray.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/intrusive_ptr.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/opthelpers.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/pffft.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/pffft.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/phase_shifter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/polyphase_resampler.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/polyphase_resampler.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/pragmadefs.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/ringbuffer.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/strutils.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/strutils.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/vecmat.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/common/vector.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/algorithm",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/assert",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/byte",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/gsl",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/narrow",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/pointers",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/span",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/span_ext",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/util",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/gsl/include/gsl/zstring",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/deps/horizongui/deps/openal-soft/fmt-11.2.0/CMakeFiles/alsoft.fmt.dir/src/format.cc.o",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/deps/horizongui/deps/openal-soft/fmt-11.2.0/CMakeFiles/alsoft.fmt.dir/src/os.cc.o",
+			"sourceGroupIndex" : 3
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

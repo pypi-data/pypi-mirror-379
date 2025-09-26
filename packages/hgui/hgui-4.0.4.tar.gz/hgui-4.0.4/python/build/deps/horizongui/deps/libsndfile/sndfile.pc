@@ -1,0 +1,13 @@
+prefix=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmpf9b9t7va/wheel/platlib
+exec_prefix=${prefix}
+libdir=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmpf9b9t7va/wheel/platlib/lib
+includedir=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmpf9b9t7va/wheel/platlib/include
+
+Name: sndfile
+Description: A library for reading and writing audio files
+Requires:
+Requires.private:  
+Version: 1.2.2
+Libs: -L${libdir} -lsndfile
+Libs.private: 
+Cflags: -I${includedir}

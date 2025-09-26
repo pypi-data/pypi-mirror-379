@@ -1,0 +1,66 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"/Users/horizon/Projects/HorizonGUI/deps/openal-soft/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2061,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "clang-tidy-check::@ad04254cd06ecd11b9d4",
+	"name" : "clang-tidy-check",
+	"paths" : 
+	{
+		"build" : "deps/horizongui/deps/openal-soft",
+		"source" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/deps/horizongui/deps/openal-soft/CMakeFiles/clang-tidy-check",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/deps/horizongui/deps/openal-soft/CMakeFiles/clang-tidy-check.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

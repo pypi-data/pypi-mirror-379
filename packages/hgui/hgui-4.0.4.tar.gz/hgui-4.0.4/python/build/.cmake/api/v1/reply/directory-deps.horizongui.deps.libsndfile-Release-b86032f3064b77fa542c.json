@@ -1,0 +1,162 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 797,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 841,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 845,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 850,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 912,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 915,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/Users/horizon/Projects/HorizonGUI/lib/Release/libsndfile.a"
+			],
+			"targetId" : "sndfile::@50c34e184cbc6a8ad642",
+			"targetIndex" : 10,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/include/sndfile.h",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/include/sndfile.hh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/SndFile",
+			"exportName" : "SndFileTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "sndfile::@50c34e184cbc6a8ad642",
+					"index" : 10
+				}
+			],
+			"paths" : 
+			[
+				"deps/horizongui/deps/libsndfile/CMakeFiles/Export/5c71f72976042dd672d3a20ad1898c82/SndFileTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/SndFile",
+			"paths" : 
+			[
+				{
+					"from" : "build/deps/horizongui/deps/libsndfile/SndFileConfig2.cmake",
+					"to" : "SndFileConfig.cmake"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/SndFile",
+			"paths" : 
+			[
+				"build/deps/horizongui/deps/libsndfile/SndFileConfigVersion.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "share/doc/libsndfile",
+			"paths" : 
+			[
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/index.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/libsndfile.jpg",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/libsndfile.css",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/print.css",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/api.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/command.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/bugs.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/formats.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/sndfile_info.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/new_file_type_howto.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/win32.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/FAQ.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/lists.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/embedded_files.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/octave.md",
+				"/Users/horizon/Projects/HorizonGUI/deps/libsndfile/docs/tutorial.md"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"build/deps/horizongui/deps/libsndfile/sndfile.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "deps/horizongui/deps/libsndfile",
+		"source" : "/Users/horizon/Projects/HorizonGUI/deps/libsndfile"
+	}
+}

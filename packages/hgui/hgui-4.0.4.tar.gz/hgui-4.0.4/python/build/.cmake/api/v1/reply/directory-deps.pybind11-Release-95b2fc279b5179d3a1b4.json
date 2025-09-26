@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "deps/pybind11",
+		"source" : "/Users/horizon/Projects/HorizonGUI/deps/pybind11"
+	}
+}

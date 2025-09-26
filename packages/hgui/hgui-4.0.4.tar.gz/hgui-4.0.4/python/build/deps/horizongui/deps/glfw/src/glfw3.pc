@@ -1,0 +1,13 @@
+prefix=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmpf9b9t7va/wheel/platlib
+exec_prefix=${prefix}
+includedir=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmpf9b9t7va/wheel/platlib/include
+libdir=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmpf9b9t7va/wheel/platlib/lib
+
+Name: GLFW
+Description: A multi-platform library for OpenGL, window and input
+Version: 3.5.0
+URL: https://www.glfw.org/
+Requires.private: 
+Libs: -L${libdir} -lglfw3
+Libs.private: -framework Cocoa -framework IOKit -framework CoreFoundation -framework QuartzCore
+Cflags: -I${includedir}

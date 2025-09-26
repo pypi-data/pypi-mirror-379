@@ -1,0 +1,408 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-a33fb2afc3890b5fae80.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15+"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "deps/pybind11",
+					"jsonFile" : "directory-deps.pybind11-Release-95b2fc279b5179d3a1b4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/pybind11"
+				},
+				{
+					"build" : "deps/horizongui",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						7,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-deps.horizongui-Release-b620db72eec18f4fe3ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12+"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "/Users/horizon/Projects/HorizonGUI",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "deps/horizongui/deps/libsndfile",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-deps.horizongui.deps.libsndfile-Release-b86032f3064b77fa542c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/libsndfile",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "deps/horizongui/deps/glfw",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-deps.horizongui.deps.glfw-Release-426043f8da9cf6f3895a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/glfw",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "deps/horizongui/deps/glfw/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-deps.horizongui.deps.glfw.src-Release-e6a5da9532af42e845da.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 4,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/glfw/src",
+					"targetIndexes" : 
+					[
+						7,
+						12
+					]
+				},
+				{
+					"build" : "deps/horizongui/deps/glfw/docs",
+					"jsonFile" : "directory-deps.horizongui.deps.glfw.docs-Release-9efcf7ec1ec530de4cc0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 4,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/glfw/docs"
+				},
+				{
+					"build" : "deps/horizongui/deps/freetype",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-deps.horizongui.deps.freetype-Release-3ae10c755f20c098b5b2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 5,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/freetype",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "deps/horizongui/deps/openal-soft",
+					"childIndexes" : 
+					[
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-deps.horizongui.deps.openal-soft-Release-c6452ceeebdc77889cc1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 6,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5
+					]
+				},
+				{
+					"build" : "deps/horizongui/deps/openal-soft/fmt-11.2.0",
+					"jsonFile" : "directory-deps.horizongui.deps.openal-soft.fmt-11.2.0-Release-d70aad43a0f3ee4bd687.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 7,
+					"source" : "/Users/horizon/Projects/HorizonGUI/deps/openal-soft/fmt-11.2.0",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "hgui",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "pybind11",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "horizongui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "libsndfile",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5,
+						6
+					],
+					"name" : "GLFW",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						7,
+						11,
+						12
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "freetype",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						7
+					],
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "OpenAL",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "ALSOFT_FMT",
+					"parentIndex" : 6,
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 8,
+					"id" : "OpenAL::@ad04254cd06ecd11b9d4",
+					"jsonFile" : "target-OpenAL-Release-1c86601ed3d6ebb87bbd.json",
+					"name" : "OpenAL",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "alsoft.build_version::@ad04254cd06ecd11b9d4",
+					"jsonFile" : "target-alsoft.build_version-Release-738aa599b231718d479f.json",
+					"name" : "alsoft.build_version",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "alsoft.common::@ad04254cd06ecd11b9d4",
+					"jsonFile" : "target-alsoft.common-Release-58ed3e4d0f1eeaf8ff05.json",
+					"name" : "alsoft.common",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "alsoft.excommon::@ad04254cd06ecd11b9d4",
+					"jsonFile" : "target-alsoft.excommon-Release-174b5b9782fdd6f3e554.json",
+					"name" : "alsoft.excommon",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "alsoft.fmt::@a2e54c2b8880cd602a0f",
+					"jsonFile" : "target-alsoft.fmt-Release-d0793fc1b0d3dac97f15.json",
+					"name" : "alsoft.fmt",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "clang-tidy-check::@ad04254cd06ecd11b9d4",
+					"jsonFile" : "target-clang-tidy-check-Release-b99e23ec3ac32ea964d1.json",
+					"name" : "clang-tidy-check",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "freetype::@297ff8435daa05eff02d",
+					"jsonFile" : "target-freetype-Release-8eb736b6a33d592273e4.json",
+					"name" : "freetype",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "glfw::@57822e2ca56c1b0ee0c2",
+					"jsonFile" : "target-glfw-Release-db4ba281d546e3b95ca3.json",
+					"name" : "glfw",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hgui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hgui-Release-499b2323d3f9b54c2851.json",
+					"name" : "hgui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "horizongui::@7a9fb3607a10ca237b2e",
+					"jsonFile" : "target-horizongui-Release-31db986204303bc20683.json",
+					"name" : "horizongui",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sndfile::@50c34e184cbc6a8ad642",
+					"jsonFile" : "target-sndfile-Release-d2d198b1ffe7632552f0.json",
+					"name" : "sndfile",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "uninstall::@a14e6da47ea4ee405780",
+					"jsonFile" : "target-uninstall-Release-4ce91bc1cfac51fb7dfa.json",
+					"name" : "uninstall",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "update_mappings::@57822e2ca56c1b0ee0c2",
+					"jsonFile" : "target-update_mappings-Release-fa68984c61acd776d734.json",
+					"name" : "update_mappings",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/horizon/Projects/HorizonGUI/python/build",
+		"source" : "/Users/horizon/Projects/HorizonGUI/python"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

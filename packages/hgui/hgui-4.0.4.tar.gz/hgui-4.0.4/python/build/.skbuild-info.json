@@ -1,0 +1,8 @@
+{
+  "source_dir": "/Users/horizon/Projects/HorizonGUI/python",
+  "build_dir": "/Users/horizon/Projects/HorizonGUI/python/build",
+  "cmake_path": "/opt/homebrew/bin/cmake",
+  "skbuild_path": "/private/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/pip-build-env-51iolhva/overlay/lib/python3.13/site-packages/scikit_build_core",
+  "skbuild_version": "0.11.6",
+  "python_executable": "/Users/horizon/.pyenv/versions/3.13.5/bin/python3.13"
+}
