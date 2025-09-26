@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+lair/__init__.py
+lair/f2f.py
+lair/g_game.py
+lair/odeve.py
+lair/rps.py
+mylair.egg-info/PKG-INFO
+mylair.egg-info/SOURCES.txt
+mylair.egg-info/dependency_links.txt
+mylair.egg-info/top_level.txt
