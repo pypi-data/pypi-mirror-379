@@ -1,0 +1,169 @@
+Metadata-Version: 2.4
+Name: energicast
+Version: 1.0.0
+Summary: Domain-specific AutoML library for energy forecasting with physics–ML hybrids and synthetic gap filling
+Author: dr Tymoteusz Miller, dr inż. Ewelina Kostecka
+License: MIT License
+        
+        Copyright (c) 2025 Tymoteusz Miller
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/TyMill/energicast
+Project-URL: Documentation, https://tymill.github.io/EnergiCast/
+Project-URL: Issues, https://github.com/TyMill/energicast/issues
+Project-URL: Changelog, https://github.com/TyMill/energicast/blob/main/CHANGELOG.md
+Keywords: energy forecasting,automl,machine learning,time series,renewable energy,load forecasting,pv forecasting,wind forecasting,probabilistic forecasting,hierarchical forecasting,backtesting,feature engineering,quantile regression,reconciliation,mint,pvlib,optuna,xgboost,arima,ets
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.0
+Requires-Dist: numpy>=1.23
+Requires-Dist: scikit-learn>=1.3
+Requires-Dist: xgboost>=1.7
+Requires-Dist: statsforecast>=1.7.3
+Requires-Dist: pydantic>=2.6
+Requires-Dist: typer>=0.12
+Requires-Dist: rich>=13.7
+Requires-Dist: pvlib>=0.10
+Requires-Dist: pyarrow>=14
+Requires-Dist: pyyaml>=6
+Requires-Dist: optuna>=3.4
+Requires-Dist: prophet>=1.1.5; platform_machine != "arm64"
+Requires-Dist: torch>=2.2; platform_machine != "arm64"
+Requires-Dist: pytorch-lightning>=2.4; platform_machine != "arm64"
+Requires-Dist: matplotlib>=3.7
+Provides-Extra: dev
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: ruff>=0.2; extra == "dev"
+Requires-Dist: pytest>=7.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mkdocstrings; extra == "docs"
+Requires-Dist: mkdocstrings-python; extra == "docs"
+Requires-Dist: pymdown-extensions; extra == "docs"
+Dynamic: license-file
+
+# EnergiCast
+
+[![CI](https://github.com/TyMill/energicast/actions/workflows/ci.yml/badge.svg)](https://github.com/TyMill/energicast/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-online-brightgreen.svg)](https://tymill.github.io/EnergiCast/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://github.com/TyMill/EnergiCast/blob/main/pyproject.toml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TyMill/energicast)](https://github.com/TyMill/energicast/releases)
+
+
+**EnergiCast** is a domain‑specific Python library for energy forecasting (load, PV, wind, prices) that combines:
+- ⚡ **Domain‑aware AutoML** with hierarchical reconciliation and energy‑weighted cost metrics,
+- 🌞 **Physics–ML hybrids** (pvlib solar/wind features + ML/DL models),
+- 🔄 **Synthetic gap filling** with seasonal and generative imputation constrained by physics,
+- 🌦️ **Weather scenarios** with ensemble perturbations for uncertainty quantification,
+- 📊 **Benchmarks** (OpenSTEF‑like datasets) and standardized backtesting protocols.
+
+---
+
+## ✨ Features
+- **AutoML**: tailored search spaces for energy time series (ARIMA, ETS, XGB, TFT roadmap).
+- **Physics priors**: PV/wind features from pvlib and meteorological signals.
+- **Synthetic imputation**: diffusion/GAN roadmap, with ramp‑rate & non‑negativity constraints.
+- **Hierarchical reconciliation**: MinT‑style coherent forecasts (asset → feeder → system).
+- **Metrics**: pinball loss, CRPS, and energy‑weighted MAPE with price‑aware penalties.
+- **Deployment**: simple model export and CLI tools.
+
+---
+
+## 🚀 Quickstart
+
+Install in editable mode for development:
+
+```bash
+git clone https://github.com/TyMill/energicast.git
+cd energicast
+pip install -e .
+```
+
+Run the end-to-end workflow on the bundled example data:
+
+```bash
+python -m energicast.cli train --config examples/pv_config.yaml --out runs/demo_model
+python -m energicast.cli backtest --config examples/pv_config.yaml --out runs/demo_backtest
+python -m energicast.cli export --model-dir runs/demo_model --fmt pickle
+python -m energicast.cli report --backtest-dir runs/demo_backtest
+```
+
+---
+
+## 📚 Dokumentacja
+
+Dokumentację można zbudować lokalnie przy pomocy [MkDocs](https://www.mkdocs.org/):
+
+```bash
+pip install -e .[docs]
+mkdocs serve
+```
+
+Po wdrożeniu GitHub Pages będzie dostępne pod adresem
+[`https://TyMill.github.io/energicast/`](https://TyMill.github.io/energicast/).
+
+---
+
+## 📂 Repository Structure
+
+```
+energicast/
+├─ pyproject.toml
+├─ src/energicast/
+│  ├─ data/        # loaders for entsoe, pvlib, weather
+│  ├─ impute/      # synthetic gap filling
+│  ├─ features/    # calendar + energy features
+│  ├─ models/      # ARIMA/ETS, XGB, TFT (roadmap)
+│  ├─ hier/        # reconciliation
+│  ├─ automl/      # Optuna‑based AutoML
+│  ├─ metrics/     # probabilistic + energy metrics
+│  ├─ scenarios/   # weather ensembles
+│  ├─ bench/       # benchmark datasets
+│  ├─ deploy/      # export utils
+│  └─ cli.py       # Typer‑based CLI
+└─ examples/       # demo scripts & notebooks
+```
+
+---
+
+## 👨‍💻 Authors
+Created by 
+- **Dr Tymoteusz Miller, University of Szczecin**,
+- **Dr inz. Ewelina Kostecka, Maritime University of Szczecin**.
+
+---
+
+## 📜 License
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.

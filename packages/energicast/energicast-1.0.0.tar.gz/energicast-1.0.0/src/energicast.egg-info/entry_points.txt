@@ -1,0 +1,2 @@
+[console_scripts]
+energicast = energicast.cli:main
