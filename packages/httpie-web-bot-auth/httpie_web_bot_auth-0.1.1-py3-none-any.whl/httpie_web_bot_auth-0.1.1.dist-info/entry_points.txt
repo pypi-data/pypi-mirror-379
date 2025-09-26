@@ -1,0 +1,4 @@
+[httpie.plugins.transport.v1]
+web_bot_auth_http = httpie_web_bot_auth:WebBotAuthHTTPPlugin
+web_bot_auth_https = httpie_web_bot_auth:WebBotAuthHTTPSPlugin
+
