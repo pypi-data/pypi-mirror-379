@@ -1,0 +1,11 @@
+dogecloud_uploader/__init__.py,sha256=7Tsq2V5zAeWEwuJbt1dG2mDK_0zgRUgoCDBIY8NkTHU,281
+dogecloud_uploader/cli.py,sha256=LP-4Nj1et-nc22L1miCIZSGX_siljb6rkbRgBFbE6UQ,7027
+dogecloud_uploader/client.py,sha256=SBGGH_7Ylwe_7Vn2z5N45W__ZgrTvsimBD1S9omL7Yc,14525
+dogecloud_uploader/exceptions.py,sha256=oz4YfkOoP7Qp0mkblJMias5w9r0GpSNWNA0dP_0Yg-o,403
+dogecloud_uploader/utils.py,sha256=EtWpNwmjgbE5-_zdY0A4D-oOaFWBr1TP1fqsakRtAKI,13924
+dogecloud_uploader-1.1.0.dist-info/licenses/LICENSE,sha256=9qTizZh0pFv_VDOkzshKdoEHWVW9dXDqeL1LvCLSZA4,1076
+dogecloud_uploader-1.1.0.dist-info/METADATA,sha256=baQBP8v-EsGrF0rM0TL_33qCu4wSO5G6qtckMw7Y0XQ,8774
+dogecloud_uploader-1.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dogecloud_uploader-1.1.0.dist-info/entry_points.txt,sha256=Wq2Vp97enTni2vMDIXnzUaLNYme0VNSRxvmRGixk88E,58
+dogecloud_uploader-1.1.0.dist-info/top_level.txt,sha256=0RW1OcztZxtaCcE4UXyU2vgjmB3n5l34BvkKvfjcxcs,19
+dogecloud_uploader-1.1.0.dist-info/RECORD,,
