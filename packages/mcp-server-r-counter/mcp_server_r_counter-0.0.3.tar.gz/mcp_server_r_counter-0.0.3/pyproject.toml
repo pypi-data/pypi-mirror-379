@@ -1,0 +1,15 @@
+[project]
+name = "mcp-server-r-counter"
+version = "0.0.3"
+description = "A MCP Server Counting Number of r's for a Given Query"
+readme = "README.md"
+dependencies = [
+    "mcp>=1.4.1",
+]
+
+[project.scripts]
+mcp-server-r-counter = "mcp_server_r_counter:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
