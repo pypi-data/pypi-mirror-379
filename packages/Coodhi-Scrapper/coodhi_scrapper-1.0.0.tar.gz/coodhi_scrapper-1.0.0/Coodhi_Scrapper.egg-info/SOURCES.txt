@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+Coodhi_Scrapper/__init__.py
+Coodhi_Scrapper/config.py
+Coodhi_Scrapper/exceptions.py
+Coodhi_Scrapper/functions.py
+Coodhi_Scrapper/transfermarkt.py
+Coodhi_Scrapper.egg-info/PKG-INFO
+Coodhi_Scrapper.egg-info/SOURCES.txt
+Coodhi_Scrapper.egg-info/dependency_links.txt
+Coodhi_Scrapper.egg-info/requires.txt
+Coodhi_Scrapper.egg-info/top_level.txt
+test/test_transfermark.py

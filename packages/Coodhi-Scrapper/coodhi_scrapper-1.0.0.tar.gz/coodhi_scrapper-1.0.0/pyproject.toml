@@ -1,0 +1,112 @@
+[project]
+# -- Metadata --------------------------------------------------------------------------------------
+name = "Coodhi_Scrapper"
+version = "1.0.0"
+description = "Package for scraping soccer data from a variety of sources."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">= 3.9"
+keywords = [
+    "webscraping", "scraping", "soccer", "football", "soccer data", "football data", 
+    "English Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1", "Champions League",
+    "World Cup"
+]
+authors = [
+    {email = "vvimos@coodhi.com"}, {name = "Victor Vimos"}
+]
+
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "botasaurus>=4.0.76",
+    "bs4>=0.0.2",
+    "cloudscraper>=1.2.71",
+    "datetime>=5.5",
+    "lxml>=5.3.0",
+    "numpy>=2.0.2",
+    "pandas>=2.2.3",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.3",
+    "rootutils>=1.0.7",
+    "selenium>=4.28.1",
+    "tqdm>=4.67.1",
+]
+
+# LEAVE AS OPTIONAL DEPENDENCIES, NOT DEPENDENCY GROUPS
+# readthedocs needs docs to be optional dependency group, so just leave the others as them also
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+]
+docs = [
+    "furo>=2024.8.6",
+    "myst-nb>=1.1.2",
+    "sphinx>=7.4.7",
+]
+build = [
+    "build>=1.2.2.post1",
+    "setuptools>=75.8.0",
+    "wheel>=0.45.1",
+]
+publish = ["publish>=0.3.6",]
+dev = [
+    "marimo>=0.14.16",
+    "tox>=4.24.1",
+]
+typecheck = [
+    "pandas-stubs>=2.2.2.240807",
+    "types-beautifulsoup4>=4.12.0.20241020",
+    "types-openpyxl>=3.1.5.20241225",
+    "types-python-dateutil>=2.9.0.20241206",
+    "types-requests>=2.32.0.20241016",
+    "types-tqdm>=4.67.0.20241221",
+    "types-pyyaml>=6.0.12.20250516",
+    "mypy>=1.14.1",
+]
+lint = ["ruff>=0.11.10",]
+
+[project.urls]
+Homepage = "https://github.com/VektorMachine/Coodhi_Scraper_Pypi"
+Repository = "https://github.com/VektorMachine/Coodhi_Scraper_Pypi"
+BugTracker = "https://github.com/VektorMachine/Coodhi_Scraper_Pypi/issues"
+
+# -- Build system ----------------------------------------------------------------------------------
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# -- Testing ---------------------------------------------------------------------------------------
+[tool.pytest.ini_options]
+addopts = "-s -v --cov Coodhi_Scrapper"
+norecursedirs = ["docs", "*.egg-info", ".git", ".tox"]
+
+[tool.coverage.run]
+branch = true
+omit = ["*oddsportal.py"]
+
+[tool.coverage.report]
+show_missing = true
+
+# -- Linting ---------------------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+exclude = ["**/{test}/*"]
+ignore = [
+    "D100", "D200", "D210", "D400", "D401", "D403", "D413", "D415", "EM101", "EM102", "I001", 
+    "TRY003"
+]
+
+# -- Typechecking ----------------------------------------------------------------------------------
+[tool.mypy]
+ignore_missing_imports = true
+disallow_untyped_defs = true
