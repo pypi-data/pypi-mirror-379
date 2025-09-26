@@ -1,0 +1,8 @@
+README.md
+auto_load_cfg.py
+pyproject.toml
+hwpylib.egg-info/PKG-INFO
+hwpylib.egg-info/SOURCES.txt
+hwpylib.egg-info/dependency_links.txt
+hwpylib.egg-info/requires.txt
+hwpylib.egg-info/top_level.txt
