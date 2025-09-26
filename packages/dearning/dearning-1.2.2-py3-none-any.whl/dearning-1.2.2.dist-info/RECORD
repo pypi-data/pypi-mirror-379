@@ -1,0 +1,17 @@
+dearning/AI_core.py,sha256=tHXuO7SpC6hZESso23gU9RUNm6LRNDP3eshfYFY8ePA,13857
+dearning/AI_tools.py,sha256=oPf_Z8FnsH7lyRDz0ZollJwu0Murm_mvA-yq31_EjG4,17519
+dearning/GPUD.py,sha256=X-IqpjrYW7Mxa3pg6umf6aD-egJ8TZcrkPZHaFQrur4,2954
+dearning/Quantum.py,sha256=uUKHjfeVsUfdhMcn3ePf_vRhcQE8Y6EYTcGnW5847B4,31265
+dearning/__init__.py,sha256=26zORfG5u60uxs-FxYIU0KzB3oaLWnJ6j8GB3ttDSVc,2618
+dearning/__main__.py,sha256=IdYK60E1ydITAI0E_2nzxnJ9E3fkxEqg-wclIP3mm1s,2347
+dearning/model.py,sha256=539UPyieba5BaQ9pHLqKzZN8K1cPnFR9ZTjvCr59GIk,15543
+dearning/multymodel.py,sha256=07OlfqoHUoD-xlA8p3hhnoWD7nVwCQThDj7aNpFYkV8,3170
+dearning/service.py,sha256=Pdr1wExOYDWGC1_60lnJTk2gPnZ63ODOP2vZ6ADi2pM,10230
+dearning/training.py,sha256=GrSfn_S-0dTge7cK4JZNAwrmXgDCYbmU_6SF7XTio9Q,10928
+dearning/tutorial_dearning.pdf,sha256=ojNYaV6W-4QOXn6Ii-7oadPYdttuy6P2ZZS_8qXRXBc,15712
+dearning/utils.py,sha256=QqzGjmjcgdl7GeiTqQC7ol0JLdIlMcd_PTcaxcg6Qeo,30531
+dearning-1.2.2.dist-info/METADATA,sha256=e4AM6g365fYwoDs3IhNa29wacJ4J-X6fwvFVPfTOy9I,1635
+dearning-1.2.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dearning-1.2.2.dist-info/entry_points.txt,sha256=vfUTBVs-9PhjBQaEqWSphZHI6ZqsqqZEN_B_lnIa5Og,52
+dearning-1.2.2.dist-info/top_level.txt,sha256=YSioq1gQQkTHERNonK1tAdgKtr7GKHtnqgDGoOxxsqo,9
+dearning-1.2.2.dist-info/RECORD,,
