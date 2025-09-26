@@ -1,0 +1,29 @@
+[project]
+name="uphy"
+version="1.0.2"
+authors = [
+    {name="RT-Labs", email="support@rt-labs.com"}
+]
+requires-python = ">= 3.10"
+readme = "README.md"
+
+license = "LicenseRef-RT-Labs-Commercial-Agreement"
+license-files = [
+    "LICENSE.txt"
+]
+
+dependencies = [
+    "typer>=0.12.5",
+    "uphy-device>=1.0.2",
+    "uphy-controller>=1.0.2",
+    "rich>=13.9.4",
+    "pyserial>=3.5",
+]
+
+[project.scripts]
+uphy = "uphy.cli.__main__:app"
+
+[project.urls]
+RT-Labs = "https://rt-labs.com"
+U-Phy = "https://rt-labs.com/u-phy"
+Documentation  = "https://docs.rt-labs.com/u-phy"
