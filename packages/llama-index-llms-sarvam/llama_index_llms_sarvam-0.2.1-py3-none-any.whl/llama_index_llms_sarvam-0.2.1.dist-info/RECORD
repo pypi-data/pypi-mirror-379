@@ -1,0 +1,5 @@
+llama_index/llms/sarvam/__init__.py,sha256=QR56D4M9myv3XHRIv0Sn68E25Wbwrw2xgromjcK934U,70
+llama_index/llms/sarvam/base.py,sha256=BxsY5uOrZq9lMCC1NzpRLswMRSsbxTXftGSbNPNyawE,2772
+llama_index_llms_sarvam-0.2.1.dist-info/METADATA,sha256=MgtZEpHZ-G4ueQ5tj_TQ6VtwsDVyAvpRbhW_w7FGhdI,770
+llama_index_llms_sarvam-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llama_index_llms_sarvam-0.2.1.dist-info/RECORD,,
