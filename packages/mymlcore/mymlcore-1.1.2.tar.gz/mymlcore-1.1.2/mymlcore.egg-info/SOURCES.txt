@@ -1,0 +1,8 @@
+README.md
+setup.py
+mlcore/__init__.py
+mymlcore.egg-info/PKG-INFO
+mymlcore.egg-info/SOURCES.txt
+mymlcore.egg-info/dependency_links.txt
+mymlcore.egg-info/requires.txt
+mymlcore.egg-info/top_level.txt
