@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/khmn_alkalima_alhamadye.egg-info/PKG-INFO
+src/khmn_alkalima_alhamadye.egg-info/SOURCES.txt
+src/khmn_alkalima_alhamadye.egg-info/dependency_links.txt
+src/khmn_alkalima_alhamadye.egg-info/entry_points.txt
+src/khmn_alkalima_alhamadye.egg-info/top_level.txt
+tests/test_hangman.py
