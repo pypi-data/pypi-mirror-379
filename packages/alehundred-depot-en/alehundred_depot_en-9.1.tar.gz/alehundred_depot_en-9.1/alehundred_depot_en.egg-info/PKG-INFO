@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: alehundred-depot-en
+Version: 9.1
+Summary: A TUI tool to install and manage a Perforce server on a Raspberry Pi.
+Author-email: Alejandro Friant <friant2021@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Alejandro Friant
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/alefriant/Alehundred-VCS-Toolkit/tree/main
+Project-URL: Bug Tracker, https://github.com/alefriant/Alehundred-VCS-Toolkit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console :: Curses
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: System :: Installation/Setup
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: license-file
+
+# Alehundred-Depot (English Version)
+
+A Text-based User Interface (TUI) tool to facilitate the installation and management of a Perforce Helix Core server on low-cost hardware like a Raspberry Pi.
+
+# 1. Installation
+Connect to your Raspberry Pi via SSH
+
+- Replace with your actual user and hostname/IP
+ssh YourUserName@RaspberryName.local 
+
+# 2. Copy, paste, and run this entire block
+
+- This will update, install dependencies, install the toolkit, and set up the PATH all in one go.
+
+sudo apt update && sudo apt upgrade -y && sudo apt install python3-pip -y
+pip install --break-system-packages alehundred-depot-en
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+echo "¡Setup complete! Run 'alehundred-depot-en' to start."
+
+# 3. Run the program
+
+alehundred-depot-en
