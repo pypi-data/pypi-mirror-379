@@ -1,0 +1,11 @@
+mac_tdavec/__init__.py,sha256=-B2a-Splgizg7qR26vPPPTaBzO9PKw8CM2xYkVGArWk,372
+mac_tdavec/tdavec_core.c,sha256=YKTt9okI7eJXir-70AQKWto0Ikv8hF2KovUe6OKaxS0,2106532
+mac_tdavec/tdavec_core.cpython-311-darwin.so,sha256=-M-k97B2E53AnWd9H1uT78Crt9U_35iQnHK0ImE8PnQ,460720
+mac_tdavec/tdavec_core.pyx,sha256=fQ8CjINCPYC43zfEeOCqCpBl1c5FvWLho2_HH27r-Pc,27324
+mac_tdavec/unit_test.py,sha256=-BVBdVOqh3HDQ7s0Mwg655BovHh7KJlLKrsCpah1dQI,12501
+mac_tdavec/vectorizer.py,sha256=PLPBpiPEcawrk4qjxXXMbeisJ10TgIErTveFXdamstk,7117
+mac_tdavec-0.9.1.dist-info/licenses/LICENSE.txt,sha256=RWUdavRcZ0s53o-1lRPPAyyF7RUS7lf1I8xblQ-AUGY,1070
+mac_tdavec-0.9.1.dist-info/METADATA,sha256=yvtdAtOrfjW0byVbl305ql_Z72r7rCFQOn95LeFbBuI,6832
+mac_tdavec-0.9.1.dist-info/WHEEL,sha256=qxQkdhERtGxJzqnVOBnucx1aUmU2n3HmuzYdln_LyOw,109
+mac_tdavec-0.9.1.dist-info/top_level.txt,sha256=MfFlgonQRwPjrtqlZJnjpeKgLBTyo5ErA6_A_ez2t1Y,11
+mac_tdavec-0.9.1.dist-info/RECORD,,
