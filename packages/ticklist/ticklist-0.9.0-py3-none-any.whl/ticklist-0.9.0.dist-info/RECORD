@@ -1,0 +1,12 @@
+ticklist/__init__.py,sha256=JEbyUXROoll6OkNkaQHCBOGdosSNpz9ZXnea777ZCYI,24
+ticklist/annotation_iterators.py,sha256=fJQ7tcE0L7RcS7yK1o49xEPLd4WOCLkcUJlzSZcOSKM,11226
+ticklist/field_data.py,sha256=B03XjcZe5Jls19eumNjsLTlxu_9RE6EeOnR51kKLvGg,14023
+ticklist/field_widgets.py,sha256=K7KUULWQXZ62QRNtosdE0MvkCvtyRdg0RJWZQoBo_lc,6441
+ticklist/form.py,sha256=BgrDiJ9fZvJ2_fzOeaul130cgHStPudg0mBaWisFmKA,12454
+ticklist/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ticklist/tick_annotations.py,sha256=2u1pHr0xRc0KEfoTZxVASg6V63YBgSkoyTY-D7XOL5Y,1383
+ticklist/types.py,sha256=xfYpkxvvk70diYJVfajqTdLq9_1oekYds0pOR-ntqI0,1608
+ticklist-0.9.0.dist-info/METADATA,sha256=AybLepJVRHSAEdu1Q46LKfOyaf-ncovETJSjkmAFye8,2265
+ticklist-0.9.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ticklist-0.9.0.dist-info/licenses/LICENSE,sha256=eOYnTAIRBIKW605wuCGWFExSqnHK1I7M2oOpEIipKTg,1073
+ticklist-0.9.0.dist-info/RECORD,,
