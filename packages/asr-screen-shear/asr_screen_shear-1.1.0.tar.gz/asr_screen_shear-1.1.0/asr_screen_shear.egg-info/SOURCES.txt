@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+asr_screen_shear/__init__.py
+asr_screen_shear/client_view.py
+asr_screen_shear/dis.py
+asr_screen_shear/pc2.py
+asr_screen_shear/server.py
+asr_screen_shear/server_share.py
+asr_screen_shear.egg-info/PKG-INFO
+asr_screen_shear.egg-info/SOURCES.txt
+asr_screen_shear.egg-info/dependency_links.txt
+asr_screen_shear.egg-info/requires.txt
+asr_screen_shear.egg-info/top_level.txt
