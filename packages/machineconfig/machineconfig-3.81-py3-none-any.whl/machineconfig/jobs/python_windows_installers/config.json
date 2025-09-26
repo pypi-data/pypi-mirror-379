@@ -1,0 +1,82 @@
+{
+  "version": "1",
+  "installers": [
+    {
+      "appName": "speedtest",
+      "repoURL": "https://install.speedtest.net/app/cli/ookla-speedtest-1.2.0-win64.zip",
+      "doc": "🚀 Test your internet connection speed and ping using speedtest.net from the CLI",
+      "filenameTemplate": {
+        "amd64": {
+          "windows": "speedtest",
+          "linux": "speedtest"
+        },
+        "arm64": {
+          "windows": "speedtest"
+        }
+      },
+      "stripVersion": false,
+      "exeName": "speedtest"
+    },
+    {
+      "appName": "boxes",
+      "repoURL": "https://github.com/ascii-boxes/boxes",
+      "doc": "📦 ASCI draws boxes around text.",
+      "filenameTemplate": {
+        "amd64": {
+          "windows": "boxes-{}-intel-win32.zip"
+        },
+        "arm64": {}
+      },
+      "stripVersion": true,
+      "exeName": "boxes"
+    },
+    {
+      "appName": "ugrep",
+      "repoURL": "https://github.com/Genivia/ugrep",
+      "doc": "🔍 A fast, portable, feature-rich command-line search tool",
+      "filenameTemplate": {
+        "amd64": {
+          "windows": "ugrep-windows-x64.zip"
+        },
+        "arm64": {}
+      },
+      "stripVersion": true,
+      "exeName": "ugrep"
+    },
+    {
+      "appName": "zoomit",
+      "repoURL": "https://download.sysinternals.com/files/ZoomIt.zip",
+      "doc": "🔍 A screen zoom and annotation tool for presentations",
+      "filenameTemplate": {
+        "amd64": {},
+        "arm64": {}
+      },
+      "stripVersion": false,
+      "exeName": "ZoomIt.exe"
+    },
+    {
+      "appName": "ntop",
+      "repoURL": "https://github.com/gsass1/NTop",
+      "doc": "📊 Like htop, for Windows",
+      "filenameTemplate": {
+        "amd64": {
+          "windows": "ntop.exe"
+        },
+        "arm64": {}
+      },
+      "stripVersion": false,
+      "exeName": "ntop.exe"
+    },
+    {
+      "appName": "devtunnel",
+      "repoURL": "winget install --Id Microsoft.devtunnel --scope user",
+      "doc": "🔄 devtunnel secure introspectable tunnels to localhost",
+      "filenameTemplate": {
+        "amd64": {},
+        "arm64": {}
+      },
+      "stripVersion": false,
+      "exeName": "devtunnel"
+    }
+  ]
+}
