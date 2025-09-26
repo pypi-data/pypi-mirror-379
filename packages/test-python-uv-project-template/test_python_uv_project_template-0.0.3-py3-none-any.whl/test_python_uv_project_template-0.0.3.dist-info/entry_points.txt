@@ -1,0 +1,2 @@
+[console_scripts]
+release-intent = scripts.ci.release_intent:main
