@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: wool
+Version: 0.1rc4
+Summary: A Python framework for distributed multiprocessing.
+Author-email: Conrad Bzura <conrad@wool.io>
+Maintainer-email: maintainers@wool.io
+License-Expression: Apache-2.0
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.10
+Requires-Dist: annotated-types
+Requires-Dist: click
+Requires-Dist: debugpy
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Provides-Extra: locking
+Requires-Dist: wool-locking; extra == "locking"
