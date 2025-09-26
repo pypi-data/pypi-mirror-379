@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/core_memory_mcp.egg-info/PKG-INFO
+src/core_memory_mcp.egg-info/SOURCES.txt
+src/core_memory_mcp.egg-info/dependency_links.txt
+src/core_memory_mcp.egg-info/entry_points.txt
+src/core_memory_mcp.egg-info/requires.txt
+src/core_memory_mcp.egg-info/top_level.txt
