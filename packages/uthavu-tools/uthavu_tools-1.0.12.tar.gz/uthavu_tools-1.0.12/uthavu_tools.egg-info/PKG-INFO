@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: uthavu-tools
+Version: 1.0.12
+Summary: Collection of CLI utilities from Uthavu Software
+Author-email: Uthavu Software - People’s Solution <jawahar.s@uthavu.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+- clear the working directory
+- get the current branch name
+
+
+python -m build
+python -m twine upload dist/* -u __token__ -p pypi-AgEIcHlwaS5vcmcCJDhjZjIzMDUyLTYyYTItNDYyNy04ZjEwLTY3YzQ5NGFjYTc4OQACKlszLCIyOTUzNDA3Mi02ZWZkLTQ5ZTAtYTJlMi1lYWI5ZjJhYzY4ODMiXQAABiCQEOBO-DCY4fh30aowMLDFYmF0waW5pVWcvNNm0AtLS
+pip show -f uthavu-tools
+//test
+
