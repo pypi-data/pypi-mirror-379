@@ -1,0 +1,17 @@
+lexia/README.md,sha256=rQ9pxWSXE_7tSmIT9wDGfyknRBVAMdLD7iFJejI_jGc,12603
+lexia/__init__.py,sha256=E5biY6Qgn-Xa23ad-8efe7-NRN9v3r9DGY16W8qmRnY,1130
+lexia/api_client.py,sha256=vox0sWKQbha-Cx_J7iMOuTrdnl-pqCeiEQLgCyOSKuY,5545
+lexia/centrifugo_client.py,sha256=tZeVynzJgyU6UtMIKy7PI5B-tVLZlJBCphN7l3M7vGM,3959
+lexia/models.py,sha256=IPFjDOp5vn5l_CGM-41x1W2oGnKMJsggKAb8g-MAUjE,1533
+lexia/requirements.txt,sha256=l9dp7oPo2-do1EeyokGJvod_p1K1pxJHqKXAmbYK6Jo,249
+lexia/response_handler.py,sha256=HLBw3xnZ5675YKobd7o0gSvsAWUrlfTxo0Za0cP9f2s,2006
+lexia/unified_handler.py,sha256=UwxEpvFSr2wt3dTNBnYi6A8v8Gd5x7UF0iJh8YD_JXo,6507
+lexia/utils.py,sha256=huL0LDibYZu4131_XF8D872SQNtKjGkhXG1ZwMUUlzI,10989
+lexia/web/__init__.py,sha256=wULfeb5Id9w5-87wVyJnHwwamBVO5eH1tsT2AILs9F8,351
+lexia/web/app_factory.py,sha256=eh77X7Xo1PmTZ5gTvF63tQ_x7Td9DNqW317zdcYZFCI,1695
+lexia/web/endpoints.py,sha256=jwN5VbTnFZMROlprOuJ2_vNFwaCjdrm0Oi5rmu5rMbg,3904
+lexia-1.2.0.dist-info/licenses/LICENSE,sha256=VaZR2FKLPwHJdiw6xah4c4GfzP9aQGL-WsD_oXLe20U,1085
+lexia-1.2.0.dist-info/METADATA,sha256=oRCLrwKUUHUWJ-ptNHH6mTxhWEIDSgOWcw_SMdG0aac,15045
+lexia-1.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+lexia-1.2.0.dist-info/top_level.txt,sha256=arhvkOo6L34z4NadnYp5Svtfe6rCpBJf5K9EqWx71k8,6
+lexia-1.2.0.dist-info/RECORD,,
