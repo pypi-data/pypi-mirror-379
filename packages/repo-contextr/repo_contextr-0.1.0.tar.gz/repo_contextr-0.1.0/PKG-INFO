@@ -1,0 +1,413 @@
+Metadata-Version: 2.4
+Name: repo-contextr
+Version: 0.1.0
+Summary: A powerful Repository Context Packager CLI tool for LLMs
+Project-URL: Homepage, https://github.com/dharamghevariya/repo-contextr
+Project-URL: Repository, https://github.com/dharamghevariya/repo-contextr
+Project-URL: Issues, https://github.com/dharamghevariya/repo-contextr/issues
+Author-email: Dharam Ghevariya <dharamghevariya36@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Dharam Ghevariya
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: ai,cli,context,git,llm,repository
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.12
+Requires-Dist: rich>=13.0.0
+Requires-Dist: typer>=0.9.0
+Description-Content-Type: text/markdown
+
+# repo-contextr
+
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A powerful Repository Context Packager CLI tool that analyzes local git repositories and creates comprehensive text files containing repository content optimized for sharing with Large Language Models (LLMs).
+
+## Overview
+
+When developers want to get help from ChatGPT, Claude, or other LLMs about their code, they often struggle with how to share their codebase effectively. Common problems include:
+
+- **Lost Context**: Copy-pasting individual files loses important project structure and relationships
+- **Missing Dependencies**: LLMs can't see how files connect or what libraries are used
+- **Incomplete Picture**: Hard to convey the overall architecture and organization
+- **Manual Work**: Time-consuming to gather and format relevant code
+
+**repo-contextr** solves this by automatically collecting and formatting repository content into a single, well-structured text file that provides rich context to LLMs, enabling them to give much better assistance with your code.
+
+## Features
+
+- **Git Integration**: Extracts commit SHA, branch, author, and date information
+- **Project Structure**: Generates a clear directory tree visualization
+- **File Content Packaging**: Includes file contents with syntax highlighting
+- **Smart File Discovery**: Recursively scans directories with configurable filtering
+- **Large File Handling**: Truncates files larger than 16KB with clear notices
+- **Binary File Detection**: Automatically skips binary files
+- **Error Handling**: Gracefully handles permission errors and provides helpful messages
+- **Flexible Output**: Write to stdout or save to a file
+- **Pattern Matching**: Include/exclude files using glob patterns
+- **Recent Changes Mode**: Use `--recent` (`-r`) to include only files modified in the last 7 days, with a "Recent Changes" section in the output.
+
+
+## Installation
+
+### Prerequisites
+
+- Python 3.12 or higher
+- Git (for git repository analysis)
+- [pipx](https://pypa.github.io/pipx/) (recommended for global installation)
+
+### For End Users
+
+```bash
+# Install pipx if you don't have it
+pip install pipx
+
+# Install repo-contextr globally (when published)
+pipx install repo-contextr
+
+# Or install from source
+pipx install git+https://github.com/dharamghevariya/repo-contextr.git
+```
+
+### For Contributors & Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/dharamghevariya/contextr.git
+cd contextr
+
+# Method 1: Using pipx (Recommended)
+pipx install -e .
+
+# Method 2: Using uv (for development)
+uv sync
+# Then use: uv run contextr
+
+# Method 3: Using pip in virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -e .
+```
+
+## Usage
+
+### Basic Examples
+
+```bash
+# After installing with pipx
+repo-contextr .
+
+# Package a specific directory
+repo-contextr /path/to/your/project
+
+# Package specific files
+repo-contextr src/main.py src/utils.py
+
+# Save output to a file
+repo-contextr . -o my-project-context.txt
+
+# Include only Python files
+repo-contextr . --include "*.py"
+
+# Include only JavaScript files
+repo-contextr . --include "*.js"
+```
+
+### Using with uv (Development)
+
+```bash
+# Package the current directory
+uv run repo-contextr .
+
+# Package with filters
+uv run repo-contextr . --include "*.py" -o output.txt
+```
+
+### Using with virtual environment
+
+```bash
+# After activating your virtual environment
+python -m repo-contextr .
+# Or if installed in the environment
+repo-contextr .
+```
+
+### Command Line Options
+
+| Option | Short | Description | Example |
+|--------|-------|-------------|---------|
+| `paths` | - | One or more file or directory paths to analyze | `repo-contextr src/ docs/` |
+| `--output` | `-o` | Output file path (default: stdout) | `-o context.txt` |
+| `--include` | - | Pattern to include files (glob pattern) | `--include "*.py"` |
+| `--version` | `-v` | Show version and exit | `-v` |
+| `--help` | `-h` | Show help message | `-h` |
+| `--recent` | `-r` | Include only files modified in the last 7 days | `--recent` |
+
+### Advanced Examples
+
+```bash
+# Package only Python and JavaScript files
+repo-contextr . --include "*.{py,js}"
+
+# Package a specific subdirectory
+repo-contextr src/ --include "*.py" -o backend-context.txt
+
+# Package multiple specific files
+repo-contextr README.md src/main.py pyproject.toml
+
+# Analyze a different repository
+repo-contextr /path/to/other/project -o other-project.txt
+
+# Include only files modified in the last 7 days
+uv run main.py --recent
+
+# Combine with include filter (only recent Python files)
+uv run main.py --recent --include "*.py"
+```
+
+## Output Format
+
+The tool generates a structured text file with the following sections:
+
+### 1. File System Location
+Absolute path to the repository being analyzed
+
+### 2. Git Information
+- Commit SHA
+- Current branch
+- Last commit author
+- Last commit date
+
+### 3. Project Structure
+Directory tree showing the organization of included files
+
+### 4. File Contents
+Each file's content with:
+- Clear file path headers
+- Appropriate syntax highlighting language tags
+- Truncation notices for large files
+
+### 5. Recent Changes (when --recent is used)
+- Shows only files modified in the last 7 days
+- Includes file contents and statistics for those files
+- Adds a summary line indicating how many recent files were found
+
+### 6. Summary Statistics
+- Total number of files processed
+- Total lines of code
+
+## Example Output
+
+When you run `repo-contextr . --include "*.py"`, the output looks like this:
+
+````text
+# Repository Context
+
+## File System Location
+
+/home/user/my-project
+
+## Git Info
+
+- Commit: a1b2c3d4e5f6789...
+- Branch: main  
+- Author: John Doe <john@example.com>
+- Date: Fri Sep 12 14:30:15 2025 -0400
+
+## Structure
+
+src/
+  main.py
+  utils/
+    helpers.py
+package.json
+README.md
+
+## Recent Changes
+### File: main.py
+```python
+Main entry point for contextr CLI tool
+"""
+from src.contextr.cli import app
+
+if __name__ == "__main__":
+    app()
+```
+
+## Summary
+- Total files: 2
+- Total lines: 8
+- Recent files (last 7 days): 1
+````
+
+## What Files Are Included
+
+The tool includes most text files but automatically excludes:
+
+### Excluded Directories
+- `.git`, `.svn`, `.hg` (version control)
+- `__pycache__`, `.pytest_cache` (Python cache)
+- `node_modules`, `.npm` (Node.js)
+- `.vscode`, `.idea` (IDE directories)
+- `build`, `dist`, `target` (build directories)
+- `.env`, `venv`, `.venv` (virtual environments)
+
+### File Handling Rules
+- **Binary files**: Automatically detected and skipped
+- **Large files**: Files larger than 16KB are truncated with notice
+- **Permission errors**: Skipped with warning message to stderr
+- **Text files**: All readable text files are included by default
+
+### Pattern Matching
+Use the `--include` option to filter files:
+- `--include "*.py"` - Only Python files
+- `--include "*.{js,ts}"` - JavaScript and TypeScript files
+- `--include "*.md"` - Only Markdown files
+
+## Error Handling
+
+The tool handles errors gracefully:
+
+| Error Type | Behavior | Example |
+|------------|----------|---------|
+| **Permission errors** | Skipped with warning message | `Warning: Permission denied: /restricted/file.txt` |
+| **Binary files** | Automatically detected and skipped | `.exe`, `.jpg`, `.pdf` files ignored |
+| **Large files** | Truncated with clear notice | `[File truncated - original size: 25KB]` |
+| **Invalid paths** | Clear error messages | `Error: Path does not exist: /invalid/path` |
+| **Non-git repositories** | Works fine | Shows "Not a git repository" in output |
+| **Network issues** | Graceful fallback | Git info shows as unavailable |
+
+## Development
+
+### Project Structure
+
+```text
+contextr/
+├── main.py                    # Entry point script
+├── pyproject.toml            # Project configuration & dependencies
+├── README.md                 # This documentation
+├── LICENSE                   # MIT License
+├── uv.lock                   # Dependency lock file
+└── src/
+    └── repo-contextr/
+        ├── __init__.py       # Package initialization
+        ├── cli.py           # CLI interface using Typer
+        ├── commands/
+        │   ├── __init__.py
+        │   └── package.py   # Main packaging logic
+        └── utils/
+            ├── __init__.py
+            └── helpers.py   # Utility functions
+```
+
+### Running Tests
+
+```bash
+# Install development dependencies
+uv sync --dev
+
+# Run tests (when available)
+uv run pytest
+
+# Run linting
+uv run flake8 src/
+
+# Run type checking
+uv run mypy src/
+
+# Format code
+uv run black src/
+```
+
+### Contributing
+
+1. **Fork the repository**
+2. **Clone your fork:**
+   ```bash
+   git clone https://github.com/yourusername/contextr.git
+   cd contextr
+   ```
+3. **Install for development:**
+   ```bash
+   pipx install -e .
+   ```
+4. **Make your changes and test:**
+   ```bash
+   contextr . --include "*.py"
+   ```
+5. **Submit a pull request**
+
+### Development Workflow
+
+```bash
+# 1. Setup development environment
+git clone https://github.com/dharamghevariya/contextr.git
+cd contextr
+uv sync
+
+# 2. Make changes to the code
+# Edit files in src/contextr/
+
+# 3. Test your changes
+uv run repo-contextr . --include "*.py"
+
+# 4. Install in development mode for system-wide testing
+pipx install -e .
+
+# 5. Test the installed version
+repo-contextr . -o test-output.txt
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Why repo-contextr?
+
+The name "repo-contextr" combines "repository" + "context" + "r", representing the tool's purpose of providing rich context about code repositories in a format that's perfect for LLM interactions.
+
+### Use Cases
+
+- **Code Reviews**: Share complete project context with team members
+- **AI Assistance**: Get better help from ChatGPT, Claude, or GitHub Copilot
+- **Documentation**: Create comprehensive project snapshots
+- **Onboarding**: Help new team members understand project structure
+- **Debugging**: Share complete context when asking for help
+
+### Perfect for LLMs
+
+The output format is specifically designed to work well with Large Language Models:
+- Clear section headers for easy parsing
+- Syntax highlighting markers for code blocks
+- Structured metadata (git info, file locations)
+- Complete project context in a single file
+- Optimized for token efficiency
+
+---
+
+**Made with care for developers who want better AI assistance with their code.**

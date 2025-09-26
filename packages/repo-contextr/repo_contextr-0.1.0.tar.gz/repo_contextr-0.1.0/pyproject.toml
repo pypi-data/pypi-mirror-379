@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "repo-contextr"
+version = "0.1.0"
+description = "A powerful Repository Context Packager CLI tool for LLMs"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Dharam Ghevariya", email = "dharamghevariya36@gmail.com"}
+]
+keywords = ["cli", "git", "repository", "context", "llm", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/dharamghevariya/repo-contextr"
+Repository = "https://github.com/dharamghevariya/repo-contextr"
+Issues = "https://github.com/dharamghevariya/repo-contextr/issues"
+
+[project.scripts]
+repo-contextr = "contextr.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/contextr"]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "flake8>=7.3.0",
+    "mypy>=1.17.1",
+    "pytest>=8.4.2",
+]
