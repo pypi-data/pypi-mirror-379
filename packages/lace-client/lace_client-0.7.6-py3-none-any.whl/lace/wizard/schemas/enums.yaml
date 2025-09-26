@@ -1,0 +1,196 @@
+# Controlled vocabularies for EU AI Act compliance
+# Based on Commission Q&A and Template Guidance
+# Last Updated: 2025-08-18
+#
+# CRITICAL FIXES:
+# - No EU rep carve-out
+# - ≥10^25 for systemic risk
+# - No 10^23 GPAI threshold
+# - Significant modifiers are providers
+
+compute_thresholds:
+  systemic_risk: 1e25    # ≥10^25 FLOP (not >)
+  # CRITICAL: "more than one-third" means STRICTLY GREATER
+  significant_modification_ratio: 0.333333  # Use > not >=
+  # Note: No official GPAI FLOP threshold in Commission guidance
+
+generality_indicators:
+  parameter_hint: 1e9  # ≥1B parameters per Recital 98
+  note: "Functional test based on capabilities, not strict threshold"
+  factors:
+    - "Multi-task capability"
+    - "Wide range of applications"
+    - "General-purpose design"
+    - "Large parameter count (indicative)"
+
+sme_criteria:
+  max_employees: 249  # Fewer than 250
+  max_turnover_eur: 50000000
+  max_balance_sheet_eur: 43000000
+  note: "Must meet ALL criteria to qualify as SME"
+
+provider_types:
+  - value: "gpai_provider"
+    label: "GPAI Provider"
+    obligations: full
+    template: official
+  - value: "significant_modifier"
+    label: "Significant Modifier (>33%)"
+    obligations: full
+    template: official
+  - value: "open_source_gpai"
+    label: "Open-Source GPAI"
+    obligations: partial
+    template: official
+  - value: "light_finetuner"
+    label: "Light Fine-tuner (≤33%)"
+    obligations: voluntary
+    template: voluntary
+  - value: "api_user"
+    label: "API User"
+    obligations: none
+    template: voluntary
+
+top_domain_rules:
+  standard:
+    rule: "10%"
+    min_domains: 1
+    description: "Top 10% of domains by volume (min 1)"
+  sme:
+    rule: "5% or 1000"
+    min_domains: 1
+    description: "Top 5% or 1000 domains, whichever lower (min 1)"
+
+deadline_rules:
+  obligations_start: "2025-08-02"
+  fines_start: "2026-08-02"
+  grace_period_end: "2027-08-02"  # Public summary only
+  update_frequency_months: 6
+  update_trigger: "or sooner if significant changes"
+  significant_change_thresholds:
+    domain_coverage_shift: 10  # Percentage points
+    domain_membership: "any change"
+    source_types: "any change"
+    lawful_basis: "any change"
+
+open_source_carve_outs:
+  # Only if not systemic risk (NO EU rep carve-out per Commission guidance)
+  applicable_when: "open_source_release AND NOT systemic_risk"
+  carve_outs:
+    - "Technical documentation for authorities (Art. 53(1)(a) partial)"
+    - "Downstream documentation requirements (Art. 53(1)(b) partial)"
+  note: "EU representative still required - no carve-out"
+
+open_source_still_requires:
+  # Always required, even for open-source
+  - "Public summary of training content (Art. 53(1)(d))"
+  - "Copyright compliance policy (Art. 53(1)(c))"
+  - "EU authorized representative if non-EU (Art. 54)"
+
+volume_bands:
+  text_tokens:
+    - value: "<1B"
+      min: 0
+      max: 1e9
+    - value: "1-10B"
+      min: 1e9
+      max: 1e10
+    - value: "10-100B"
+      min: 1e10
+      max: 1e11
+    - value: "100B-1T"
+      min: 1e11
+      max: 1e12
+    - value: ">1T"
+      min: 1e12
+      max: null
+  
+  images:
+    - value: "<1M"
+      min: 0
+      max: 1e6
+    - value: "1-10M"
+      min: 1e6
+      max: 1e7
+    - value: "10-100M"
+      min: 1e7
+      max: 1e8
+    - value: ">100M"
+      min: 1e8
+      max: null
+  
+  audio_hours:
+    - value: "<10K"
+      min: 0
+      max: 1e4
+    - value: "10K-100K"
+      min: 1e4
+      max: 1e5
+    - value: "100K-1M"
+      min: 1e5
+      max: 1e6
+    - value: ">1M"
+      min: 1e6
+      max: null
+  
+  video_hours:
+    - value: "<10K"
+      min: 0
+      max: 1e4
+    - value: "10K-100K"
+      min: 1e4
+      max: 1e5
+    - value: "100K-1M"
+      min: 1e5
+      max: 1e6
+    - value: ">1M"
+      min: 1e6
+      max: null
+  
+  code_files:
+    - value: "<100K"
+      min: 0
+      max: 1e5
+    - value: "100K-1M"
+      min: 1e5
+      max: 1e6
+    - value: "1M-10M"
+      min: 1e6
+      max: 1e7
+    - value: ">10M"
+      min: 1e7
+      max: null
+
+lawful_basis_options:
+  - value: "licenses_held"
+    label: "Licenses obtained from rights holders"
+  - value: "DSM_Art4_TDM"
+    label: "EU DSM Directive Article 4 (TDM exception)"
+  - value: "proprietary"
+    label: "Own/proprietary content"
+  - value: "public_domain"
+    label: "Public domain content"
+  - value: "user_tos"
+    label: "User-contributed under Terms of Service"
+
+opt_out_signals:
+  - value: "robots.txt"
+    label: "robots.txt (traditional web crawler exclusion)"
+    path: "/robots.txt"
+  - value: "ai.txt"
+    label: "ai.txt (AI-specific exclusion)"
+    path: "/.well-known/ai.txt"
+  - value: "trust.txt_datatrainingallowed"
+    label: "trust.txt datatrainingallowed field"
+    path: "/.well-known/trust.txt"
+
+validation_rules:
+  email_pattern: '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+  date_pattern: '^\d{4}-\d{2}-\d{2}$'
+  domain_pattern: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]?\.[a-zA-Z]{2,}$'
+  
+metadata:
+  schema_version: "1.0.0"
+  schema_note: "Derived from Commission template (not official EU schema)"
+  last_updated: "2025-08-18"
+  disclaimer: "This is guidance, not legal advice"
