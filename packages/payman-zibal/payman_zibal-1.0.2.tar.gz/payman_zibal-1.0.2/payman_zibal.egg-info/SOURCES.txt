@@ -1,0 +1,7 @@
+LICENSE
+pyproject.toml
+payman_zibal.egg-info/PKG-INFO
+payman_zibal.egg-info/SOURCES.txt
+payman_zibal.egg-info/dependency_links.txt
+payman_zibal.egg-info/requires.txt
+payman_zibal.egg-info/top_level.txt
