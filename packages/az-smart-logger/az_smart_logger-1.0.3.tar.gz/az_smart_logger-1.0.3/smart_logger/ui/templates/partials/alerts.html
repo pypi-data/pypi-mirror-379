@@ -1,0 +1,16 @@
+<div id="alertsContainer" class="fixed top-4 right-4 space-y-2 z-50"></div>
+
+<script>
+function showAlert(message, type="info") {
+    const container = document.getElementById('alertsContainer');
+    const alert = document.createElement('div');
+    const color = type === "info" ? "bg-blue-500" :
+                  type === "warning" ? "bg-yellow-400" :
+                  type === "error" ? "bg-red-500" :
+                  "bg-gray-500";
+    alert.className = `${color} text-white px-4 py-2 rounded shadow`;
+    alert.innerText = message;
+    container.appendChild(alert);
+    setTimeout(() => container.removeChild(alert), 5000);
+}
+</script>
