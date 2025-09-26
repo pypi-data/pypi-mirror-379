@@ -1,0 +1,7 @@
+sparse3d/__init__.py,sha256=CTHrYWY-5hoqmP3jtmH1yDq0VpBB4ldSuUEIX8N5ank,306
+sparse3d/mixins.py,sha256=LmAbVYr3OQb-ZuvRSnfoM93G_2nV7G6b4-x-dJHDiFw,22589
+sparse3d/sparse3d.py,sha256=SH_3kI6kNIE2jeM512ftY-DP3OCV4jZRXEfFF9OtjHw,23137
+sparse3d-1.1.0.dist-info/LICENSE,sha256=jLs-nHMgty3PVb-ffDJYcHaHrVVinI5lJQEHWFIPMf8,1073
+sparse3d-1.1.0.dist-info/METADATA,sha256=D6uyfFvNVuld8kf7-d211ZsCJi2N-_YpRFD84aL4hug,489
+sparse3d-1.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+sparse3d-1.1.0.dist-info/RECORD,,
