@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "fastapi-tools-db"
+version = "0.2.6"
+readme = "README.md"
+description = "Fastapi DB intergation"
+authors = ["Andrei Churin <aachurin@gmail.com>"]
+packages = [{ include = "fastapi_tools" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psycopg = {extras = ["binary", "pool"], version = "^3.2.9"}
+alembic = "^1.16.4"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.41"}
+pydantic = "^2.11.7"
+cachetools = "^5.5.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.11"
+mypy = "^1.15.0"
+types-cachetools = "^5.5.0.20240820"
+
+[tool.ruff]
+unsafe-fixes = false
+line-length = 89
+
+[tool.ruff.lint]
+select = ["I"]
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+follow_imports = "silent"
+strict = true
+extra_checks = true
+pretty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

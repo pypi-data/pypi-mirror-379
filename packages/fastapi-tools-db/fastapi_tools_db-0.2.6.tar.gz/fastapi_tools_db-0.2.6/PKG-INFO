@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: fastapi-tools-db
+Version: 0.2.6
+Summary: Fastapi DB intergation
+Author: Andrei Churin
+Author-email: aachurin@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: alembic (>=1.16.4,<2.0.0)
+Requires-Dist: cachetools (>=5.5.2,<6.0.0)
+Requires-Dist: psycopg[binary,pool] (>=3.2.9,<4.0.0)
+Requires-Dist: pydantic (>=2.11.7,<3.0.0)
+Requires-Dist: sqlalchemy[asyncio] (>=2.0.41,<3.0.0)
+Description-Content-Type: text/markdown
+
+Postgress Database ORM
