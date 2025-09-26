@@ -1,0 +1,22 @@
+# Base
+# ------------------------------------------------------------------------------
+
+
+# Build
+# ------------------------------------------------------------------------------
+build==1.2.2  # https://github.com/pypa/build
+twine==6.0.1  # https://github.com/pypa/twine
+
+# Code quality
+# ------------------------------------------------------------------------------
+ruff==0.13.0  # https://github.com/astral-sh/ruff
+pre-commit==4.3.0  # https://github.com/pre-commit/pre-commit
+
+# Development
+# ------------------------------------------------------------------------------
+ipdb==0.13.13  # https://github.com/gotcha/ipdb
+
+# Testing
+# ------------------------------------------------------------------------------
+pytest==8.3.4  # https://github.com/pytest-dev/pytest
+pytest-cov==6.0.0  # https://github.com/pytest-dev/pytest-cov

@@ -1,0 +1,38 @@
+# Include the README
+include README.md
+
+# Include the license file
+include LICENSE
+
+# Include the entire pykit package
+recursive-include pykit *.py
+
+# Include configuration files
+include pyproject.toml
+include Makefile
+
+# Include requirements files
+recursive-include requirements *.in *.txt
+
+# Include test files
+recursive-include tests *.py
+
+# Include documentation
+recursive-include docs *.md *.rst *.txt
+
+# Exclude unnecessary files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude __pycache__
+global-exclude *.so
+global-exclude *.dylib
+global-exclude .DS_Store
+global-exclude .git*
+global-exclude *.egg-info
+prune build
+prune dist
+prune .pytest_cache
+prune .ruff_cache
+prune .mypy_cache
+prune htmlcov
