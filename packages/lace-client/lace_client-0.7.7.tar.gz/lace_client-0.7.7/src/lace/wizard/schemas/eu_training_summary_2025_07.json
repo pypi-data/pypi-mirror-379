@@ -1,0 +1,375 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EU Public Summary of Training Content - GPAI Models",
+  "version": "2025-07",
+  "description": "Official schema derived from EU AI Office Explanatory Notice and Template (Article 53(1)(d) AI Act)",
+  "type": "object",
+  "required": ["model_identification", "training_data_overview", "data_sources", "data_governance"],
+  
+  "properties": {
+    "model_identification": {
+      "type": "object",
+      "description": "Section 1: Model and Provider Identification",
+      "required": ["provider_name", "model_name", "model_version", "release_date", "contact_email"],
+      "properties": {
+        "provider_name": {
+          "type": "string",
+          "description": "Legal name of the GPAI provider placing the model on the EU market"
+        },
+        "model_name": {
+          "type": "string",
+          "description": "Name of the general-purpose AI model"
+        },
+        "model_version": {
+          "type": "string",
+          "description": "Version identifier (e.g., v1.0, 2025-08-18, commit hash)"
+        },
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the model was placed on the EU market (YYYY-MM-DD)"
+        },
+        "contact_email": {
+          "type": "string",
+          "format": "email",
+          "description": "Public contact email for rights holders and inquiries"
+        }
+      }
+    },
+    
+    "training_data_overview": {
+      "type": "object",
+      "description": "Section 2: Training Data Overview - Modalities and Size",
+      "required": ["modalities", "size_ranges", "knowledge_cutoff"],
+      "properties": {
+        "modalities": {
+          "type": "array",
+          "description": "Data modalities included in training",
+          "items": {
+            "type": "string",
+            "enum": ["text", "image", "audio", "video", "code", "other"]
+          },
+          "minItems": 1
+        },
+        "size_ranges": {
+          "type": "object",
+          "description": "Size of training data in broad ranges per modality",
+          "properties": {
+            "text_tokens": {
+              "type": "string",
+              "enum": ["<1B", "1-10B", "10-100B", "100B-1T", ">1T", "N/A"],
+              "description": "Text data size in tokens"
+            },
+            "images": {
+              "type": "string",
+              "enum": ["<1M", "1-10M", "10-100M", ">100M", "N/A"],
+              "description": "Number of images"
+            },
+            "audio_hours": {
+              "type": "string",
+              "enum": ["<10K", "10K-100K", "100K-1M", ">1M", "N/A"],
+              "description": "Audio data in hours"
+            },
+            "video_hours": {
+              "type": "string",
+              "enum": ["<10K", "10K-100K", "100K-1M", ">1M", "N/A"],
+              "description": "Video data in hours"
+            },
+            "code_files": {
+              "type": "string",
+              "enum": ["<100K", "100K-1M", "1M-10M", ">10M", "N/A"],
+              "description": "Number of code files"
+            }
+          }
+        },
+        "knowledge_cutoff": {
+          "type": "string",
+          "format": "date",
+          "description": "Latest date of content in training data (YYYY-MM-DD)"
+        }
+      }
+    },
+    
+    "data_sources": {
+      "type": "object",
+      "description": "Section 3: Data Sources and Collection",
+      "required": ["source_types"],
+      "properties": {
+        "source_types": {
+          "type": "array",
+          "description": "Types of data sources used",
+          "items": {
+            "type": "string",
+            "enum": ["public_datasets", "licensed_private", "web_scraped", "user_generated", "synthetic"]
+          },
+          "minItems": 1
+        },
+        "public_datasets": {
+          "type": "array",
+          "description": "Main public datasets used",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Dataset name"
+              },
+              "version": {
+                "type": "string",
+                "description": "Dataset version"
+              },
+              "description": {
+                "type": "string",
+                "description": "Brief description"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Dataset URL"
+              }
+            }
+          }
+        },
+        "licensed_private_datasets": {
+          "type": "object",
+          "description": "Licensed or private datasets",
+          "properties": {
+            "description": {
+              "type": "string",
+              "description": "Description of private datasets without revealing trade secrets"
+            },
+            "license_types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Types of licenses held"
+            }
+          }
+        },
+        "web_scraped_data": {
+          "type": "object",
+          "description": "Web-scraped content details (MANDATORY for GPAI if used)",
+          "required": ["top_domains", "crawler_details", "collection_period"],
+          "properties": {
+            "top_domains": {
+              "type": "object",
+              "description": "Top domains by scraped content volume",
+              "required": ["domains_list", "measurement_method", "coverage_percentage"],
+              "properties": {
+                "domains_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]?\\.[a-zA-Z]{2,}$"
+                  },
+                  "description": "Top 10% of domains by volume (SME: top 5% or 1000, whichever lower)"
+                },
+                "measurement_method": {
+                  "type": "string",
+                  "enum": ["bytes", "tokens", "documents", "mixed"],
+                  "description": "How domain volume was measured"
+                },
+                "coverage_percentage": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100,
+                  "description": "Percentage of total scraped content these domains represent"
+                }
+              }
+            },
+            "crawler_details": {
+              "type": "object",
+              "description": "Web crawler information",
+              "required": ["crawler_names", "purpose", "behavior"],
+              "properties": {
+                "crawler_names": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Names of web crawlers used"
+                },
+                "purpose": {
+                  "type": "string",
+                  "description": "Purpose of web crawling"
+                },
+                "behavior": {
+                  "type": "string",
+                  "description": "Crawler behavior including respect for signals"
+                }
+              }
+            },
+            "collection_period": {
+              "type": "object",
+              "description": "Period of data collection",
+              "required": ["start_date", "end_date"],
+              "properties": {
+                "start_date": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "Start date of web scraping (YYYY-MM-DD)"
+                },
+                "end_date": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "End date of web scraping (YYYY-MM-DD)"
+                }
+              }
+            }
+          }
+        },
+        "user_generated_data": {
+          "type": "object",
+          "description": "User-generated or interaction data",
+          "properties": {
+            "used": {
+              "type": "boolean",
+              "description": "Whether user-generated data was used"
+            },
+            "modalities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Modalities of user data"
+            },
+            "services_products": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Services/products the data came from"
+            },
+            "consent_mechanism": {
+              "type": "string",
+              "description": "Legal basis for using user data"
+            }
+          }
+        },
+        "synthetic_data": {
+          "type": "object",
+          "description": "Synthetic or AI-generated data",
+          "properties": {
+            "used": {
+              "type": "boolean",
+              "description": "Whether synthetic data was used"
+            },
+            "percentage": {
+              "type": "string",
+              "enum": ["0%", "<5%", "5-20%", "20-50%", ">50%"],
+              "description": "Approximate percentage of training data that is synthetic"
+            },
+            "source_models": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Models that generated the synthetic data"
+            }
+          }
+        }
+      }
+    },
+    
+    "data_governance": {
+      "type": "object",
+      "description": "Section 4: Data Governance and Processing",
+      "required": ["lawful_basis", "opt_out_compliance", "illegal_content_handling"],
+      "properties": {
+        "lawful_basis": {
+          "type": "array",
+          "description": "Lawful basis for using copyrighted content",
+          "items": {
+            "type": "string",
+            "enum": ["licenses_held", "DSM_Art4_TDM", "proprietary", "public_domain", "user_tos"]
+          },
+          "minItems": 1
+        },
+        "opt_out_compliance": {
+          "type": "object",
+          "description": "Compliance with opt-out signals",
+          "required": ["respects_signals"],
+          "properties": {
+            "respects_signals": {
+              "type": "boolean",
+              "description": "Whether opt-out signals are respected"
+            },
+            "signals_checked": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["robots.txt", "ai.txt", "trust.txt_datatrainingallowed"]
+              },
+              "description": "Which opt-out signals are checked"
+            },
+            "implementation_date": {
+              "type": "string",
+              "format": "date",
+              "description": "Date when opt-out respect was implemented"
+            }
+          }
+        },
+        "illegal_content_handling": {
+          "type": "object",
+          "description": "How illegal content is handled (MANDATORY for GPAI)",
+          "required": ["removal_method", "detection_approach"],
+          "properties": {
+            "removal_method": {
+              "type": "string",
+              "description": "Method for removing illegal content from training data"
+            },
+            "detection_approach": {
+              "type": "string",
+              "description": "Approach for detecting illegal content"
+            }
+          }
+        },
+        "pii_handling": {
+          "type": "object",
+          "description": "Personal data handling",
+          "properties": {
+            "detection_methods": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Methods used to detect PII"
+            },
+            "mitigation_approaches": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Approaches to mitigate PII risks"
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "definitions": {
+    "metadata": {
+      "type": "object",
+      "description": "Metadata about the document generation",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "2025-07"
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "generator_version": {
+          "type": "string"
+        },
+        "is_gpai": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
