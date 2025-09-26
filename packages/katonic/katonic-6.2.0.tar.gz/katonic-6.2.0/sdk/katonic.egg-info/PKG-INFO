@@ -1,0 +1,313 @@
+Metadata-Version: 2.4
+Name: katonic
+Version: 6.2.0
+Summary: A Python SDK to seamlessly interact with the Katonic platform, enabling developers to access language and vision models, generate completions, and log requests directly from code.
+Author-email: "Katonic Pty Ltd." <anuja.fole@katonic.ai>
+License: MIT
+Project-URL: Homepage, https://www.katonic.ai/
+Project-URL: Documentation, https://docs.katonic.ai/
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3<2.0.0,>=1.19.12
+Requires-Dist: LunarCalendar>=0.0.9
+Requires-Dist: certifi>=2017.4.17
+Requires-Dist: click<9.0.0,>=7.1.1
+Requires-Dist: colorama>=0.4.0
+Requires-Dist: convertdate>=2.1.2
+Requires-Dist: cron-descriptor>=1.2.0
+Requires-Dist: deprecation<3.0.0,>=2.1.0
+Requires-Dist: func-timeout>=4.0.0
+Requires-Dist: gunicorn<22.0.0,>=20.1.0
+Requires-Dist: humanize>=3.0.0
+Requires-Dist: importlib-metadata>=4.8.1; python_version < "3.10"
+Requires-Dist: isodate>=0.6.0
+Requires-Dist: markdown<4.0.0,>=3.0
+Requires-Dist: mlflow<3.0.0,>=2.0.1
+Requires-Dist: msgpack<2.0.0,>=1.0.0
+Requires-Dist: packaging<25.0.0,>=21.2
+Requires-Dist: parsedatetime>=2.0.0
+Requires-Dist: protobuf<5.0.0,>=3.19.4
+Requires-Dist: pyarrow<15.0.0,>=6.0.0
+Requires-Dist: pydantic<3.0.0,>=1.8.2
+Requires-Dist: pyparsing>=2.0.0
+Requires-Dist: python-dateutil>=2.8.0
+Requires-Dist: python-dotenv>=0.19.0
+Requires-Dist: python-geohash>=0.8.0
+Requires-Dist: pyyaml<7.0.0,>=5.3
+Requires-Dist: requests<3.0.0,>=2.25.0
+Requires-Dist: scikit-learn<2.0.0,>=1.1.3
+Requires-Dist: tqdm<5.0.0,>=4.36.1
+Requires-Dist: typing-extensions<5.0.0,>=3.10.0
+Requires-Dist: zipp<4.0.0,>=3.5.0
+Requires-Dist: fastapi<1.0.0,>=0.95.0
+Requires-Dist: langchain<1.0.0,>=0.1.0
+Requires-Dist: langchain-openai<1.0.0,>=0.0.5
+Requires-Dist: langchain-anthropic<1.0.0,>=0.1.0
+Requires-Dist: langchain-google-genai<3.0.0,>=1.0.0
+Requires-Dist: langchain-groq<1.0.0,>=0.1.0
+Requires-Dist: langchain-together<1.0.0,>=0.1.0
+Requires-Dist: langchain-nvidia-ai-endpoints<1.0.0,>=0.1.0
+Requires-Dist: langchain-community<1.0.0,>=0.0.10
+Requires-Dist: cohere<6.0.0,>=4.0.0
+Requires-Dist: replicate<2.0.0,>=0.8.0
+Requires-Dist: aleph-alpha-client<4.0.0,>=2.0.0
+Requires-Dist: google-api-python-client<3.0.0,>=2.0.0
+Requires-Dist: huggingface-hub<1.0.0,>=0.15.0
+Requires-Dist: transformers<5.0.0,>=4.20.0
+Requires-Dist: tokenizers<1.0.0,>=0.13.0
+Requires-Dist: tiktoken<1.0.0,>=0.3.0
+Requires-Dist: pymongo<5.0.0,>=4.0.0
+Requires-Dist: python-jose[cryptography]<4.0.0,>=3.3.0
+Requires-Dist: cryptography<43.0.0,>=3.4.0
+Requires-Dist: redis<7.0.0,>=4.0.0
+Requires-Dist: loguru<1.0.0,>=0.6.0
+Requires-Dist: openai<2.0.0,>=1.0.0
+Requires-Dist: pycryptodome<4.0.0,>=3.10.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Dynamic: license-file
+
+<p align="center">
+    <a href="https://katonic.ai/">
+      <img src="https://katonic.ai/assets/brand/Logo.png" width="550">
+    </a>
+</p>
+<br />
+
+[![Docs Latest](https://img.shields.io/badge/docs-latest-blue.svg)](https://docs.katonic.ai/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/katonic-dev/katonic-sdk/blob/master/LICENSE)
+[![PYPI](https://img.shields.io/pypi/v/katonic.svg)](https://pypi.python.org/pypi/katonic)
+
+# Katonic SDK
+
+A Python SDK for interacting with Katonic's AI/ML platform, providing easy access to language models, vision models, and comprehensive request logging capabilities.
+
+## Features
+
+- 🤖 **Language Model Integration**: Generate completions from various LLM models
+- 👁️ **Vision Model Support**: Process text and image inputs with vision models
+- 📊 **Request Logging**: Comprehensive logging with token usage and cost tracking
+- ⚡ **Simple API**: Easy-to-use Python functions instead of raw API calls
+- 🔍 **Monitoring**: Track and analyze LLM requests across your applications
+
+## Installation
+
+```bash
+pip install katonic
+```
+
+## Model Completion
+
+### Import
+
+```python
+from katonic.llm import generate_completion
+```
+
+### generate_completion
+
+Generates a completion from a specified model.
+
+#### Parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `model_id` | str | ✅ | Unique identifier of the model (found in My Model Library under LLM Management) |
+| `data` | dict | ✅ | Input payload containing query and optional image_url |
+| `data.query` | str | ✅ | The prompt or question |
+| `data.image_url` | str | ❌ | Image URL for vision models |
+
+#### Returns
+- **Type**: `str`
+- **Description**: Model-generated response as plain text
+
+#### Finding Your Model ID
+
+To find your model ID:
+1. Navigate to **My Model Library** under **LLM Management** in the Katonic UI
+
+    ![alt text](image.png)
+2. Copy the model ID from the interface
+3. Use this ID in the `model_id` parameter
+
+### Examples
+
+#### Text Model
+
+```python
+from katonic.llm import generate_completion
+
+result = generate_completion(
+    model_id="688b552061aa55897ae98fdc",
+    data={"query": "Tell me a fun fact about space."}
+)
+
+print(result)
+# Output: "Space is completely silent because there is no atmosphere to carry sound waves."
+```
+
+#### Vision Model (Text + Image)
+
+```python
+from katonic.llm import generate_completion
+
+result = generate_completion(
+    model_id="688b552061aa55897ae98fdc",
+    data={
+        "query": "Describe what is in this image.",
+        "image_url": "https://example.com/photo.jpg"
+    }
+)
+
+print(result)
+```
+
+#### Response Format
+
+The response will contain the model's generated text.
+
+Example:
+```
+"Space is completely silent because there is no atmosphere to carry sound waves."
+```
+
+## Request Logging
+
+### Import
+
+```python
+from katonic.llm.log_requests import log_request_to_platform
+```
+
+### log_request_to_platform
+
+Logs user queries, responses, token usage, and cost details for monitoring and analysis.
+
+`model_name` can be fetched from the following section of the platform.
+
+![alt text](image-1.png)
+
+#### Parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `input_query` | str | ✅ | The original user query |
+| `response` | str | ✅ | The LLM's response to the query |
+| `user_name` | str | ✅ | The user's email or unique identifier |
+| `model_name` | str | ✅ | The LLM model name (e.g., "Openai/gpt-5-nano", "Anthropic/claude") |
+| `product_type` | str | ✅ | Type of product (e.g., "Ace") |
+| `product_name` | str | ✅ | Name of the product where the query was made |
+| `project_name` | str | ✅ | The project associated with the query |
+| `latency` | float | ✅ | API latency in seconds |
+| `status` | str | ✅ | Request status (e.g., "success", "failed") |
+| `answer_validity` | bool | ❌ | Whether the response is valid/usable (default: False) |
+| `embedding_model_name` | str | ❌ | Name of embedding model if applicable |
+
+#### Returns
+- **Success**: Returns a `message_id` (string) for tracking the logged request
+- **Failure**: Returns `None`
+
+### Example
+
+```python
+from katonic.llm.log_requests import log_request_to_platform
+
+# Log a request with comprehensive details
+message_id = log_request_to_platform(
+    input_query="tell me about katonic",
+    response="Katonic is a modern MLOps platform that helps enterprises manage AI/ML workflows efficiently.",
+    user_name="developer@company.com",
+    model_name="Openai/gpt-5-nano",
+    product_type="Ace",
+    product_name="Ace",
+    project_name="Ace",
+    latency=0.42,  # API response time in seconds
+    status="success",  # status of the request
+    embedding_model_name=None
+)
+
+print(f"Message logged with ID: {message_id}")
+```
+
+### Response Format
+
+On successful logging:
+```
+✅ Cost has been added successfully.
+Message logged with ID: 650e95d2a8c7b123f5c123ab
+```
+
+## Complete Workflow Example
+
+Here's how to use both methods together:
+
+```python
+from katonic.llm import generate_completion
+from katonic.llm.log_requests import log_request_to_platform
+import time
+
+# Step 1: Generate completion
+start_time = time.time()
+query = "Explain quantum computing in simple terms"
+model_id = "688b552061aa55897ae98fdc"
+
+result = generate_completion(
+    model_id=model_id,
+    data={"query": query}
+)
+
+# Step 2: Calculate latency
+latency = time.time() - start_time
+
+# Step 3: Log the request
+message_id = log_request_to_platform(
+    input_query=query,
+    response=result,
+    user_name="developer@company.com",
+    model_name="Openai/gpt-4",
+    product_type="Research",
+    product_name="QA Assistant",
+    project_name="Science Education",
+    latency=latency,
+    status="success"
+)
+
+print(f"Response: {result}")
+print(f"Logged with ID: {message_id}")
+```
+
+## Notes
+
+### Model Completion
+- Use the correct `model_id` provided in the Katonic UI
+- For image-based models, ensure `image_url` is accessible over the internet
+- The SDK handles API calls internally, so you only need to focus on inputs and outputs
+
+### Request Logging
+- The SDK automatically calculates token usage and cost (if pricing data is available)
+- If the request fails, you will see a warning message in the console
+- Use the returned `message_id` to track logged requests
+
+## Requirements
+
+- Python 3.7+
+- Internet connection for API calls
+- Valid Katonic platform credentials
+
+## Support
+
+For issues, questions, or feature requests, please contact the Katonic support team or refer to the official Katonic platform documentation.
+
+## License
+
+Please refer to your Katonic platform agreement for licensing terms.
