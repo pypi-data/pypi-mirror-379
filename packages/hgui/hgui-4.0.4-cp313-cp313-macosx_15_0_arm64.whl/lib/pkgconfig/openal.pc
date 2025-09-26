@@ -1,0 +1,12 @@
+prefix=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmphr6dq6fq/wheel/platlib
+exec_prefix=${prefix}
+libdir=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmphr6dq6fq/wheel/platlib/lib
+includedir=/var/folders/0l/vnhtqbm91q5dh64_1cyyn8v00000gn/T/tmphr6dq6fq/wheel/platlib/include
+
+Name: OpenAL
+Description: OpenAL is a cross-platform 3D audio API
+Requires: 
+Version: 1.24.3
+Libs: -L${libdir} -lopenal 
+Libs.private: -pthread -Wl,-framework,AudioToolbox -Wl,-framework,AudioUnit,-framework,ApplicationServices -Wl,-framework,CoreAudio -ldl -lm
+Cflags: -I${includedir} -I${includedir}/AL -DAL_LIBTYPE_STATIC
