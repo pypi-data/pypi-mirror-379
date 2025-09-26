@@ -1,0 +1,8 @@
+observify/__init__.py,sha256=wvYmljYDUPl9nQd5QWPTmaCc9C90H7TT7rJvGCgm59M,616
+observify/batching.py,sha256=8ckIBvxxmsfXDVi8GSkPdcnAdKSyP-ovGp6nTSQ6WPw,4559
+observify/middleware.py,sha256=t_IYjyCceX8-pr1lHbvInqFDyLiFf7MMtFLiGnZr11E,7089
+observify/types.py,sha256=b6wKTbh6tSpyZlNhIQZMV63LJtd-Y0s1BTbX_mFrKhA,939
+observify/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+observify-1.0.0.dist-info/METADATA,sha256=pDaueEU-s4537zdW-s3RJ_lRlJu107afig3Lb_6K4RQ,618
+observify-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+observify-1.0.0.dist-info/RECORD,,
