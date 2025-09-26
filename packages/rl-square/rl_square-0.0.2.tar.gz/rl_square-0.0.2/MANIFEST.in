@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include NOTICE
+include requirements.txt
+recursive-include RL2 *.py
+recursive-include RL2/trainer/config *.yaml
