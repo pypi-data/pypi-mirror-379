@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: mylair
+Version: 0.0.1
+Summary: A collection of fun terminal games (Odd/Even, RPS, Guess Number, etc.)
+Author-email: Arhan Ali <arhanali7943@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://pypi.org/project/mylair/
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: license-file
+
+# MyLair
+
+A fun collection of terminal games created by Arhan Ali.  
+
+Included games:
+- Odd/Even
+- Rock, Paper, Scissors
+- Guess the Number
+- f2f, i actually forgot what it is
+
+Have fun playing in your terminal!  
+
+*Fun fact:* Tom Holland's Peter Parker is the best Spider-Man 🕷️

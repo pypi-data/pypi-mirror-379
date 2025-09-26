@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mylair"
+version = "0.0.1"
+authors = [
+  { name="Arhan Ali", email="arhanali7943@gmail.com" }
+]
+description = "A collection of fun terminal games (Odd/Even, RPS, Guess Number, etc.)"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+
+[project.urls]
+Homepage = "https://pypi.org/project/mylair/"
