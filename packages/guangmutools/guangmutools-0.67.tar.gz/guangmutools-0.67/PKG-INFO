@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: guangmutools
+Version: 0.67
+Summary: collection of some tools for guangmu system
+Home-page: https://gitlab.xsjcs.cn/kefu/guangmu/commonutils.git
+Author: caimiao
+Author-email: caimiao@kingsoft.com
+License: MIT Licence
+Keywords: helpers,tools,widgets
+Platform: any
+Requires-Dist: pika
+Requires-Dist: redis
+Requires-Dist: pymysql
+Requires-Dist: py2neo
+Requires-Dist: shortuuid
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: summary
+
+collection of tools
