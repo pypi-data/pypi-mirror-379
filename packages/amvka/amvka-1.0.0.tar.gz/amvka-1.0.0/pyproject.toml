@@ -1,0 +1,74 @@
+[build-system]
+# Simplified build requirements (setuptools_scm removed because version is static in [project])
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amvka"
+version = "1.0.0"
+description = "🎯 AI Command Assistant - Convert natural language to shell commands using AI, Now Ai is into Your terminal"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Lalit Sangore", email = "lalit.sangore@example.com"}
+]
+maintainers = [
+    {name = "Lalit Sangore", email = "lalit.sangore@example.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers", 
+    "Intended Audience :: System Administrators",
+
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8", 
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Shells",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: User Interfaces",
+    "Environment :: Console",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.31.0",
+    "google-generativeai>=0.3.0", 
+    "openai>=1.0.0",
+    "click>=8.0.0",
+    "colorama>=0.4.0"
+]
+keywords = ["cli", "ai", "natural-language", "shell", "command", "automation", "assistant"]
+
+[project.urls]
+Homepage = "https://github.com/lalitt08/amvka-ai-assistant-terminal"
+Repository = "https://github.com/lalitt08/amvka-ai-assistant-terminal"
+Issues = "https://github.com/lalitt08/amvka-ai-assistant-terminal/issues"
+Documentation = "https://github.com/lalitt08/amvka-ai-assistant-terminal/blob/main/README.md"
+Changelog = "https://github.com/lalitt08/amvka-ai-assistant-terminal/blob/main/CHANGELOG.md"
+
+[project.scripts]
+amvka = "amvka.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.910",
+    "build>=0.7.0",
+    "twine>=3.0.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+amvka = ["py.typed"]
