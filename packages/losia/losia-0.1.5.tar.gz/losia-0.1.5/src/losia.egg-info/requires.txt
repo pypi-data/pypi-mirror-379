@@ -1,0 +1,10 @@
+bitsandbytes
+datasets
+loguru
+matplotlib
+numpy
+tensorly
+torch
+tqdm
+transformers
+ninja
