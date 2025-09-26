@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: calypr_admin
+Version: 0.0.2
+Summary: A CLI to administer calypr projects.
+Home-page: https://github.com/calypr/admin
+Author: walsbr
+Author-email: walsbr@ohsu.edu
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click==8.2.1
+Requires-Dist: pytz==2025.2
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: halo==0.0.31
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: deepdiff==8.6.0
+Requires-Dist: orjson==3.11.2
+Requires-Dist: nested_lookup==0.2.25
+Requires-Dist: gen3==4.27.4
+Requires-Dist: PyJWT==2.8.0
+Requires-Dist: pydantic==2.11.7
+Requires-Dist: requests==2.32.5
+Requires-Dist: ndjson==0.3.1
+Requires-Dist: inflection==0.5.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: deepmerge==2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+
+![](docs/gen3_tracker-logo.png)
+# Calypr Admin
+
+Utilities to manage Calypr projects.
+
+## Quick Start
+### Installation
+```
+
+$ pip install calypr_admin
+
+$ calypr_admin --version
+version: 0.0.1
+
+```
+
+
+### Use
+
+```
+Usage: calypr_admin [OPTIONS] COMMAND [ARGS]...
+
+  A CLI for managing Calypr projects.
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  ping           Verify and test connectivity.
+  projects       Manage Calypr projects.
+  collaborators  Manage project membership.
+
+```
+
+## User Guide
+* See [use cases and documentation](https://calypr.github.io/)
+
+## Contributing
+* See [CONTRIBUTING.md](CONTRIBUTING.md)
