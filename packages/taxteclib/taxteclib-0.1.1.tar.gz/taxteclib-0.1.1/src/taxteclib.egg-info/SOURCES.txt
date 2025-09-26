@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/dummy_class.py
+src/taxteclib.egg-info/PKG-INFO
+src/taxteclib.egg-info/SOURCES.txt
+src/taxteclib.egg-info/dependency_links.txt
+src/taxteclib.egg-info/top_level.txt
+tests/test_dummy_class.py
