@@ -1,0 +1,10 @@
+python_databases/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_databases/elasticsearch_infrastructure/__init__.py,sha256=cjs95C1yBZpc3kEdkcXEamDvQGsO6ob5r5ttFCJfDaA,314
+python_databases/elasticsearch_infrastructure/elasticsearch.py,sha256=A5NwzqMIcAyuMLhVIlbpoIYO18jQFqWmtaZ7XyeLzzw,10259
+python_databases/postgresql_infrastructure/__init__.py,sha256=h1eJx0ogbtcF6UnN2c7uW5iCuadDab3So1VI15y3kWA,150
+python_databases/postgresql_infrastructure/postgresql.py,sha256=zH8y5w2k2djhHLefDJhlGwa6MtoZKONhJ5vMxIxDdlc,2856
+python_databases-0.1.5.dist-info/licenses/LICENSE,sha256=cSikHY6SZFsPZSBizCDAJ0-Bjjzxt-JtX6TVbKxwimo,1067
+python_databases-0.1.5.dist-info/METADATA,sha256=SccVOpAUU_gPpKNiHgZO2DANGUgjFw7pGcpf59hgUiA,1792
+python_databases-0.1.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+python_databases-0.1.5.dist-info/top_level.txt,sha256=fXcMUntaYJfKeFS7FjQ6DY4WVXYBsgdrDmhOudYs-vg,17
+python_databases-0.1.5.dist-info/RECORD,,
