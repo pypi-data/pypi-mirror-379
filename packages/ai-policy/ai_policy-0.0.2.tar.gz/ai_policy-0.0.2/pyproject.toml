@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-policy"
+version = "0.0.2"
+description = "Primitives for documenting and linting AI policy statements."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "White Circle" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 3 - Alpha"
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_policy"]
+
+
