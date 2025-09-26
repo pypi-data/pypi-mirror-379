@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: hulomhack
+Version: 2.0
+Summary: лол взломай сайт
+Home-page: https://github.com/vova2f/hulom
+Author: vova
+Author-email: vovk4756@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: somepackage>=1.1.0
+Requires-Dist: ipaddress==1.0.23
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+это библиотека hulom она позволяет взламывать сайты некоторые функции:
+
+узнать ip сайта ip('host')
+
+подключиться к сайту connect('host', 'port')
+
+пробить айпи helom('ip')
+
+также двойные команды:
+
+пробить сайт helom_ip('host') (узнаёт айпи и пробивает его)
+
+ну это основные команды
+
+ещё будут другие чтобы не затягивать описание я их не будду вводить
