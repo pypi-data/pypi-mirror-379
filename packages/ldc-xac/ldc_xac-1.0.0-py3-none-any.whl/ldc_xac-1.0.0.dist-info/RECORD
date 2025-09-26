@@ -1,0 +1,9 @@
+ldc_xac-1.0.0.dist-info/licenses/LICENSE,sha256=KpWDSYYiuFmEjCpaKh7vLGaiDKnnopVY2Esf5ocniy4,1086
+xac/__init__.py,sha256=ys5_TpAyGq5ea9_lzQgMekOLNA8jfbxE5dG325whOns,303
+xac/api_caller.py,sha256=773QnZzILMI8tCj0aYVy73Rg8zRdxNNJ3k3ubceCHUk,8316
+xac/config.py,sha256=RvPQiBlYVpa1Xauvl75yfour83X_o5bVVxoqOE4M_LY,145
+xac/constants.py,sha256=hugc_7HW_09RwW-AKsp1riukiiFLVdf49UORP0252jQ,345
+ldc_xac-1.0.0.dist-info/METADATA,sha256=yHw93e7XSCQaSEAElasswz2-QNMYTuIECAqMuL-UqHk,5785
+ldc_xac-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ldc_xac-1.0.0.dist-info/top_level.txt,sha256=ej7s67bhVe0tZVOyesVNdDewuayzq7YSHopCQm1yj90,4
+ldc_xac-1.0.0.dist-info/RECORD,,
