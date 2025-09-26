@@ -1,0 +1,10 @@
+py-commons-ip==0.3.0
+xmlschema==4.1.0
+edtf-validate==2.0.0
+sipin-eark-models==0.0.11
+
+[dev]
+pytest==8.4.1
+ruff==0.12.7
+build==1.3.0
+twine==6.1.0
