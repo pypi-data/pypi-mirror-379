@@ -1,0 +1,9 @@
+./.gitignore,sha256=yqqJOtnaxrPslPU1x9qYdJNnIDorgmukIhiOhdywup0,3175
+./README.md,sha256=Kp_SVr99L_dC7Cnenng0A1MS2vzEdHTMq7zUgmHpqLA,1119
+./pyproject.toml,sha256=HePKgFoHhmCO_AUmdwC74bQ_Nnkp6sNgYZATbBDCPpI,758
+./.github/workflows/publish-to-pypi.yml,sha256=YOC57c7N1_DubsYGDC1uoSr7LeBX65cB-cArrxIIozk,996
+./inline_blocks/__init__.py,sha256=dgoOFQ1sPHD4PWH3i-LzmQZQOQb19IlAaz-fey4PMoQ,2181
+./tests/test_inline-blocks.py,sha256=Zik-M2YdCZAW4rxhue5ELND-Ep19XwZKJrATlHuYzZ8,3045
+pymdownx_inline_blocks-0.1.2.dist-info/METADATA,sha256=4C5SZTec6yN_hHtTLObmhC-C0VvCVsYCh-bmcfMLGUM,435
+pymdownx_inline_blocks-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pymdownx_inline_blocks-0.1.2.dist-info/RECORD,,

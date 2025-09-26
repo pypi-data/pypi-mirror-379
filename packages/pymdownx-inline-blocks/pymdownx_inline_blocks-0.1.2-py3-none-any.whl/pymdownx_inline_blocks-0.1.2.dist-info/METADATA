@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: pymdownx-inline-blocks
+Version: 0.1.2
+Summary: A Python Markdown extension to add inline block elements based on PyMdown Extensions.
+Project-URL: Repository, https://github.com/joapuiib/pymdownx-inline-blocks
+Author-email: Joan Puigcerver <joapuiib@gmail.com>
+Maintainer-email: Joan Puigcerver <joapuiib@gmail.com>
+Requires-Python: >=3.5
+Requires-Dist: markdown>=3.4
+Requires-Dist: pymdown-extensions>=10.0
