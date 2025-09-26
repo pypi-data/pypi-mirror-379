@@ -1,0 +1,32 @@
+name: setup-environ
+description: Setup the CI environ with Poetry & Pre-Commit Caching
+
+inputs:
+  python-version:
+    description: The Python version to build your environment with.
+  runner:
+    description: The Runner to build your environment on.
+
+runs:
+  using: composite
+  steps:
+  - run: |
+      git config user.name github-actions
+      git config user.email github-actions@github.com
+      git config pull.ff true
+    shell: bash
+  - uses: astral-sh/setup-uv@v5
+    env:
+      # Configure a relative location for the uv cache
+      UV_CACHE_DIR: ~/.cache/uv
+    with:
+      python-version: ${{ matrix.python-version }}
+  - uses: actions/setup-python@v5
+    with:
+      python-version: ${{ inputs.python-version }}
+  - uses: actions/cache@v4
+    with:
+      path: ~/.cache/
+      key: ${{ inputs.runner }}|${{ inputs.python-version }}|${{ hashFiles('uv.lock') }}|${{ hashFiles('.pre-commit-config.yaml') }}
+  - run: make install
+    shell: bash

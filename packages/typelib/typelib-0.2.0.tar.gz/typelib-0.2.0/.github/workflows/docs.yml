@@ -1,0 +1,48 @@
+name: Make Documentation
+
+on:
+  push:
+    branches: ["main"]
+    tags-ignore:
+    - '**'
+  release:
+    types:
+    - published
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  contents: write
+
+jobs:
+  documentation:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest ]
+        python-version: [ "3.12" ]
+    steps:
+    - uses: actions/create-github-app-token@v1
+      id: app-token
+      with:
+        app-id: ${{ vars.RELEASE_BOT_APP_ID }}
+        private-key: ${{ secrets.RELEASE_BOT_APP_PKEY }}
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ steps.app-token.outputs.token }}
+        fetch-depth: 0
+        fetch-tags: true
+    - uses: ./.github/actions/bootstrap-environ
+      id: bootstrap-environ
+      with:
+        python-version: ${{ matrix.python-version }}
+        runner: ${{ matrix.os }}
+    - name: Update the Changelog
+      run: |
+        make changelog
+        git push origin ${{ github.ref_name }}
+    - name: Build the Docs
+      run: make docs

@@ -1,0 +1,21 @@
+name: Validate
+on:
+  push:
+    branches:
+      - "**"
+    tags-ignore:
+      - "**"
+
+jobs:
+  ci:
+    uses: ./.github/workflows/.validate-matrix.yml
+    secrets: inherit
+    name: "${{ matrix.os }} (Python ${{ matrix.python-version }})"
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    with:
+      runner: ${{ matrix.os }}
+      python-version: ${{ matrix.python-version }}
