@@ -1,0 +1,15 @@
+uh_soundscapes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uh_soundscapes/astra_reader.py,sha256=QD00n9g8Ohbwy0WVn49F1Shkm8K8dGuHSjzpC1W9GDI,15536
+uh_soundscapes/data_processing.py,sha256=6dcALZcwcy5QFb8vcOIO-nge58D_MTdHS6y-aDgBp5I,1958
+uh_soundscapes/dataset_reader.py,sha256=46xZF3CBmLwmGNk8aj7xpqImjmzGbmbsatFkCmvgoKo,8424
+uh_soundscapes/dataset_standardization.py,sha256=SWu23hk-HagFOVV4XZ6tCx9-6PA79yyDiohphhlaKmU,28524
+uh_soundscapes/esc50_reader.py,sha256=xS0l0LOh47UQ88-C_GgUUi3ED-jfRyDHN8Fy2RadCM4,9787
+uh_soundscapes/orex_reader.py,sha256=aiSJHyZOUTLEQa77yCOcrNVhaqbxTTdwthTdFKju7h0,8196
+uh_soundscapes/shared_explosions_reader.py,sha256=aFZ-HE9exDscPEbq-itM7nZ7AFHLjRB6P5HwYJxbNVo,13386
+uh_soundscapes/standard_labels.py,sha256=UT6Cz3y1m1-x1PGC49bNvKmSjGHnKzgq0i5ip_j8nPg,20948
+uh_soundscapes/test_readers.py,sha256=4CyUHfcKTKtytyDb91LG2ofmuKTwQm_ZsCNjJJyWAtQ,1168
+uh_soundscapes-1.1.6.dist-info/licenses/LICENSE,sha256=JCGLs1_MVyih95WqjZM3BsMn8g7ez5CAPARt5IoLR_Q,11355
+uh_soundscapes-1.1.6.dist-info/METADATA,sha256=Lw13FQL2-t7CsOP16bcEtuj5E4fdRZBQQuBUCtyW8NQ,6934
+uh_soundscapes-1.1.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+uh_soundscapes-1.1.6.dist-info/top_level.txt,sha256=9aukewOSLa1QDNfmZQDD5cHpR8fh4IabtCO7EfWqIf8,15
+uh_soundscapes-1.1.6.dist-info/RECORD,,
