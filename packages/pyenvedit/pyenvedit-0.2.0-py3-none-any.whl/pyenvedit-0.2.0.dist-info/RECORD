@@ -1,0 +1,10 @@
+envedit/__init__.py,sha256=NyepvNF_qHw5yf9x5b6xhWzfprdk_BSAztXpu73HrMU,74
+envedit/cli.py,sha256=Fm7h_lbWc41BGToDx2bRInITETaKnXaLxYJCslVmRuY,4069
+envedit/env_parser.py,sha256=dwTllQSEHFNgkheo0EoJSgcMneMmJqt4nLDA2fbc_qE,4078
+envedit/tui.py,sha256=R51cRUftBUNwaXCdJgm3I813XrczuwN5Mm5vuYkiu7Q,8042
+pyenvedit-0.2.0.dist-info/licenses/LICENSE,sha256=EGm8xTK4JmKWt9SjFU651CMKo0D9s-4yYsIxO_KCCy8,1071
+pyenvedit-0.2.0.dist-info/METADATA,sha256=yhuJD8D49oDatH3Nko6ZRjLcDvkyk8maccevNqgpN7M,3522
+pyenvedit-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyenvedit-0.2.0.dist-info/entry_points.txt,sha256=y7LrQist4NC33vc05n980MBwlRBRdTpbmI5Rp1Skd3M,47
+pyenvedit-0.2.0.dist-info/top_level.txt,sha256=YTGaK-F9QXYera7_eG6Sj-3F5aP4vJJhsCj7uaa8vJw,8
+pyenvedit-0.2.0.dist-info/RECORD,,
