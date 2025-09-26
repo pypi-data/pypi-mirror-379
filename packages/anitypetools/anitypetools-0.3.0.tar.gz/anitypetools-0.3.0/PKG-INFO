@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: anitypetools
+Version: 0.3.0
+Requires-Python: >=3.7
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: m3u8>=3.6.0
+Dynamic: requires-dist
+Dynamic: requires-python
