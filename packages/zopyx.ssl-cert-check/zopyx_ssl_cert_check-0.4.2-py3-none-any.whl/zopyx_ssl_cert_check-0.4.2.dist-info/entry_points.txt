@@ -1,0 +1,2 @@
+[console_scripts]
+check-ssl-domains = zopyx.ssl_cert_check.main:main
