@@ -1,0 +1,15 @@
+libpsc/utils.py,sha256=1YmS0EjMd2QiNBd5Ts0QWbggyjVlumx0Wq1mqofIS7M,15515
+libpsc/_core.cp38-win_amd64.pyd,sha256=ev-ck_wPtaY9VyZWlGTHCue8mibBCMA87CmITggjQbs,1731072
+libpsc/__init__.py,sha256=4X_1AOsRoMlJLkcBsRNG7_5H-dkfcbyxgbP6q-xqGyg,1606
+libpsc-0.1.dist-info/DELVEWHEEL,sha256=JCcb6649u4wDaXEUK6kBa7IZRu5Ny17gHUQH7TEs8nU,241
+libpsc-0.1.dist-info/LICENSE,sha256=qBfx_zVp5hYRxIY9AnuEUhyf8RRV5KfbtGBKS_cdikk,1086
+libpsc-0.1.dist-info/METADATA,sha256=JHkKdwjWo0jR57AmbPET0ULbBSIBG2jxu5LPcjA-ugM,76
+libpsc-0.1.dist-info/RECORD,,
+libpsc-0.1.dist-info/top_level.txt,sha256=6muHRf46OTPmNbDVmoeuTZNiY8w8vJWv47ob5GzHUt8,7
+libpsc-0.1.dist-info/WHEEL,sha256=2M046GvC9RLU1f1TWyM-2sB7cRKLhAC7ucAFK8l8f24,99
+libpsc.libs/.load-order-libpsc-0.1,sha256=zm3Cq3F7gwUDPoAEEGSqsqK5t6deWvpu-MlStIx_cus,232
+libpsc.libs/msvcp140-24e15af6186124e0e662805e8330f910.dll,sha256=YZ8xhS6Uc9x4W6pabGdgusDrzM-_Db3MN128rtOkass,554496
+libpsc.libs/qhull_r-db40b97f1d3c1b1cfbdd6854dd19511b.dll,sha256=20C5fx08Gxz73WhU3RlRG1tkCAWdvbwybn0mNeejvZc,450560
+libpsc.libs/tbb12-362b530448df235ad2751c00b7d8c747.dll,sha256=zMH6Onzq02dzKhrJZ3aPg3NKvvHN3xWTo-DyC6V9zB8,342528
+libpsc.libs/vcomp140-55aba23cdcd6484fbb06f4155b8ca75a.dll,sha256=VauiPNzWSE-7BvQVW4ynWt_OeogfEK_QxJRXFl5ncWQ,193152
+libpsc.libs/vcruntime140_1-34048abaa070ecc13b318cea31425f4c.dll,sha256=NASKuqBw7ME7MYzqMUJfTKPt0TPTUDGKxlJZ5gWMizI,37256
