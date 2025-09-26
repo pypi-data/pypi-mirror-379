@@ -1,0 +1,8 @@
+synthik/__init__.py,sha256=CuK66_vLqCkaU0pV6IdMPUVjzBJkJT_xUCeRVuRMmKE,313
+synthik/client.py,sha256=PFAkhZcip316mcz0Gf0-9VxGjoZcKlBK8nnMACfzwKg,184
+synthik/endpoints.py,sha256=_VDfyYXgmpk-Gr1Y1NlwaWDwPVmzhtSjbY-sEMZN22M,3304
+synthik/http.py,sha256=tn4FiHHQ9pBygwaDgrPVImcFbzf3DMaAU6U3BHiE7eU,2977
+synthik/types.py,sha256=r0OtUf9-4m6PiKfwy0d71T_8XbTQQGIpoEJM25rWSkY,4432
+synthik_client-0.1.0.dist-info/METADATA,sha256=_pdZMBbxFNeV-izScYzrF29mvS8I9aggzMsgD8Kt0PM,1559
+synthik_client-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+synthik_client-0.1.0.dist-info/RECORD,,
