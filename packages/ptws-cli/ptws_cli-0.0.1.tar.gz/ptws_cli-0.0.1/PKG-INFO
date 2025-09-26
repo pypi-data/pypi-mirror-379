@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: ptws-cli
+Version: 0.0.1
+Summary: Placeholder alias for the PenTest.WS CLI. Install `ptws` (pulled automatically).
+Author-email: "PenTest.WS" <support@pentest.ws>
+Project-URL: Homepage, https://pentest.ws
+Project-URL: Source, https://github.com/PenTestWS
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Security
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ptws>=0.0.1
+Dynamic: license-file
+
+# ptws-cli (placeholder alias)
+
+This is a placeholder alias for the forthcoming **PenTest.WS CLI**.
+
+Installing `ptws-cli` will install the canonical package: **`ptws`**.
+
+-   Canonical package: https://pypi.org/project/ptws/
+-   Publisher: PenTest.WS (https://pentest.ws)
+-   GitHub: https://github.com/PenTestWS

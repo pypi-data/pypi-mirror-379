@@ -1,0 +1,20 @@
+[project]
+name = "ptws-cli"
+version = "0.0.1"
+description = "Placeholder alias for the PenTest.WS CLI. Install `ptws` (pulled automatically)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "PenTest.WS", email = "support@pentest.ws" }]
+dependencies = ["ptws>=0.0.1"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Information Technology",
+  "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://pentest.ws"
+Source = "https://github.com/PenTestWS"
