@@ -1,0 +1,12 @@
+lark
+pandas
+openpyxl
+
+[dev]
+pytest
+pylint
+twine
+build
+
+[test]
+pytest
