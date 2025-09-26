@@ -1,0 +1,15 @@
+thinkfic_downloader/__init__.py,sha256=4GsBN_pnfKhggv9xQXodLiSPQpwM2-9qZXc4w07hN0g,71
+thinkfic_downloader/config.py,sha256=1Up9Ksrrnmuae-pAkjauwUMEJsW9o5uhlcvmgl9rWUU,1478
+thinkfic_downloader/logs.py,sha256=6WbPAgvHsFGlgXsqF73FGVcWqf7yzNqdfJfzhkj2h3w,1367
+thinkfic_downloader/slides/__init__.py,sha256=pZgfztiWLJm7w1xXmuUa6vUdDF3AjUob1ocgayA_TbA,129
+thinkfic_downloader/slides/cli.py,sha256=lFfYqzGeBqx7IAeLdar8T-29N2i6iS8HhO3Md-EyaiE,1671
+thinkfic_downloader/slides/core.py,sha256=Lb8xRdLx_T6LxTAah5kLewDO67TlMuIkkYS0uWaTEm4,2379
+thinkfic_downloader/video/__init__.py,sha256=9BsrbTVuqh-6DKEegpHvdykM6u2BNo-n5rkS9q-wNyM,43
+thinkfic_downloader/video/cli.py,sha256=RaopkMO1_mj8LTgGdf0zS23MInJqkN0caLiwZU1twrY,1383
+thinkfic_downloader/video/core.py,sha256=skTmnjQNrBbgYxy-2wmAfJZcmQRXt8Vk7O0ZNJvJS9E,2806
+thinkfic_downloader-0.1.1.dist-info/licenses/LICENSE,sha256=0O4QPAqUdRyPHT9lk3y70RH6oLBL4pB0yrovTXhWvEo,1097
+thinkfic_downloader-0.1.1.dist-info/METADATA,sha256=Jhh9Jr8cDlNcod97x6VTwxcQBuhAa5Au9RNHHHSAQ5o,4146
+thinkfic_downloader-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+thinkfic_downloader-0.1.1.dist-info/entry_points.txt,sha256=bN3bpnHCpvD2ilrPdDlr8Ndv3stzrwzasCdNj7wqL1A,124
+thinkfic_downloader-0.1.1.dist-info/top_level.txt,sha256=boQVQnM_8_Ej8LU52GOwMqlMTojuWhCLfZV4GbBuxaA,20
+thinkfic_downloader-0.1.1.dist-info/RECORD,,
