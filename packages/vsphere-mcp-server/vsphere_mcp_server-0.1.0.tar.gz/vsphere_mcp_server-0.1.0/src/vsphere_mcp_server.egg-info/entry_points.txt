@@ -1,0 +1,2 @@
+[console_scripts]
+vsphere-mcp-server = vsphere_mcp_server.server:main
