@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: alphabuilder_risk
+Version: 0.0.1.0
+Summary: Alpha risk library for quantitative finance research
+Home-page: https://alphabuilder.xyz/
+Author: Geet Mukherjee
+Author-email: mukherjeegeet3@gmail.com
+Project-URL: Risk, https://alphabuilder.xyz/risk
+Project-URL: Changelog, https://alphabuilder.xyz/changelog
+Project-URL: Documentation, https://alphabuilder.xyz/docs
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas<3.0,>=1.3
+Requires-Dist: numpy<2.0,>=1.21
+Requires-Dist: requests>=2.28.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AlphaBuilder-Risk
+
