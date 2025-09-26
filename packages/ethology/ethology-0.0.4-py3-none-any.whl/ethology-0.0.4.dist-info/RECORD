@@ -1,0 +1,16 @@
+ethology/__init__.py,sha256=F8wt2qsyhNDMtZDJL7JmaF_noS9JHU65tRMF7bmq72k,284
+ethology/io/__init__.py,sha256=VTWMgoMTXGipptd-VdRGJa4f9-poGn3Mad1aZ8j-Nnk,44
+ethology/io/annotations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ethology/io/annotations/load_bboxes.py,sha256=itCZzibxpBSnshBJav40E3JoPBXbUsrroNxnQot8kic,24894
+ethology/io/annotations/save_bboxes.py,sha256=iul5eFAfz5SntJt0-oM0F2bmHquo5PyDPETfw_0WtiU,9579
+ethology/io/annotations/validate.py,sha256=zxxqMxdJglrcZoms3ux8-MvRFzSvm5jslkleCT3dmJg,19349
+ethology/io/annotations/json_schemas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ethology/io/annotations/json_schemas/utils.py,sha256=XDvyGr0cprYpyXLI8A9G_9dcSHyfX9--urXCX8lZzvI,5019
+ethology/io/annotations/json_schemas/schemas/COCO_schema.json,sha256=JWj34kAlpxnYKOyOoiWD4jLLyRzPdwTBaowjTwSbmJQ,2191
+ethology/io/annotations/json_schemas/schemas/README.md,sha256=uQlJ3oMdStPiWII2m6XHqs5wvAl8GhZT9gvoTRz_v7Y,1685
+ethology/io/annotations/json_schemas/schemas/VIA_schema.json,sha256=A1jaBT5Z2vrlQtu-a2cHY0UlurzvW7eXSD7UeuMhGos,3631
+ethology-0.0.4.dist-info/licenses/LICENSE,sha256=G8A_1A_C2ZH30IC-q11bjCNy2v5GKLIMwZ5w044ghPY,1493
+ethology-0.0.4.dist-info/METADATA,sha256=hM9RoZrL8J1ICPYM5ZtPZosdhDpkKs5P5eUY02MI654,3616
+ethology-0.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ethology-0.0.4.dist-info/top_level.txt,sha256=fEamg7uqmdUNWts7-JHWn5g33zxIbuDITkcVXZcu0MY,9
+ethology-0.0.4.dist-info/RECORD,,
