@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+odataormpy/__init__.py
+odataormpy.egg-info/PKG-INFO
+odataormpy.egg-info/SOURCES.txt
+odataormpy.egg-info/dependency_links.txt
+odataormpy.egg-info/requires.txt
+odataormpy.egg-info/top_level.txt
+odataormpy/exception/__init__.py
+odataormpy/exception/exception.py
+odataormpy/orm/orm.py
+odataormpy/orm/orm_object.py
+odataormpy/session/__init__.py
+odataormpy/session/session.py
