@@ -1,0 +1,12 @@
+.py[cod]
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.pdm-python
+target/
+test_local.py
+Agents.md
+*.so
+Makefile
+site/

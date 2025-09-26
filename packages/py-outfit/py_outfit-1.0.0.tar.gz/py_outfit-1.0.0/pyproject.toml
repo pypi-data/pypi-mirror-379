@@ -1,0 +1,55 @@
+[build-system]
+requires = ["maturin>=1,<2"]
+build-backend = "maturin"
+
+[project]
+name = "py-outfit"
+
+# take version from Cargo.toml
+dynamic = ["version"]
+
+description = "Python bindings for Outfit (Rust) — Gauss IOD, ephemerides, etc."
+authors = [{ name = "FusRoman", email = "roman.le-montagner@ijclab.in2p3.fr" }]
+dependencies = [
+    "maturin>=1.9.4",
+    "pip>=25.2",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "astropy>=7.1.0",
+    "pyarrow>=21.0.0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["astronomy", "orbit-determination", "rust", "pyo3", "maturin"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: CeCILL-C Free Software License Agreement (CECILL-C)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[tool.pdm]
+distribution = false
+
+[dependency-groups]
+dev = [
+    "ipython>=9.5.0",
+    "pytest>=8.4.2",
+    "mkdocs-material>=9.6.20",
+    "mkdocstrings[python]>=0.30.1",
+    "mkdocs-autorefs>=1.4.3",
+    "black>=25.9.0",
+    "mike>=2.1.3",
+]
