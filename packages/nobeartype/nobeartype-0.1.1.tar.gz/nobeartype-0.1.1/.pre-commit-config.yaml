@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: update-readme-examples
+        name: Update README examples from NoBearType docstring
+        language: system
+        entry: python scripts/update_readme_examples.py
+        pass_filenames: false
+        stages: [pre-commit, pre-push]
