@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS">
+<title>FIEライブラリ: 全焦点画像生成</title>
+<link href="fvalg-prod.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.6-FASTSP-p2 -->
+<script type="text/javascript">
+<!--
+function changeDisplayState (e){
+  var num=this.id.replace(/[^[0-9]/g,'');
+  var button=this.firstChild;
+  var sectionDiv=document.getElementById('dynsection'+num);
+  if (sectionDiv.style.display=='none'||sectionDiv.style.display==''){
+    sectionDiv.style.display='block';
+    button.src='open.gif';
+  }else{
+    sectionDiv.style.display='none';
+    button.src='closed.gif';
+  }
+}
+function initDynSections(){
+  var divs=document.getElementsByTagName('div');
+  var sectionCounter=1;
+  for(var i=0;i<divs.length-1;i++){
+    if(divs[i].className=='dynheader'&&divs[i+1].className=='dynsection'){
+      var header=divs[i];
+      var section=divs[i+1];
+      var button=header.firstChild;
+      if (button!='IMG'){
+        divs[i].insertBefore(document.createTextNode(' '),divs[i].firstChild);
+        button=document.createElement('img');
+        divs[i].insertBefore(button,divs[i].firstChild);
+      }
+      header.style.cursor='pointer';
+      header.onclick=changeDisplayState;
+      header.id='dynheader'+sectionCounter;
+      button.src='closed.gif';
+      section.id='dynsection'+sectionCounter;
+      section.style.display='none';
+      section.style.marginLeft='14px';
+      sectionCounter++;
+    }
+  }
+}
+window.onload = initDynSections;
+-->
+</script>
+<div class="contents">
+<h1>全焦点画像生成<br>
+<small>
+[<a class="el" href="group__fie__vtool.html">ビジョンツール</a>]</small>
+</h1>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>列挙型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__allinfocus.html#gff17c778fe12cb478b216a42e8ab9526">f_allinfocus_mode</a> { <a class="el" href="group__fie__allinfocus.html#ggff17c778fe12cb478b216a42e8ab9526e3d1a8461628301fe80b9b2d52b67dd0">F_ALLINFOCUS_LOG</a> =  1, 
+<a class="el" href="group__fie__allinfocus.html#ggff17c778fe12cb478b216a42e8ab9526cc02a6da0cd3980b2712ab3313f851dc">F_ALLINFOCUS_DOA</a> =  2
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全焦点画像生成の手法  <a href="group__fie__allinfocus.html#gff17c778fe12cb478b216a42e8ab9526">[詳細]</a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__allinfocus.html#g99acf0af7c26e4ba763cedad29bae6f3">fnFIE_allinfocus</a> (FHANDLE hstack, FHANDLE hdst_allinfocus, FHANDLE hdst_index, INT mode, DOUBLE param1, DOUBLE param2)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全焦点画像生成  <a href="#g99acf0af7c26e4ba763cedad29bae6f3"></a><br></td></tr>
+</table>
+<hr><h2>列挙型</h2>
+<a class="anchor" name="gff17c778fe12cb478b216a42e8ab9526"></a><!-- doxytag: member="fie.h::f_allinfocus_mode" ref="gff17c778fe12cb478b216a42e8ab9526" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__fie__allinfocus.html#gff17c778fe12cb478b216a42e8ab9526">f_allinfocus_mode</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全焦点画像生成の手法 
+<p>
+全焦点画像生成の手法を決める定数です。<p>
+<dl class="see" compact><dt><b>参照:</b></dt><dd><a class="el" href="group__fie__allinfocus.html#g99acf0af7c26e4ba763cedad29bae6f3" title="全焦点画像生成">fnFIE_allinfocus()</a> </dd></dl>
+<dl compact><dt><b>列挙型の値: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="ggff17c778fe12cb478b216a42e8ab9526e3d1a8461628301fe80b9b2d52b67dd0"></a><!-- doxytag: member="F_ALLINFOCUS_LOG" ref="ggff17c778fe12cb478b216a42e8ab9526e3d1a8461628301fe80b9b2d52b67dd0" args="" -->F_ALLINFOCUS_LOG</em>&nbsp;</td><td>
+LoGフィルタ利用 </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="ggff17c778fe12cb478b216a42e8ab9526cc02a6da0cd3980b2712ab3313f851dc"></a><!-- doxytag: member="F_ALLINFOCUS_DOA" ref="ggff17c778fe12cb478b216a42e8ab9526cc02a6da0cd3980b2712ab3313f851dc" args="" -->F_ALLINFOCUS_DOA</em>&nbsp;</td><td>
+DoAフィルタ利用 </td></tr>
+</table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="g99acf0af7c26e4ba763cedad29bae6f3"></a><!-- doxytag: member="fie_allinfocus.c::fnFIE_allinfocus" ref="g99acf0af7c26e4ba763cedad29bae6f3" args="(FHANDLE hstack, FHANDLE hdst_allinfocus, FHANDLE hdst_index, INT mode, DOUBLE param1, DOUBLE param2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_allinfocus           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hdst_allinfocus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hdst_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>param1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>param2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全焦点画像生成 
+<p>
+画像スタックから全焦点画像を得ます。 カメラの焦点距離を変更して撮像された同一物体を写した画像たちから、 各画素において、焦点が合っている画像の画素値を採用し全焦点画像を得ます。 画像たちについて、物体は同じ位置にある必要があります。<p>
+引数 <em>hstack</em> で画像スタックを指定します。 画像スタックでないオブジェクトを指定した場合、不正なオブジェクトが渡された、となります。 画像スタックは以下の条件を全て満たすものを指定して下さい。<ul>
+<li>スタックは画像オブジェクトを少なくとも二つ含む。</li><li>スタック内の画像は、全て型、サイズ、チャネルが同一である。</li><li>スタック内の画像の画像型はUC8型またはDOUBLE型である。</li></ul>
+<p>
+引数 <em>mode</em> にて全焦点画像を得る手法を指定します。種類は以下の値にて指定してください。<ul>
+<li>F_ALLINFOCUS_LOG</li></ul>
+<p>
+LoGフィルタを利用することで合焦度が高い画素値を選択し、全焦点画像を得ます。<p>
+<ul>
+<li>F_ALLINFOCUS_DOA</li></ul>
+<p>
+DoAフィルタを利用することで合焦度が高い画素値を選択し、全焦点画像を得ます。<p>
+引数 <em>param1</em> は<em>mode</em> によって意味が異なります。<ul>
+<li>F_ALLINFOCUS_LOGを選択した場合、内部で利用されるLoGフィルタ( <a class="el" href="group__fie__filter.html#gdbae364be93b92e3e69d3ce55cad7c06" title="Laplacian of Gaussian filter">fnFIE_LoG_2Dfilter()</a> )の<em>dsigma</em> の値になります。<em>dsigma</em> が大きいほど平滑化の度合も大きくなります。0.6以上の数値を入力してください。</li></ul>
+<p>
+<ul>
+<li>F_ALLINFOCUS_DOAを選択した場合、内部で利用されるDoAフィルタ( <a class="el" href="group__fie__filter.html#ga05846589041d0da5594bcd7beed9af3" title="Difference of Average filter">fnFIE_DoA_2Dfilter()</a> )の<em>size_m0</em> =<em>size_n0</em> の値を決めるパラメータです。入力値は四捨五入された整数値が<em>size_m0</em> の値として処理されます。1以上かつ四捨五入後の値が奇数なるような数値を入力してください。そうでない場合はパラメータ異常となります。推奨値：5</li></ul>
+<p>
+引数 <em>param2</em> は<em>mode</em> によって意味が異なります。<ul>
+<li>F_ALLINFOCUS_LOGを選択した場合、無視されます。</li><li>F_ALLINFOCUS_DOAを選択した場合、内部で利用されるDoAフィルタ( <a class="el" href="group__fie__filter.html#ga05846589041d0da5594bcd7beed9af3" title="Difference of Average filter">fnFIE_DoA_2Dfilter()</a> )の<em>size_m1</em> =<em>size_n1</em> の値を決めるパラメータです。入力値は四捨五入された整数値が<em>size_m1</em> の値として処理されます。1以上かつ四捨五入後の値が奇数なるような数値を入力してください。そうでない場合はパラメータ異常となります。推奨値：3</li></ul>
+<p>
+F_ALLINFOCUS_DOAを選択した場合、フィルタサイズは画像のサイズ以下でなければいけません、 すなわち<em>param1</em> 、 <em>param2</em> は四捨五入後の整数値が、どちらも画像の幅、高さ以下の奇数でなければいけません。<p>
+またF_ALLINFOCUS_DOAを選択した場合、<em>param1</em> 、<em>param2</em> について、四捨五入後の整数値が同じになる値を入力した場合はパラメータ異常となります。<p>
+引数 <em>hdst_allinfocus</em> は出力画像であり、指定された手法で計算された全焦点画像を出力します。入力画像スタックに含まれる画像と同じ型、サイズ、チャネルの画像でなければいけません。不要な場合はNULLを指定できます。<p>
+引数 <em>hdst_index</em> は出力画像であり、各画素において、出力全焦点画像の画素値として入力画像スタックの何枚目の画像が採用されたのかを出力します。出力画像について、入力画像スタックに含まれる画像と同じサイズで、画像型はDOUBLE型またはUC8、チャネル数は1chの画像でなければいけません。不要な場合はNULLを指定できます。 なお <em>hdst_index</em> がUC8型の場合は飽和処理を行った値が格納されます。<p>
+引数 <em>hdst_allinfocus</em> と <em>hdst_index</em> の両方がNULLの場合は F_ERR_INVALID_IMAGE エラーを返します。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>入力画像スタック ( type: double, uc8 ) </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>hdst_allinfocus</em>&nbsp;</td><td>出力画像(全焦点画像) ( type: double, uc8 ) </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>hdst_index</em>&nbsp;</td><td>出力画像(インデックス画像) ( type: double, uc8 / ch: 1 ) </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>mode</em>&nbsp;</td><td>全焦点画像を得る手法。下記のいずれかを指定。<ul>
+<li>F_ALLINFOCUS_LOG LoGフィルタを利用した手法</li><li>F_ALLINFOCUS_DOA DoAフィルタを利用した手法 </li></ul>
+</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>param1</em>&nbsp;</td><td>パラメータ（ mode によって意味が異なります ） </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>param2</em>&nbsp;</td><td>パラメータ（ mode によって意味が異なります ）</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_OBJECT</em>&nbsp;</td><td>不正なオブジェクトが渡された </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td>不正な画像ハンドルが渡された </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td>パラメータ異常 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NOMEMORY</em>&nbsp;</td><td>メモリ不足エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー、または未初期化エラー</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>処理結果例:</b></dt><dd><table class="layoutTable">
+<tr>
+<td><div align="center">
+<img src="fie_allinfocus_circuit_board_src_01.png" alt="fie_allinfocus_circuit_board_src_01.png">
+<p><strong>入力画像スタック（一枚目）</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_allinfocus_circuit_board_src_02.png" alt="fie_allinfocus_circuit_board_src_02.png">
+<p><strong>入力画像スタック（二枚目）</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_allinfocus_circuit_board_dst_LoG.png" alt="fie_allinfocus_circuit_board_dst_LoG.png">
+<p><strong>出力全焦点画像（LoG版)</strong></p></div>
+  <p>
+</td></tr>
+</table>
+</dd></dl>
+<dl class="user" compact><dt><b>使用例</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include "fie.h"</span>
+<span class="preprocessor">#include "oal_aloc.h"</span>
+
+INT do_allinfocus() {
+
+    <span class="comment">// 画像のパス</span>
+    <span class="keyword">const</span> CHAR* file_names[] = {
+        <span class="stringliteral">"input_img_files/00.bmp"</span>,
+        <span class="stringliteral">"input_img_files/01.bmp"</span>
+    };
+
+    INT status = <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cdec888cfe6642ce77c95e72fd369c9304" title="不明なエラー">F_ERR_UNKNOWN</a>;
+
+    INT img_num = -1;
+
+    FHANDLE imgstack = NULL;
+    FHANDLE hdst_allinfocus = NULL;
+
+    FHANDLE himg_temp = NULL;
+
+    INT width, height;
+    INT dst_allinfocus_type;
+    INT dst_allinfocus_ch;
+
+    INT width_temp, height_temp;
+    INT ch_temp, type_temp;
+
+    INT mode;
+    DOUBLE param1, param2;
+
+    INT i;
+
+    img_num = <span class="keyword">sizeof</span>(file_names) / <span class="keyword">sizeof</span>(file_names[0]);
+
+    <span class="keywordflow">if</span> (img_num &lt; 2) {
+        status = <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd7899e670e978240beaa8b3c2365d8b02" title="不正な画像エラー">F_ERR_INVALID_IMAGE</a>;
+        <span class="keywordflow">goto</span> EXIT;
+    }
+
+    <span class="comment">//最初の一枚目の画像読み込み（これを基準にする）</span>
+    {
+        status = <a class="code" href="group__fie__file__image.html#ga735b6accb014c4d15eec6e422b6a7bb" title=" &amp;lt;img class= inline-img src=&amp;quot;oss.png&amp;quot; alt=&amp;quot;[[OSS]]&amp;quot;&amp;gt;  画像ファイル...">fnFIE_load_img_file</a>(file_names[0], &amp;himg_temp, <a class="code" href="group__fie__file__image.html#gge1ca4e0484c0d907a215a44931bbcc9adb9994a1f48569964f60a6dd2eb91234" title="F_IMG_UC8, 3chで読込">F_COLOR_IMG_TYPE_UC8</a>);
+        <span class="keywordflow">if</span> (status != <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd457bddfc94b88d8440be1a5e773adefa" title="エラー無し">F_ERR_NONE</a>) { <span class="keywordflow">goto</span> EXIT; }
+
+        status = <a class="code" href="group__fie__image.html#gbd877b77fb0ae99b4eabd32fa33044ae" title="画像情報取得">fnFIE_img_get_params</a>(himg_temp, &amp;ch_temp, &amp;type_temp, NULL, &amp;width_temp, &amp;height_temp);
+        <span class="keywordflow">if</span> (status != <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd457bddfc94b88d8440be1a5e773adefa" title="エラー無し">F_ERR_NONE</a>) { <span class="keywordflow">goto</span> EXIT; }
+
+        <a class="code" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object</a>(himg_temp);
+        himg_temp = NULL;
+
+    }
+
+    <span class="comment">//入力画像スタック作成</span>
+    {
+        imgstack = <a class="code" href="group__fie__image__stack.html#gc54b6d6f23c8a101e971974fc34433ee" title="画像スタックオブジェクトの作成">fnFIE_imgstack_alloc</a>(<a class="code" href="group__fie__image__stack.html#gg8767b94e54313737819545b9122d86b4701d2936060faf639ce407f97415f422" title="ルート画像モード">F_IMGSTACK_ROOT_MODE</a>, TRUE);
+        <span class="keywordflow">if</span> (imgstack == NULL) {
+            status = <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd66019e37614dd7208ad00ac047df2e6c" title="メモリ確保エラー">F_ERR_NOMEMORY</a>;
+            <span class="keywordflow">goto</span> EXIT;
+        }
+
+        <span class="keywordflow">for</span> (i = 0; i &lt; img_num; i++) {
+
+            status = <a class="code" href="group__fie__file__image.html#ga735b6accb014c4d15eec6e422b6a7bb" title=" &amp;lt;img class= inline-img src=&amp;quot;oss.png&amp;quot; alt=&amp;quot;[[OSS]]&amp;quot;&amp;gt;  画像ファイル...">fnFIE_load_img_file</a>(file_names[i], &amp;himg_temp, <a class="code" href="group__fie__file__image.html#gge1ca4e0484c0d907a215a44931bbcc9adb9994a1f48569964f60a6dd2eb91234" title="F_IMG_UC8, 3chで読込">F_COLOR_IMG_TYPE_UC8</a>);
+            <span class="keywordflow">if</span> (status != <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd457bddfc94b88d8440be1a5e773adefa" title="エラー無し">F_ERR_NONE</a>) { <span class="keywordflow">goto</span> EXIT; }
+
+            status = <a class="code" href="group__fie__image__stack.html#g5a395e7c3355d2ac6e580b779e94a042" title="画像スタック末尾に画像を追加する">fnFIE_imgstack_push_back</a>(imgstack, himg_temp);
+            <span class="keywordflow">if</span> (status != <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd457bddfc94b88d8440be1a5e773adefa" title="エラー無し">F_ERR_NONE</a>) { <span class="keywordflow">goto</span> EXIT; }
+            <a class="code" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object</a>(himg_temp);
+            himg_temp = NULL;
+
+        }
+
+    }
+
+    <span class="comment">//出力画像準備</span>
+    {
+        width = width_temp;
+        height = height_temp;
+        dst_allinfocus_ch = ch_temp;
+        dst_allinfocus_type = type_temp;
+
+        hdst_allinfocus = <a class="code" href="group__fie__image.html#ge1fb319dbc93c5bbaba49d39904ca491" title="ルート画像の確保">fnFIE_img_root_alloc</a>(dst_allinfocus_type, dst_allinfocus_ch, width, height);
+        <span class="keywordflow">if</span> (hdst_allinfocus == NULL) {
+            status = <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd66019e37614dd7208ad00ac047df2e6c" title="メモリ確保エラー">F_ERR_NOMEMORY</a>;
+            <span class="keywordflow">goto</span> EXIT;
+        }
+
+    }
+
+    <span class="comment">//全焦点画像生成:mode=LoGの場合</span>
+    {
+        mode = <a class="code" href="group__fie__allinfocus.html#ggff17c778fe12cb478b216a42e8ab9526e3d1a8461628301fe80b9b2d52b67dd0" title="LoGフィルタ利用">F_ALLINFOCUS_LOG</a>;
+        param1 = 2.0;
+        param2 = 0;
+
+        status = <a class="code" href="group__fie__allinfocus.html#g99acf0af7c26e4ba763cedad29bae6f3" title="全焦点画像生成">fnFIE_allinfocus</a>(imgstack, hdst_allinfocus, NULL, mode, param1, param2);
+        <span class="keywordflow">if</span> (status != <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd457bddfc94b88d8440be1a5e773adefa" title="エラー無し">F_ERR_NONE</a>) { <span class="keywordflow">goto</span> EXIT; }
+
+        <span class="comment">//結果画像保存</span>
+        status = <a class="code" href="group__fie__file__image.html#g5642cf383268870443617c385e28c18e" title=" &amp;lt;img class= inline-img src=&amp;quot;oss.png&amp;quot; alt=&amp;quot;[[OSS]]&amp;quot;&amp;gt;  PNGファイルの...">fnFIE_save_png</a>(<span class="stringliteral">"allinfocus_LoG.png"</span>, hdst_allinfocus, -1);
+        <span class="keywordflow">if</span> (status != <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cd457bddfc94b88d8440be1a5e773adefa" title="エラー無し">F_ERR_NONE</a>) { <span class="keywordflow">goto</span> EXIT; }
+    }
+
+EXIT:
+    <a class="code" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object</a>(imgstack);
+    <a class="code" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object</a>(hdst_allinfocus);
+    <a class="code" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object</a>(himg_temp);
+
+    <span class="keywordflow">return</span> status;
+}
+
+INT main() {
+
+    INT status = <a class="code" href="group__fie__document.html#ggbffaca45497ab68d341a940f16c668cdec888cfe6642ce77c95e72fd369c9304" title="不明なエラー">F_ERR_UNKNOWN</a>;
+
+    <span class="comment">// FIEライブラリのセットアップ</span>
+    <a class="code" href="group__fie__libinit.html#g12250eabf0163ce206c4caa007b33a80" title="FIEライブラリの初期化">fnFIE_setup</a>();
+
+    <span class="comment">//全焦点画像生成</span>
+    status = do_allinfocus();
+
+    <span class="comment">// ライブラリの終了処理</span>
+    <a class="code" href="group__fie__libinit.html#gcf71693a1b50ed7ce9947ac8179cbfc3" title="FIEライブラリの終了処理">fnFIE_teardown</a>();
+
+    <span class="keywordflow">return</span> status;
+}
+</pre></div> </dd></dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1">
+<address style="align: right; color: #cccccc;">
+	<small>
+	Documentation copyright &copy; 2009-2025 TOKYO ELECTRON DEVICE LIMITED. <br>
+	Generated on Tue Sep 16 09:08:52 2025 for FIEライブラリ by&nbsp;<a href="http://www.doxygen.org/index.html">doxygen</a> 1.5.6-FASTSP-p2
+	</small>
+</address>
+</body>
+</html>

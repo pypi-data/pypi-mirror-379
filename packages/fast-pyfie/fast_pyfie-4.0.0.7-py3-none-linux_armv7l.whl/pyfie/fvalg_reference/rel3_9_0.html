@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS">
+<title>FIEライブラリ: release 3.9.0</title>
+<link href="fvalg-prod.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.6-FASTSP-p2 -->
+<script type="text/javascript">
+<!--
+function changeDisplayState (e){
+  var num=this.id.replace(/[^[0-9]/g,'');
+  var button=this.firstChild;
+  var sectionDiv=document.getElementById('dynsection'+num);
+  if (sectionDiv.style.display=='none'||sectionDiv.style.display==''){
+    sectionDiv.style.display='block';
+    button.src='open.gif';
+  }else{
+    sectionDiv.style.display='none';
+    button.src='closed.gif';
+  }
+}
+function initDynSections(){
+  var divs=document.getElementsByTagName('div');
+  var sectionCounter=1;
+  for(var i=0;i<divs.length-1;i++){
+    if(divs[i].className=='dynheader'&&divs[i+1].className=='dynsection'){
+      var header=divs[i];
+      var section=divs[i+1];
+      var button=header.firstChild;
+      if (button!='IMG'){
+        divs[i].insertBefore(document.createTextNode(' '),divs[i].firstChild);
+        button=document.createElement('img');
+        divs[i].insertBefore(button,divs[i].firstChild);
+      }
+      header.style.cursor='pointer';
+      header.onclick=changeDisplayState;
+      header.id='dynheader'+sectionCounter;
+      button.src='closed.gif';
+      section.id='dynsection'+sectionCounter;
+      section.style.display='none';
+      section.style.marginLeft='14px';
+      sectionCounter++;
+    }
+  }
+}
+window.onload = initDynSections;
+-->
+</script>
+<div class="contents">
+<h1><a class="anchor" name="rel3_9_0">release 3.9.0 </a></h1><div style="text-align:right">2023/10/19</div><p>
+<table class="pretable">
+<tr>
+<th>目次  </th></tr>
+<tr>
+<td><a class="el" href="rel3_9_0.html#fie3_9_0">1. FIE module Updates</a>  </td></tr>
+</table>
+<h2><a class="anchor" name="fie3_9_0">
+1. FIE module Updates</a></h2>
+<h3 class="relnote">FIE関数の追加</h3>
+<p>
+<h3 class="relnote_sub">ビジョンツール：照度差ステレオ</h3>
+<p>
+<ul>
+<li>Horn-Brooks法による高さ画像生成 / <a class="el" href="group__fie__ps__do.html#g12788a4a0352b677c510ba36fc76ece6" title="Horn-Brooks法による高さ画像生成">fnFIE_ps_horn_brooks()</a></li><li>Frankot-Chellappa法による高さ画像生成 / <a class="el" href="group__fie__ps__do.html#gfb4c8e4ddeddb60818d98698e746f8c4" title="Frankot-Chellappa法による高さ画像生成">fnFIE_ps_frankot_chellappa()</a></li><li>曲率画像生成 / <a class="el" href="group__fie__ps__do.html#gc87a29d344bb0c7db6793f55dd40454c" title="曲率画像生成">fnFIE_ps_curvature()</a></li><li>Woodhamによる法線画像生成 / <a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a></li></ul>
+<p>
+<h3 class="relnote_sub">ビジョンツール：照度差ステレオ：ツール</h3>
+<p>
+<ul>
+<li>照度差ステレオ光源ベクトルの情報補助関数（空間座標） / <a class="el" href="group__fie__ps__tool.html#gbd4d5a917c521687c8ed9aa97ea20a2c" title="照度差ステレオ光源ベクトルの情報補助関数（空間座標）">fnFIE_ps_woodham_calc_light_from_pos()</a></li><li>照度差ステレオ光源ベクトルの情報補助関数（リング照明） / <a class="el" href="group__fie__ps__tool.html#g238f3f409973ec266af30803eba91adc" title="照度差ステレオ光源ベクトルの情報補助関数（リング照明）...">fnFIE_ps_woodham_calc_light_ring()</a></li></ul>
+<p>
+<h3 class="relnote_sub">画像フィルタ：フィルタ全般</h3>
+<p>
+<ul>
+<li>Difference of Average filter / <a class="el" href="group__fie__filter.html#ga05846589041d0da5594bcd7beed9af3" title="Difference of Average filter">fnFIE_DoA_2Dfilter()</a></li><li>Difference of Median filter / <a class="el" href="group__fie__filter.html#g74ce62bc65d5dfe1b8f723285fd00dd2" title="Difference of Median filter">fnFIE_DoM_2Dfilter()</a></li></ul>
+<p>
+<h3 class="relnote_sub">画像統計量：統計画像生成</h3>
+<p>
+<ul>
+<li>ランク画像作成 / <a class="el" href="group__fie__multi__img__stats.html#g088704f6c598485f4523788bff8ccac1" title="ランク画像作成">fnFIE_stats_img_rank()</a></li></ul>
+<p>
+<h3 class="relnote_sub">基本画像操作</h3>
+<p>
+<ul>
+<li>チャネル別画像ソート / <a class="el" href="group__fie__std__operation.html#g0d458d9dd01ce71f38aa29c3a2a8d5f6" title="チャネル別画像ソート">fnFIE_img_sort_ch()</a></li></ul>
+<p>
+<h3 class="relnote">機能追加および、変更</h3>
+<p>
+<ul>
+<li><a class="el" href="group__fie__filter__arithm.html#g1761e39a0fdc86fcd4960e8c22e15cb3" title="画像間最大値">fnFIE_img_max()</a><ul>
+<li>画像型 F_IMG_I32, F_IMG_UI32, F_IMG_I64, F_IMG_FLOAT, F_IMG_RGBQUAD, F_IMG_RGBTRIPLE に新規対応.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__filter__arithm.html#g6a2c30317c1b80b6b76d88c814a34663" title="画像と定数の最大値">fnFIE_img_max_const()</a><ul>
+<li>画像型 F_IMG_BIN,F_IMG_I32, F_IMG_UI32, F_IMG_I64, F_IMG_FLOAT, F_IMG_RGBQUAD, F_IMG_RGBTRIPLE に新規対応.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__color__convert__main.html#g4a71052ea8082da8877cf08493ff81d2" title="色彩特徴量画像の生成（HSV色空間基準）">fnFIE_img_hsv_to_gray()</a><ul>
+<li>画像型 F_IMG_S16, F_IMG_US16, F_IMG_FLOAT, F_IMG_DOUBLE, F_IMG_RGBQUAD, F_IMG_RGBTRIPLE に新規対応.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__geometric__transform.html#gf4914db1caea3d101c00eceb6e0e7696" title="画像の回転（９０度の倍数）">fnFIE_img_rotate_clockwise90()</a><ul>
+<li>画像型 F_IMG_I64, F_IMG_RGBQUAD, F_IMG_RGBTRIPLE に新規対応.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__filter__arithm.html#g918d1ae0848da5d8141efea75a8ae7b2" title="画像間最小値">fnFIE_img_min()</a><ul>
+<li>画像型 F_IMG_I32, F_IMG_UI32, F_IMG_I64, F_IMG_FLOAT, F_IMG_RGBQUAD, F_IMG_RGBTRIPLE に新規対応.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__gs2__main.html#gf9841a022b06e4863006dac3edcd1f59" title="グレイサーチの実行">fnFIE_gs2_search()</a><ul>
+<li>特定の条件下における処理の高速化.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__filter.html#gd655a05d2db7a8b902779452f57f74c3" title="バイラテラル フィルタ">fnFIE_bilateral()</a>, <a class="el" href="group__fie__geometric__transform.html#ga3023a245cde8ee92dda78d4da6944fb" title="画像のアフィン変換">fnFIE_geotrans_affine()</a>, <a class="el" href="group__fie__geometric__transform.html#g2643f645190d545e409d5311357e1705" title="画像の射影変換">fnFIE_geotrans_perspective()</a>, <a class="el" href="group__fie__geometric__transform.html#g599d687f04058cc75345e19f1f9c96ab" title="座標変換マップに従って座標を変換する">fnFIE_geotrans_warpping()</a><ul>
+<li>特定の条件下における処理の高速化.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__fpm__match.html#gca132263af7dba9bea300f3d247378d0" title="一連のマッチング実行">fnFIE_fpm_matching()</a>, <a class="el" href="group__fie__fpm__match.html#gc83e6c4b140ac81e8d95c0526bb41e48" title="FPM特徴量オブジェクトからのマッチング実行">fnFIE_fpm_matching_feature()</a><ul>
+<li>処理を高速化.</li></ul>
+</li></ul>
+<p>
+<h3 class="relnote">不具合修正</h3>
+<p>
+<ul>
+<li>#663 <a class="el" href="group__fie__cg__fitting.html#g86dac7f4f2b292fc1d1fcfa96e74eed7" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  点群からの円...">fnFIE_fit_circle2()</a><ul>
+<li>特定点群を入力した場合に標準エラー出力へエラーメッセージが出力されていた問題を修正.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li>#759 <a class="el" href="group__fie__math__matrix__lalgebra.html#g2c20fa54f8476309162d38857fa83f5e" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  連立一次方程...">fnFIE_mat_linsolve2()</a><ul>
+<li>マルチスレッド環境下で稀にフリーズする問題を修正.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__threshold.html#g3a13eb66a77c9db2c48883b01ba8e98c" title="局所平均値と標準偏差を用いたNiblack法による画像２値化">fnFIE_niblack_threshold()</a>, <a class="el" href="group__fie__threshold.html#gfd46af0877af73d655d37039b60b66ac" title="局所平均値と標準偏差を用いてSauvola法による画像２値化">fnFIE_sauvola_threshold()</a><ul>
+<li>局所領域のサイズが大きく、特定の画像の場合に正常に計算できなくなる可能性があったため修正.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__cg__circle.html#g8e6ff4a2466dbfe08f198c25fbad8692" title="最小外接円の計算">fnFIE_cg_enclosing_circle_calc()</a><ul>
+<li>特定の点群を入力した場合に正常に計算できない可能性があったため修正.</li></ul>
+</li></ul>
+<p>
+<h3 class="relnote">サンプルコード追加</h3>
+<p>
+<ul>
+<li><a class="el" href="group__fie__ps__sample.html">照度差ステレオ</a></li><li><a class="el" href="group__fie__region__tools.html#smp_excludes2">最も近いリージョン外のピクセル位置を格納した座標変換マップを作成 使用例</a></li></ul>
+<p>
+<ul>
+<li>画像とリージョンの共通部分で、画像の輝度平均値を求める<ul>
+<li><a class="el" href="group__fie__region__img__feature.html#g5314b819d4c7863362d4c3a91add6ca8" title="画像特徴量：輝度値の平均値">fnFIE_img_meanpixel()</a></li></ul>
+</li></ul>
+<p>
+<ul>
+<li>マスクによる エッジ点群のフィルタリング<ul>
+<li><a class="el" href="group__fie__edge__tools.html#ge397248afc07d1d4c16298ad464574d8" title="マスクによる エッジ点群のフィルタリング">fnFIE_refilter_edge_by_mask()</a></li></ul>
+</li></ul>
+<p>
+<h3 class="relnote">ドキュメント修正</h3>
+<p>
+<ul>
+<li>カメラキャリブレーション　説明<ul>
+<li>座標系の誤りを修正.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li><a class="el" href="group__fie__filter__arithm.html#g1761e39a0fdc86fcd4960e8c22e15cb3" title="画像間最大値">fnFIE_img_max()</a><ul>
+<li>画像型がF_IMG_BIN 時の説明を修正.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li>色空間変換 説明 HSV -&gt; RGB への変換<ul>
+<li>計算式の誤りを修正.</li></ul>
+</li></ul>
+<p>
+<ul>
+<li>F_EDGE_CLUST構造体の説明 2次元エッジ検出のグループから２次元エッジ操作へ変更および、説明を追加.</li></ul>
+<p>
+<ul>
+<li>リリースノート release 1.2.0<ul>
+<li>誤字修正</li></ul>
+</li></ul>
+<p>
+<ul>
+<li>リリースノート release 3.8.0<ul>
+<li>対応型の誤りを修正 / <a class="el" href="group__fie__filter__arithm.html#g7d1e89195ff7d0335eb54a59d05a6530" title="画像間加算">fnFIE_img_add()</a><ul>
+<li>誤：画像型 F_IMG_I32, F_IMG_UI32, F_IMG_RGBTRIPLE に新規対応.</li><li>正：画像型 F_IMG_I32, F_IMG_UI32, F_IMG_RGBTRIPLE, F_IMG_FLOAT に新規対応. </li></ul>
+</li></ul>
+</li></ul>
+</div>
+<hr size="1">
+<address style="align: right; color: #cccccc;">
+	<small>
+	Documentation copyright &copy; 2009-2025 TOKYO ELECTRON DEVICE LIMITED. <br>
+	Generated on Tue Sep 16 09:08:40 2025 for FIEライブラリ by&nbsp;<a href="http://www.doxygen.org/index.html">doxygen</a> 1.5.6-FASTSP-p2
+	</small>
+</address>
+</body>
+</html>

@@ -1,0 +1,1119 @@
+\form#0:$N$
+\form#1:$ \sqrt N $
+\form#2:$ x $
+\form#3:$ 2 \times x $
+\form#4:$ R(i) $
+\form#5:$I(i)$
+\form#6:$ R(0) \; \; \; I(0) \; \; \; R(1) \; \; \;I(1) \; \; \; ... \; \; \; R(i) \; \; \; I(i) \; \; \; ... \; R(N-1) \; \; \; I(N-1) $
+\form#7:\begin{eqnarray*} I(0) &=& I( \frac{ N }{ 2 } - 1 ) = 0; \\ R(i) &=& R( N - i ); \qquad i = 0 \ \sim \ \frac{N}{2} \\ I(i) &=& -I( N - i ); \qquad i = 0 \ \sim \ \frac{ N } { 2 } \\ \end{eqnarray*}
+\form#8:$Index$
+\form#9:$ 0 $
+\form#10:$ 1 $
+\form#11:$ 2 $
+\form#12:$ 3 $
+\form#13:$ 4 $
+\form#14:$ 5 $
+\form#15:$ ... $
+\form#16:$ 2 i $
+\form#17:$ 2 i + 1$
+\form#18:$ N - 2 $
+\form#19:$ N - 1 $
+\form#20:$ Packed $
+\form#21:$ R(0) $
+\form#22:$ R(\frac {N}{2} ) $
+\form#23:$ R(1) $
+\form#24:$ I(1) $
+\form#25:$ R(2) $
+\form#26:$ I(2) $
+\form#27:$ I(i) $
+\form#28:$ R( \frac {N}{2} - 1) $
+\form#29:$ P $
+\form#30:$ Q $
+\form#31:$\; (x,y) \;$
+\form#32:$\; \theta \;$
+\form#33:$\; s \;$
+\form#34:$(\; (x,y), \; \theta, \; s \;)$
+\form#35:$ p = (\; (x,y), \; \theta, \; s \;) $
+\form#36:$ k $
+\form#37:$ d_k \; ; \; k=1, \cdots, n $
+\form#38:$ d_p = (\; d_1, \; d_2, \cdots, \; d_n \;) $
+\form#39:$ \|\, d_p \,\|_2 = \sqrt{\sum_{k=1}^{n} d_k^2} $
+\form#40:$ \|\, d_p \,\|_\infty = \underset{k}{\max}\,|\, d_k \,| $
+\form#41:$ :\; \underset{p}{\min}\,\|\, d_p \,\|_2^2 $
+\form#42:$ :\; \underset{p}{\min}\,\|\, d_p \,\|_\infty^2 $
+\form#43:\[ min \le value \le max \]
+\form#44:$ -\frac{\pi}{2} \le q \le \frac{\pi}{2} $
+\form#45:$ \vec{a} $
+\form#46:$ \vec{v} $
+\form#47:$ \vec{p} $
+\form#48:$ \vec{p} = \vec{a} + t\vec{v} $
+\form#49:$i$
+\form#50:$d_{i}$
+\form#51:\[ d_i = \frac{ (-1)*D_{-4} + (-1)*D_{-3} + (-1)*D_{-2} }{3} + 0*D_{-1} + 0*D_1 + \frac{1*D_2 + 1*D_3 + 1*D_4}{3} \]
+\form#52:\[ A = \left[ \begin{array}{ccc} \alpha & \gamma & u_0 \\ 0 & \beta & v_0 \\ 0 & 0 & 1 \\ \end{array} \right] \]
+\form#53:$ d_{ij} = \max \left(| x_{i} - x_{j} | , | y_{i} - y_{j} | \right) $
+\form#54:$ d_{ij} = | x_{i} - x_{j} | + | y_{i} - y_{j} | $
+\form#55:$ d_{ij} = \sqrt{\left( x_{i} - x_{j} \right)^2+\left( y_{i} - y_{j} \right)^2} $
+\form#56:$ d_{ij} = \max _{l} \left[ | x_{i}^{l} - x_{j}^{l} | \right] $
+\form#57:$ d_{ij} = \sum _{l = 1}^{K} | x_{i}^{l} - x_{j}^{l} | $
+\form#58:$ d_{ij} = \left\{ \sum _{l = 1}^{K} \left( x_{i}^{l} - x_{j}^{l} \right)^{2} \right\}^\frac{1}{2} $
+\form#59:$ d_{ij} = \left\{ \sum _{l = 1}^{K} w^{l} \left( x_{i}^{l} - x_{j}^{l} \right)^{2} \right\}^\frac{1}{2} $
+\form#60:$ d_{i} = \left\{ \left( x_{i} - \mu \right)^{t} \Sigma^{-1} \left( x_{i} - \mu \right) \right\}^\frac{1}{2} $
+\form#61:\[ \left( \begin{array}{ccc} \sigma_{x}^{2} & \sigma_{xy} & \sigma_{xz} \\ \sigma_{yx} & \sigma_{y}^{2} & \sigma_{yz} \\ \sigma_{zx} & \sigma_{zy} & \sigma_{z}^{2} \\ \end{array} \right) \]
+\form#62:$ \sigma_{yx}=\sigma_{xy} $
+\form#63:$ \sigma_{zy}=\sigma_{yz} $
+\form#64:$ \sigma_{xz}=\sigma_{zx} $
+\form#65:$ mat[0]=\sigma_{x}^{2} $
+\form#66:$ mat[1]=\sigma_{xy} $
+\form#67:$ mat[2]=\sigma_{xz} $
+\form#68:$ mat[3]=\sigma_{y}^{2} $
+\form#69:$ mat[4]=\sigma_{yz} $
+\form#70:$ mat[5]=\sigma_{z}^{2} $
+\form#71:$ ax + by + c = 0 $
+\form#72:$ ax + by + cz + d = 0 $
+\form#73:$-\pi$
+\form#74:$\pi$
+\form#75:\[ \left( \begin{array}{l} R' \\ G' \\ B' \\ \end{array} \right) = \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) \\ \]
+\form#76:\[ 0 \le R, G, B \le 255 \]
+\form#77:\[ 0 \le R', G', B' \le 255 \]
+\form#78:\[ Gray = 0.299 \times R + 0.587 \times G + 0.114 \times B \]
+\form#79:\[ 0 \le Gray \le 255 \]
+\form#80:\[ \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) = \left( \begin{array}{lll} +1.00000 & +0.00000 & +0.00000 \\ +0.00000 & +1.00000 & +0.00000 \\ +0.00000 & +0.00000 & +1.00000 \\ \end{array} \right) \left( \begin{array}{l} Gray \\ Gray \\ Gray \\ \end{array} \right) \\ \]
+\form#81:\[ Gray' = Gray \]
+\form#82:\[ 0 \le Gray' \le 255 \]
+\form#83:\[ \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) = \left( \begin{array}{lll} +2.768900 & +1.751700 & +1.130200 \\ +1.000000 & +4.590700 & +0.060100 \\ +0.000000 & +0.056500 & +5.594300 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) \\ \]
+\form#84:\[ 0 \le X, Y, Z \le 1440.954 \]
+\form#85:\[ \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) = \left( \begin{array}{lll} +0.490001 & +0.309992 & +0.200007 \\ +0.176966 & +0.812398 & +0.010636 \\ +0.000000 & +0.009999 & +0.990001 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) \\ \]
+\form#86:\[ 0 \le X, Y, Z \le 255 \]
+\form#87:\begin{eqnarray*} \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) &=& \left( \begin{array}{lll} +2.768900 & +1.751700 & +1.130200 \\ +1.000000 & +4.590700 & +0.060100 \\ +0.000000 & +0.056500 & +5.594300 \\ \end{array} \right)^{-1} \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right)\\ &=& \left( \begin{array}{lll} +0.418452 & -0.158652 & -0.082834 \\ -0.091164 & +0.252424 & +0.015706 \\ +0.000921 & -0.002549 & +0.178595 \\ \end{array} \right) \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ \end{eqnarray*}
+\form#88:\[ \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) = \left( \begin{array}{lll} +2.364591 & -0.896501 & -0.468080 \\ -0.515151 & +1.426401 & +0.088750 \\ +0.005203 & -0.014407 & +1.009204 \\ \end{array} \right) \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ \]
+\form#89:\[ \left( \begin{array}{l} X' \\ Y' \\ Z' \\ \end{array} \right) = \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ \]
+\form#90:\[ 0 \le X', Y', Z' \le 1440.954 \]
+\form#91:\[ 0 \le X', Y', Z' \le 255 \]
+\form#92:$ 0 \le X', Y', Z' \le 255 $
+\form#93:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +\dfrac{255.000000}{1440.954000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{1440.954000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{1440.954000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.176966 & +0.000000 & +0.000000 \\ +0.000000 & +0.176966 & +0.000000 \\ +0.000000 & +0.000000 & +0.176966 \\ \end{array} \right) \end{eqnarray*}
+\form#94:\begin{eqnarray*} \left( \begin{array}{l} X' \\ Y' \\ Z' \\ \end{array} \right) &=& S \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.176966 & +0.000000 & +0.000000 \\ +0.000000 & +0.176966 & +0.000000 \\ +0.000000 & +0.000000 & +0.176966 \\ \end{array} \right) \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ \end{eqnarray*}
+\form#95:$ 0 \le X', Y', Z' \le 1440.954 $
+\form#96:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +\dfrac{1440.954000}{255.000000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{1440.954000}{255.000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{1440.954000}{255.000000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +5.650800 & +0.000000 & +0.000000 \\ +0.000000 & +5.650800 & +0.000000 \\ +0.000000 & +0.000000 & +5.650800 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#97:\begin{eqnarray*} \left( \begin{array}{l} X' \\ Y' \\ Z' \\ \end{array} \right) &=& S \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +5.650800 & +0.000000 & +0.000000 \\ +0.000000 & +5.650800 & +0.000000 \\ +0.000000 & +0.000000 & +5.650800 \\ \end{array} \right) \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ \end{eqnarray*}
+\form#98:\[ 0 \le X, Y, Z \le 255.0 \]
+\form#99:$x\left(\lambda \right)$
+\form#100:$y\left(\lambda \right)$
+\form#101:$z\left(\lambda \right)$
+\form#102:\[ \left( \begin{array}{l} Y \\ U \\ V \\ \end{array} \right) = \left( \begin{array}{lll} +0.299000 & +0.587000 & +0.114000 \\ -0.147000 & -0.289000 & +0.437000 \\ +0.615000 & -0.515000 & -0.100000 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) \\ \]
+\form#103:\[ 0 \le Y \le 255 \]
+\form#104:\[ -111.18 \le U \le 111.435 \]
+\form#105:\[ -156.825 \le V \le 156.825 \]
+\form#106:$ 0 \le Y, U, V \le 255 $
+\form#107:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{222.615000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{313.650000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \\ +0.000000 & +1.145475 & +0.000000 \\ +0.000000 & +0.000000 & +0.813008 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#108:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0.000000 \vspace{.5em} \\ +\dfrac{255.000000}{222.615000} \times 111.180000 \vspace{.5em} \vspace{.5em} \\ +\dfrac{255.000000}{313.650000} \times 156.825000 \vspace{.5em} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.000000 \\ +127.353952 \\ +127.500000 \\ \end{array} \right)\\ \end{eqnarray*}
+\form#109:\[ \left( \begin{array}{l} Y \\ U \\ V \\ \end{array} \right) = SM \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) + T \]
+\form#110:\[ \left( \begin{array}{l} Y \\ U \\ V \\ \end{array} \right) = \left( \begin{array}{llll} +0.299000 & +0.587000 & +0.114000 & 0.000000 \\ -0.168385 & -0.331042 & +0.500573 & 127.353952 \\ +0.500000 & -0.418699 & -0.081301 & 127.500000 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right) \\ \]
+\form#111:\[ 0 \le Y, U, V \le 255 \]
+\form#112:\begin{eqnarray*} \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) &=& \left( \begin{array}{lll} +0.299000 & +0.587000 & +0.114000 \\ -0.147000 & -0.289000 & +0.437000 \\ +0.615000 & -0.515000 & -0.100000 \\ \end{array} \right)^{-1} \left( \begin{array}{l} Y \\ U \\ V \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & -0.000039 & +1.139828 \\ +1.000394 & -0.393810 & -0.580501 \\ +0.997972 & +2.027879 & -0.000480 \\ \end{array} \right) \left( \begin{array}{l} Y \\ U \\ V \\ \end{array} \right) \\ \end{eqnarray*}
+\form#113:\begin{eqnarray*} \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right) &=& \left( \begin{array}{llll} +0.299000 & +0.587000 & +0.114000 & 0.000000 \\ -0.168385 & -0.331042 & +0.500573 & 127.353952 \\ +0.500000 & -0.418699 & -0.081301 & 127.500000 \\ +0.000000 & +0.000000 & +0.000000 & +1.000000 \\ \end{array} \right)^{-1} \left( \begin{array}{l} Y \\ U \\ V \\ 1 \\ \end{array} \right) \\ &=& \left( \begin{array}{llll} +1.000000 & -0.000034 & +1.401989 & -178.749237 \\ +1.000394 & -0.343796 & -0.714016 & +134.820834 \\ +0.997971 & +1.770337 & -0.000590 & -225.384277 \\ +0.000000 & +0.000000 & +0.000000 & +1.000000 \\ \end{array} \right) \left( \begin{array}{l} Y \\ U \\ V \\ 1 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#114:\[ \left( \begin{array}{l} Y' \\ U' \\ V' \\ \end{array} \right) = \left( \begin{array}{l} Y \\ U \\ V \\ \end{array} \right) \\ \]
+\form#115:\[ 0 \le Y' \le 255 \]
+\form#116:\[ -111.18 \le U' \le 111.435 \]
+\form#117:\[ -156.825 \le V' \le 156.825 \]
+\form#118:\[ 0 \le Y', U', V' \le 255 \]
+\form#119:$ 0 \le Y', U', V' \le 255 $
+\form#120:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{222.615000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{313.650000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \\ +0.000000 & +1.145475 & +0.000000 \\ +0.000000 & +0.000000 & +0.813008 \\ \end{array} \right) \end{eqnarray*}
+\form#121:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0.000000 \vspace{.5em} \\ +\dfrac{255.000000}{222.615000}\times 111.180000 \vspace{.5em} \\ +\dfrac{255.000000}{313.650000}\times 156.825000 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.000000 \\ +127.353952 \\ +127.500000 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#122:\[ \left( \begin{array}{l} Y' \\ U' \\ V' \\ \end{array} \right) = S \left( \begin{array}{l} Y \\ U \\ V \\ \end{array} \right) + T \]
+\form#123:\[ \left( \begin{array}{l} Y' \\ U' \\ V' \\ \end{array} \right) = \left( \begin{array}{llll} +1.000000 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +1.145475 & +0.000000 & +127.353952 \\ +0.000000 & +0.000000 & +0.813008 & +127.500000 \\ \end{array} \right) \left( \begin{array}{l} Y \\ U \\ V \\ 1 \\ \end{array} \right) \\ \]
+\form#124:$ 0 \le Y' \le 255 $
+\form#125:$ -111.18 \le U' \le 111.435 $
+\form#126:$ -156.825 \le V' \le 156.825 $
+\form#127:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{222.615000}{255.0000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{313.650000}{255.000000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \\ +0.000000 & +0.873000 & +0.000000 \\ +0.000000 & +0.000000 & +1.230000 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#128:\[ T = \left( \begin{array}{l} +0.000000 \\ -111.180000 \\ -156.825000 \\ \end{array} \right) \\ \]
+\form#129:\[ \left( \begin{array}{l} Y' \\ I' \\ V' \\ \end{array} \right) = \left( \begin{array}{llll} +1.000000 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +0.873000 & +0.000000 & -111.180000 \\ +0.000000 & +0.000000 & +1.230000 & -156.825000 \\ \end{array} \right) \left( \begin{array}{l} Y \\ U \\ V \\ 1 \\ \end{array} \right) \\ \]
+\form#130:\[ \left( \begin{array}{l} Y \\ I \\ Q \\ \end{array} \right) = \left( \begin{array}{lll} +0.299000 & +0.587000 & +0.114000 \\ +0.596000 & -0.274000 & -0.322000 \\ +0.211000 & -0.523000 & +0.312000 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) \\ \]
+\form#131:\[ -151.98 \le I \le 151.98 \]
+\form#132:\[ -133.365 \le Q \le 133.365 \]
+\form#133:$ 0 \le Y, I, Q \le 255 $
+\form#134:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{303.960000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{266.730000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \\ +0.000000 & +0.838926 & +0.000000 \\ +0.000000 & +0.000000 & +0.956023 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#135:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0.000000 \vspace{.5em} \\ +\dfrac{255.000000}{303.960000}\times 151.980000 \vspace{.5em} \\ +\dfrac{255.000000}{266.730000}\times 133.365000 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.000000 \\ +127.500000 \\ +127.500000 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#136:\[ \left( \begin{array}{l} Y \\ I \\ Q \\ \end{array} \right) = SM \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) + T \]
+\form#137:\[ \left( \begin{array}{l} Y \\ I \\ Q \\ \end{array} \right) = \left( \begin{array}{llll} +0.299000 & +0.587000 & +0.114000 & 0.000000 \\ +0.500000 & -0.229866 & -0.270134 & 127.500000 \\ +0.201721 & -0.500000 & +0.298279 & 127.500000 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right) \\ \]
+\form#138:\[ 0 \le Y, I, Q \le 255 \]
+\form#139:\begin{eqnarray*} \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) &=& \left( \begin{array}{lll} +0.299000 & +0.587000 & +0.114000 \\ -0.596000 & -0.274000 & -0.322000 \\ +0.211000 & -0.523000 & -0.312000 \\ \end{array} \right)^{-1} \left( \begin{array}{l} Y \\ I \\ Q \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & +0.956171 & +0.621430 \\ +1.000000 & -0.272689 & -0.646813 \\ +1.000000 & -1.103744 & +1.700623 \\ \end{array} \right) \left( \begin{array}{l} Y \\ I \\ Q \\ \end{array} \right) \\ \end{eqnarray*}
+\form#140:\begin{eqnarray*} \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right) &=& \left( \begin{array}{llll} +0.299000 & +0.587000 & +0.114000 & 0.000000 \\ +0.500000 & -0.229866 & -0.270134 & 127.500000 \\ +0.204721 & -0.500000 & +0.298279 & 127.500000 \\ +0.000000 & +0.000000 & +0.000000 & +1.000000 \\ \end{array} \right)^{-1} \left( \begin{array}{l} Y \\ I \\ Q \\ 1 \\ \end{array} \right) \\ &=& \left( \begin{array}{llll} +1.000000 & +1.139756 & +0.650018 & -228.196109 \\ +1.000000 & -0.325045 & -0.676567 & +127.705429 \\ +1.000000 & -1.135664 & +1.778853 & -59.056581 \\ +0.000000 & +0.000000 & +0.000000 & +1.000000 \\ \end{array} \right) \left( \begin{array}{l} Y \\ I \\ Q \\ 1 \\ \end{array} \right) \end{eqnarray*}
+\form#141:\[ \left( \begin{array}{l} Y' \\ I' \\ Q' \\ \end{array} \right) = \left( \begin{array}{l} Y \\ I \\ Q \\ \end{array} \right) \\ \]
+\form#142:\[ -151.98 \le I' \le 151.98 \]
+\form#143:\[ -133.365 \le Q' \le 133.365 \]
+\form#144:\[ 0 \le Y', I', Q' \le 255 \]
+\form#145:$ 0 \le Y', I', Q' \le 255 $
+\form#146:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{303.960000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{266.730000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \\ +0.000000 & +0.838926 & +0.000000 \\ +0.000000 & +0.000000 & +0.956023 \\ \end{array} \right) \end{eqnarray*}
+\form#147:\[ T = \left( \begin{array}{l} +0.0 \\ +127.5 \\ +127.5 \\ \end{array} \right) \\ \]
+\form#148:\[ \left( \begin{array}{l} Y' \\ I' \\ Q' \\ \end{array} \right) = S \left( \begin{array}{l} Y \\ I \\ Q \\ \end{array} \right) + T \]
+\form#149:\[ \left( \begin{array}{l} Y' \\ I' \\ Q' \\ \end{array} \right) = \left( \begin{array}{llll} +1.000000 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +0.838926 & +0.000000 & +127.500000 \\ +0.000000 & +0.000000 & +0.956023 & +127.500000 \\ \end{array} \right) \left( \begin{array}{l} Y \\ I \\ Q \\ 1 \\ \end{array} \right) \\ \]
+\form#150:$ -151.98 \le I' \le 151.98 $
+\form#151:$ -133.365 \le V' \le 133.365 $
+\form#152:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{303.960000}{255.000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{266.730000}{255.000000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1.000000 & +0.000000 & +0.000000 \\ +0.000000 & +1.192000 & +0.000000 \\ +0.000000 & +0.000000 & +1.046000 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#153:\[ T = \left( \begin{array}{l} +0.000000 \\ -151.980000 \\ -133.365000 \\ \end{array} \right) \\ \]
+\form#154:\[ \left( \begin{array}{l} Y' \\ I' \\ Q' \\ \end{array} \right) = \left( \begin{array}{llll} +1.000000 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +1.192000 & +0.000000 & -151.980000 \\ +0.000000 & +0.000000 & +1.046000 & -133.365000 \\ \end{array} \right) \left( \begin{array}{l} Y \\ I \\ Q \\ 1 \\ \end{array} \right) \\ \]
+\form#155:\[ \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) = \left( \begin{array}{lll} +\dfrac{1}{3} & +\dfrac{1}{3} & +\dfrac{1}{3} \vspace{.5em} \\ +\dfrac{1}{2} & +0 & -\dfrac{1}{2} \vspace{.5em} \\ -\dfrac{1}{4} & +\dfrac{1}{2} & -\dfrac{1}{4} \vspace{.5em} \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right)\\ \]
+\form#156:\[ 0 \le I1 \le 255 \]
+\form#157:\[ -127.5 \le I2, I3 \le 127.5 \]
+\form#158:$ 0 \le I1', I2', I3' \le 255 $
+\form#159:\[ T = \left( \begin{array}{l} +0 \vspace{.5em} \\ +\dfrac{255}{2} \vspace{.5em} \\ +\dfrac{255}{2} \vspace{.5em} \\ \end{array} \right) \\ \]
+\form#160:\[ \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) = M \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) + T \]
+\form#161:\[ \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) = \left( \begin{array}{llll} +\dfrac{1}{3} & +\dfrac{1}{3} & +\dfrac{1}{3} & +0 \vspace{.5em} \\ +\dfrac{1}{2} & +0 & -\dfrac{1}{2} & +\dfrac{255}{2} \vspace{.5em} \\ -\dfrac{1}{4} & +\dfrac{1}{2} & -\dfrac{1}{4} & +\dfrac{255}{2} \vspace{.5em} \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right)\\ \]
+\form#162:\[ 0 \le I1, I2, I3 \le 255 \]
+\form#163:\begin{eqnarray*} \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) &=& \left( \begin{array}{lll} +\dfrac{1}{3} & +\dfrac{1}{3} & +\dfrac{1}{3} \vspace{.5em} \\ +\dfrac{1}{2} & +0 & -\dfrac{1}{2} \vspace{.5em} \\ -\dfrac{1}{4} & +\dfrac{1}{2} & -\dfrac{1}{4} \vspace{.5em} \\ \end{array} \right)^{-1} \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +1 & +1 & -\dfrac{2}{3} \vspace{.5em} \\ +1 & +0 & +\dfrac{4}{3} \vspace{.5em} \\ +1 & -1 & -\dfrac{2}{3} \vspace{.5em} \\ \end{array} \right) \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#164:\begin{eqnarray*} \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right) &=& \left( \begin{array}{llll} +\dfrac{1}{3} & +\dfrac{1}{3} & +\dfrac{1}{3} & +0 \vspace{.5em} \\ +\dfrac{1}{2} & +0 & -\dfrac{1}{2} & +\dfrac{255}{2} \vspace{.5em} \\ -\dfrac{1}{4} & +\dfrac{1}{2} & -\dfrac{1}{4} & +\dfrac{255}{2} \vspace{.5em} \\ +0 & +0 & +0 & +1 \vspace{.5em} \\ \end{array} \right)^{-1} \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ 1 \\ \end{array} \right) \\ &=& \left( \begin{array}{llll} +1 & +1 & -\dfrac{2}{3} & -\dfrac{85}{2} \vspace{.5em} \\ +1 & +0 & +\dfrac{4}{3} & -170 \vspace{.5em} \\ +1 & -1 & -\dfrac{2}{3} & +\dfrac{425}{2} \vspace{.5em} \\ +0 & +0 & +0 & +1 \vspace{.5em} \\ \end{array} \right) \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ 1 \\ \end{array} \right) \end{eqnarray*}
+\form#165:\[ \left( \begin{array}{l} I1' \\ I2' \\ I3' \\ \end{array} \right) = \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) \\ \]
+\form#166:\[ 0 \le I1' \le 255 \]
+\form#167:\[ -127.5 \le I2', I3' \le 127.5 \]
+\form#168:\[ 0 \le I1', I2', I3' \le 255 \]
+\form#169:\[ T = \left( \begin{array}{l} +0 \vspace{.5em} \\ +\dfrac{255}{2} \vspace{.5em} \\ +\dfrac{255}{2} \vspace{.5em} \\ \end{array} \right) \]
+\form#170:\[ \left( \begin{array}{l} I1' \\ I2' \\ I3' \\ \end{array} \right) = \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) + T \]
+\form#171:\[ \left( \begin{array}{l} I1' \\ I2' \\ I3' \\ \end{array} \right) = \left( \begin{array}{llll} +1 & +0 & +0 & +0 \vspace{.5em} \\ +0 & +1 & +0 & +\dfrac{255}{2} \vspace{.5em} \\ +0 & +0 & +1 & +\dfrac{255}{2} \vspace{.5em} \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right) \\ \]
+\form#172:$ -127.5 \le I1', I2', I3' \le 127.5 $
+\form#173:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0 \vspace{.5em} \\ -\dfrac{255}{2} \vspace{.5em} \\ -\dfrac{255}{2} \vspace{.5em} \\ \end{array} \right) \left( \begin{array}{l} I1' \\ I2' \\ I3' \\ \end{array} \right) \\ &=& \left( \begin{array}{l} I1 \\ I2 \\ I3 \\ \end{array} \right) + T \end{eqnarray*}
+\form#174:\[ \left( \begin{array}{l} I1' \\ I2' \\ I3' \\ \end{array} \right) = \left( \begin{array}{llll} +1 & +0 & +0 & +0 \vspace{.5em} \\ +0 & +1 & +0 & -\dfrac{255}{2} \vspace{.5em} \\ +0 & +0 & +1 & -\dfrac{255}{2} \vspace{.5em} \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ 1 \\ \end{array} \right) \\ \]
+\form#175:\[ H=\left \{ \begin{array}{ll} \dfrac{\pi}{3}(b -g) & \mbox{if}\ R = \max \left\{ R, G, B \right\} \vspace{.5em} \\ \dfrac{\pi}{3}(2 + r - b) & \mbox{if}\ G = \max \left\{ R, G, B \right\} \vspace{.5em} \\ \dfrac{\pi}{3}(4 + g - r) & \mbox{if}\ B = \max \left\{ R, G, B \right\} \vspace{.5em} \\ \end{array} \right. \]
+\form#176:\[ S=\frac{\max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}}{\max \left\{ R, G, B \right\}} \]
+\form#177:\[ V=\frac{\max \left\{ R, G, B \right\}}{255} \]
+\form#178:\[ r=\frac{\max \left\{ R, G, B \right\} - R}{\max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}} \]
+\form#179:\[ g=\frac{\max \left\{ R, G, B \right\} - G}{\max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}} \]
+\form#180:\[ b=\frac{\max \left\{ R, G, B \right\} - B}{\max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}} \]
+\form#181:$H<0$
+\form#182:$H$
+\form#183:$2\pi$
+\form#184:$\max \left\{ R, G, B \right\}=0$
+\form#185:$S=0,H=$
+\form#186:$H=$
+\form#187:$H=0$
+\form#188:\[ 0 \le H \le 2\pi \]
+\form#189:\[ 0 \le S, V \le 1 \]
+\form#190:$ 0 \le H, S, V \le 255 $
+\form#191:\begin{eqnarray*} SCALE &=& \left( \begin{array}{lll} +\dfrac{255.000000}{2\pi} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +255.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +255.000000 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +40.584510 & +0.000000 & +0.000000 \\ +0.000000 & +255.000000 & +0.000000 \\ +0.000000 & +0.000000 & +255.000000 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#192:\begin{eqnarray*} \left( \begin{array}{l} H' \\ S' \\ V' \\ \end{array} \right) &=& SCALE \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +40.584510 & +0.000000 & +0.000000 \\ +0.000000 & +255.000000 & +0.000000 \\ +0.000000 & +0.000000 & +255.000000 \\ \end{array} \right) \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ \end{eqnarray*}
+\form#193:\[ 0 \le H', S', V' \le 255 \]
+\form#194:\[ H'=\frac{H}{\pi/3} \]
+\form#195:\[ h=floor\left( H' \right) \]
+\form#196:\[ V' = V \times 255 \]
+\form#197:\[ P=V'\times \left(1 - S\right) \]
+\form#198:\[ Q=V'\times \left\{1 - S\times \left(H' - h\right)\right\} \]
+\form#199:\[ T=V'\times \left\{1 - S\times \left(1 - H' + h\right)\right\} \]
+\form#200:$h=0$
+\form#201:\[ R = V',\qquad G = T,\qquad B = P \]
+\form#202:$h=1$
+\form#203:\[ R = Q,\qquad G = V',\qquad B = P \]
+\form#204:$h=2$
+\form#205:\[ R = P,\qquad G = V',\qquad B = T \]
+\form#206:$h=3$
+\form#207:\[ R = P,\qquad G = Q,\qquad B = V' \]
+\form#208:$h=4$
+\form#209:\[ R = T,\qquad G = P,\qquad B = V' \]
+\form#210:$h=5$
+\form#211:\[ R = V',\qquad G = P,\qquad B = Q \]
+\form#212:$ 0 \le H \le 2\pi $
+\form#213:$ 0 \le S, V \le 1 $
+\form#214:\begin{eqnarray*} SCALE &=& \left( \begin{array}{lll} +\dfrac{2\pi}{255.000000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{1.000000}{255.000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{1.000000}{255.000000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.024640 & +0.000000 & +0.000000 \\ +0.000000 & +0.003922 & +0.000000 \\ +0.000000 & +0.000000 & +0.003922 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#215:\begin{eqnarray*} \left( \begin{array}{l} H' \\ S' \\ V' \\ \end{array} \right) &=& SCALE \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.024640 & +0.000000 & +0.000000 \\ +0.000000 & +0.003922 & +0.000000 \\ +0.000000 & +0.000000 & +0.003922 \\ \end{array} \right) \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ \end{eqnarray*}
+\form#216:\[ 0 \le H, S, V \le 255 \]
+\form#217:\[ 0 \le H' \le 2\pi \]
+\form#218:\[ 0 \le S', V' \le 1 \]
+\form#219:\[ \left( \begin{array}{l} H' \\ S' \\ V' \\ \end{array} \right) = \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ \]
+\form#220:\[ H=\left \{ \begin{array}{ll} \dfrac{\pi}{3}(b - g) & \mbox{if}\ R = \max \left\{ R, G, B \right\} \vspace{.5em} \\ \dfrac{\pi}{3}(2 + r - b) & \mbox{if}\ G = \max \left\{ R, G, B \right\} \vspace{.5em} \\ \dfrac{\pi}{3}(4 + g - r) & \mbox{if}\ B = \max \left\{ R, G, B \right\} \vspace{.5em} \\ \end{array} \right. \]
+\form#221:\[ S=\left \{ \begin{array}{ll} \dfrac{\max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}}{\max \left\{ R, G, B \right\} + \min \left\{ R, G, B \right\}} & \mbox{if}\ V\le 0.5 \vspace{.5em} \\ \dfrac{\max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}}{(2\times 255) - \max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}} & \mbox{if}\ otherwise \vspace{.5em} \\ \end{array} \right.\]
+\form#222:\[ V=\frac{\max \left\{ R, G, B \right\} + \min \left\{ R, G, B \right\}}{2\times 255} \]
+\form#223:$r, g, b$
+\form#224:\begin{eqnarray*} SCALE &=& \left( \begin{array}{lll} +\dfrac{255.000000}{2\pi} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +255.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +255.000000 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +40.584510 & +0.000000 & +0.000000 \\ +0.000000 & +255.000000 & +0.000000 \\ +0.000000 & +0.000000 & +255.000000 \\ \end{array} \right) \end{eqnarray*}
+\form#225:\[ R = X\qquad \left(h = H + \frac{2}{3} \pi\right) \]
+\form#226:\[ G = X\qquad \left(h = H\right) \]
+\form#227:\[ B = X\qquad \left(h = H - \frac{2}{3} \pi\right) \]
+\form#228:\[ h'=\left \{ \begin{array}{ll} h + 2\pi & \mbox{if}\ h<0 \\ h - 2\pi & \mbox{if}\ h>2\pi \\ h & \mbox{if}\ otherwise \\ \end{array} \right. \]
+\form#229:\[ M_{2}=\left \{ \begin{array}{ll} V\times \left(1 + S\right) & \mbox{if}\ V\le 0.5 \\ V + S - V\times S & \mbox{if}\ otherwise \\ \end{array} \right. \]
+\form#230:\[ M_{1}=2V - M_{2} \]
+\form#231:\[ X=\left \{ \begin{array}{ll} \dfrac{M_{1} + \left(M_{2} - M_{1}\right)\times h'}{\pi/3} & \mbox{if}\ h'<\dfrac{\pi}{3} \\ M_{2} & \mbox{if}\ \dfrac{\pi}{3} \le h' < \pi \vspace{.5em} \\ \dfrac{M_{1} + \left(M_{2} - M_{1}\right)\times \left(\dfrac{4}{3} \pi - h'\right)}{\pi/3} & \mbox{if}\ \pi \le h' < \dfrac{4}{3}\pi \vspace{.5em} \\ M_{1} & \mbox{if}\ \dfrac{4}{3}\pi \le h' < 2\pi \vspace{.5em} \\ \end{array} \right. \]
+\form#232:\[ R = G = B = V \]
+\form#233:\begin{eqnarray*} SCALE &=& \left( \begin{array}{lll} +\dfrac{2\pi}{255.000000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{1.000000}{255.000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{1.000000}{255.000000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.024640 & +0.000000 & +0.000000 \\ +0.000000 & +0.003922 & +0.000000 \\ +0.000000 & +0.000000 & +0.003922 \\ \end{array} \right) \end{eqnarray*}
+\form#234:\[ \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) = \left( \begin{array}{lll} +0.490001 & +0.309992 & +0.200007 \\ +0.176966 & +0.812398 & +0.010636 \\ +0.000000 & +0.009999 & +0.990001 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right)\\ \]
+\form#235:\[ L^*=\left \{ \begin{array}{ll} 116\times \left(\dfrac{Y}{Y_{n}}\right)^{\dfrac{1}{3}} - 16 & \mbox{if}\ \dfrac{Y}{Y_{n}} > 0.008856 \vspace{.5em} \\ 116\times \left\{7.787\left(\dfrac{Y}{Y_{n}}\right) + \dfrac{16}{116}\right\} - 16\\ = 903.3\left(\dfrac{Y}{Y_{n}}\right) & \mbox{if}\ otherwise \vspace{.5em} \\ \end{array} \right. \]
+\form#236:\[ a^*=500\left\{f\left(\frac{X}{X_{n}}\right) - f\left(\frac{Y}{Y_{n}}\right)\right\} \]
+\form#237:\[ b^*=200\left\{f\left(\frac{Y}{Y_{n}}\right) - f\left(\frac{Z}{Z_{n}}\right)\right\} \]
+\form#238:$f\left(\frac{X}{X_{n}}\right)$
+\form#239:\[ f\left(\frac{X}{X_{n}}\right)=\left \{ \begin{array}{ll} \left(\dfrac{X}{X_{n}}\right)^{\dfrac{1}{3}} & \mbox{if}\ \dfrac{X}{X_{n}} > 0.008856 \vspace{.5em} \\ 7.787\left(\dfrac{X}{X_{n}}\right) + \dfrac{16}{116} & \mbox{if}\ otherwise \vspace{.5em} \\ \end{array} \right. \]
+\form#240:$f\left(\frac{Y}{Y_{n}}\right)$
+\form#241:$f\left(\frac{Z}{Z_{n}}\right)$
+\form#242:$X_{n}$
+\form#243:$Y_{n}$
+\form#244:$Z_{n}$
+\form#245:$X_{n}=Y_{n}=Z_{n}=255$
+\form#246:\[ 0 \le L^* \le 100 \]
+\form#247:\[ -128.152308 \le a^* \le 182.446523 \]
+\form#248:\[ -155.347701 \le b^* \le 156.201147 \]
+\form#249:$ 0 \le L^{*},a^{*},b^{*} \le 255 $
+\form#250:\[ L^{*}=f\left(\frac{Y}{Y_{n}}\right) \]
+\form#251:\[ a^{*}=f\left(\frac{X}{X_{n}}\right) - f\left(\frac{Y}{Y_{n}}\right) \]
+\form#252:\[ b^{*}=f\left(\frac{Y}{Y_{n}}\right) - f\left(\frac{Z}{Z_{n}}\right) \]
+\form#253:\[ 0.137931 \le L^{*} \le 1.00 \]
+\form#254:\[ -0.256305 \le a^{*} \le 0.364893 \]
+\form#255:\[ -0.776739 \le b^{*} \le 0.781006 \]
+\form#256:$\left(\acute{L^{*}},\acute{a^{*}},\acute{b^{*}}\right) $
+\form#257:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +\dfrac{255.000000}{1.137931} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{0.621198} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{1.557745} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +295.799988 & +0.000000 & +0.000000 \\ +0.000000 & +410.497136 & +0.000000 \\ +0.000000 & +0.000000 & +163.698166 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#258:\begin{eqnarray*} T &=& \left( \begin{array}{l} -\dfrac{255.000000}{1.137931}\times 0.137931 \vspace{.5em} \\ +\dfrac{255.000000}{0.621198}\times 0.256305 \vspace{.5em} \\ +\dfrac{255.000000}{1.557745}\times 0.776739 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} -30.909084 \\ +105.212468 \\ +127.150750 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#259:\[ \left( \begin{array}{l} \acute{L^{*}} \\ \acute{a^{*}} \\ \acute{b^{*}} \\ \end{array} \right) = S \left( \begin{array}{l} L^{*} \\ a^{*} \\ b^{*} \\ \end{array} \right) + T \]
+\form#260:\[ \left( \begin{array}{l} \acute{L^{*}} \\ \acute{a^{*}} \\ \acute{b^{*}} \\ \end{array} \right) = \left( \begin{array}{llll} +295.799988 & +0.000000 & +0.000000 & -30.909084 \\ +0.000000 & +410.497136 & +0.000000 & +105.212468 \\ +0.000000 & +0.000000 & +163.698166 & +127.150750 \\ \end{array} \right) \left( \begin{array}{l} L^{*} \\ a^{*} \\ b^{*} \\ 1 \\ \end{array} \right) \\ \]
+\form#261:\[ 0 \le L'^{*},a'^{*},b'^{*} \le 255 \]
+\form#262:\[ x=\left \{ \begin{array}{ll} f_{x}^{3} & \mbox{if}\ f_{x}^{3} > 0.008856 \vspace{.5em} \\ \dfrac{116\times f_{x} - 16}{903.3} & \mbox{if}\ otherwise \vspace{.5em} \\ \end{array} \right. \]
+\form#263:\[ y=\left \{ \begin{array}{ll} \left\{\dfrac{L + 16}{116}\right\}^{3} & \mbox{if}\ L > 903.3\times 0.008856 \vspace{.5em} \\ \dfrac{L}{903.3} & \mbox{if}\ otherwise \vspace{.5em} \\ \end{array} \right. \]
+\form#264:\[ z=\left \{ \begin{array}{ll} f_{z}^{3} & \mbox{if}\ f_{z}^{3} > 0.008856 \vspace{.5em} \\ \dfrac{116\times f_{z} - 16}{903.3} & \mbox{if}\ otherwise \vspace{.5em} \\ \end{array} \right. \]
+\form#265:$f_{x}$
+\form#266:$ f_{y}$
+\form#267:$f_{z}$
+\form#268:\[ f_{x} = f_{y} + \frac{a}{500} \]
+\form#269:\[ f_{y}=\left \{ \begin{array}{ll} \dfrac{L + 16}{116} & \mbox{if}\ y > 0.008856 \vspace{.5em} \\ \dfrac{903.3\times y + 16}{116} & \mbox{if}\ otherwise \vspace{.5em} \\ \end{array} \right. \]
+\form#270:\[ f_{z} = f_{y} + \frac{b}{200} \]
+\form#271:$x$
+\form#272:$y$
+\form#273:$z$
+\form#274:$X$
+\form#275:$Y$
+\form#276:$Z$
+\form#277:\[ X = x\times X_{n} \]
+\form#278:\[ Y = y\times Y_{n} \]
+\form#279:\[ Z = z\times Z_{n} \]
+\form#280:\[ \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) = \left( \begin{array}{lll} +2.364591 & -0.896501 & -0.468080 \\ -0.515151 & +1.426401 & +0.088750 \\ +0.005203 & -0.014407 & +1.009204 \\ \end{array} \right) \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right)\\ \]
+\form#281:$ 0 \le L^{*} \le 100 $
+\form#282:$ -128.152308 \le a^{*} \le 182.446523 $
+\form#283:$ -155.347701 \le b^{*} \le 156.201147 $
+\form#284:$\left(\acute{L^{*}},\acute{a^{*}},\acute{b^{*}}\right)$
+\form#285:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +\dfrac{255.000000}{100.000000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{310.598831} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{311.548848} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +2.550000 & +0.000000 & +0.000000 \\ +0.000000 & +0.820995 & +0.000000 \\ +0.000000 & +0.000000 & +0.818491 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#286:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0.000000 \vspace{.5em} \\ +\dfrac{255.000000}{310.598831}\times 128.152308 \vspace{.5em} \\ +\dfrac{255.000000}{311.548848}\times 156.201147 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{l} +0.000000 \\ +105.212368 \\ +127.150731 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#287:\[ \left( \begin{array}{l} \acute{L^{*}} \\ \acute{a^{*}} \\ \acute{b^{*}} \\ \end{array} \right) = \left( \begin{array}{llll} +2.550000 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +0.820995 & +0.000000 & +105.212368 \\ +0.000000 & +0.000000 & +0.818491 & +127.150731 \\ \end{array} \right) \left( \begin{array}{l} L^{*} \\ a^{*} \\ b^{*} \\ 1 \\ \end{array} \right) \\ \]
+\form#288:\[ 0 \le L^{*},a^{*},b^{*} \le 255 \]
+\form#289:\[ 0 \le \acute{L^{*}} \le 100 \]
+\form#290:\[ -128.152308 \le \acute{a^{*}} \le 182.446523 \]
+\form#291:\[ -155.347701 \le \acute{b^{*}} \le 156.201147 \]
+\form#292:\[ \left( \begin{array}{l} \acute{L^{*}} \\ \acute{a^{*}} \\ \acute{b^{*}} \\ \end{array} \right) = \left( \begin{array}{l} L^{*} \\ a^{*} \\ b^{*} \\ \end{array} \right) \\ \]
+\form#293:\[ 0 \le L^{*} \le 100 \]
+\form#294:\[ -128.152308 \le a^{*} \le 182.446523 \]
+\form#295:\[ -155.347701 \le b^{*} \le 156.201147 \]
+\form#296:\[ 0 \le \acute{L^{*}},\acute{a^{*}},\acute{b^{*}} \le 255 \]
+\form#297:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0.000000 \vspace{.5em} \\ +\dfrac{255.000000}{310.598831}\times 128.152308 \vspace{.5em} \\ +\dfrac{255.000000}{311.548848}\times 155.347701 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{l} +0.000000 \\ +105.212368 \\ +127.150731 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#298:\[ 0 \le \acute{L^{*}}, \acute{a^{*}}, \acute{b^{*}} \le 255 \]
+\form#299:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +\dfrac{100.000000}{255.000000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{310.598831}{255.000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{311.548848}{255.000000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.392157 & +0.000000 & +0.000000 \\ +0.000000 & +1.218035 & +0.000000 \\ +0.000000 & +0.000000 & +1.221760 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#300:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0.000000 \\ -128.152308 \\ -155.347701 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#301:\[ \left( \begin{array}{l} \acute{L^{*}} \\ \acute{a^{*}} \\ \acute{b^{*}} \\ \end{array} \right) = \left( \begin{array}{llll} +0.392157 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +1.218035 & +0.000000 & -128.152308 \\ +0.000000 & +0.000000 & +1.221760 & -155.347701 \\ \end{array} \right) \left( \begin{array}{l} L^{*} \\ a^{*} \\ b^{*} \\ 1 \\ \end{array} \right) \\ \]
+\form#302:\[ \left( \begin{array}{l} Y \\ C1 \\ C2 \\ \end{array} \right) = \left( \begin{array}{lll} +0.299000 & +0.587000 & +0.114000 \\ +0.701000 & -0.587000 & -0.114000 \\ -0.299000 & -0.587000 & +0.886000 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right)\\ \]
+\form#303:\[ -127.5 \le C1, C2 \le 127.5 \]
+\form#304:$ Y,C1,C2 $
+\form#305:$ H,S,V $
+\form#306:\[ H=\arctan \left(\frac{C1}{C2}\right) \]
+\form#307:\[ S=\sqrt{C1^{2}+C2^{2}} \]
+\form#308:\[ V=Y \]
+\form#309:\[ -\pi \le H \le \pi \]
+\form#310:\[ 0 \le S \le 227.792515 \]
+\form#311:\[ 0 \le V \le 225 \]
+\form#312:\begin{eqnarray*} SCALE &=& \left( \begin{array}{lll} +\dfrac{255.000000}{2\pi} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{227.792515} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +1.000000 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +40.584510 & +0.000000 & +0.000000 \\ +0.000000 & +1.119440 & +0.000000 \\ +0.000000 & +0.000000 & +1.000000 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#313:\begin{eqnarray*} \left( \begin{array}{l} H' \\ S' \\ V' \\ \end{array} \right) &=& SCALE \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +40.584510 & +0.000000 & +0.000000 \\ +0.000000 & +1.119440 & +0.000000 \\ +0.000000 & +0.000000 & +1.000000 \\ \end{array} \right) \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ \end{eqnarray*}
+\form#314:\[ Y = V \]
+\form#315:\[ C1 = S\times \sin \left(H\right) \]
+\form#316:\[ C2 = S\times \cos \left(H\right) \]
+\form#317:\[ \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) = \left( \begin{array}{lll} +1.000000 & +1.000000 & +0.000000 \\ +1.000000 & -0.509370 & -0.194208 \\ +1.000000 & +0.000000 & +1.000000 \\ \end{array} \right) \left( \begin{array}{l} Y \\ C1 \\ C2 \\ \end{array} \right) \\ \]
+\form#318:$ -\pi \le H \le \pi $
+\form#319:\begin{eqnarray*} SCALE &=& \left( \begin{array}{lll} +\dfrac{2\pi}{255.000000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{227.792515}{255.000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +1.000000 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.024640 & +0.000000 & +0.000000 \\ +0.000000 & +0.893304 & +0.000000 \\ +0.000000 & +0.000000 & +0.100000 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#320:\begin{eqnarray*} \left( \begin{array}{l} H' \\ S' \\ V' \\ \end{array} \right) &=& SCALE \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.024640 & +0.000000 & +0.000000 \\ +0.000000 & +0.893304 & +0.000000 \\ +0.000000 & +0.000000 & +0.100000 \\ \end{array} \right) \left( \begin{array}{l} H \\ S \\ V \\ \end{array} \right) \\ \end{eqnarray*}
+\form#321:\[ -\pi \le H' \le \pi \]
+\form#322:\[ 0 \le S' \le 227.792515 \]
+\form#323:\[ 0 \le V' \le 225 \]
+\form#324:\[ 0 \le V \le 255 \]
+\form#325:\[ 0 \le V' \le 255 \]
+\form#326:$H'<0$
+\form#327:$ H' \gets H' + 255 $
+\form#328:$H' > \pi$
+\form#329:$ H' \gets H' - 2\pi $
+\form#330:\[ \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) = \left( \begin{array}{lll} +0.501053 & +0.314737 & +0.184211 \\ +0.262000 & +0.656000 & +0.082000 \\ +0.018349 & +0.147706 & +0.833945 \\ \end{array} \right) \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) \\ \]
+\form#331:\[ L^{*}=\sqrt[3]{Y} \]
+\form#332:\[ a^{*}=\sqrt[3]{X} - \sqrt[3]{Y} \]
+\form#333:\[ b^{*}=\sqrt[3]{Y} - \sqrt[3]{Z} \]
+\form#334:\[ 0 < L^{*} < 6.341326 \]
+\form#335:\[ -1.196460 < a^{*} < 1.147458 \]
+\form#336:\[ -3.213898 < b^{*} < 2.677538 \]
+\form#337:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +\dfrac{255.000000}{6.341326} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{255.000000}{2.343919} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{255.000000}{5.891436} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +40.212410 & +0.000000 & +0.000000 \\ +0.000000 & +108.792155 & +0.000000 \\ +0.000000 & +0.000000 & +43.283166 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#338:\begin{eqnarray*} T &=& \left( \begin{array}{l} +0.000000 \vspace{.5em} \\ +\dfrac{255.000000}{2.343919}\times 1.196459 \vspace{.5em} \\ +\dfrac{255.000000}{5.891436}\times 3.213898 \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.000000\\ +130.165353 \\ +139.107679 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#339:\[ \left( \begin{array}{l} \acute{L^{*}} \\ \acute{a^{*}} \\ \acute{b^{*}} \\ \end{array} \right) = \left( \begin{array}{llll} +40.212410 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +108.792155 & +0.000000 & +130.165353 \\ +0.000000 & +0.000000 & +43.283166 & +139.107679 \\ \end{array} \right) \left( \begin{array}{l} L^{*} \\ a^{*} \\ b^{*} \\ 1 \\ \end{array} \right) \\ \]
+\form#340:$ 0 \le L^{*} \le 6.431326 $
+\form#341:$ -1.196459 \le a^{*} \le 1.147460 $
+\form#342:$ -3.213898 \le b^{*} \le 2.677538 $
+\form#343:\begin{eqnarray*} S &=& \left( \begin{array}{lll} +\dfrac{6.341326}{255.000000} & +0.000000 & +0.000000 \vspace{.5em} \\ +0.000000 & +\dfrac{2.343919}{255.000000} & +0.000000 \vspace{.5em} \\ +0.000000 & +0.000000 & +\dfrac{5.891436}{255.000000} \vspace{.5em} \\ \end{array} \right) \\ &=& \left( \begin{array}{lll} +0.024868 & +0.000000 & +0.000000 \\ +0.000000 & +0.009192 & +0.000000 \\ +0.000000 & +0.000000 & +0.023104 \\ \end{array} \right) \\ \end{eqnarray*}
+\form#344:\[ T = \left( \begin{array}{l} +0.000000 \\ +1.196459 \\ +3.213898 \\ \end{array} \right) \\ \]
+\form#345:\[ \left( \begin{array}{l} \acute{L^{*}} \\ \acute{a^{*}} \\ \acute{b^{*}} \\ \end{array} \right) = \left( \begin{array}{llll} +0.024868 & +0.000000 & +0.000000 & +0.000000 \\ +0.000000 & +0.009192 & +0.000000 & +1.196459 \\ +0.000000 & +0.000000 & +0.023104 & +3.213898 \\ \end{array} \right) \left( \begin{array}{l} L^{*} \\ a^{*} \\ b^{*} \\ 1 \\ \end{array} \right) \\ \]
+\form#346:\[ 0 < \acute{L^{*}} < 6.341326 \]
+\form#347:\[ -1.196460 < \acute{a^{*}} < 1.147458 \]
+\form#348:\[ -3.213898 < \acute{b^{*}} < 2.677538 \]
+\form#349:\[ X = \left(\acute{L^{*3}} + \acute{a^{*3}}\right)^{3} \]
+\form#350:\[ Y = \acute{L^{*3}} \]
+\form#351:\[ Z = \left(\acute{L^{*3}} - \acute{b^{*3}}\right)^{3} \]
+\form#352:\[ 0 \le X \le 242.25 \]
+\form#353:\[ 0 \le Z \le 277.95 \]
+\form#354:\[ \left( \begin{array}{l} R \\ G \\ B \\ \end{array} \right) = \left( \begin{array}{lll} +2.613898 & -1.149547 & -0.464354 \\ -1.060250 & +2.025183 & +0.035068 \\ +0.130276 & -0.333402 & +1.203126 \\ \end{array} \right) \left( \begin{array}{l} X \\ Y \\ Z \\ \end{array} \right) \\ \]
+\form#355:\[ d_{ij} = \sqrt{ \sum _{l = 1}^{K} \left( x_{i}^{l} - x_{j}^{l} \right)^{2} } \]
+\form#356:\[ d_{ij} = \sqrt{ \sum _{l = 1}^{K} w^{l} \left( x_{i}^{l} - x_{j}^{l} \right)^{2} } \]
+\form#357:\[ d_{ij} = \sum _{l = 1}^{K} | x_{i}^{l} - x_{j}^{l} | \]
+\form#358:\[ d_{ij} = \max _{l} \left[ | x_{i}^{l} - x_{j}^{l} | \right] \]
+\form#359:$ \mu $
+\form#360:$ \Sigma $
+\form#361:\[ d_{i} = \sqrt{\left( x_{i} - \mu \right)^{t} \Sigma^{-1} \left( x_{i} - \mu \right) } \]
+\form#362:$3\pi/2$
+\form#363:$\pi/2$
+\form#364:\[{\it xdiff} = xmax - xmin + 1\]
+\form#365:\[{\it ydiff} = ymax - ymin + 1\]
+\form#366:\[{\it rect1\_area} = {\it xdiff} \times {\it ydiff}\]
+\form#367:\[{\it rect1\_lratio} = \frac{\it ydiff}{\it xdiff}\]
+\form#368:\[{\it rect1\_sratio} = \frac{area}{\it rect1\_area}\]
+\form#369:\[sumx = \sum_{y}\sum_{x}{x} \]
+\form#370:\[sumy = \sum_{y}\sum_{x}{y} \]
+\form#371:\[sumx2 = \sum_{y}\sum_{x}{x^2} \]
+\form#372:\[sumy2 = \sum_{y}\sum_{x}{y^2} \]
+\form#373:\[sumxy = \sum_{y}\sum_{x}{xy} \]
+\form#374:\[M_{pq} = \sum_{(x,y) \in R}{x^p y^q} \]
+\form#375:$M_{pq}$
+\form#376:\[ M_{00} = area \]
+\form#377:\[M_{10} = sumx \]
+\form#378:\[M_{01} = sumy \]
+\form#379:\[M_{20} = sumx2 \]
+\form#380:\[M_{02} = sumy2 \]
+\form#381:\[M_{11} = sumxy \]
+\form#382:\[MG_{pq} = \sum_{(x,y) \in R}{(x-centerx)^p(y-centery)^q} \]
+\form#383:\[ MG_{00} = M_{00} = area \]
+\form#384:\[ MG_{10} = 0 \]
+\form#385:\[ MG_{01} = 0 \]
+\form#386:$h[i]$
+\form#387:$(0 <= i < 7)$
+\form#388:\[ \begin{aligned} h[0] &= N_{20} + N_{02} \\ h[1] &= (N_{20} - N_{02})^2 + 4 N_{11}^2 \\ h[2] &= (N_{30} - 3 N_{12})^2 + (3 N_{21} - N_{03})^2 \\ h[3] &= (N_{30} + N_{12})^2 + (N_{21} + N_{03})^2 \\ h[4] &= (N_{30} - 3 N_{12})(N_{30} + N_{12}) ((N_{30} + N_{12})^2 - 3(N_{21} + N_{03})^2) + (3 N_{21} - N_{03})(N_{21} + N_{03}) (3(N_{30} + N_{12})^2 - (N_{21} + N_{03})^2) \\ h[5] &= (N_{20} - N_{02}) ((N_{30} + N_{12})^2 - (N_{21} + N_{03})^2) + 4 N_{11}(N_{30} + N_{12})(N_{21} + N_{03}) \\ h[6] &= (3 N_{21} - N_{03})(N_{30} + N_{12}) ((N_{30} + N_{12})^2 - 3(N_{21} + N_{03})^2) - (N_{30} - 3 N_{12})(N_{21} + N_{03}) (3(N_{30} + N_{12})^2 - (N_{21} + N_{03})^2) \\ \end{aligned} \]
+\form#389:$N_{pq}$
+\form#390:\[N_{pq} = \frac{MG_{pq}}{area^{(p+q)/2+1}}\]
+\form#391:$MG_{pq}$
+\form#392:\[centerx = \frac{sumx}{area}\]
+\form#393:\[centery = \frac{sumy}{area}\]
+\form#394:\begin{eqnarray*} majoraxis &=& \sqrt{2}\sqrt{\mu_{20}+\mu_{02}+\sqrt{(\mu_{20}-\mu_{02})^2+4\mu_{11}^2}}\\ minoraxis &=& \sqrt{2}\sqrt{\mu_{20}+\mu_{02}-\sqrt{(\mu_{20}-\mu_{02})^2+4\mu_{11}^2}}\\ axistheta &=& \frac{1}{2}{\tt atan2}(2 \mu_{11},\mu_{20}-\mu_{02})\\ axisratio &=& \frac{minoraxis}{majoraxis} \end{eqnarray*}
+\form#395:$ \frac{-\pi}{2} \le \theta < \frac{\pi}{2} $
+\form#396:$\mu_{20}, \mu_{02}, \mu_{11}$
+\form#397:\begin{eqnarray*} \mu_{20} &=& \frac{mg20}{area} \\ \mu_{02} &=& \frac{mg02}{area} \\ \mu_{11} &=& \frac{mg11}{area} \end{eqnarray*}
+\form#398:\[diameter\_equidisk = 2 \sqrt{ \frac{area}{\pi} }\]
+\form#399:\[{\it rect2\_area} = wsize \times lsize \]
+\form#400:\[{\it rect2\_lratio} = \frac{wsize}{lsize}\]
+\form#401:\[{\it rect2\_sratio} = \frac{area}{\it rect2\_area}\]
+\form#402:$\sqrt{2}$
+\form#403:$ \frac{-\pi}{2} \le \theta < \frac{\pi}{2}$
+\form#404:\[{\it diameter\_equicircle} = \frac{perim}{\pi}\]
+\form#405:\[{\it convex\_arearatio} = \frac{\it area}{\it convex\_area}\]
+\form#406:\[{\it convex\_perimratio} = \frac{\it perim}{\it convex\_perim}\]
+\form#407:\[circularity1 = 4\pi \frac{area}{perim^2} \]
+\form#408:\[circularity2 = \frac{area}{\pi * dpmax^2} \]
+\form#409:\[circularity3 = 1-\frac{dpsigma}{dpave} \]
+\form#410:\[ hratio = \frac{sc}{st} \]
+\form#411:\[ pps = \frac{perim^2}{st} \]
+\form#412:$R$
+\form#413:$-1.0 \leq R \leq 1.0$
+\form#414:$ R = 1.0 $
+\form#415:$ R= -1.0 $
+\form#416:\begin{eqnarray*} R &=& \frac{ V_{im} }{ \sqrt{ V_{input} \cdot V_{master} } }\\ V_{master} &=& \frac{1}{N}\sum_{n = 0}^{N-1}(M_n ^2) - \frac{1}{N^2}( \sum_{n = 0}^{N-1}M_n )^2\\ V_{input} &=& \frac{1}{N}\sum_{n = 0}^{N-1}(I_n ^2) - \frac{1}{N^2}( \sum_{n = 0}^{N-1}I_n )^2\\ V_{im} &=& \frac{1}{N}\sum_{n = 0}^{N-1}(M_n \cdot I_n) - \frac{1}{N^2} \sum_{n = 0}^{N-1}M_n \cdot \sum_{n = 0}^{N-1}I_n \end{eqnarray*}
+\form#417:$M_n$
+\form#418:$I_n$
+\form#419:$V$
+\form#420:$\frac{1}{2^{n}}$
+\form#421:$[-2^{31}, 2^{31}-1]$
+\form#422:$[0, 2^{32}-1]$
+\form#423:$[-2^{63}, 2^{63}-1]$
+\form#424:$ ({\bf x_{1}}, y_{1} ), ({\bf x_{2}}, y_{2}), \dots ,({\bf x_{n}}, y_{n}) $
+\form#425:${\bf x_{1}}$
+\form#426:$y_{1}$
+\form#427:${\bf x_{2}}$
+\form#428:$y_{2} $
+\form#429:${\bf x_{i}}$
+\form#430:$y_{i}$
+\form#431:$\frac{1}{N}$
+\form#432:$T$
+\form#433:$t$
+\form#434:$t=1,2,\dots,T$
+\form#435:\[ R_{\alpha}(T_{t}) = R(T_{t}) + \alpha |{T_{t_{leaf}}}| \]
+\form#436:$R(T_{t})$
+\form#437:$T_{t}$
+\form#438:$|{T_{t_{leaf}}}|$
+\form#439:$\alpha$
+\form#440:${\bf x}$
+\form#441:$c$
+\form#442:$p(C = c|X = {\bf x})$
+\form#443:$p(c|{\bf x})$
+\form#444:\[ p(c|{\bf x})=\frac{ p({\bf x}|c)p(c) }{ p({\bf x}) } \]
+\form#445:$p({\bf x})$
+\form#446:\[ p(c|{\bf x}) \propto p({\bf x}|c)p(c) \]
+\form#447:$p(c)$
+\form#448:$p({\bf x}|c)$
+\form#449:${\bf x} = (x_1, x_2, \dots, x_n)$
+\form#450:$p({\bf x}|c) = p(x_1, x_2, \dots, x_n|c)$
+\form#451:\[ p(x_1, x_2, \dots, x_n|c) = p(x_1|c) p(x_2|c) \dots p(x_n|c) = \prod_{i=1}^n p(x_i|c) \]
+\form#452:$p(x_i|c)$
+\form#453:\[ p(x_i|c) \propto \exp \left( - \frac{(x_i - \mu_i)^2}{2 \sigma_i^2} \right) \]
+\form#454:$\mu_i$
+\form#455:$\sigma_i$
+\form#456:\[ p(x_i|c) = \begin{cases} p_{i,j} & (x_i = j, \ j = 1 \dots m_i) \\ 0 & (\text{otherwise}) \end{cases} \]
+\form#457:$p_{i,j}$
+\form#458:$m_i$
+\form#459:$x_i$
+\form#460:$x_i = j$
+\form#461:$j = 1 \dots m_i$
+\form#462:$\sum_{j=1}^{m_i} p_{i,j} = 1$
+\form#463:$x_i \in \{1, \dots, m_i\}$
+\form#464:\[ p(x_i|c) \propto p_i^{x_i} \]
+\form#465:$p_i$
+\form#466:$\sum_{i=1}^n p_i = 1$
+\form#467:\[ K( {\bf x_{1}},{\bf x_{2}}) = {\bf x_{1}} \cdot {\bf x_{2}} \]
+\form#468:\[ K( {\bf x_{1}},{\bf x_{2}}) = (\gamma ({\bf x_{1}} \cdot {\bf x_{2}}) + c)^d \]
+\form#469:$D$
+\form#470:$l$
+\form#471:$ D = {}_{l+d} \mathrm{C} _d $
+\form#472:$\gamma$
+\form#473:$d$
+\form#474:\[ K( {\bf x_{1}},{\bf x_{2}}) = \exp(- \gamma \|{\bf x_{1}} - {\bf x_{2}}\|^2 ) \]
+\form#475:$2^{-5}, 2^{-4}, \dots, 2^{5}$
+\form#476:\[ d=(\bm{l} \cdot \bm{n}) ai \]
+\form#477:$ \cdot $
+\form#478:$ d $
+\form#479:$ \bm{n}=(n_{x},n_{y},n_{z}) $
+\form#480:$ \bm{l}=(l_{x},l_{y},l_{z}) $
+\form#481:$ i $
+\form#482:$ a $
+\form#483:$ m $
+\form#484:$ l_{j} $
+\form#485:$ d_{j} $
+\form#486:$ 1 \leqq j \leqq m $
+\form#487:\[ \left\{ \begin{alignedat}{4} (l_{1,x}n_{x}+{} && l_{1,y}n_{y}+{} && l_{1,z}n_{z}) && ai={} && d_{1} \\ (l_{2,x}n_{x}+{} && l_{2,y}n_{y}+{} && l_{2,z}n_{z}) && ai={} && d_{2} \\ \vdots \\ (l_{m,x}n_{x}+{} && l_{m,y}n_{y}+{} && l_{m,z}n_{z}) && ai={} && d_{m} \\ \end{alignedat} \right. \]
+\form#488:$\tilde{n}^{t}=(ai)\bm{n}^{t}$
+\form#489:$\textbf{L},\bm{d}$
+\form#490:\[ \textbf{L}= \begin{pmatrix} l_{1,x} & l_{1,y} & l_{1,z} \\ l_{2,x} & l_{2,y} & l_{2,z} \\ \vdots & \vdots & \vdots \\ l_{m,x} & l_{m,y} & l_{m,z} \end{pmatrix}, \bm{d}=\begin{pmatrix}d_{1} \\ d_{2} \\ \vdots \\ d_{m} \end{pmatrix} \]
+\form#491:$ \textbf{L}{\tilde{n}}^t=\bm{d} $
+\form#492:$ \bm{d}-\textbf{L}\tilde{n}^t $
+\form#493:$ \tilde{n}^t $
+\form#494:$ \tilde{n} $
+\form#495:$ \bm{n} $
+\form#496:$ (x,y) $
+\form#497:$ Z $
+\form#498:$ Z=Z(x,y) $
+\form#499:$ n=(n_{x},n_{y},n_{z}) $
+\form#500:$ (Z_{x},Z_{y})=(-\dfrac{n_{x}}{n_{z}},-\dfrac{n_{y}}{n_{z}}) $
+\form#501:$ Z_{x},Z_{y} $
+\form#502:$ y $
+\form#503:\[ T(i,j) = m(i,j) + k \cdot s(i,j) \]
+\form#504:$m(i,j)$
+\form#505:$(i,j)$
+\form#506:$s(i,j)$
+\form#507:$k$
+\form#508:\[ T(i,j) = m(i,j) \cdot \left [ 1 + k \cdot \left (\frac { s(i,j) }{R} - 1 \right ) \right ] \]
+\form#509:$(i, j)$
+\form#510:$f(x, y)$
+\form#511:$(x, y)$
+\form#512:$g(x, y)$
+\form#513:\[ g_{(i,j)} =\frac{1}{9} \sum^{i+1}_{k=i-1}\sum^{j+1}_{l=j-1} F(k,l) \]
+\form#514:\[ F(k,l) = \left\{ \begin{array}{ll} f(k,l) & \mbox{ if $ \left| f(k,l) - f(i,j) \right| \leq \Delta $, } \\ f(i,j) & \mbox{ otherwise } \\ \end{array} \right. \]
+\form#515:$\Delta$
+\form#516:$ \lfloor \frac{m}{2} \rfloor$
+\form#517:$ \lfloor \frac{n}{2} \rfloor$
+\form#518:$V_{s}$
+\form#519:$M$
+\form#520:$V_{d}$
+\form#521:\[ V_{d}\ =\ M \cdot V_{s} \]
+\form#522:\[ V_{s}= \left(\begin{array}{c} S_{0}\\ S_{1}\\ \vdots \\ S_{n} \end{array}\right) ,\ V_{d}= \left(\begin{array}{c} D_{0}\\ D_{1}\\ \vdots \\ D_{m} \end{array}\right) \]
+\form#523:$n$
+\form#524:$m$
+\form#525:\[ \left(\begin{array}{c} D_{0}\\ D_{1}\\ D_{2}\\ \blacktriangle \end{array}\right) = \left(\begin{array}{cccc} M_{00} & M_{01} & M_{02} & M_{03}\\ M_{10} & M_{11} & M_{12} & M_{13}\\ M_{20} & M_{21} & M_{22} & M_{23}\\ M_{30} & M_{31} & M_{32} & M_{33} \end{array}\right) \left(\begin{array}{c} S_{0}\\ S_{1}\\ S_{2}\\ \blacksquare \end{array}\right) \]
+\form#526:$\blacksquare $
+\form#527:$\blacktriangle$
+\form#528:\[ \left(\begin{array}{c} D_{0}\\ D_{1}\\ D_{2}\\ \end{array}\right) = \left(\begin{array}{cccc} M_{00} & M_{01} & M_{02} & M_{03}\\ M_{10} & M_{11} & M_{12} & M_{13}\\ M_{20} & M_{21} & M_{22} & M_{23}\\ \end{array}\right) \left(\begin{array}{c} S_{0}\\ S_{1}\\ S_{2}\\ 1 \end{array}\right) \]
+\form#529:\[ {\renewcommand\arraystretch{1.5} G(x,y) = \left\{ \begin{array}{ll} D(x,y) & (*1) \\ \frac{1}{4}( D(x-1,y) + D(x+1,y) + D(x,y-1) + D(x,y+1) ) & (*2) \\ \end{array} \right. } \]
+\form#530:\[ {\renewcommand\arraystretch{1.5} \begin{array}{|c|c|c|} \hline 0 & \frac{1}{4} & 0 \\ \hline \frac{1}{4} & 1 & \frac{1}{4} \\ \hline 0 & \frac{1}{4} & 0 \\ \hline \end{array} } \]
+\form#531:\[ {\renewcommand\arraystretch{1.5} R(x,y) = \left\{ \begin{array}{ll} D(x,y) & (*3) \\ \frac{1}{2}( D(x-1,y) + D(x+1,y) ) & (*4) \\ \frac{1}{2}( D(x,y-1) + D(x,y+1) ) & (*5) \\ \frac{1}{4}( D(x-1,y-1) + D(x-1,y+1) + D(x+1,y-1) + D(x+1,y+1) ) & (*6) \end{array}\right. } \]
+\form#532:\[ {\renewcommand\arraystretch{1.5} \begin{array}{|c|c|c|} \hline \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\ \hline \frac{1}{2} & 1 & \frac{1}{2} \\ \hline \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\ \hline \end{array} } \]
+\form#533:\[ {\renewcommand\arraystretch{1.2} G(x,y) = \left\{\begin{array}{ll}D(x,y) & (*7) \\ \frac{1}{256} \left[\begin{array}{c} -1 \\ 9 \\ 9 \\ -1 \end{array}\right]^T \left[\begin{array}{cccc} D(x,y-3) & D(x+1,y-2) & D(x+2,y-1) & D(x+3,y) \\ D(x-1,y-2) & D(x,y-1) & D(x+1,y) & D(x+2,y+1) \\ D(x-2,y-1) & D(x-1,y) & D(x,y+1) & D(x+1,y+2) \\ D(x-3,y) & D(x-2,y+1) & D(x-1,y+2) & D(x,y+3) \end{array}\right] \left[\begin{array}{c} -1 \\ 9 \\ 9 \\ -1 \end{array}\right] & (*8)\end{array}\right. } \]
+\form#534:\[ {\renewcommand\arraystretch{1.2} R(x,y) = \left\{\begin{array}{ll} D(x,y) & (*9) \\ \frac{1}{16}(-D(x-3,y)+9D(x-1,y)+9D(x+1,y)-D(x+3,y)) & (*10) \\ \frac{1}{16}(-D(x,y-3)+9D(x,y-1)+9D(x,y+1)-D(x,y+3)) & (*11) \\ \frac{1}{256}\left[\begin{array}{c} -1 \\ 9 \\ 9 \\ -1 \end{array}\right]^T \left[\begin{array}{cccc} D(x-3,y-3) & D(x-1,y-3) & D(x+1,y-3) & D(x+3,y-3) \\ D(x-3,y-1) & D(x-1,y-1) & D(x+1,y-1) & D(x+3,y-1) \\ D(x-3,y+1) & D(x-1,y+1) & D(x+1,y+1) & D(x+3,y+1) \\ D(x-3,y+3) & D(x-1,y+3) & D(x+1,y+3) & D(x+3,y+3) \end{array}\right] \left[\begin{array}{c} -1 \\ 9 \\ 9 \\ -1 \end{array}\right] & (*12) \\ \end{array}\right. } \]
+\form#535:$\frac{\sqrt{2}}{4}$
+\form#536:$(x,y)$
+\form#537:$f(x,y)$
+\form#538:$g(x,y)$
+\form#539:\[ g(x,y) = \frac{ \displaystyle \sum^W_{n=-W}\sum^W_{m=-W} \exp\left( -\frac{m^{2}+n^{2}}{2\sigma_{S}^{2}} \right) \exp\left( -\frac{(f(x,y)-f(x+m,y+n))^{2}}{2\sigma_{R}^{2}} \right) f(x+m,y+n) }{ \displaystyle \sum^W_{n=-W}\sum^W_{m=-W} \exp\left( -\frac{m^{2}+n^{2}}{2\sigma_{S}^{2}} \right) \exp\left( -\frac{(f(x,y)-f(x+m,y+n))^{2}}{2\sigma_{R}^{2}} \right) } \]
+\form#540:$\sigma_{S}$
+\form#541:$\sigma_{R}$
+\form#542:$\left(2W+1\right) \times \left(2W+1\right)$
+\form#543:\[ value = \sum_{c=0}^{channels-1}\sum_{y=0}^{hight-1}\sum_{x=0}^{width-1}| Img1_{(c,x,y)} - Img2_{(c,x,y)} | \]
+\form#544:\[ value = \sum_{c=0}^{channels-1}\sum_{y=0}^{hight-1}\sum_{x=0}^{width-1}( Img1_{(c,x,y)} - Img2_{(c,x,y)} )^2 \]
+\form#545:\begin{eqnarray*} value &=& \frac{ V_{12} }{ \sqrt{ V_{1} \cdot V_{2} } }\\ V_{1} &=& \frac{1}{N}\sum_{c=0}^{channels-1}\sum_{y=0}^{hight-1}\sum_{x=0}^{width-1}( Img1_{(c,x,y)} )^2 - \frac{1}{N^2} \left( SUM_{1} \right)^2\\ V_{2} &=& \frac{1}{N}\sum_{c=0}^{channels-1}\sum_{y=0}^{hight-1}\sum_{x=0}^{width-1}( Img2_{(c,x,y)} )^2 - \frac{1}{N^2} \left( SUM_{2} \right)^2\\ V_{12} &=& \frac{1}{N}\sum_{c=0}^{channels-1}\sum_{y=0}^{hight-1}\sum_{x=0}^{width-1}( Img1_{(c,x,y)} \cdot Img2_{(c,x,y)} ) - \frac{1}{N^2} \left( SUM_{1} \cdot SUM_{2} \right)\\ N &=& channels \cdot width \cdot height\\ SUM_{1} &=& \sum_{c=0}^{channels-1}\sum_{y=0}^{hight-1}\sum_{x=0}^{width-1} Img1_{(c,x,y)}\\ SUM_{2} &=& \sum_{c=0}^{channels-1}\sum_{y=0}^{hight-1}\sum_{x=0}^{width-1} Img2_{(c,x,y)} \end{eqnarray*}
+\form#546:$ \sigma^2 $
+\form#547:\[ \sigma^2=\frac{1}{n} \sum^{n}_{i=1}x_{i}^{2} - \bar{x}^{2}\]
+\form#548:$ p_{1} \left( x_{1} , y_{1} \right) $
+\form#549:$ p_{2} \left( x_{2} , y_{2} \right) $
+\form#550:$ p_{3} \left( x_{3} , y_{3} \right) $
+\form#551:\[ area = \frac{1}{2} * \left\{ \left( x_{1} - x_{2} \right) * \left( y_{3} - y_{2} \right) - \left( x_{3} - x_{2} \right) * \left( y_{1} - y_{2} \right) \right\} \]
+\form#552:$-\pi/2$
+\form#553:$(x1,y1)$
+\form#554:$ax+by+c=0$
+\form#555:\[ d=\frac{|ax+by+c|}{\sqrt{a^2+b^2}} \]
+\form#556:$ \theta $
+\form#557:$(x2,y2)$
+\form#558:\[ d=\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} \]
+\form#559:$ RGB $
+\form#560:$ 0 \sim 255 $
+\form#561:$ 0 \le R,G,B \le 255 $
+\form#562:$ I1I2I3 $
+\form#563:$\left(I1,I2,I3\right)=\left(255,255,255\right)$
+\form#564:\[ S=\frac{\max \left\{ R, G, B \right\} - \min \left\{ R, G, B \right\}}{\max \left\{ R, G, B \right\}} \times 255 \]
+\form#565:$ r, g, b $
+\form#566:$R=G=B$
+\form#567:$S=0,H=0$
+\form#568:$\sigma\times tolerance[0 \sim 2]$
+\form#569:$ \alpha $
+\form#570:$h$
+\form#571:$-\frac{h}{2}<gap<\frac{h}{2}$
+\form#572:$ |gap| $
+\form#573:$ \lfloor \frac{M}{2} \rfloor$
+\form#574:$ \lfloor \frac{N}{2} \rfloor$
+\form#575:\[ d_{ij} = \sqrt{\left( x_{i} - x_{j} \right)^2+\left( y_{i} - y_{j} \right)^2} \]
+\form#576:\[ d_{ij} = | x_{i} - x_{j} | + | y_{i} - y_{j} | \]
+\form#577:\[ d_{ij} = \max \left(| x_{i} - x_{j} | , | y_{i} - y_{j} | \right) \]
+\form#578:$w$
+\form#579:$ 0 \leq x < w-2 $
+\form#580:$ 0 \leq y < h-2 $
+\form#581:$ length = \left(INT\right)\sqrt{\left(lind.ed.x - line.st.x\right)^2 + \left(lind.ed.y - line.st.y\right)^2} + 1 $
+\form#582:$ length = \left(INT\right) \left( | arc.sweep\_angle | \times arc.radius \right) + 1 $
+\form#583:$D_{ij}$
+\form#584:\[ D_{ij} = \sqrt{ d_{ij}^{2} + \left( s_{ij} \times weight \right)^{2} } \]
+\form#585:$d_{ij}$
+\form#586:$s_{ij}$
+\form#587:$ f(x) = \frac{1}{1 + \exp(-kx)} $
+\form#588:$Gxy_{(i,j)} = |Gx_{(i,j)}|+|Gy_{(i,j)}|$
+\form#589:$Gsqrt_{(i,j)} = \sqrt{Gx_{(i,j)}^2+Gy_{(i,j)}^2}$
+\form#590:$\arctan{ \left( Gy_{(i,j)} , Gx_{(i,j)} \right)}$
+\form#591:$ Gx_{(i,j)} , Gy_{(i,j)} $
+\form#592:$\arctan{ \left( Gy_{(i,j)}^{'} , Gx_{(i,j)}^{'} \right)}$
+\form#593:$ Gx_{(i,j)}^{'} , Gy_{(i,j)}^{'} $
+\form#594:\begin{eqnarray*} Gx_{(i,j)} = &- \{ f_{(i-1,j-1)} + 2 f_{(i-1,j)} + f_{(i-1,j+1)} \} \\ &+ f_{(i+1,j-1)} + 2 f_{(i+1,j)} + f_{(i+1,j+1)} \end{eqnarray*}
+\form#595:\begin{eqnarray*} Gy_{(i,j)} = &- \{ f_{(i-1,j-1)} + 2 f_{(i,j-1)} + f_{(i+1,j-1)} \} \\ &+ f_{(i-1,j+1)} + 2 f_{(i,j+1)} + f_{(i+1,j+1)} \end{eqnarray*}
+\form#596:$D_{in}$
+\form#597:$D_{out}$
+\form#598:$D_{out} = table[ D_{in} ]$
+\form#599:$D_{in}=-32768$
+\form#600:$table[0]$
+\form#601:$D_{out} = table[ D_{in} + 32768 ]$
+\form#602:$M={M_{0},M_{1},M_{2},...}$
+\form#603:\[ table[ index ] = ( \frac{ index }{ InTypeMax } )^{ \frac{1}{\gamma{} } } * OutTypeMax \]
+\form#604:\[ table[ index ] = 0 \]
+\form#605:\[ table[ index ] = ( \frac{ index - 32768 }{ InTypeMax } )^{ \frac{ 1 }{ \gamma{} } } * OutTypeMax \]
+\form#606:\[ f(x) = x^{ \frac{ 1 }{ \gamma{} } } \]
+\form#607:$ (0, 1) $
+\form#608:$ N $
+\form#609:\[ X_k = \sum_{n=0}^{N-1} x_n e^{- \frac {2\pi i } { N } nk } \qquad k = 0,\dots,N-1 \qquad i^2 = -1 \]
+\form#610:\[ x_k = \sum_{n=0}^{N-1} X_n e^{ \frac {2\pi i }{N} nk } \qquad k = 0,\dots,N-1 \qquad i^2 = -1 \]
+\form#611:\[ X_{k_1, k_2} = \sum_{n=0}^{N-1} e^{-{2\pi i \over N} nk_1 } \sum_{m=0}^{M-1} e^{-{2 \pi i \over M} mk_2 } x_{n,m} \qquad k_1 = 0,\dots,N-1, \qquad k_2 = 0, \dots, M-1 \qquad i^2 = -1 \]
+\form#612:\[ x_{k_1, k_2} = \sum_{n=0}^{N-1} e^{ {2\pi i \over N} nk_1 } \sum_{m=0}^{M-1} e^{ {2 \pi i \over M} mk_2 } X_{n,m} \qquad k_1 = 0,\dots,N-1, \qquad k_2 = 0, \dots, M-1 \qquad i^2 = -1 \]
+\form#613:$ 2^{31} $
+\form#614:$ 2^{iOrder} $
+\form#615:$ 1 \leq iOrder \leq 31 $
+\form#616:$ N=2^{iOrder} $
+\form#617:$ = 2^{iOrder} $
+\form#618:$ [2^1\; \; 2^{31}] $
+\form#619:$ N \leq 2^{iOrder} $
+\form#620:$ iOrder \leq 0 $
+\form#621:$ iOrder > 31 $
+\form#622:$ iWidth \leq 1 $
+\form#623:$ iHeight \leq 1 $
+\form#624:$ [-\pi, \pi] $
+\form#625:$2^{28} $
+\form#626:\[ ad_{(i,j)} = a1_{(i,j)} \times a2_{(i,j)} \]
+\form#627:\[ ad_{(i,j)} = a_{(i,j)} \times s \]
+\form#628:\[ ad_{(i,j)} = a1_{(i,j)} / a2_{(i,j)} \]
+\form#629:\[ ad_{(i,j)} = a_{(i,j)} / s \]
+\form#630:\[ ad_{(i,j)} = s / a_{(i,j)} \]
+\form#631:\[ vd_{(i,j)} = v1_{(i,j)} \times v2_{(i,j)} \]
+\form#632:\[ vd_{(i,j)} = v_{(i,j)} \times s \]
+\form#633:\[ vd_{(i,j)} = v1_{(i,j)} / v2_{(i,j)} \]
+\form#634:\[ vd_{(i,j)} = v_{(i,j)} / s \]
+\form#635:\[ vd_{(i,j)} = s / v_{(i,j)} \]
+\form#636:$ min(M,N) \le |k| $
+\form#637:\[ {\bf V1} \cdot {\bf V2} \equiv \sum_{i=0}^{dim} V1_i V2_i \]
+\form#638:\[ {\bf V1} \times {\bf V2} \equiv \left( V1_1 V2_2 - V1_2 V2_1, V1_2 V2_0 - V1_0 V2_2, V1_0 V2_1 - V1_1 V2_0 \right) \]
+\form#639:\[ {\bf V} = (v_0, v_1, \ldots , v_n) \]
+\form#640:\[ \|{\bf V}\|_1 = \sum_{i=1}^{n}{|x_i|} \]
+\form#641:\[ \mbox{\boldmath$V$} = (v_0, v_1, \ldots , v_n) \]
+\form#642:\[ \|\mbox{\boldmath$V$}\|_2 = \sqrt{|v_0|^2 + |v_1|^2 + \cdots + |v_n|^2 } \]
+\form#643:\[ \|{\bf V}\|_3 = \max( |v_0|, |v_1|, \ldots , |v_n| ) \]
+\form#644:\[ \frac {x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1 \]
+\form#645:$o$
+\form#646:$\left(x_i,y_i\right)$
+\form#647:$q_i$
+\form#648:$q_i=\tan^{-1}{ \left(\frac{{\it a}^2y_i}{{\it b}^2x_i} \right)}$
+\form#649:$P_c$
+\form#650:\begin{eqnarray*}{ g_{\sigma, \lambda, \theta}(x,y) &=& W_{\sigma}(x,y) \cdot c_{\lambda,\theta}(x,y)\\ &=& \frac{1}{2\pi\sigma^2}exp\left(-\frac{x^2+y^2}{2\sigma^2}\right) \cdot exp\left(i\frac{2\pi}{\lambda}(x cos\theta + y sin \theta)\right)\\ \end{eqnarray*}{
+\form#651:$\sigma$
+\form#652:$\lambda$
+\form#653:$\theta$
+\form#654:\[ g(x,y) = \frac{1}{2\pi\sigma^{2}} \exp\left( -\frac{x^{2}+y^{2}}{2\sigma^{2}} \right) \]
+\form#655:\[f(x) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left(\frac{-x^{2}}{2\sigma^{2}}\right) \]
+\form#656:$\left(g(i+1)-g(i-1)\right)/2$
+\form#657:$g(i+1)-2g(i)+g(i-1)$
+\form#658:$ f(x) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left(\frac{-x^{2}}{2\sigma^{2}}\right) $
+\form#659:\[ \frac{1}{\sqrt{2\pi}\sigma}\sum^{N}_{i=-N}{\exp\left(\frac{-i^2}{2\sigma^2}\right)x(i)} \]
+\form#660:\[ \frac{1}{\sqrt{2\pi}\sigma}\sum^{N}_{i=-N}{\frac{i}{\sigma^2}\exp\left(\frac{-i^2}{2\sigma^2}\right)x(i)} \]
+\form#661:\[ \frac{1}{\sqrt{2\pi}\sigma}\sum^{N}_{i=-N}{\frac{\sigma^2-i^2}{\sigma^4}\exp\left(\frac{-i^2}{2\sigma^2}\right)x(i)} \]
+\form#662:\[ \nabla^2G(x,y)=-\frac{1}{2\pi\sigma^4}\left(2-\frac{x^2+y^2}{\sigma^2}\right)\exp\left(-\frac{x^2+y^2}{2\sigma^2}\right) \]
+\form#663:\[ \left(\begin{array}{c} u \\ v \\ 1 \end{array}\right) = M \left(\begin{array}{c} x \\ y \\ 1 \end{array}\right) \]
+\form#664:$M_{S1}$
+\form#665:$M_{R}$
+\form#666:$M_{S2}$
+\form#667:$M_{M}$
+\form#668:\[ M' = M_{M} M_{S2} M_{R} M_{S1} \]
+\form#669:$M'$
+\form#670:$M^{-1}$
+\form#671:\[ mat = \left( \begin{array}{ccc} \cos(rad) & -\sin(rad) & cx - ( cx*\cos(rad) - cy*\sin(rad) ) \\ \sin(rad) & \cos(rad) & cy - ( cx*\sin(rad) + cy*\cos(rad) ) \\ 0 & 0 & 1 \end{array}\right) \]
+\form#672:\[ mat = \left( \begin{array}{ccc} 1 & 0 & dx \\ 0 & 1 & dy \\ 0 & 0 & 1 \end{array}\right) \]
+\form#673:\[ mat = \left( \begin{array}{ccc} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & 1 \end{array}\right) \]
+\form#674:\[ mat = \left( \begin{array}{ccc} 1 & \tan(rad) & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array}\right) \]
+\form#675:\[ mat = \left( \begin{array}{ccc} 1 & 0 & 0 \\ \tan(rad) & 1 & 0 \\ 0 & 0 & 1 \end{array}\right) \]
+\form#676:\[ dst.x = src.x * mat\left[ 0 \right]\left[ 0 \right] + src.y * mat\left[ 0 \right]\left[ 1 \right] + mat\left[ 0 \right]\left[ 2 \right] \]
+\form#677:\[ dst.y = src.x * mat\left[ 1 \right]\left[ 0 \right] + src.y * mat\left[ 1 \right]\left[ 1 \right] + mat\left[ 1 \right]\left[ 2 \right] \]
+\form#678:\[ dst.x = \frac{\left( src.x * mat\left[ 0 \right]\left[ 0 \right] + src.y * mat\left[ 0 \right]\left[ 1 \right] + mat\left[ 0 \right]\left[ 2 \right] \right)} {\left( src.x * mat\left[ 2 \right]\left[ 0 \right] + src.y * mat\left[ 2 \right]\left[ 1 \right] + mat\left[ 2 \right]\left[ 2 \right] \right)} \]
+\form#679:\[ dst.y = \frac{\left( src.x * mat\left[ 1 \right]\left[ 0 \right] + src.y * mat\left[ 1 \right]\left[ 1 \right] + mat\left[ 1 \right]\left[ 2 \right] \right)} {\left( src.x * mat\left[ 2 \right]\left[ 0 \right] + src.y * mat\left[ 2 \right]\left[ 1 \right] + mat\left[ 2 \right]\left[ 2 \right] \right)} \]
+\form#680:\[ Harris = det(C) - k \times trace(C)^2 \]
+\form#681:\[ C = G \left( \begin{array}{cc} f_{x}^2 & f_{x}f_{y} \\ f_{x}f_{y} & f_{y}^2 \end{array} \right) \]
+\form#682:\[ T = MAX( S \cdot iEdgePercent, iMinScore ) \]
+\form#683:$S$
+\form#684:$MAX$
+\form#685:$src\_width$
+\form#686:$src\_height$
+\form#687:$src\_width ~\times$
+\form#688:$src\_height ~\times$
+\form#689:\[sumpixel = \sum_{y}\sum_{x}{f(x,y)} \]
+\form#690:\[sigma = \sqrt{ \frac{ \sum_{i \in hreg}\left(f_i - \bar{f}\right)^2 }{N} } \]
+\form#691:$ f $
+\form#692:$ \bar{f} $
+\form#693:\[pixelsumx = \sum_{y}\sum_{x}{\left(x f(x,y)\right)} \]
+\form#694:\[pixelsumy = \sum_{y}\sum_{x}{\left(y f(x,y)\right)} \]
+\form#695:\[pixelsumx2 = \sum_{y}\sum_{x}{\left(x^2 f(x,y)\right)} \]
+\form#696:\[pixelsumy2 = \sum_{y}\sum_{x}{\left(y^2 f(x,y)\right)} \]
+\form#697:\[pixelsumxy = \sum_{y}\sum_{x}{\left(x y f(x,y)\right)} \]
+\form#698:\[M10 = \sum_{y}\sum_{x}{\left((x-orgnx) f(x,y)\right)} \]
+\form#699:\[M01 = \sum_{y}\sum_{x}{\left((y-orgny) f(x,y)\right)} \]
+\form#700:\[M20 = \sum_{y}\sum_{x}{\left((x-orgnx)^2 f(x,y)\right)} \]
+\form#701:\[M02 = \sum_{y}\sum_{x}{\left((y-orgny)^2 f(x,y)\right)} \]
+\form#702:\[M11 = \sum_{y}\sum_{x}{\left((x-orgnx)(y-orgny) f(x,y)\right)} \]
+\form#703:\[ D(x,y) = \left[ (v+1)-y, y-v \right] \left[\begin{array}{cc} D(u,v) & D(u+1,v) \\ D(u,v+1) & D(u+1,v+1) \end{array}\right] \left[\begin{array}{c} (u+1) - x \\ x - u \end{array}\right] \]
+\form#704:\[ D(x,y) = \left[\begin{array}{c} f((v-1)-y) \\ f(v-y) \\ f((v+1)-y) \\ f((v+2)-y) \end{array}\right]^T \left[\begin{array}{cccc} D(u-1,v-1) & D(u,v-1) & D(u+1,v-1) & D(u+2,v-1) \\ D(u-1,v) & D(u,v) & D(u+1,v) & D(u+2,v) \\ D(u-1,v+1) & D(u,v-1) & D(u+1,v+1) & D(u+2,v+1) \\ D(u-1,v+2) & D(u,v-1) & D(u+1,v+2) & D(u+2,v+2) \end{array}\right] \left[\begin{array}{c} f((u-1)-x) \\ f(u-x) \\ f((u+1)-x) \\ f((u+2)-x) \end{array}\right] \]
+\form#705:\[ f(t) = \left\{ \begin{array}{ll} \dfrac{3|t|^3-5|t|^2+2}{2} & (0 \le t<1) \vspace{.5em} \\ \dfrac{-|t|^3+5|t|^2-8|t|+4}{2} & (1 \le t<2) \vspace{.5em} \\ 0 & (2 \le t) \vspace{.5em} \\ \end{array} \right. \]
+\form#706:\[ f(t) = \left\{ \begin{array}{ll} \dfrac{\sin(\pi t)}{\pi t}\dfrac{\sin(\pi \dfrac{t}{2})}{\pi \dfrac{t}{2} } & (|t| < 2) \vspace{.5em} \\ 0 & (2 \le |t|) \vspace{.5em} \\ \end{array} \right. \]
+\form#707:$\delta u, \delta v$
+\form#708:$\delta x, \delta y$
+\form#709:$m_{ij}$
+\form#710:$m'_{ij}$
+\form#711:\begin{eqnarray*} dS & = & m_{20} \delta u + m_{21} \delta v + m_{22} \\ M' & = & M + \left(\begin{array}{ccc} -m_{20}\delta x & -m_{21}\delta x & m_{00} \delta u + m_{01} \delta v - dS \delta x \\ -m_{20}\delta y & -m_{21}\delta y & m_{00} \delta u + m_{11} \delta v - dS \delta y \\ 0 & 0 & m_{20} \delta u + m_{21} \delta v \end{array}\right) \end{eqnarray*}
+\form#712:\[ dst = cr \times R + cg \times G + cb \times B \]
+\form#713:\[ cr = coeff\_r \]
+\form#714:\[ cg = coeff\_g \]
+\form#715:\[ cb = coeff\_b \]
+\form#716:\[ cr = \frac{coeff\_r}{coeff\_r + coeff\_g + coeff\_b} \times \frac{DST\_MAX}{SRC\_MAX} \]
+\form#717:\[ cg = \frac{coeff\_g}{coeff\_r + coeff\_g + coeff\_b} \times \frac{DST\_MAX}{SRC\_MAX} \]
+\form#718:\[ cb = \frac{coeff\_b}{coeff\_r + coeff\_g + coeff\_b} \times \frac{DST\_MAX}{SRC\_MAX} \]
+\form#719:$ src\_width $
+\form#720:$ src\_height $
+\form#721:$iRank = floor ( ( rmag\_x \times rmag\_y ) \times 1/4 + 1 )$
+\form#722:$iRank$
+\form#723:$iRank = floor ( ( rmag\_x \times rmag\_y ) \times 3/4 + 1 )$
+\form#724:\[ dst = A \sin( 0.5 \pi \times \frac{ (x-\overline{xu})^{2} + (y-\overline{yu})^{2} }{height} ) + B \]
+\form#725:\[ \overline{xu} = \frac{width-1}{2} \]
+\form#726:\[ \overline{yu} = \frac{height-1}{2} \]
+\form#727:\[ dst_{(x,y)} = \frac{1}{denom}\sum^{H-Ay-1}_{j=-Ay}\sum^{W-Ax-1}_{i=-Ax}K_{(i,j)}G_{(x+i,y+j)} \]
+\form#728:\[ \sum^{H-Ay-1}_{j=-Ay}\sum^{W-Ax-1}_{i=-Ax}K_{(i,j)}G_{(x+i,y+j)} < 2^{31}-1 \]
+\form#729:\[ f_{x} = \left[ \begin{array}{ccccc} 5 & 4 & 0 & -4 & -5 \\ 8 & 10 & 0 & -10 & -8 \\ 10 & 20 & 0 & -20 & -10 \\ 8 & 10 & 0 & -10 & -8 \\ 5 & 4 & 0 & -4 & -5 \\ \end{array} \right] \]
+\form#730:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) + hsrc2(x,y) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#731:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) + hsrc2(x,y) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#732:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) + val & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#733:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) + val & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#734:\[ ( \mathrm{UINT} )(hsrc(x, y) ) + ( \mathrm{UINT} )( ( \mathrm{UCHAR} )( val ) ) \]
+\form#735:\[ hdst(x,y) = \left\{ \begin{array}{ll} abs( hsrc1(x,y) - hsrc2(x,y) ) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#736:\[hdst(x,y) = \left\{ \begin{array}{ll} abs( hsrc1(x,y) - hsrc2(x,y) ) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#737:\[ hdst(x,y) = \left\{ \begin{array}{ll} abs( hsrc(x,y) - val) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#738:\[hdst(x,y) = \left\{ \begin{array}{ll} abs(hsrc(x,y) - val) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#739:\[ abs( ( \mathrm{INT} )(hsrc(x, y)) - ( \mathrm{INT} )( ( \mathrm{UCHAR} )( val ) ) ) \]
+\form#740:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) \div hsrc2(x,y) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#741:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) \div hsrc2(x,y) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#742:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) \div val & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#743:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) \div val & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#744:\[ hdst(x,y) = \left\{ \begin{array}{ll} val \div hsrc(x,y) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#745:\[hdst(x,y) = \left\{ \begin{array}{ll} val \div hsrc(x,y) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#746:\[ hdst(x,y) = \left\{ \begin{array}{ll} \max ( hsrc1(x,y), hsrc2(x,y) ) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#747:\[hdst(x,y) = \left\{ \begin{array}{ll} \max ( hsrc1(x,y), hsrc2(x,y) ) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#748:\[ hdst(x,y) = \left\{ \begin{array}{ll} \max ( hsrc(x,y) , val ) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#749:\[hdst(x,y) = \left\{ \begin{array}{ll} \max ( hsrc(x,y) , val ) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#750:\[ hdst(x,y) = \left\{ \begin{array}{ll} \min ( hsrc1(x,y), hsrc2(x,y) ) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#751:\[hdst(x,y) = \left\{ \begin{array}{ll} \min ( hsrc1(x,y), hsrc2(x,y) ) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#752:\[ hdst(x,y) = \left\{ \begin{array}{ll} \min ( hsrc(x,y) , val ) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#753:\[hdst(x,y) = \left\{ \begin{array}{ll} \min ( hsrc(x,y) , val ) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#754:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) \times hsrc2(x,y) + hsrc3(x, y) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#755:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) \times hsrc2(x,y) + hsrc3(x, y) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#756:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) \times val1 + val2 & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#757:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) \times val1 + val2 & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#758:\[ hdst(x,y) = \left\{ \begin{array}{ll} ( hsrc1(x,y) - hsrc2(x,y) ) \times hsrc3(x, y) \div val1 + val2 & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#759:\[hdst(x,y) = \left\{ \begin{array}{ll} ( hsrc1(x,y) - hsrc2(x,y) ) \times hsrc3(x, y) \div val1 + val2 & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#760:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) \times hsrc2(x,y) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#761:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) \times hsrc2(x,y) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#762:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) \times val & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#763:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) \times val & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#764:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) - hsrc2(x,y) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#765:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc1(x,y) - hsrc2(x,y) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#766:\[ hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) - val & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#767:\[hdst(x,y) = \left\{ \begin{array}{ll} hsrc(x,y) - val & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#768:\[ ( \mathrm{INT} )(hsrc(x, y)) - ( \mathrm{INT} )( ( \mathrm{UCHAR} )( val ) ) \]
+\form#769:\[ hdst(x,y) = \left\{ \begin{array}{ll} val - hsrc(x,y) & \mathrm{if} \; (x,y) \in hmask \\ hdst(x,y) & \mathrm{if} \; (x,y) \notin hmask \end{array} \right. \]
+\form#770:\[hdst(x,y) = \left\{ \begin{array}{ll} val - hsrc(x,y) & \mathrm{if} \; hmask(x,y) = 1 \\ hdst(x,y) & \mathrm{if} \; hmask(x,y) = 0 \end{array} \right. \]
+\form#771:\[ ( \mathrm{INT} )( ( \mathrm{UCHAR} )( val ) ) - ( \mathrm{INT} )(hsrc(x, y) ) \]
+\form#772:$ {\bf y}_j $
+\form#773:$ {\bf y}_{j+1} $
+\form#774:$ {\bf y}^s_j $
+\form#775:$ {\bf y}^r_j $
+\form#776:$ {\bf x}_i $
+\form#777:$ {\bf x}^s_i $
+\form#778:$ {\bf x}^r_i $
+\form#779:$ 2^{32} $
+\form#780:$-\frac{\pi}{2}$
+\form#781:$\frac{\pi}{2}$
+\form#782:$ M_{30} $
+\form#783:$ M_{03} $
+\form#784:$ M_{21} $
+\form#785:$ M_{12} $
+\form#786:$ MG_{30} $
+\form#787:$ MG_{03} $
+\form#788:$ MG_{21} $
+\form#789:$ MG_{12} $
+\form#790:$ M_{pq} $
+\form#791:$ MG_{pq} $
+\form#792:$ \lfloor \frac{m}{2} \rfloor $
+\form#793:$ \lfloor \frac{n}{2} \rfloor $
+\form#794:$ \gamma $
+\form#795:$ \varepsilon _{B} $
+\form#796:$ \delta _{B} $
+\form#797:$ \gamma _{B} $
+\form#798:$ \check B $
+\form#799:$ \delta _{\check B} $
+\form#800:\[ \check B=\left\{ -b\mid b\in B\right\} \]
+\form#801:\[ \gamma _{B}\left(f\right)=\delta _{\check B}\left[ \varepsilon _{B}\left(f\right)\right] \]
+\form#802:$ \phi _{B} $
+\form#803:$ \varepsilon _{\check B} $
+\form#804:\[ \phi _{B}\left(f\right)=\varepsilon _{\check B}\left[ \delta _{B}\left(f\right)\right] \]
+\form#805:$ \mathrm{WTH}_{B} $
+\form#806:\[ \mathrm{WTH}_{B}\left(f\right)=f-\gamma _{B}\left(f\right) \]
+\form#807:$ \mathrm{BTH}_{B} $
+\form#808:\[ \mathrm{BTH}_{B}\left(f\right)=\phi _{B}\left(f\right)-f \]
+\form#809:$ \mathrm{HMT}_{\mathbf{B}} $
+\form#810:$ \mathbf{B} = \left(B_{FG},B_{BG}\right) $
+\form#811:$B_{FG}$
+\form#812:$B_{BG}$
+\form#813:\[ \mathrm{HMT}_{\mathbf{B}}\left(X\right) = \varepsilon _{B_{FG}} \left(X\right) \cap \varepsilon _{B_{BG}}\left(X^c\right) \]
+\form#814:$ B_{FG} $
+\form#815:$ B_{BG} $
+\form#816:$ B_{FG} \cap B_{BG}= \emptyset $
+\form#817:$ B_{FG} \cap B_{BG} = \emptyset $
+\form#818:$ \mathrm{CHMT}_{\mathbf{B}} $
+\form#819:$f$
+\form#820:$ \mathrm{B} = \left(B_{FG},B_{BG}\right) $
+\form#821:\[ [\mathrm{CHMT}_{\mathbf{B}}(f)](x) = \begin{cases} f(x) - \left[\delta _{B_{BG}}(f)\right](x), & \mathrm{if} \ f(x) = \left[\varepsilon_{B_{FG}}(f)\right](x) \ \mathrm{and} \ \left[\delta_{B_{BG}}(f)\right](x) < f(x). \\ \left[\varepsilon _{B_{FG}}(f)\right](x) - f(x), & \mathrm{if} \ f(x) = \left[\delta_{B_{BG}}(f)\right](x) \ \mathrm{and} \ \left[\varepsilon_{B_{FG}}(f)\right](x) > f(x). \\ 0, & \mathrm{otherwise}. \end{cases} \]
+\form#822:$ o \in B_{FG} $
+\form#823:$ o \in B_{BG} $
+\form#824:$ \mathrm{UHMT}_{\mathbf{B}} $
+\form#825:$\varepsilon _{B_{FG}}\left(x\right) < \delta _{B_{FG}}\left(x\right)$
+\form#826:\[ [\mathrm{UHMT}_{\mathbf{B}}(f)](x) = \begin{cases} \left[\varepsilon _{B_{FG}}(f)\right](x)-\left[\delta _{B_{BG}}(f)\right](x), & \mathrm{if} \ \left[\varepsilon _{B_{FG}}(f)\right](x) > \left[\delta _{B_{BG}}(f)\right](x) \\ 0, & \mathrm{otherwise}. \end{cases} \]
+\form#827:$ \mathrm{THIN}_{\mathbf{B}} $
+\form#828:\[ \mathrm{THIN}_{\mathbf{B}}(f) = f - \mathrm{HMT}_{\mathbf{B}}(f) \]
+\form#829:\[ \mathrm{THIN}_{\mathbf{B}}(X) = X \cap {\mathrm{HMT}_{\mathbf{B}}}(X)^c \]
+\form#830:\[ \mathrm{THIN}_{\mathbf{B}}(f) = f - \mathrm{UHMT}_{\mathbf{B}}(f) \]
+\form#831:$ \mathrm{THICK}_{\mathbf{B}} $
+\form#832:\[ \mathrm{THICK}_{\mathbf{B}}(f) = f + \mathrm{HMT}_{\mathbf{B}}(f) \]
+\form#833:\[ \mathrm{THICK}_{\mathbf{B}}(X) = X \cup \mathrm{HMT}_{\mathbf{B}}(X) \]
+\form#834:$ \mathbf{B} = \left( B_{FG}, B_{BG} \right) $
+\form#835:\[ \mathrm{THICK}_{\mathbf{B}}(f) = f + \mathrm{UHMT}_{\mathbf{B}}(f) \]
+\form#836:\[ \begin{aligned} \left[\mathrm{THIN}_{\mathbf{B}}(f)\right](x) & = f(x) - \left[\mathrm{CHMT}_{\mathbf{B}}(f)\right](x) \\ & = \begin{cases} \left[\delta _{B_{BG}}(f)\right](x), & \mathrm{if} \ f(x) = \left[\varepsilon_{B_{FG}}(f)\right](x) \ \mathrm{and} \ \left[\delta_{B_{BG}}(f)\right](x) < f(x). \\ f(x), & \mathrm{otherwise}. \end{cases} \end{aligned} \]
+\form#837:$ \mathbf{B} = \left( B_{FG}, B_{BG}\right) $
+\form#838:\[ \begin{aligned} \left[\mathrm{THICK}_{\mathbf{B}}(f)\right](x) & = f(x) + \left[\mathrm{CHMT}_{\mathbf{B}}(f)\right](x) \\ & = \begin{cases} \left[\varepsilon _{B_{FG}}(f)\right](x) & \mathrm{if} \ f(x) = \left[\delta_{B_{BG}}(f)\right](x) \ \mathrm{and} \ \left[\varepsilon_{B_{FG}}(f)\right](x) > f(x). \\ f(x) & \mathrm{otherwise}. \end{cases} \end{aligned} \]
+\form#839:$\mathbf{B}$
+\form#840:$\mathbf{B^C}$
+\form#841:$ \mathrm{THICK}_{\mathbf{B^C}} $
+\form#842:$\varepsilon _{B}$
+\form#843:\[ \varepsilon _{B}\left(X\right)=\left\{ x\mid B_{x}\subseteq X\right\} \]
+\form#844:\[ \varepsilon _{B}\left(X\right)= \bigcap \limits _{b\in B} X_{-b} \]
+\form#845:\[ B_{x}=\left\{ b+x \mid b\in B\right\} \]
+\form#846:$f\left(x\right)$
+\form#847:\[ \left[\varepsilon _{B}\left(f\right)\right]\left(x\right)=\min \limits _{b\in B}f\left(x+b\right) \]
+\form#848:$\delta _{B}$
+\form#849:\[ \delta _{B}\left(X\right)=\left\{ x\mid B_{x}\cap X\ne \emptyset \right\} \]
+\form#850:\[ \left[\delta _{B}\left(f\right)\right]\left(x\right)=\max \limits _{b\in B}f\left(x+b\right) \]
+\form#851:$(i=0 \ldots n)$
+\form#852:$L$
+\form#853:$ NL^{2} $
+\form#854:$(\frac{65536}{256})^{2} = 65536(ms) $
+\form#855:$ 0 \le X < threshold[0] $
+\form#856:$ threshold[n-1] \le X < threshold[n] $
+\form#857:$ threshold[num\_discrimination-2] \le X < size\_hist-1 $
+\form#858:\[ \left( \begin{array}{c} x \\ y \\ \end{array} \right) = \left( \begin{array}{c} r\cos \theta \\ r\sin \theta \\ \end{array} \right) \\ \]
+\form#859:\[ \left( \begin{array}{c} r \\ \theta \\ \end{array} \right) = \left( \begin{array}{c} \sqrt{x^2+y^2} \vspace{.5em} \\ \tan^{-1}\left(\dfrac{y}{x}\right) \vspace{.5em} \\ \end{array} \right) \\ \]
+\form#860:$r\theta$
+\form#861:$M_{0}$
+\form#862:$M_{0}\left(m_{0},n_{0}\right)$
+\form#863:$P_{0}\left(p_{0},q_{0}\right)$
+\form#864:$M\left(m,n\right)$
+\form#865:$P\left(p,q\right)$
+\form#866:$\theta\acute{}$
+\form#867:\[ r\acute{} = \sqrt{\left(p-p_{0}\right)^2+\left(q-q_{0}\right)^2} \]
+\form#868:\[ \theta\acute{} = \tan^{-1} \frac{q-q_{0}}{p-p_{0}} \]
+\form#869:\[ r\ :\ \text{w} = r\acute{}\ :\ \left(m-m_{0}\right) \]
+\form#870:\[ m = \frac{\text{w}}{r}\ r\acute{}+m_{0} \]
+\form#871:\[ L = r\theta\acute{} \]
+\form#872:\[ 2\pi r\ :\ \text{h} = L\ :\ \left(n-n_{0}\right) \]
+\form#873:\[ n = \frac{\text{h}}{2\pi}\ \theta\acute{}+n_{0} \]
+\form#874:\[ r\acute{} = \frac{r}{\text{w}}m-\frac{rm_{0}}{\text{w}} \]
+\form#875:\[ \theta\acute{} = \frac{2\pi}{\text{h}}n-\frac{2\pi n_{0}}{\text{h}} \]
+\form#876:\[ p = r\acute{}\cos \theta\acute{} \]
+\form#877:\[ q = r\acute{}\sin \theta\acute{} \]
+\form#878:$\min\left(x\right) = m_{0} - \textrm{w}$
+\form#879:$\min\left(y\right) = n_{0}$
+\form#880:$\max\left(x\right) = m_{0}$
+\form#881:$\max\left(y\right) = n_{0} + \textrm{h}$
+\form#882:$\min\left(x\right) = m_{0}$
+\form#883:$\min\left(y\right) = n_{0} - \textrm{h}$
+\form#884:$\max\left(x\right) = m_{0} + \textrm{w}$
+\form#885:$\max\left(y\right) = n_{0}$
+\form#886:$\max\left(x\right) = m_{0} - \textrm{w}$
+\form#887:$\max\left(y\right) = n_{0} - \textrm{h}$
+\form#888:$-2\pi$
+\form#889:$1.5\pi$
+\form#890:$3\pi$
+\form#891:$-3\pi$
+\form#892:$4\pi$
+\form#893:$O\left(0,0\right)$
+\form#894:\begin{eqnarray*} Gx_{(i,j)} = &- \{ f_{(i-1,j-1)} + f_{(i-1,j)} + f_{(i-1,j+1)} \} \\ &+ f_{(i+1,j-1)} + f_{(i+1,j)} + f_{(i+1,j+1)} \end{eqnarray*}
+\form#895:\begin{eqnarray*} Gy_{(i,j)} = &- \{ f_{(i-1,j-1)} + f_{(i,j-1)} + f_{(i+1,j-1)} \} \\ &+ f_{(i-1,j+1)} + f_{(i,j+1)} + f_{(i+1,j+1)} \end{eqnarray*}
+\form#896:\[ Gxy_{(i,j)} = |Gx_{(i,j)}| + |Gy_{(i,j)}| \]
+\form#897:\[ Gsqrt_{(i,j)} = \sqrt{ {Gx_{(i,j)}}^{2} + {Gy_{(i,j)}}^{2} } \]
+\form#898:\[ Dst(x,y) = \sum_{i=0}^{width-1} Src(i,y) \]
+\form#899:\[ Dst(x,y) = \sum_{i=0}^{height-1} Src(x,i) \]
+\form#900:\[ Dst(x,y) = \sum_{i=0}^{width-1} \sum_{j=0}^{height-1} Src(i,j) \]
+\form#901:\[ Dst(x,y) = \frac{1}{width}\sum_{i=0}^{width-1} Src(i,y) \]
+\form#902:\[ Dst(x,y) = \frac{1}{height}\sum_{i=0}^{height-1} Src(x,i) \]
+\form#903:\[ Dst(x,y) = \frac{1}{width \cdot height} \sum_{i=0}^{width-1} \sum_{j=0}^{height-1} Src(i,j) \]
+\form#904:\[ \textrm{gaussian curvature}=\dfrac {Z_{xx}Z_{yy}-Z_{xy}Z_{yx}}{({Z_x}^2+{Z_y}^2+1)^2} \]
+\form#905:\[ \textrm{mean curvature}=\dfrac {Z_{xx}(1+{Z_y}^2)-Z_{xy}Z_{x}Z_{y}-Z_{yx}Z_{x}Z_{y}+Z_{yy}(1+{Z_x}^2)}{2({Z_x}^2+{Z_y}^2+1)^{\frac {3} {2}}} \]
+\form#906:$ Z_{x} $
+\form#907:$ Z_{xy} $
+\form#908:$ (n_{x},n_{y},n_{z})$
+\form#909:$ (Z_{x},Z_{y})=(-\dfrac{n_{x}}{n_{z}},-\dfrac{n_{y}}{n_{z}})$
+\form#910:$ n_z $
+\form#911:\[ g( \theta, s ) = \int_{ -\infty}^{\infty} f( x, y ) dt \]
+\form#912:$ M $
+\form#913:$ MG $
+\form#914:\[ Gxy_{(i,j)} = \frac{|Gx_{(i,j)}| + |Gy_{(i,j)}|}{2} \]
+\form#915:\[ Angle_{(i,j)} = Atan2( Gy_{(i,j)}, Gx_{(i,j)} ) \]
+\form#916:$ himg\_average$
+\form#917:$ himg\_average_{(x,y)} $
+\form#918:\[ himg\_average_{(x,y)} = \frac{1}{N}\sum_{i=0}^{N-1}{himgs[i]_{(x,y)}}\ \ \ (N=num\_imgs)\]
+\form#919:$ himgs[i] $
+\form#920:$ himgs $
+\form#921:$ himgs[i]_{(x,y)} $
+\form#922:$ himg\_median$
+\form#923:$ himg\_median_{(x,y)} $
+\form#924:\[ himg\_median_{(x,y)} = MEDIAN( himgs[i]_{(x,y)} )\ \ (i=0, \ldots ,num\_imgs-1)\]
+\form#925:$ himg\_median\_absdev$
+\form#926:$ himg\_median\_absdev_{(x,y)} $
+\form#927:\[ himg\_median\_absdev_{(x,y)} = MEDIAN( | himgs[i]_{(x,y)} - himg\_average_{(x,y)} | )\ \ (i=0,\ldots,num\_imgs-1)\]
+\form#928:$ himg\_average $
+\form#929:$ himg\_stddev$
+\form#930:$ himg\_stddev_{(x,y)} $
+\form#931:\[ himg\_stddev_{(x,y)} = \sqrt{\frac{1}{N}\sum_{i=0}^{N-1}{(himgs[i]_{(x,y)})^2} - ( himg\_average_{(x,y)})^2}\ \ \ \ (N=num\_imgs)\]
+\form#932:$ (u,v) $
+\form#933:$ \arctan(u/v) $
+\form#934:$\sigma^{2}$
+\form#935:\[ Skewness = \left(\sum \left( i - \mu \right)^{3}H\left( i \right)\right) / \sigma^{3} \]
+\form#936:\[ Kurtosis = \left(\sum \left( i - \mu \right)^{4}H\left( i \right)\right) / \sigma^{4} \]
+\form#937:$ P_{\delta }\left(i,j\right) $
+\form#938:\[ \left| \begin{array}{c|c|c|c} \hline 0 & 0 & 1 & 1 \\ \hline 0 & 0 & 1 & 1 \\ \hline 0 & 2 & 2 & 2 \\ \hline 2 & 2 & 3 & 3 \\ \hline \end{array} \right| \]
+\form#939:$(x,y)=(1,0)$
+\form#940:$(x+dx,y +dy)=(2,0)$
+\form#941:$ P_{\delta} $
+\form#942:$ P_{\delta}[0][1] $
+\form#943:$ P_{\delta}[1][0] $
+\form#944:\[ P1_{\delta } = \left[ \begin{array}{cccc} 4 & 2 & 1 & 0 \\ 2 & 4 & 0 & 0 \\ 1 & 0 & 6 & 1 \\ 0 & 0 & 1 & 2 \\ \end{array} \right] \]
+\form#945:\[ P2_{\delta } = \left[ \begin{array}{cccc} 6 & 0 & 2 & 0 \\ 0 & 4 & 2 & 0 \\ 2 & 2 & 2 & 2 \\ 0 & 0 & 2 & 0 \\ \end{array} \right] \]
+\form#946:\[ P3_{\delta } = \left[ \begin{array}{cccc} 2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 0 \\ 3 & 1 & 0 & 2 \\ 0 & 0 & 2 & 0 \\ \end{array} \right] \]
+\form#947:\[ P4_{\delta } = \left[ \begin{array}{cccc} 4 & 1 & 0 & 0 \\ 1 & 2 & 2 & 0 \\ 0 & 2 & 4 & 1 \\ 0 & 0 & 1 & 0 \\ \end{array} \right] \]
+\form#948:\[ entropy = - \sum_{i} \sum_{j} P_{\delta }\left(i,j\right)\log P_{\delta }\left(i,j\right) \]
+\form#949:\[ energy = \sum_{i} \sum_{j} \left\{P_{\delta }\left(i,j\right) \right\}^{2} \]
+\form#950:\[ inertia = \sum_{i} \sum_{j}\left(i-j\right)^{2}P_{\delta }\left(i,j\right) \]
+\form#951:\[ LH = \sum_{i} \sum_{j} \frac{P_{\delta }\left(i,j\right)}{1+\left(i-j\right)^{2}} \]
+\form#952:\[ \sigma_W^2 = \frac{n_1\sigma_1^2+n_2\sigma_2^2}{n_1+n_2} \]
+\form#953:\[ \sigma_B^2 = \frac{n_1\left(\mu_1-\mu_T\right)^2 + n_2\left(\mu_2-\mu_T\right)^2}{n_1+n_2} \]
+\form#954:$\mu_1$
+\form#955:$\mu_2$
+\form#956:$\sigma_1^2$
+\form#957:$\sigma_2^2$
+\form#958:$n_1$
+\form#959:$n_2$
+\form#960:$\mu_T$
+\form#961:$ \sigma_B^2 / \sigma_W^2 $
+\form#962:$[1,L]$
+\form#963:$\{h(i) \vert i=1,\ldots,L\}$
+\form#964:$h(i)$
+\form#965:$N=\sum_{i=1}^L h(i)$
+\form#966:$\{p(i) = h(i)/N\}$
+\form#967:\begin{eqnarray*}{ \omega(k) &=& \sum_{i=1}^k p(i) \\ \mu(k) &=& \sum_{i=1}^k ip(i) \end{eqnarray*}{
+\form#968:$ C_1 $
+\form#969:$ C_2 $
+\form#970:$ f(i\vert C_j)$
+\form#971:$ (j=1,2) $
+\form#972:$\mu_j(k)$
+\form#973:$ \sigma_j^2(k) $
+\form#974:$ p \ge 1 + \log(p) (\ 0 \le p \le 1) $
+\form#975:\begin{eqnarray*}{ P_e &=& 1 - \sum_{i=1}^k f(C_1\vert i)p(i) - \sum_{i=k+1}^L f(C_2\vert i)p(i) \\ &\le& 1 - \sum_{i=1}^k [1+\log f(C_1\vert i)]p(i) - \sum_{i=k+1}^L [1+\log f(C_2\vert i)]p(i) \\ &=& \omega_1(k)\log(\frac{\sigma_1(k)}{\omega_1(k)}) + \omega_2(k)\log(\frac{\sigma_2(k)}{\omega_2(k)}) \\ & & + \frac{1}{2}(1+\log(2\pi)) + \sum_{i=1}^L p(i)\log(p(i)) \end{eqnarray*}{
+\form#976:\[ J(k) = \omega_1(k)\log(\frac{\sigma_1(k)}{\omega_1(k)}) + \omega_2(k)\log(\frac{\sigma_2(k)}{\omega_2(k)}) \]
+\form#977:$ -255 \le offset \le 255 $
+\form#978:$ -65535 \le offset \le 65535 $
+\form#979:$ 0 \le X < threshold $
+\form#980:$ threshold \le X < size\_hist $
+\form#981:$ \left[ \begin{array}{ccc} \bf{x_i} & \bf{y_i} & \bf{1} \end{array} \right]^t $
+\form#982:$ \left( \bf{x_i} , \bf{y_i} \right) $
+\form#983:\[ \left( \begin{array}{c} Wx \\ Wy \\ W \end{array} \right) = \mathbf{M} \left( \begin{array}{c} x' \\ y' \\ 1 \end{array} \right) \]
+\form#984:\[ \mathbf{M} = \left( \begin{array}{ccc} a & b & c \\ d & e & f \\ g & h & 1 \end{array} \right) \]
+\form#985:\[W = gx'+hy'+1\]
+\form#986:\[ \left( \begin{array}{c} x \\ y \\ 1 \end{array} \right) = \mathbf{M} \left( \begin{array}{c} x' \\ y' \\ 1 \end{array} \right) \]
+\form#987:\[ \mathbf{M} = \left( \begin{array}{ccc} a & b & c \\ d & e & f \\ 0 & 0 & 1 \end{array} \right) \]
+\form#988:\[ \mathbf{M} = \left( \begin{array}{ccc} s \cos \theta & - s \sin \theta & a \\ s \sin \theta & s \cos \theta & b \\ 0 & 0 & 1 \end{array} \right) \]
+\form#989:\[ \mathbf{M} = \left( \begin{array}{ccc} \cos \theta & - \sin \theta & a \\ \sin \theta & \cos \theta & b \\ 0 & 0 & 1 \end{array} \right) \]
+\form#990:$ \left[ \begin{array}{ccc} \bf{x} & \bf{y} & \bf{1} \end{array} \right]^t $
+\form#991:$ 0 \leq threshold $
+\form#992:$ (-255 \leq threshold \leq 255 ) $
+\form#993:$ (0 \leq threshold \leq 255) $
+\form#994:\[ \epsilon _{i} = \sqrt{ ( x _{i} - cx ) ^{2} + ( y _{i} - cy ) ^{2} } \]
+\form#995:$ \epsilon _{i} $
+\form#996:\[ \epsilon _{i} = | ( x _{i} - cx ) ^{2} + ( y _{i} - cy ) ^{2} - r ^{2} | \]
+\form#997:$ 2^{28} $
+\form#998:\[ \epsilon _{i} = | \sqrt{ ( x _{i} - cx ) ^{2} + ( y _{i} - cy ) ^{2} } - r | \]
+\form#999:$ ax ^{2} + bxy + cy ^{2} + dx + ey = 0 $
+\form#1000:\[ \epsilon _{i} = | ax _{i} ^{2} + bx _{i} y _{i} + cy _{i} ^{2} + dx _{i} + ey _{i} | \]
+\form#1001:\[ {\rm LMS} = \min\ \sum _{i} \epsilon _{i} ^{2} \]
+\form#1002:$ \epsilon $
+\form#1003:\[ {\rm M} = \min\ \sum _{i} \rho \left( \epsilon _{i} \right) \]
+\form#1004:$ \rho \left( x \right) $
+\form#1005:$ p_{i} $
+\form#1006:\[ {\rm LMedS} = \min\left( med\ \epsilon _{i} ^2 \right) \]
+\form#1007:\[ \epsilon _{i} = \frac{ | ax _{i} + by _{i} + c | }{ \sqrt{ a ^{2} + b ^{2} } } \]
+\form#1008:$ f(x)=a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{1}x + a_{0} $
+\form#1009:$ a_{0}, a_{1},\ldots, a_{n-1}, a_{n}$
+\form#1010:$ \Sigma x^{2n} $
+\form#1011:$ a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{1}x + a_{0} - y = 0 $
+\form#1012:\[ \epsilon _{i} = |a_{n}x^{n}_{i} + a_{n-1}x^{n-1}_{i} + \cdots + a_{1}x_{i} + a_{0} - y_{i}| \]
+\form#1013:$ M \times N $
+\form#1014:\[ {\bf A} = {\bf U} \Sigma {\bf V}^T \]
+\form#1015:$\Sigma$
+\form#1016:$ \min(M,N) $
+\form#1017:${\bf U}$
+\form#1018:$ M \times M $
+\form#1019:${\bf V}$
+\form#1020:$ N \times N $
+\form#1021:${\bf A}$
+\form#1022:$ vt = {\bf V}^T$
+\form#1023:$ M \times \min(M,N) $
+\form#1024:$ \min(M,N) \times N $
+\form#1025:${\bf V}^T$
+\form#1026:$U$
+\form#1027:$V^T$
+\form#1028:\[ A = \left\{ \begin{array}{ll} U^T U, & \mathrm{if} \,\,\, uplo = 'U' \\ L L^T, & \mathrm{if} \,\,\, uplo = 'L' \end{array} \right. \]
+\form#1029:$ A = U^T U $
+\form#1030:$ A = L L^T $
+\form#1031:\[ P A = L U \]
+\form#1032:$P$
+\form#1033:$ A = P L U $
+\form#1034:\[ A = Q R \]
+\form#1035:$Q$
+\form#1036:$v_j$
+\form#1037:\[ A v_j = \lambda_j v_j \]
+\form#1038:$\lambda_j$
+\form#1039:$u_j$
+\form#1040:\[ u_j^H A = \lambda_j u_j^H \]
+\form#1041:$u_j^H$
+\form#1042:\[ \|a\|_{type} * \|a^{-1}\|_{type} \]
+\form#1043:$ \|A^{-1}\|_1 $
+\form#1044:\[ RCOND = \frac{1}{\|A\|_1 * \|A^{-1}\|_1} \]
+\form#1045:$ \bf{A}\bf{x} = \bf{b} $
+\form#1046:\[ \bf{A} \bf{x} = \bf{b} \]
+\form#1047:\[ \min \| \bf{b} - \bf{A}\bf{x} \| \]
+\form#1048:\[ \sum (\bf{b} - \bf{A}\bf{x})^2 \]
+\form#1049:$\bf{A}$
+\form#1050:$\bf{x}$
+\form#1051:$\bf{b}$
+\form#1052:$ \bf{A}\bf{X} = \bf{B} $
+\form#1053:$ \bf{X} $
+\form#1054:$ {\bf x}_i, \bf{B} $
+\form#1055:$ {\bf b}_i $
+\form#1056:\[ {\bf A} {\bf x}_i = {\bf b}_i \]
+\form#1057:\[ \min \| {\bf b}_i - {\bf A} {\bf x}_i \| \]
+\form#1058:\[ (\bf{B} - \bf{A}\bf{X})^T (\bf{B} - \bf{A}\bf{X}) \]
+\form#1059:$\bf{X}$
+\form#1060:$\bf{B}$
+\form#1061:$\bf{Rt}^{-1}$
+\form#1062:$\bf{H}^{-1}$
+\form#1063:$\bf{Rt}$
+\form#1064:$\bf{A}^{-1}$
+\form#1065:$\bf{H}$
+\form#1066:$\bf{Rt}, \bf{Rt}^{-1}, \bf{H}, \bf{H}^{-1}, \bf{A}, \bf{A}^{-1}$
+\form#1067:\[ \bf{A} = \left[ \begin{array}{ccc} \alpha & \gamma & u_0 \\ 0 & \beta & v_0 \\ 0 & 0 & 1 \\ \end{array} \right] \]
+\form#1068:$\bf{R}$
+\form#1069:$\bf{T}$
+\form#1070:\[ \bf{R} = \left[ \begin{array}{ccc} r_{11} & r_{12} & r_{13}\\ r_{21} & r_{22} & r_{23}\\ r_{31} & r_{32} & r_{33} \end{array} \right] \]
+\form#1071:\[ \bf{T} = \left[ \begin{array}{c} t_1 \\ t_2 \\ t_3 \end{array} \right] \]
+\form#1072:\[ \bf{Rt} = \left[ \begin{array}{ccc} r_{11} & r_{12} & t_1\\ r_{21} & r_{22} & t_2\\ r_{31} & r_{32} & t_3 \end{array}\right] \]
+\form#1073:$\bf{A}\ \bf{Rt}$
+\form#1074:\[ k_1 \cdot r^2+k_2 \cdot r^4 \]
+\form#1075:$ \tilde{\bf{m}} = \left[ \begin{array}{ccc} u & v & 1 \end{array} \right]^t $
+\form#1076:$ \tilde{\bf{M}} = \left[ \begin{array}{cccc} X& Y& Z& 1 \end{array} \right]^t $
+\form#1077:\[ s\tilde{\bf{m}} = \bf{A}\ [\bf{R}|\bf{T}]\ \tilde{\bf{M}} \]
+\form#1078:$s$
+\form#1079:$[\bf{R}|\bf{T}]$
+\form#1080:$u_0, v_0$
+\form#1081:$\alpha, \beta$
+\form#1082:$[\bf{R} | \bf{T}]$
+\form#1083:\[ \left[ \bf{R} | \bf{T} \right] = \left[ \begin{array}{cccc} r_{11} & r_{12} & r_{13} & t_1\\ r_{21} & r_{22} & r_{23} & t_2\\ r_{31} & r_{32} & r_{33} & t_3 \end{array} \right] \]
+\form#1084:$ \tilde{\bf{M}} = \left[ \begin{array}{cccc} X & Y & 0 & 1 \end{array} \right]^t $
+\form#1085:\[ s\tilde{\bf{m}} = \bf{A} \left[ \begin{array}{cccc} r_{11} & r_{12} & r_{13} & t_1 \\ r_{21} & r_{22} & r_{23} & t_2 \\ r_{31} & r_{32} & r_{33} & t_3 \end{array} \right] \left[ \begin{array}{c} X\\ Y\\ 0\\ 1 \end{array} \right] \]
+\form#1086:\[ s\tilde{\bf{m}} = \bf{A} \left[ \begin{array}{ccc} r_{11} & r_{12} & t_1 \\ r_{21} & r_{22} & t_2 \\ r_{31} & r_{32} & t_3 \end{array} \right] \left[ \begin{array}{c} X\\ Y\\ 1 \end{array} \right] \]
+\form#1087:\[ \bf{Rt} = \left[ \begin{array}{ccc} r_{11} & r_{12} & t_1 \\ r_{21} & r_{22} & t_2 \\ r_{31} & r_{32} & t_3 \end{array} \right] \]
+\form#1088:\[ \bf{H} = \bf{A}\ \bf{Rt} \]
+\form#1089:\[ \begin{array}{l} \breve{x} = x+x[k_1(x^2+y^2)+k_2(x^2+y^2)^2] \\ \breve{y} = y+y[k_1(x^2+y^2)+k_2(x^2+y^2)^2] \end{array} \]
+\form#1090:$ k_1, k_2 $
+\form#1091:$(u, v)$
+\form#1092:$(\breve{u}, \breve{v})$
+\form#1093:$(\breve{x},\breve{y})$
+\form#1094:\[ \begin{array}{l} \breve{u} = \alpha\breve{x}+\gamma\breve{y}+u_0 \\ \breve{v} = \beta\breve{y}+v_0 \end{array} \]
+\form#1095:\[ \begin{array}{l} \breve{u} = u+(u-u_0)[k_1(x^2+y^2)+k_2(x^2+y^2)^2] \\ \breve{v} = v+(v-v_0)[k_1(x^2+y^2)+k_2(x^2+y^2)^2] \end{array} \]
+\form#1096:$A$
+\form#1097:\[ \bf{R} = \left[ \begin{array}{ccc} r_{11} & r_{12} & r_{13}\\ r_{21} & r_{22} & r_{23}\\ r_{31} & r_{32} & r_{33} \end{array} \right], \bf{T} = \left[ \begin{array}{c} t_1 \\ t_2 \\ t_3 \end{array} \right] \]
+\form#1098:\[ \bf{H'} = A\left[ \begin{array}{ccc} r_{11} & r_{12} & t_1\\ r_{21} & r_{22} & t_2\\ r_{31} & r_{32} & t_3 \end{array}\right] \]
+\form#1099:$\bf{H'}_{33}$
+\form#1100:$\breve{u}, \breve{v}$
+\form#1101:$u, v$
+\form#1102:$k_1, k_2$
+\form#1103:$x, y$
+\form#1104:$A^{-1}$
+\form#1105:\[ \begin{array}{l} u+(u-u_0)[k_1(x^2+y^2)+k_2(x^2+y^2)^2] - \breve{u}\\ v+(v-v_0)[k_1(x^2+y^2)+k_2(x^2+y^2)^2] - \breve{v} \end{array} \]
+\form#1106:$u,v$
+\form#1107:$x', y'$
+\form#1108:\[ \begin{array}{l} x' = x / scale - offset.x \\ y' = y / scale - offset.y \end{array} \]
+\form#1109:$\breve{u},\breve{v}$
+\form#1110:\[ rectify = \left[ homography \cdot \left[ \begin{array}{ccc} 1&0&origin\_x\\ 0&1&origin\_y\\ 0&0&1 \end{array}\right] \left[\begin{array}{ccc} 1/ppm & 0 & 0\\ 0 & 1/ppm & 0\\ 0 & 0 & 1\end{array} \right] \right]^{-1} \]
+\form#1111:$rectify^{-1}$
+\form#1112:\[ rectity^{-1} = homography \cdot \left[ \begin{array}{ccc} 1 & 0 & origin\_x\\ 0 & 1 & origin\_y\\ 0 & 0 & 1 \end{array} \right] \left[ \begin{array}{ccc} 1/ppm & 0 & 0\\ 0 & 1/ppm & 0\\ 0 & 0 & 1 \end{array} \right] \]
+\form#1113:$\breve{u} , \breve{v}$
+\form#1114:$X, Y$
+\form#1115:\[ \left[ \begin{array}{ccc} W u & W v & W \end{array} \right]^t = \bf{H} \left[ \begin{array}{ccc} X & Y & 1 \end{array} \right]^t \]
+\form#1116:\[ \left[ \begin{array}{ccc} W' x & W' y & W' \end{array} \right]^t = \bf{Rt} \left[ \begin{array}{ccc} X & Y & 1 \end{array} \right]^t \]
+\form#1117:$(u_0, v_0)$
+\form#1118:\[ \begin{array}{ll} Rt &= A^{-1} \bf{H} \\ ( &= A^{-1} \bf{A} \bf{Rt}) \end{array} \]
