@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mac_tdavec/__init__.py
+mac_tdavec/tdavec_core.c
+mac_tdavec/tdavec_core.pyx
+mac_tdavec/unit_test.py
+mac_tdavec/vectorizer.py
+mac_tdavec.egg-info/PKG-INFO
+mac_tdavec.egg-info/SOURCES.txt
+mac_tdavec.egg-info/dependency_links.txt
+mac_tdavec.egg-info/not-zip-safe
+mac_tdavec.egg-info/requires.txt
+mac_tdavec.egg-info/top_level.txt

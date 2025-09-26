@@ -1,0 +1,22 @@
+# pyproject.toml
+[build-system]
+requires = [
+   "setuptools>=61.0",
+    "wheel",
+    "Cython",
+    "numpy"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mac_tdavec"
+version = "0.9.1"
+dependencies = [
+    "numpy",
+    "ripser"
+]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.setuptools]
+packages = ["mac_tdavec"]
