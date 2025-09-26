@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "best-date-paris"
+version = "0.1.1"
+description = "Une commande qui liste les meilleurs spots pour un date à Paris"
+readme = "README.md"
+authors = [{ name = "galagain", email = "calvin@galagain.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/galagain/best-date-paris-cli"
+
+[project.scripts]
+best-date-paris = "best_date_paris.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

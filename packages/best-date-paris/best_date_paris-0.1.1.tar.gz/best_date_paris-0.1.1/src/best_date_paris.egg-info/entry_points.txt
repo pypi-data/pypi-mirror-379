@@ -1,0 +1,2 @@
+[console_scripts]
+best-date-paris = best_date_paris.cli:main
