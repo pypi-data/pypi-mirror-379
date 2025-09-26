@@ -1,0 +1,137 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sundew-algorithms"
+version = "0.6.0"
+description = "Sundew Algorithm — bio-inspired, energy-aware selective activation for edge AI systems."
+readme = "README.md"
+requires-python = ">=3.10"
+# Keep using your LICENSE file, but advertise the license via classifiers below.
+license = { file = "LICENSE" }
+
+authors = [
+  { name = "Oluwafemi Idiakhoa", email = "oluwafemidiakhoa@gmail.com" }
+]
+
+keywords = [
+  "edge-ai", "energy", "gating", "event-driven", "ecg",
+  "computer-vision", "adaptive-computation", "selective-activation"
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "numpy>=1.22",
+  "pandas>=1.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.13.0",
+  "mypy>=1.7",
+  "pytest>=7",
+  "pytest-cov>=4",
+  "hypothesis>=6",
+  "build>=1.2.1",
+  "twine>=5.1.1",
+  "types-requests",
+]
+viz = ["matplotlib>=3.7,<4.0"]
+video = ["opencv-python>=4.8"]
+
+[project.urls]
+Homepage      = "https://oluwafemidiakhoa.github.io"
+Repository    = "https://github.com/oluwafemidiakhoa/sundew_algorithms"
+Issues        = "https://github.com/oluwafemidiakhoa/sundew_algorithms/issues"
+Documentation = "https://oluwafemidiakhoa.github.io"
+PyPI          = "https://pypi.org/project/sundew-algorithms/"
+DOI           = "https://doi.org/10.5281/zenodo.17118217"
+ORCID         = "https://orcid.org/0009-0008-7911-1171"
+
+[project.scripts]
+sundew = "sundew.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.package-data]
+sundew = ["py.typed"]
+
+# --------------------------- Ruff ---------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+# Don’t lint generated/extra trees.
+exclude = [
+  ".git",
+  ".hg",
+  ".mypy_cache",
+  ".ruff_cache",
+  ".venv",
+  ".venv-*",
+  "build",
+  "dist",
+  "results",
+  "sundew_algorithms",
+  "sundew_algorithms/**",
+  "**/__pycache__",
+]
+
+# Extra project-specific folders we don’t want to enforce style on.
+extend-exclude = ["benchmarks", "examples", "adapters"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = []
+
+# ✅ Mapping-style per-file-ignores (supported by Ruff 0.13)
+[tool.ruff.lint.per-file-ignores]
+"benchmarks/*.py" = ["E501", "I001"]
+"examples/*.py"   = ["E501", "I001"]
+"adapters/*.py"   = ["E501", "I001"]
+"tools/*.py"      = ["E501", "I001"]
+"video_gate.py"   = ["E501"]
+"tests/*.py"      = ["I001"]
+
+# --------------------------- MyPy --------------------------------
+[tool.mypy]
+python_version = "3.10"
+files = ["src"]
+exclude = [
+    "src/sundew/adaptive_learning.py",
+    "src/sundew/batch_processing.py"
+]
+warn_unused_ignores = true
+strict_optional = true
+no_implicit_optional = true
+disallow_untyped_defs = false  # Changed to false to reduce noise
+pretty = true
+explicit_package_bases = true  # Resolve duplicate module issues
+disable_error_code = ["import-untyped", "import-not-found"]
+
+[[tool.mypy.overrides]]
+module = [
+    "matplotlib", "matplotlib.*", "cv2", "numpy", "torch", "torch.*",
+    "sklearn", "sklearn.*", "psutil", "scipy", "scipy.*", "sympy", "sympy.*",
+    "optuna", "optuna.*", "pandas", "pandas.*", "seaborn", "seaborn.*",
+    "plotly", "plotly.*"
+]
+ignore_missing_imports = true
