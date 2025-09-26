@@ -1,0 +1,11 @@
+pandas_datareader
+pandas
+pandas_ta
+plotly
+scipy
+numpy
+numba
+numpy
+requests
+cloudscraper
+tqdm
