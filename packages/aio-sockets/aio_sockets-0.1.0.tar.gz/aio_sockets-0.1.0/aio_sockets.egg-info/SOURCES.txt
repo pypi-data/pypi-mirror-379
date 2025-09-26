@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+aio_sockets/__init__.py
+aio_sockets/aio_sockets.py
+aio_sockets.egg-info/PKG-INFO
+aio_sockets.egg-info/SOURCES.txt
+aio_sockets.egg-info/dependency_links.txt
+aio_sockets.egg-info/top_level.txt
