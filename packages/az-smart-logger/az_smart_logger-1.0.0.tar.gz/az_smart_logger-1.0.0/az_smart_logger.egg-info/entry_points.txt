@@ -1,0 +1,2 @@
+[console_scripts]
+smart-logger = smart_logger.cli.commands:main
