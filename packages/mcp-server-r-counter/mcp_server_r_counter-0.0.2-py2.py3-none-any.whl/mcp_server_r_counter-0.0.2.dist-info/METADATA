@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: mcp-server-r-counter
+Version: 0.0.2
+Summary: A MCP Server Counting Number of r's for a Given Query  mcp-name: io.github.guanqun-yang/mcp-server-r-counter
+Requires-Dist: mcp>=1.4.1
