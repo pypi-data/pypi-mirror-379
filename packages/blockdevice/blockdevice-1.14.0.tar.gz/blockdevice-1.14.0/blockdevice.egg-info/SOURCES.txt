@@ -1,0 +1,17 @@
+COPYING.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+blockdevice/__init__.py
+blockdevice/_blockdevice.pyi
+blockdevice/fuse_ops.py
+blockdevice/py.typed
+blockdevice.egg-info/PKG-INFO
+blockdevice.egg-info/SOURCES.txt
+blockdevice.egg-info/dependency_links.txt
+blockdevice.egg-info/requires.txt
+blockdevice.egg-info/top_level.txt
+include/blockdevice.h
+src/blockdevice.cpp
+src/blockdevice_class.cpp

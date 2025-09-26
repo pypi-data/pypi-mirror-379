@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: blockdevice
+Version: 1.14.0
+Summary: A simple C++ Python library for block device operations
+Home-page: https://github.com/Omena0/blockdevice
+Author: Omena0
+Author-email: omena0mc@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: COPYING.md
+Requires-Dist: pybind11>=2.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# Blockdevice
+
+Simple library for creating Block Devices.
