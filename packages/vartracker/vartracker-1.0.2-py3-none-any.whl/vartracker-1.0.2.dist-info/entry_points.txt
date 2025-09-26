@@ -1,0 +1,3 @@
+[console_scripts]
+parse_pokay = vartracker.data.parse_pokay:main
+vartracker = vartracker.main:main
