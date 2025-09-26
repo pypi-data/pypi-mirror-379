@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ai-observability
+Version: 0.0.1
+Summary: Whitecircle.ai observability primitives for tracing, logging, and audit trails.
+Author: White Circle
+License: MIT
+Keywords: ai,audit,logging,observability,tracing,whitecircle.ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# ai-observability
+
+Whitecircle.ai observability primitives for tracing, logging, and audit trails.
+
+
