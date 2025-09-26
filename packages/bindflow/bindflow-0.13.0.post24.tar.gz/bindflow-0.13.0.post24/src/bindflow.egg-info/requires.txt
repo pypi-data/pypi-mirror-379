@@ -1,0 +1,12 @@
+alchemlyb>=2.0.0
+pymbar>=4.0.1
+MDRestraintsGenerator>=0.2.1
+numpy
+pandas
+mdanalysis
+TOFF>=0.2.0
+pyyaml
+parmed
+
+[dev]
+pytest

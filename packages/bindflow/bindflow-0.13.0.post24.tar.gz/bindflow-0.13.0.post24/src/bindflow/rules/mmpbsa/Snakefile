@@ -1,0 +1,6 @@
+include: "setup.smk"
+include: "simulation.smk"
+include: "ana.smk"
+
+# Final Result:
+include: "gather_receptor_results.smk"

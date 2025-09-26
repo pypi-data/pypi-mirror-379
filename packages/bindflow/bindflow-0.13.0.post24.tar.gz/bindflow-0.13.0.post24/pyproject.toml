@@ -1,0 +1,95 @@
+[build-system]
+requires=[
+	"setuptools>=61.0",
+	"versioningit",
+]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+"Hompage" = "https://github.com/ale94mleon/BindFlow"
+"Discussions" = "https://github.com/ale94mleon/BindFlow/discussions"
+"Documentation" = "https://BindFlow.readthedocs.io/en/latest/"
+"Issues" = "https://github.com/ale94mleon/BindFlow/issues"
+
+[project]
+name = "bindflow"
+dynamic = ["version"]
+description = "A snakemake-based workflow for binding free energy calculations using GROMACS."
+readme = "README.rst"
+license-files = ["LICENSE"]
+
+authors=[
+    {name="Alejandro Martínez León", email="ale94mleon@gmail.com"},
+]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry"
+]
+keywords = [
+    "science",
+    "chemistry",
+    "biology",
+    "drug-design"
+]
+
+requires-python = ">= 3.8 , < 3.11"
+dependencies = [
+    "alchemlyb >= 2.0.0",
+    "pymbar >= 4.0.1",
+    "MDRestraintsGenerator >= 0.2.1",
+    "numpy",
+    "pandas",
+    "mdanalysis",
+    "TOFF >= 0.2.0",
+    "pyyaml",
+    "parmed",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.versioningit]
+default-version = "1+unknown"
+
+[tool.versioningit.format]
+distance = "{base_version}.post{distance}"
+dirty = "{base_version}.post{distance}.dev0"
+distance-dirty = "{base_version}.post{distance}.dev0"
+
+
+[tool.versioningit.vcs]
+method = "git" 
+match = ["*"]
+default-tag = "0.0.0"
+
+[tool.versioningit.write]
+file = "src/bindflow/_version.py"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bindflow = [
+    "data/gmx_ff/*.tar.gz",
+    "data/gmx_water_models/*/*.itp",
+    "data/gmx_water_models/*/*.dat",
+    "data/gmx_water_models/*.yml",
+    "data/gmx_water_models/configurations/*.gro",
+    "data/ci_systems/**/*.yml",
+    "data/ci_systems/**/*.tar.gz",
+    "mdp/templates/**/*.mdp",
+    "mmpbsa_in/templates/*.in",
+    "rules/**/*.smk",
+    "rules/**/Snakefile"
+]
+
+[project.scripts]
+bindflow = "bindflow.cli:main"
