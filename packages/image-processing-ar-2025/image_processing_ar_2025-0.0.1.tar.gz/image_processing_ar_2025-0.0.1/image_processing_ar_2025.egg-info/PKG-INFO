@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: image_processing_ar_2025
+Version: 0.0.1
+Summary: Processador de imagens
+Home-page: https://github.com/antonioorichard/image-processing/tree/beta
+Author: Antonio_Richard
+Author-email: antoniorichardhc@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# image_processing_ar_2025
+
+Description. The package image_processing_ar_2025 is used to: 
+
+	Processing:
+		- Histrogram matching
+		- Structural similarity 
+		- Resize image
+	Utils:
+		- Read image
+		- Save image
+		- Plot image
+		- Plot result
+		- Plot histogram
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install image_processing_ar_2025
+```bash
+pip install image_processing_ar_2025
+```
+
+## Usage
+
+```python
+from image_processing_ar_2025.module1_name import file1_name
+file1_name.my_function()
+```
+
+## Author
+Antonio Richard
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
