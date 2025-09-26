@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: chachax
+Version: 1.0.1
+Summary: Decrypt ChaCha
+Home-page: https://github.com/Rin-Wood/chachax
+Author: wood
+Author-email: miraclerinwood@gmail.com
+License: BSD
+Keywords: chachax
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# chachax
+
+Decrypt ChaCha
+
+## Features
+
+- Supports Python 3.6+
+
+## Installation
+
+Install the latest version of `chachax` from PyPI:
+
+```bash
+pip install chachax
+```
+
+## Usage
+Here's how to use `chachax` for decryption:
+
+```python
+import chachax
+
+encrypted_data = b'...'
+key = b'...' # 32 bytes
+nonce = b'...' # 12 bytes
+rounds = 8 # 8/12/20 | Default 8
+counter = 0 # Default 0
+dec = chachax.decrypt(encrypted_data, key, Nonce, rounds)
+
+
