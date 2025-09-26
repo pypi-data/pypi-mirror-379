@@ -1,0 +1,13 @@
+opentelemetry/util/genai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opentelemetry/util/genai/completion_hook.py,sha256=QxSPMHF57kB9wNM8TZaPXGi7Vmg2KH4M_6aVyj8XxtI,4523
+opentelemetry/util/genai/environment_variables.py,sha256=mRlF52oj4uDEIkbBS7DCoR4a_Nj-ou528ZbiMsq0BYs,1725
+opentelemetry/util/genai/types.py,sha256=jvCk8LrHWsxdKf37i37SiQBpYH95CplpdWuOJbWD4RU,1673
+opentelemetry/util/genai/utils.py,sha256=FS2HcH5wXBGwlVxkiSip-FNTyfarZM89wsUh1yrOdIA,2148
+opentelemetry/util/genai/version.py,sha256=kuCRl-ufBDjq5ZQIewnRMXiEH3ZPNRZZdo7KuHn60Mc,607
+opentelemetry/util/genai/_fsspec_upload/__init__.py,sha256=M6cQOJGhJ_fyJCqqYET_wwgZ0Belwfp_uaDmIqtdHEk,1416
+opentelemetry/util/genai/_fsspec_upload/completion_hook.py,sha256=Irs9z5juaVr2FbPjoNl5btMi6eg-Mu1gWTIxLBH5mWk,8052
+opentelemetry_util_genai-0.1b0.dist-info/METADATA,sha256=IYQOkIuNfKpUMlb8Xu9vVo1uiw_nAbg6i3AQ5fSTc6Y,2106
+opentelemetry_util_genai-0.1b0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+opentelemetry_util_genai-0.1b0.dist-info/entry_points.txt,sha256=O6yHFiWbrW8LbuZebstvCzX6woaViEZ5rI0njuIK-HI,124
+opentelemetry_util_genai-0.1b0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+opentelemetry_util_genai-0.1b0.dist-info/RECORD,,
