@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS">
+<title>FIEライブラリ: 説明</title>
+<link href="fvalg-prod.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.6-FASTSP-p2 -->
+<script type="text/javascript">
+<!--
+function changeDisplayState (e){
+  var num=this.id.replace(/[^[0-9]/g,'');
+  var button=this.firstChild;
+  var sectionDiv=document.getElementById('dynsection'+num);
+  if (sectionDiv.style.display=='none'||sectionDiv.style.display==''){
+    sectionDiv.style.display='block';
+    button.src='open.gif';
+  }else{
+    sectionDiv.style.display='none';
+    button.src='closed.gif';
+  }
+}
+function initDynSections(){
+  var divs=document.getElementsByTagName('div');
+  var sectionCounter=1;
+  for(var i=0;i<divs.length-1;i++){
+    if(divs[i].className=='dynheader'&&divs[i+1].className=='dynsection'){
+      var header=divs[i];
+      var section=divs[i+1];
+      var button=header.firstChild;
+      if (button!='IMG'){
+        divs[i].insertBefore(document.createTextNode(' '),divs[i].firstChild);
+        button=document.createElement('img');
+        divs[i].insertBefore(button,divs[i].firstChild);
+      }
+      header.style.cursor='pointer';
+      header.onclick=changeDisplayState;
+      header.id='dynheader'+sectionCounter;
+      button.src='closed.gif';
+      section.id='dynsection'+sectionCounter;
+      section.style.display='none';
+      section.style.marginLeft='14px';
+      sectionCounter++;
+    }
+  }
+}
+window.onload = initDynSections;
+-->
+</script>
+<div class="contents">
+<h1>説明<br>
+<small>
+[<a class="el" href="group__fie__ps.html">照度差ステレオ</a>]</small>
+</h1><h2><a class="anchor" name="about_ps">
+照度差ステレオについて</a></h2>
+<h3><a class="anchor" name="about_ps_sub">
+照度差ステレオ全般について</a></h3>
+本ライブラリは、物体表面の法線を推定する照度差ステレオの機能を提供するライブラリです。照度差ステレオでは、カメラを固定し、 <a class="el" href="group__fie__ps__doc.html#photometric_stereo_normal_vector_and_light_source_vector">光源ベクトル</a> が相異なる照明を用いて撮像した複数枚の画像を用います。 同じ場所でも物体表面の明るさは光源ベクトルに依存することを利用して法線を推定します。法線を利用し、物体表面の高さ、曲率を得る関数等も本ライブラリに含まれます。 本ライブラリを使用することで、見る方向によっては見つけにくい対象を強調することや、背景やテクスチャの影響を抑えた凹凸の情報を得ることができます。<h3><a class="anchor" name="how2use_ps">
+照度差ステレオの使い方</a></h3>
+照度差ステレオで法線画像(normal map)やアルベド画像(albedo map)を求める場合、 <a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> を使用します。 撮像対象(object)を固定、カメラを固定し、光源ベクトルが相異なる照明を用いて撮像した画像と光源ベクトルが複数必要です。 <div align="center">
+<img src="fie_ps_how2use.png" alt="fie_ps_how2use.png">
+<p><strong>Fig1. 光源ベクトルが相異なる照明を用いて撮像した画像例</strong></p></div>
+ また <a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> で計算した法線画像を入力画像とすることで、 <a class="el" href="group__fie__ps__do.html#gc87a29d344bb0c7db6793f55dd40454c" title="曲率画像生成">fnFIE_ps_curvature()</a> により曲率画像(curvature map)、 <a class="el" href="group__fie__ps__do.html#gfb4c8e4ddeddb60818d98698e746f8c4" title="Frankot-Chellappa法による高さ画像生成">fnFIE_ps_frankot_chellappa()</a> または <a class="el" href="group__fie__ps__do.html#g12788a4a0352b677c510ba36fc76ece6" title="Horn-Brooks法による高さ画像生成">fnFIE_ps_horn_brooks()</a> により高さ画像(depth map)を計算できます。<p>
+<div align="center">
+<img src="fie_ps_flow.png" alt="fie_ps_flow.png">
+<p><strong>Fig2. 照度差ステレオの使い方</strong></p></div>
+<p>
+具体的な関数の使用方法は、<a class="el" href="group__fie__ps__sample.html">サンプルコード</a> を参照して下さい。<p>
+<a class="anchor" name="photometric_stereo_normal_vector_and_light_source_vector"></a> <dl class="user" compact><dt><b>法線ベクトル、光源ベクトル</b></dt><dd></dd></dl>
+物体表面の法線ベクトル(normal vector)とは、物体表面に対して垂直に交わる３次元ベクトルです。法線ベクトルの方向は物体の内部から外部の向きとします。光源ベクトル(light source vector)とは、光源（照明）の方向を表す3次元ベクトルです。光源ベクトルの方向は物体表面から光源への向きとします。特に断らない限り、どちらも単位ベクトルとします。<p>
+<div align="center">
+<img src="fie_ps_normal_vector_light_source_vector.png" alt="fie_ps_normal_vector_light_source_vector.png">
+<p><strong>Fig3.法線ベクトル、光源ベクトル(normal vector, light source vector)</strong></p></div>
+ <a class="anchor" name="slant_and_tilt"></a> <dl class="user" compact><dt><b>slantとtilt</b></dt><dd></dd></dl>
+本ライブラリでは光源ベクトルの情報はslantとtiltを入力します。slantとtiltは光源ベクトルに対して定まる角度で、Fig.4にあるように、<p>
+<ul>
+<li>slant:z軸と光源ベクトルがなす角（0°≦slant≦180°）</li></ul>
+<p>
+<ul>
+<li>tilt:光源ベクトルをxy平面に射影したベクトルとx軸がなす角で、x軸から時計回りの角度</li></ul>
+<p>
+です。<p>
+<div align="center">
+<img src="fie_ps_slant_tilt.png" alt="fie_ps_slant_tilt.png">
+<p><strong>Fig4. slant, tilt</strong></p></div>
+ slant,tiltを計算する補助関数として、以下の関数が利用できます。<p>
+<a class="el" href="group__fie__ps__tool.html#gbd4d5a917c521687c8ed9aa97ea20a2c" title="照度差ステレオ光源ベクトルの情報補助関数（空間座標）">fnFIE_ps_woodham_calc_light_from_pos()</a><p>
+<a class="el" href="group__fie__ps__tool.html#g238f3f409973ec266af30803eba91adc" title="照度差ステレオ光源ベクトルの情報補助関数（リング照明）...">fnFIE_ps_woodham_calc_light_ring()</a><p>
+<a class="anchor" name="photometric_stereo_coordinate"></a> <dl class="user" compact><dt><b>照度差ステレオモジュールで用いる座標系について </b></dt><dd></dd></dl>
+本ライブラリで用いる座標系は左手系とします。<p>
+<div align="center">
+<img src="fie_ps_coordinate_left_handed_system.png" alt="fie_ps_coordinate_left_handed_system.png">
+<p><strong>Fig5. 左手系(left-handed system)</strong></p></div>
+<p>
+また、撮像に用いるカメラのモデルは平行投影(orthographic projection)モデルを仮定します(Fig.6)。カメラのx,yのスケールは同じとします。座標系について、Z軸を光軸と平行にとり、X軸、Y軸は投影面（画像）の横方向と縦方向と平行にとったものとする座標系を用います。 Z軸の向きは物体からカメラの向きを正とします(Fig.7)。<p>
+<div align="center">
+<img src="fie_ps_orthographic_projection.png" alt="fie_ps_orthographic_projection.png">
+<p><strong>Fig6. 平行投影(orthographic projection)</strong></p></div>
+ <div align="center">
+<img src="fie_ps_z_axis.png" alt="fie_ps_z_axis.png">
+<p><strong>Fig7. Z軸の向き(z-axis direction)</strong></p></div>
+<hr>
+ <h2><a class="anchor" name="ps_woodham">
+Woodhamの手法について</a></h2>
+照度差ステレオは1980年にWoodhamにより基本的な手法が提案されました[1]。<p>
+<dl class="user" compact><dt><b>拡散反射、ランバート反射</b></dt><dd></dd></dl>
+Woodhamの手法ではランバート反射モデルを採用します。以下では拡散反射やランバート反射について説明します。<p>
+物体に光が当たり反射する際、拡散反射(diffuse reflection)や鏡面反射が起こります。<p>
+鏡面反射は入射光は入射角と反射角が等しくなるよう物体表面で反射し、表面の輝度は正反射方向と視線が同じ向きの場合に最も明るくなります。<p>
+拡散反射では入射光が物体の表面層内部で吸収、散乱を繰り返し、散乱光は様々な方向から外部へ出てきます。均等拡散反射(uniform diffuse reflection)面では表面の輝度は視線によらず同じ明るさです。<p>
+<div align="center">
+<img src="fie_ps_uniform_diffuse_reflection.png" alt="fie_ps_uniform_diffuse_reflection.png">
+<p><strong>Fig8.均等拡散反射(uniform diffuse reflection)</strong></p></div>
+ 反射モデルの一つに拡散反射を理想的に扱ったモデルであるランバート反射があり、以下の式で表されます。<p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ d=(\bm{l} \cdot \bm{n}) ai \]" src="form_476.png">
+<p>
+<p>
+ただし<p>
+<img class="formulaInl" alt="$ \cdot $" src="form_477.png">：ベクトルの内積、<p>
+<img class="formulaInl" alt="$ d $" src="form_478.png">：物体表面の輝度、<p>
+<img class="formulaInl" alt="$ \bm{n}=(n_{x},n_{y},n_{z}) $" src="form_479.png">：単位法線ベクトル、<p>
+<img class="formulaInl" alt="$ \bm{l}=(l_{x},l_{y},l_{z}) $" src="form_480.png">：単位光源ベクトル、<p>
+<img class="formulaInl" alt="$ i $" src="form_481.png">：入射光の輝度、<p>
+<img class="formulaInl" alt="$ a $" src="form_482.png">：拡散反射率（アルベド）<p>
+とします。<p>
+<dl class="user" compact><dt><b>法線推定</b></dt><dd>どの光源も平行光源で輝度は同一とし、環境光の影響は考えず、物体表面ではランバート反射だけが起きているとします。 法線は画素ごと独立にすべての画素で計算します。 以下では撮像した画像たちの画素の位置を固定して考えます。 光源の数を<img class="formulaInl" alt="$ m $" src="form_483.png">とし、光源方向を<img class="formulaInl" alt="$ l_{j} $" src="form_484.png">、<img class="formulaInl" alt="$ l_{j} $" src="form_484.png">で撮像された物体表面の輝度を<img class="formulaInl" alt="$ d_{j} $" src="form_485.png">とおきます(<img class="formulaInl" alt="$ 1 \leqq j \leqq m $" src="form_486.png">)。 このとき光源の数だけランバート反射の式が得られ、以下のように表されます。 <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \left\{ \begin{alignedat}{4} (l_{1,x}n_{x}+{} &amp;&amp; l_{1,y}n_{y}+{} &amp;&amp; l_{1,z}n_{z}) &amp;&amp; ai={} &amp;&amp; d_{1} \\ (l_{2,x}n_{x}+{} &amp;&amp; l_{2,y}n_{y}+{} &amp;&amp; l_{2,z}n_{z}) &amp;&amp; ai={} &amp;&amp; d_{2} \\ \vdots \\ (l_{m,x}n_{x}+{} &amp;&amp; l_{m,y}n_{y}+{} &amp;&amp; l_{m,z}n_{z}) &amp;&amp; ai={} &amp;&amp; d_{m} \\ \end{alignedat} \right. \]" src="form_487.png">
+<p>
+ ここで<img class="formulaInl" alt="$\tilde{n}^{t}=(ai)\bm{n}^{t}$" src="form_488.png">とおいて、 <img class="formulaInl" alt="$\textbf{L},\bm{d}$" src="form_489.png"> をそれぞれ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \textbf{L}= \begin{pmatrix} l_{1,x} &amp; l_{1,y} &amp; l_{1,z} \\ l_{2,x} &amp; l_{2,y} &amp; l_{2,z} \\ \vdots &amp; \vdots &amp; \vdots \\ l_{m,x} &amp; l_{m,y} &amp; l_{m,z} \end{pmatrix}, \bm{d}=\begin{pmatrix}d_{1} \\ d_{2} \\ \vdots \\ d_{m} \end{pmatrix} \]" src="form_490.png">
+<p>
+ とおきます。式を書き換えると <img class="formulaInl" alt="$ \textbf{L}{\tilde{n}}^t=\bm{d} $" src="form_491.png"> と書け、 <img class="formulaInl" alt="$ \bm{d}-\textbf{L}\tilde{n}^t $" src="form_492.png"> のノルムが最小となるような <img class="formulaInl" alt="$ \tilde{n}^t $" src="form_493.png"> を最小二乗法によりもとめます。その後得られた<img class="formulaInl" alt="$ \tilde{n} $" src="form_494.png">を正規化し単位法線ベクトル <img class="formulaInl" alt="$ \bm{n} $" src="form_495.png"> を得ます。 入射光輝度 <img class="formulaInl" alt="$ i $" src="form_481.png"> が既知の場合はアルベドも求めることが出来ます。</dd></dl>
+<dl class="user" compact><dt><b>アルベド</b></dt><dd>入射光は拡散反射や鏡面反射、吸収されるなど様々ですが、アルベドは入射光のうちどれくらいが拡散反射するかを表す定数で、ランバート反射に置ける式中の <img class="formulaInl" alt="$ a $" src="form_482.png"> にあたります。アルベドは物体の色、明るさに関係します。 本ライブラリでは入射光輝度<img class="formulaInl" alt="$ i $" src="form_481.png">は画像型に応じた定数であるとした場合のアルベド画像を計算します。</dd></dl>
+<a class="anchor" name="ps_warning"></a> <dl class="user" compact><dt><b>注意</b></dt><dd>Woodhamによる照度差ステレオでは「物体表面はランバート反射だけであり、鏡面反射等を考えない」「光源は環境光を考えず平行光源だけ」という、厳しい仮定となっています。仮定を大幅に満たさない状況では、法線を推定がうまく出来ないことも有り得ます。 また撮像対象の物体について、物体同士で重なりがある場合やカメラ光軸と平行な物体の面面が存在する場合があり、本手法ではそのような箇所では撮像画像だけから法線を得ることは困難です。</dd></dl>
+<div align="center">
+<img src="fie_ps_warning_parallel_overhang.png" alt="fie_ps_warning_parallel_overhang.png">
+<p><strong>Fig9.物体の形状が原因で法線が求まらない例</strong></p></div>
+ <hr>
+ <h3><a class="anchor" name="ps_depth">
+高さ画像について</a></h3>
+物体が写っている画像の座標 <img class="formulaInl" alt="$ (x,y) $" src="form_496.png"> が決まると物体の表面の高さ<img class="formulaInl" alt="$ Z $" src="form_497.png">は決まると考え、<img class="formulaInl" alt="$ Z=Z(x,y) $" src="form_498.png"> とします。 表面法線<img class="formulaInl" alt="$ n=(n_{x},n_{y},n_{z}) $" src="form_499.png">が得られたとき、そこから勾配<img class="formulaInl" alt="$ (Z_{x},Z_{y})=(-\dfrac{n_{x}}{n_{z}},-\dfrac{n_{y}}{n_{z}}) $" src="form_500.png">を求めることができます。 ここで<img class="formulaInl" alt="$ Z_{x},Z_{y} $" src="form_501.png">はそれぞれ高さ<img class="formulaInl" alt="$ Z $" src="form_497.png">の<img class="formulaInl" alt="$ x $" src="form_2.png"> に関する偏微分、<img class="formulaInl" alt="$ y $" src="form_502.png"> に関する偏微分とします。<p>
+相対的な高さについて勾配を線積分をすれば求まりますが、照度差ステレオで求めた法線は誤差が含まれることがあり、 そのまま積分した場合は高さの誤差が大きくなってしまうことがあります。<p>
+本ライブラリでは、高さの誤差を低減するよう工夫して計算する関数を二つ用意しています。<p>
+<a class="el" href="group__fie__ps__do.html#gfb4c8e4ddeddb60818d98698e746f8c4" title="Frankot-Chellappa法による高さ画像生成">fnFIE_ps_frankot_chellappa()</a><p>
+<a class="el" href="group__fie__ps__do.html#g12788a4a0352b677c510ba36fc76ece6" title="Horn-Brooks法による高さ画像生成">fnFIE_ps_horn_brooks()</a><p>
+<dl class="user" compact><dt><b>使用例</b></dt><dd><a class="el" href="group__fie__ps__sample.html">サンプルコード</a></dd></dl>
+<hr>
+ <dl class="user" compact><dt><b>参考文献: </b></dt><dd></dd></dl>
+<ul>
+<li>[1]Rober J.Woodham(1980), "Photometric Method for Determining Surface Orientation from Multiple Images"</li><li>[2]画像情報教育振興協会(2015), "ディジタル画像処理[改訂新版]", p.337,341,344,348~350 </li></ul>
+
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+</table>
+</div>
+<hr size="1">
+<address style="align: right; color: #cccccc;">
+	<small>
+	Documentation copyright &copy; 2009-2025 TOKYO ELECTRON DEVICE LIMITED. <br>
+	Generated on Tue Sep 16 09:08:52 2025 for FIEライブラリ by&nbsp;<a href="http://www.doxygen.org/index.html">doxygen</a> 1.5.6-FASTSP-p2
+	</small>
+</address>
+</body>
+</html>

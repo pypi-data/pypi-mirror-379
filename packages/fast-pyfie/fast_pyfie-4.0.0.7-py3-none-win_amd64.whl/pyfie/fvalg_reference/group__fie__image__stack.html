@@ -1,0 +1,550 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS">
+<title>FIEライブラリ: 画像スタックオブジェクト</title>
+<link href="fvalg-prod.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.6-FASTSP-p2 -->
+<script type="text/javascript">
+<!--
+function changeDisplayState (e){
+  var num=this.id.replace(/[^[0-9]/g,'');
+  var button=this.firstChild;
+  var sectionDiv=document.getElementById('dynsection'+num);
+  if (sectionDiv.style.display=='none'||sectionDiv.style.display==''){
+    sectionDiv.style.display='block';
+    button.src='open.gif';
+  }else{
+    sectionDiv.style.display='none';
+    button.src='closed.gif';
+  }
+}
+function initDynSections(){
+  var divs=document.getElementsByTagName('div');
+  var sectionCounter=1;
+  for(var i=0;i<divs.length-1;i++){
+    if(divs[i].className=='dynheader'&&divs[i+1].className=='dynsection'){
+      var header=divs[i];
+      var section=divs[i+1];
+      var button=header.firstChild;
+      if (button!='IMG'){
+        divs[i].insertBefore(document.createTextNode(' '),divs[i].firstChild);
+        button=document.createElement('img');
+        divs[i].insertBefore(button,divs[i].firstChild);
+      }
+      header.style.cursor='pointer';
+      header.onclick=changeDisplayState;
+      header.id='dynheader'+sectionCounter;
+      button.src='closed.gif';
+      section.id='dynsection'+sectionCounter;
+      section.style.display='none';
+      section.style.marginLeft='14px';
+      sectionCounter++;
+    }
+  }
+}
+window.onload = initDynSections;
+-->
+</script>
+<div class="contents">
+<h1>画像スタックオブジェクト<br>
+<small>
+[<a class="el" href="group__FIE.html">FIE module</a>]</small>
+</h1><hr><a name="_details"></a><h2>説明</h2>
+画像スタックは複数の画像を一つに束ねるためのオブジェクトです。 
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>列挙型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#g8767b94e54313737819545b9122d86b4">f_imgstack_add_img_mode</a> { <a class="el" href="group__fie__image__stack.html#gg8767b94e54313737819545b9122d86b49819194d0cc301e43c978c9a40a02930">F_IMGSTACK_CHILD_MODE</a> =  0, 
+<a class="el" href="group__fie__image__stack.html#gg8767b94e54313737819545b9122d86b4701d2936060faf639ce407f97415f422">F_IMGSTACK_ROOT_MODE</a> =  1
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像格納モード  <a href="group__fie__image__stack.html#g8767b94e54313737819545b9122d86b4">[詳細]</a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">FHANDLE FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#gc54b6d6f23c8a101e971974fc34433ee">fnFIE_imgstack_alloc</a> (INT add_img_mode, BOOL check_img_format)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像スタックオブジェクトの作成  <a href="#gc54b6d6f23c8a101e971974fc34433ee"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">FHANDLE FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#g21258791be601dc31d1d4f36ece88799">fnFIE_imgstack_getat</a> (FHANDLE hstack, INT index, INT *errorcode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像の取得  <a href="#g21258791be601dc31d1d4f36ece88799"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#g5d7228bce7c1f7ff28e3fb4b3ade5f3a">fnFIE_imgstack_getnum</a> (FHANDLE hstack)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像の数を取得  <a href="#g5d7228bce7c1f7ff28e3fb4b3ade5f3a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#gdfedfe64fac66b215fc685ea7a25b206">fnFIE_imgstack_clear</a> (FHANDLE hstack)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像スタック内の画像を全て取り除く  <a href="#gdfedfe64fac66b215fc685ea7a25b206"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#g5a395e7c3355d2ac6e580b779e94a042">fnFIE_imgstack_push_back</a> (FHANDLE hstack, FHANDLE himage)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像スタック末尾に画像を追加する  <a href="#g5a395e7c3355d2ac6e580b779e94a042"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">FHANDLE FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#gc0fcb8e6b613d57583f97131e828aade">fnFIE_imgstack_pop_back</a> (FHANDLE hstack, INT *errorcode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像スタック末尾の画像取り出し  <a href="#gc0fcb8e6b613d57583f97131e828aade"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#gdc0e7d8a9d2cf99132de85e5bd1a43af">fnFIE_imgstack_insert</a> (FHANDLE hstack, INT index, FHANDLE himage)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">特定の位置に画像を追加  <a href="#gdc0e7d8a9d2cf99132de85e5bd1a43af"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#g41270dd2835f6ff4d4d31886480e3d44">fnFIE_imgstack_erase</a> (FHANDLE hstack, INT index)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">特定の位置の画像を削除  <a href="#g41270dd2835f6ff4d4d31886480e3d44"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__image__stack.html#g233448abdc7a9d6f82649c0a5dbd4268">fnFIE_imgstack_check</a> (FHANDLE hstack, FHANDLE href)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画像スタック内の画像の形式を確認する  <a href="#g233448abdc7a9d6f82649c0a5dbd4268"></a><br></td></tr>
+</table>
+<hr><h2>列挙型</h2>
+<a class="anchor" name="g8767b94e54313737819545b9122d86b4"></a><!-- doxytag: member="fie.h::f_imgstack_add_img_mode" ref="g8767b94e54313737819545b9122d86b4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__fie__image__stack.html#g8767b94e54313737819545b9122d86b4">f_imgstack_add_img_mode</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像格納モード 
+<p>
+画像スタックオブジェクトにて、画像をどのように格納するかを定める定数です。<p>
+<dl class="see" compact><dt><b>参照:</b></dt><dd><a class="el" href="group__fie__image__stack.html#gc54b6d6f23c8a101e971974fc34433ee" title="画像スタックオブジェクトの作成">fnFIE_imgstack_alloc()</a> </dd></dl>
+<dl compact><dt><b>列挙型の値: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="gg8767b94e54313737819545b9122d86b49819194d0cc301e43c978c9a40a02930"></a><!-- doxytag: member="F_IMGSTACK_CHILD_MODE" ref="gg8767b94e54313737819545b9122d86b49819194d0cc301e43c978c9a40a02930" args="" -->F_IMGSTACK_CHILD_MODE</em>&nbsp;</td><td>
+チャイルド画像モード </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="gg8767b94e54313737819545b9122d86b4701d2936060faf639ce407f97415f422"></a><!-- doxytag: member="F_IMGSTACK_ROOT_MODE" ref="gg8767b94e54313737819545b9122d86b4701d2936060faf639ce407f97415f422" args="" -->F_IMGSTACK_ROOT_MODE</em>&nbsp;</td><td>
+ルート画像モード </td></tr>
+</table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="gc54b6d6f23c8a101e971974fc34433ee"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_alloc" ref="gc54b6d6f23c8a101e971974fc34433ee" args="(INT add_img_mode, BOOL check_img_format)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FHANDLE FVALGAPI fnFIE_imgstack_alloc           </td>
+          <td>(</td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>add_img_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&nbsp;</td>
+          <td class="paramname"> <em>check_img_format</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像スタックオブジェクトの作成 
+<p>
+画像スタックオブジェクトを作成します。作成時に画像格納モード( <em>add_img_mode</em> )を指定できます。 <ul>
+<li>チャイルド画像モードで作成した場合、画像スタックオブジェクトに画像を追加しようとすると、追加したい画像の全チャネル全座標をカバーしたチャイルド画像を保持します。外部で画像の内容を変更したり解放したりすると影響を受けます。 </li>
+<li>ルート画像モードで作成した場合、画像スタックオブジェクトに画像を追加しようとすると画像スタックオブジェクトの内部に追加したい画像と同サイズのルート画像を作成し内容をコピーします。外部でもとの画像の内容を変更したり解放したりしても影響を受けません。</li>
+</ul>
+また、スタック内の画像の画像型、チャネル数、縦横サイズを統一させるか( <em>check_img_format</em> )を指定できます。 <ul>
+<li><em>TRUE</em> を指定した場合、スタックに2枚目以降の画像を追加した際に、1枚目の画像と画像型、チャネル数、縦横サイズが等しいかをチェックし、異なる場合にエラーを返します。 </li>
+<li><em>FALSE</em> を指定した場合、スタックに画像を追加する際に画像型、チャネル数、縦横サイズのチェックを行いません。</li>
+</ul>
+画像スタックオブジェクトが不要になったら <a class="el" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object()</a> にて解放してください。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>add_img_mode</em>&nbsp;</td><td>画像格納モード<ul>
+<li><em>F_IMGSTACK_CHILD_MODE</em> チャイルド画像モード</li><li><em>F_IMGSTACK_ROOT_MODE</em> ルート画像モード</li></ul>
+</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>check_img_format</em>&nbsp;</td><td>画像型、チャネル数、縦横サイズ統一オプション<ul>
+<li><em>TRUE</em> を指定した場合、画像スタックオブジェクトに2枚目以降の画像を追加した際に、1枚目の画像と画像型、チャネル数、及びサイズが等しいかをチェックし、異なる場合にエラーを返します。</li><li><em>FALSE</em> を指定した場合、上記のチェックを行いません。</li></ul>
+</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>作成した画像スタックオブジェクト。 パラメータエラー、ライセンスエラー、またはメモリ確保エラーで失敗した場合はNULLを返します。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g21258791be601dc31d1d4f36ece88799"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_getat" ref="g21258791be601dc31d1d4f36ece88799" args="(FHANDLE hstack, INT index, INT *errorcode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FHANDLE FVALGAPI fnFIE_imgstack_getat           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT *&nbsp;</td>
+          <td class="paramname"> <em>errorcode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像の取得 
+<p>
+画像スタックオブジェクトの中から指定した番号の画像オブジェクトを一つ取得します。<br>
+ 画像オブジェクトが不要になったら <a class="el" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object()</a> にて解放してください。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>画像スタックオブジェクト </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>index</em>&nbsp;</td><td>画像の番号。0以上で、 <a class="el" href="group__fie__image__stack.html#g5d7228bce7c1f7ff28e3fb4b3ade5f3a" title="画像の数を取得">fnFIE_imgstack_getnum()</a> で得た数値より小さくなければなりません。 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>errorcode</em>&nbsp;</td><td>エラーコード。必要がなければNULLを渡してください。<ul>
+<li>F_ERR_NO_LICENCE ライセンス異常</li><li>F_ERR_INVALID_OBJECT オブジェクト異常</li><li>F_ERR_INVALID_PARAM パラメータ異常</li><li>F_ERR_NOMEMORY メモリ不足</li><li>F_ERR_NONE 正常終了 </li></ul>
+</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>画像オブジェクト。失敗した場合はNULLを返します。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g5d7228bce7c1f7ff28e3fb4b3ade5f3a"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_getnum" ref="g5d7228bce7c1f7ff28e3fb4b3ade5f3a" args="(FHANDLE hstack)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_imgstack_getnum           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像の数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>画像スタックオブジェクト </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>格納されている画像の数。パラメータエラー、またはライセンスエラーの場合に -1 を返します。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="gdfedfe64fac66b215fc685ea7a25b206"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_clear" ref="gdfedfe64fac66b215fc685ea7a25b206" args="(FHANDLE hstack)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_imgstack_clear           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像スタック内の画像を全て取り除く 
+<p>
+画像スタック内の画像を全て取り除きます。<br>
+ 当関数の実行より前に <a class="el" href="group__fie__image__stack.html#g21258791be601dc31d1d4f36ece88799" title="画像の取得">fnFIE_imgstack_getat()</a> で取得した画像オブジェクトはNULLチャイルド画像になる可能性があります。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>画像スタックオブジェクト</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_OBJECT</em>&nbsp;</td><td><em>hstack</em> が画像スタックオブジェクトではない </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g5a395e7c3355d2ac6e580b779e94a042"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_push_back" ref="g5a395e7c3355d2ac6e580b779e94a042" args="(FHANDLE hstack, FHANDLE himage)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_imgstack_push_back           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>himage</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像スタック末尾に画像を追加する 
+<p>
+画像スタックの末尾に <em>himage</em> の内容を追加します。追加の形式については <a class="el" href="group__fie__image__stack.html#gc54b6d6f23c8a101e971974fc34433ee" title="画像スタックオブジェクトの作成">fnFIE_imgstack_alloc()</a> の画像格納モードに従います。 また、 <a class="el" href="group__fie__image__stack.html#gc54b6d6f23c8a101e971974fc34433ee" title="画像スタックオブジェクトの作成">fnFIE_imgstack_alloc()</a> で設定した画像型、チャネル数、縦横サイズ統一オプションに従い、2枚目以降の画像が追加された際に、1枚目の画像の画像型、チャネル数、縦横サイズが異なる場合にエラーを返します。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>画像スタックオブジェクト </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>himage</em>&nbsp;</td><td>追加する画像</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_OBJECT</em>&nbsp;</td><td><em>hstack</em> が画像スタックオブジェクトではない </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td><em>himage</em> が画像オブジェクトではない <br>
+ または画像型、チャネル数、縦横サイズ統一オプションが TRUE のとき、追加された画像と1枚目の画像の画像型、チャネル数、縦横サイズが異なる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NOMEMORY</em>&nbsp;</td><td>メモリ確保エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="gc0fcb8e6b613d57583f97131e828aade"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_pop_back" ref="gc0fcb8e6b613d57583f97131e828aade" args="(FHANDLE hstack, INT *errorcode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FHANDLE FVALGAPI fnFIE_imgstack_pop_back           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT *&nbsp;</td>
+          <td class="paramname"> <em>errorcode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像スタック末尾の画像取り出し 
+<p>
+画像スタック末尾の画像を戻り値として返し、画像スタックから削除します。 取り出した画像が不要になったら <a class="el" href="group__fie__object.html#g5255bfc98226503d087b8614fcbb240c" title="オブジェクトを解放">fnFIE_free_object()</a> で解放してください。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>画像スタックオブジェクト </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>errcode</em>&nbsp;</td><td>エラーコード。必要なければNULLを渡してください<ul>
+<li>F_ERR_NONE 正常終了</li><li>F_ERR_INVALID_OBJECT <em>hstack</em> が画像スタックオブジェクトではない</li><li>F_ERR_NODATA <em>hstack</em> に画像がひとつもない</li><li>F_ERR_NO_LICENCE ライセンスエラー </li></ul>
+</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>取り出した画像オブジェクト。失敗した場合はNULLを返します。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="gdc0e7d8a9d2cf99132de85e5bd1a43af"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_insert" ref="gdc0e7d8a9d2cf99132de85e5bd1a43af" args="(FHANDLE hstack, INT index, FHANDLE himage)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_imgstack_insert           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>himage</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+特定の位置に画像を追加 
+<p>
+画像スタックオブジェクトの <em>index</em> 番目に <em>himage</em> を追加します。<br>
+ 格納されている画像の個数を num としたとき、<em>index</em> の範囲は 0 ～ num であり、 この範囲外の値を <em>index</em> に指定した場合はエラーになります。<br>
+ また、 <a class="el" href="group__fie__image__stack.html#gc54b6d6f23c8a101e971974fc34433ee" title="画像スタックオブジェクトの作成">fnFIE_imgstack_alloc()</a> で設定した画像型、チャネル数、縦横サイズ統一オプションが <em>TRUE</em> の場合、 挿入前の画像スタックの0番目の画像と <em>himage</em> の画像型、チャネル数、縦横サイズを比較し、 ひとつでも異なる場合はエラーとなります。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>画像スタックオブジェクト </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>index</em>&nbsp;</td><td>追加位置の番号 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>himage</em>&nbsp;</td><td>追加する画像オブジェクト</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE　正常終了</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_OBJECT</em>&nbsp;</td><td><em>hstack</em> が画像スタックオブジェクトではない </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td><em>index</em> が有効な値ではない </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td><em>himage</em> が画像オブジェクトではない <br>
+ または画像型、チャネル数、縦横サイズ統一オプションが TRUE のとき、追加された画像と1枚目の画像の画像型、チャネル数、縦横サイズが異なる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NOMEMORY</em>&nbsp;</td><td>メモリ不足エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g41270dd2835f6ff4d4d31886480e3d44"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_erase" ref="g41270dd2835f6ff4d4d31886480e3d44" args="(FHANDLE hstack, INT index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_imgstack_erase           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>index</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+特定の位置の画像を削除 
+<p>
+画像スタックオブジェクトの <em>index</em> 番目の画像を削除します。<br>
+ 格納されている画像の個数を num としたとき、<em>index</em> の範囲は 0 ～ num-1 であり、 この範囲外の値を <em>index</em> に指定した場合はエラーになります。<br>
+ また、画像スタック内に画像がひとつも格納されていない場合もエラーとなります。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>画像スタックオブジェクト </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>index</em>&nbsp;</td><td>削除位置の番号</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE　正常終了</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_OBJECT</em>&nbsp;</td><td><em>hstack</em> が画像スタックオブジェクトではない </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td><em>index</em> が有効な値ではない、画像スタックに画像がひとつも格納されていない </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g233448abdc7a9d6f82649c0a5dbd4268"></a><!-- doxytag: member="fie_img_stack.c::fnFIE_imgstack_check" ref="g233448abdc7a9d6f82649c0a5dbd4268" args="(FHANDLE hstack, FHANDLE href)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_imgstack_check           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hstack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>href</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+画像スタック内の画像の形式を確認する 
+<p>
+<ul>
+<li><em>href</em> に画像オブジェクトを渡した場合、 <em>hstack</em> 内の全ての画像が <em>href</em> の画像型、チャネル数、縦横サイズについて同一かどうか調べます。 </li>
+<li><em>href</em> に画像スタックオブジェクトを渡した場合、 <em>hstack</em> 内の画像数が <em>href</em> 内の画像数と等しく、かつ <em>hstack</em> 内の <em>href</em> と対応する位置の画像が画像型、チャネル数、縦横サイズについて同一かどうか調べます。 </li>
+<li><em>href</em> にNULLを渡した場合、 <em>hstack</em> 内の全ての画像が <em>hstack</em> の先頭の画像と画像型、チャネル数、縦横サイズについて同一かどうか調べます。</li>
+</ul>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hstack</em>&nbsp;</td><td>チェック対象の画像スタックオブジェクト </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>href</em>&nbsp;</td><td>チェックの基準とする画像オブジェクトまたは画像スタックオブジェクト</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td><ul>
+<li><em>href</em> に画像オブジェクトを渡した場合、<em>hstack</em> 内の全ての画像が <em>href</em> の画像型、チャネル数、縦横サイズについて等しい</li><li><em>href</em> に画像スタックオブジェクトを渡した場合、 <em>hstack</em> 内の画像数が <em>href</em> 内の画像数と等しく、 かつ <em>hstack</em> 内の <em>href</em> と対応する位置の画像が画像型、チャネル数、縦横サイズについて等しい</li><li><em>href</em> にNULLを渡した場合<ul>
+<li><em>hstack</em> 内の全ての画像が <em>hstack</em> の先頭の画像と画像型、チャネル数、縦横サイズについて等しい</li><li><em>hstack</em> 内の画像枚数が1枚以下 </li></ul>
+</li></ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_OBJECT</em>&nbsp;</td><td><ul>
+<li>hstack が画像スタックオブジェクトではない</li><li>href が以下のいずれにも該当しない<ul>
+<li>画像オブジェクト</li><li>画像スタックオブジェクト</li><li>NULL </li></ul>
+</li></ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td><ul>
+<li>画像を比較し、画像型、チャネル数、縦横サイズのいずれかが等しくない</li><li><em>href</em> に画像スタックオブジェクトを渡した場合、 <em>hstack</em> 内の画像数と<em>href</em> 内の画像数が等しくない </li></ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1">
+<address style="align: right; color: #cccccc;">
+	<small>
+	Documentation copyright &copy; 2009-2025 TOKYO ELECTRON DEVICE LIMITED. <br>
+	Generated on Tue Sep 16 09:08:41 2025 for FIEライブラリ by&nbsp;<a href="http://www.doxygen.org/index.html">doxygen</a> 1.5.6-FASTSP-p2
+	</small>
+</address>
+</body>
+</html>
