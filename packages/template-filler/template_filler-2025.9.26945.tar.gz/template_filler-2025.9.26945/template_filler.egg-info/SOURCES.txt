@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+template_filler/__init__.py
+template_filler.egg-info/PKG-INFO
+template_filler.egg-info/SOURCES.txt
+template_filler.egg-info/dependency_links.txt
+template_filler.egg-info/top_level.txt
