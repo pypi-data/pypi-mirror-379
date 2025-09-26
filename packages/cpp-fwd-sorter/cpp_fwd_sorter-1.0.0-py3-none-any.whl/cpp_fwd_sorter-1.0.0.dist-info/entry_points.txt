@@ -1,0 +1,3 @@
+[console_scripts]
+cpp-fwd-format = cpp_fwd_sorter.formatter:main
+cpp-fwd-sorter = cpp_fwd_sorter.sorter:main
