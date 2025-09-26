@@ -1,0 +1,15 @@
+crunch_convert/__init__.py,sha256=5rfgGP0ZiYRha56CGOfEGl6saVn0OZ6q_xl1xrL4kbI,145
+crunch_convert/__main__.py,sha256=QIXEd36dPQeXzWXTfUYp_V26ewIQGW1udBgayO2KSoc,42
+crunch_convert/__version__.py,sha256=dJ-YQUM6AxzKORc038JRfBMreDxtjq9iVjMGAqYvZHI,265
+crunch_convert/cli.py,sha256=EgkuuWVAaX6iwwQKQu8MDDoViGOUNrRY1yljrn-eqjE,2266
+crunch_convert/notebook/__init__.py,sha256=_RzxhcGnzdqZIlKCSkw606O_G7wCsrTJl92UBTS4-hs,1142
+crunch_convert/notebook/_embedded.py,sha256=jWicztraSoOjrA9dDFCZkpNMGdXunmI6BJUsNpYNIl4,125
+crunch_convert/notebook/_notebook.py,sha256=xvGotaE2ju2mMoppEtup1R3xBPN2ftwnsIOBMvRO2A8,17770
+crunch_convert/notebook/_r.py,sha256=0ZGLMllwOAIFR59mRB8jgtVjPhpWGn1KymMXRHGlSRU,1047
+crunch_convert/notebook/_requirement.py,sha256=njtcHwD9663mqhMkFM4cVSDpFTqivLYMqxTyHiXsL8I,2925
+crunch_convert/notebook/_utils.py,sha256=yyM1oyQbAOkY9wEMn9oTfqnlRregfuLINcImZdcYzZw,533
+crunch_convert-0.1.0.dist-info/METADATA,sha256=CRlajDn9fvAAxQ9qGQ33tITvQubtpJtzQIjIhAAfv28,6648
+crunch_convert-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+crunch_convert-0.1.0.dist-info/entry_points.txt,sha256=G4TP0v9iHLoYZLeEW88f9bjR2K2Mi7C-T72nb1pjLB4,58
+crunch_convert-0.1.0.dist-info/top_level.txt,sha256=lRzMAFyQ0b5WoLLzSIXXsf9JE4vmx41YpVY9v3zV4_U,15
+crunch_convert-0.1.0.dist-info/RECORD,,
