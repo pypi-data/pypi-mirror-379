@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: thinkfic-downloader
+Version: 0.1.0
+Summary: Herramientas para descargar videos y slides de Thinkific
+Author: Cervantes Hernandez
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: yt-dlp>=2025.1.15
+Requires-Dist: requests>=2.32.0
+Requires-Dist: pillow>=10.0.0
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: tqdm>=4.66.0
+Provides-Extra: dev
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: flake8>=7.0.0; extra == "dev"
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Dynamic: license-file
