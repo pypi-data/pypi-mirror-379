@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ai-governance
+Version: 0.0.3
+Summary: AI governance: managing LLM policies and compliance.
+Author: White Circle
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# ai-governance
+
+AI governance: managing LLM policies and compliance
+
