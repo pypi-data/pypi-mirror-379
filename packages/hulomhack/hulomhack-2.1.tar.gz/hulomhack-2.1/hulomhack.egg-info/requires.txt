@@ -1,0 +1,5 @@
+somepackage>=1.1.0
+ipaddress==1.0.23
+colorama==0.4.6
+requests==2.32.5
+threading
