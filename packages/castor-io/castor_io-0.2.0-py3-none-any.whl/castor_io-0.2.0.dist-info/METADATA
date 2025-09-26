@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: castor-io
+Version: 0.2.0
+Summary: Minimalistic, embedded task manager.
+Author-email: Alejandro Piad <apiad@apiad.net>
+Requires-Python: >=3.13
+Requires-Dist: beaver-db>=0.16.5
+Requires-Dist: typer>=0.19.2

@@ -1,0 +1,8 @@
+castor/__init__.py,sha256=DvfXEI5KXgXoZjNsc6sUGJKqe4vMiy2JAWMkAE0fisQ,31
+castor/cli.py,sha256=27JWdiHfvzdAFUyajySQjgyG9qOmC589TZp255LZuRU,1515
+castor/core.py,sha256=gEQEzQ3_xSWYhtj2FaqtouB8rNWCU8oqAdOVqbqb8nA,7554
+castor/server.py,sha256=Lpdsz2KsDHzi22VfBe0sXIitwpJgSi6lM5eQ-3cGZFs,5391
+castor_io-0.2.0.dist-info/METADATA,sha256=A7V0ywS_vkxWpFZtOWLfADJwMdt82BZ4sDKBS63vdrM,232
+castor_io-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+castor_io-0.2.0.dist-info/entry_points.txt,sha256=OSNPKZTT2R_2drsOnLwdQV5Wsjp1LnK1tPraqwO9CiI,42
+castor_io-0.2.0.dist-info/RECORD,,
