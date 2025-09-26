@@ -1,0 +1,6 @@
+README
+pyproject.toml
+pymodbus_ha_core.egg-info/PKG-INFO
+pymodbus_ha_core.egg-info/SOURCES.txt
+pymodbus_ha_core.egg-info/dependency_links.txt
+pymodbus_ha_core.egg-info/top_level.txt

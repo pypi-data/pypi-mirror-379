@@ -1,0 +1,12 @@
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'pymodbus_ha_core'
+version = '3.11.3'
+description = 'A fully featured modbus protocol stack in python'
+readme = { file = "README", content-type = "text/x-rst" }
+
+requires-python = '>=3.10.0'

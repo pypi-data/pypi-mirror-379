@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: pymodbus_ha_core
+Version: 3.11.3
+Summary: A fully featured modbus protocol stack in python
+Requires-Python: >=3.10.0
+Description-Content-Type: text/x-rst
+
+Use `pymodbus <https://pypi.python.org/pypi/pymodbus/>`_ instead.
