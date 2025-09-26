@@ -1,0 +1,2 @@
+[console_scripts]
+yolo-dataset-studio = main:main
