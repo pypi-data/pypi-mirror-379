@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: ingestar_vl_sdk
+Version: 0.1.0
+Summary: SDK for IngeStar Vision-Language model
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/jasonwang178/ingestar-vl-sdk
+Project-URL: Issues, https://github.com/jasonwang178/ingestar-vl-sdk/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: <3.14,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: httpx
+Requires-Dist: aiofiles
+Requires-Dist: pillow
+Requires-Dist: pydantic
+Provides-Extra: transformers
+Requires-Dist: torch<3,>=2.6.0; extra == "transformers"
+Requires-Dist: transformers<5.0.0,>=4.51.1; extra == "transformers"
+Requires-Dist: accelerate>=1.5.1; extra == "transformers"
+Requires-Dist: torchvision; extra == "transformers"
+Provides-Extra: vllm
+Requires-Dist: vllm<0.11,>=0.10.1.1; extra == "vllm"
+Dynamic: license-file
+
+# ingestar-vl-sdk
+
+A Python SDK for interacting with the IngeStar Vision-Language Model.
