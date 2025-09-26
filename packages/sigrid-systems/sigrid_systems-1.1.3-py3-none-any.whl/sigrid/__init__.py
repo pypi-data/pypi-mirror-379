@@ -1,0 +1,1 @@
+# SIGRID package initialization
