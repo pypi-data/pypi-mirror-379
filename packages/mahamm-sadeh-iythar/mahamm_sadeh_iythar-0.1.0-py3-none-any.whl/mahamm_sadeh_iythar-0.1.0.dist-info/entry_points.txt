@@ -1,0 +1,2 @@
+[console_scripts]
+mahamm-sadeh-iythar = mahamm_sadeh_iythar.cli:main
