@@ -1,0 +1,2 @@
+[console_scripts]
+sudregex = sudregex.cli:main
