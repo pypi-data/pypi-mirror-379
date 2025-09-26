@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: KerasCrafterGPT
+Version: 0.0.1
+Summary: Toolkit for training Keras models with GPT-assisted workflows
+Home-page: https://github.com/joshyattridge/KerasCrafterGPT
+Author: Joshua Attridge
+Keywords: keras,gpt,tensorflow,openai,machine,learning,chatgpt,ai
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+Requires-Dist: numpy
+Requires-Dist: openai
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+# KerasCrafterGPT
+
+Toolkit for experimenting with GPT-assisted configuration of Keras projects. The package wraps the OpenAI Chat Completions API and provides helpers for drafting model architectures, managing experiments, and logging conversational context when iterating on training runs.
+
+## Installation
+
+```bash
+pip install KerasCrafterGPT
+```
+
+When working from a clone of this repository you can install an editable build instead:
+
+```bash
+pip install -e .
+```
+
+## Quick start
+
+```python
+from KerasCrafterGPT import KerasCrafterGPT
+
+model = KerasCrafterGPT(train_x, train_y, api_key="sk-...")
+model.build_model()
+model.fit(max_iterations=3)
+```
