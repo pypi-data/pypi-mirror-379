@@ -1,0 +1,760 @@
+# NTT AI Observability Exporter
+
+A comprehensive telemetry exporter for AI applications using Azure Monitor OpenTelemetry. This package provides advanced telemetry capabilities for AI projects built with Azure services, including comprehensive database instrumentation and Azure AI Foundry integration.
+
+## Features
+
+- **Single & Multi-Destination Telemetry**: Send telemetry to one or multiple Azure Monitor instances
+- **Automatic instrumentation** of Azure SDK libraries and AI components
+- **Comprehensive Database Instrumentation**: PostgreSQL, SQL Server, MySQL, SQLite, MongoDB, Redis, SQLAlchemy
+- **Azure AI Foundry Integration**: Built-in tracing for Azure AI Inference and Agents
+- **Advanced LangChain Support**: Native Azure AI tracing instead of generic LangChain instrumentation
+- **GenAI content recording** for prompts and responses with content sanitization
+- **Semantic Kernel Integration**: Full diagnostic support with OTEL tracing
+- **Simplified configuration** with graceful error handling
+- **Production-ready**: Comprehensive logging, tracing, and metrics collection
+
+## Installation
+
+### Basic Installation
+```bash
+pip install ntt-ai-observability-exporter
+```
+
+### Installation with Database Support
+```bash
+# Install with comprehensive database instrumentation
+pip install ntt-ai-observability-exporter[databases]
+
+# Install with Azure-specific database support
+pip install ntt-ai-observability-exporter[azure-databases]
+
+# Install with all optional dependencies
+pip install ntt-ai-observability-exporter[all]
+```
+
+## Usage
+
+## Usage Examples
+
+### Azure AI Foundry Integration (Recommended)
+
+```python
+from ntt_ai_observability_exporter.telemetry_multi import configure_telemetry_azure_monitor
+
+# Configure comprehensive telemetry for Azure AI applications
+configure_telemetry_azure_monitor(
+    connection_strings=["your-connection-string"],
+    customer_name="ai-project",
+    agent_name="foundry-agent",
+    enable_genai_content=True,
+    genai_content_mode="sanitized"  # Options: "all", "sanitized"
+)
+
+# Use Azure AI Foundry components - automatic tracing
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.projects import AIProjectClient
+
+# All AI operations are automatically traced with content recording
+client = ChatCompletionsClient(endpoint="...", credential=DefaultAzureCredential())
+response = client.complete(
+    messages=[{"role": "user", "content": "Hello, world!"}]
+)
+```
+
+### Database Operations Tracing
+
+```python
+# Configure telemetry ONCE - all database operations get automatic tracing
+configure_telemetry_azure_monitor(
+    connection_strings=["your-connection-string"],
+    customer_name="database-app",
+    agent_name="db-service"
+)
+
+# PostgreSQL operations (automatically traced)
+import psycopg2
+conn = psycopg2.connect("postgresql://user:pass@host:5432/db")
+cursor = conn.cursor()
+cursor.execute("SELECT * FROM users")  # ← Automatically traced
+
+# Redis operations (automatically traced)
+import redis
+r = redis.Redis(host='localhost', port=6379)
+r.set('key', 'value')  # ← Automatically traced
+
+# MongoDB operations (automatically traced)
+from pymongo import MongoClient
+client = MongoClient('mongodb://localhost:27017/')
+db = client.mydatabase
+db.users.find_one({"name": "John"})  # ← Automatically traced
+
+# SQLAlchemy ORM (automatically traced)
+from sqlalchemy import create_engine
+engine = create_engine('postgresql://user:pass@host:5432/db')
+# All ORM operations automatically traced
+```
+
+### LangChain with Azure AI Integration
+
+```python
+# Instead of generic LangChain instrumentation, use Azure AI native tracing
+from ntt_ai_observability_exporter.telemetry_multi import configure_telemetry_azure_monitor, get_azure_ai_tracer
+
+# Configure telemetry
+configure_telemetry_azure_monitor(
+    connection_strings=["your-connection-string"],
+    customer_name="langchain-app",
+    agent_name="ai-agent"
+)
+
+# Get Azure AI tracer for LangChain (inherits global config)
+tracer = get_azure_ai_tracer(tracer_name="langchain-integration")
+
+# Use with LangChain components - gets Azure AI native tracing
+from langchain_azure_ai import AzureAIChatCompletionsModel
+from langchain.chains import ConversationChain
+
+model = AzureAIChatCompletionsModel(
+    azure_ai_tracer=tracer,  # Azure AI native tracing
+    endpoint="...",
+    credential=DefaultAzureCredential()
+)
+
+chain = ConversationChain(llm=model)
+response = chain.run("Hello!")  # ← Traced with Azure AI Foundry integration
+```
+
+### Multi-Destination Telemetry
+
+Send the same telemetry data to multiple Azure Monitor instances simultaneously:
+
+```python
+from ntt_ai_observability_exporter.telemetry_multi import configure_telemetry_azure_monitor
+
+# Configure telemetry for multiple Application Insights instances
+configure_telemetry_azure_monitor(
+    connection_strings=[
+        "InstrumentationKey=key1;IngestionEndpoint=https://region1.in.applicationinsights.azure.com/",
+        "InstrumentationKey=key2;IngestionEndpoint=https://region2.in.applicationinsights.azure.com/",
+        "InstrumentationKey=key3;IngestionEndpoint=https://region3.in.applicationinsights.azure.com/"
+    ],
+    customer_name="multi-customer",
+    agent_name="multi-agent",
+    enable_genai_content=True,           # Enable GenAI content recording
+    genai_content_mode="sanitized",      # "all" or "sanitized"
+    enable_semantic_kernel_diagnostics=True  # Enable Semantic Kernel diagnostics
+)
+
+# All telemetry (traces, logs, metrics) will be sent to ALL destinations!
+```
+
+### Single Destination Telemetry (Legacy Support)
+
+```python
+from ntt_ai_observability_exporter import configure_telemetry
+
+# Simple one-line setup for single Application Insights instance
+configure_telemetry(
+    connection_string="InstrumentationKey=your-key;IngestionEndpoint=your-endpoint",
+    customer_name="your-customer", 
+    agent_name="your-agent"
+)
+```
+configure_telemetry_azure_monitor(
+    connection_strings=[
+        "InstrumentationKey=key1;IngestionEndpoint=https://region1.in.applicationinsights.azure.com/",
+        "InstrumentationKey=key2;IngestionEndpoint=https://region2.in.applicationinsights.azure.com/",
+        "InstrumentationKey=key3;IngestionEndpoint=https://region3.in.applicationinsights.azure.com/"
+    ],
+    customer_name="multi-customer",
+    agent_name="multi-agent",
+    enable_genai_content=True,           # Enable GenAI content recording
+    genai_content_mode="all",            # "all" or "sanitized"
+    enable_semantic_kernel_diagnostics=True  # Enable Semantic Kernel diagnostics
+)
+
+# All telemetry (traces, logs, metrics) will be sent to ALL destinations!
+```
+
+#### Multi-Destination Features
+
+- **Duplicate to Multiple Targets**: Same telemetry sent to all connection strings
+- **Comprehensive Database Instrumentation**: Auto-detects and instruments 7+ database types
+- **Azure AI Native Integration**: Uses Azure AI Foundry tracing instead of generic instrumentation
+- **GenAI Content Recording**: Capture prompts and responses with sanitization options
+- **Semantic Kernel Integration**: Full diagnostic support with OTEL tracing
+- **Live Metrics**: Real-time monitoring for all destinations
+- **Graceful Error Handling**: Continues functioning even if some instrumentation packages are missing
+- **Smart Detection**: Only instruments components that are actually imported and used
+
+### Configuration Options
+
+```python
+# Standard single destination with all options
+configure_telemetry(
+    connection_string="InstrumentationKey=your-key;IngestionEndpoint=your-endpoint",
+    customer_name="your-customer",
+    agent_name="your-agent",
+    enable_content_recording=True,
+    content_recording_mode="all",
+    enable_azure_monitor_tracing=True
+)
+
+# Multi-destination with advanced options
+configure_telemetry_azure_monitor(
+    connection_strings=["conn1", "conn2", "conn3"],
+    customer_name="customer",
+    agent_name="agent",
+    enable_live_metrics=True,
+    metric_export_interval_millis=15000,
+    disable_offline_storage=False,
+    logger_names=["semantic_kernel", "azure", "custom_logger"]
+)
+
+```
+
+## What Gets Instrumented Automatically
+
+The package automatically instruments a comprehensive set of components:
+
+### **Azure AI & ML Services**
+- **Azure AI Inference** (`azure.ai.inference`) - Native Azure AI Foundry tracing
+- **Azure AI Agents** (`azure.ai.agents`) - When imported
+- **Azure AI Projects** (`azure.ai.projects`) - Full project lifecycle tracing
+- **Azure OpenAI** - Via Azure AI Foundry integration
+- **OpenAI Python client** - Direct OpenAI API usage
+
+### **Database Systems** (Auto-detected)
+- **PostgreSQL** (`psycopg2`) - Comprehensive query tracing
+- **SQL Server** (`pyodbc`) - Azure SQL Database compatible
+- **MySQL** (`pymysql`) - MySQL database operations
+- **SQLite** (`sqlite3`) - Local database operations
+- **MongoDB** (`pymongo`) - NoSQL document database
+- **Redis** (`redis`) - Caching and session storage
+- **SQLAlchemy** - ORM-level database instrumentation
+
+### **HTTP & Network**
+- **HTTP client libraries** (`requests`, `aiohttp`, `urllib3`)
+- **Azure SDK core** (`azure-core`) - All Azure service calls
+
+### **AI Frameworks**
+- **Semantic Kernel** - Full kernel and plugin instrumentation
+- **LangChain via Azure AI** - Uses Azure AI Foundry native tracing instead of generic LangChain instrumentation
+
+### **Advanced Features**
+- **GenAI Content Recording** - Captures prompts and responses with sanitization options
+- **Distributed Tracing** - Full request correlation across services
+- **Custom Metrics** - Performance and usage metrics collection
+
+> **Smart Detection**: Only instruments components that are actually imported and used in your application, ensuring minimal overhead.
+
+## Telemetry Types Captured
+
+The configuration captures:
+
+- **Traces**: Request flows, GenAI operations, and distributed tracing
+- **Metrics**: Performance measurements, token usage, response times
+- **Logs**: Structured logging from Azure SDKs and application code
+
+## Configuration Parameters
+
+### Standard Telemetry (`configure_telemetry`)
+
+- `connection_string`: Azure Monitor connection string
+- `customer_name`: Maps to `service.name` in OpenTelemetry resource  
+- `agent_name`: Maps to `service.instance.id` in OpenTelemetry resource
+- `enable_content_recording`: Enable GenAI content recording (default: True)
+- `content_recording_mode`: "all" or "sanitized" (default: "all")
+- `enable_azure_monitor_tracing`: Enable Azure Monitor tracing (default: True)
+
+### Multi-Destination Telemetry (`configure_telemetry_azure_monitor`)
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `connection_strings` | list[str] | Required | List of Azure Monitor connection strings |
+| `customer_name` | str | Required | Service name identifier |
+| `agent_name` | str | Required | Service instance identifier |
+| `enable_genai_content` | bool | `True` | Enable GenAI content recording |
+| `genai_content_mode` | str | `"all"` | Content mode: `"all"`, `"sanitized"`, `"minimal"` |
+| `enable_semantic_kernel_diagnostics` | bool | `True` | Enable Semantic Kernel OTEL |
+| `enable_live_metrics` | bool | `True` | Enable live metrics for all destinations |
+| `metric_export_interval_millis` | int | `15000` | Metrics export interval (ms) |
+| `logger_names` | list[str] | `["semantic_kernel", "azure", "azure.core"]` | Additional loggers to capture |
+| `enable_database_instrumentation` | bool | `True` | Auto-detect and instrument database libraries |
+| `custom_attributes` | dict | `{}` | Additional attributes for all telemetry |
+
+### Database Instrumentation (Auto-Detected)
+
+The following database libraries are automatically instrumented when imported:
+
+- **PostgreSQL**: `psycopg2`, `asyncpg` 
+- **SQL Server**: `pyodbc`, `pymssql`
+- **MySQL**: `mysql-connector-python`, `PyMySQL`
+- **SQLite**: Built-in `sqlite3` module
+- **Redis**: `redis-py`
+- **MongoDB**: `pymongo`
+- **SQLAlchemy**: ORM-level instrumentation
+
+### Security Configuration Options
+
+```python
+# GDPR/Compliance-friendly settings
+configure_telemetry_azure_monitor(
+    connection_strings=["your-connection-string"],
+    customer_name="compliant-app",
+    agent_name="production-agent",
+    
+    # Content recording controls
+    enable_genai_content=True,
+    genai_content_mode="sanitized",     # Remove PII, keep structure
+    
+    # Database query content (use with caution)
+    enable_database_content=False,      # Don't log query content
+    
+    custom_attributes={
+        "compliance_mode": "gdpr",
+        "environment": "production"
+    }
+)
+```
+
+## Environment Variables
+
+### Core Configuration
+
+```bash
+# Primary Azure Monitor connection
+export APPLICATIONINSIGHTS_CONNECTION_STRING="InstrumentationKey=xxx;IngestionEndpoint=https://..."
+
+# Multi-destination setup (semicolon separated)
+export AZURE_MONITOR_DESTINATIONS="conn_string_1;conn_string_2;conn_string_3"
+
+# Service identification
+export CUSTOMER_NAME="your-service-name"
+export AGENT_NAME="your-instance-id"
+```
+
+### Advanced Telemetry Controls
+
+```bash
+# GenAI content recording
+export AZURE_TRACING_GEN_AI_CONTENT_RECORDING_ENABLED="true"
+export AZURE_TRACING_GEN_AI_CONTENT_RECORDING_MODE="sanitized"  # all, sanitized, minimal
+
+# Semantic Kernel diagnostics
+export SEMANTICKERNEL_EXPERIMENTAL_GENAI_ENABLE_OTEL_DIAGNOSTICS="true"
+
+# Database instrumentation
+export ENABLE_DATABASE_INSTRUMENTATION="true"
+export DATABASE_CONTENT_LOGGING="false"  # Never enable in production
+
+# Performance tuning
+export METRIC_EXPORT_INTERVAL_MILLIS="15000"
+export TELEMETRY_SAMPLING_RATIO="1.0"
+```
+
+### Security & Compliance
+
+```bash
+# Production security settings
+export GENAI_CONTENT_MODE="sanitized"
+export DATABASE_CONTENT_LOGGING="false"
+export TELEMETRY_DATA_RESIDENCY="eu-west"
+export COMPLIANCE_MODE="gdpr"
+
+# Development settings (more verbose)
+export GENAI_CONTENT_MODE="all"
+export TELEMETRY_LOG_LEVEL="DEBUG"
+export ENABLE_TELEMETRY_CONSOLE_OUTPUT="true"
+```
+
+## Example Use Cases
+
+### Enterprise AI Application with Databases
+
+```python
+from ntt_ai_observability_exporter.telemetry_multi import configure_telemetry_azure_monitor
+
+# Configure comprehensive telemetry for enterprise application
+configure_telemetry_azure_monitor(
+    connection_strings=["your-connection-string"],
+    customer_name="enterprise-ai-app", 
+    agent_name="production-agent",
+    enable_genai_content=True,
+    genai_content_mode="sanitized"  # GDPR-friendly content recording
+)
+
+# Use enterprise databases - automatically instrumented
+import pyodbc  # SQL Server
+import redis   # Caching layer  
+import pymongo # Document store
+
+# Use Azure AI services - native tracing
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.projects import AIProjectClient
+
+# All database queries, AI calls, and HTTP requests automatically traced
+sql_conn = pyodbc.connect("DRIVER={SQL Server};SERVER=server;DATABASE=db")
+redis_client = redis.Redis(host='redis-server')
+mongo_client = pymongo.MongoClient('mongodb://mongo-server')
+ai_client = ChatCompletionsClient(endpoint="...", credential=cred)
+
+# Every operation across all these services gets full telemetry
+```
+
+### Multi-Region AI Deployment
+
+```python
+# Send telemetry to multiple regions for compliance and redundancy
+configure_telemetry_azure_monitor(
+    connection_strings=[
+        "InstrumentationKey=us-key;IngestionEndpoint=https://eastus-1.in.applicationinsights.azure.com/",
+        "InstrumentationKey=eu-key;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/", 
+        "InstrumentationKey=asia-key;IngestionEndpoint=https://southeastasia-2.in.applicationinsights.azure.com/"
+    ],
+    customer_name="global-ai-service",
+    agent_name="multi-region-deployment"
+)
+
+# All telemetry automatically replicated to US, EU, and Asia regions
+```
+
+### Development Environment with SQLite
+
+```python
+# Configure telemetry for development environment
+configure_telemetry_azure_monitor(
+    connection_strings=["your-dev-connection-string"],
+    customer_name="ai-dev-project",
+    agent_name="local-development"
+)
+
+# SQLite operations automatically traced (no additional setup)
+import sqlite3
+conn = sqlite3.connect('app.db')
+cursor = conn.cursor()
+cursor.execute('SELECT * FROM users')  # ← Automatically traced
+
+# Azure AI development work automatically traced
+from azure.ai.inference import ChatCompletionsClient
+client = ChatCompletionsClient(endpoint="...", credential=cred)
+response = client.complete(messages=[...])  # ← Full AI tracing
+```
+
+
+## Semantic Kernel Telemetry Support
+
+For applications using Semantic Kernel, use the specialized configuration function:
+
+```python
+from ntt_ai_observability_exporter import configure_semantic_kernel_telemetry
+
+# Configure Semantic Kernel telemetry BEFORE creating any Kernel instances
+configure_semantic_kernel_telemetry(
+    connection_string="your_connection_string",
+    customer_name="your_customer_name",
+    agent_name="your_agent_name"
+)
+
+# Then create and use your Semantic Kernel
+from semantic_kernel import Kernel
+kernel = Kernel()
+# ... rest of your code
+```
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+#### Database Instrumentation Not Working
+
+**Problem**: Database queries are not appearing in telemetry
+
+**Solutions**:
+```python
+# 1. Verify database packages are installed
+import sys
+print("psycopg2" in sys.modules)  # Should be True after import
+
+# 2. Check if instrumentation is active
+from opentelemetry.instrumentation.psycopg2 import Psycopg2Instrumentor
+print(Psycopg2Instrumentor().is_instrumented_by_opentelemetry)
+
+# 3. Enable debug logging
+import logging
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("opentelemetry").setLevel(logging.DEBUG)
+```
+
+**Alternative approach**:
+```bash
+# Install with specific database support
+pip install ntt-ai-observability-exporter[databases]
+```
+
+#### Azure AI Foundry Tracing Issues
+
+**Problem**: Azure AI calls not showing proper traces
+
+**Solutions**:
+```python
+# 1. Verify Azure AI Foundry integration
+from azure.ai.inference import ChatCompletionsClient
+from azure.monitor.opentelemetry import configure_azure_monitor
+
+# 2. Check connection string format
+connection_string = "InstrumentationKey=xxx;IngestionEndpoint=https://xxx.in.applicationinsights.azure.com/"
+
+# 3. Verify LangChain integration with Azure AI
+from ntt_ai_observability_exporter.telemetry_multi import configure_telemetry_azure_monitor
+configure_telemetry_azure_monitor(
+    connection_strings=[connection_string],
+    customer_name="debug-app",
+    agent_name="troubleshoot-agent"
+)
+```
+
+#### Multi-Destination Telemetry Issues
+
+**Problem**: Telemetry only going to one destination
+
+**Solutions**:
+```python
+# Verify all connection strings are valid
+connection_strings = [
+    "InstrumentationKey=key1;IngestionEndpoint=https://region1.in.applicationinsights.azure.com/",
+    "InstrumentationKey=key2;IngestionEndpoint=https://region2.in.applicationinsights.azure.com/"
+]
+
+# Test each connection separately first
+for i, conn_str in enumerate(connection_strings):
+    print(f"Testing connection {i+1}: {conn_str[:50]}...")
+    configure_telemetry_azure_monitor(
+        connection_strings=[conn_str],
+        customer_name=f"test-{i}",
+        agent_name="connection-test"
+    )
+```
+
+#### Performance Issues
+
+**Problem**: High telemetry overhead or missing traces
+
+**Solutions**:
+```python
+# 1. Adjust sampling rates
+configure_telemetry_azure_monitor(
+    connection_strings=["your-connection"],
+    customer_name="perf-app",
+    agent_name="optimized-agent",
+    metric_export_interval_millis=30000,  # Reduce frequency
+    custom_attributes={"sampling_ratio": "0.1"}  # 10% sampling
+)
+
+# 2. Disable content recording in production
+configure_telemetry_azure_monitor(
+    connection_strings=["your-connection"],
+    customer_name="prod-app", 
+    agent_name="production-agent",
+    enable_genai_content=False,  # Disable for performance
+    genai_content_mode="minimal"
+)
+```
+
+### Debugging Tips
+
+#### Enable Console Output
+
+```python
+import logging
+import sys
+
+# Enable all telemetry logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    stream=sys.stdout
+)
+
+# Enable specific loggers
+logging.getLogger("azure.monitor.opentelemetry").setLevel(logging.DEBUG)
+logging.getLogger("opentelemetry").setLevel(logging.DEBUG)
+logging.getLogger("ntt_ai_observability_exporter").setLevel(logging.DEBUG)
+```
+
+#### Check Installed Instrumentations
+
+```python
+from opentelemetry.instrumentation import _installed_instrumentations
+
+# List all active instrumentations
+for name, version in _installed_instrumentations.items():
+    print(f"{name}: {version}")
+```
+
+#### Validate Telemetry Export
+
+```python
+# Add custom spans to verify telemetry flow
+from opentelemetry import trace
+
+tracer = trace.get_tracer(__name__)
+with tracer.start_as_current_span("test-span"):
+    print("Testing telemetry export...")
+    # Your application code here
+```
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+1. **Check the logs**: Enable debug logging to see detailed instrumentation information
+2. **Verify dependencies**: Ensure all required packages are installed with correct versions
+3. **Test connection**: Validate your Azure Monitor connection strings independently
+4. **Review configuration**: Double-check all telemetry configuration parameters
+5. **Check compatibility**: Verify OpenTelemetry version compatibility with your Azure SDKs
+
+For additional support, review the [Azure Monitor OpenTelemetry documentation](https://docs.microsoft.com/azure/azure-monitor/app/opentelemetry-overview).
+
+## Development and Testing
+
+### Installation for Development
+
+Install the package with development dependencies:
+
+```bash
+# Install with all development dependencies
+pip install -e ".[dev]"
+
+# Or install with specific dependency groups
+pip install -e ".[test]"          # Testing only
+pip install -e ".[databases]"     # Database instrumentation
+pip install -e ".[all]"           # Everything
+
+# Or install from requirements files
+pip install -r requirements-dev.txt
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run tests with coverage
+pytest --cov=src/ntt_ai_observability_exporter
+
+# Run tests with detailed coverage report  
+pytest --cov=src/ntt_ai_observability_exporter --cov-report=term-missing --cov-report=html
+
+# Run specific test categories
+pytest tests/test_telemetry_multi.py -v              # Multi-destination telemetry
+pytest tests/test_semantic_kernel_telemetry.py -v   # Semantic Kernel integration
+pytest -k "database" -v                             # Database instrumentation tests
+```
+
+### Test Coverage
+
+The package includes comprehensive unit tests with:
+- **95%+ overall test coverage** 
+- **100% coverage** for all telemetry modules
+- **24+ test cases** covering core functionality plus database instrumentation
+- **Multi-destination telemetry validation** with mock Azure Monitor endpoints
+- **Database instrumentation testing** for 7+ database types
+- **Error handling validation** for missing dependencies and invalid configurations
+- **Mock-based testing** for reliable CI/CD pipelines without external dependencies
+
+### Code Quality Standards
+
+The project maintains high code quality with:
+- **pytest** for comprehensive testing framework
+- **black** for consistent code formatting  
+- **flake8** for linting and style enforcement
+- **mypy** for static type checking
+- **isort** for import organization
+- **pre-commit hooks** for automated quality checks
+
+### Project Structure
+
+```
+ntt-ai-observability-exporter/
+├── src/ntt_ai_observability_exporter/
+│   ├── __init__.py                     # Main telemetry configuration
+│   ├── telemetry.py                    # Single-destination telemetry
+│   ├── telemetry_multi.py              # Multi-destination + database instrumentation  
+│   ├── semantic_kernel_telemetry.py    # Semantic Kernel integration
+│   └── utilities.py                    # Helper functions
+├── tests/
+│   ├── test_telemetry.py               # Core telemetry tests
+│   ├── test_telemetry_multi.py         # Multi-destination + database tests
+│   └── test_semantic_kernel_telemetry.py # SK integration tests
+├── pyproject.toml                      # Package configuration + dependencies
+├── requirements.txt                    # Runtime dependencies
+├── requirements-dev.txt                # Development dependencies
+└── README.md                          # This documentation
+```
+
+## Contributing
+
+### Development Workflow
+
+1. **Fork and clone** the repository
+2. **Install development dependencies**: `pip install -e ".[dev]"`
+3. **Create feature branch**: `git checkout -b feature/your-feature-name`
+4. **Make changes** with appropriate tests
+5. **Run tests**: `pytest --cov=src`
+6. **Run quality checks**: `black . && flake8 . && mypy src/`
+7. **Submit pull request** with clear description
+
+### Adding New Database Support
+
+To add support for a new database:
+
+1. **Add instrumentation package** to `pyproject.toml`:
+```toml
+[project.optional-dependencies]
+databases = [
+    # ... existing packages ...
+    "opentelemetry-instrumentation-newdb",
+]
+```
+
+2. **Add instrumentation logic** to `telemetry_multi.py`:
+```python
+def _install_instrumentations(self):
+    # ... existing instrumentations ...
+    
+    # New database instrumentation
+    if "newdb" in sys.modules:
+        try:
+            from opentelemetry.instrumentation.newdb import NewDBInstrumentor
+            if not NewDBInstrumentor().is_instrumented_by_opentelemetry:
+                NewDBInstrumentor().instrument()
+        except ImportError:
+            pass  # Graceful fallback
+```
+
+3. **Add comprehensive tests** in `tests/test_telemetry_multi.py`:
+```python
+@patch.dict(sys.modules, {"newdb": MagicMock()})
+@patch("ntt_ai_observability_exporter.telemetry_multi.NewDBInstrumentor")
+def test_newdb_instrumentation(self, mock_instrumentor):
+    # Test instrumentation logic
+    pass
+```
+
+4. **Update documentation** in README.md to list the new database support
+
+### Submitting Issues
+
+When submitting issues, please include:
+- **Python version** and operating system
+- **Package version** and installation method  
+- **Complete error messages** and stack traces
+- **Minimal code example** to reproduce the issue
+- **Expected vs actual behavior** description
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
