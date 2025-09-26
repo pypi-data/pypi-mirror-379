@@ -1,0 +1,17 @@
+<!-- Dashboard cards showing log counts -->
+<div class="bg-white p-4 rounded shadow text-center">
+    <h3 class="text-gray-700 font-semibold">Total Logs</h3>
+    <p class="text-2xl font-bold text-blue-600">{{ stats.total_logs }}</p>
+</div>
+<div class="bg-white p-4 rounded shadow text-center">
+    <h3 class="text-green-600 font-semibold">Info Logs</h3>
+    <p class="text-xl font-bold">{{ stats.info }}</p>
+</div>
+<div class="bg-white p-4 rounded shadow text-center">
+    <h3 class="text-yellow-500 font-semibold">Warnings</h3>
+    <p class="text-xl font-bold">{{ stats.warnings }}</p>
+</div>
+<div class="bg-white p-4 rounded shadow text-center">
+    <h3 class="text-red-600 font-semibold">Errors</h3>
+    <p class="text-xl font-bold">{{ stats.errors + stats.critical }}</p>
+</div>
