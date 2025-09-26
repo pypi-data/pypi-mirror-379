@@ -1,0 +1,38 @@
+{
+  "version": "1.1.0",
+  "created_date": "2025-08-01T00:00:00Z",
+  "rolling_window": 288,
+  "dataset_info": {
+    "story": "1.7",
+    "source": "canonical-timesnet-preprocessing",
+    "samples": 441682,
+    "features": 6
+  },
+  "parameters": {
+    "vwap": {
+      "mean": 0.0,
+      "std": 1.0
+    },
+    "rsi": {
+      "mean": 0.0,
+      "std": 1.0
+    },
+    "atr": {
+      "mean": 0.0,
+      "std": 1.0
+    },
+    "ema9": {
+      "mean": 0.0,
+      "std": 1.0
+    },
+    "ema21": {
+      "mean": 0.0,
+      "std": 1.0
+    },
+    "stochastic": {
+      "mean": 0.0,
+      "std": 1.0
+    }
+  },
+  "checksum": "20d236a32cdc5e1c1252e0d1c5a5f9ed2f84665ceab7b1c289ad82d4b0fcdf3d"
+}
