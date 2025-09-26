@@ -1,0 +1,13 @@
+chemcalc_lib/__init__.py,sha256=Jk7uVaFzY7HCqnRkSI1ttPAqtZf0-455aRECq16Lles,1889
+chemcalc_lib/core.py,sha256=2iKHE_zOV7gOh4zfVxby7TumY7xdqSb_Xz9ZQZTiLqg,74188
+chemcalc_lib-0.1.0.dist-info/licenses/LICENSE,sha256=RYAixWjjAz-D6Q9c5QQRf8whdDTO8AU-h3o6pDITWPY,1093
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/basic_examples.py,sha256=a4HC980FGzqpgY4NxXtky-Xp25k8r14yTQq9OgLgrfU,5145
+examples/recursive_example.py,sha256=DOFuX8ifflB8ouiYg2RSuwGIUFuQa9ltSxk0pg6HybY,5321
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic.py,sha256=bwY7hphhhW12JeHsQ9YkIORey2SkwXrR0LNddH-ax3Y,5712
+tests/test_recursive.py,sha256=YMQ8HDCHjymm0LvpXxZVAORLj6_2gvXiUqPeCz7CYT0,3800
+chemcalc_lib-0.1.0.dist-info/METADATA,sha256=FQwCPfnHYuUp7JzXdFyQ5gdnsdWfuqWh8aoFRXnIEkY,6911
+chemcalc_lib-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+chemcalc_lib-0.1.0.dist-info/top_level.txt,sha256=GctGFgJoPDlNTx0x65rBoukvuUQiZ9JBSxC-cLo0M18,28
+chemcalc_lib-0.1.0.dist-info/RECORD,,
