@@ -1,0 +1,47 @@
+## PYTHON
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+coverage.json
+.tox
+
+## DJANGO
+*.log
+*.pot
+settings_local.py
+*.sqlite
+*.sqlite3
+.env
+
+## VIM
+*.swp
+
+##PyCharm
+.idea
+
+# Sphinx
+docs/_build
+
+# thumbnails, etc
+screenshots/.DS_Store
+
+TODO.md
+
+# example project static files
+project/statics
+project/statics/*
