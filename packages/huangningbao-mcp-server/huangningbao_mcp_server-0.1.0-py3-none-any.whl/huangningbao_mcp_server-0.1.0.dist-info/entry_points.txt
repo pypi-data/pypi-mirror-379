@@ -1,0 +1,3 @@
+[console_scripts]
+huangningbao-mcp-server = huangningbao_mcp_server:main
+
