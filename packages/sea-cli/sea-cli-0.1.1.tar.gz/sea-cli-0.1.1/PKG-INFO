@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: sea-cli
+Version: 0.1.1
+Summary: A command-line utility for Structured Entropy Analysis (SEA)
+Home-page: https://github.com/cyril-pierro/sea-cli
+Author: Ezekiel Edward Netty-Oppong & Per Badasu
+Author-email: cyril.davif@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: click
+Requires-Dist: pyyaml
+
+# SEA CLI: Structured Entropy Analysis Command-Line Utility
+
+## Overview
+
+The `sea-cli` is a command-line utility designed to perform Structured Entropy Analysis (SEA). It processes data from various molecular dynamics simulations and analysis files, providing a streamlined way to perform complex calculations directly from your terminal. The utility is configured via a simple YAML file, making it easy to integrate into existing workflows.
+
+## Features
+
+- **Simple Interface:** A clean and intuitive command-line interface powered by `click`.
+
+- **Configuration-Driven:** All inputs and parameters are managed through a single YAML configuration file, ensuring reproducibility and easy sharing of settings.
+
+- **Flexible Inputs:** Supports multiple input files, including `rmsd.txt`, `rg.txt`, and `rmsf.txt`.
+
+- **Structured Output:** Generates processed data into a specified export folder, with a clear output format.
+
+## Installation
+
+The `sea-cli` can be easily installed from PyPI using `pip`.
+
+```bash
+    pip install sea-cli
+```
+
+## Usage
+
+The primary command to run the analysis is `sea run`. You must provide the path to your configuration file using the `--config` or `-c` option.
+
+```bash
+    sea run --config /path/to/your/config.yaml
+```
+
+If you need to see all available options, you can use the built-in help command:
+
+```bash
+    sea --help
+    sea run --help
+```
+
+## Configuration File (`config.yaml`)
+
+The `sea-cli` is configured using a YAML file. The file must contain a top-level `config` key with the following structure. Pay close attention to the indentation, as it is critical in YAML.
+
+```bash
+    input:
+      rmsd: rmsd.txt
+      rg: rg.txt
+      rmsf: rmsf.txt
+    bits: 8
+    export_folder: Exported_Data
+```
+
+- `input`: A nested dictionary specifying the paths to your input data files. All files listed are relative to the directory where the command is executed.
+
+- `bits`: An integer value used for the analysis.
+
+- `export_folder`: The name of the folder where the processed data will be saved.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+## Contact
+
+If you have any questions or issues, please open an issue on the project's GitHub repository.
+
+[Ezekiel Edward Nettey Oppong] -[misterezekieledward@gmail.com]
+[Per Badasu] - [peter.badasu10@gmail.com]
