@@ -1,0 +1,15 @@
+inatinqperf/__init__.py,sha256=NcoveZYIGp6Y2Ge3QJsdzR7oQPGKDXH-nIlsWIipiB4,308
+inatinqperf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inatinqperf/adaptors/__init__.py,sha256=9C7_CwCe4rxtOrqazS19Uq_dd0OLz8LeO9Ab5LFv8Kg,178
+inatinqperf/adaptors/base.py,sha256=meP8G-JO_JHZ7_NS2ZDvF6ypz6WYIQ2qw2xk00Er8oY,1026
+inatinqperf/adaptors/faiss_backend.py,sha256=2bEmJDyBeOPZiOek-uuEXupUjQCVgaRM3bwdJRnQpG0,6269
+inatinqperf/bench/__init__.py,sha256=HUNOL2cpPYNaQf-9f3ctsTCO0rdtNMI7_H06PBe2dtQ,29
+inatinqperf/bench/queries.txt,sha256=6avnbLq8kg_3lgYHsleGYNeloUl-tU6CzjhTfoQU2wo,111
+inatinqperf/utils/__init__.py,sha256=qkPhirg7LPlFm2l8Il9Pw__BaFde7dw--BSHB-wCQAc,29
+inatinqperf/utils/dataio.py,sha256=1yZLuNl0v-FU722KTBMVttVqZI4hvbyFKAHd3ATjkiM,1825
+inatinqperf/utils/embed.py,sha256=QvlY2AOxoONDKlvuetVY1S0y_KT0MGcF0dZqFy3bRlE,4037
+inatinqperf/utils/profiler.py,sha256=FAlKX7NpQwmJtJcpLFkc5shbLsa7u1umsGvDMoPNbuY,2546
+inatinqperf-0.1.5.dist-info/METADATA,sha256=D8t413H_VoU1wa5qulNYzri3GOLLIh84-gI2KM0wfW4,5021
+inatinqperf-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+inatinqperf-0.1.5.dist-info/licenses/LICENSE,sha256=VPnW3jZTDkWM5gWPy7N7sLbaUMTKA_R4yA-xrnL9ipI,1064
+inatinqperf-0.1.5.dist-info/RECORD,,
