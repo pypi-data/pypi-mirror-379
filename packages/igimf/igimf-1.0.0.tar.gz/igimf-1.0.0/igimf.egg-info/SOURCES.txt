@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+igimf/__init__.py
+igimf/classes.py
+igimf/downsizing.py
+igimf/plots.py
+igimf/utilities.py
+igimf.egg-info/PKG-INFO
+igimf.egg-info/SOURCES.txt
+igimf.egg-info/dependency_links.txt
+igimf.egg-info/requires.txt
+igimf.egg-info/top_level.txt
