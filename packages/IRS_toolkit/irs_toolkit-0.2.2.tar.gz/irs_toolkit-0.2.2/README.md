@@ -1,0 +1,536 @@
+# Financial Toolkit Library (IRS_toolkit)
+
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+[![Linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Code style - Black](https://img.shields.io/badge/Code%20Style-Black-000000.svg)](https://github.com/psf/black)
+[![PyPI version](https://badge.fury.io/py/IRS-toolkit.svg)](https://badge.fury.io/py/IRS-toolkit)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/downloads/)
+
+A comprehensive Python library for financial derivatives pricing, risk analysis, and fixed income calculations. The Financial Toolkit Library provides robust tools for interest rate swaps, bond valuation, options pricing, yield curve construction, and advanced financial analytics.
+
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Features](#features)
+3. [Project Structure](#project-structure)
+4. [Usage Examples](#usage-examples)
+5. [Testing](#testing)
+6. [Documentation](#documentation)
+7. [API Reference](#api-reference)
+8. [Contributing](#contributing)
+9. [Future Work](#future-work)
+
+## Installation
+
+### Requirements 
+- Python 3.11 or higher (up to Python 3.13)
+- Dependencies: pandas, scipy, numpy, scikit-learn
+
+### Quick Install 
+
+The library is published on PyPI. To install the latest stable version:
+
+```bash
+pip install IRS_toolkit
+```
+
+### Development Installation
+
+For development or to use the latest features:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-repo/financial-toolkit-library.git
+cd financial-toolkit-library
+
+# Install with Poetry (recommended)
+poetry install
+
+# Or install with pip in development mode
+pip install -e .
+```
+
+### Optional Dependencies
+
+For enhanced functionality, install additional dependencies:
+
+```bash
+# For documentation generation
+pip install mkdocs mkdocs-material mkdocstrings[python]
+
+# For Jupyter notebook support
+pip install jupyter ipykernel ipywidgets
+
+# For testing
+pip install pytest
+```
+
+## Features
+
+The Financial Toolkit Library provides a comprehensive suite of tools for financial derivatives pricing, risk analysis, and advanced calculations:
+
+### 🔄 Interest Rate Swap (IRS) Valuation
+- **Swap Pricing** ([`core/swap.py`](IRS_toolkit/core/swap.py)): Complete swap valuation including NPV, fair rate calculation, and risk metrics
+- **Fixed Leg Pricing** ([`core/leg/fix_leg.py`](IRS_toolkit/core/leg/fix_leg.py)): Fixed rate leg calculations with discount factor application
+- **Floating Leg Pricing** ([`core/leg/float_leg.py`](IRS_toolkit/core/leg/float_leg.py)): Floating rate leg with forward rate projections and ESTR integration
+- **Cash Flow Analysis** ([`core/cash_flow.py`](IRS_toolkit/core/cash_flow.py)): Detailed cash flow generation and analysis
+- **Settlement Detection**: Advanced settlement asymmetry handling for payment date offsets
+
+### 📈 Yield Curve & Market Data
+- **Yield Curve Construction** ([`core/curve/yield_curve.py`](IRS_toolkit/core/curve/yield_curve.py)): Advanced bootstrapping with multiple conventions and interpolation
+- **Compounded Rates** ([`core/curve/compounded.py`](IRS_toolkit/core/curve/compounded.py)): ESTR and other overnight rate compounding
+- **Forward Rate Calculations**: Multi-period forward rate extraction and projection
+- **Zero-Coupon Curve Generation**: Bootstrap zero-coupon rates from market instruments
+- **Multiple Day Count Conventions**: ACT/360, ACT/365, 30/360, ACT/ACT support
+
+### 💰 Bond Pricing & Fixed Income
+- **Fixed Rate Bond Valuation** ([`bonds_pricer.py`](bonds_pricer.py)): Comprehensive bond pricing with yield, duration, and risk metrics
+- **Coupon Calculations**: Regular and irregular coupon payment handling
+- **Accrued Interest**: Precise accrued interest calculations with multiple conventions
+- **Duration & Convexity**: Advanced risk metrics for bond portfolio management
+- **Redemption Modeling**: Maturity value and early redemption scenarios
+
+### 📊 Options & Derivatives
+- **Black-Scholes Implementation** ([`options/blackscholes.py`](IRS_toolkit/options/blackscholes.py)): European option pricing with Greeks calculation
+- **Implied Volatility**: Advanced numerical methods for volatility extraction
+- **Swaption Pricing** ([`options/swaption.py`](IRS_toolkit/options/swaption.py)): Interest rate option valuation framework
+- **Options Risk Management**: Delta, gamma, theta, vega calculations
+
+### 🔧 Financial Utilities & Risk Management
+- **Schedule Generation** ([`utils/schedule.py`](IRS_toolkit/utils/schedule.py)): Flexible payment schedule creation with holiday calendars
+- **Day Count Functions** ([`utils/core.py`](IRS_toolkit/utils/core.py)): Comprehensive day count convention implementations
+- **Financial Calculations** ([`utils/financial.py`](IRS_toolkit/utils/financial.py)): DV01, spread calculations, and risk metrics
+- **Rate Conversions**: Zero-coupon to simple rate conversions and compounding
+- **Business Day Adjustments**: Holiday calendar and business day convention handling
+
+### 🧮 Advanced Analytics
+- **Scenario Analysis**: Multi-scenario swap and bond valuations
+- **Risk Metrics**: DV01, duration, convexity, and sensitivity analysis
+- **Optimization**: Fair rate solving using advanced numerical methods
+- **Stress Testing**: Parallel and non-parallel curve shift analysis
+- **Settlement Analysis**: Payment timing and settlement date optimization
+
+### 🛠️ Developer Tools
+- **Comprehensive Type Hints**: Full typing support for better IDE integration
+- **Extensive Testing**: 100+ unit tests covering all major functionality
+- **Flexible Configuration**: Customizable conventions, calendars, and calculation methods
+- **Performance Optimized**: Efficient pandas and numpy operations
+- **Documentation**: Detailed docstrings and usage examples
+
+
+## Project Structure
+
+```
+financial-toolkit-library/
+├── IRS_toolkit/                    # Main package source code
+│   ├── core/                      # Core financial instruments
+│   │   ├── cash_flow.py          # Cash flow generation and analysis
+│   │   ├── swap.py               # Interest rate swap pricing
+│   │   ├── curve/                # Yield curve implementations
+│   │   │   ├── yield_curve.py    # Yield curve construction and bootstrapping
+│   │   │   └── compounded.py     # Compounded rate calculations (ESTR, etc.)
+│   │   └── leg/                  # Swap leg implementations
+│   │       ├── fix_leg.py        # Fixed rate leg pricing
+│   │       └── float_leg.py      # Floating rate leg pricing
+│   ├── options/                   # Derivatives and options pricing
+│   │   ├── blackscholes.py       # Black-Scholes option pricing
+│   │   └── swaption.py           # Interest rate swaption pricing
+│   └── utils/                     # Utility functions and helpers
+│       ├── constants.py          # Financial constants and type definitions
+│       ├── core.py               # Day count conventions and date utilities
+│       ├── financial.py          # Financial calculations (DV01, spreads)
+│       └── schedule.py           # Payment schedule generation
+├── bonds_pricer.py                # Fixed income bond pricing module
+├── docs/                          # Comprehensive documentation
+│   ├── index.md                  # Main documentation index
+│   ├── curve_toolkit/            # Yield curve documentation
+│   ├── swap_toolkit/             # Swap pricing documentation
+│   ├── testing/                  # Testing guidelines
+│   └── utils/                    # Utility function documentation
+├── examples/                      # Usage examples and tutorials
+│   ├── __init__.py
+│   └── example.py                # Basic usage examples
+├── tests/                         # Comprehensive test suite
+│   ├── test_cashflow.py          # Cash flow testing
+│   ├── test_fix_leg.py           # Fixed leg testing
+│   ├── test_float_leg.py         # Floating leg testing
+│   ├── test_swap.py              # Swap pricing testing
+│   ├── test_yield_curve.py       # Yield curve testing
+│   ├── test_utils_*.py           # Utility function testing
+│   └── test_different_schedules.py # Schedule generation testing
+├── pyproject.toml                 # Project configuration and dependencies
+├── mkdocs.yml                     # Documentation configuration
+├── Makefile                       # Build and development commands
+├── ruff.toml                      # Linting configuration
+└── README.md                      # This documentation
+```
+
+## Usage Examples
+
+### 1. Yield Curve Construction
+
+Build and bootstrap a yield curve from market data:
+
+```python
+from IRS_toolkit.core.curve import yield_curve
+from datetime import datetime
+
+# Market data: tenors and corresponding rates
+list_tenor = ['1D', '2D', '1W', '2W', '3W', '1M', '2M', '3M', '6M', '9M', '1Y', '2Y', '3Y', '5Y', '10Y']
+rates = [0.035, 0.0355, 0.036, 0.0365, 0.037, 0.0375, 0.038, 0.0385, 0.039, 0.040, 0.041, 0.042, 0.043, 0.044, 0.045]
+curve_date = datetime(2025, 3, 10)
+
+# Construct yield curve
+curve = yield_curve.YieldCurve(
+    list_tenor=list_tenor,
+    list_rate=rates,
+    date_curve=curve_date,
+    date_convention="ACT/360",
+)
+
+# Bootstrap the curve to get zero-coupon rates
+curve.bootstrap("quarterly")
+
+# Access the resulting curve data
+print(curve.df)  # View complete curve with discount factors and zero rates
+```
+
+### 2. Interest Rate Swap Pricing
+
+Price a 5-year EUR interest rate swap:
+
+```python
+from IRS_toolkit.core import swap
+from IRS_toolkit.utils import schedule
+from IRS_toolkit.utils.constants import pay_frequency
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
+# Swap parameters
+notional = 100_000_000  # €100M
+fixed_rate = 0.035      # 3.5%
+start_date = datetime(2025, 3, 15)
+maturity_date = start_date + relativedelta(years=5)
+
+# Create payment schedules
+fixed_schedule = schedule.Schedule(
+    start_date=start_date,
+    maturity_date=maturity_date,
+    periodicity=pay_frequency["annual"],  # Annual fixed payments
+    date_convention="ACT/360"
+)
+
+floating_schedule = schedule.Schedule(
+    start_date=start_date,
+    maturity_date=maturity_date,
+    periodicity=pay_frequency["quarterly"],  # Quarterly floating payments
+    date_convention="ACT/360"
+)
+
+# Create swap object (assuming curve from previous example)
+swap_deal = swap.Swap(
+    nominal=notional,
+    fix_rate=fixed_rate,
+    yield_curve_fix=curve,
+    yield_curve_float=curve,
+    schedule_fix=fixed_schedule,
+    schedule_float=floating_schedule,
+)
+
+# Price the swap
+valuation_date = datetime(2025, 3, 10)
+npv = swap_deal.npv(valuation_date)
+fair_rate = swap_deal.fair_rate(valuation_date)
+
+print(f"Swap NPV: €{npv:,.2f}")
+print(f"Fair Rate: {fair_rate[1]*100:.4f}%")
+```
+
+### 3. Bond Pricing
+
+Price a fixed-rate bond:
+
+```python
+from bonds_pricer import FixedRateBond
+from datetime import datetime
+
+# Bond parameters
+face_value = 1_000_000    # €1M face value
+coupon_rate = 0.04        # 4% annual coupon
+issue_date = datetime(2023, 1, 15)
+maturity_date = datetime(2028, 1, 15)
+valuation_date = datetime(2025, 3, 10)
+
+# Create bond object
+bond = FixedRateBond(
+    face_value=face_value,
+    issue_date=issue_date,
+    maturity_date=maturity_date,
+    curve=curve,  # Using curve from previous example
+    coupon_rate=coupon_rate,
+    coupon_frequency="annual"
+)
+
+# Price the bond
+bond.pricing(valuation_date)
+
+print(f"Bond NPV: €{bond.NPV:,.2f}")
+print(f"Accrued Interest: €{bond.accrued_coupon:,.2f}")
+print(f"Clean Price: €{(bond.NPV - bond.accrued_coupon):,.2f}")
+```
+
+### 4. Options Pricing
+
+Price European options using Black-Scholes:
+
+```python
+from IRS_toolkit.options.blackscholes import Call
+
+# Option parameters
+option = Call(
+    Stock_price=100,    # Current underlying price
+    Strike=105,         # Strike price
+    r=0.05,            # Risk-free rate
+    T=0.25,            # Time to expiry (3 months)
+    volatility=0.20    # Implied volatility
+)
+
+# Calculate option price
+option.price()
+print(f"Call Option Price: {option.call_price:.4f}")
+
+# Calculate implied volatility (if you have market price)
+option_with_market_price = Call(
+    Stock_price=100,
+    Strike=105, 
+    r=0.05,
+    T=0.25,
+    call_price=2.5  # Market price
+)
+
+implied_vol = option_with_market_price.compute_implied_volatility()
+print(f"Implied Volatility: {implied_vol[0]:.4f}")
+```
+
+### 5. Financial Calculations & Risk Metrics
+
+Calculate DV01 and other risk metrics:
+
+```python
+from IRS_toolkit.utils.financial import dv01_two_sided, spread_amount
+from IRS_toolkit.utils.core import day_count
+
+# DV01 calculation for a swap (requires base and shifted scenarios)
+base_npv = 150_000
+up_npv = 148_500     # NPV with +1bp shift
+down_npv = 151_500   # NPV with -1bp shift
+
+dv01 = dv01_two_sided(base_npv, up_npv, down_npv, shift_size_bp=1.0)
+print(f"DV01: €{dv01:,.2f}")
+
+# Day count calculations
+start = datetime(2025, 1, 15)
+end = datetime(2025, 7, 15)
+day_count_fraction = day_count(start, end, "ACT/360")
+print(f"Day count fraction (ACT/360): {day_count_fraction:.6f}")
+```
+
+### 6. Schedule Generation
+
+Generate flexible payment schedules:
+
+```python
+from IRS_toolkit.utils.schedule import Schedule
+from IRS_toolkit.utils.constants import pay_frequency
+
+# Create a quarterly payment schedule
+quarterly_schedule = Schedule(
+    start_date=datetime(2025, 3, 15),
+    maturity_date=datetime(2030, 3, 15),
+    periodicity=pay_frequency["quarterly"],
+    type_fill="Forward",
+    date_convention="ACT/360"
+)
+
+print("Payment Schedule:")
+print(quarterly_schedule.df[['start_date', 'end_date', 'day_count']])
+```
+
+## Testing
+
+The library includes a comprehensive test suite covering all major functionality:
+
+### Running Tests
+
+```bash
+# Run all tests
+poetry run pytest
+
+# Run with coverage
+poetry run pytest --cov=IRS_toolkit --cov-report=html
+
+# Run specific test modules
+poetry run pytest tests/test_swap.py
+poetry run pytest tests/test_yield_curve.py
+```
+
+### Test Coverage
+
+The test suite includes:
+
+- **Core Functionality Tests**: 
+  - `test_swap.py`: Comprehensive swap pricing validation
+  - `test_yield_curve.py`: Curve construction and bootstrapping
+  - `test_fix_leg.py` & `test_float_leg.py`: Individual leg pricing
+  - `test_cashflow.py`: Cash flow generation and analysis
+
+- **Utility Function Tests**:
+  - `test_utils_core.py`: Day count conventions and date handling
+  - `test_utils_financial.py`: Financial calculations and risk metrics  
+  - `test_utils_schedule.py`: Payment schedule generation
+
+- **Edge Case Testing**:
+  - `test_different_schedules.py`: Various schedule configurations
+  - Boundary conditions and error handling
+  - Performance benchmarks for large datasets
+
+### Testing Best Practices
+
+- All public methods have corresponding unit tests
+- Edge cases and error conditions are explicitly tested
+- Financial accuracy validated against known benchmarks
+- Performance tests ensure scalability
+
+## Documentation
+
+### Comprehensive Documentation
+
+The library provides extensive documentation built with MkDocs:
+
+```bash
+# Install documentation dependencies
+pip install mkdocs mkdocs-material mkdocstrings[python]
+
+# Serve documentation locally
+mkdocs serve
+
+# Build static documentation
+mkdocs build
+```
+
+### Documentation Structure
+
+- **[Curve Toolkit](docs/curve_toolkit/)**: Yield curve construction and analysis
+- **[Swap Toolkit](docs/swap_toolkit/)**: Interest rate swap pricing and valuation
+- **[Utilities](docs/utils/)**: Helper functions and financial calculations
+- **[Testing Guidelines](docs/testing/)**: Testing practices and validation methods
+
+### Available Documentation
+
+- **API Reference**: Complete function and class documentation
+- **Tutorial Notebooks**: Step-by-step usage examples
+- **Mathematical Background**: Financial models and methodologies
+- **Performance Guidelines**: Optimization tips and best practices
+
+## API Reference
+
+### Core Modules
+
+#### Swap Pricing
+```python
+from IRS_toolkit.core.swap import Swap
+from IRS_toolkit.core.leg.fix_leg import FixLeg
+from IRS_toolkit.core.leg.float_leg import FloatLeg
+```
+
+#### Yield Curves
+```python
+from IRS_toolkit.core.curve.yield_curve import YieldCurve
+from IRS_toolkit.core.curve.compounded import Compounded
+```
+
+#### Bond Pricing
+```python
+from bonds_pricer import FixedRateBond
+```
+
+#### Options Pricing
+```python
+from IRS_toolkit.options.blackscholes import Call
+from IRS_toolkit.options.swaption import Swaption
+```
+
+#### Utilities
+```python
+from IRS_toolkit.utils.schedule import Schedule
+from IRS_toolkit.utils.financial import dv01_two_sided
+from IRS_toolkit.utils.core import day_count
+from IRS_toolkit.utils.constants import pay_frequency, VALID_CONVENTIONS
+```
+
+## Contributing
+
+### Development Setup
+
+1. **Clone the repository**:
+```bash
+git clone https://github.com/your-repo/financial-toolkit-library.git
+cd financial-toolkit-library
+```
+
+2. **Install development dependencies**:
+```bash
+poetry install --with dev,tests,lint
+```
+
+3. **Set up pre-commit hooks**:
+```bash
+pre-commit install
+```
+
+### Code Quality
+
+- **Linting**: Use `ruff` for code linting and formatting
+- **Type Hints**: All public functions must include type hints
+- **Documentation**: Add docstrings for all public methods
+- **Testing**: Include tests for all new functionality
+
+### Contribution Guidelines
+
+- Follow existing code patterns and naming conventions
+- Add comprehensive tests for new features
+- Update documentation for API changes
+- Ensure all tests pass before submitting PRs
+
+## Future Work
+
+### Planned Enhancements
+
+**Yield Curve Improvements**:
+- Multi-curve framework support (OIS, LIBOR, SOFR)
+- Additional interpolation methods (cubic spline, Nelson-Siegel)
+- Curve risk metrics and sensitivity analysis
+
+**Derivatives Expansion**:
+- Complete swaption pricing implementation
+- Interest rate caps and floors
+- Cross-currency swaps
+- Inflation-linked derivatives
+
+**Risk Management**:
+- Value-at-Risk (VaR) calculations
+- Expected Shortfall metrics
+- Stress testing frameworks
+- Portfolio optimization tools
+
+**Performance & Integration**:
+- GPU acceleration for large portfolios
+- Market data connector integration
+- Real-time pricing capabilities
+- Database integration for historical analysis
+
+**Documentation & Usability**:
+- Interactive web documentation
+- Video tutorials and examples
+- Integration with popular data sources
+- Enhanced error handling and validation
