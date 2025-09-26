@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: tsmaker
+Version: 0.1.7
+Summary: A Python library for generating time series data.
+Author: Joris Gillis
+Author-email: Joris Gillis <code@jorisgillis.name>
+Requires-Dist: numpy~=2.3.3
+Requires-Dist: pandas~=2.3.2
+Requires-Dist: statsmodels~=0.14.5
+Requires-Dist: pyarrow~=21.0.0
+Requires-Dist: deltalake~=1.1.4
+Requires-Dist: matplotlib~=3.10.6
+Requires-Dist: pyiceberg[sql-sqlite]>=0.10.0
+Requires-Python: >=3.11
