@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
+
+  <plone:service
+      method="POST"
+      factory=".post.PersonalChannelsManagementSendLink"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      permission="zope2.View"
+      layer="rer.ufficiostampa.interfaces.IRerUfficiostampaLayer"
+      name="@personal-channels-management-send-link"
+      />
+
+  <plone:service
+      method="POST"
+      factory=".post.PersonalChannelsManagementTokenVerify"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      permission="zope2.View"
+      layer="rer.ufficiostampa.interfaces.IRerUfficiostampaLayer"
+      name="@personal-channels-management-token-verify"
+      />
+  <plone:service
+      method="POST"
+      factory=".post.PersonalChannelsManagementUpdate"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      permission="zope2.View"
+      layer="rer.ufficiostampa.interfaces.IRerUfficiostampaLayer"
+      name="@personal-channels-management-update"
+      />
+</configure>

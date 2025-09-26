@@ -1,0 +1,52 @@
+<tal:root define="
+            site_title python:options['site_title'];
+            url python:options['url'];
+            css python:options.get('css', '');
+            logo_url view/get_logo_url;
+          "
+          i18n:domain="rer.ufficiostampa"
+>
+  <style tal:condition="css">${css}</style>
+  <div id="logo"
+       tal:condition="logo_url"
+  >
+    <img alt="Regione Emilia-Romagna"
+         src="${logo_url}"
+    />
+    <div>Giunta regionale - Agenzia di informazione e comunicazione</div>
+  </div>
+  <p i18n:translate="confirm_help">
+     You received this email because someone asked to cancel your
+    subscriptions on
+    <b i18n:name="site_title">${site_title}</b>.
+  </p>
+  <p>
+    <tal:click i18n:translate="confirm_click_on_label">Click on</tal:click>
+    <a href="${url}"
+       i18n:translate="confirm_link_label"
+    >confirmation link</a>
+    <tal:text i18n:translate="confirm_ignore_label">or ignore this email.</tal:text>
+  </p>
+  <b i18n:translate="confirm_expire">
+    This link will expire in 24 hours.
+  </b>
+  <div id="footer">
+    <div class="other-news">
+      <p>
+          Tutti i comunicati sono online su
+        <a href="https://notizie.regione.emilia-romagna.it"
+           title="Notizie Regione Emilia-Romagna"
+        >https://notizie.regione.emilia-romagna.it</a>
+      </p>
+      <p>
+        Seguici su X (<a href="https://x.com/@RegioneER">@RegioneER</a>),
+        Facebook (<a href="https://www.facebook.com/RegioneEmiliaRomagna">@RegioneEmiliaRomagna</a>),
+        Instagram (<a href="https://www.instagram.com/regione_emiliaromagna">@regione_emiliaromagna</a>),
+        Linkedin (<a href="https://www.linkedin.com/company/regione-emilia-romagna">@regione-emilia-romagna</a>)
+      </p>
+      <p class="last-item-footer">Segreteria di redazione tel.
+        <a href="tel:051-5275490">051 5275490</a>
+      </p>
+    </div>
+  </div>
+</tal:root>
