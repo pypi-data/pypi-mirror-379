@@ -1,0 +1,506 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ethereum-execution"
+description = "Ethereum execution layer specification, provided as a Python package for tooling and testing"
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["version"]
+license = "CC0-1.0"
+urls = { "Homepage" = "https://github.com/ethereum/execution-specs" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+]
+dependencies = [
+    "pycryptodome>=3.22,<4",
+    "coincurve>=20,<21",
+    "typing_extensions>=4.4",
+    "py-ecc>=8.0.0b2,<9",
+    "ethereum-types>=0.2.4,<0.3",
+    "ethereum-rlp>=0.1.4,<0.2",
+    "cryptography>=45.0.1,<46",
+]
+
+[tool.setuptools.package-dir]
+"" = "src"
+cli = "src/ethereum_spec_tests/cli"
+config = "src/ethereum_spec_tests/config"
+ethereum_clis = "src/ethereum_spec_tests/ethereum_clis"
+ethereum_test_base_types = "src/ethereum_spec_tests/ethereum_test_base_types"
+ethereum_test_checklists = "src/ethereum_spec_tests/ethereum_test_checklists"
+ethereum_test_exceptions = "src/ethereum_spec_tests/ethereum_test_exceptions"
+ethereum_test_execution = "src/ethereum_spec_tests/ethereum_test_execution"
+ethereum_test_fixtures = "src/ethereum_spec_tests/ethereum_test_fixtures"
+ethereum_test_forks = "src/ethereum_spec_tests/ethereum_test_forks"
+ethereum_test_rpc = "src/ethereum_spec_tests/ethereum_test_rpc"
+ethereum_test_specs = "src/ethereum_spec_tests/ethereum_test_specs"
+ethereum_test_tools = "src/ethereum_spec_tests/ethereum_test_tools"
+ethereum_test_types = "src/ethereum_spec_tests/ethereum_test_types"
+ethereum_test_vm = "src/ethereum_spec_tests/ethereum_test_vm"
+pytest_plugins = "src/ethereum_spec_tests/pytest_plugins"
+
+[tool.setuptools]
+packages = [
+    "cli",
+    "cli.eest",
+    "cli.eest.commands",
+    "cli.eest.make",
+    "cli.eest.make.commands",
+    "cli.gentest",
+    "cli.gentest.tests",
+    "cli.input",
+    "cli.pytest_commands",
+    "cli.tests",
+    "config",
+    "ethereum_clis",
+    "ethereum_clis.clis",
+    "ethereum_test_base_types",
+    "ethereum_test_base_types.reference_spec",
+    "ethereum_test_base_types.tests",
+    "ethereum_test_checklists",
+    "ethereum_test_checklists.tests",
+    "ethereum_test_exceptions",
+    "ethereum_test_exceptions.exceptions",
+    "ethereum_test_exceptions.tests",
+    "ethereum_test_execution",
+    "ethereum_test_fixtures",
+    "ethereum_test_fixtures.tests",
+    "ethereum_test_forks",
+    "ethereum_test_forks.forks",
+    "ethereum_test_forks.tests",
+    "ethereum_test_rpc",
+    "ethereum_test_rpc.tests",
+    "ethereum_test_specs",
+    "ethereum_test_specs.static_state",
+    "ethereum_test_specs.static_state.common",
+    "ethereum_test_specs.tests",
+    "ethereum_test_tools",
+    "ethereum_test_tools.code",
+    "ethereum_test_tools.tests",
+    "ethereum_test_tools.utility",
+    "ethereum_test_tools.vm",
+    "ethereum_test_types",
+    "ethereum_test_types.block_access_list",
+    "ethereum_test_types.eof",
+    "ethereum_test_types.eof.v1",
+    "ethereum_test_types.tests",
+    "ethereum_test_vm",
+    "ethereum_test_vm.tests",
+    "pytest_plugins",
+    "pytest_plugins.consume",
+    "pytest_plugins.consume.direct",
+    "pytest_plugins.consume.hive_engine_test",
+    "pytest_plugins.consume.hive_simulators_reorg",
+    "pytest_plugins.consume.simulators",
+    "pytest_plugins.consume.simulators.engine",
+    "pytest_plugins.consume.simulators.helpers",
+    "pytest_plugins.consume.simulators.rlp",
+    "pytest_plugins.consume.simulators.simulator_logic",
+    "pytest_plugins.consume.simulators.sync",
+    "pytest_plugins.consume.tests",
+    "pytest_plugins.execute",
+    "pytest_plugins.execute.eth_config",
+    "pytest_plugins.execute.eth_config.tests",
+    "pytest_plugins.execute.rpc",
+    "pytest_plugins.filler",
+    "pytest_plugins.filler.gen_test_doc",
+    "pytest_plugins.filler.tests",
+    "pytest_plugins.forks",
+    "pytest_plugins.forks.tests",
+    "pytest_plugins.help",
+    "pytest_plugins.logging",
+    "pytest_plugins.logging.tests",
+    "pytest_plugins.pytest_hive",
+    "pytest_plugins.shared",
+    "pytest_plugins.solc",
+    "pytest_plugins.spec_version_checker",
+    "ethereum_spec_tools",
+    "ethereum_spec_tools.evm_tools",
+    "ethereum_spec_tools.evm_tools.t8n",
+    "ethereum_spec_tools.evm_tools.t8n.evm_trace",
+    "ethereum_spec_tools.evm_tools.b11r",
+    "ethereum_spec_tools.evm_tools.statetest",
+    "ethereum_spec_tools.evm_tools.loaders",
+    "ethereum_spec_tools.lint",
+    "ethereum_spec_tools.lint.lints",
+    "ethereum",
+    "ethereum.forks.frontier",
+    "ethereum.forks.frontier.utils",
+    "ethereum.forks.frontier.vm",
+    "ethereum.forks.frontier.vm.instructions",
+    "ethereum.forks.frontier.vm.precompiled_contracts",
+    "ethereum.utils",
+    "ethereum.crypto",
+    "ethereum_optimized",
+    "ethereum.forks.homestead",
+    "ethereum.forks.homestead.utils",
+    "ethereum.forks.homestead.vm",
+    "ethereum.forks.homestead.vm.instructions",
+    "ethereum.forks.homestead.vm.precompiled_contracts",
+    "ethereum.forks.dao_fork",
+    "ethereum.forks.dao_fork.utils",
+    "ethereum.forks.dao_fork.vm",
+    "ethereum.forks.dao_fork.vm.instructions",
+    "ethereum.forks.dao_fork.vm.precompiled_contracts",
+    "ethereum.forks.tangerine_whistle",
+    "ethereum.forks.tangerine_whistle.utils",
+    "ethereum.forks.tangerine_whistle.vm",
+    "ethereum.forks.tangerine_whistle.vm.instructions",
+    "ethereum.forks.tangerine_whistle.vm.precompiled_contracts",
+    "ethereum.forks.spurious_dragon",
+    "ethereum.forks.spurious_dragon.utils",
+    "ethereum.forks.spurious_dragon.vm",
+    "ethereum.forks.spurious_dragon.vm.instructions",
+    "ethereum.forks.spurious_dragon.vm.precompiled_contracts",
+    "ethereum.forks.byzantium",
+    "ethereum.forks.byzantium.utils",
+    "ethereum.forks.byzantium.vm",
+    "ethereum.forks.byzantium.vm.instructions",
+    "ethereum.forks.byzantium.vm.precompiled_contracts",
+    "ethereum.forks.constantinople",
+    "ethereum.forks.constantinople.utils",
+    "ethereum.forks.constantinople.vm",
+    "ethereum.forks.constantinople.vm.instructions",
+    "ethereum.forks.constantinople.vm.precompiled_contracts",
+    "ethereum.forks.istanbul",
+    "ethereum.forks.istanbul.utils",
+    "ethereum.forks.istanbul.vm",
+    "ethereum.forks.istanbul.vm.instructions",
+    "ethereum.forks.istanbul.vm.precompiled_contracts",
+    "ethereum.forks.muir_glacier",
+    "ethereum.forks.muir_glacier.utils",
+    "ethereum.forks.muir_glacier.vm",
+    "ethereum.forks.muir_glacier.vm.instructions",
+    "ethereum.forks.muir_glacier.vm.precompiled_contracts",
+    "ethereum.forks.berlin",
+    "ethereum.forks.berlin.utils",
+    "ethereum.forks.berlin.vm",
+    "ethereum.forks.berlin.vm.instructions",
+    "ethereum.forks.berlin.vm.precompiled_contracts",
+    "ethereum.forks.london",
+    "ethereum.forks.london.utils",
+    "ethereum.forks.london.vm",
+    "ethereum.forks.london.vm.instructions",
+    "ethereum.forks.london.vm.precompiled_contracts",
+    "ethereum.forks.arrow_glacier",
+    "ethereum.forks.arrow_glacier.utils",
+    "ethereum.forks.arrow_glacier.vm",
+    "ethereum.forks.arrow_glacier.vm.instructions",
+    "ethereum.forks.arrow_glacier.vm.precompiled_contracts",
+    "ethereum.forks.gray_glacier",
+    "ethereum.forks.gray_glacier.utils",
+    "ethereum.forks.gray_glacier.vm",
+    "ethereum.forks.gray_glacier.vm.instructions",
+    "ethereum.forks.gray_glacier.vm.precompiled_contracts",
+    "ethereum.forks.paris",
+    "ethereum.forks.paris.utils",
+    "ethereum.forks.paris.vm",
+    "ethereum.forks.paris.vm.instructions",
+    "ethereum.forks.paris.vm.precompiled_contracts",
+    "ethereum.forks.shanghai",
+    "ethereum.forks.shanghai.utils",
+    "ethereum.forks.shanghai.vm",
+    "ethereum.forks.shanghai.vm.instructions",
+    "ethereum.forks.shanghai.vm.precompiled_contracts",
+    "ethereum.forks.cancun",
+    "ethereum.forks.cancun.utils",
+    "ethereum.forks.cancun.vm",
+    "ethereum.forks.cancun.vm.instructions",
+    "ethereum.forks.cancun.vm.precompiled_contracts",
+    "ethereum.forks.prague",
+    "ethereum.forks.prague.utils",
+    "ethereum.forks.prague.vm",
+    "ethereum.forks.prague.vm.instructions",
+    "ethereum.forks.prague.vm.precompiled_contracts",
+    "ethereum.forks.prague.vm.precompiled_contracts.bls12_381",
+    "ethereum.forks.osaka",
+    "ethereum.forks.osaka.utils",
+    "ethereum.forks.osaka.vm",
+    "ethereum.forks.osaka.vm.instructions",
+    "ethereum.forks.osaka.vm.precompiled_contracts",
+    "ethereum.forks.osaka.vm.precompiled_contracts.bls12_381",
+]
+
+[tool.setuptools.package-data]
+"ethereum" = [
+    "py.typed",
+    "assets/mainnet.json",
+    "assets/mainnet_genesis_alloc_rlp.hex",
+    "assets/cache_sizes_2048_epochs.json",
+    "assets/dataset_sizes_2048_epochs.json",
+    "assets/blocks/block_1.json",
+    "assets/blocks/block_1234567.json",
+    "assets/blocks/block_12964999.json",
+]
+"ethereum_spec_tools" = ["py.typed"]
+"ethereum_test_forks" = ["forks/contracts/*.bin"]
+"pytest_plugins.execute" = ["eth_config/networks.yml"]
+"cli.eest.make" = ["templates/*.j2"]
+"cli.pytest_commands" = ["pytest_ini_files/*.ini"]
+"ethereum_test_types" = ["kzg_trusted_setup.txt"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8,<9",
+    "pytest-cov>=4.1.0,<5",
+    "pytest-xdist>=3.3.1,<4",
+    "GitPython>=3.1.0,<3.2",
+    "filelock>=3.15.1,<4",
+    "requests",
+    "requests-cache>=1.2.1,<2",
+]
+
+fill = [
+    "click>=8.1.0,<9",
+    "ethereum-hive>=0.1.0a1,<1.0.0",
+    "gitpython>=3.1.31,<4",
+    "PyJWT>=2.3.0,<3",
+    "tenacity>8.2.0,<9",
+    "requests_unixsocket2>=0.4.0",
+    "colorlog>=6.7.0,<7",
+    "pytest-custom-report>=1.0.1,<2",
+    "pytest-html>=4.1.0,<5",
+    "pytest-metadata>=3,<4",
+    "coincurve>=20.0.0,<21",
+    "trie>=3.1.0,<4",
+    "semver>=3.0.1,<4",
+    "pydantic>=2.11.0,<3",
+    "rich>=13.7.0,<14",
+    "ethereum-types>=0.2.1,<0.3",
+    "pyyaml>=6.0.2,<7",
+    "types-pyyaml>=6.0.12.20240917,<7",
+    "pytest-json-report>=1.5.0,<2",
+    "typing-extensions>=4.12.2,<5",
+    "questionary>=2.1.0,<3",
+    "ethereum-rlp>=0.1.3,<0.2",
+    "pytest-regex>=0.2.0,<0.3",
+    "eth-abi>=5.2.0",
+    "joblib>=1.4.2",
+    "ckzg>=2.1.1",
+]
+
+lint = [
+    "codespell==2.4.1",
+    "mypy==1.17.0",
+    "ruff==0.11.8",
+    "vulture==2.14.0",
+]
+tools = [
+    "platformdirs>=4.2,<5",
+]
+doc = [
+    "docc>=0.3.0,<0.4.0",
+    "fladrif>=0.2.0,<0.3.0",
+]
+optimized = [
+    "rust-pyspec-glue>=0.0.9,<0.1.0",
+    "ethash>=1.1.0,<2",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "ethereum.__version__" }
+
+[project.scripts]
+ethereum-spec-lint = "ethereum_spec_tools.lint:main"
+ethereum-spec-sync = "ethereum_spec_tools.sync:main"
+ethereum-spec-new-fork = "ethereum_spec_tools.new_fork:main"
+ethereum-spec-patch = "ethereum_spec_tools.patch_tool:main"
+ethereum-spec-evm = "ethereum_spec_tools.evm_tools:main"
+check_eip_versions = "cli.pytest_commands.check_eip_versions:check_eip_versions"
+checkfixtures = "cli.check_fixtures:check_fixtures"
+checklist = "cli.pytest_commands.checklist:checklist"
+compare_fixtures = "cli.compare_fixtures:main"
+consume = "cli.pytest_commands.consume:consume"
+eest = "cli.eest.cli:eest"
+eofwrap = "cli.eofwrap:eof_wrap"
+evm_bytes = "cli.evm_bytes:evm_bytes"
+execute = "cli.pytest_commands.execute:execute"
+extract_config = "cli.extract_config:extract_config"
+fill = "cli.pytest_commands.fill:fill"
+fillerconvert = "cli.fillerconvert.fillerconvert:main"
+generate_checklist_stubs = "cli.generate_checklist_stubs:generate_checklist_stubs"
+genindex = "cli.gen_index:generate_fixtures_index_cli"
+gentest = "cli.gentest:generate"
+groupstats = "cli.show_pre_alloc_group_stats:main"
+hasher = "cli.hasher:main"
+order_fixtures = "cli.order_fixtures:order_fixtures"
+phil = "cli.pytest_commands.fill:phil"
+
+[project.entry-points."docc.plugins"]
+"ethereum_spec_tools.docc.discover" = "ethereum_spec_tools.docc:EthereumDiscover"
+"ethereum_spec_tools.docc.build" = "ethereum_spec_tools.docc:EthereumBuilder"
+"ethereum_spec_tools.docc.fix-indexes" = "ethereum_spec_tools.docc:FixIndexTransform"
+"ethereum_spec_tools.docc.minimize-diffs" = "ethereum_spec_tools.docc:MinimizeDiffsTransform"
+
+[project.entry-points."docc.plugins.html"]
+"ethereum_spec_tools.docc:DiffNode" = "ethereum_spec_tools.docc:render_diff"
+"ethereum_spec_tools.docc:BeforeNode" = "ethereum_spec_tools.docc:render_before_after"
+"ethereum_spec_tools.docc:AfterNode" = "ethereum_spec_tools.docc:render_before_after"
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "bigmem: marks tests as big memory (deselect with '-m \"not bigmem\"')",
+    "evm_tools: marks tests as evm_tools (deselect with '-m \"not evm_tools\"')",
+    "json_blockchain_tests: marks tests as json_blockchain_tests (deselect with '-m \"not json_blockchain_tests\"')",
+    "json_state_tests: marks tests as json_state_tests (deselect with '-m \"not json_state_tests\"')",
+    "vm_test: marks tests as vm_test (deselect with '-m \"not vm_test\"')",
+]
+
+[tool.coverage.run]
+omit = [
+    "*/ethereum/*_glacier/*",
+    "*/ethereum/dao_fork/*",
+]
+
+[tool.docc]
+context = [
+    "docc.references.context",
+    "docc.search.context",
+    "docc.html.context",
+]
+discovery = [
+    "docc.search.discover",
+    "docc.html.discover",
+    "docc.python.discover",
+    "ethereum_spec_tools.docc.discover",
+    "docc.listing.discover",
+    "docc.files.discover",
+]
+build = [
+    "docc.search.build",
+    "ethereum_spec_tools.docc.build",
+    "docc.files.build",
+    "docc.listing.build",
+    "docc.resources.build",
+]
+transform = [
+    "docc.python.transform",
+    "docc.verbatim.transform",
+    "docc.mistletoe.transform",
+    "docc.mistletoe.reference",
+    "ethereum_spec_tools.docc.fix-indexes",
+    "ethereum_spec_tools.docc.minimize-diffs",
+    "docc.references.index",
+    "docc.search.transform",
+    "docc.html.transform",
+]
+
+[tool.docc.plugins."docc.python.transform"]
+excluded_references = [
+    "ethereum_spec_tools.lint.lints",   # This is a namespace package.
+]
+
+[tool.docc.plugins."docc.python.discover"]
+paths = [
+    "src",
+]
+excluded_paths = [
+    "src/ethereum_optimized",
+    "src/ethereum_spec_tools",
+    "src/ethereum_spec_tests",
+]
+
+[tool.docc.plugins."docc.html.context"]
+extra_css = [
+    "static/custom.css",
+]
+
+[tool.docc.plugins."docc.files.discover"]
+files = [
+    "static/custom.css",
+]
+
+[tool.docc.output]
+path = "docs"
+extension = ".html"
+
+[tool.vulture]
+exclude = ["tests/fixtures/", "eest_tests/"]
+ignore_names = ["pytest_*"]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "F", # Pyflakes
+    "B", # flake8-bugbear
+    "W", # pycodestyle warnings
+    "I", # isort
+    "A", # flake8-builtins
+    "N", # pep8-naming
+    "D", # pydocstyle
+    "C4", # flake8-comprehensions
+    "ARG", # flake8-unused-arguments
+]
+fixable = [
+    "E", # pycodestyle errors
+    "F", # Pyflakes
+    "B", # flake8-bugbear
+    "W", # pycodestyle warnings
+    "I", # isort
+    "D", # pydocstyle
+]
+ignore = [
+# Common to STEEL
+    "C401",     # Unnecessary generator set
+    "C408",     # Unnecessary collection call
+    "D107",     # Missing docstring in __init__
+    "D200",     # One-line docstring should fit on one line with quotes
+    "D203",     # 1 blank line required before class docstring
+    "D205",     # Missing blank line after summary
+    "D212",     # Multi-line docstring summary should start at the first line
+    "D401",     # First line should be in imperative mood ("Do", not "Does")
+]
+
+[tool.ruff.lint.per-file-ignores]
+"src/ethereum_spec_tools/evm_tools/loaders/fork_loader.py" = [
+    "N802"          # Property names do not need to be lowercase
+]
+"src/ethereum_spec_tools/lint/*" = [
+    "N802"          # Special linting code absolved of function naming reqs
+]
+"src/ethereum/crypto/*" = [
+    "N806",         # Special crypto code absolved of variable naming reqs
+    "N802"          # Special crypto code absolved of function naming reqs
+]
+"src/ethereum_spec_tools/evm_tools/t8n/evm_trace/eip3155.py" = [
+    "N815"          # The traces must use camel case in JSON property names
+]
+"src/ethereum_spec_tools/evm_tools/t8n/evm_trace.py" = [
+    "N815"          # The traces must use camel case in JSON property names
+]
+
+[tool.codespell]
+builtin = "clear,code,usage"    # Built-in dictionaries to use
+skip = [                        # Don't check these files/folders
+    ".git/*",
+    ".tox/*",
+    ".venv/*",
+    "build/*",
+    "dist/*",
+    "*.pyc",
+    "ethereum_execution.egg-info/*",
+    "*.coverage*",
+    "__pycache__",
+    ".ruff_cache",
+    "fixtures.*",
+    "tests/fixtures",
+    "tests/json_infra/fixtures",
+    "eest_tests",
+    "src/ethereum_spec_tools/evm_tools/t8n" # Temporary while being re-written
+]
+count = true                    # Display counts of errors
+check-hidden = false            # Don't check hidden files (starting with .)
+
+[tool.uv]
+required-version = ">=0.7.0"

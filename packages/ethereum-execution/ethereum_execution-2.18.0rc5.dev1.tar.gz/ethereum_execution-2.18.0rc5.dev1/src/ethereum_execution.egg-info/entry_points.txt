@@ -1,0 +1,36 @@
+[console_scripts]
+check_eip_versions = cli.pytest_commands.check_eip_versions:check_eip_versions
+checkfixtures = cli.check_fixtures:check_fixtures
+checklist = cli.pytest_commands.checklist:checklist
+compare_fixtures = cli.compare_fixtures:main
+consume = cli.pytest_commands.consume:consume
+eest = cli.eest.cli:eest
+eofwrap = cli.eofwrap:eof_wrap
+ethereum-spec-evm = ethereum_spec_tools.evm_tools:main
+ethereum-spec-lint = ethereum_spec_tools.lint:main
+ethereum-spec-new-fork = ethereum_spec_tools.new_fork:main
+ethereum-spec-patch = ethereum_spec_tools.patch_tool:main
+ethereum-spec-sync = ethereum_spec_tools.sync:main
+evm_bytes = cli.evm_bytes:evm_bytes
+execute = cli.pytest_commands.execute:execute
+extract_config = cli.extract_config:extract_config
+fill = cli.pytest_commands.fill:fill
+fillerconvert = cli.fillerconvert.fillerconvert:main
+generate_checklist_stubs = cli.generate_checklist_stubs:generate_checklist_stubs
+genindex = cli.gen_index:generate_fixtures_index_cli
+gentest = cli.gentest:generate
+groupstats = cli.show_pre_alloc_group_stats:main
+hasher = cli.hasher:main
+order_fixtures = cli.order_fixtures:order_fixtures
+phil = cli.pytest_commands.fill:phil
+
+[docc.plugins]
+ethereum_spec_tools.docc.build = ethereum_spec_tools.docc:EthereumBuilder
+ethereum_spec_tools.docc.discover = ethereum_spec_tools.docc:EthereumDiscover
+ethereum_spec_tools.docc.fix-indexes = ethereum_spec_tools.docc:FixIndexTransform
+ethereum_spec_tools.docc.minimize-diffs = ethereum_spec_tools.docc:MinimizeDiffsTransform
+
+[docc.plugins.html]
+ethereum_spec_tools.docc:AfterNode = ethereum_spec_tools.docc:render_before_after
+ethereum_spec_tools.docc:BeforeNode = ethereum_spec_tools.docc:render_before_after
+ethereum_spec_tools.docc:DiffNode = ethereum_spec_tools.docc:render_diff
