@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/pydetails/__init__.py
+src/pydetails/cli.py
+src/pydetails/utils.py
+src/pydetails.egg-info/PKG-INFO
+src/pydetails.egg-info/SOURCES.txt
+src/pydetails.egg-info/dependency_links.txt
+src/pydetails.egg-info/entry_points.txt
+src/pydetails.egg-info/requires.txt
+src/pydetails.egg-info/top_level.txt
