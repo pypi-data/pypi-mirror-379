@@ -1,0 +1,3 @@
+"""
+AgentMind test suite.
+"""
