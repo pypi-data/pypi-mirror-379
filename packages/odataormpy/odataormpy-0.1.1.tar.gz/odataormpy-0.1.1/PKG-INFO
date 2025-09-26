@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: odataormpy
+Version: 0.1.1
+Summary: A lightweight dynamic ORM for OData services in Python
+Author-email: Diego Vaccher <dvaccher99@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/denny0754/odataormpy
+Keywords: odata,orm,python,dynamic
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32
+Dynamic: license-file
+
+# OData ORM Python
+
+> [!CAUTION]
+> :warning: **WORK IN PROGRESS - USE WITH CAUTION** :warning: <br>
+> **This repository is under active development and currently not stable.**
+
+## Overview
+
+`odataormpy` is a Python3.x library created to easily access OData objects easily without writing any HTTP requests code.
+
+## Examples
+
+```python
+from odataormpy import ORMSession, ORMObject, ORM
+
+# Creating a new session with the OData backend
+orm_session : ORMSession = ORMSession("api.odata.host.com", ("username", "password"))
+
+# Creating the ORM object.
+orm : ORM = ORM(orm_session)
+
+# Registering the OData service
+orm.register_service(
+    service_name="c4codatapai",
+    service_endpoint="/sap/c4c/odata/v1/c4codatapi"
+)
+
+print("Available Entities: ", orm.list_entities("c4codataapi"))
+
+customer = orm.Customers.filter((RoleCode == "CRM000") & (Name == "John")).execute()
+
+if customer:
+    customer.Name = "Diego"
+    customer.update()
+
+orm.close()
+```
+
+### Notes
+
+* Project was started as a way to easily manage OData calls specific to SAP Cloud For Customer(C4C). OData from other system may not work with this library. It's on my mind to allow users to use other systems. Although it shouldn't be an issue if OData implementation are equal across different systems.
