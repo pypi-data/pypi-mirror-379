@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "itvalleysecurity"
+version = "0.1.0"
+description = "SDK de segurança JWT plug-and-play (Header ou HttpOnly Cookie)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Carlos Viana", email = "contato@itvalley.com.br"}
+]
+maintainers = [
+    {name = "IT Valley School", email = "contato@itvalley.com.br"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Framework :: FastAPI"
+]
+keywords = ["jwt", "authentication", "fastapi", "security", "token", "oauth", "bearer", "cookie"]
+dependencies = [
+    "PyJWT>=2.9.0,<3",
+    "python-dotenv>=1.0.1",
+    "fastapi>=0.111",
+    "pydantic[email]>=2.0"
+]
+
+[project.optional-dependencies]
+tests = ["pytest>=8", "pytest-cov"]
+dev = [
+    "pytest>=8",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+    "pre-commit"
+]
+
+[project.urls]
+Homepage = "https://github.com/itvalley/itvalleysecurity"
+Documentation = "https://github.com/itvalley/itvalleysecurity#readme"
+Repository = "https://github.com/itvalley/itvalleysecurity.git"
+"Bug Tracker" = "https://github.com/itvalley/itvalleysecurity/issues"
+Changelog = "https://github.com/itvalley/itvalleysecurity/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+itvalleysecurity = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "--cov=itvalleysecurity --cov-report=term-missing"

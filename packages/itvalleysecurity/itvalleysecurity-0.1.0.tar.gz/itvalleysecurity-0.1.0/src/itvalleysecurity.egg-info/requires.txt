@@ -1,0 +1,16 @@
+PyJWT<3,>=2.9.0
+python-dotenv>=1.0.1
+fastapi>=0.111
+pydantic[email]>=2.0
+
+[dev]
+pytest>=8
+pytest-cov
+black
+flake8
+mypy
+pre-commit
+
+[tests]
+pytest>=8
+pytest-cov
