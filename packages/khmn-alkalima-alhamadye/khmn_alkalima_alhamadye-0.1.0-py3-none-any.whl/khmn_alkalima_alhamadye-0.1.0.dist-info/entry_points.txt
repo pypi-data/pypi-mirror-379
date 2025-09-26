@@ -1,0 +1,2 @@
+[console_scripts]
+khmn-alkalima-alhamadye = khmn_alkalima_alhamadye.cli:main
