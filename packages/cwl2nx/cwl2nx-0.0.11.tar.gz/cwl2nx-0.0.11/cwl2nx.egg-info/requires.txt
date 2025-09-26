@@ -1,0 +1,16 @@
+backports.tarfile==1.2.0
+cwl-utils==0.40
+filelock==3.19.1
+importlib-metadata==8.0.0
+inflect==7.3.1
+jaraco-functools==4.3.0
+jaraco.collections==5.1.0
+matplotlib==3.10.6
+networkx==3.5
+pandas==2.3.2
+platformdirs==4.2.2
+pyyaml==6.0.2
+scipy==1.16.2
+termcolor==3.1.0
+tomli==2.0.1
+typer==0.19.2
