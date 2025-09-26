@@ -1,0 +1,10 @@
+./.gitignore,sha256=l79r3P9iMynbjcThcaP60rXHBkHQwwwEV5SIASK4PIA,1945
+./PKG-INFO,sha256=rNwiLdFTjiQACKminfdgh4T_nogkl186PLyJMFdFQAg,196
+./README.md,sha256=jrmRtuUkDW7Ym0Oh_52Jjv08d60sad50iNHY5trx920,1801
+./__init__.py,sha256=boGBNKEIw8sNObcL20S2qcOcHJp_-TRqNSZXg1udtMo,86
+./dimension_reduction.py,sha256=Yt2-AGrbdoKWpaChlU3hLzesgOWI7HYChP9DiiWAkf8,11229
+./pyproject.toml,sha256=YKXbVCcVzlEJzFnBODl0Ujea-iSBZnh1DRs2_X-8k-4,498
+./test.py,sha256=kPzrw6AD21-5j3H1r9QedmLnqgEdyjzXxPBBP3gQjng,3946
+feluda_dimension_reduction-0.2.0.dist-info/METADATA,sha256=rNwiLdFTjiQACKminfdgh4T_nogkl186PLyJMFdFQAg,196
+feluda_dimension_reduction-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+feluda_dimension_reduction-0.2.0.dist-info/RECORD,,
