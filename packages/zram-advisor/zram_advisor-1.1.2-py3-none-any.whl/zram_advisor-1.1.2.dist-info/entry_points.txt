@@ -1,0 +1,3 @@
+[console_scripts]
+zram-advisor=zram_advisor.main:run
+

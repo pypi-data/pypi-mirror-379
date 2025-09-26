@@ -1,0 +1,9 @@
+zram_advisor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zram_advisor/fix-zram.sh,sha256=ex_kut5oxkcpucBq1XrizFA1C9UQFj_5purZIe4s6WQ,7801
+zram_advisor/main.py,sha256=afw7V7in2Tt4ZO9-eNJeVmMs9IHKWo1XnUhHIuU6kq4,17847
+zram_advisor/random-sites.txt,sha256=1yH-Aaas3gcyz6ZDByVkvjpLM4kDpxPrOX_77T-b1Ks,989
+zram_advisor-1.1.2.dist-info/entry_points.txt,sha256=9GpYg25_nWVuyZ_2nOfTn6HeG75U0lKQxhmADzGuC0E,54
+zram_advisor-1.1.2.dist-info/licenses/LICENSE,sha256=4OhhqMihLcd6MSTlS7OLjKy8D6sjATCTU7ds4K2YXe0,1062
+zram_advisor-1.1.2.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+zram_advisor-1.1.2.dist-info/METADATA,sha256=VG1cjmcex32qEkxEXt04XF9ejAseaGufsq_2gUUxMAo,8967
+zram_advisor-1.1.2.dist-info/RECORD,,
