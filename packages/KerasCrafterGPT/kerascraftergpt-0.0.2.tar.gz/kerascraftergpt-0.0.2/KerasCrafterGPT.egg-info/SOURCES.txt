@@ -1,0 +1,9 @@
+README.md
+setup.py
+KerasCrafterGPT/KerasCrafterGPT.py
+KerasCrafterGPT/__init__.py
+KerasCrafterGPT.egg-info/PKG-INFO
+KerasCrafterGPT.egg-info/SOURCES.txt
+KerasCrafterGPT.egg-info/dependency_links.txt
+KerasCrafterGPT.egg-info/requires.txt
+KerasCrafterGPT.egg-info/top_level.txt
