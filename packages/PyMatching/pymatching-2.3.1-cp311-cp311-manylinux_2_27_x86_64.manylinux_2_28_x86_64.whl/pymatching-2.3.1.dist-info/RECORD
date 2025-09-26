@@ -1,0 +1,11 @@
+pymatching/__init__.py,sha256=y1OeuGd2LV9xXmSFPAIY7SDnQBRe4wO-nctqx4nw074,876
+pymatching/_cli_argv.py,sha256=L11i8i-C2mA_o8tWk0GjOQ4PjuIaT-nKyy1KCCcRWWk,99
+pymatching/_cpp_pymatching.cpython-311-x86_64-linux-gnu.so,sha256=71VkQYtWcoCzAZlWXd_4DEcPkt1_bTruWR7VdvQS4II,1413400
+pymatching/_version.py,sha256=pxr5YO0-VrApdOXkn9deaZMQeHLYDot2UH66dnv0k2A,43
+pymatching/matching.py,sha256=c3tLU0Tb_e70bUNUBZu6JNPQsMBWu5CC8sMc4zMHGJk,98886
+pymatching-2.3.1.dist-info/METADATA,sha256=mXoVgn6Rto0EYWtdf1jwOL5sD4MDzsB-i2S4xdC2pBY,18035
+pymatching-2.3.1.dist-info/WHEEL,sha256=3daP3VhxT_uXQ4g9qxjrsHJLh9a9x1Dc522TvcSo1E0,152
+pymatching-2.3.1.dist-info/entry_points.txt,sha256=W3nERSQCJJx_xhGyWPpziuv0PzB6jOugiUOelNDvwC4,61
+pymatching-2.3.1.dist-info/top_level.txt,sha256=Bwoj_tdrVKgNF3MVQ1IdXkFwSRIXkVHiNDk3dGKbTWI,11
+pymatching-2.3.1.dist-info/RECORD,,
+pymatching-2.3.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
