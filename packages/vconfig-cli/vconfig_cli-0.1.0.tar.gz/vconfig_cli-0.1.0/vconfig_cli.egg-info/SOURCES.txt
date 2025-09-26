@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+vconfig_cli.py
+vconfig_cli.egg-info/PKG-INFO
+vconfig_cli.egg-info/SOURCES.txt
+vconfig_cli.egg-info/dependency_links.txt
+vconfig_cli.egg-info/entry_points.txt
+vconfig_cli.egg-info/top_level.txt
