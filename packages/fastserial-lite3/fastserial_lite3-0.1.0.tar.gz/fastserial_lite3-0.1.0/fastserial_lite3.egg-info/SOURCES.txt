@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+fastserial_lite3.egg-info/PKG-INFO
+fastserial_lite3.egg-info/SOURCES.txt
+fastserial_lite3.egg-info/dependency_links.txt
+fastserial_lite3.egg-info/top_level.txt
