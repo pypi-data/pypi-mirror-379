@@ -1,0 +1,1 @@
+- 3d scatter was not rendinering properly in colab. its jammed
