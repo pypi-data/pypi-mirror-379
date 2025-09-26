@@ -1,0 +1,30 @@
+[project]
+name = "line-progressor"
+version = "0.1.2"
+description = "Colored one-line progress bar with stdout interception"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["colorama>=0.4"]
+license = "MIT"  # SPDX expression
+authors = [{ name = "František Dvořák" }]
+keywords = ["progress", "cli", "terminal", "ansi"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/<user>/<repo>"
+Issues   = "https://gitlab.com/<user>/<repo>/-/issues"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["line_progressor"]
+
+[project.scripts]
+line-progressor-demo = "line_progressor:_demo"

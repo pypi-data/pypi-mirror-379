@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/line_progressor.py
+src/line_progressor.egg-info/PKG-INFO
+src/line_progressor.egg-info/SOURCES.txt
+src/line_progressor.egg-info/dependency_links.txt
+src/line_progressor.egg-info/entry_points.txt
+src/line_progressor.egg-info/requires.txt
+src/line_progressor.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+line-progressor-demo = line_progressor:_demo
