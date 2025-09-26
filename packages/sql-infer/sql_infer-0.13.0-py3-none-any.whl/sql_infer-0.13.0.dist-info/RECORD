@@ -1,0 +1,10 @@
+sql_infer/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_infer/bin/sql-infer-linux,sha256=q_qNRBCqvLjMTq-P3tdSD7PKIOimE6IJnnNvqvC-mxc,6799016
+sql_infer/bin/sql-infer-macos,sha256=VyzO3q4KDl8p9GuN274s4MqwYjXXMYbklL4hHsA_V4M,5242640
+sql_infer/bin/sql-infer-win.exe,sha256=q2rf3YNwgSofmOPR-h3agg9j5-KVPlZseTR8vbKBaXs,6276608
+sql_infer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_infer/main.py,sha256=BEAa6QTPvHrm8_Ii9GSUu-OCnQrYgHeUXWf_KLKN10A,572
+sql_infer-0.13.0.dist-info/METADATA,sha256=OSjyYpDmU1qBRCX1qQxNL3wqpuOdPnVOnprAfFtYAyw,322
+sql_infer-0.13.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+sql_infer-0.13.0.dist-info/entry_points.txt,sha256=5Y2Cdq2mMOaQmzG9-OsngwD_VEeWzGqs4VIdUBHATWE,48
+sql_infer-0.13.0.dist-info/RECORD,,
