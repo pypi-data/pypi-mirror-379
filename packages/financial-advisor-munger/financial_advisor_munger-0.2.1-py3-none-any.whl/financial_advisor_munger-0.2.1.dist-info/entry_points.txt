@@ -1,0 +1,3 @@
+[console_scripts]
+munger-mcp = financial_advisor_mcp.server:main_sync
+munger-web = financial_advisor_mcp.web_api:main
