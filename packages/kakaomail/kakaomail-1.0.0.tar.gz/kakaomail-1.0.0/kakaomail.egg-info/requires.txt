@@ -1,0 +1,2 @@
+email>=6.0.0a1
+python-dotenv
