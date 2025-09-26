@@ -1,0 +1,15 @@
+coverage_universe/__init__.py,sha256=AFWQOkV7nDvbnuXfCUwT7tr1Fd9ov0VgoBkYTuGdrUI,98
+coverage_universe/atoms.py,sha256=v-9sRCN9ykWdIivR6MFcBbN-YhmVi9YU5XRvaOtYAL8,4363
+coverage_universe/cli.py,sha256=IRzc-htQeo9tqSyalkv_L3VYHJ5yAae7YT_HdRd-zGY,5965
+coverage_universe/coverage_engine.py,sha256=ZOLp5odQNwK0Yl2xkmVM9KM6EywO3hANSI3edTD8wlQ,9690
+coverage_universe/report.py,sha256=7k1rBsK8HeDLX3_EYJsCEjNXyYXlU74FQHZKpiG-GRw,3994
+coverage_universe/udl.py,sha256=FRx37MyAare2YOXnS8Kxy-EGXx1Gt7ZhZQAB_nUWRyk,4051
+coverage_universe/validate.py,sha256=fqs3R8JvEJ_dxX6ccsqOeHHQJi427lMEn2ir_zVutNA,1414
+coverage_universe/schemas/run.schema.json,sha256=yUy_n9qFS0Wmv18Akc1IfqISDQnMzdPXmhtlC9BmBpk,760
+coverage_universe/schemas/udl.schema.json,sha256=ZzM6LnjjRrhZeJg9sg7Yz657EsA6PVkmleORsJP7CKE,2866
+coverage_universe-0.1.4.dist-info/licenses/LICENSE,sha256=LbI8KVkyBPRlGjlNptLcI0_6M2kLgFI3y24ALh-ypAo,10356
+coverage_universe-0.1.4.dist-info/METADATA,sha256=pAVFlg9sBrB_idnM2hgfSnJeBQ__XDnVD8nD278Y8dI,5450
+coverage_universe-0.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+coverage_universe-0.1.4.dist-info/entry_points.txt,sha256=RMl8IjcEBACLt_usPSd-5Ks282I-_yTihOSl7CA3Nbw,65
+coverage_universe-0.1.4.dist-info/top_level.txt,sha256=Jq0bLYt915zC1IR6qFDtG2Jj3QTjvoQqAlLUz4yFrgU,18
+coverage_universe-0.1.4.dist-info/RECORD,,
