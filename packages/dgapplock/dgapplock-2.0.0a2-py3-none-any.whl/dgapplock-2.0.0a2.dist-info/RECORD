@@ -1,0 +1,10 @@
+dgapplock/__init__.py,sha256=iSVLK3smj8YpsEYFQGqFsQaqSKK4r5yzPjZLW6VlXPY,8923
+dgapplock/base.py,sha256=VVVN7sxBtTmuEizNLZXLAAeV_iCtLM_cXnfmic25wL0,3184
+dgapplock/exceptions.py,sha256=M_tT9CwB1TbiCTZGCQPlK21_oF37lI8cl3GBfBK8xNE,509
+dgapplock/old_redis_back.py,sha256=ts64qitMC08KcHtiOxGbhARjwIIrh4mjT1Pp7PT2R4s,11319
+dgapplock/pg_backend.py,sha256=FEZTvO5XjwlLdYWCTLOk_rczIkOl0D46V36vC7tIBbw,29552
+dgapplock/redis_backend.py,sha256=TIFSVqyHI1YeUEaib-lqSYizp2BSGhqjRqF-N_PklV8,15452
+dgapplock-2.0.0a2.dist-info/METADATA,sha256=VwOMPcZiVk1CScm8sCzP6YJvgpdFatOJ1HIIXnB36kY,4913
+dgapplock-2.0.0a2.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+dgapplock-2.0.0a2.dist-info/licenses/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+dgapplock-2.0.0a2.dist-info/RECORD,,
