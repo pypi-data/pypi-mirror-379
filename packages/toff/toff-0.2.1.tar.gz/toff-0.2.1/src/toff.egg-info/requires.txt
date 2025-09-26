@@ -1,0 +1,5 @@
+pyyaml
+rdkit
+
+[dev]
+pytest
