@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+include requirements.txt
+include config.ini
+recursive-include proxibulk *.py
+recursive-include proxibulk *.ini
+recursive-include proxibulk *.txt
+exclude tests/*
+exclude *.pyc
+exclude __pycache__
+global-exclude *.pyc
+global-exclude __pycache__

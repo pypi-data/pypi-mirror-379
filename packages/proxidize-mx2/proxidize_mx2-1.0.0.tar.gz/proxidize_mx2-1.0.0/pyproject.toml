@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proxidize_mx2"
+version = "1.0.0"
+description = "Proxidize: MX2 Manager - Professional multi-threaded MX2 modem management tool"
+readme = "README.md"
+authors = [{name = "Fawaz Al-Ghzawi", email = "ghazawe1@gmail.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "requests>=2.25.0",
+    "colorama>=0.4.4",
+    "pyfiglet>=0.8.0",
+    "tqdm>=4.62.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/fawaz7/proxidize-mx2-manager"
+Repository = "https://github.com/fawaz7/proxidize-mx2-manager"
+"Bug Tracker" = "https://github.com/fawaz7/proxidize-mx2-manager/issues"
+"PyPI" = "https://pypi.org/project/proxidize_mx2/"
+
+[project.scripts]
+proxidize_mx2 = "proxibulk.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["proxibulk*"]
+
+[tool.setuptools.package-data]
+proxibulk = ["*.ini", "*.txt"]
