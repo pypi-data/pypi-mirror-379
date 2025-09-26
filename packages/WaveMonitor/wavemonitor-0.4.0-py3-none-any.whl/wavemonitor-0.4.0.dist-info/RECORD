@@ -1,0 +1,14 @@
+wave_monitor/__about__.py,sha256=42STGor_9nKYXumfeV5tiyD_M8VdcddX7CEexmibPBk,22
+wave_monitor/__init__.py,sha256=z1AGwx9M7bXXDgPQoK6GLO2ALVu3gV9p56KnyqTZ_FE,165
+wave_monitor/client.py,sha256=8dRN908yZubW6CktGoHPHJp-3JHs5U8vcKBaubbIIHE,11702
+wave_monitor/constants.py,sha256=bR4tcpuKua2l4PzqyidjrwusYLQ-kEPrc1_AE77Ei0g,248
+wave_monitor/gui.py,sha256=c80DkfMXkctDfVTV4WO89xxQGmoNy55FOXnH2S8102s,647
+wave_monitor/proto.py,sha256=_TK5wkBw8ku-UBKYH_GatXJLBzLraBgdIYAtL27mCtE,247
+wave_monitor/window.py,sha256=92cH46s74AMzwq33ewlSZUq2EJTf8m8jpLao6vFwJ94,29112
+wave_monitor/assets/icon.png,sha256=0VxYoDQUIg9QG0IfO14SVB7OwWFOrsSrPejfMWh5ffc,11875
+wave_monitor/assets/style.qss,sha256=jzCqvoNkY0db2zCF858yGskC92FFpfno97BzgqK0bZs,10621
+wavemonitor-0.4.0.dist-info/METADATA,sha256=Cq_icfBc_ioS0jCIl0kWINA-IIQTt984zmAcdwHfjto,1835
+wavemonitor-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wavemonitor-0.4.0.dist-info/entry_points.txt,sha256=j1KtFEDC8cRbAEBHRPAqKJWrrnuWQ9Bw-aC2gYGPT10,58
+wavemonitor-0.4.0.dist-info/licenses/LICENSE,sha256=ZUi25P5oNnX6-C9wpCw8FoWapLDAMOiO0RFawtY0PxA,1060
+wavemonitor-0.4.0.dist-info/RECORD,,
