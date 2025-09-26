@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: universal-hotreload-python
+Version: 0.1.0
+Summary: Easy HotReload for Python projects
+Author: naXan
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: watchdog>=3.0.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
