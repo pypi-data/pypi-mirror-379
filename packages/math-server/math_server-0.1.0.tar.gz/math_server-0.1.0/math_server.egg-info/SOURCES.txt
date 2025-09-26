@@ -1,0 +1,9 @@
+README.md
+main.py
+pyproject.toml
+math_server.egg-info/PKG-INFO
+math_server.egg-info/SOURCES.txt
+math_server.egg-info/dependency_links.txt
+math_server.egg-info/entry_points.txt
+math_server.egg-info/requires.txt
+math_server.egg-info/top_level.txt
