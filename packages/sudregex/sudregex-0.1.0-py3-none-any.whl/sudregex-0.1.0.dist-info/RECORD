@@ -1,0 +1,12 @@
+sudregex/__init__.py,sha256=n1kd_eYo3MT7JYAblMzkApehObkuZDx5ary6hXr4zlg,13234
+sudregex/checklist.py,sha256=Nk5LksllYs0l2BY5jcBAvsNJVbyl_2QPtsm6Hteiq5Y,10010
+sudregex/cli.py,sha256=x-ckYDUP3ARSkf9XM8du-OYUL96jtILcN7XbwfVC4Xw,7157
+sudregex/helper.py,sha256=uzwPV3I6APr6NGOTnZVBEpYJfyvb-XArMmFUK9Nf9qE,25790
+sudregex/termslist.py,sha256=eVTgPBQXke_6ezwg54gD7jIFc6Rez1YLhPmxGg36HXw,3248
+sudregex/validation.py,sha256=QqI7xplDAA5MAwd565TCDfAvDl_-78IBYhYfSjwInZE,6673
+sudregex-0.1.0.dist-info/licenses/LICENSE,sha256=ATFp3lCJlsPqw1smfuuIXubd6kt_m-XPbPbRyvsOQMY,84
+sudregex-0.1.0.dist-info/METADATA,sha256=HZnGam0maWeqNPRSnSNhtYUZycPJQhlnUKxCdyz-4lg,6833
+sudregex-0.1.0.dist-info/WHEEL,sha256=mNW8X2s9WQCr1IIoGCB27CJQJRVCnxA3dwRJfyHp1QI,105
+sudregex-0.1.0.dist-info/entry_points.txt,sha256=5hH9g85B-fB7z_gbX2qkeMhv5sraL8prMzWMzX6pOEM,47
+sudregex-0.1.0.dist-info/top_level.txt,sha256=209rZVIDE3Uou5XXK31d7tMd1eEcMsCvTJ1GWhG6uh8,9
+sudregex-0.1.0.dist-info/RECORD,,
