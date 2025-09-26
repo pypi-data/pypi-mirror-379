@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: vertex_batch
+Version: 0.1.2
+Summary: A module for batch processing with Google Cloud Storage and MongoDB integration.
+Author: AYOUB ERRKHIS
+Author-email: ayoub.errkhis@aol.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: fastapi==0.116.1
+Requires-Dist: pymongo==4.7.2
+Requires-Dist: google-cloud-storage==2.19.0
+Requires-Dist: uvicorn==0.35.0
+Requires-Dist: google-genai==1.28.0
+Requires-Dist: json-repair==0.25.3
+Requires-Dist: redis==4.5.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
