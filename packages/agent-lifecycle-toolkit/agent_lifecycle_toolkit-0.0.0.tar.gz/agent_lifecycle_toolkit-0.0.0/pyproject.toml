@@ -1,0 +1,7 @@
+[project]
+name = "agent-lifecycle-toolkit"
+authors = [
+    {name = "Jason Tsay", email = "jason.tsay@ibm.com"},
+]
+version = "0.0.0"
+description = "Coming soon!"
