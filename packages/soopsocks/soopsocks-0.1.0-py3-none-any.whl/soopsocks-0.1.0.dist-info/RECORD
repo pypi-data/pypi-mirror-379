@@ -1,0 +1,15 @@
+soopsocks/__init__.py,sha256=iD5jHxSmUKxklLONvNrug4n2WTig70i9ndqegUXjPSs,83
+soopsocks/__main__.py,sha256=dyCH7r86O9Nw516E38Gm0gQjcSYDd57dhLGRBPoCi7s,60
+soopsocks/cli.py,sha256=L4PSoxCBMuP9Yky4aU0oD2T8zQJfpvtOIvMaI-PuehA,4297
+soopsocks/config.py,sha256=qP87_C5kmBupyC_T4ktFD6rOuC2O9P5NNvnpPWZpfAQ,456
+soopsocks/discord.py,sha256=qHBoQbMWb0ItuReYMEtebOVVsDczD8B_A2mKw4YczbQ,1882
+soopsocks/egress.py,sha256=Pp-BDZSrkYFiG1hPDdXkeolS8dYcMtrnUtKqvmpVmxw,2263
+soopsocks/firewall.py,sha256=lpb3xkerogXJldB-JKHPkgEi6kPZXkc6Z0X1LJE_IWk,1815
+soopsocks/server.py,sha256=RrtDSf-AHLh-tMho6b4fHk1D_ok0eXQlQ1UFhYVOeWI,9106
+soopsocks/service_windows.py,sha256=-27ZYGLYQ6BdQ24WVY9HRXiXHIj0A39A78bUBQ_jGDE,2303
+soopsocks-0.1.0.dist-info/licenses/LICENSE,sha256=J9jgmr1P6y1VKdjeqiVC3BFlIIC9qm1TQwroh3ia3Bk,32
+soopsocks-0.1.0.dist-info/METADATA,sha256=Uc8Ok5I23ZUGSTkKDJHHokotNjxQfPIlHfltxp8ufeA,2071
+soopsocks-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+soopsocks-0.1.0.dist-info/entry_points.txt,sha256=fvM-Pt472GCRD6_3uZ42AfUrK_PDpMldgPgUHphCwvY,49
+soopsocks-0.1.0.dist-info/top_level.txt,sha256=DPblc9ivHiJj7zBCgRPa8byRPvkAGnmTgWgwD29xCTQ,10
+soopsocks-0.1.0.dist-info/RECORD,,
