@@ -1,0 +1,18 @@
+Improve plugin structure (#1289)
+
+# Description
+
+This PR improves plugins module by reducing its complexity and removing
+unnecessary submodules since the plugin module only contains plugin
+manager and interfaces for development of external plugins.
+
+## Bump
+
+- [X] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Improved
+
+- My change.
