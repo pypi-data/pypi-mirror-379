@@ -1,0 +1,15 @@
+quicklook/__init__.py,sha256=YeWg3QczJa7Y5Y5QG4-QnpckSrGEsJ3Gh39_edDAc0s,214
+quicklook/compat.py,sha256=wL7zssce5nUNrHrnSJaT-DWB5NZGCXj1mhVN4JNW9qw,1143
+quicklook/gls.py,sha256=REhvavcwlPXSM67QieXZ-eNlz-tTWzESK053ZntUBw0,33836
+quicklook/measure.py,sha256=sknx1MS6Ma77H6-eKxIX9USs9F1rORy9rbFZKH8Q6vM,10545
+quicklook/plot.py,sha256=m5zNABBrgtEbeyRcyHg5OOzoCBNnfDlJzOuWQ2U75ds,29420
+quicklook/science.mplstyle,sha256=mYGiW7-WLwyZwx-jYtPDjKNysUKYMQx_bweheuwlWEo,1750
+quicklook/tql.py,sha256=-AYKquu7Y3pbCdr5tNPg4DSc72OzNuU_hiQoF3Hom_Q,48536
+quicklook/utils.py,sha256=QFm8qHV5cDzcn_OR3D6X0z7JwWL2uI7hBTktCUgUs4k,10923
+quicklook/data/TOIs.csv,sha256=mI09zF8oIMKhwFEFnXQm2mTHeyMU0__BZA47HmHcJjs,3300901
+quicklook/data/simbad_obj_types.csv,sha256=Ezc3io8_7f6gIVqLn7YIXce4ShKohhL_lC5sA767Lmc,18150
+quicklook_package-1.4.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+quicklook_package-1.4.dist-info/METADATA,sha256=wMShIbKCwm8o0DoJOZKqcTbCDDEEaAqvjTRgPGzdc_E,8960
+quicklook_package-1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+quicklook_package-1.4.dist-info/top_level.txt,sha256=jL1pN1s1mtqakMWj427K4ImSGZPFDv-EEOw3NVEeysc,10
+quicklook_package-1.4.dist-info/RECORD,,
