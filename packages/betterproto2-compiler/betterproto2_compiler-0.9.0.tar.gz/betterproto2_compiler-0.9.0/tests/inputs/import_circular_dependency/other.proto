@@ -1,0 +1,8 @@
+syntax = "proto3";
+package import_circular_dependency.other;
+
+import "root.proto";
+
+message OtherPackageMessage {
+  RootPackageMessage rootPackageMessage = 1;
+}

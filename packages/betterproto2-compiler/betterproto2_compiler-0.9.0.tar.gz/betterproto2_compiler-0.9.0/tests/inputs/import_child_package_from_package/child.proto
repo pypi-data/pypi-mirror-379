@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+package import_child_package_from_package.package.childpackage;
+
+message ChildMessage {}
