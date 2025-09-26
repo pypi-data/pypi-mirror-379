@@ -1,0 +1,2 @@
+[console_scripts]
+upas = upas.cli:main
