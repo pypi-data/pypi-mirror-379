@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+request_fake_demo.egg-info/PKG-INFO
+request_fake_demo.egg-info/SOURCES.txt
+request_fake_demo.egg-info/dependency_links.txt
+request_fake_demo.egg-info/entry_points.txt
+request_fake_demo.egg-info/top_level.txt
+supplychain_demo/__init__.py
+supplychain_demo/cli.py

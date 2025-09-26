@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "request_fake_demo"    # change if needed to avoid name clashes
+version = "0.0.1"
+description = "Safe demo package to show import-time code execution (harmless)"
+readme = "README.md"
+authors = [{name = "A1fredx"}]
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+supplychain-demo = "supplychain_demo.cli:main"
