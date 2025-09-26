@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: fvdb_reality_capture
+Version: 0.1.0
+Summary: 3D Gaussian Splatting Example Project using fVDB.
+License-File: LICENSE
+Requires-Dist: dlnr_lite
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: opencv-python-headless
+Requires-Dist: point-cloud-utils
+Requires-Dist: pye57
+Requires-Dist: pyproj
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: tensorboard
+Requires-Dist: torch>=2.8.0
+Requires-Dist: torchvision
+Requires-Dist: tqdm
+Requires-Dist: tyro
+Requires-Dist: viser
+Dynamic: license-file
