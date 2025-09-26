@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: pyb1slayer
+Version: 0.1.2.dev4
+Summary: A clean and fluent Python client for SAP Business One Service Layer
+Author-email: Pedro Díaz Nicolás <peddiaznicolas@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/peddiaznicolas/pyb1slayer
+Project-URL: Repository, https://github.com/peddiaznicolas/pyb1slayer
+Project-URL: Documentation, https://github.com/peddiaznicolas/pyb1slayer#readme
+Project-URL: Changelog, https://github.com/peddiaznicolas/pyb1slayer/releases
+Keywords: sap,business-one,service-layer,b1s,odata
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: pydantic>=2.0.0; python_version >= "3.9"
+Dynamic: license-file
+
+# pyb1slayer
+
+> A clean and fluent Python client for **SAP Business One Service Layer**
+
+Inspired by the .NET library [B1SLayer](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-members/b1slayer-a-clean-and-easy-way-to-consume-sap-business-one-service-layer/ba-p/13526121), `pyb1slayer` abstracts the complexity of Service Layer and provides a developer-friendly, fluent API for Python.
+
+✅ Automatic session management  
+✅ Fluent request builder (`select`, `filter`, `orderby`, etc.)  
+✅ Attachments, Ping Pong, Batch, Query Service, Semantic Layer  
+✅ UDO/UDT/UDF helpers  
+✅ Async-first with `httpx`  
+✅ Pydantic-ready models  
+✅ API Gateway friendly
+
+---
+
+## Installation
+
+```bash
+pip install pyb1slayer
