@@ -1,0 +1,13 @@
+libpsc-0.1.dist-info/RECORD,,
+libpsc-0.1.dist-info/METADATA,sha256=16u7YzD4TAx-z3QOYmC59AYXKFlQEi9DtxOL8JVN88s,92
+libpsc-0.1.dist-info/top_level.txt,sha256=6muHRf46OTPmNbDVmoeuTZNiY8w8vJWv47ob5GzHUt8,7
+libpsc-0.1.dist-info/WHEEL,sha256=A4SdjgbIBZ_kjTsEuOcR8fCpVKV5dez8wjeT_kpjoQs,147
+libpsc-0.1.dist-info/licenses/LICENSE,sha256=nbgq-ZdFBF8aB9ULk2T0kFg2xo-PxkeFznAtpAmweo0,1066
+libpsc.libs/libjpeg-43436dd5.so.62.1.0,sha256=OasZPaHi24C0RPybxaSl0fug2chRlFnVDYkmmCsKVMw,290497
+libpsc.libs/libGLU-03ef17d1.so.1.3.1,sha256=t8XKOAMzv2B79HWptRAQRGL5yhrtfOO7fqb1FDy3sJw,531121
+libpsc.libs/libpng15-ce838cd1.so.15.13.0,sha256=IVo72me0GdydvmG7EzLtOuKEjMhvaK3xFIrHXIK7570,187361
+libpsc.libs/libtbb-97796354.so.2,sha256=QvLR_lALGsQLuMtoenna-v5p7e6Aee5iAAwMBzdEEyI,234113
+libpsc.libs/libqhull_r-e028a698.so.8.0.2,sha256=jbCGGP3gFVPwFDt12rOHNUHaPZ_lg9HzaXt0hz64_vw,606281
+libpsc/utils.py,sha256=vZgVnxAtoDKDw94w4PekEvL5fhm2ZTlL-3j5E64ZzcE,15076
+libpsc/_core.cpython-39-x86_64-linux-gnu.so,sha256=PxboCoKZRlwOKQAh97MSuEIPBpB6OQwc0oXFmwgZBYo,3902889
+libpsc/__init__.py,sha256=OnPAoI80M0RkFRrvagjxLmweIaGCXgTlc-mNl8X3qDc,42
