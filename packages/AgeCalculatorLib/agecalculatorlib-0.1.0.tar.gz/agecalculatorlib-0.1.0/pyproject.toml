@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AgeCalculatorLib"
+version = "0.1.0"
+description = "Calculate age from birth date"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Asmaa Senan", email = "asmaasenan3@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+agecalculatorlib = "age_calculator_lib.__main__:main"

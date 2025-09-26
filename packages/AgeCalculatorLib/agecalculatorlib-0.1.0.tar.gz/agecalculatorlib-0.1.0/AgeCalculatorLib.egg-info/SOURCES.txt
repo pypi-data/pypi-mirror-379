@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+AgeCalculatorLib.egg-info/PKG-INFO
+AgeCalculatorLib.egg-info/SOURCES.txt
+AgeCalculatorLib.egg-info/dependency_links.txt
+AgeCalculatorLib.egg-info/entry_points.txt
+AgeCalculatorLib.egg-info/top_level.txt
+age_calculator_lib/__init__.py
+age_calculator_lib/__main__.py
+age_calculator_lib/core.py
