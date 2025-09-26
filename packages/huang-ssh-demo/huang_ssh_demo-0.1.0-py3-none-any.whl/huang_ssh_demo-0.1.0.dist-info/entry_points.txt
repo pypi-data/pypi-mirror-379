@@ -1,0 +1,3 @@
+[console_scripts]
+huang-ssh-demo = huang_ssh_demo:main
+
