@@ -1,0 +1,3 @@
+[console_scripts]
+rungs=rungs.main:run
+
