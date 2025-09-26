@@ -1,0 +1,9 @@
+korre/__init__.py,sha256=4DiLH_ZB48AfT_D_MKpqABEPutTgsvSTcX9ISeI6nmo,25
+korre/entity_label.json,sha256=wngHTxMlYssmmDOC2KvvSD9dbUI_DJUcgejl8jHSNDk,6828
+korre/korre.py,sha256=_NPWRlP8oliDjINZvzNmeopp-18DBKv2ZC_cThSuno4,16472
+korre/relid2label.json,sha256=Zic0IPqsmOqEXMhP4CnMe2XuTAaOWjD9QBDcMK-msao,6271
+korre/utils.py,sha256=sOU18WlWPORs87g_U5mq1vuzeSFNiH-zozaZ7uhbjbc,1145
+gliner_korre-0.1.0.dist-info/METADATA,sha256=wCTOJt5L1HuZTsd8j7O47IbnJBq64FS3HDctNFrB9fY,6485
+gliner_korre-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gliner_korre-0.1.0.dist-info/top_level.txt,sha256=EofbwQA107kV5t5NDK6JYq-_aW6-Ib9QDNW6A-fmneg,6
+gliner_korre-0.1.0.dist-info/RECORD,,
