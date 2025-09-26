@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/DataValidatorpy.egg-info/PKG-INFO
+src/DataValidatorpy.egg-info/SOURCES.txt
+src/DataValidatorpy.egg-info/dependency_links.txt
+src/DataValidatorpy.egg-info/top_level.txt
+src/gerardo_burgos_pg2_tecba/__init__.py
+src/gerardo_burgos_pg2_tecba/core.py
+src/gerardo_burgos_pg2_tecba/validators.py
