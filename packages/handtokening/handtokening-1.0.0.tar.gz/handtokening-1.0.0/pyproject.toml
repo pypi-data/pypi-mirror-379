@@ -1,0 +1,33 @@
+[project]
+name = "handtokening"
+version = "1.0.0"
+description = "Code-signing server built in Python/Django"
+license = "AGPL-3.0-only"
+readme = "README.md"
+authors = [
+    { name = "Dexter Castor Döpping", email = "dexter.c.dopping@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "asn1crypto~=1.5",
+    "django~=5.2",
+    "django-ipware~=7.0",
+    "djangorestframework~=3.16",
+    "vt-py~=0.21",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "ruff>=0.12.9",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.3,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[tool.ruff.lint.per-file-ignores]
+"**/handtokening/settings/*.py" = ["F403"]
