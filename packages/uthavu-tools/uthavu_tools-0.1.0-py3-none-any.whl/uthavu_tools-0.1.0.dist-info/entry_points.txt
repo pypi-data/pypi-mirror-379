@@ -1,0 +1,4 @@
+[console_scripts]
+checkbranch = uthavu_tools.checkbranch:main
+cleanup = uthavu_tools.cleanup:main
+pushmain = uthavu_tools.pushmain:main
