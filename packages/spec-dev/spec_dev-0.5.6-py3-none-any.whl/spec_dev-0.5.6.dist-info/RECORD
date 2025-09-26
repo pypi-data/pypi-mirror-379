@@ -1,0 +1,12 @@
+spec_dev/__init__.py,sha256=pGvbEASjOdkk63i3stEmE0XLhcrZitDLKqLuBKOkVoc,1388
+spec_dev/cli.py,sha256=q5SSycf3RIzJNjm4KoMIWuPjbJkHJy5a95Le9rlvMfQ,1403
+spec_dev/data/__init__.py,sha256=TItXsDMSCyW6zc5D-2Y45Lxs6bj11ACVFeSa2E5V3EI,40
+spec_dev/data/.spec-dev/AGENTS.md,sha256=khINFoB8eI1zYz7BhBblBzi7EW9_R_peDOWHvqh6UTE,1842
+spec_dev/data/.spec-dev/architect.md,sha256=g7kzTAA_wawQBqm3pZANfiPwg8CkBUoI24PIHSiUi0c,1719
+spec_dev/data/.spec-dev/coder.md,sha256=P5fWLAM7JfA_fRyYqLyCVVFI4N2GDSRPQUTzRVbuVOs,2204
+spec_dev/data/.spec-dev/tasker.md,sha256=fIPHAG434NnUGg6FLQMIEPieILrdGnNH4yD8ff-5Gpw,1904
+spec_dev-0.5.6.dist-info/METADATA,sha256=s3sfCXxYLEvF_kEo50Z3QMjN0Kapx30PKje9eU_8W8k,1957
+spec_dev-0.5.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+spec_dev-0.5.6.dist-info/entry_points.txt,sha256=_IMq1AvUJj-fTdwIcyJThh_Sz904PSBHRfMiUmzEa-Q,47
+spec_dev-0.5.6.dist-info/top_level.txt,sha256=--jT2y7ap0EQBn1jkYjzPYaP1uUqMuEmAJWMmnXDDlk,9
+spec_dev-0.5.6.dist-info/RECORD,,
