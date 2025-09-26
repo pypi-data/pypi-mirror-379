@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mahamm_sadeh_iythar.egg-info/PKG-INFO
+src/mahamm_sadeh_iythar.egg-info/SOURCES.txt
+src/mahamm_sadeh_iythar.egg-info/dependency_links.txt
+src/mahamm_sadeh_iythar.egg-info/entry_points.txt
+src/mahamm_sadeh_iythar.egg-info/top_level.txt
+tests/test_tasks.py
