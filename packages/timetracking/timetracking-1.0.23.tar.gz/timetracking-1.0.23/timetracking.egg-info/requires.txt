@@ -1,0 +1,8 @@
+reportlab==4.0.4
+Pillow
+pytest
+pytest-cov
+cryptography
+
+[:platform_system == "Darwin"]
+pyobjc-framework-AppKit
