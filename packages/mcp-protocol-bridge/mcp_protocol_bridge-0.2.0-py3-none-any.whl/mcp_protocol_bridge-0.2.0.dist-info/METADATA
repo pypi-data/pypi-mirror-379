@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: mcp-protocol-bridge
+Version: 0.2.0
+Summary: Simple MCP bridge server with configurable backends
+Author-email: b7 <biqifu@fintopia.tech>
+Requires-Python: >=3.10
+Requires-Dist: fastmcp>=2.0.0
