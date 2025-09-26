@@ -1,0 +1,9 @@
+pipmaster/__init__.py,sha256=yTfsG1mzF52LjL4wCXLwAFFheguNmx7_drl9luHJH2o,2559
+pipmaster/async_package_manager.py,sha256=D75CSRf71W3wtojJ5s-T5cSKjKf9Jrl9v9l9nEk-I8o,16661
+pipmaster/package_manager.py,sha256=xEBsUT0RbJ4wv2zTOwWjojwOOVOWNNoeo1Qf-lEzwWg,74206
+pipmaster/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pipmaster-1.0.5.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pipmaster-1.0.5.dist-info/METADATA,sha256=kmo3CNi3lDG_eP4cHCjIS6niBEUyzkZsdXpXjVPLlrY,13474
+pipmaster-1.0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pipmaster-1.0.5.dist-info/top_level.txt,sha256=zhMNQKOEMOKmfWczp5Sd-ISQ1egSg1l8AUjXwrrcIDU,10
+pipmaster-1.0.5.dist-info/RECORD,,
