@@ -1,0 +1,2 @@
+[console_scripts]
+coverage-universe = coverage_universe.cli:main

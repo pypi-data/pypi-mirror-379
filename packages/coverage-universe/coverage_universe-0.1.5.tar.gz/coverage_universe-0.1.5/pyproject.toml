@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coverage-universe"
+version = "0.1.5"
+description = "Compute and report coverage over a modeled test universe"
+authors = [{name = "Coverage Universe"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "jsonschema>=4",
+]
+license = {text = "Apache-2.0"}
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://example.invalid/coverage-universe"
+
+[project.scripts]
+coverage-universe = "coverage_universe.cli:main"
+
+[tool.setuptools]
+packages = ["coverage_universe"]
+package-dir = {"coverage_universe" = "."}
+
+[tool.setuptools.package-data]
+coverage_universe = [
+  "schemas/*.json",
+]
