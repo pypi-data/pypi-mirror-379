@@ -1,0 +1,2 @@
+[console_scripts]
+cypherseed = cypherseed.__main__:main
