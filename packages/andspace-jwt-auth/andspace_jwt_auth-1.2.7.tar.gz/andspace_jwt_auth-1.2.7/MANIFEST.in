@@ -1,0 +1,31 @@
+# Include essential files
+include README.md
+include LICENSE
+include MANIFEST.in
+include pyproject.toml
+
+# Include the actual library code
+recursive-include jwt_auth *.py
+recursive-include core *.py  
+recursive-include providers *.py
+recursive-include adapters *.py
+
+# Include examples (optional - users might find it helpful)
+include examples.py
+
+# Exclude development and build files
+exclude publish.sh
+exclude Dockerfile.publish
+exclude .pypirc
+exclude .gitignore
+exclude test_auth.sh
+
+# Exclude build artifacts and directories
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.egg-info
+recursive-exclude dist *
+recursive-exclude build *
+recursive-exclude * .DS_Store
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
