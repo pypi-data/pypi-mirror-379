@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: NJOY
+Version: 2016.78
+Summary: The NJOY Nuclear Data Processing System is a modular computer code designed to read evaluated data in ENDF format, transform the data in various ways, and output the results as libraries designed to be used in various applications from LANL.
+Classifier: Programming Language :: Fortran
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary

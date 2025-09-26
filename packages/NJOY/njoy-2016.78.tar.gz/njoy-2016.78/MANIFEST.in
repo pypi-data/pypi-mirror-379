@@ -1,0 +1,6 @@
+include njoy/entrypoint.py
+include njoy/bin/njoy
+include njoy/lib/libnjoy.a
+include njoy/LICENSE
+include njoy/CMakeLists.txt
+recursive-include njoy/src *.f90
