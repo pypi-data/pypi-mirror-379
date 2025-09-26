@@ -1,0 +1,81 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=2"]
+
+[project]
+authors = [
+    { name = "Dev Null", email = "<devnull@broadinstitute.org>" }
+]
+description = "BITS Google Package for Python"
+dynamic = [ "dependencies" ]
+keywords = ["bits", "google"]
+license = "BSD-3-Clause"
+name = "bits-google"
+readme = "docs/README.md"
+requires-python = ">=3.9"
+version = "2.0.0"
+
+[project.urls]
+homepage = "https://github.com/broadinstitute/bits-google.git"
+repository = "https://github.com/broadinstitute/bits-google.git"
+
+[tool.poetry]
+exclude = [
+    "**/*.pyc",
+    "**/*.pyi",
+]
+packages = [
+    { include = "bits" },
+]
+
+[tool.poetry.dependencies]
+bits-helpers = "^1.0.2"
+bits-progressbar = "^1.0"
+google-api-python-client = "^2.183.0"
+google-auth-oauthlib = "^1.2.2"
+google-cloud-asset = "^3.30.1"
+google-cloud-bigquery = "^3.38.0"
+google-cloud-billing-budgets = "^1.17.2"
+google-cloud-datastore = "^2.21.0"
+google-cloud-dns = "^0.35.1"
+google-cloud-firestore = "^2.21.0"
+google-cloud-pubsub = "^2.31.1"
+google-cloud-resource-manager = "^1.14.2"
+google-cloud-secret-manager = "^2.24.0"
+google-cloud-storage = "^3.4.0"
+oauth2client = "^4.1.3"
+
+[tool.poetry.group.dev.dependencies]
+bits-auth = "^3.0.0"
+bits-settings = "^1.0.5"
+pytest = "^8.4.2"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+# Prefer double quotes over single quotes.
+quote-style = "double"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+ignore = [
+    "D104",
+    "N802", # we are not correcting all the function case-based naming
+    "N803", # we are not correcting all the argument case-based naming
+    "N806", # we are not correcting all the variable case-based naming
+    "PLC0415", # we will not be refactoring where imports happen in the files
+    "PLR0913", # we are not correcting too many function arguments
+]
+select = [
+  "D",   # pydocstyle
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "I",   # isort
+  "N",   # pep8-naming
+  "PL",  # Pylint
+  "UP",  # pyupgrade
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
