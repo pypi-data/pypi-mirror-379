@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+idegym_testing.egg-info/PKG-INFO
+idegym_testing.egg-info/SOURCES.txt
+idegym_testing.egg-info/dependency_links.txt
+idegym_testing.egg-info/top_level.txt
