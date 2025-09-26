@@ -1,0 +1,12 @@
+tstructs/__init__.py,sha256=LNArNfZHJT5x3qsx648-5HYjj4z9C0QFlO7Pr4uBeKg,920
+tstructs/cell.py,sha256=GsxU0Wj-TM4DthYN0-M_audguUeMkW9a_qtGXFwawMI,2247
+tstructs/chunkedregion.py,sha256=R9egzDW97kWyfS32jVUgq4x_Gqw8JyWzvGzSsV890o4,3682
+tstructs/coord.py,sha256=bL17sX5XxM0qBPsNC2FsrIFIScTfmsUEjeKq6hVz-Z4,1953
+tstructs/group.py,sha256=8G1AP7669xYCZSeWfcEKjqEbcoc2cnsHi5owTMbFEOQ,3012
+tstructs/properties.py,sha256=wSpFLJTKGNihA9Ojn8Vsp2gNj-7vWHpvlJoHqR1xEvA,3793
+tstructs/region.py,sha256=ljWpCp0IFIta1CxVeA8sZKdVO_ixrJ_uIEPb-sQOis0,4452
+tstructs-1.2.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+tstructs-1.2.0.dist-info/METADATA,sha256=9wwdW-o2fjEeJ73gupwl4FIVKTnPfwngI2mFqmfj1l4,5202
+tstructs-1.2.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+tstructs-1.2.0.dist-info/top_level.txt,sha256=1JyACdjRoHn6gym-9Wi9mHpWVdcbmDgVbUhlJEVlDjE,9
+tstructs-1.2.0.dist-info/RECORD,,
