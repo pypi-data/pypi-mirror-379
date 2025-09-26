@@ -1,0 +1,12 @@
+educode/__init__.py,sha256=fWoGUzYWdSpS6JnhOcp8NGKTTEsfmBUQ_Az7F1t_rKo,375
+educode/__main__.py,sha256=P7ccFGh7LFwJY0468q2GqMxGN1sExPCLY5sg2Vqnv0s,16656
+educode/auth.py,sha256=mtECkaO0jN9sMoS5W5xVaJX1yWQvdla5EpsHDxDIwmk,40378
+educode/certification.py,sha256=-WdrUoqv7tXw1GfjIFbEY-GvzU7sO6FMzd4L6WU2vcU,23117
+educode/core.py,sha256=VmeWR-WfPFfIK560Z2pxWGfyyMDSapfDJTr2v9NpGLE,52480
+educode/exercises.py,sha256=r0BBhgQzctxZvM7gSIZYwa8wF6r-k6AYeXo6hjncLxQ,216921
+educode-1.1.1.dist-info/licenses/LICENSE,sha256=qIrx82np4nCXfzPKNuA837KSM7ZLKhJYNpPCxburpu0,1099
+educode-1.1.1.dist-info/METADATA,sha256=YH_qts1E9pyKEtcX9ecmW8OpykqOYM0xvXqENL4KtB4,19958
+educode-1.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+educode-1.1.1.dist-info/entry_points.txt,sha256=BbzzRnI7qtIErrWuZhhaDMIcvZZb2EARBSVcvj32Lq8,50
+educode-1.1.1.dist-info/top_level.txt,sha256=Q9Xq4pw8IyTSD0YN9E2Eh-aolLRV1lq1xWcFH00Cv78,8
+educode-1.1.1.dist-info/RECORD,,
