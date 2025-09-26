@@ -1,0 +1,6 @@
+include README.md
+include CHANGELOG.md
+include LICENSE
+
+recursive-include inspector_cli *.py *.txt *.json
+global-exclude *.pyc __pycache__ *.pyo *.pyd *.swp
