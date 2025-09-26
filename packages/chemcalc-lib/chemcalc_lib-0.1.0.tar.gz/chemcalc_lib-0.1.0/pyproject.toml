@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chemcalc_lib"
+dynamic = ["version"]
+description = "A library for chemical mixture calculations and composition conversions"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Théophile Gaudin", email = "gaudin.theophile@gmail.com"},
+]
+keywords = ["chemistry", "mixture", "mole fraction", "composition"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research", 
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "numpy>=1.19.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/chemcalc"
+Repository = "https://github.com/yourusername/chemcalc.git"
+Issues = "https://github.com/yourusername/chemcalc/issues"
