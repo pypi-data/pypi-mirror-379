@@ -1,0 +1,9 @@
+speechmatics/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+speechmatics/voice/__init__.py,sha256=_BSWBuwV2MwJaL14c6r3mcKZWUkoQkw_MIY9x82qLYI,1297
+speechmatics/voice/_client.py,sha256=I43GZAqnryIvXBa5UfrHDIsEAdZZnO6yWj1SfX_kY_w,37797
+speechmatics/voice/_logging.py,sha256=PMLbog3-QVpcDWWxnwf7K8fRX2S4vD3aOOKEah4Nu-A,1631
+speechmatics/voice/_models.py,sha256=XbgYPtLI5qj5EfrXWq5YNlG-5RpJZYegXNAHl8TgCkc,34797
+speechmatics_voice-0.1.10.dist-info/METADATA,sha256=1RvTmKyx0BY6sk2EdflQHwXoE9bwSlTWOgJzl-etgHk,17272
+speechmatics_voice-0.1.10.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+speechmatics_voice-0.1.10.dist-info/top_level.txt,sha256=ZS3Qz-FwYvfrJJHlVLJCKAavrNZSp9Z708A1YtmJvaM,13
+speechmatics_voice-0.1.10.dist-info/RECORD,,
