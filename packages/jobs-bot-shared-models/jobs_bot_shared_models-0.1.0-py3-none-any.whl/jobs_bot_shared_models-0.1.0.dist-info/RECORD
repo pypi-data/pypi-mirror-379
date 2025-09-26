@@ -1,0 +1,16 @@
+shared_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shared_models/database/__init__.py,sha256=shaWf6hzSnPB6wvPN6MdDg5-r4n5gQYubV4JzMJC03o,303
+shared_models/database/models/__init__.py,sha256=0Ig219dN3YFGQP2bMvttKHMCo5HtUEmoTo16TdFMdn4,783
+shared_models/database/models/company.py,sha256=nfhNweYkpUFgMfqxya2jLS5gzDyPBqK2L56FFyqepD0,5442
+shared_models/database/models/response.py,sha256=FCWG9creMenZjqUgSqmrvFPB7aU0hA4XLT70cmr_rG8,5238
+shared_models/database/models/user.py,sha256=UNDeE50uGGkMJhN9HHZukkHbKBhHr3xU3nj1Jdo0J9A,2300
+shared_models/database/models/vacancy.py,sha256=l5Qa0-wpRQuxzR0soS9zssA-5XCJgmOqNAR9bPC5t7o,5611
+shared_models/database/utils.py,sha256=qS1EQWg1wMjL972gcHsVC2eTzSbXMfAb-B4JBwFW3cA,835
+shared_models/enums/__init__.py,sha256=39usz1Oftjpx-DbGA8nxYSZHvvipjLXL-K3vUwQpvUo,190
+shared_models/enums/content_type.py,sha256=_y49xfrt6Vq8VVH27zup7ySYRwnjkdUBL0FX9hLm4Xc,181
+shared_models/enums/question_type.py,sha256=Y3m4EUUqBzAYHpo8Sk3qU0z3i2PVCCS6760Hqm4IEyw,92
+shared_models/enums/subscription_type.py,sha256=qMWtrJYeyOqpsl5DljH77ljIQo9gvLWNfW6_KFqDNjI,84
+shared_models/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jobs_bot_shared_models-0.1.0.dist-info/METADATA,sha256=RlhsXdbG-fqP9Ev8tG2wCSUw-5trEa_p45ANfo3ibX8,552
+jobs_bot_shared_models-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+jobs_bot_shared_models-0.1.0.dist-info/RECORD,,
