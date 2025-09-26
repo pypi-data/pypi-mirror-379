@@ -1,0 +1,2 @@
+[console_scripts]
+htmladapt = htmladapt.__main__:main
