@@ -1,0 +1,44 @@
+[CDF-25826] Dump proper error message on no selection (#2009)
+
+# Description
+
+User encountered an error while dumping transformations.
+
+_Before_ 
+In case of multi-select, user need to press `space` key to do the
+selection. But if user directly presses the `enter` key, it shows a
+success message with no dumped file.
+
+<img width="956" height="183" alt="Screenshot 2025-09-24 at 3 47 06 PM"
+src="https://github.com/user-attachments/assets/d0cf7349-3fba-4bd2-a79a-b9875888f418"
+/>
+
+<img width="658" height="81" alt="Screenshot 2025-09-24 at 3 45 45 PM"
+src="https://github.com/user-attachments/assets/71622ef6-9ad8-4558-b0f1-ff7972d76cd0"
+/>
+
+_After_
+Now if user directly presses the `enter` key, it will fail with error
+message along with navigation and selection helper.
+
+<img width="1126" height="57" alt="Screenshot 2025-09-24 at 3 51 45 PM"
+src="https://github.com/user-attachments/assets/ec9b2731-02dd-4fad-873c-bbb528380008"
+/>
+
+This PR also contains similar check for other resources as well.
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Improved
+
+- Improved handling and error message on `cdf dump transformation`
+(other resources as well) incase of no selection.
+
+## templates
+
+No changes.
