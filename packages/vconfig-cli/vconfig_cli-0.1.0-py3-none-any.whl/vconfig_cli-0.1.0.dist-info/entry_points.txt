@@ -1,0 +1,2 @@
+[console_scripts]
+vconfig-cli = vconfig_cli:main
