@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pywest"
+version = "0.0.7"
+description = "A tool to pack Python projects with embeddable Python for Windows distribution."
+authors = [
+    {name = "qyct"}
+]
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=8.0.0"
+]
+
+[project.scripts]
+pywest = "pywest.wcli:main"
