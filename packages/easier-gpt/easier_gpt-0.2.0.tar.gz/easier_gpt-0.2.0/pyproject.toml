@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easier-gpt"
+version = "0.2.0"
+description = "Utilities for orchestrating OpenAI chat, tool calling, search, and images from one helper package."
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "Apache-2.0"}
+authors = [
+  {name = "Advik Mathur", email = "pranit.advik@gmail.com"},
+]
+keywords = ["openai", "assistant", "chat", "responses", "vector", "images"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "openai>=1.43.0",
+  "typing_extensions>=4.7.0",
+  "pydantic>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Adpros7/Easy-GPT"
+Repository = "https://github.com/Adpros7/Easy-GPT"
+Documentation = "https://github.com/Adpros7/Easy-GPT"
+
+[tool.setuptools]
+packages = ["openai_wrapper"]
+include-package-data = true
