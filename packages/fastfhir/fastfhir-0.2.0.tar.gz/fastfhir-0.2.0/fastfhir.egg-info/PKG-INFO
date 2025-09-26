@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: fastfhir
+Version: 0.2.0
+Summary: FastFHIR: Python FHIR toolkit (Stage 2 with FastAPI)
+Author-email: Pravin <pravinmd94@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fhir.resources>=6.1.0
+Requires-Dist: fastapi>=0.103.0
+Requires-Dist: uvicorn>=0.26.0
+Requires-Dist: pydantic>=2.0
+
+# FastFHIR
+🚀 FastFHIR: A FastAPI + FHIR toolkit (work in progress).
+
+This is a placeholder release to reserve the PyPI name.
