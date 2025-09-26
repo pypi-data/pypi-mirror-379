@@ -1,0 +1,16 @@
+shipy/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+shipy/_log.py,sha256=Or2MM8qJYcHHTASLHxzKwB3hjYd4__Cdbf5eSg2FsbY,280
+shipy/app.py,sha256=DmzA7Ih_NFL5Ap_gwk7N_NbM2dVpzDCEGjUFcEPMRCI,10874
+shipy/auth.py,sha256=L6BgNiSZRIv8R8YkNQJqoGC5mCEs6hWdLyNq1yK8Ayc,2895
+shipy/cli.py,sha256=zOuzpQrhCKVVEOMm8nwKQ_k6536X-GVoBOGaBVkTGsI,18738
+shipy/csrf.py,sha256=5nHnXU1gu01depUjFKxqdiHjQ2SdjyBcx7x7or06HDc,899
+shipy/flash.py,sha256=2dGjq2y-yVpOXtOUvT9st1IvF3AdHMy9qDo_6_r8iT0,368
+shipy/forms.py,sha256=x9HBFlGNeZyWX4433SmbNpxXYwgaEYtxG5gckrLgye4,1807
+shipy/render.py,sha256=e78Cyf9UVGj7j-tlaFFMJzpLW9_nDGt5eaYX9smW7t0,2033
+shipy/session.py,sha256=38Cf0TPsWMBNadklmq3A8MCXeELNFPpFDj4Cs4ZMXvw,1223
+shipy/sql.py,sha256=CisKiHePd5_w3Dr-oU0UqjbRo_lYAgn67g7NiCnEzXY,1688
+shipy_web-0.2.0.dist-info/METADATA,sha256=5bHkkx1hvxR1MclJXftg7txsGksyXnaOUd6e9C9mZdQ,2827
+shipy_web-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shipy_web-0.2.0.dist-info/entry_points.txt,sha256=GlHZyZ1rbY-mJgoqvKTFXGfsl1qLrW0UNMamEeT5WWc,41
+shipy_web-0.2.0.dist-info/licenses/LICENSE,sha256=M-DClnGp8vJvQHKcjRR-qoOPQhq-IklRR6oWUKGpU8E,1076
+shipy_web-0.2.0.dist-info/RECORD,,
