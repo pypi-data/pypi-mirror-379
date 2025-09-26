@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: supplychain-demo-0xkratos
+Version: 0.0.1
+Summary: Safe demo package to show import-time code execution (harmless)
+Author: 0xkratos
+License: MIT
+Description-Content-Type: text/markdown
+
+# supplychain-demo
+
+Harmless demo package to show that code inside a dependency can execute at import/install time.
+On Linux it writes `/tmp/pwned_supplychain_demo.txt`. On Windows it writes `pwned_supplychain_demo.txt`
+in the current directory.
+
+**DO NOT** use on production machines. Run only on isolated VMs/containers or Test PyPI.

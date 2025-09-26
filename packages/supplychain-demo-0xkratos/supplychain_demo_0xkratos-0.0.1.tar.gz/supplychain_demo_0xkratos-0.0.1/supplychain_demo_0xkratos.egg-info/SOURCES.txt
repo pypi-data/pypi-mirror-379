@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+supplychain_demo/__init__.py
+supplychain_demo/cli.py
+supplychain_demo_0xkratos.egg-info/PKG-INFO
+supplychain_demo_0xkratos.egg-info/SOURCES.txt
+supplychain_demo_0xkratos.egg-info/dependency_links.txt
+supplychain_demo_0xkratos.egg-info/entry_points.txt
+supplychain_demo_0xkratos.egg-info/top_level.txt
