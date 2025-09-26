@@ -1,0 +1,107 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "timestrader-preprocessing"
+dynamic = ["version"]
+description = "Canonical preprocessing toolkit for TimesTrader Story 1.7"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "TimeStrader Team", email = "team@timestrader.ai" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["trading", "timesnet", "preprocessing", "normalization", "quantitative"]
+dependencies = [
+    "numpy>=1.26.0",
+    "pandas>=2.1.0",
+    "scikit-learn>=1.3.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "mypy>=1.6.0",
+    "pytest>=7.4.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.6.0",
+    "psutil>=5.9.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/timestrader/timestrader-v05"
+Repository = "https://github.com/timestrader/timestrader-v05"
+Documentation = "https://timestrader.readthedocs.io"
+Issues = "https://github.com/timestrader/timestrader-v05/issues"
+Changelog = "https://github.com/timestrader/timestrader-v05/blob/main/timestrader-preprocessing/CHANGELOG.md"
+
+[tool.hatch.version]
+path = "src/timestrader_preprocessing/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/timestrader_preprocessing"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/timestrader_preprocessing",
+    "README.md",
+    "LICENSE",
+    "MANIFEST.in",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra --strict-markers --strict-config"
+testpaths = ["tests_pkg"]
+markers = [
+    "unit: fast isolated unit tests",
+    "integration: multi-component integration tests",
+    "colab: Google Colab specific tests",
+    "package: package installation and import tests",
+    "slow: slower performance tests",
+]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I", "B", "UP", "N"]
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disable_error_code = ["attr-defined"]
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = ["src/timestrader_preprocessing"]
+omit = [
+    "*/tests/*",
+    "*/__pycache__/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == \"__main__\"",
+    "raise NotImplementedError",
+]
