@@ -1,0 +1,9 @@
+vec_utils_py-0.2.0.dist-info/METADATA,sha256=rwdwGu_EqOtcmsm2YJP1ykaayJ3nr0Tzy2kHqeoPsGI,930
+vec_utils_py-0.2.0.dist-info/WHEEL,sha256=nXnbksKtHhahczd7ttWN6X6HjQgLPILVWf_tYUzg9Pc,94
+vec_utils_py-0.2.0.dist-info/licenses/LICENSE,sha256=tzENRJ30CT73A_WeDW03Y2OfpHu3u1M_ZrzLEJvpNaM,35823
+vec_utils_py/__init__.py,sha256=UanEa2_WCklFgXxyVqHSIMBvVyZ0z62Mzeq26XND5cY,31
+vec_utils_py/__init__.pyi,sha256=nyyoblhdAjdYeLCGpAYcXwK-N5IJ-G2ObMR-WnSZw6s,26407
+vec_utils_py/geometry/__init__.pyi,sha256=-pQEQkJOoksTCE7uRqlhq91zd0gJZYthCvOVXjquzxc,7677
+vec_utils_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vec_utils_py/vec_utils_py.cp39-win_amd64.pyd,sha256=yYuK1PoAqur7biTm53RwbtYvd7YdLbacjq3514LmCa4,846336
+vec_utils_py-0.2.0.dist-info/RECORD,,
