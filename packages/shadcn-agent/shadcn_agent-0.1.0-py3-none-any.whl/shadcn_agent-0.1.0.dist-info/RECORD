@@ -1,0 +1,13 @@
+cli.py,sha256=F49Tpzbw9z5TSIG3rq-WDhH9HmOsGU31PpXtz3CaOPQ,6056
+templates/nodes/email_node.py,sha256=4nGEc8NoDiO8w3Dej_wJbnjwtSgsequASysSZb898w8,1657
+templates/nodes/search_node.py,sha256=rFIlFqtxf8D436uytLw0ULehzkCzrodrHcAF_brAtVI,1014
+templates/nodes/summarizer_node.py,sha256=QKtt5zhKbtcW6TXY6FLVqztn58c4UUD2JlqhaZNyvZE,300
+templates/nodes/translate_node.py,sha256=TS5egTwU-uk27teyXlDdj_o_oe1OruNQV0hmxvQOG_8,777
+templates/workflows/scrape_and_summarize_graph.py,sha256=qsGMxKo9fgxJjBKOLS3jqt3cTMUarLlwGNKNlurShRA,544
+templates/workflows/summarize_and_email_graph.py,sha256=7xi_rWZxVFIh1gJwxmYyeyEHx6qZwEkm1d1U1ZBf0rM,739
+templates/workflows/translate_and_email_graph.py,sha256=du_HGb297cohFxBLamDAUjvCcUsSoxBEvEIc-adfXhc,569
+shadcn_agent-0.1.0.dist-info/METADATA,sha256=jUS4s-55Jm5DnXzPqNJ8Wfb37J3tDO-56HwOfu5fEXs,4494
+shadcn_agent-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shadcn_agent-0.1.0.dist-info/entry_points.txt,sha256=FFwP-ovaXIyXvZM-IilO4cUOAa8o2Ew-5ipMHOv5CUc,42
+shadcn_agent-0.1.0.dist-info/licenses/LICENSE,sha256=iQY2bn5LNCX-frXw83J8lc22XhJAqIJ5ueKLSlyX9gQ,1090
+shadcn_agent-0.1.0.dist-info/RECORD,,
