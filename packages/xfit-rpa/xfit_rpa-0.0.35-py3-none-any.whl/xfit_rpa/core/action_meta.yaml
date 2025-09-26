@@ -1,0 +1,18 @@
+name: 'action meta'
+metadata:
+  name: 'action name'
+  description: '动作元数据定义，用于描述动作的结构和属性'
+  selector: { type: id, value: '#id', method: 'locator' }
+  type: click
+  action_type: base
+  default_params: {  }
+  runtime_params: {  }
+  children:
+    - name: 'sub-action'
+      description: '动作元数据定义，用于描述动作的结构和属性'
+      action: 'click'
+      selector: { type: xpath, value: 'xpath', method: '' }
+    - name: 'sub-action2'
+      description: '动作元数据定义，用于描述动作的结构和属性'
+      action: {value: 'input_value'}
+      selector: { type: xpath, value: 'xpath' }
