@@ -1,0 +1,5 @@
+setup.py
+VascoCalc.egg-info/PKG-INFO
+VascoCalc.egg-info/SOURCES.txt
+VascoCalc.egg-info/dependency_links.txt
+VascoCalc.egg-info/top_level.txt
