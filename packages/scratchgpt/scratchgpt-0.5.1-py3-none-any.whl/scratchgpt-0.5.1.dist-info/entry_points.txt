@@ -1,0 +1,3 @@
+[console_scripts]
+infer = scratchgpt.infer:main
+train = scratchgpt.train:main
