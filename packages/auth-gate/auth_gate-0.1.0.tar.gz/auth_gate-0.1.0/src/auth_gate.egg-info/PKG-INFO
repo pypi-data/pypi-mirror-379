@@ -1,0 +1,213 @@
+Metadata-Version: 2.4
+Name: auth-gate
+Version: 0.1.0
+Summary: Enterprise-grade authentication for microservices with Kong and Keycloak integration
+Home-page: https://github.com/tradelink-org/auth-gate
+Author: Brian Mburu
+Author-email: Brian Mburu <brian.mburu@students.jkuat.ac.ke>
+Maintainer-email: Brian Mburu <brian.mburu@students.jkuat.ac.ke>
+License: MIT
+Project-URL: Homepage, https://github.com/tradelink-org/auth-gate
+Project-URL: Repository, https://github.com/tradelink-org/auth-gate.git
+Project-URL: Documentation, https://github.com/tradelink-org/auth-gate.git
+Project-URL: Bug Tracker, https://github.com/tradelink-org/auth-gate/issues
+Keywords: authentication,keycloak,kong,fastapi,microservices
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Framework :: FastAPI
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.109.0
+Requires-Dist: pydantic>=2.5.0
+Requires-Dist: pydantic-settings>=2.1.0
+Requires-Dist: httpx>=0.26.0
+Requires-Dist: python-jose[cryptography]>=3.3.0
+Requires-Dist: starlette>=0.35.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: mypy>=1.7.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Dynamic: license-file
+
+# Auth Gate
+
+Enterprise-grade authentication for microservices with Kong and Keycloak integration.
+
+## Features
+
+-   **Dual-mode authentication**: Support for both Kong header-based auth (production) and direct Keycloak validation (development)
+-   **Service-to-service authentication**: Built-in client credentials flow for secure inter-service communication
+-   **Circuit breaker pattern**: Resilient handling of Keycloak failures with automatic recovery
+-   **FastAPI integration**: Ready-to-use dependencies for protecting endpoints
+-   **Role-based access control**: Fine-grained permission management with role and scope validation
+-   **Middleware support**: Automatic request authentication with configurable exclusions
+
+## Installation
+
+```bash
+pip install auth-gate
+
+```
+
+### For Development
+
+```bash
+pip install auth-gate[dev]
+
+```
+
+## Quick Start
+
+### Basic Usage
+
+```py
+from fastapi import FastAPI, Depends
+from auth_gate import (
+    AuthMiddleware,
+    get_current_user,
+    require_admin,
+    UserContext,
+    AuthSettings
+)
+
+# Initialize FastAPI app
+app = FastAPI()
+
+# Add authentication middleware
+app.add_middleware(
+    AuthMiddleware,
+    excluded_paths={"/health", "/metrics"},
+    excluded_prefixes={"/docs", "/openapi.json"}
+)
+
+# Protected endpoint - requires authentication
+@app.get("/api/profile")
+async def get_profile(user: UserContext = Depends(get_current_user)):
+    return {
+        "user_id": user.user_id,
+        "username": user.username,
+        "roles": user.roles
+    }
+
+# Admin-only endpoint
+@app.get("/api/admin/users")
+async def list_users(admin: UserContext = Depends(require_admin)):
+    return {"message": "Admin access granted"}
+
+# Role-based access
+from auth_gate import require_roles
+
+require_supplier_or_admin = require_roles("supplier", "admin")
+
+@app.get("/api/products")
+async def list_products(user: UserContext = Depends(require_supplier_or_admin)):
+    return {"products": []}
+```
+
+### Service-to-service Auth
+
+```py
+from auth_gate import ServiceAuthClient
+import httpx
+
+# Get service auth client
+auth_client = ServiceAuthClient()
+
+# Make authenticated service call
+async def call_other_service():
+    # Get service token (automatically cached and refreshed)
+    auth_header = await auth_client.get_service_token()
+
+    async with httpx.AsyncClient() as client:
+        response = await client.get(
+            "http://other-service/api/data",
+            headers={"Authorization": auth_header}
+        )
+        return response.json()
+```
+
+## Configuration
+
+Configure via envirinment variables:
+
+```bash
+# Authentication mode
+AUTH_MODE=kong_headers  # or "direct_keycloak", "bypass" (testing only)
+
+# Keycloak settings
+KEYCLOAK_REALM_URL=https://keycloak.example.com/realms/tradelink
+KEYCLOAK_CLIENT_ID=my-service
+KEYCLOAK_CLIENT_SECRET=secret
+
+# Service account (for S2S auth)
+SERVICE_CLIENT_ID=my-service-account
+SERVICE_CLIENT_SECRET=secret
+
+# Optional settings
+VERIFY_HMAC=false
+INTERNAL_HMAC_KEY=your-hmac-key
+```
+
+## Advanced Features
+
+### Custom Excluded Paths
+
+```py
+app.add_middleware(
+    AuthMiddleware,
+    excluded_paths={"/health", "/metrics", "/public"},
+    excluded_prefixes={"/static", "/docs"},
+    optional_auth_paths={"/api/products"}  # Auth optional for these paths
+)
+```
+
+### Direct Validator Usage
+
+```py
+from auth_gate import UserValidator, AuthMode
+
+validator = UserValidator(mode=AuthMode.DIRECT_KEYCLOAK)
+user_context = await validator.validate_keycloak_token(token)
+```
+
+### Circuit Breaker Configuration
+
+The S2S auth client includes automatic circuit breaker protection:
+
+-   Opens after 5 consecutive failures
+-   Attempts recovery after 60 seconds
+-   Provides fail-fast behavior when Keycloak is unavailable
+
+## Development
+
+### Running Tests
+
+```bash
+pytest tests/ --cov=auth_gate
+```
+
+### Code quality
+
+```bash
+black src/
+ruff check src/
+mypy src/
+```
+
+## License
+
+For use within tradelink suite of services - See LICENSE file for details.
+
+## Support
+
+For issues and questions, please use the [GitHub issue tracker](https://github.com/tradelink-org/auth-gate/issues).
