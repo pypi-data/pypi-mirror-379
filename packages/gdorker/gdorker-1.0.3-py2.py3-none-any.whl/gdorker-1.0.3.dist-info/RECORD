@@ -1,0 +1,5 @@
+src/gdorker/config.example.json,sha256=Usw_voQprAdtHJ3kQUl0oTSSDUOHrvdZvDrAeRTLBzE,51
+gdorker-1.0.3.dist-info/METADATA,sha256=jLGSj51lrXOifG1upKTLeV9grdR-R01YqnPIFP10gFc,1149
+gdorker-1.0.3.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+gdorker-1.0.3.dist-info/entry_points.txt,sha256=e2scYFAmYDrr856FG2wKtyILcGoq7AhRawFi557i4dQ,47
+gdorker-1.0.3.dist-info/RECORD,,
