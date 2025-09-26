@@ -1,0 +1,4 @@
+[console_scripts]
+convert-examples=scripts.convert_examples:main
+logseq2obsidian=src.main:main
+
