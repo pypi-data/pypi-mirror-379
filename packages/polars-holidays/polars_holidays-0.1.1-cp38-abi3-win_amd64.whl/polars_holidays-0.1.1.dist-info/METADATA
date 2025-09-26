@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: polars-holidays
+Version: 0.1.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: polars-lts-cpu>=1.0.0 ; sys_platform == 'darwin'
+Requires-Dist: polars>=1.0.0 ; sys_platform == 'linux' or sys_platform == 'win32'
+Requires-Dist: holidays==0.81.0 ; extra == 'dev'
+Requires-Dist: pytest==8.4.2 ; extra == 'dev'
+Requires-Dist: ruff==0.13.2 ; extra == 'dev'
+Requires-Dist: maturin==1.9.4 ; extra == 'dev'
+Requires-Dist: mypy==1.18.2 ; extra == 'dev'
+Provides-Extra: dev
+License-File: LICENSE
+Requires-Python: >=3.9
