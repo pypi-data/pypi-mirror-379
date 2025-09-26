@@ -1,0 +1,9 @@
+scruby/__init__.py,sha256=wFwUS1KcLxfIopXOVS8gPue9fNzIIU2cVj_RgK5drz4,849
+scruby/constants.py,sha256=GbB-O0qaVdi5EHUp-zRAppFXLR-oHxpXUFVAOCpS0C8,1022
+scruby/db.py,sha256=J14Xjyc6iyb-cwBKiH8rJuioEHoYfNkLTezzvQBsJng,16181
+scruby/errors.py,sha256=4G0zNVzulBE9mM2iJLdg0EXP_W8n-L6EjZrkCCErvAU,574
+scruby/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scruby-0.10.3.dist-info/METADATA,sha256=JGgVH8QKtA-iGifWhNdSczfuglIT2RRw5njRuNKvG3M,10829
+scruby-0.10.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+scruby-0.10.3.dist-info/licenses/LICENSE,sha256=2zZINd6m_jNYlowdQImlEizyhSui5cBAJZRhWQURcEc,1095
+scruby-0.10.3.dist-info/RECORD,,
