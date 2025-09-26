@@ -1,0 +1,11 @@
+vercel/sandbox/__init__.py,sha256=ULmpK363gqhz2n_pVxt2dhDGNAe3HT4QoXAb3M2lkbY,128
+vercel/sandbox/api_client.py,sha256=PSGMN63AARQmmRpnFSVnlhYtRGg2ga-NE0qrLZTYfxQ,7172
+vercel/sandbox/base_client.py,sha256=Lis7JXoqjFyh4aXqicKb_SuHOlRyq91dgWh4bn2xvYU,3031
+vercel/sandbox/command.py,sha256=63JjkFTImuG8XzAiTRLcKVmIj4E6ahk25FEttBSWmD4,2099
+vercel/sandbox/credentials.py,sha256=bGvJnH9BBmAUbrt06H8EboBM1Ps-znsbRPCD16jnTCo,1873
+vercel/sandbox/models.py,sha256=rdtijXCOhdZNTJI4MB2DM1wgdYaj7496CZ5MBpR5zSA,1387
+vercel/sandbox/sandbox.py,sha256=LltoMORNU44gG2C8l7TAeiUk9e8u0Mgr_zaof5HzziM,5235
+vercel_sandbox-0.0.1.dist-info/METADATA,sha256=F_WgoItl7VbwAnKz44CvT1_xzfhey8jMnxIdosUKDRY,2417
+vercel_sandbox-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+vercel_sandbox-0.0.1.dist-info/top_level.txt,sha256=vN1sOS4kDS9QTeE6TpkgLpDe6a_UDb9PWKVJa4SWxuQ,7
+vercel_sandbox-0.0.1.dist-info/RECORD,,
