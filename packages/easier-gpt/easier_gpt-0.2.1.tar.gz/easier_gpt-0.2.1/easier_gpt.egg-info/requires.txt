@@ -1,0 +1,11 @@
+openai>=1.43.0
+typing_extensions>=4.7.0
+pydantic>=2.0.0
+simpleaudio>=1.0.4
+openai-stt>=0.1.0
+
+[function_tools]
+ez-openai>=0.1.5
+
+[speech_models]
+whisper>=1.0
