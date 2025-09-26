@@ -1,0 +1,68 @@
+# Rust build artifacts
+/target/
+Cargo.lock
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Development files
+*.log
+.coverage
+htmlcov/
+.python-version
+
+# Large data files (keep only test data and abbreviations)
+/data/*.jsonl.gz
+!/data/test.jsonl.gz
+/data/*.jsonl
+/data/train-*.jsonl.gz
+/data/train-*.gz
+
+# Model files (keep only default model)
+/models/*.npkt.gz
+!/models/default.npkt.gz
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# Documentation build artifacts
+docs/_build/
+site/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# UV/pip
+uv.lock
+pip-log.txt
+
+# Development/debug scripts in root
+test_*.py
+debug_*.py
+analyze_*.py
+benchmark_*.py
