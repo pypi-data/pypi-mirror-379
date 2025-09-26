@@ -1,0 +1,234 @@
+# Charlie Munger Investment Analysis 🎯
+
+> *"I'm not paid to be easy. I'm paid to be right."* - Charlie Munger
+
+AI-powered investment analysis using Charlie Munger's wisdom and framework. Available as both an MCP server for Claude Code and a universal Web API.
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
+
+## Features
+
+- 🧠 **Authentic Charlie Munger AI** - Trained on Munger's actual investment philosophy
+- ⚡ **Kill-Switch Framework** - Automatic rejection of bad investments
+- 📊 **100-Point Scoring System** - Quantitative analysis with qualitative insights
+- 🔍 **Smart Company Search** - Yahoo Finance API integration with fuzzy matching
+- 🌍 **International Coverage** - Supports global exchanges (US, Europe, Asia)
+- 💬 **Conversational Follow-ups** - Ask deeper questions about any analysis
+- 📈 **Multi-Stock Comparison** - Rank investments head-to-head
+- 🚀 **Two Interfaces** - MCP server + Web API
+
+## Quick Start
+
+### Install Package
+
+```bash
+# Basic installation (MCP server only)
+pip install financial-advisor-munger
+
+# With web API support
+pip install financial-advisor-munger[web]
+
+# Development version
+pip install financial-advisor-munger[web,dev]
+```
+
+### Option 1: MCP Server (Claude Code)
+
+```bash
+# Start MCP server
+munger-mcp
+
+# Configure in Claude Code MCP settings:
+{
+  "mcpServers": {
+    "munger": {
+      "command": "munger-mcp",
+      "args": []
+    }
+  }
+}
+```
+
+Then use in Claude Code:
+```
+Can you analyze Apple stock using Munger's framework?
+```
+
+### Option 2: Web API (Universal)
+
+```bash
+# Start web API server
+munger-web --port 8000
+
+# Server runs at http://localhost:8000
+# API docs at http://localhost:8000/docs
+```
+
+**Python Example:**
+```python
+import requests
+
+# Analyze a stock
+response = requests.post("http://localhost:8000/analyze",
+                        json={"symbol": "AAPL"})
+analysis = response.json()
+
+print(f"Recommendation: {analysis['analysis']['recommendation']}")
+print(f"Munger Score: {analysis['analysis']['munger_score']}/100")
+print(f"Reasoning: {analysis['analysis']['key_reasoning'][0]}")
+```
+
+**JavaScript Example:**
+```javascript
+// Analyze Apple stock
+fetch('http://localhost:8000/analyze', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({symbol: 'AAPL'})
+})
+.then(r => r.json())
+.then(data => {
+    console.log(`${data.analysis.recommendation}: ${data.analysis.munger_score}/100`);
+    console.log(data.analysis.munger_voice);
+});
+```
+
+**cURL Example:**
+```bash
+# Get Munger's take on Tesla
+curl -X POST http://localhost:8000/analyze \
+     -H "Content-Type: application/json" \
+     -d '{"symbol": "TSLA"}'
+```
+
+## API Endpoints
+
+| Endpoint | Method | Description |
+|----------|---------|-------------|
+| `/analyze` | POST | Full Munger analysis of a stock |
+| `/followup` | POST | Ask follow-up questions |
+| `/compare` | POST | Compare multiple stocks |
+| `/search` | POST | Search for companies |
+| `/data/{symbol}` | GET | Raw financial data |
+| `/health` | GET | API health check |
+
+## Docker Deployment
+
+```bash
+# Build and run
+docker build -t munger-api .
+docker run -p 8000:8000 munger-api
+
+# Or use docker-compose
+docker-compose up -d
+```
+
+## Railway/Heroku Deployment
+
+**Railway:**
+```bash
+# Deploy to Railway
+railway login
+railway init
+railway add
+railway deploy
+```
+
+**Heroku:**
+```bash
+# Deploy to Heroku
+heroku create your-munger-api
+git push heroku main
+```
+
+## Environment Variables
+
+```bash
+# Optional configuration
+MUNGER_API_HOST=0.0.0.0      # API host
+MUNGER_API_PORT=8000         # API port
+MUNGER_LOG_LEVEL=info        # Logging level
+MUNGER_CACHE_TTL=300         # Cache duration (seconds)
+```
+
+## Example Analysis Output
+
+```json
+{
+  "success": true,
+  "symbol": "AAPL",
+  "company": "Apple Inc.",
+  "analysis": {
+    "recommendation": "APPROVED",
+    "munger_score": 85,
+    "key_reasoning": [
+      "Exceptional brand moat creates pricing power",
+      "Capital-light ecosystem generates massive cash flows",
+      "Management obsessed with capital efficiency"
+    ],
+    "munger_voice": "Apple's got something I respect: a business so good that even the government can't screw it up. When customers line up to pay premium prices for incremental improvements, you've got pricing power that would make John D. Rockefeller jealous...",
+    "kill_switches": [],
+    "follow_up_suggestions": [
+      "what_could_go_wrong",
+      "historical_context",
+      "management_assessment"
+    ]
+  }
+}
+```
+
+## International Stocks
+
+```python
+# European stocks
+requests.post("/analyze", json={"symbol": "PNDORA.CO"})  # Pandora (Copenhagen)
+requests.post("/analyze", json={"symbol": "NESN.SW"})    # Nestlé (Swiss)
+
+# Asian stocks
+requests.post("/analyze", json={"symbol": "7203.T"})     # Toyota (Tokyo)
+requests.post("/analyze", json={"symbol": "0700.HK"})    # Tencent (Hong Kong)
+```
+
+## Development
+
+```bash
+# Clone and setup
+git clone https://github.com/user/financial-advisor-munger
+cd financial-advisor-munger
+pip install -e .[web,dev]
+
+# Run tests
+pytest
+
+# Format code
+black src/
+ruff check src/
+
+# Build package
+python -m build
+
+# Local development server
+munger-web --reload --host 127.0.0.1
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Add tests for new functionality
+4. Ensure code passes `black` and `ruff` checks
+5. Submit a pull request
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file.
+
+## Disclaimer
+
+This tool provides AI-generated investment analysis for educational purposes. Not financial advice. Charlie Munger's actual opinions may vary. Past performance doesn't predict future results.
+
+---
+
+*"The big money is not in the buying and selling, but in the waiting."* - Charlie Munger
