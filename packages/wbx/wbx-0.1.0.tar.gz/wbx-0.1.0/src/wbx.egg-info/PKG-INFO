@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: wbx
+Version: 0.1.0
+Summary: W&B SDK extension to fetch runs for further analysis.
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: pip>=25.2
+Requires-Dist: pyarrow>=21.0.0
+Requires-Dist: rich>=14.1.0
+Requires-Dist: textual>=6.1.0
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: typer>=0.17.4
+Requires-Dist: wandb>=0.21.3
+
+# wbx
+
+A Weight & Biases extension to fetch runs for further analysis.
+
+## Installation
+
+```bash
+pip install wbx
+```
+
+## Usage
+
+Get projects first
+
+```python
+import wandb
+from wbx import WBX
+
+
+api = wandb.Api()
+entity = "you-entity"
+
+wbx = WBX(api, entity)
+projects = wbx.list_projects(quick_see=True, max_val=10)
+```
+
+Then get runs from a specific project
+
+```python
+project_name = "your-project-name"
+wbx.list_configs(project_name)  # list all configs from runs in the project (for further filtering useless configs)
+
+config_to_use = ["config1", "config2"]
+
+runs_df = wbx.get_runs(
+    project_name,
+    group_keys=config_to_use,
+    summary_keys=None,
+    json_encode_non_scalars=False
+)
+```
+
+After that, you can do analysis based on the `runs_df` DataFrame.
+
+Or you can save it as a `parquet` file for later use.
+
+```python
+wbx.to_parquet(runs_df, path="path/to/your/folder")
+```
+
+## Contributing
+
+Feel free to submit issues or pull requests.
+
+## License
+
+MIT License. See `LICENSE` file for details.
