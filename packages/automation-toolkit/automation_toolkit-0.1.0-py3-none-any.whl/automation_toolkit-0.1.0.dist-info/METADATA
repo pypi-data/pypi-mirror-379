@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: automation-toolkit
+Version: 0.1.0
+Summary: 基于uiautomator2的自动化测试工具包
+Author-email: 白_jiujiu <1138545214@qq.com>
+Project-URL: Bug Reports, https://gitee.com/jiujiu315480/automation_toolkit.git/issues
+Project-URL: Source, https://gitee.com/jiujiu315480/automation_toolkit.git
+Keywords: automation,testing,uiautomator2,android,image-recognition
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: uiautomator2>=2.16.0
+Requires-Dist: opencv-python>=4.5.0
+Requires-Dist: Pillow>=8.0.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: loguru>=0.5.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.9; extra == "dev"
+
+# Automation Toolkit
+
+基于uiautomator2的自动化测试工具包，提供设备控制、元素定位、图像识别等功能。
+
+## 安装
+
+```bash
+pip install automation-toolkit
