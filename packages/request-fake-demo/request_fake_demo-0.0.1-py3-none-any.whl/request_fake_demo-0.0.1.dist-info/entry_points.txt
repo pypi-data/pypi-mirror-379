@@ -1,0 +1,2 @@
+[console_scripts]
+supplychain-demo = supplychain_demo.cli:main
