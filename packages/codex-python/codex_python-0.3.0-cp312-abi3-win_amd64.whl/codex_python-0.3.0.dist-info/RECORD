@@ -1,0 +1,15 @@
+codex/__init__.py,sha256=PpCMJnM_EVeSE_upyjHGCH4PV9jwy6FyTsFbopOGjMA,731
+codex/client.py,sha256=hmEsBd9w3lQxOE6dZKEGRrPBe8vz-cP1Dqf_O1jfcck,13524
+codex/config.py,sha256=cdDH0BG6JQs6GLFK3l_kpUwxjj6EaOtXgJkU7QWLlPg,11603
+codex/event.py,sha256=vUa816WzpFtzAqs-J4khSpOppn7TN2HNfKdISHBYS7Q,788
+codex/exec.py,sha256=U2JcHL5Wc1ALg1I6N759EFWhTFLpVKetb_40iKdwUSk,4366
+codex/native.py,sha256=bMU-7EUyjl0wqXTtOfQw5G1y7fKd7Exj6lP61sAEIDU,3010
+codex/protocol/_base_model.py,sha256=WPv_8NCaU5U74PA9zrGK1xHtJJjGD6SvAQu6VI-EDR4,199
+codex/protocol/types.py,sha256=LtO_hKBl3dRkL-_KBDgFAphVbUYf4G87NdhtOeCcWOM,44468
+codex/py.typed,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+codex_native/__init__.py,sha256=F6wnaifw2lA804o89FM946g2tbrunIvG3xy1PWR_9DE,131
+codex_native/codex_native.pyd,sha256=-DW-P6nGlqwwAj0iF2EYrCz_NvhPXVDw-gQV-swlijY,13595648
+codex_python-0.3.0.dist-info/METADATA,sha256=3bIkUz0QtAtHtfQ6QCEIRfuIk4TtJ9zTgznkDjdqe3Q,12645
+codex_python-0.3.0.dist-info/WHEEL,sha256=VRUGISFtmkUtogJQvMvdBlw5mQA2s0VSEJD4NOAK5wg,95
+codex_python-0.3.0.dist-info/licenses/LICENSE,sha256=1jaLCCF7Ws0ixvNF8sUq2FgCo_cvvLL8xIucPAFdhK8,1088
+codex_python-0.3.0.dist-info/RECORD,,
