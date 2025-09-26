@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: google-cloud-resiliency-supervisor
+Version: 1.0.5
+Summary: Google Cloud Resiliency Supervisor
+Author: Google Cloud
+Author-email: catmint-eng@google.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: google-api-core==2.19.1
+Requires-Dist: google-cloud-compute==1.19.2
+Requires-Dist: google-cloud-logging
+Requires-Dist: pytest==8.3.2
+Requires-Dist: redis>=5.0.8
+Requires-Dist: kubernetes>=31.0.0
+Requires-Dist: absl-py==2.3.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
