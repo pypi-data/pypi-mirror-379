@@ -1,0 +1,72 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "debugn"
+version = "0.1.0"
+description = "Node.js-style namespace debug logging for Python"
+authors = [
+    { name = "Sudarsan Balaji", email = "hello@artful.dev" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+    "Environment :: Console",
+    "Typing :: Typed",
+]
+keywords = ["debug", "logging", "namespace", "node", "npm", "environment"]
+
+[project.urls]
+Homepage = "https://github.com/artfuldev/debugn"
+Repository = "https://github.com/artfuldev/debugn.git"
+Issues = "https://github.com/artfuldev/debugn/issues"
+Documentation = "https://github.com/artfuldev/debugn#readme"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "basedpyright>=1.10.0",
+    "ruff>=0.1.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/debugn"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+    "LICENSE",
+    "README.md",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.basedpyright]
+pythonVersion = "3.8"
+typeCheckingMode = "strict"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

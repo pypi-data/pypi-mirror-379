@@ -1,0 +1,327 @@
+Metadata-Version: 2.4
+Name: debugn
+Version: 0.1.0
+Summary: Node.js-style namespace debug logging for Python
+Project-URL: Homepage, https://github.com/artfuldev/debugn
+Project-URL: Repository, https://github.com/artfuldev/debugn.git
+Project-URL: Issues, https://github.com/artfuldev/debugn/issues
+Project-URL: Documentation, https://github.com/artfuldev/debugn#readme
+Author-email: Sudarsan Balaji <hello@artful.dev>
+License: MIT
+License-File: LICENSE
+Keywords: debug,environment,logging,namespace,node,npm
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Logging
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# debugn
+
+Node.js-style namespace debug logging for Python.
+
+A minimal, environment-controlled logging library that provides 100% API compatibility with npm's [`debug`](https://www.npmjs.com/package/debug) module.
+
+[![PyPI version](https://badge.fury.io/py/debugn.svg)](https://badge.fury.io/py/debugn)
+[![Python Support](https://img.shields.io/pypi/pyversions/debugn.svg)](https://pypi.org/project/debugn/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Why debugn?
+
+If you've used Node.js, you're probably familiar with the excellent [`debug`](https://www.npmjs.com/package/debug) module. **debugn** brings that same elegant API to Python:
+
+- **Environment-controlled**: Enable/disable debug output via `DEBUG` environment variable
+- **Namespace-based**: Organize logs with hierarchical namespaces like `app:server:auth`
+- **Wildcard support**: Enable patterns like `app:*` or `*,-app:metrics`
+- **Colorized output**: Automatic colors for different namespaces in TTY
+- **Performance**: Zero overhead when disabled (no string formatting)
+- **100% npm debug compatible**: Same API, same behavior
+
+## Installation
+
+```bash
+pip install debugn
+```
+
+## Quick Start
+
+```python
+from debugn import debug
+
+# Create debug functions for different namespaces
+log = debug('app:server')
+log_db = debug('app:database')
+log_auth = debug('app:auth')
+
+# Use them like print statements
+log('Server starting on port %s', 3000)
+log_db('Connected to database')
+log_auth('User %s authenticated', 'alice')
+```
+
+**Nothing will output unless you set the `DEBUG` environment variable:**
+
+```bash
+# Enable all app:* namespaces
+DEBUG=app:* python your_app.py
+
+# Enable specific namespaces
+DEBUG=app:server,app:database python your_app.py
+
+# Enable all namespaces
+DEBUG=* python your_app.py
+
+# Enable all except metrics
+DEBUG=*,-app:metrics python your_app.py
+```
+
+## API Reference
+
+### `debug(namespace)`
+
+Create a debug function for the given namespace.
+
+```python
+from debugn import debug
+
+log = debug('my:namespace')
+log('Hello %s', 'world')  # Supports printf-style formatting
+log('Multiple', 'arguments', 'work', 'too')
+```
+
+**Arguments:**
+- `namespace` (str): The debug namespace (e.g., 'app:server')
+
+**Returns:**
+- A debug function with the following properties:
+  - `namespace`: The namespace string
+  - `enabled`: Whether this debugger is enabled
+  - `color`: ANSI color code for this namespace
+  - `extend(suffix)`: Create sub-namespace debugger
+
+### Environment Variables
+
+#### `DEBUG`
+
+Controls which namespaces are enabled. Supports:
+
+- `*` - Enable all namespaces
+- `namespace` - Enable specific namespace
+- `namespace:*` - Enable namespace and all sub-namespaces
+- `namespace,-other` - Enable namespace but exclude other
+- `ns1,ns2` - Multiple namespaces (comma or space separated)
+
+```bash
+DEBUG=app:*,-app:metrics python app.py
+```
+
+#### `DEBUG_COLORS`
+
+Force colors on/off:
+
+```bash
+DEBUG_COLORS=0 python app.py  # Disable colors
+DEBUG_COLORS=1 python app.py  # Enable colors
+```
+
+#### `DEBUG_HIDE_DATE`
+
+Hide timestamps in non-TTY output:
+
+```bash
+DEBUG_HIDE_DATE=1 python app.py
+```
+
+### Programmatic API
+
+```python
+from debugn import debug, enable, disable, enabled
+
+# Enable namespaces programmatically
+enable('app:*')
+
+# Disable all debug output
+disable()
+
+# Check if namespace is enabled
+if enabled('app:server'):
+    print("Debugging is on")
+```
+
+### Extending Namespaces
+
+Create sub-namespace debuggers:
+
+```python
+app = debug('app')
+server = app.extend('server')      # Creates 'app:server'
+auth = server.extend('auth')       # Creates 'app:server:auth'
+
+app('Application starting')
+server('Server listening on port 3000')
+auth('User authenticated')
+```
+
+## Compatibility with npm debug
+
+**debugn** maintains 100% API compatibility with npm's debug module:
+
+| npm debug | debugn | Notes |
+|-----------|---------|-------|
+| `debug('namespace')` | `debug('namespace')` |  Identical |
+| `DEBUG=namespace` | `DEBUG=namespace` |  Identical |
+| `debugger.extend()` | `debugger.extend()` |  Identical |
+| `debugger.enabled` | `debugger.enabled` |  Identical |
+| `debugger.namespace` | `debugger.namespace` |  Identical |
+| Wildcard patterns | Wildcard patterns |  Identical |
+| Color assignment | Color assignment |  Identical |
+| Printf formatting | Printf formatting |  Identical |
+| Timing deltas | Timing deltas |  Identical |
+
+For complete npm debug documentation, see: https://www.npmjs.com/package/debug
+
+## Examples
+
+### Basic Usage
+
+```python
+from debugn import debug
+
+# Different components
+http = debug('app:http')
+db = debug('app:database')
+auth = debug('app:auth')
+
+http('GET /users')
+db('SELECT * FROM users')
+auth('Token validated')
+```
+
+```bash
+$ DEBUG=app:* python app.py
+app:http GET /users +0ms
+app:database SELECT * FROM users +2ms
+app:auth Token validated +1ms
+```
+
+### Hierarchical Namespaces
+
+```python
+from debugn import debug
+
+app = debug('myapp')
+server = app.extend('server')
+routes = server.extend('routes')
+db = server.extend('database')
+
+app('Application initialized')
+server('Server starting')
+routes('Registered %d routes', 25)
+db('Connected to %s', 'postgresql://...')
+```
+
+```bash
+$ DEBUG=myapp:server:* python app.py
+myapp:server:routes Registered 25 routes +0ms
+myapp:server:database Connected to postgresql://... +5ms
+```
+
+### Selective Debugging
+
+```python
+# app.py
+debug_perf = debug('app:performance')
+debug_sql = debug('app:sql')
+debug_cache = debug('app:cache')
+
+debug_perf('Operation took %dms', 150)
+debug_sql('SELECT * FROM users WHERE id = %s', user_id)
+debug_cache('Cache hit for key: %s', cache_key)
+```
+
+```bash
+# Only performance logs
+$ DEBUG=app:performance python app.py
+
+# Everything except SQL
+$ DEBUG=app:*,-app:sql python app.py
+
+# Multiple specific namespaces
+$ DEBUG=app:performance,app:cache python app.py
+```
+
+### Integration with Existing Code
+
+```python
+# Replace print statements
+print("Server starting")  # Before
+debug('app:server')("Server starting")  # After
+
+# Replace logging for development
+import logging
+logging.debug("User logged in")  # Before
+
+from debugn import debug
+log = debug('app:auth')
+log("User logged in")  # After - controlled by DEBUG env var
+```
+
+## Performance
+
+**debugn** has zero overhead when debugging is disabled:
+
+```python
+log = debug('app:server')
+
+# When DEBUG is not set, this does nothing:
+log('This string formatting never happens: %s', expensive_operation())
+```
+
+The `expensive_operation()` is never called when debugging is disabled.
+
+## Development
+
+```bash
+# Clone the repository
+git clone https://github.com/artfuldev/debugn.git
+cd debugn
+
+# Install with development dependencies using uv
+uv sync
+
+# Run tests
+uv run pytest
+
+# Run type checking
+uv run basedpyright src/
+
+# Run linter
+uv run ruff check
+
+# Format code
+uv run ruff format
+```
+
+## License
+
+MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Credits
+
+This project provides a Python equivalent of the [debug](https://www.npmjs.com/package/debug) module for Node.js.
+
+---
+
+**debugn** - bringing Node.js debug simplicity to Python! =
