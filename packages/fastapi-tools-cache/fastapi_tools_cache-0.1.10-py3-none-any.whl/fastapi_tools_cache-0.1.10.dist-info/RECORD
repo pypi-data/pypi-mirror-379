@@ -1,0 +1,11 @@
+fastapi_tools/cache/__init__.py,sha256=vouGeotkZ9iK3PUWjrh7XdMkgUf-1od3cz7yxntb9j4,110
+fastapi_tools/cache/cache.py,sha256=weZfham8tL_UDOAdmoE0Uwy0qseYTxRE2ynfFCys7bE,3875
+fastapi_tools/cache/config.py,sha256=vHsXz_JHGMGG1Bs1mJZ1hjndr245NRvPxlKZJbTO-hE,4375
+fastapi_tools/cache/decorators.py,sha256=BS3mT5broX46ud_N6-LjTWDU-eWu5if1HUp86qUJxIo,4114
+fastapi_tools/cache/protocol.py,sha256=1s5xiih89qGcH1G5j3RXuwwfqVjDwMG96fnRlSEojAE,1348
+fastapi_tools/cache/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_tools/cache/redis.py,sha256=E3T_1VVV9SmFtiwJkiHMjeueRBzs3IlF_87stXRIxWE,5054
+fastapi_tools/cache/task.py,sha256=rWynWftqdYK-azlKM_fNpewN-sZjOGhjOCqbPFt_42g,11345
+fastapi_tools_cache-0.1.10.dist-info/METADATA,sha256=QFA4OsZhHnfDWxfNkeXkMZ6WR_CARRwOjXezKXxswAY,684
+fastapi_tools_cache-0.1.10.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+fastapi_tools_cache-0.1.10.dist-info/RECORD,,

@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: fastapi-tools-cache
+Version: 0.1.10
+Summary: Fastapi cache
+Author: Andrei Churin
+Author-email: aachurin@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cachetools (>=6.2.0,<7.0.0)
+Requires-Dist: pydantic (>=2.10.5,<3.0.0)
+Requires-Dist: redis (>=6.4.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+### Fastapi cache
+
+```python
+from fastapi_tools.cache import RedisConfig, RedisFactory
+
+
+config = RedisConfig(...)
+redis_factory = RedisFactory(config)
+redis_client = redis_factory.get_async()
+```
+
+
