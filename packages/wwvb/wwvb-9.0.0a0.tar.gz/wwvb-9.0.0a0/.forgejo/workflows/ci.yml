@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2021-2025 Jeff Epler
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: Test wwvbpy
+
+on:
+  push:
+  pull_request:
+  release:
+    types:
+      - created  # forgejo does not document the value "created"
+      - published
+
+# (may not be used by forgejo, but is ignored for now)
+concurrency:
+  group: ${{ forge.workflow }}-${{ forge.ref_name }}-${{ forge.event_name }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: codeberg-tiny
+    container:
+      image: docker.io/library/python:3-trixie
+    steps:
+    - name: Set up node
+      run: apt-get update && apt-get install -y --no-install-recommends nodejs
+
+    - uses: actions/checkout@v4
+
+    - name: Set up uv
+      run: pip install --break-system-packages uv
+
+    - name: Run prek
+      run: uvx prek --all-files
+
+    - name: Run main tests
+      run: |
+        uv run --with-requirements requirements-mypy.txt --with coverage make
+
+    - name: Test other Python versions
+      run: |
+        for version in 3.10 3.14; do
+          echo "::group::Test with Python $version"
+          uv run --python $version python -munittest discover -s test
+          echo "::endgroup::"
+        done
+
+    - name: Upload Coverage as artifact
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        path: coverage.json
+
+    - name: Check build directory size
+      run: du -shx

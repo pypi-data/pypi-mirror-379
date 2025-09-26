@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2021-2024 Jeff Epler
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: Release wwvbgen
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    permissions: write-all
+    runs-on: codeberg-tiny
+    container:
+      image: docker.io/library/python:3-trixie
+    steps:
+    - name: Set up node
+      run: apt-get update && apt-get install -y --no-install-recommends nodejs
+
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+
+    - name: Set up uv
+      run: pip install --break-system-packages uv
+
+    - name: Test
+      run: |
+          uv run --with coverage --with-requirements requirements-mypy.txt --python 3.13 make mypy coverage
+
+    - name: Build release
+      run: uv build
+
+    - name: Upload release
+      run: uv publish
+      env:
+        UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}

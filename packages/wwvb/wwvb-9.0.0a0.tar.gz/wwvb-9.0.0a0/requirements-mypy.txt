@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2021-2024 Jeff Epler
+#
+# SPDX-License-Identifier: GPL-3.0-only
+mypy; implementation_name=="cpython"
+types-beautifulsoup4; implementation_name=="cpython"
+types-python-dateutil; implementation_name=="cpython"
+types-requests; implementation_name=="cpython"
+typing-extensions; implementation_name=="cpython"
