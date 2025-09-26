@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "fastapi-tools-ldap"
+version = "0.1.1"
+readme = "README.md"
+description = "Fastapi ldap integration"
+authors = ["Andrei Churin <aachurin@gmail.com>"]
+packages = [{ include = "fastapi_tools" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+bonsai = "^1.5.3"
+pydantic = "^2.10.5"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.1"
+mypy = "^1.14.1"
+
+[tool.ruff]
+unsafe-fixes = false
+line-length = 89
+
+[tool.ruff.lint]
+select = ["I"]
+
+[tool.mypy]
+disallow_untyped_defs = true
+follow_imports = "silent"
+strict = true
+extra_checks = true
+pretty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
