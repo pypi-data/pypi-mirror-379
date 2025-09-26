@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-r-counter = mcp_server_r_counter:main
