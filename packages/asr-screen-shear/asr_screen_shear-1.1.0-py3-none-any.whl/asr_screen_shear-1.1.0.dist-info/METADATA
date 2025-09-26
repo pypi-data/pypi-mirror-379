@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: asr_screen_shear
+Version: 1.1.0
+Summary: Screen sharing package with automatic dependencies
+Home-page: https://asrbuntu.neocities.org
+Author: Aser
+Author-email: aserah411@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyautogui
+Requires-Dist: pillow
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: netifaces
+Dynamic: license-file
+
+# asr_screen_shear
+Python screen sharing package with automatic dependency installation

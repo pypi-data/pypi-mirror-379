@@ -1,0 +1,11 @@
+asr_screen_shear/__init__.py,sha256=fta4meICdyraCk-rQE6w6ZZ_Q6KpCoGNi88bt7G-nDc,60
+asr_screen_shear/client_view.py,sha256=ShgaW_h6QJ8HrWoAc6B4XQpFjflZH6HAOrsoabf4yno,1585
+asr_screen_shear/dis.py,sha256=_hiLKxln4AbFBNF7klWb5FCIaYVJxk-7eQ2jce-EWpc,524
+asr_screen_shear/pc2.py,sha256=56lI6_REYodM9pJD0Qyy_PLQ-1tfV9KHp8_SnWZuLUY,222
+asr_screen_shear/server.py,sha256=XcWoakFtZ71N_WrMXF7jDuvItrXaiTUxUmGICgukWxk,287
+asr_screen_shear/server_share.py,sha256=z5twMApZCEwH8_gEDCKkbZOV4TapdfVQZjyF3jetaLQ,2232
+asr_screen_shear-1.1.0.dist-info/licenses/LICENSE,sha256=q7KJbcPCqUAvkBuI1QNc8Kg9XPfBfnNkLN9WKwudO8U,11
+asr_screen_shear-1.1.0.dist-info/METADATA,sha256=dsSWh6Zy3YwxqVYqV9w9DxkCbdSUKcqnFMmsw94MQYk,661
+asr_screen_shear-1.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+asr_screen_shear-1.1.0.dist-info/top_level.txt,sha256=T9cC4n374su4v0JhEqSfBNTiRNnjDOU4TaVAI-LVsjw,17
+asr_screen_shear-1.1.0.dist-info/RECORD,,
