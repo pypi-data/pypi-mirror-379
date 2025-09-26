@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/simur_sample/__init__.py
+src/simur_sample/skeleton.py
+src/simur_sample/core/__init__.py
+src/simur_sample/core/_versions.py
+src/uniovi_simur_sample.egg-info/PKG-INFO
+src/uniovi_simur_sample.egg-info/SOURCES.txt
+src/uniovi_simur_sample.egg-info/dependency_links.txt
+src/uniovi_simur_sample.egg-info/not-zip-safe
+src/uniovi_simur_sample.egg-info/requires.txt
+src/uniovi_simur_sample.egg-info/top_level.txt
+tests/test_skeleton.py
