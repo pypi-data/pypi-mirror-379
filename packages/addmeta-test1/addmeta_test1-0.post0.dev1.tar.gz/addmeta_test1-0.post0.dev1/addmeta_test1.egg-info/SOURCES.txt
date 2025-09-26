@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+addmeta/__init__.py
+addmeta/_version.py
+addmeta/addmeta.py
+addmeta/cli.py
+addmeta_test1.egg-info/PKG-INFO
+addmeta_test1.egg-info/SOURCES.txt
+addmeta_test1.egg-info/dependency_links.txt
+addmeta_test1.egg-info/entry_points.txt
+addmeta_test1.egg-info/requires.txt
+addmeta_test1.egg-info/top_level.txt
+test/test_read_yaml.py
