@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: fastapi-tools-config
+Version: 0.1.4
+Summary: Fastapi settings
+Author: Andrei Churin
+Author-email: aachurin@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.10.5,<3.0.0)
+Requires-Dist: pydantic-settings[yaml] (>=2.7.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+### Settings
+
+
+```python
+# in app.config module
+
+from fastapi_tools import config 
+
+
+class MySettings:
+    param1: int
+    param2: str
+
+
+settings = config.setup(MySettings)
+```

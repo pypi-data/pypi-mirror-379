@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "fastapi-tools-config"
+version = "0.1.4"
+readme = "README.md"
+description = "Fastapi settings"
+authors = ["Andrei Churin <aachurin@gmail.com>"]
+packages = [{ include = "fastapi_tools" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.10.5"
+pydantic-settings = {version = "^2.7.1", extras = ["yaml"]}
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.1"
+mypy = "^1.14.1"
+
+[tool.ruff]
+unsafe-fixes = false
+line-length = 89
+
+[tool.ruff.lint]
+select = ["I"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.mypy]
+no_namespace_packages = true
+disallow_untyped_defs = true
+follow_imports = "silent"
+extra_checks = true
+strict = true
+disable_error_code = ["no-any-return"]
+pretty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
