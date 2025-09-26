@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: dekho-cli
+Version: 1.0.3
+Summary: CLI tool to fetch and play sports channels via mpv.
+Author: dev1abhi
+Author-email: opguddu21@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# dekho-cli
+
+A CLI tool to fetch and play sports IPTV channels via mpv.
+
+## Installation
+
+1. Install Python (>=3.7) from https://python.org
+2. Install mpv:
+   - Windows: Download from https://mpv.io/installation/ and add to PATH , or choco install mpv or use scoop
+   - Linux: `sudo apt install mpv`
+   - Mac: `brew install mpv`
+3. Install the package:
+   ```powershell
+   pip install .
+   ```
+
+## Usage
+
+Run from command line:
+```powershell
+dekho-cli
+```
+
+## Notes
+- The tool fetches the latest playlist every hour.
+- Select a channel to play; it will launch mpv with the stream URL.
