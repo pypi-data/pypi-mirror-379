@@ -1,0 +1,7 @@
+setup.py
+src/my_math/__init__.py
+src/my_math/calculate.py
+src/mymath_jun.egg-info/PKG-INFO
+src/mymath_jun.egg-info/SOURCES.txt
+src/mymath_jun.egg-info/dependency_links.txt
+src/mymath_jun.egg-info/top_level.txt
