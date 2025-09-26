@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: tfctl
+Version: 1.2.9
+Summary: A control tool for Hashicorp (c) Terraform projects
+Home-page: https://github.com/grauerwf/tfctl
+Author: Grauer W01f
+Author-email: grauerwf@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: PyYAML
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# tfctl
