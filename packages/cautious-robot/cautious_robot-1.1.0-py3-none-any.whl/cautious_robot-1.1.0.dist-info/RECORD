@@ -1,0 +1,12 @@
+cautiousrobot/__about__.py,sha256=LGVQyDsWifdACo7qztwb8RWWHds1E7uQ-ZqD8SAjyw4,22
+cautiousrobot/__init__.py,sha256=32gD3JAVjLjMKacGUpYro9zkX4lBdVSUaBL0QytcgM4,430
+cautiousrobot/__main__.py,sha256=HgdhLn6vEoFaSp86CNfy4uWnOQE4M0JUecMSi8-5FeY,9758
+cautiousrobot/buddy_check.py,sha256=iyDllwfo_sc1vQomIpdpxi7UyOQc6dEnuMif-ZijG4w,4744
+cautiousrobot/download.py,sha256=hL9OlBOyZf3--W3uSAhcDMFIwNjJLZ0X4R4mI1rk-Ms,15886
+cautiousrobot/exceptions.py,sha256=7RipUo7_Ft1zCXxCZstNoefs9Fy0Qk1qvW10_7TYfmo,162
+cautiousrobot/utils.py,sha256=xfb2rOhGZmkvKUzd5sFQQ8re3rFgOZiJi7oJtfrwqPA,3009
+cautious_robot-1.1.0.dist-info/METADATA,sha256=dBjDc6Pv-e1OEn1rV_H0j1jUTpP810l3Vho68Gr2OeA,13995
+cautious_robot-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cautious_robot-1.1.0.dist-info/entry_points.txt,sha256=11m4JeondlRnX96Y4ltlRH3Zn53uTINRj2l_3GwmEmI,63
+cautious_robot-1.1.0.dist-info/licenses/LICENSE,sha256=aw_0BcicB05YzYWUnDW3fU7bxA35CSlMGodnG9VefU4,1077
+cautious_robot-1.1.0.dist-info/RECORD,,
