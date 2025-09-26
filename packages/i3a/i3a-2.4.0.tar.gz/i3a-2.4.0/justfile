@@ -1,0 +1,9 @@
+help:
+    just --list
+
+publish: 
+    uv build
+    uv publish
+
+clean:
+    rm -rf build

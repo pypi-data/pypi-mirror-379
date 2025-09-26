@@ -1,0 +1,42 @@
+[project]
+name = "i3a"
+version = "2.4.0"
+description = "Automatic manager for i3 tiling"
+authors = [
+    { name = "Michal Goral", email = "dev@goral.net.pl" }
+]
+license = "GPL-3.0-or-later"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Natural Language :: English",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+readme = "README.md"
+repository = "https://git.goral.net.pl/i3a.git"
+
+requires-python = ">=3.11"
+dependencies = [
+    "i3ipc==2.2.1",
+]
+
+[project.scripts]
+i3a-master-stack = "i3a.master_stack:main"
+i3a-swallow = "i3a.swallow:main"
+i3a-move-to-empty = "i3a.move_to_empty:main"
+i3a-swap = "i3a.swap:main"
+i3a-resize-compass = "i3a.resize_compass:main"
+i3a-scale-cycle = "i3a.scale_cycle:main"
+i3a-cycle-focus = "i3a.cycle_focus:main"
+i3a-trail = "i3a.trail:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/i3a"]
