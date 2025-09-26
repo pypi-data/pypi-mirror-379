@@ -1,0 +1,10 @@
+pyreads/__init__.py,sha256=MOL063wn19orui2q3eIcft24zuI8KZkqI50Fk92FT6M,190
+pyreads/_http.py,sha256=JYIW9d3YllaifuD35NR92z2CHA4P0g2YXwd5Nq4krXk,1043
+pyreads/_parser.py,sha256=5pTmKo48Uy9aCfnJH9ppLD16w-zP0gsN8MWPQdHoeFs,7710
+pyreads/core.py,sha256=uTDSE4HTHwgSbc8vMB1DCBkvdLhfrbaeLWVsOPcMfJk,2537
+pyreads/models.py,sha256=4o2ChvslHFaac5fdV42lvAxnbQlwzfW-d0HMTbdN2yw,3198
+pyreads-0.3.3.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyreads-0.3.3.dist-info/METADATA,sha256=MZUwnS5DBGiRsEpvQX6XUw4MWsKG7xX7z62e_oV6sdA,1625
+pyreads-0.3.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyreads-0.3.3.dist-info/top_level.txt,sha256=NnL2MXlfAQlBFFOYWhC3OSceH9RY7CiWBAtx46IdeWA,8
+pyreads-0.3.3.dist-info/RECORD,,
