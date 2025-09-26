@@ -1,0 +1,11 @@
+extract_favicon/VERSION.md,sha256=iHiJPE6bWGEtXZakaFUuSVSTFSrkmgIZbJr1UMVW5x0,5
+extract_favicon/__init__.py,sha256=7FgHRLoTxIAiTMXodIRDMUumA6R2ckUzNJP3_COa3X4,592
+extract_favicon/config.py,sha256=BKevD1KHKIo7wIBb5bAaWaYDH-3KNRYbwZSO-SgNJ9c,1983
+extract_favicon/loader.py,sha256=btx7KOFJb9_WOyGrfHAoHBOACy_bR8O08muZ-UnIk7E,7073
+extract_favicon/main.py,sha256=42JT2REY6-rKtOuDvpyOBBDlMJGZYh0FlCfQfXzoZQ0,21573
+extract_favicon/main_async.py,sha256=nvNe0RBcZ2A4xVGu-72-PX3Z5OwtdzJVxRPvPm2Nl1I,12029
+extract_favicon/utils.py,sha256=YiLB3NQFSNa5E99knJAdEZbHtAHyKJ-hi1J1zq7dlK0,6503
+extract_favicon-0.5.4.dist-info/METADATA,sha256=9qPUZvItKuXSwTF9Jv-1l81u03r0iit8FX3LEPsiaug,9811
+extract_favicon-0.5.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+extract_favicon-0.5.4.dist-info/licenses/LICENSE,sha256=pEbyGaq-NmeFBES71fEbfpMYibTV2_O8B0_gDyXxEkw,1057
+extract_favicon-0.5.4.dist-info/RECORD,,
