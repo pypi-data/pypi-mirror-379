@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: ubpe
+Version: 0.1.0
+Summary: UBPE Tokenizer
+License: MIT
+License-File: LICENSE
+Author: Scurrra (Ilja Baroŭski)
+Author-email: iscurrra@gmail.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: Implementation
+Provides-Extra: native
+Requires-Dist: ubpe-native ; extra == "native"
+Project-URL: Issues, https://github.com/Scurrra/ubpe/issues
+Project-URL: Repository, https://github.com/Scurrra/ubpe.git
+Description-Content-Type: text/markdown
+
+# UBPE Tokenizer

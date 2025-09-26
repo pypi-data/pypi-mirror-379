@@ -1,0 +1,29 @@
+[project]
+name = "ubpe"
+version = "0.1.0"
+description = "UBPE Tokenizer"
+authors = [{ name = "Scurrra (Ilja Baroŭski)", email = "iscurrra@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: Implementation",
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+native = ["ubpe-native"]
+
+[project.urls]
+Repository = "https://github.com/Scurrra/ubpe.git"
+Issues = "https://github.com/Scurrra/ubpe/issues"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+exclude = ["ubpe-native/"]
