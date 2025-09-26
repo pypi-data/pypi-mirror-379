@@ -1,0 +1,166 @@
+# MCP MySQL Tool
+
+A powerful and comprehensive MySQL Model Context Protocol (MCP) server that allows AI assistants to interact with MySQL databases effortlessly. Features 11 specialized tools for different database operations.
+
+## 🚀 Features
+
+### Core Operations
+
+-   **mysql_query** - Execute any SQL query with parameters
+-   **mysql_select** - Smart SELECT with WHERE, LIMIT, ORDER BY
+-   **mysql_insert** - Insert data with key-value pairs
+-   **mysql_update** - Update with required WHERE clause (safety)
+-   **mysql_delete** - Delete with required WHERE clause (safety)
+
+### Database Exploration
+
+-   **mysql_show_databases** - List all available databases
+-   **mysql_show_tables** - List all tables in current database
+-   **mysql_describe_table** - Show table structure and columns
+-   **mysql_table_info** - Comprehensive table analysis (structure, indexes, constraints)
+-   **mysql_count_rows** - Count rows with optional WHERE conditions
+
+### Advanced Features
+
+-   **mysql_custom_connection** - Execute queries with custom host/user/password
+-   Safe parameterized queries to prevent SQL injection
+-   Environment-based configuration
+-   Comprehensive error handling
+-   JSON responses optimized for AI parsing
+
+## 📦 Installation
+
+```bash
+pip install mcp-mysql-tool
+```
+
+## ⚙️ Configuration
+
+### Environment Variables
+
+Set these environment variables for default connection:
+
+```bash
+export MYSQL_HOST=localhost
+export MYSQL_PORT=3306
+export MYSQL_USER=your_username
+export MYSQL_PASSWORD=your_password
+export MYSQL_DATABASE=your_database  # Optional
+```
+
+### MCP Client Configuration
+
+Add to your MCP client configuration:
+
+```json
+{
+	"mcpServers": {
+		"mysql": {
+			"command": "mcp-mysql-tool",
+			"env": {
+				"MYSQL_HOST": "localhost",
+				"MYSQL_USER": "root",
+				"MYSQL_PASSWORD": "password",
+				"MYSQL_DATABASE": "mydb"
+			}
+		}
+	}
+}
+```
+
+## 🛠️ Usage Examples
+
+### Basic Operations
+
+```python
+# List all databases
+mysql_show_databases()
+
+# Smart SELECT with conditions
+mysql_select({
+  "table": "users",
+  "columns": ["id", "name", "email"],
+  "where": "active = 1",
+  "limit": 10,
+  "order_by": "created_at DESC"
+})
+
+# Safe INSERT
+mysql_insert({
+  "table": "users",
+  "data": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "active": 1
+  }
+})
+
+# Safe UPDATE (WHERE required)
+mysql_update({
+  "table": "users",
+  "data": {"last_login": "2024-01-01"},
+  "where": "id = 123"
+})
+```
+
+### Custom Connection
+
+```python
+# Connect to different server
+mysql_custom_connection({
+  "host": "remote-server.com",
+  "user": "remote_user",
+  "password": "remote_pass",
+  "database": "remote_db",
+  "query": "SELECT COUNT(*) FROM products"
+})
+```
+
+### Table Analysis
+
+```python
+# Get comprehensive table info
+mysql_table_info({"table_name": "users"})
+
+# Count rows with conditions
+mysql_count_rows({
+  "table": "orders",
+  "where": "status = 'completed' AND created_at > '2024-01-01'"
+})
+```
+
+## 🔒 Safety Features
+
+-   **Required WHERE clauses** for UPDATE and DELETE operations
+-   **Parameterized queries** to prevent SQL injection
+-   **Connection isolation** for custom connections
+-   **Comprehensive error handling** with detailed error codes
+-   **Input validation** for all parameters
+
+
+## 📋 Available Tools
+
+| Tool                      | Description                  | Safety            |
+| ------------------------- | ---------------------------- | ----------------- |
+| `mysql_query`             | Execute any SQL query        | ⚠️ Raw SQL        |
+| `mysql_select`            | Smart SELECT builder         | ✅ Safe           |
+| `mysql_insert`            | Insert with key-value pairs  | ✅ Safe           |
+| `mysql_update`            | Update with required WHERE   | 🔒 WHERE required |
+| `mysql_delete`            | Delete with required WHERE   | 🔒 WHERE required |
+| `mysql_custom_connection` | Custom host/user/password    | ⚠️ Raw SQL        |
+| `mysql_show_databases`    | List databases               | ✅ Safe           |
+| `mysql_show_tables`       | List tables                  | ✅ Safe           |
+| `mysql_describe_table`    | Table structure              | ✅ Safe           |
+| `mysql_table_info`        | Comprehensive table analysis | ✅ Safe           |
+| `mysql_count_rows`        | Count with optional WHERE    | ✅ Safe           |
+| `mysql_test_connection`   | Test connection (env/custom) | ✅ Safe           |
+
+## 🎯 Perfect for AI
+
+This MCP server is specifically designed to be AI-friendly:
+
+-   **Structured responses** in JSON format
+-   **Clear error messages** with error codes
+-   **Flexible parameters** for different use cases
+-   **Safety guardrails** to prevent dangerous operations
+-   **Comprehensive toolset** for all database needs
