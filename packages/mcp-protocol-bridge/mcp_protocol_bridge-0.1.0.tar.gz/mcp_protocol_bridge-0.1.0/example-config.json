@@ -1,0 +1,12 @@
+{
+  "servers": [
+    {
+      "name": "graphiti",
+      "url": "http://test-graphiti.yangqianguan.com/mcp/"
+    },
+    {
+      "name": "feishu",
+      "url":"https://mcp.fintopia.tech/feishu?token=e0UkCwsKXRZABVtXQ3lnE3YFB3kFeHlHFVpYGHB4RmILWhE1GXVFfAJDHxYASHQQeEJYZg8="
+    }
+  ]
+}

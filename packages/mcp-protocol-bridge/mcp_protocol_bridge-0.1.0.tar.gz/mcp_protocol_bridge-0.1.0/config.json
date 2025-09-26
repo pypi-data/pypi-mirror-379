@@ -1,0 +1,8 @@
+{
+  "servers": [
+    {
+      "name": "graphiti",
+      "url": "http://test-graphiti.yangqianguan.com/mcp"
+    }
+  ]
+}

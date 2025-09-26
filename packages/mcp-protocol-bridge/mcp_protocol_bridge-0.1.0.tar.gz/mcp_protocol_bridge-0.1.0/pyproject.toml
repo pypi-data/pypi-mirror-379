@@ -1,0 +1,18 @@
+[project]
+name = "mcp-protocol-bridge"
+version = "0.1.0"
+description = "Simple MCP bridge server with configurable backends"
+authors = [
+    {name = "b7", email = "biqifu@fintopia.tech"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.0.0",
+]
+
+[project.scripts]
+mcp-protocol-bridge = "mcp_protocol_bridge:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
