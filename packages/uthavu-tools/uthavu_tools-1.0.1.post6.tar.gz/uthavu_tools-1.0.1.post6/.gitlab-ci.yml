@@ -1,0 +1,29 @@
+stages:
+  - build
+  - publish
+
+variables:
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PIP_NO_CACHE_DIR: "1"
+
+build:
+  image: python:3.11
+  stage: build
+  script:
+    - pip install --upgrade build
+    - python -m build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour
+
+publish:
+  image: python:3.11
+  stage: publish
+  dependencies:
+    - build
+  script:
+    - pip install --upgrade twine
+    - python -m twine upload dist/* -u "$PYPI_USERNAME" -p "$PYPI_PASSWORD"
+  only:
+    - main   # publish only when you push a tag (e.g. v0.1.0)
