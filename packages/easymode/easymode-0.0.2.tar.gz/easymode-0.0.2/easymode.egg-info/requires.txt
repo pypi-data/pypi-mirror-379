@@ -1,0 +1,9 @@
+tensorflow<3.0.0,>=2.8.0
+mrcfile
+numpy
+scipy
+huggingface_hub
+requests
+tifffile
+psutil
+starfile

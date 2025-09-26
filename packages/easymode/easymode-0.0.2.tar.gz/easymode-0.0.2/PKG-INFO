@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: easymode
+Version: 0.0.2
+Summary: Easymode - a collection of pretrained general networks for segmenting common eukaryotic features in cryoET
+Home-page: 
+Author: mgflast
+Author-email: mgflast@gmail.com
+License: GPL v3
+License-File: LICENSE.txt
+Requires-Dist: tensorflow<3.0.0,>=2.8.0
+Requires-Dist: mrcfile
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: huggingface_hub
+Requires-Dist: requests
+Requires-Dist: tifffile
+Requires-Dist: psutil
+Requires-Dist: starfile
+Dynamic: author
+Dynamic: author-email
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
