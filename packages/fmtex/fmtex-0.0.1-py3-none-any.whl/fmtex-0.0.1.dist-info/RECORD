@@ -1,0 +1,10 @@
+fmtex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fmtex/__main__.py,sha256=uLgTe5WHMX7oRRZ1g3hMXcZZAOSeHK0L5LVM6baghIQ,7577
+fmtex/generator.py,sha256=GlucHxZwRcqtJHDRH6RBD1OUYPdLNki4NTEoCj7P-ts,2129
+fmtex/lexer.py,sha256=CUJwTJNPwhiuz3gqlZYNGgFx_IYaw1ukzNv1jeDaKMg,2391
+fmtex-0.0.1.dist-info/licenses/LICENSE,sha256=EQysBwso8KH8e3_WyAstWDwxx3bVsnJml8xZGe_yaWk,1074
+fmtex-0.0.1.dist-info/METADATA,sha256=fDoUHfiDkhkGCnEzfNrqlOtdIV-4wcREff-LS06fL34,6045
+fmtex-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fmtex-0.0.1.dist-info/entry_points.txt,sha256=e7nQwr-W5ukgBgC056Zczbb51m4xjiEobi-ioC9g1FE,46
+fmtex-0.0.1.dist-info/top_level.txt,sha256=wswYITA79DsHPpjGmpj0mqdUmLVRCUoRZyrShRD8RsM,6
+fmtex-0.0.1.dist-info/RECORD,,
