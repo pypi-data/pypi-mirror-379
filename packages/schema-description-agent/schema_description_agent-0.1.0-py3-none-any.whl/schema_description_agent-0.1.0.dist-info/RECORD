@@ -1,0 +1,9 @@
+schema_description_agent/__init__.py,sha256=ME0WKQtjL1iMatTPzmKKCPD_VecS5HFZ27ZGBzbHXRI,184
+schema_description_agent/agent.py,sha256=v85M3QgfAqr7YrCgJ7a0L8RiTD_ujt6Ni5A8u5h9iEs,6206
+schema_description_agent/config.py,sha256=NLWLPITMY30JUf79kw36Fl0SjHVXK2m5r9Wqma-IbQc,540
+schema_description_agent/constants.py,sha256=35-OHhrlUpszJoCoeCQ5o1NwZG5R__XW050KJ472mWg,3752
+schema_description_agent/models.py,sha256=P80a98sx76963UmMN3K00YbUebyQz7MJs00DhR7EBro,335
+schema_description_agent-0.1.0.dist-info/METADATA,sha256=cr2ARWyvHzgLe2n1VLfpzw1bnJC3_xLnUAbnTjtDmSk,4589
+schema_description_agent-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+schema_description_agent-0.1.0.dist-info/top_level.txt,sha256=rjs5CKzzBvDh5Q6Wew_Qo3rDpCWUFs5dszaWfaJRC5s,25
+schema_description_agent-0.1.0.dist-info/RECORD,,
