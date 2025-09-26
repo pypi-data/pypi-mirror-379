@@ -1,0 +1,7 @@
+pyperclip
+
+[:os_name != "nt"]
+gnureadline
+
+[:os_name == "nt"]
+pyreadline3

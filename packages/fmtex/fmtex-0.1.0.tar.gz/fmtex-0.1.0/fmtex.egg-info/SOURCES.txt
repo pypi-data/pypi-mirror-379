@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+fmtex/__init__.py
+fmtex/__main__.py
+fmtex/generator.py
+fmtex/lexer.py
+fmtex.egg-info/PKG-INFO
+fmtex.egg-info/SOURCES.txt
+fmtex.egg-info/dependency_links.txt
+fmtex.egg-info/entry_points.txt
+fmtex.egg-info/requires.txt
+fmtex.egg-info/top_level.txt

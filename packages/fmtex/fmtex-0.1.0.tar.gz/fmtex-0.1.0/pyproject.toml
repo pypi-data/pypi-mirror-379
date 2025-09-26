@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmtex"
+version = "0.1.0"
+description = "Write LaTeX math quickly."
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+    "pyperclip",
+    "gnureadline; os_name != 'nt'",
+    "pyreadline3; os_name == 'nt'"
+]
+
+[project.scripts]
+fmtex = "fmtex.__main__:main"

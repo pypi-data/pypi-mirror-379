@@ -1,0 +1,161 @@
+Metadata-Version: 2.4
+Name: fmtex
+Version: 0.1.0
+Summary: Write LaTeX math quickly.
+License: MIT License
+        
+        Copyright (c) 2025 Davide Taffarello
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyperclip
+Requires-Dist: gnureadline; os_name != "nt"
+Requires-Dist: pyreadline3; os_name == "nt"
+Dynamic: license-file
+
+# FastMathTeX
+
+A quicker way to input math equations with LaTeX syntax.
+
+## Installing
+
+You can install it via PyPI:
+
+```sh
+python3 -m pip install --upgrade fmtex
+```
+
+## How to use
+
+You are given a prompt where you can input a custom syntax, after you are done
+press `[Enter]` and the LaTeX output will be shown. Additionally it is copied to
+your clipboard with a dollar sign before and after.
+
+To exit write `'exit` in the prompt.
+
+### FastMath syntax
+
+In FastMathTeX all words longer than one character are treated as commands, no
+checking is done to determine wether they are valid commands.
+
+```text
+> hello world a b c
+\hello \world a b c
+```
+
+Any text inside double quotes is placed inside a `\text{}` block.
+
+```
+> "such that"
+\text{such that}
+> "Also, \" can be escaped"
+\text{Also " can be escaped}
+> "Special \\ {characters} work too!"
+\text{Special \\ \{characters\} work too!}
+```
+
+Any text inside percent signs is treated as raw LaTeX and is left unchanged.
+`%\begin{cases}%` becomes `\begin{cases}` and not `\\begin{\cases}`
+
+```
+> %\begin{cases}% \begin{cases}
+\begin{cases} \\begin{\cases}
+```
+
+A number that immediately follows a letter becomes a subscript.
+
+```
+> a1, a2, a 3
+a_1, a_2, a 3
+```
+
+There are shortcuts for many commands:
+
+| FastMath | TeX               | Mnemonic                    |
+| -------- | ----------------- | --------------------------- |
+| `NN`     | `{\mathbb N}`     |                             |
+| `ZZ`     | `{\mathbb Z}`     |                             |
+| `QQ`     | `{\mathbb Q}`     |                             |
+| `II`     | `{\mathbb I}`     |                             |
+| `RR`     | `{\mathbb R}`     |                             |
+| `CC`     | `{\mathbb C}`     |                             |
+| `balign` | `\begin{align}`   |                             |
+| `ealign` | `\end{align}`     |                             |
+| `bcases` | `\begin{cases}`   |                             |
+| `ecases` | `\end{cases}`     |                             |
+| `bmat`   | `\begin{matrix}`  |                             |
+| `emat`   | `\end{matrix}`    |                             |
+| `bsmat`  | `\begin{bmatrix}` | Begin square-bracket matrix |
+| `esmat`  | `\end{bmatrix}`   | End square-bracked matrix   |
+| `bcmat`  | `\begin{Bmatrix}` | Begin curly-bracket matrix  |
+| `ecmat`  | `\end{Bmatrix}`   | End curly-bracket matrix    |
+| `bbmat`  | `\begin{vmatrix}` | Begin beam matrix           |
+| `ebmat`  | `\end{vmatrix}`   | End beam matrix             |
+| `bdmat`  | `\begin{Vmatrix}` | Begin double beam matrix    |
+| `edmat`  | `\end{Vmatrix}`   | End double beam matrix      |
+| `lp`     | `\left(`          | Left paren                  |
+| `rp`     | `\right)`         | Right paren                 |
+| `ls`     | `\left[`          | Left square bracket         |
+| `rs`     | `\right]`         | Right square bracket        |
+| `lc`     | `\left{`          | Left curly bracket          |
+| `rc`     | `\right}`         | Right curly bracket         |
+| `lb`     | `\left\|`         | Left beam                   |
+| `rb`     | `\right\|`        | Right beam                  |
+| `la`     | `\left\langle`    | Left angle bracket          |
+| `ra`     | `\right\langle`   | Right angle bracket         |
+| `al`     | `\alpha`          |                             |
+| `bt`     | `\beta`           |                             |
+| `gm`     | `\gamma`          |                             |
+| `dl`     | `\delta`          |                             |
+| `DL`     | `\Delta`          |                             |
+| `impl`   | `\implies`        |                             |
+| `et`     | `&`               | Latin 'and'                 |
+| `ett`    | `&&`              |                             |
+| `el`     | `\\`              | End line                    |
+| `perc`   | `\%`              | Percentage                  |
+
+### Custom shortcuts
+
+You can add your own shortcuts with the `'sub` command.
+
+```text
+> 'sub Rmn \mathbb R^{m \cdot n}
+added Rmn -> \mathbb R^{m \cdot n}
+> Rmn
+\mathbb R^{m \cdot n}
+```
+
+You can also add a file that executes commands on startup. On Windows it is
+located at `%LOCALAPPDATA%/_fmtexrc` and on Unix-based systems at
+`$HOME/.fmtexrc`.
+
+### Example
+
+```text
+> "Let" \; RR^n = lc (a1, a2, ldots, a_n) mid a_i in RR, 1 le i le n rc
+\text{Let} \; {\mathbb R}^n = \left\{ (a_1, a_2, \ldots, a_n) \mid a_i \in \mathbb R, 1 \le i \le n \right\}
+```
+
+Rendered output:
+
+$$
+\text{Let} \\; \mathbb R^n = \left\\{ (a_1, a_2, \ldots, a_n) \mid a_i \in \mathbb R, 1 \le i \le n \right\\}
+$$
