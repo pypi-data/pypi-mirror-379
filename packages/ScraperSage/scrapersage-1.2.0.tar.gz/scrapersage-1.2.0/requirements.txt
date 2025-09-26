@@ -1,0 +1,8 @@
+requests
+ddgs
+playwright
+google-generativeai
+openai
+beautifulsoup4
+tenacity
+httpx
