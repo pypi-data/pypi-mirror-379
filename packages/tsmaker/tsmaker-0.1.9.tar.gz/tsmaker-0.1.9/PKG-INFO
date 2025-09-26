@@ -1,0 +1,238 @@
+Metadata-Version: 2.4
+Name: tsmaker
+Version: 0.1.9
+Summary: A Python library for generating time series data.
+Author: Joris Gillis
+Author-email: Joris Gillis <code@jorisgillis.name>
+License-Expression: AGPL-3.0-only
+License-File: LICENSE
+Requires-Dist: numpy~=2.3.3
+Requires-Dist: pandas~=2.3.2
+Requires-Dist: statsmodels~=0.14.5
+Requires-Dist: pyarrow~=21.0.0
+Requires-Dist: deltalake~=1.1.4
+Requires-Dist: matplotlib~=3.10.6
+Requires-Dist: pyiceberg[sql-sqlite]>=0.10.0
+Requires-Python: >=3.11
+Project-URL: Homepage, https://github.com/jorisgillis/tsmaker
+Project-URL: Issues, https://github.com/jorisgillis/tsmaker/issues
+Description-Content-Type: text/markdown
+
+# `tsmaker`: A Time Series Generation Tool
+
+This is a Python tool for generating time series data using generators based on random processes. It provides a
+command-line interface to generate time series. The tool is designed to generated test data for testing and
+benchmarking time series databases. The generated time series can either be visualized or stored on disk.
+
+## Features
+
+- Generate time series with regular or irregular time steps.
+- A variety of data generators
+- Output data in multiple formats
+- Easy to extend with new generators
+
+### Generators
+
+#### Common concepts
+
+A generator allows operators on a date range. The date range is defined by a start date and an end date. The frequency
+within the data range is defined by the `time-step` parameter, that determines the mean step between consecutive points.
+Furthermore, there is the `jitter` control, that adds a random jitter to the time steps, making them irregular.
+
+#### Random Data
+
+A first simple generator that generates random data points. Each point is a random value. This is not really a good
+example of a time series, given that there is no correlation between consecutive points. But it is a good start: it
+generates fast, the value are within a certain bounds, and it allows to test the worst case of compression.
+
+#### Random Walk
+
+A second step is the random walk generator, which does add historical context to the time series. Each point is
+constructed from the previous by adding a random value.
+
+#### ARIMA
+
+The [AutoRegression Integrated Moving Average](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average)
+model is a prevalent option for modelling time series data. It can be used for modelling an existing time series and
+prediction new values, or for creating a model and inferring time series data from the model.
+
+Consult the [Wikipedia page](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average) or other resources
+to learn more about the model.
+
+#### Fourier Series
+
+Another approach based on inverting an analysis technique. A Fourier transform will decompose a time series into a
+series of sine and cosine waves. The Fourier series generator will create a time series by summing a number of sine
+waves with random frequencies, amplitudes and phases. Thus, we generate a random decomposition and reconstruct the
+signal by recomposing the waves.
+
+This generator is particularly useful for generating periodic time series with repeating patterns.
+
+#### Stock Market
+
+The stock market generator uses random walks for a set of independent time series. Next, it will generate a set of
+dependent time series based on a Vector Auto Regressive model that makes a linear combination of the independent time
+series. As such, the independent time series have historical context (each point derives from the previous point) and
+there is a structural correlation between each dependent time series and the independent time series.
+
+This dataset is ideal for finding correlations between time series.
+
+#### Apartment
+
+The Apartment generator will generate time series that mimics sensors in an apartment building:
+
+- CO2 (PPM) sensor
+- Temperature (Celsius) sensor
+- Humidity (percentage) sensor
+- Light (lux) sensor
+- Motion (on-off) sensor
+
+Each sensor simulates the values of the sensors based on the time of the day. For example, during the day, the Light
+sensor will report higher values as the sun is out. But the lux will vary based on whether it is a cloudy or sunny day.
+Also, during morning and in the evening of a work day, the occupants will be home, thus the CO2 sensor will report
+higher values.
+
+This generator generates patterns based on time, day, and calendar. This comes close to a real world scenario.
+
+#### Grocery Sales
+
+The Grocery Store Sales generator simulates shopping carts in a grocery store retailer. This simulation generates a
+dataset with high cardinality, because there are a lot of tags used. Excellent for testing high cardinality settings and
+aggregations in TSDBs.
+
+The simulation is something you find typically find in an OLAP benchmark dataset. The dataset only has two names for
+time series: `sales_price` and `sales_amount`. But each time series has a lot of tags: `store`, `department`,
+`item_name`, `city`, `country`, `customer_id`, and `customer_age_group`.
+
+### Data formats
+
+Each data format outputs a `metadata.json` file that contains extra information about the generation process.
+
+- CSV: Comma-separated values, outputs two files:
+    - data.csv with the actual time series data
+    - catalog.csv with the catalog information about the time series
+- TSV: Tab-separated values, same as CSV but with tab as separator
+- Parquet: outputs two files in Apache Parquet format, one with the time series data and the other with the catalog
+- Arrow: outputs two directories in Apache Arrow format, one with the time series data and the other with the catalog
+- Delta Lake: outputs a Delta Lake table with the time series data and the catalog
+- Iceberg: outputs an Iceberg data lake house with two tables, one with the time series data and the other with the
+  catalog
+- InfluxDB: outputs all time series data (with catalog information) in the Influx line protocol
+- Prometheus: outputs all time series data (with catalog information) in the Prometheus line format (Coming Soon)
+
+Normally, this should make it easy to import the data in any time series database.
+
+## Installation
+
+```bash
+uv venv
+source .venv/bin/activate
+uv sync
+
+# Building and installing package:
+uv build
+pip install <path-to-repository>/dist/tsmaker-<version>-py3-none-any.whl
+
+# Installing in editable mode for development
+uv pip install -e .
+```
+
+## Usage
+
+```bash
+$ tsmaker --help
+
+usage: tsmaker [-h] --start-date START_DATE --end-date END_DATE [--time-step TIME_STEP] [--jitter JITTER] 
+                (--random {gaussian,uniform,exponential} | --random-walk | --arima ARIMA | --fourier | --apartment | --stock-market | --grocery-sales) 
+                [--walk-mean WALK_MEAN] [--walk-std WALK_STD] [--walk-laplace-b WALK_LAPLACE_B] [--walk-distribution {gaussian,laplace}] 
+                [--fourier-coeffs FOURIER_COEFFS] [--fourier-min-period FOURIER_MIN_PERIOD] [--fourier-max-period FOURIER_MAX_PERIOD] [--fourier-period-spacing {linear,exponential}] 
+                [--num-series NUM_SERIES] [--independent-fraction INDEPENDENT_FRACTION] [--var-lags VAR_LAGS]
+                [--num-stores NUM_STORES] [--num-customers NUM_CUSTOMERS] [--avg-trips-per-day AVG_TRIPS_PER_DAY] 
+                [--output-format {csv,tsv,parquet,arrow,delta,iceberg,influx}] [--output-path OUTPUT_PATH] 
+                [--visualize]
+
+Generate time series data.
+
+options:
+  -h, --help            show this help message and exit
+  --random {gaussian,uniform,exponential}
+  --random-walk
+  --arima ARIMA
+  --fourier
+  --apartment
+  --stock-market
+  --grocery-sales
+
+Time Generation:
+  --start-date START_DATE
+  --end-date END_DATE
+  --time-step TIME_STEP
+                        Default = 600 seconds
+  --jitter JITTER       Default = 0
+
+Random Walk Options:
+  --walk-mean WALK_MEAN
+  --walk-std WALK_STD
+  --walk-laplace-b WALK_LAPLACE_B
+  --walk-distribution {gaussian,laplace}
+
+Fourier Options:
+  --fourier-coeffs FOURIER_COEFFS
+  --fourier-min-period FOURIER_MIN_PERIOD
+  --fourier-max-period FOURIER_MAX_PERIOD
+  --fourier-period-spacing {linear,exponential}
+
+Stock Market Options:
+  --num-series NUM_SERIES
+  --independent-fraction INDEPENDENT_FRACTION
+                        Default = 0.8
+  --var-lags VAR_LAGS
+
+Grocery Sales Options:
+  --num-stores NUM_STORES
+                        Default = 3
+  --num-customers NUM_CUSTOMERS
+                        Default = 100
+  --avg-trips-per-day AVG_TRIPS_PER_DAY
+                        Default = 50
+
+Output:
+  --output-format {csv,tsv,parquet,arrow,delta,iceberg,influx}
+  --output-path OUTPUT_PATH
+  --visualize           Display a plot of the data instead of saving to a file.
+
+```
+
+## Development
+
+This package uses the Ruff formatter and linter, PyTest as test runner and uv as dependency manager/build tool. Some
+useful commands during development:
+
+```bash
+# Set up development environment
+uv venv
+source .venv/bin/activate
+uv sync
+uv pip install -e .
+tsmaker --start-date 2025-01-01 --end-date 2025-02-10 --time-step 60 --jitter 5 --random-walk --output-format iceberg
+
+# Running formatting on the source code
+uv run ruff format tsmaker
+
+# Running formatting on the tests
+uv run ruff format tests
+
+# Running tests
+uv run pytest tests
+
+# Looking for outdated direct dependencies
+uv tree --outdated --depth 1
+```
+
+## Support
+
+Having trouble? Check out the existing issues on GitHub, or feel free to open a new one.
+
+## License
+
+This repository is licensed under the AGPLv3 License.
