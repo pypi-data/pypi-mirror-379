@@ -1,0 +1,9 @@
+fastuuid-0.13.3.dist-info/METADATA,sha256=HlTCs_2ORRJ25LbKgIds895X1TW0gUAVCCSmFKb8s4g,994
+fastuuid-0.13.3.dist-info/WHEEL,sha256=41SS-cJilP6ymDnxA_dDchpmb3UaJ9Yf2X4rmAIk9PI,105
+fastuuid-0.13.3.dist-info/licenses/LICENSE,sha256=AHNshSOGrBWhIoPABne0bvSzA75TqwodBfSKkpE1X6Q,1534
+fastuuid.libs/libgcc_s-27e5a392.so.1,sha256=x5sO63liVwXxrjGGP371wB0RyQe1KEnIynYm82T0G0M,449745
+fastuuid/__init__.py,sha256=DttcCzqwuWmdg2_9O6ZKe5WWv5cpwAPzO3aT-xZx9zk,115
+fastuuid/__init__.pyi,sha256=0xoNm6mo3LxCSrg4F1wGvEzWLS6aehIOo2yHqEesvBo,2141
+fastuuid/fastuuid.cpython-312-i386-linux-musl.so,sha256=gZaDKzB32R2qYPW2JBPPjgClMGsl002jsO6Ddd1mpJM,572009
+fastuuid/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastuuid-0.13.3.dist-info/RECORD,,
