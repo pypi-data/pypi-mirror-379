@@ -1,0 +1,58 @@
+![CI](https://github.com/matthew-hansen-605/lace-client/actions/workflows/ci.yml/badge.svg)
+
+# Lace Client (SDS Generator)
+
+Cloud‑backed CLI to generate the EU AI Act Article 53(1)(d) public training summary (DOCX).
+
+## Install
+```bash
+pip install lace-client
+```
+
+## Quickstart
+```bash
+export LACE_API_KEY=lace_sk_...
+lace pack /path/to/dataset --out sds.docx
+```
+
+Optional answers
+```bash
+# Provide non‑inferable fields via JSON (otherwise you will be prompted)
+lace pack /path/to/dataset \
+  --answers-file /path/to/answers.json \
+  --out sds.docx
+```
+Notes:
+- Online-only: `lace pack` calls the Lace API to produce the DOCX.
+- If `--answers-file` is omitted, the CLI prompts for: provider name/contact, model name/version, EU placement date, and illegal‑content measures. All other fields are derived automatically.
+
+## TDM Opt‑Out Check (robots.txt, ai.txt, X‑Robots‑Tag, trust.txt)
+Scan a dataset for machine‑readable opt‑out signals. Performs lightweight requests to public robots/ai.txt endpoints; no API key required.
+
+```bash
+lace check tdm /path/to/dataset          # human‑readable summary
+lace check tdm /path/to/dataset --json   # machine‑readable
+```
+
+## Demo (PyPI)
+Try with a synthetic 10 MB dataset and a realistic answers file:
+
+```bash
+# 1) Install the client from PyPI
+pip install --no-cache-dir 'lace-client==0.7.4'
+
+# 2) Create a synthetic dataset (~10 MB, offline)
+python scripts/make_sample_dataset.py --out ~/lace-sample-10mb --mb 10
+
+# 3) Use the demo answers file
+cp examples/answers_demo.json ~/answers_demo.json
+
+# 4) Generate the SDS (requires API key)
+export LACE_API_KEY=<your_key>
+lace pack ~/lace-sample-10mb \
+  --send-domains hashed \
+  --answers-file ~/answers_demo.json \
+  --out ~/sds.docx
+```
+
+Why include answers: provider identity, contact, model name/version, EU placement date, and illegal‑content measures cannot be inferred from raw data. Other fields are derived from the dataset automatically.
