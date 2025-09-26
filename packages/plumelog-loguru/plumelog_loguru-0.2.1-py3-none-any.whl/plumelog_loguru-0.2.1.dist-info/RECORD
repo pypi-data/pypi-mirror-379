@@ -1,0 +1,9 @@
+plumelog_loguru/__init__.py,sha256=EQS1eXqArpl2q5z9gkwWDNAPFcmAeQfMYhy8oGA2F-o,1369
+plumelog_loguru/config.py,sha256=CLgQUHw0dHlXI7qUdSv7aW4ElrdBwHwTr1JOmtIaabQ,3871
+plumelog_loguru/extractor.py,sha256=WspmoMR2FMxkPIONQSwPVbENrmEh2ieXfHNxk8OPcAo,5603
+plumelog_loguru/models.py,sha256=gbNNj2mjtaONf19aOnzwa9vv5ZzTfK2g2dMmPWm-iOg,3877
+plumelog_loguru/redis_client.py,sha256=idbwM6ScpPxlBCyXwlL-H6MVyQNJ_GskjWdqZX1B9LY,8728
+plumelog_loguru/redis_sink.py,sha256=CQRG2ezAVtNTSuoke2a8UJJO-cTS2Q1ErOh-TRpXHUE,18746
+plumelog_loguru-0.2.1.dist-info/METADATA,sha256=QnXxcAZoiisZAz4izTTiUhfpvunxAFQm7_d3q6-CpC8,14252
+plumelog_loguru-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+plumelog_loguru-0.2.1.dist-info/RECORD,,
