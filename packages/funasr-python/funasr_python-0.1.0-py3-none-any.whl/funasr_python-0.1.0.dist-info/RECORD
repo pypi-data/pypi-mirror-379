@@ -1,0 +1,16 @@
+funasr_client/__init__.py,sha256=TH6Mlu6-QDlfFZHwRSYhH0AAjEy39_CqCOv7euAJ9Fs,4066
+funasr_client/audio.py,sha256=sN-62WCoW6d4qK612ijTvdzgknB98SZ_hdS7t-TAKRU,24120
+funasr_client/callbacks.py,sha256=aPsKWzn4twVe13_fKfFo0K6fZtFsNm-qSlH7IHGQ6Ck,19243
+funasr_client/cli.py,sha256=2_XyGpW-PCdIZsfO901avzvDP3jWwnVqOd9OdAzVJJE,15872
+funasr_client/client.py,sha256=IO0zvLOYXJ1nocR0wWXZ4SUICujZiqiu6jpCV7HuLX8,23051
+funasr_client/config.py,sha256=QNXLtmQT_rShg0LN9LqGMjwKeUl81VWCSY-C6iJ3fgg,14533
+funasr_client/connection.py,sha256=S0E1XsiueDgcXgKZmqf1hX1MhJhn3lcxRT8Gs-_kGqE,19117
+funasr_client/errors.py,sha256=UaEm9droxYE3oYUyBQaEmw7J0Ntha4sVTOzsVtalJso,17685
+funasr_client/models.py,sha256=bfGovbf5VSFuVW7DaVWZZli2K1mjvfTubOuIp07P5As,8052
+funasr_client/protocols.py,sha256=cqRYcOlPat6PaJuzbN4Eb8_ffq21fwWqXYJAHZ9XKOA,19699
+funasr_client/utils.py,sha256=i9u7mFj-bMhh-BKgBEOyDKRpiYYqD14JdDVTy3YyTOw,18346
+funasr_python-0.1.0.dist-info/METADATA,sha256=mfNRe-fEfakBt2zM_XUNkGxrDl9C-l4fYPaMu_17yos,22084
+funasr_python-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+funasr_python-0.1.0.dist-info/entry_points.txt,sha256=gih6TdbgPd1aUUkkTT3XtigG-hZQf2Wq2t4QFNFL2gY,57
+funasr_python-0.1.0.dist-info/licenses/LICENSE,sha256=84K2Lcxh_FZrkhWx47YEtTm_2W7VKuHu_1CQ9twXYFc,1061
+funasr_python-0.1.0.dist-info/RECORD,,
