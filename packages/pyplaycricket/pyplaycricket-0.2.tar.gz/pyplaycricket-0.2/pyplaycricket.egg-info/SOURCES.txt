@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+pyplaycricket.egg-info/PKG-INFO
+pyplaycricket.egg-info/SOURCES.txt
+pyplaycricket.egg-info/dependency_links.txt
+pyplaycricket.egg-info/top_level.txt

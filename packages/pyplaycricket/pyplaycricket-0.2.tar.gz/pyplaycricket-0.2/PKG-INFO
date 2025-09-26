@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pyplaycricket
+Version: 0.2
+Summary: Iteracting with the playcricket API for statistical analysis and automated social media posts.
+Home-page: https://github.com/ewanharris12/pyplaycricket
+Author: Ewan Harris
+Description-Content-Type: text/markdown
+License-File: LICENSE
