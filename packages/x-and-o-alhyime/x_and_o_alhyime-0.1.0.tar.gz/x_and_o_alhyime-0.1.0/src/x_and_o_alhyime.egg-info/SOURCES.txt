@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/x_and_o_alhyime.egg-info/PKG-INFO
+src/x_and_o_alhyime.egg-info/SOURCES.txt
+src/x_and_o_alhyime.egg-info/dependency_links.txt
+src/x_and_o_alhyime.egg-info/entry_points.txt
+src/x_and_o_alhyime.egg-info/top_level.txt
+tests/test_game.py

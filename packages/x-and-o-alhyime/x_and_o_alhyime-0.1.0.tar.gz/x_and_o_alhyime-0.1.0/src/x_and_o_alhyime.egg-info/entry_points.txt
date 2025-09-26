@@ -1,0 +1,2 @@
+[console_scripts]
+x-and-o-alhyime = x_and_o_alhyime.cli:main
