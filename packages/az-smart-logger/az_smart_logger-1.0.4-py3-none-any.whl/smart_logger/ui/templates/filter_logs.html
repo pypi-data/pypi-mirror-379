@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col h-screen bg-gray-100 p-6">
+  <h2 class="text-2xl font-bold mb-4">Filter Logs</h2>
+
+  <div class="flex flex-wrap gap-4 mb-4">
+    <label class="flex flex-col">
+      Date:
+      <input type="date" id="logDate" class="border p-1 rounded">
+    </label>
+    <label class="flex flex-col">
+      UUID (optional):
+      <input type="text" id="uuidFilter" placeholder="Optional" class="border p-1 rounded">
+    </label>
+    <label class="flex flex-col">
+      Start Time:
+      <input type="time" id="startTime" class="border p-1 rounded">
+    </label>
+    <label class="flex flex-col">
+      End Time:
+      <input type="time" id="endTime" class="border p-1 rounded">
+    </label>
+    <label class="flex flex-col">
+      Select Files:
+      <select id="fileSelect" multiple class="border p-1 rounded w-60 h-24"></select>
+    </label>
+    <div class="flex flex-col justify-end gap-2">
+      <button id="fetchFiles" class="bg-blue-500 text-white px-4 py-1 rounded">Load Files</button>
+      <button id="fetchLogs" class="bg-green-500 text-white px-4 py-1 rounded">Fetch Logs</button>
+      <button id="downloadLogs" class="bg-gray-700 text-white px-4 py-1 rounded">Download Logs</button>
+    </div>
+  </div>
+
+  <div id="tabs" class="flex-1 overflow-y-auto"></div>
+</div>
+{% endblock %}
+
+{% block extra_head %}
+<!-- <script src="../static/js/filter_logs_frontend.js"></script> -->
+{% endblock %}
