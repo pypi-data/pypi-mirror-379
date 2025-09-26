@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+PyEmailerAJM/__init__.py
+PyEmailerAJM/_version.py
+PyEmailerAJM/py_emailer_ajm.py
+PyEmailerAJM.egg-info/PKG-INFO
+PyEmailerAJM.egg-info/SOURCES.txt
+PyEmailerAJM.egg-info/dependency_links.txt
+PyEmailerAJM.egg-info/requires.txt
+PyEmailerAJM.egg-info/top_level.txt
+tests/test_PyEmailerAJM.py
+tests/test_logger.py
+tests/test_snooze_tracking.py
