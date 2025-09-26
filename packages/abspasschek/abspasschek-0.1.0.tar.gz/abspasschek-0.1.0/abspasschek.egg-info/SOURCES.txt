@@ -1,0 +1,11 @@
+LICENSE
+README
+pyproject.toml
+setup.cfg
+abspasschek.egg-info/PKG-INFO
+abspasschek.egg-info/SOURCES.txt
+abspasschek.egg-info/dependency_links.txt
+abspasschek.egg-info/entry_points.txt
+abspasschek.egg-info/top_level.txt
+mycheckpkg/__init__.py
+mycheckpkg/checker.py
