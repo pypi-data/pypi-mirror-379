@@ -1,0 +1,10 @@
+vec_utils_py-0.2.0.dist-info/METADATA,sha256=rwdwGu_EqOtcmsm2YJP1ykaayJ3nr0Tzy2kHqeoPsGI,930
+vec_utils_py-0.2.0.dist-info/WHEEL,sha256=tWuZR6AL3O2ZWS7wzYGWdHAHsKmNnt7ZA5ratjJRahg,112
+vec_utils_py-0.2.0.dist-info/licenses/LICENSE,sha256=1paEjVmLWm30hr3YguPlTGt6srxR0QUAQRhZkSNQnOI,35149
+vec_utils_py.libs/libgcc_s-27e5a392.so.1,sha256=x5sO63liVwXxrjGGP371wB0RyQe1KEnIynYm82T0G0M,449745
+vec_utils_py/__init__.py,sha256=Hca_HJ1Vf3er8jPUGHYHB2RUMteGwBGXP1TkeAV6Ubc,29
+vec_utils_py/__init__.pyi,sha256=9ismD5-S-RSCSP23STwI9bJJw6TnowQkwF41W5e9J2k,25373
+vec_utils_py/geometry/__init__.pyi,sha256=o_TR4kFYC_Ckc-f7-C63R2rQtL0eUB2UqmNJDC_5p_Q,7405
+vec_utils_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vec_utils_py/vec_utils_py.pypy310-pp73-x86-linux-gnu.so,sha256=jrxFDlt2Rvgx_Do67pe5vGdMGjNDdsYghBtwLmeXvSc,1278993
+vec_utils_py-0.2.0.dist-info/RECORD,,
