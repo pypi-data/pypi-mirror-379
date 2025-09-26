@@ -1,0 +1,12 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/medider/__init__.py
+src/medider/validador.py
+src/medider.egg-info/PKG-INFO
+src/medider.egg-info/SOURCES.txt
+src/medider.egg-info/dependency_links.txt
+src/medider.egg-info/top_level.txt
+test/test.py

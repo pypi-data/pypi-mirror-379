@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: medider
+Version: 0.0.1
+Summary: es una libreria pesada en desarrolladores con funciones de IMC
+Home-page: https://github.com/jhon-escobar/Pg2_parcial3.git
+Author: JHON ESCOBAR
+Author-email: jhonmiltonescobarsaavedra@gmail.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Dynamic: license-file
+
+# Pg2_parcial3
