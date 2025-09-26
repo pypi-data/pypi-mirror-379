@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+STATUS=0
+
+echo "Running pyright"
+uv run pyright replicate || STATUS=$?
+echo ""
+
+echo "Running pylint"
+uv run pylint --exit-zero replicate || STATUS=$?
+echo ""
+
+echo "Running ruff check"
+uv run ruff check . || STATUS=$?
+echo ""
+
+echo "Running ruff format --check"
+uv run ruff format --check || STATUS=$?
+echo ""
+
+exit $STATUS

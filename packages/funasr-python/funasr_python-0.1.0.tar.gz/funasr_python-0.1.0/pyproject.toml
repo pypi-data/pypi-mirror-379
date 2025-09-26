@@ -1,0 +1,225 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "funasr-python"
+dynamic = ["version"]
+description = "A high-performance Python client for FunASR WebSocket speech recognition service"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "FunASR Team" },
+]
+maintainers = [
+    { name = "FunASR Team" },
+]
+keywords = [
+    "speech-recognition",
+    "asr",
+    "funasr",
+    "websocket",
+    "real-time",
+    "streaming",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "websockets>=11.0.0",
+    "aiofiles>=23.0.0",
+    "numpy>=1.20.0",
+    "librosa>=0.9.0",
+    "soundfile>=0.12.0",
+    "pydantic>=2.0.0",
+    "typing-extensions>=4.0.0;python_version<'3.11'",
+    "python-dotenv>=0.19.0",
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
+]
+
+[project.optional-dependencies]
+audio = [
+    "pyaudio>=0.2.11",
+    "webrtcvad>=2.0.10",
+]
+performance = [
+    "uvloop>=0.17.0;sys_platform!='win32'",
+    "orjson>=3.8.0",
+]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "pytest-mock>=3.10.0",
+    "pytest-timeout>=2.1.0",
+    "coverage[toml]>=7.0.0",
+]
+lint = [
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+    "types-setuptools",
+]
+dev = [
+    "funasr-python[audio,performance,test,lint]",
+    "pre-commit>=3.0.0",
+    "hatch>=1.7.0",
+]
+all = [
+    "funasr-python[audio,performance,test,lint,dev]",
+]
+
+[project.urls]
+Documentation = "https://github.com/alibaba-damo-academy/FunASR"
+Repository = "https://github.com/alibaba-damo-academy/FunASR"
+Changelog = "https://github.com/alibaba-damo-academy/FunASR/blob/main/CHANGELOG.md"
+"Bug Reports" = "https://github.com/alibaba-damo-academy/FunASR/issues"
+
+[project.scripts]
+funasr-client = "funasr_client.cli:main"
+
+[tool.hatch.version]
+path = "src/funasr_client/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/funasr_client"]
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # Pyflakes
+    "UP",     # pyupgrade
+    "B",      # flake8-bugbear
+    "SIM",    # flake8-simplify
+    "I",      # isort
+    "N",      # pep8-naming
+    "C4",     # flake8-comprehensions
+    "PIE",    # flake8-pie
+    "T20",    # flake8-print
+    "RUF",    # Ruff-specific rules
+]
+ignore = [
+    "E501",   # Line too long (handled by formatter)
+    "B008",   # Do not perform function calls in argument defaults
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
+]
+unfixable = [
+    "T20",    # Removes print statements
+    "F841",   # Removes unused variables
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/**/*" = ["T20", "B017"]
+"src/funasr_client/cli.py" = ["T20"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["funasr_client"]
+force-sort-within-sections = true
+split-on-trailing-comma = true
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = [
+    "librosa.*",
+    "soundfile.*",
+    "pyaudio.*",
+    "webrtcvad.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=funasr_client",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+    "--cov-fail-under=85",
+]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "performance: Performance tests",
+    "slow: Slow tests",
+]
+filterwarnings = [
+    "error",
+    "ignore::UserWarning",
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["src/funasr_client"]
+branch = true
+omit = [
+    "*/tests/*",
+    "*/examples/*",
+    "*/__main__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+    "TYPE_CHECKING",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[dependency-groups]
+dev = [
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
+]

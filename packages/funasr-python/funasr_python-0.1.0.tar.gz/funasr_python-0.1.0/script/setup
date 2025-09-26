@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -eu
+
+: "${UV_INSTALL_OPTION:='--yes'}"
+: "${UV_VERSION:='latest'}"
+
+if ! command -v uv > /dev/null 2>&1
+then
+    echo "uv is not installed."
+    printf "Do you want to install uv? (y/n) "
+    read -r REPLY
+    echo    # move to a new line
+    case "$REPLY" in 
+        [yY]) 
+            echo "Installing uv..."
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            echo "rye has been successfully installed."
+            ;;
+        *)
+            exit 1
+            ;;
+    esac
+else
+    echo "uv is already installed."
+fi
+
+exec uv sync
