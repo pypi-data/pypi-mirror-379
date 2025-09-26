@@ -1,0 +1,11 @@
+pyyaml>=6.0
+yt-dlp>=2025.1.15
+requests>=2.32.0
+pillow>=10.0.0
+colorama>=0.4.6
+tqdm>=4.66.0
+
+[dev]
+black>=24.0.0
+flake8>=7.0.0
+pytest>=8.0.0

@@ -1,0 +1,3 @@
+[console_scripts]
+thinkfic-slides = thinkfic_downloader.slides.cli:main
+thinkfic-video = thinkfic_downloader.video.cli:main
