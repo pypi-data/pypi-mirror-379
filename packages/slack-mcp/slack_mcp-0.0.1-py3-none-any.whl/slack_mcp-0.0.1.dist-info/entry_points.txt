@@ -1,0 +1,7 @@
+[console_scripts]
+release-intent = scripts.ci.release_intent:main
+slack-mcp-server = slack_mcp.mcp.entry:main
+slack-webhook-server = slack_mcp.webhook.entry:main
+
+[slack_mcp.backends.queue]
+memory = slack_mcp.backends.queue.memory:MemoryBackend
