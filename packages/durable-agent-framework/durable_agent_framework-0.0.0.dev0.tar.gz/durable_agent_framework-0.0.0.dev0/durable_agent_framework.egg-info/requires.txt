@@ -1,0 +1,9 @@
+
+[dev]
+flake8
+mypy
+pytest
+pytest-cov
+coverage
+pytest-instafail
+pre-commit
