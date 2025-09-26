@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pyvalidex/__init__.py
+pyvalidex/validator.py
+pyvalidex.egg-info/PKG-INFO
+pyvalidex.egg-info/SOURCES.txt
+pyvalidex.egg-info/dependency_links.txt
+pyvalidex.egg-info/top_level.txt
+test/test_validator.py
