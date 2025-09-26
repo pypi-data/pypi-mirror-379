@@ -1,0 +1,12 @@
+{% set sidebar_content %}
+  {% for tmpl in theme_sidebar_primary or [] %}
+    {% include tmpl %}
+  {% endfor %}
+{% endset %}
+
+{%- if sidebar_content|trim -%}
+<aside class="bz-sidebar-primary bz-sidebar-drawer">
+  <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="Toggle site navigation sidebar">
+  {{ sidebar_content }}
+</aside>
+{%- endif -%}
