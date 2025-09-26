@@ -1,0 +1,95 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block head_title_base %}{% if SITE_NAME %}{{ SITE_NAME }} | {% endif %}{% block head_title %}{% endblock %}{% endblock %}</title>
+        {% block viewport %}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% endblock %}
+
+        {% block style_base %}
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+                rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+            <link href="{% static "planet/planet.css" %}" rel="stylesheet">
+            {% block extra_style %}{% endblock %}
+        {% endblock %}
+
+        {% block extra_head %}{% endblock %}
+    </head>
+    <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
+        <header class="border-bottom">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <div class="container">
+                    {% block site_brand %}
+                    <a href="{% url 'planet:index' %}" class="navbar-brand text-success text-decoration-none">{{ SITE_NAME }}</a>
+                    {% endblock %}
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        {% block nav %}
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item"><a href="{% url 'planet:post-list' %}" class="nav-link text-success">{% trans "Posts" %}</a></li>
+                            <li class="nav-item"><a href="{% url 'planet:blog-list' %}" class="nav-link text-success">{% trans "Blogs" %}</a></li>
+                            <li class="nav-item"><a href="{% url 'planet:feed-list' %}" class="nav-link text-success">{% trans "Feeds" %}</a></li>
+                            <li class="nav-item"><a href="{% url 'planet:author-list' %}" class="nav-link text-success">{% trans "Authors" %}</a></li>
+                        </ul>
+                        <form class="d-flex mt-2 mt-md-0" role="search" method="GET" action="{% url 'planet:search' %}">
+                            <input name="q" class="form-control me-2" type="search" placeholder="{% trans 'Search' %}" aria-label="{% trans 'Search' %}">
+                            <select name="w" class="form-select me-2" aria-label="{% trans 'Search for...' %}">
+                                <option selected value="posts">{% trans 'Posts' %}</option>
+                                <option value="blogs">{% trans 'Blogs' %}</option>
+                                <option value="authors">{% trans 'Authors' %}</option>
+                            </select>
+                            <button class="btn btn-outline-success" type="submit">{% trans 'Search' %}</button>
+                        </form>
+                        {% endblock %}
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            {% block body %}
+            <div class="row">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    {% block breadcrumb %}
+                        <li class="breadcrumb-item"><a class="text-success" href="{% url 'planet:index' %}">{% trans "Home" %}</a></li>
+                    {% endblock %}
+                    {% block breadcrumb_section %}{% endblock %}
+                    {% block breadcrumb_detail %}{% endblock %}
+                    </ol>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xl-9 mb-4">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                    {% block right_column %}
+                    {% endblock %}
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+
+        <hr />
+        <footer>
+            <div class="container">
+            {% block footer %}{% endblock %}
+            </div>
+        </footer>
+
+        {% block script_base %}
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+            {% block extra_script %}{% endblock %}
+        {% endblock %}
+
+        {% block extra_body %}{% endblock %}
+    </body>
+</html>

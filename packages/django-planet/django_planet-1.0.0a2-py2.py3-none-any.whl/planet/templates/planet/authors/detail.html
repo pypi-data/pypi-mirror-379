@@ -1,0 +1,56 @@
+{% extends "planet/base.html" %}
+{% load i18n pagination_tags planet_tags %}
+
+{% block head_title %}{{ author.name }} :: {{ site.name }}{% endblock %}
+
+{% block extra_head %}
+    <meta name="title" content="{{ author.name }} :: {{ site.name }}" />
+    <meta name="description" content="Posts abouth Dajngo writen by {{ author.name }}" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="//{{ site.domain }}{{ author.get_absolute_url }}"/>
+{% endblock %}
+
+{% block breadcrumb_section %}
+    <li class="breadcrumb-item">
+        <a class="text-success" href="{% url 'planet:author-list' %}">{% trans 'Authors' %}</a>
+    </li>
+{% endblock %}
+{% block breadcrumb_detail %}
+    <li class="breadcrumb-item active" aria-current="page">{{ author.name }}</li>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ author.name }}</h1>
+    <div class="table-responsive px-0">
+        <table class="author details table table-bordered mb-4">
+            {% blogs_for_author author as author_blogs %}
+            {% for blog in author_blogs %}
+            <tr>
+              <th>{% trans 'Blog Info' %}</th>
+              <td><a class="text-success text-decoration-none" href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></td>
+            </tr>
+            {% endfor %}
+            {% for blog in author_blogs %}
+            <tr>
+              <th>{% trans 'Blog website' %}</th>
+              <td><a class="text-success text-decoration-none" target="_blank" href="{{ blog.url }}">{% trans 'Link' %}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="container px-0">
+    {% autopaginate posts 10 %}
+    {% for post in posts %}
+        <div class="post row">
+          {% include "planet/posts/details.html" %}
+        </div>
+    {% endfor %}
+    {% paginate %}
+    </div>
+{% endblock %}
+
+{% block right_column %}
+    {{ block.super }}
+    {% feeds_for_author author %}
+{% endblock %}

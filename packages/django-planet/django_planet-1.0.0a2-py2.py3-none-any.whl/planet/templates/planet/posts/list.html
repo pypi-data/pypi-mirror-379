@@ -1,0 +1,36 @@
+{% extends "planet/base.html" %}
+{% load i18n pagination_tags planet_tags %}
+
+{% block head_title %}
+  {% trans 'Django Blogs Aggregator' %}{{ block.super }} :: {{ site.name }}
+{% endblock %}
+
+{% block extra_head %}
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="{% blocktrans with site_name=site.name %}{{ site_name }} is a planet website aggregating the best Django blogs and content available around the web{% endblocktrans %}" />
+    <meta name="title" content="{% blocktrans with site_name=site.name %}{{ site_name }}: Django-related news &amp; blogs aggregator{% endblocktrans %}" />
+    <link rel="canonical" href="//{{ site.domain }}{% url 'planet:post-list' %}"/>
+{% endblock %}
+
+{% block breadcrumb_section %}
+    <li class="breadcrumb-item active" aria-current="page">{% trans 'Posts' %}</li>
+{% endblock %}
+
+{% block posts_class %}class="active"{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{% trans "What's new in Django community blogs?" %}</h1>
+    <div class="content pd-0">
+    {% autopaginate posts 10 %}
+    {% for post in posts %}
+        <div class="row post">
+            {% include "planet/posts/details.html" %}
+        </div>
+    {% endfor %}
+    {% paginate %}
+    </div>
+{% endblock %}
+
+{% block right_column %}
+    {% recent_blogs %}
+{% endblock %}

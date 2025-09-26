@@ -1,0 +1,19 @@
+{% load i18n %}
+<div class="card mb-4 border-0">
+  <div class="card-body p-0">
+    <h2 class="card-title">
+      <a target="_blank" class="text-success text-decoration-none" href="{{ post.url }}" title="{% trans 'Read more' %}">
+        {{ post.title|striptags|safe }}
+        </a>
+    </h2>
+    <p>
+      <span class="date">{{ post.date_published|date }}</span> &raquo; 
+      <a href="{{ post.feed.get_absolute_url }}" class="text-success text-decoration-none">{{ post.feed.title }}</a> &raquo; 
+      <a href="{{ post.get_absolute_url }}" class="text-success text-decoration-none" title="{% trans 'Read an archived version of' %} {{ post.title|safe }}">{% trans "[Archived Version]" %}</a>
+    </p>
+    <p class="card-text">
+      {{ post.content|safe|striptags|truncatechars_html:500 }}
+    </p>
+    <a target="_blank" href="{{ post.url }}" class="btn btn-success" title="{% trans 'Read ' %} {{ post.title|safe }}">Read More</a>
+  </div>
+</div>

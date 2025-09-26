@@ -1,0 +1,36 @@
+{% extends "planet/base.html" %}
+{% load i18n planet_tags %}
+
+{% block head_title %}
+  {{ post.title|safe }} :: {{ site.name }}
+{% endblock %}
+
+{% block extra_head %}
+    <meta name="title" content="{{ post.title|safe }} :: {{ site.name }}" />
+    <meta name="description" content="{% get_first_paragraph post.content as description %}{{ description }}" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="//{{ site.domain }}{{ post.get_absolute_url }}"/>
+{% endblock %}
+
+{% block breadcrumb_section %}
+    <li class="breadcrumb-item">
+        <a class="text-success" href="{% url 'planet:blog-list' %}">{% trans 'Blogs' %}</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a class="text-success" href="{{ post.feed.blog.get_absolute_url }}">{{ post.feed.blog.title }}</a>
+    </li>
+{% endblock %}
+{% block breadcrumb_detail %}
+    <li class="breadcrumb-item active" aria-current="page">{{ post.title|safe }}</li>
+{% endblock %}
+
+{% block content %}
+    <div class="content pd-0 post">
+        <div class="row">
+            {% include "planet/posts/full_details.html" %}
+        </div>
+        <div class="row">
+            <p>{{ post.content|safe }}</p>
+        </div>
+    </div>
+{% endblock %}
