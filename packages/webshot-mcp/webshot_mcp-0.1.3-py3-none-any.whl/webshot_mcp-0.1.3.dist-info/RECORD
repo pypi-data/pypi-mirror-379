@@ -1,0 +1,9 @@
+webshot_mcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webshot_mcp/cli.py,sha256=xrfnWrzrNwjUsJlXFzOawxfrmdB3ow34vr_A9DNXZE8,61
+webshot_mcp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webshot_mcp/server.py,sha256=lABCCCr91oVPjzb6JoL1HF_Nm6curASXtJfp0a8tAbo,28711
+webshot_mcp/stealth.js,sha256=p9IoSoF_V3T93_5a40X3ysGCpexeZmwfCANghVfCIpI,180462
+webshot_mcp-0.1.3.dist-info/METADATA,sha256=gkiuqAKLmW5eRUBMGY53gBq0F-d0L9hBxU5eZXdQ29w,5653
+webshot_mcp-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+webshot_mcp-0.1.3.dist-info/entry_points.txt,sha256=VR1d4DeSE00RVd7xdfXYZgqUvMwksckgwMgeCTcGiGw,62
+webshot_mcp-0.1.3.dist-info/RECORD,,
