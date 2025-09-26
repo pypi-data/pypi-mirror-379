@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: wbtn
+Version: 0.0.0a1
+Summary: The WBTN open file format
+Author: ilotoki0804
+Author-email: ilotoki0804 <ilotoki0804@gmail.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# The WBTN open file format
