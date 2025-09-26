@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include pyproject.toml
+recursive-include lens_reasoning_sdk *.py
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
