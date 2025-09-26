@@ -1,0 +1,7 @@
+affine
+h5py
+ipyleaflet
+leafmap
+numpy
+rioxarray
+xarray
