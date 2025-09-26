@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: modlib
+Version: 0.0.1
+Requires-Python: <3.14.0,>=3.11.0
+Description-Content-Type: text/markdown
+
+<h1 align='center'><b>MOL</b></h1>
+This is a test
