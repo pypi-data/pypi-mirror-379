@@ -1,0 +1,20 @@
+# UPAS Core Requirements
+# =====================
+# 
+# UPAS is designed to be lightweight with minimal dependencies for
+# maximum compatibility in industrial/embedded environments.
+#
+# Core installation: pip install upas
+# Full installation: pip install upas[full]
+#
+# Optional feature sets:
+# - pip install upas[analysis]  # PCAP analysis
+# - pip install upas[networking] # Network utilities  
+# - pip install upas[iot]       # MQTT, Serial protocols
+# - pip install upas[cli]       # Enhanced CLI features
+
+# Core dependencies - NONE!
+# UPAS core functionality uses only Python standard library
+# This ensures maximum compatibility and minimal installation footprint
+
+# Note: Optional dependencies are defined in setup.py and pyproject.toml
