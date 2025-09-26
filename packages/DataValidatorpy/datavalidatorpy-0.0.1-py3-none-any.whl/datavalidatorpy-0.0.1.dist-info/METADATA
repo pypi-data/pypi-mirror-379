@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: DataValidatorpy
+Version: 0.0.1
+Summary: una lbreria para validar datos personales y de contacto
+Home-page: https://github.com/gerarb1/pg2_parcial3.git
+Author: Gerardo Burgos
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
