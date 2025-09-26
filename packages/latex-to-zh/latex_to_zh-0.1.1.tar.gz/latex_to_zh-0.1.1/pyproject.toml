@@ -1,0 +1,25 @@
+[project]
+name = "latex-to-zh"
+version = "0.1.1"
+description = ""
+authors = [
+    {name = "yingzhe.zhang",email = "zhangyingzhe@diyiedu.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "antlr4-python3-runtime (>=4.13.2,<5.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+
+[project.urls]
+Homepage = "https://github.com/ripest/LatexToZh"
+Documentation = "https://github.com/ripest/LatexToZh"
+"Source Code" = "https://github.com/ripest/LatexToZh"
+
