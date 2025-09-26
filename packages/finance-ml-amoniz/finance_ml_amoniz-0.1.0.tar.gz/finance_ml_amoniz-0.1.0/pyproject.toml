@@ -1,0 +1,22 @@
+[project]
+name = "finance-ml-amoniz"
+version = "0.1.0"
+description = "Projet d'exercice ML en finance"
+authors = [
+    { name = "antoine31", email = "antoine.moniz@dauphine.eu" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy"
+]
+
+[tool.poetry]
+packages = [{ include = "my_package", from = "src" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
