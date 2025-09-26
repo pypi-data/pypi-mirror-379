@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: takucyrpt
+Version: 1.0.0
+Summary: A simple and comprehensive text encryption/decryption library
+Home-page: https://github.com/tarun922/takucyrpt
+Author: Tarun Kumar
+Author-email: Tarun Kumar <tarunkum8800@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/tarun922/takucyrpt
+Project-URL: Bug Reports, https://github.com/tarun922/takucyrpt/issues
+Project-URL: Source, https://github.com/tarun922/takucyrpt
+Keywords: encryption,decryption,cipher,text,security
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Text Processing
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Takucyrpt
+
+A simple encryption and decryption module for text.
+
+## Installation
+
+```bash
+pip install takucyrpt
+```
+
+## Usage
+
+```python
+from takucyrpt import encrypt, decrypt
+
+text = "Hello, World!"
+key = "mykey"
+
+encrypted = encrypt(text, key)
+decrypted = decrypt(encrypted, key)
+
+print(f"Original: {text}")
+print(f"Encrypted: {encrypted}")
+print(f"Decrypted: {decrypted}")
+```
+
+## Functions
+
+### encrypt(text, key)
+Encrypts the given text using a simple XOR cipher with the provided key.
+
+### decrypt(ciphertext, key)
+Decrypts the given ciphertext using a simple XOR cipher with the provided key.
+
+## Example
+
+```python
+from takucyrpt import encrypt, decrypt
+
+# Encrypt a message
+message = "This is a secret message"
+key = "secretkey"
+encrypted_message = encrypt(message, key)
+print(f"Encrypted: {encrypted_message}")
+
+# Decrypt the message
+decrypted_message = decrypt(encrypted_message, key)
+print(f"Decrypted: {decrypted_message}")
+```
+
+## License
+
+MIT
+
+## Author
+
+Takuya
+
+## Changelog
+
+### 1.0.0
+- Initial release
+- Basic encryption and decryption functions
