@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "choked"
+version = "0.2.5"
+description = "A Python rate limiting library"
+requires-python = ">=3.8"
+dependencies = [
+    "redis",
+    "python-dotenv",
+    "pytest-asyncio",
+    "requests",
+    "tiktoken",
+    "transformers",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["choked*"]
