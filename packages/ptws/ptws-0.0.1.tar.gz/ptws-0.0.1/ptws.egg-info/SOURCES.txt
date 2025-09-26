@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+ptws/__init__.py
+ptws.egg-info/PKG-INFO
+ptws.egg-info/SOURCES.txt
+ptws.egg-info/dependency_links.txt
+ptws.egg-info/top_level.txt

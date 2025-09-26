@@ -1,0 +1,21 @@
+[project]
+name = "ptws"
+version = "0.0.1"
+description = "Official placeholder for the PenTest.WS Python packages. Reserved by PenTest.WS."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "PenTest.WS", email = "support@pentest.ws" }]
+keywords = ["pentest", "security", "automation", "ptws"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Information Technology",
+  "Topic :: Security",
+]
+# No runtime deps yet
+
+[project.urls]
+Homepage = "https://pentest.ws"
+Source = "https://github.com/PenTestWS"
