@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+sssm/__init__.py
+sssm/sssm.py
+sssm.egg-info/PKG-INFO
+sssm.egg-info/SOURCES.txt
+sssm.egg-info/dependency_links.txt
+sssm.egg-info/requires.txt
+sssm.egg-info/top_level.txt
+sssm/saved_models/__init__.py
+sssm/saved_models/model.pt
+sssm/saved_models/model_V1.pt
+sssm/saved_models/model_V2.pt
+tests/test_sssm.py
