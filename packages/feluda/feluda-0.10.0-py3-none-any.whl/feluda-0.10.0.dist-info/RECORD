@@ -1,0 +1,16 @@
+feluda/__init__.py,sha256=ZyRLPeStJHI3bpr0WUz87tsRQboFFU0rXO-wl_69GDw,92
+feluda/config.py,sha256=pVCqr4AWCqza-V3ygyhRoDxpHXR7XEb8iOB6RdDPzbQ,2618
+feluda/feluda.py,sha256=gj8cMp6ZM-NwyasgRWPa88Jn0GmSJ3D7kZSe1d8hhzI,440
+feluda/logger.py,sha256=LaIu79KEovSQmX7UAcFn73X_lol3pkMR-67eMJPFcOA,1181
+feluda/operator.py,sha256=93Q28S4TO3qHhwIQ2eUQWjFQrMfIl9eYNh7quxFHJH8,516
+feluda/factory/__init__.py,sha256=AJsisstfOJinD_f3vQcCfu3P_JRJ298XSmM6rLGWUXg,1850
+feluda/factory/audio_factory.py,sha256=qArXcTlNjPSJjWsHXPLnSK5lII-53vCcNghNAH_Qe54,2754
+feluda/factory/image_factory.py,sha256=5drCQ9NPjt-rC7N0iq-Gv7-nxiSJ9lRfLBPUl_uACBA,2810
+feluda/factory/s3_factory.py,sha256=hGyHWfmV4Liy0lXcLZBxJOkc05GXF9UwzeyCVN0-DSY,982
+feluda/factory/text_factory.py,sha256=Y514ZOtPJfgarbJ7zDI0INqG9h7g_JLhXOd8gVn_Wyk,1088
+feluda/factory/video_factory.py,sha256=uc43Fnbeeh5ZhfzVfKqCfU5pmCnA4HWCDOF9nyYSRqc,1979
+feluda/operators/__init__.py,sha256=MkYdwSZ83WTHLh2slW84ydO73wWEjxIOnjMTC8HxxxI,1498
+feluda-0.10.0.dist-info/METADATA,sha256=juvVeKoZ0qmXVnQMZvhIjuPeS50Nsork_Bv2CfgZkd0,49568
+feluda-0.10.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+feluda-0.10.0.dist-info/licenses/LICENSE.md,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+feluda-0.10.0.dist-info/RECORD,,
