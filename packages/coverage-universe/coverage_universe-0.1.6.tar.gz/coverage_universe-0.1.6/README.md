@@ -1,0 +1,100 @@
+# Coverage Universe
+
+[![CI](https://github.com/JacobKline/coverage_universe/actions/workflows/ci.yml/badge.svg)](https://github.com/JacobKline/coverage_universe/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/JacobKline/coverage_universe)](https://github.com/JacobKline/coverage_universe/releases)
+[![PyPI](https://img.shields.io/pypi/v/coverage-universe)](https://pypi.org/project/coverage-universe/)
+[![Codecov](https://codecov.io/gh/JacobKline/coverage_universe/branch/main/graph/badge.svg)](https://codecov.io/gh/JacobKline/coverage_universe)
+
+Compute and report coverage over a modeled test universe. Turn a domain model (UDL) into atomic coverage targets, ingest test runs, compute coverage (including pairwise and numeric boundaries), and render reports.
+
+## Features
+- UDL normalization for enum/number parameters with partitions and optional boundaries
+- Atom generation: partitions, numeric boundary atoms, and t2/t3 (pairwise/3-wise) atoms with simple constraints filtering
+- Coverage mapping per test, totals by kind, and weighted metrics
+- Optional filters: only passing or only failing tests
+- Configurable numeric boundary epsilon
+- Per-parameter and per-tag breakdowns
+- HTML report and JSON output
+- Optional JSON Schema validation for UDL and run inputs
+
+## Installation
+- Editable install (recommended for development):
+  - `pip install -e .`
+- Optional (enables schema validation):
+  - `pip install jsonschema`
+
+## Quick Start
+1) Build atoms from a UDL JSON
+- `coverage-universe build-universe --udl examples/udl_example.json --out examples/atoms.json --validate`
+
+2) Ingest a test run
+- `coverage-universe ingest --run examples/run_example.json --out examples/run.norm.json --validate`
+
+3) Compute coverage
+- `coverage-universe compute --atoms examples/atoms.json --evidence examples/run.norm.json --out examples/coverage.json --only-passing`
+
+4) Render report
+- `coverage-universe report --coverage examples/coverage.json --html examples/coverage.html`
+
+Open `examples/coverage.html` in a browser.
+
+## CLI Reference
+- `build-universe`
+  - `--udl PATH` (required): UDL JSON
+  - `--out PATH` (required): Output atoms bundle JSON
+  - `--validate` (optional): Validate UDL against schema (needs `jsonschema`)
+
+- `ingest`
+  - `--run PATH` (required): Test run JSON
+  - `--out PATH` (required): Output normalized run JSON
+  - `--validate` (optional): Validate run against schema (needs `jsonschema`)
+
+- `compute`
+  - `--atoms PATH` (required): Atoms bundle from `build-universe`
+  - `--evidence PATH` (required): Ingested run JSON
+  - `--out PATH` (required): Coverage JSON output
+  - `--only-passing` (optional): Use only passing tests
+  - `--only-failing` (optional): Use only failing tests (mutually exclusive with `--only-passing`)
+  - `--boundary-eps FLOAT` (optional): Epsilon for numeric boundary hits (default `1e-9`)
+
+- `report`
+  - `--coverage PATH` (required): Coverage JSON
+  - `--html PATH` (optional): Write HTML report to this path; if omitted, prints JSON to stdout
+
+## Data Formats
+- UDL JSON (see example `examples/udl_example.json` and schema `schemas/udl.schema.json`)
+  - Parameters:
+    - `enum`: `{ "name": ..., "type": "enum", "partitions": [{"value": ... , "weight": 1.0}] }`
+    - `number`: `{ "name": ..., "type": "number", "partitions": [{"range": [min, max], "class": "label", "weight": 1.0}], "boundary": {"include": ["min","max","just-inside","just-outside"]}}`
+  - Optional: `constraints`: basic `if`/`then` objects (MVP equality / not-equals)
+- `coverage`: `{ "t_wise": 0|2|3, "include_boundary": true|false }`
+
+- Run JSON (see example `examples/run_example.json` and schema `schemas/run.schema.json`)
+  - `{ "run_id": "...", "tests": [{ "test_id": "...", "outcome": "passed|failed|skipped|...", "inputs": { param: value, ... } }] }`
+
+## Coverage Output (JSON)
+Top-level keys include:
+- `totals`: by kind (`partition`, `t2`, `boundary`) with covered/total and weighted sums
+- `covered_count`, `total_atoms`, `top_uncovered`
+- `per_test`: mapping per test with covered atoms and chosen partitions
+- `by_parameter`: per-parameter partition and boundary summaries and uncovered partition atoms
+- `by_tag`: partition summaries aggregated by parameter tag
+- `outcomes`: counts per outcome category; `tests_total`, `tests_considered`, `filter`, `boundary_eps`
+
+## Examples
+- Example UDL: `examples/udl_example.json`
+- Example runs: `examples/run_example.json`, `examples/run_example_eps.json`
+- Generated outputs: coverage JSON/HTML variants under `examples/`
+
+## Development
+- Code lives under the `coverage_universe` package (this directory)
+- Optional validators: `pip install jsonschema`
+- Packaging: `pyproject.toml` defines an entry point `coverage-universe`
+- Ignored artifacts: see `.gitignore`
+
+## Notes
+- Numeric boundary hits are exact by default. Use `--boundary-eps` to match values within ±epsilon of min/max and their just-inside/outside heuristics.
+- Pairwise atoms (T2) consider simple constraints to drop contradictory combinations.
+
+## License
+Apache-2.0. See `LICENSE` for details.
