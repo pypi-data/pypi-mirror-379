@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: online-changepoint-algorithms
+Version: 0.0.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: tqdm ; extra == 'progress'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-benchmark ; extra == 'test'
+Provides-Extra: progress
+Provides-Extra: test
+License-File: LICENSE
+Keywords: changepoint,detection,online detection
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# online-changepoint-algorithms
+A collection of algorithms for online change point detection.
+
