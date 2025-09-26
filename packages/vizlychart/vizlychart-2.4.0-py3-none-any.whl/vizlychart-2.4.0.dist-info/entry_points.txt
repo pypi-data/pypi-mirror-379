@@ -1,0 +1,4 @@
+[console_scripts]
+vizlychart-demo = vizlychart.cli:demo_command
+vizlychart-gallery = vizlychart.cli:gallery_command
+vizlychart-server = vizlychart.cli:server_command
