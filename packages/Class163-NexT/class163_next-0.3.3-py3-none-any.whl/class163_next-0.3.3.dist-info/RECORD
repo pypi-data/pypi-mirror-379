@@ -1,0 +1,13 @@
+class163_next-0.3.3.dist-info/licenses/LICENSE,sha256=TfPDBt3ar0uv_f9cqCDMZ5rIzW3CY8anRRd4PkL6ejs,34522
+models/__init__.py,sha256=CjofhS_bptS5NEPiJ603rAGNOnb_qjMgcKDmm5gQEOs,3031
+models/music.py,sha256=ngOHu2J38LEsTuC6ez3uL94Qp_KNNnBq1dbmst0H8BM,8887
+models/playlist.py,sha256=82LMjohfVHWPvBeMpwBl6PpWe75FLgU0-ZNQIx_VRVA,5363
+utils/__init__.py,sha256=7m7RCrgU6t2iEVtbKCkl5bnivgcJo2zH4MafVJ8kPBw,60
+utils/cookies_manager.py,sha256=v2espXjkLr82KX6fqvsgkRLYpv6oJcVCNsAjGOE97nA,1228
+utils/playwright_login.py,sha256=_aZbQ36Ehrm533JjWCI6u5hUrqxh51hqpf6bujmXLkU,1898
+utils/save_run.py,sha256=M_zUT-_9BzQHrqgqdnkjC1Rt-Snh7bg-juXxYXRcicY,331
+utils/selenium_login.py,sha256=elU_1ypo6DQ3LaP1ggl1vcRs4PdnDqfene2fKFj2Kzw,1895
+class163_next-0.3.3.dist-info/METADATA,sha256=cIrPNyXREiR2zqP08z9orNOQZfiPcEDH7uyuDcVtnmk,6446
+class163_next-0.3.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+class163_next-0.3.3.dist-info/top_level.txt,sha256=PEnpP7HPLWmYdjnl2fSd6yx-qVuf4YHu0fU6bSSdhA0,13
+class163_next-0.3.3.dist-info/RECORD,,
