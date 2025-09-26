@@ -1,0 +1,11 @@
+entari_plugin_database-0.2.0.dist-info/METADATA,sha256=slobSOSg-VddjzfUjx2n2q227nyNP9NsR8GKRuE73A0,3175
+entari_plugin_database-0.2.0.dist-info/WHEEL,sha256=9P2ygRxDrTJz3gsagc0Z96ukrxjr-LFBGOgv3AuKlCA,90
+entari_plugin_database-0.2.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+entari_plugin_database-0.2.0.dist-info/licenses/LICENSE,sha256=JOMfrvYE3aMIr_tzbeSY-8BiIB_rLB56wvM-GWkdeBg,1084
+entari_plugin_database/README.md,sha256=nW3JxIe_A8-cW03SekVHGGIGGl-MfQvL8C5p0ZK6Bco,2744
+entari_plugin_database/__init__.py,sha256=zDz-jbZLZXnMKFfS1LnimZalzpitYOxoEFycsLB1y0A,5547
+entari_plugin_database/config.py,sha256=ZwNfL2T-0gCcwQmgztLLaf5H-x0jr9wD6AlwgUfPrr4,4674
+entari_plugin_database/migration.py,sha256=r6eePg2Xt2nvIyzxRRCxtPwRA5gbRU0puhlmFVcXHDo,19749
+entari_plugin_database/param.py,sha256=7YLzUqt2J7CMBVbq2EKxv9BtWQsM4agBvsg0OEcjmc4,8465
+entari_plugin_database/utils.py,sha256=cY3DHRnxKx1bPSG0kegLJYz1OqZ4GSfqRyX_9dk6IWE,87
+entari_plugin_database-0.2.0.dist-info/RECORD,,
