@@ -1,0 +1,3 @@
+[console_scripts]
+visuscript = visuscript.cli.visuscript_cli:main
+vs_slideshow = visuscript.slideshow.cli:main
