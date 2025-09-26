@@ -1,0 +1,104 @@
+[build-system]
+requires = ["setuptools>=75.0", "setuptools-scm>=9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinlp"
+version = "0.10.0"
+description = "Performant and production-ready NLP pipelines for clinical text written in Dutch"
+readme = "README.md"
+authors = [ 
+  {name = "Vincent Menger", email="v.j.menger-2@umcutrecht.nl"},
+  {name = "Bram van Es", email="b.vanes-3@umcutrecht.nl"}
+]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.11"
+dependencies = [
+  "click ~= 8.3",
+  "intervaltree ~= 3.1",
+  "makefun ~= 1.16",
+  "numpy ~= 2.3",
+  "pandas ~= 2.3",
+  "pydantic ~= 2.11",
+  "spacy ~= 3.8",
+]
+
+[project.scripts]
+clinlp = "clinlp.cli:cli"
+
+[project.urls]
+Documentation = "https://clinlp.readthedocs.io/en/latest/"
+Repository = "https://github.com/umcu/clinlp"
+Issues = "https://github.com/umcu/clinlp/issues"
+Changelog = "https://github.com/umcu/clinlp/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+metrics = [
+  "nervaluate == 0.1.8",
+  "scikit-learn ~= 1.7",
+]
+transformers = [
+    "transformers[torch] ~= 4.56",
+]
+apps = [
+    "dash-bootstrap-components ~= 2.0",
+    "dash ~= 3.2",
+]
+
+[dependency-groups]
+dev = [
+  "emoji ~= 2.15",
+  "furo ~= 2025.7",
+  "myst-parser ~= 4.0",
+  "poethepoet>=0.37.0",
+  "pytest ~= 8.4",
+  "pytest-cov ~= 7.0",
+  "pytest-xdist ~= 3.8",
+  "ruff ~= 0.13",
+  "sphinx ~= 8.2",
+  "sphinx-new-tab-link ~= 0.8",
+  "toml ~= 0.10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=clinlp --cov-fail-under=85"
+
+[tool.ruff]
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "F", "E", "W", "C90", "I", "N", "D", "UP", "ANN", "S",
+    "BLE", "FBT", "B", "C4", "EM", "PIE", "T20",
+    "PT", "RSE", "RET", "SIM", "ARG", "PTH", "ERA",
+    "TRY", "PERF", "RUF"
+]
+ignore = [
+    "ANN002", "ANN003"
+]
+
+[tool.ruff.lint.per-file-ignores]
+"docs/*" = ["D"]
+"tests/*" = ["D", "S", "ANN"]
+"scripts/*" = ["D", "T20"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.poe.executor]
+type = "virtualenv"
+location = ".venv"
+
+[tool.poe.tasks]
+test = "pytest -n auto"
+format = "ruff format"
+check = "ruff check"
+_docs_build_api = "sphinx-apidoc --module-first --force --templatedir=docs/_templates -o docs/source/api/clinlp src"
+_docs_build_sphinx = "sphinx-build docs/source docs/_build/html -c docs/"
+_docs_emojize = "python docs/emojize.py docs/_build/html"
+build_docs = ["_docs_build_api", "_docs_build_sphinx", "_docs_emojize"]
