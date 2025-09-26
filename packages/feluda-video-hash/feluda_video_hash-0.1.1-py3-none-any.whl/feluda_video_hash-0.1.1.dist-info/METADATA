@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: feluda-video-hash
+Version: 0.1.1
+Summary: A Feluda operator for generating video perceptual hashes using TMK+PDQF algorithm
+Requires-Python: >=3.10
+Requires-Dist: feluda[video]
+Requires-Dist: ffmpeg-python>=0.2.0
+Requires-Dist: wget>=3.2

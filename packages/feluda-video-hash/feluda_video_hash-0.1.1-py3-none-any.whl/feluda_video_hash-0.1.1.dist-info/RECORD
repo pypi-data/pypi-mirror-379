@@ -1,0 +1,10 @@
+./.gitignore,sha256=l79r3P9iMynbjcThcaP60rXHBkHQwwwEV5SIASK4PIA,1945
+./PKG-INFO,sha256=pxBG9TX6X8GjUFib5uAXd69vOXa8Y9Pd5z15ZFXCPXU,266
+./README.md,sha256=PsKUPJDzZSsZdvr-1iE0YY_6ZAr0Dacrlu0qSIFr_JY,2022
+./__init__.py,sha256=ABx5leAIbXeIhDtrj0P7bT5IjT65wVCt82N62mH1NdE,59
+./pyproject.toml,sha256=CfEJABJ9FDtYsOKd4qsqZm4ss2Sn-cqGdI5bhqz6vdw,560
+./test.py,sha256=Le5HhG_HZr7yW9qMPPdL3zOlbJ9pUNtFBNvgS3xgMrQ,3527
+./video_hash.py,sha256=Fx_PrKkVTv_C08bTA6DVxUq_XwKE3Z7pWVQ63LUNGHo,5691
+feluda_video_hash-0.1.1.dist-info/METADATA,sha256=pxBG9TX6X8GjUFib5uAXd69vOXa8Y9Pd5z15ZFXCPXU,266
+feluda_video_hash-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+feluda_video_hash-0.1.1.dist-info/RECORD,,
