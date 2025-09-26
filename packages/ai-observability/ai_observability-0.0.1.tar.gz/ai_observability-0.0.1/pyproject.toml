@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-observability"
+version = "0.0.1"
+description = "Whitecircle.ai observability primitives for tracing, logging, and audit trails."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "White Circle" }]
+keywords = ["whitecircle.ai", "ai", "observability", "tracing", "logging", "audit"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 3 - Alpha"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_observability"]
+
+
