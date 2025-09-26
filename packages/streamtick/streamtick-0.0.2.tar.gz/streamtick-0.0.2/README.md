@@ -1,0 +1,53 @@
+Streamtick: Dynamic Stock Analysis & ARIMA Forecasting
+Streamtick is a Python library that provides a powerful, Streamlit-based dashboard for performing time-series analysis and ARIMA forecasting on stock data. It allows you to visualize historical trends, generate future price forecasts with Monte Carlo simulations, and create qualitative reports to evaluate your model's performance.
+
+Key Features
+Dynamic UI: A responsive, interactive dashboard powered by Streamlit.
+
+Stock Data Acquisition: Fetches historical stock data from Yahoo Finance for any ticker.
+
+ARIMA Modeling: Automatically builds and fits optimized ARIMA models to stock data.
+
+Future Forecasting: Generates deterministic forecasts and Monte Carlo simulations for future price paths.
+
+Qualitative Reports: Creates detailed reports on model performance based on key metrics (AIC, BIC, RMSE, etc.).
+
+Installation
+You can install the streamtick library directly from the Python Package Index (PyPI) using pip:
+
+pip install streamtick
+
+How to Use
+To use Streamtick, simply create a Python file (e.g., app.py) and import the main components, tick_arima and ArimaReport. You can then call these functions to render the dashboards in your application.
+
+Here is a simple example:
+
+import streamlit as st
+from streamtick import tick_arima, ArimaReport
+
+def main():
+    st.title("Streamtick Example Dashboard")
+    st.markdown("This dashboard demonstrates the `tick_arima` and `ArimaReport` components.")
+
+    # Section 1: Dynamic Stock Analysis & Forecast
+    st.header("1. Dynamic Stock ARIMA Forecast")
+    tick_arima()
+
+    st.write("---")
+
+    # Section 2: ARIMA Model Evaluation Report
+    st.header("2. ARIMA Model Evaluation Report Generator")
+    st.markdown("Use this component to generate a qualitative report based on your model's metrics.")
+    ArimaReport()
+
+if __name__ == "__main__":
+    main()
+
+Save this file and run it from your terminal:
+
+streamlit run app.py
+
+This will launch a web browser displaying the interactive dashboard.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
