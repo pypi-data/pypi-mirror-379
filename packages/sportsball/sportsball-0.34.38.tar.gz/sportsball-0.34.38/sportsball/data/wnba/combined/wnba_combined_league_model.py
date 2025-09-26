@@ -1,0 +1,120 @@
+"""WNBA combined league model."""
+
+# pylint: disable=line-too-long
+from scrapesession.scrapesession import ScrapeSession  # type: ignore
+
+from ...combined.combined_league_model import CombinedLeagueModel
+from ...league import League
+from ..espn.wnba_espn_league_model import WNBAESPNLeagueModel
+from ..oddsportal.wnba_oddsportal_league_model import WNBAOddsPortalLeagueModel
+
+MERCURY = "11"
+LIBERTY = "9"
+MYSTICS = "16"
+ROCKERS = "2"
+MONARCHS = "13"
+SPARKS = "6"
+COMETS = "4"
+STARZZ = "15"
+LYNX = "8"
+STING = "1"
+MIRACLE = "10"
+SHOCK = "3"
+SOL = "7"
+STORM = "14"
+FIRE = "12"
+FEVER = "5"
+WEST = "99"
+EAST = "98"
+SUN = "18"
+SILVER_STARS = "17"
+TEAM_USA = "97"
+TEAM_WNBA = "96"
+SKY = "19"
+DREAM = "20"
+WNBA_TEAM_IDENTITY_MAP: dict[str, str] = {
+    # ESPN
+    "11": MERCURY,
+    "9": LIBERTY,
+    "16": MYSTICS,
+    "2": ROCKERS,
+    "13": MONARCHS,
+    "6": SPARKS,
+    "4": COMETS,
+    "15": STARZZ,
+    "8": LYNX,
+    "1": STING,
+    "10": MIRACLE,
+    "3": SHOCK,
+    "7": SOL,
+    "14": STORM,
+    "12": FIRE,
+    "5": FEVER,
+    "99": WEST,
+    "98": EAST,
+    "18": SUN,
+    "17": SILVER_STARS,
+    "97": TEAM_USA,
+    "96": TEAM_WNBA,
+    "19": SKY,
+    "20": DREAM,
+}
+MADISON_SQUARE_GARDEN = "1830"
+CAPITAL_ONE_ARENA = "1823"
+QUICKEN_LOANS_ARENA = "3417"
+CRYPTO_COM_ARENA = "1841"
+TARGET_CENTER = "2029"
+THE_PALACE_OF_AUBURN_HILLS = "3419"
+KEY_ARENA = "2184"
+AMERICAN_AIRLINES_ARENA = "3438"
+PHX_ARENA = "1949"
+ROSE_GARDEN = "3423"
+MOHEGAN_SUN_ARENA = "2160"
+FROST_BANK_CENTER = "780"
+WNBA_VENUE_IDENTITY_MAP: dict[str, str] = {
+    # ESPN
+    "1830": MADISON_SQUARE_GARDEN,
+    "1823": CAPITAL_ONE_ARENA,
+    "3417": QUICKEN_LOANS_ARENA,
+    "1841": CRYPTO_COM_ARENA,
+    "2029": TARGET_CENTER,
+    "3419": THE_PALACE_OF_AUBURN_HILLS,
+    "2184": KEY_ARENA,
+    "3438": AMERICAN_AIRLINES_ARENA,
+    "1949": PHX_ARENA,
+    "3423": ROSE_GARDEN,
+    "2160": MOHEGAN_SUN_ARENA,
+    "780": FROST_BANK_CENTER,
+}
+WNBA_PLAYER_IDENTITY_MAP: dict[str, str] = {}
+
+
+class WNBACombinedLeagueModel(CombinedLeagueModel):
+    """WNBA combined implementation of the league model."""
+
+    def __init__(self, session: ScrapeSession, league_filter: str | None) -> None:
+        super().__init__(
+            session,
+            League.WNBA,
+            [
+                WNBAESPNLeagueModel(session, position=0),
+                WNBAOddsPortalLeagueModel(session, position=1),
+            ],
+            league_filter,
+        )
+
+    @classmethod
+    def team_identity_map(cls) -> dict[str, str]:
+        return WNBA_TEAM_IDENTITY_MAP
+
+    @classmethod
+    def venue_identity_map(cls) -> dict[str, str]:
+        return WNBA_VENUE_IDENTITY_MAP
+
+    @classmethod
+    def player_identity_map(cls) -> dict[str, str]:
+        return WNBA_PLAYER_IDENTITY_MAP
+
+    @classmethod
+    def name(cls) -> str:
+        return "wnba-combined-league-model"
