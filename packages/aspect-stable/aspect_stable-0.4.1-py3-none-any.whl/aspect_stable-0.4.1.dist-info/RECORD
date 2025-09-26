@@ -1,0 +1,14 @@
+aspect/__init__.py,sha256=0T-cLKE-gu6NJ4mWf6are_6zgCMyLRRyfQs80F2tVIc,778
+aspect/aspect.toml,sha256=DzjPQEF9BVezFgFYDP6XbW90Giw-vfc1brx4ohAWCm8,4949
+aspect/changelog.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aspect/io.py,sha256=18FKUFvQ8knlzK70WUpCWM20quI7uzljJJYXgcq_Y7Q,2478
+aspect/plots.py,sha256=FY3lpLpm_yRnUqsswdmcBEGxjrPSzE9OSRXNArMZbEk,13729
+aspect/tools.py,sha256=ixT0YJIBxWkNSTxpY3HU1-2QjHxUAlUWuqUQ2jvu_f0,4871
+aspect/trainer.py,sha256=VyOA2CxITUeFb-Hhmk4oY5ZJ8_CJosmFar4ExhaJfT8,4557
+aspect/workflow.py,sha256=aUcEOFxZ21cip5Y6gh8k20_u9Sd4w54wDwsXucoNfKk,14628
+aspect/models/aspect_min-max_12_pixels_v6_model.joblib,sha256=8tf92wP6QExo8D7UUhp3Vjey4L8_pT-dnAc6SDAN6JA,2056289
+aspect/models/aspect_min-max_12_pixels_v6_model.toml,sha256=lEBOi8EjK4W-7RhioqjgFnC97jy-hhAmZp0eAZb9iRY,1550
+aspect_stable-0.4.1.dist-info/METADATA,sha256=pDUcwHp6R_XK7bhmDKlxbY20gaAU1-hTQZR9XkgOuJ0,1296
+aspect_stable-0.4.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+aspect_stable-0.4.1.dist-info/top_level.txt,sha256=RknseycB7xet8TKNMnAzNEdvIcRwUWffKDxYxGimWO8,7
+aspect_stable-0.4.1.dist-info/RECORD,,
