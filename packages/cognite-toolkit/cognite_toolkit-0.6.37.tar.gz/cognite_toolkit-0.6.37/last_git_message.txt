@@ -1,0 +1,24 @@
+Extraction pipeline bug fix (#2015)
+
+# Description
+
+Small bug in the YAML spec for extraction pipelines. [API
+Spec](https://api-docs.cognite.com/20230101/tag/Extraction-Pipelines/operation/createExtPipes#!path=items/notificationConfig/allowedNotSeenRangeInMinutes&t=request)
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Fixed
+
+- When running `cdf build` Toolkit no longer give warnings on extraction
+pipelines for unused field allowedNotSeenRangeInMinutes. For example:
+`In notificationConfig unused field:
+'allowedNotSeenRangeInMinutes'`
+
+## templates
+
+No changes.
