@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qrs32lib"
+version = "0.1.0"
+description = "Quantum Resonance Search (QRS) library with up to 32-qubit models"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name="Abhinandan Bhatt", email="abhinandanbhatt1997@gmail.com" },
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+dependencies = [
+  "torch",
+  "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/abhinandanbhatt1997/qrs32_project"
+Issues = "https://github.com/abhinandanbhatt1997/qrs32_project/issues"

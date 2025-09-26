@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+src/qrs32lib/__init__.py
+src/qrs32lib/model.py
+src/qrs32lib.egg-info/PKG-INFO
+src/qrs32lib.egg-info/SOURCES.txt
+src/qrs32lib.egg-info/dependency_links.txt
+src/qrs32lib.egg-info/requires.txt
+src/qrs32lib.egg-info/top_level.txt
+tests/test_basic.py

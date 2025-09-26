@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: qrs32lib
+Version: 0.1.0
+Summary: Quantum Resonance Search (QRS) library with up to 32-qubit models
+Home-page: https://github.com/yourusername/qrs32_project
+Author: Abhinandan Bhatt
+Author-email: Abhinandan Bhatt <abhinandanbhatt1997@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/abhinandanbhatt1997/qrs32_project
+Project-URL: Issues, https://github.com/abhinandanbhatt1997/qrs32_project/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# qrs32lib
+
+A Python library for **Quantum Resonance Search (QRS)** simulations up to 32 qubits.  
+
+## Install
+```bash
+pip install qrs32lib
