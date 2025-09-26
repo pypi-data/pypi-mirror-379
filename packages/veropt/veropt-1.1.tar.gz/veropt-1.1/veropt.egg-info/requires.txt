@@ -1,0 +1,11 @@
+numpy
+torch
+gpytorch
+botorch
+dill
+scipy
+plotly
+dash
+pydantic
+xarray
+tqdm
