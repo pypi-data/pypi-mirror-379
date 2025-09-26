@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/seqtrainer/__init__.py
+src/seqtrainer/_autordf2gml-tb.py
+src/seqtrainer/_autordf2gml.py
+src/seqtrainer/config-helper.py
+src/seqtrainer/dataset_builder.py
+src/seqtrainer/gnn.py
+src/seqtrainer/preprocessing.py
+src/seqtrainer/pwm.py
+src/seqtrainer.egg-info/PKG-INFO
+src/seqtrainer.egg-info/SOURCES.txt
+src/seqtrainer.egg-info/dependency_links.txt
+src/seqtrainer.egg-info/requires.txt
+src/seqtrainer.egg-info/top_level.txt
