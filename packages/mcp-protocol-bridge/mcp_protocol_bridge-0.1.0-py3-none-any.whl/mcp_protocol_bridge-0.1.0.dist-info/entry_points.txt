@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-protocol-bridge = mcp_protocol_bridge:main
