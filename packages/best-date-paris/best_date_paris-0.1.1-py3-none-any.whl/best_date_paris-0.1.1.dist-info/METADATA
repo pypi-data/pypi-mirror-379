@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: best-date-paris
+Version: 0.1.1
+Summary: Une commande qui liste les meilleurs spots pour un date à Paris
+Author-email: galagain <calvin@galagain.com>
+License: MIT
+Project-URL: Homepage, https://github.com/galagain/best-date-paris-cli
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# best-date-paris-cli
+Une petite commande qui affiche des idées de rendez-vous à Paris
