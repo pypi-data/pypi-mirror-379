@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: convolved-noise
+Version: 0.1
+Summary: Blurring gaussian white noise to create spatially correlated random fields.
+Home-page: https://github.com/fcseidl/convolved-noise/
+Author: Frank Seidl
+Author-email: frankcseidl@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
