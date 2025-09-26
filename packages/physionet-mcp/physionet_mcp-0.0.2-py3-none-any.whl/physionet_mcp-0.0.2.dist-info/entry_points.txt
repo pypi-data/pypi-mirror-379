@@ -1,0 +1,2 @@
+[console_scripts]
+physionet-mcp = physionet_mcp.mcp_server:main
