@@ -1,0 +1,22 @@
+{
+    "services": {
+        "log": {
+            "fields": {
+                "domain": {
+                    "name": "Dom\u00ednio"
+                },
+                "entity_id": {
+                    "name": "ID da entidade"
+                },
+                "message": {
+                    "name": "Mensagem"
+                },
+                "name": {
+                    "description": "Nome personalizado para uma entidade, que pode ser referenciado utilizando o campo \"ID da entidade\".",
+                    "name": "Nome"
+                }
+            },
+            "name": "Log"
+        }
+    }
+}

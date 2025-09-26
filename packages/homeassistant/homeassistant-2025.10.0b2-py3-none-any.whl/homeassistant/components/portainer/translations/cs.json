@@ -1,0 +1,49 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Za\u0159\u00edzen\u00ed je ji\u017e nastaveno"
+        },
+        "error": {
+            "cannot_connect": "Nepoda\u0159ilo se p\u0159ipojit",
+            "invalid_auth": "Neplatn\u00e9 ov\u011b\u0159en\u00ed",
+            "timeout_connect": "Vypr\u0161el \u010dasov\u00fd limit pro nav\u00e1z\u00e1n\u00ed spojen\u00ed",
+            "unknown": "Neo\u010dek\u00e1van\u00e1 chyba"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "Kl\u00ed\u010d API",
+                    "host": "Hostitel"
+                },
+                "data_description": {
+                    "api_key": "Kl\u00ed\u010d API pro ov\u011b\u0159en\u00ed pomoc\u00ed Portainer",
+                    "host": "Hostitel/URL adresa (v\u010detn\u011b portu) va\u0161\u00ed instance Portainer"
+                },
+                "description": "Kl\u00ed\u010d API si m\u016f\u017eete vytvo\u0159it v u\u017eivatelsk\u00e9m rozhran\u00ed Portainer. P\u0159ejd\u011bte do sekce **My account > API keys** a vyberte **Add API key**."
+            }
+        }
+    },
+    "device": {
+        "unknown_container": {
+            "name": "Nezn\u00e1m\u00fd kontejner"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "status": {
+                "name": "Stav"
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "P\u0159i pokusu o p\u0159ipojen\u00ed k instanci Portainer do\u0161lo k chyb\u011b: {error}"
+        },
+        "invalid_auth": {
+            "message": "P\u0159i pokusu o ov\u011b\u0159en\u00ed do\u0161lo k chyb\u011b: {error}"
+        },
+        "timeout_connect": {
+            "message": "P\u0159i pokusu o p\u0159ipojen\u00ed k instanci Portainer do\u0161lo k vypr\u0161en\u00ed \u010dasov\u00e9ho limitu: {error}"
+        }
+    }
+}
