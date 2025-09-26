@@ -1,0 +1,58 @@
+[
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-09-27 00:00:00",
+                    "price": 2.169e-05
+                },
+                "direction": 2,
+                "value_diff": 8.730000000000001e-06
+            },
+            {
+                "point": {
+                    "time": "2024-10-03 00:00:00",
+                    "price": 1.548e-05
+                },
+                "direction": -2,
+                "value_diff": -6.21e-06
+            },
+            {
+                "point": {
+                    "time": "2024-10-06 00:00:00",
+                    "price": 1.885e-05
+                },
+                "direction": 2,
+                "value_diff": 3.37e-06
+            },
+            {
+                "point": {
+                    "time": "2024-10-10 00:00:00",
+                    "price": 1.605e-05
+                },
+                "direction": -2,
+                "value_diff": -2.8000000000000003e-06
+            },
+            {
+                "point": {
+                    "time": "2024-10-19 00:00:00",
+                    "price": 1.955e-05
+                },
+                "direction": 2,
+                "value_diff": 3.5000000000000004e-06
+            }
+        ],
+        "pattern_type": 2,
+        "pattern_name": "Double Bottoms",
+        "support_line": {
+            "p1": {
+                "time": "2024-09-27 00:00:00",
+                "price": 1.885e-05
+            },
+            "p2": {
+                "time": "2024-10-14 00:00:00",
+                "price": 1.885e-05
+            }
+        }
+    }
+]
