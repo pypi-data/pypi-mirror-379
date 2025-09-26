@@ -1,0 +1,2 @@
+[console_scripts]
+htmlgen-mcp = MCP.web_agent_server:main
