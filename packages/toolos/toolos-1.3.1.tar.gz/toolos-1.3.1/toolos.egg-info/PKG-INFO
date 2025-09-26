@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: toolos
+Version: 1.3.1
+Summary: A lightweight Python app framework with mods, caching, settings and language API.
+Author-email: Lilias <lilias.ge@gmail.com>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# ToolOS
+
+A lightweight Python app framework with mods, caching, settings and language API.
+
+## Installation
+
+```bash
+pip install toolos
+```
+
+## Usage
+
+```python
+from toolos import Api
+
+# Initialize the API
+api = Api("settings.json")
+
+# Use various components
+api.Settings.LoadSettings()
+api.Cache.WriteCacheFile("test.txt", "content")
+api.Log.WriteLog("app.log", "Application started")
+```
+
+## Features
+
+- Settings management
+- Caching system
+- Logging functionality
+- Language localization
+- State machine
+- Package management
+- Temporary file handling
+
+## License
+
+MIT
