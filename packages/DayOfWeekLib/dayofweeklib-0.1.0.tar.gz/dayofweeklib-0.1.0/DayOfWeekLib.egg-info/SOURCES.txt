@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+DayOfWeekLib.egg-info/PKG-INFO
+DayOfWeekLib.egg-info/SOURCES.txt
+DayOfWeekLib.egg-info/dependency_links.txt
+DayOfWeekLib.egg-info/entry_points.txt
+DayOfWeekLib.egg-info/top_level.txt
+day_of_week_lib/__init__.py
+day_of_week_lib/core.py
+day_of_week_lib/main.py

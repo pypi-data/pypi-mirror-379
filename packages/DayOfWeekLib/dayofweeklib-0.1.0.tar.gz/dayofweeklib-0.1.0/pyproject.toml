@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DayOfWeekLib"
+version = "0.1.0"
+description = "Get day of the week from a date"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Nesma Mohamad  Al-Btry", email = "nasmhalbtri23@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+dayofweeklib = "day_of_week_lib.main:main"
