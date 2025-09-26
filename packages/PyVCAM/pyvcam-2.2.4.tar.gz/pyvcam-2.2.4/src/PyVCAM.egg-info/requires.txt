@@ -1,0 +1,11 @@
+numpy
+
+[dev]
+validate-pyproject[all]
+Flake8-pyproject
+flake8-typing-imports
+pylint
+
+[gui]
+opencv-python
+matplotlib
