@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+deepKernel.egg-info/PKG-INFO
+deepKernel.egg-info/SOURCES.txt
+deepKernel.egg-info/dependency_links.txt
+deepKernel.egg-info/top_level.txt
