@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: odataormpy
+Version: 0.1.0
+Summary: A lightweight dynamic ORM for OData services in Python
+Author-email: Diego Vaccher <dvaccher99@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/denny0754/odataormpy
+Keywords: odata,orm,python,dynamic
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32
+Dynamic: license-file
+
+# OData ORM Python

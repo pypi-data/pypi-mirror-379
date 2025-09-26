@@ -1,0 +1,12 @@
+odataormpy/__init__.py,sha256=trP3_5dlMrM9JfaGs0RjFDqwj_Zi5LOsVhKvwRy35sY,146
+odataormpy/exception/__init__.py,sha256=YjGAbCzZPoqFKNIHjfEV0uycu0a0dmo-6vy4OE6157Q,87
+odataormpy/exception/exception.py,sha256=rI_IZHDIX3TtGCX4nonNVz8S0eoJIaRYpsJtpMS9iVA,266
+odataormpy/orm/orm.py,sha256=xv5WjKCWDwAWozIQgGdjlkBtdwvzb_OosldB_lb_8w8,4503
+odataormpy/orm/orm_object.py,sha256=ymdopEbbDfNtJYnALQsC_gWXrp0cMLv_OPh2ZLF2JGw,606
+odataormpy/session/__init__.py,sha256=IjdFyjGc0O7Vm1oVppYCwtJrWi8RthvJkfUBQdmehg0,66
+odataormpy/session/session.py,sha256=r06PR3jhtfVdRqf_UrNLCCxjBGSITeHRYq9ec6Jubjg,2642
+odataormpy-0.1.0.dist-info/licenses/LICENSE,sha256=Znn77DUF05XfRNBpHkaSMwPlMmrtu4yrleORrkuv_wI,1089
+odataormpy-0.1.0.dist-info/METADATA,sha256=XjEOkF7jBws2-YpXSzLFpqaWncG79jCA_K-8G1nvvAY,602
+odataormpy-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+odataormpy-0.1.0.dist-info/top_level.txt,sha256=IjeavnQsBzdvAHXSccSDatCUUsHAdQCuRlz3RaGN3uo,11
+odataormpy-0.1.0.dist-info/RECORD,,
