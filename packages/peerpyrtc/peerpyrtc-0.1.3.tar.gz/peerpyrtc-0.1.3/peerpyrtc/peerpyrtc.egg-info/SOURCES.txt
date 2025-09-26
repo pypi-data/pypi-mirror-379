@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+peerpyrtc/peerpyrtc.egg-info/PKG-INFO
+peerpyrtc/peerpyrtc.egg-info/SOURCES.txt
+peerpyrtc/peerpyrtc.egg-info/dependency_links.txt
+peerpyrtc/peerpyrtc.egg-info/requires.txt
+peerpyrtc/peerpyrtc.egg-info/top_level.txt
