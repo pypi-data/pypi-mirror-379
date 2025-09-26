@@ -1,0 +1,16 @@
+llama_index/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llama_index/vector_stores/solr/__init__.py,sha256=Ce4keksP6saBpqtHwN_2Ez8D4yolyFd8oIp-bgRQS6U,331
+llama_index/vector_stores/solr/base.py,sha256=eWjm1kimFaqa8kmP0p3XlkJjFwuhwt2qN-OWGNICopg,33042
+llama_index/vector_stores/solr/constants.py,sha256=TTLDU1xezkpYNhF0JZSvHNeP6SNSkQkjR0i_VSA_fds,3270
+llama_index/vector_stores/solr/query_utils.py,sha256=qSwKkK2oGFq8D7Xmmqbeu1dTcakiHhvZwfpbARN_flQ,8173
+llama_index/vector_stores/solr/types.py,sha256=kAWaTeDm0eFY4MJWQbd9LZZdeyR1-oILnVwKRjOesHI,1577
+llama_index/vector_stores/solr/client/__init__.py,sha256=8bp7_JCUR-ExUQh3dUZYqvVSXd_upgsfYUkZM6ShVaA,417
+llama_index/vector_stores/solr/client/_base.py,sha256=OExLivxI6sifBUOqwU-aswvOT1iSQOzSivuvkDYvOU8,1911
+llama_index/vector_stores/solr/client/async_.py,sha256=4L4Ir5hLam8hD2Y-Bq_79tX3l_LQ_yPwf4mmrL-_duA,10892
+llama_index/vector_stores/solr/client/responses.py,sha256=rGJNo6bsuEJrUKod1OpKfVEkXJF6JlV7LVXytvuetoU,6806
+llama_index/vector_stores/solr/client/sync.py,sha256=8cLG2O7nKBgGYLdBV3ePGTvXnuN-UDmcHxtAPaNweJM,8448
+llama_index/vector_stores/solr/client/utils.py,sha256=cCqk-1TsuIypnXnNi-yW4MNZ9-CHcaiTgCaX_lZVsMI,3234
+llama_index_vector_stores_solr-0.1.0.dist-info/METADATA,sha256=oEy6DIi8ouF3y8XH8nmgqlSM87gVchveq4DDOWODMCs,4937
+llama_index_vector_stores_solr-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llama_index_vector_stores_solr-0.1.0.dist-info/licenses/LICENSE,sha256=_fUiIUqCZ4VvJuF4-Cv5eT3t9CVdi4OGisgd8Qi2quI,1083
+llama_index_vector_stores_solr-0.1.0.dist-info/RECORD,,
