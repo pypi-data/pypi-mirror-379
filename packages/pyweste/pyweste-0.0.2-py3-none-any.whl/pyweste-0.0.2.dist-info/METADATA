@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: pyweste
+Version: 0.0.2
+Summary: An Extra / Helper package for PyWest (Main Package)
+License: Apache-2.0
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: dearpygui
+Requires-Dist: pillow
+Requires-Dist: pywin32
+Description-Content-Type: text/markdown
+
+# 🏗️ PyWeste ⚙️
+
+🔧 An Extra / Helper package for PyWest (Main Package) 📦
+
+⚠️ **Not for direct use** - This is an internal helper tool for PyWest ⚠️
+
+## ✨ Features ✨
+
+- 🖥️ Simple GUI installer with progress tracking 📊
+- 🔗 Creates desktop and start menu shortcuts 🖱️
+- ➕ Adds entry to Add/Remove Programs 📋
+- 🗑️ Generates uninstaller script 🔄
