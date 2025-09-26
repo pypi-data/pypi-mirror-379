@@ -1,0 +1,115 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app360-toolkit"
+version = "0.1.0"
+description = "A comprehensive Python toolkit for rapid development, document validation, and utilities."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Sergius Fortuna", email = "sfortuna1977@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = [
+    "python", "toolkit", "validation", "cpf", "cnpj", 
+    "brazilian-documents", "factory-pattern", "utilities"
+]
+dependencies = [
+    # Suas dependências de runtime aqui
+    # "requests>=2.25.0",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+    "pre-commit>=2.15.0",
+]
+test = [
+    "pytest>=6.0",
+    "pytest-cov>=3.0",
+    "coverage>=6.0",
+]
+docs = [
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sfortuna77/app360-toolkit"
+Repository = "https://github.com/sfortuna77/app360-toolkit"
+Issues = "https://github.com/sfortuna77/app360-toolkit/issues"
+Documentation = "https://github.com/sfortuna77/app360-toolkit#readme"
+
+# Configuração do Black (formatador)
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+# Configuração do isort (organizador de imports)
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+# Configuração do mypy (type checker)
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+# Configuração do pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+]
+
+# Configuração do coverage
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
