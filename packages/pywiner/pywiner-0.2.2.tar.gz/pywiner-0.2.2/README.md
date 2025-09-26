@@ -1,0 +1,402 @@
+# PyWiner
+
+A powerful Python library for interacting with the Windows operating system. PyWiner provides two main functionalities:
+1. **System Automation:** Control processes, run batch commands, and more.
+2. **GUI Framework:** Create native Windows applications with a simple class-based approach.
+
+## Installation
+
+Since PyWiner is currently under development, you can install it directly from your local project directory.
+
+First, navigate to the root directory of your project (where `setup.py` is located) in your terminal. Then, run the following command:
+
+```bash
+pip install .
+```
+
+## USAGE
+
+First, import pywiner into your project.
+example for gui you uses:
+
+```python
+import sys
+from PyQt6.QtWidgets import QApplication
+from pywiner.gui.window import Window
+
+def main():
+    app = QApplication(sys.argv)
+    
+    my_window = Window(
+        title="Complete Pywiner Window",
+        width=800,
+        height=700,
+        icon_path="logo.ico" # Tries to load a local icon
+    )
+    
+    my_window.add_text(
+        text="Hello, Pywiner World!",
+        x=50,
+        y=50,
+        font_size=24,
+        font_family="Arial",
+        color="#333333"
+    )
+    
+    my_window.add_image(
+        image_path="logo.png", # Tries to load a local image
+        x=550,
+        y=50,
+        width=150,
+        height=150
+    )
+
+    def on_button_click():
+        print("Button clicked!")
+
+    my_window.add_button(
+        "Modern Button",
+        x=50,
+        y=150,
+        width=150,
+        height=40,
+        on_click=on_button_click,
+        background_color="#56B6C2",
+        text_color="white",
+        style="modern"
+    )
+    
+    my_window.add_button(
+        "Default Button",
+        x=220,
+        y=150,
+        width=150,
+        height=40,
+        style="default"
+    )
+
+    my_window.add_text("Modern Textbox:", x=50, y=220)
+    my_window.add_textbox(
+        x=50,
+        y=250,
+        placeholder_text="Modern...",
+        on_return_pressed=lambda: print("User pressed Enter in the textbox."),
+        style="modern"
+    )
+    
+    my_window.add_text("Default Textbox:", x=260, y=220)
+    my_window.add_textbox(
+        x=260,
+        y=250,
+        placeholder_text="Default...",
+        style="default"
+    )
+
+    my_window.add_text("Choose a gender:", x=50, y=320)
+    my_window.add_radio_button("Male", x=50, y=350, checked=True)
+    my_window.add_radio_button("Female", x=150, y=350)
+    my_window.add_radio_button("Other", x=250, y=350)
+
+    my_window.add_text("Confirm options:", x=50, y=400)
+    my_window.add_checkbox("Subscribe to newsletter", x=50, y=430, checked=True, 
+                           on_state_changed=lambda state: print(f"Checkbox state changed to {state}"))
+    my_window.add_checkbox("Receive updates", x=250, y=430)
+
+    my_window.add_text("Adjust a value:", x=50, y=480)
+    slider_label = my_window.add_text("Slider Value: 50", x=300, y=480)
+    def on_slider_value_changed(value):
+        slider_label.setText(f"Slider Value: {value}")
+    my_window.add_slider(x=50, y=510, min_value=0, max_value=100, initial_value=50, on_value_changed=on_slider_value_changed)
+
+    my_window.add_text("Select an item:", x=50, y=570)
+    combobox_label = my_window.add_text("Selected: Apple", x=300, y=570)
+    combo = my_window.add_combobox(x=50, y=600, items=["Apple", "Banana", "Cherry"])
+
+    def on_combobox_index_changed(index):
+        selected_option = combo.currentText()
+        combobox_label.setText(f"Selected: {selected_option}")
+    combo.currentIndexChanged.connect(on_combobox_index_changed)
+
+    my_window.run()
+    sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main()
+```
+
+To messagebox:
+
+```python
+from pywiner.msgbox.msgbox import msgbox
+
+msgbox(icon="critical", title="k",content="Test") ##icons: information, warning, critical
+```
+
+To sound:
+
+```python
+import sys
+import time
+from pywiner.sound import sound
+
+def main():
+    print("Playing a single sound...")
+    sound.play_sound("alert.wav")
+
+    print("Playing a sequence of sounds...")
+    sound.sequence_sounds(["alert.wav", "chime.wav", "alert.wav"], interval=2)
+
+    print("Starting a sound loop (press Ctrl+C to stop)...")
+    sound.loop_sound("chime.wav")
+    
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("Stopping loop.")
+        sound.stop_loop()
+
+if __name__ == "__main__":
+    main()
+```
+
+to system:
+
+```python
+import sys
+import time
+from pywiner.system import process
+
+# Create a callback function to be used by on_process_died
+def on_notepad_exit():
+    print("Notepad has exited. Cleaning up files...")
+    if process.delete_file("test_file.txt"):
+        print("Successfully deleted 'test_file.txt'")
+    if process.delete_directory("temp_dir"):
+        print("Successfully deleted 'temp_dir'")
+
+def main():
+    # 1. Start a process
+    print("Starting Notepad...")
+    process.start("notepad.exe")
+
+    # 2. Wait for it to start
+    process.while_process_not_running("notepad.exe")
+    print("Notepad is now running.")
+
+    # 3. Use an event-based callback to monitor its exit
+    process.on_process_died("notepad.exe", on_notepad_exit)
+    print("Monitoring Notepad's status. Please close Notepad to see the callback in action.")
+
+    # 4. Perform file operations
+    process.create_directory("temp_dir")
+    process.create_file("test_file.txt", "Hello, this is a test.")
+    
+    print("File content:", process.read_file("test_file.txt"))
+    
+    # 5. Execute a simple batch script
+    batch_script = """
+    @echo off
+    echo This is a temporary batch script!
+    pause
+    """
+    print("\nExecuting a batch script...")
+    process.exec_batch(batch_script)
+    vbs_script = """
+    msgbox "only a t"
+    """
+    process.exec_vbs(vbs_script)
+
+    # Keep the main program running so the event monitoring thread stays alive
+    # You can also just keep your main application's event loop running.
+    print("\nWaiting for Notepad to close...")
+    time.sleep(100) # Wait for 100 seconds to give you time to close Notepad
+
+if __name__ == "__main__":
+    main()
+```
+to system info:
+
+```python
+import sys
+from pywiner.system.info import info
+
+def main():
+    # Get and print OS information
+    os_details = info.get_os_info()
+    print("Operating System Information:")
+    for key, value in os_details.items():
+        print(f"  {key.capitalize()}: {value}")
+    
+    print("-" * 30)
+
+    # Get and print CPU information
+    cpu_name = info.get_cpu_info()
+    print("CPU Information:")
+    print(f"  Processor: {cpu_name}")
+    
+    print("-" * 30)
+
+    # Get and print drive information
+    drives_list = info.get_drives()
+    print("Disk Drives Information:")
+    if drives_list:
+        for drive in drives_list:
+            print(f"  Drive: {drive['drive']}")
+            print(f"    Total Space: {drive['total_space_gb']} GB")
+            print(f"    Free Space: {drive['free_space_gb']} GB")
+    else:
+        print("  No drives found.")
+
+if __name__ == "__main__":
+    main()
+```
+to block input:
+
+```python
+import time
+from pywiner.os import os as pywiner_os
+
+def main():
+    pywiner_os.block_input(3000)
+
+if __name__ == "__main__":
+    main()
+```
+to shutdown:
+
+```python
+
+import sys
+import os
+from pywiner.os import os as pywiner_os
+import ctypes
+
+def run_as_admin():
+    """Reruns the current script with administrator privileges."""
+    try:
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
+        return True
+    except Exception as e:
+        print(f"Failed to elevate privileges: {e}")
+        return False
+
+def main():
+    if not pywiner_os.is_admin():
+        print("Not running as administrator. Attempting to elevate privileges...")
+        if run_as_admin():
+            sys.exit()  # Exit the current process, the new one will take over.
+        else:
+            print("Failed to run as administrator. Exiting.")
+            sys.exit(1)
+
+    print("Running with administrator privileges.")
+    print("Initiating system shutdown...")
+    
+    # This command will shut down the computer.
+    pywiner_os.shutdown_computer(force=True)
+
+if __name__ == "__main__":
+    main()
+```
+to set_high_priority:
+
+```python
+import sys
+from pywiner.os import os as pywiner_os
+
+def main():
+    if not pywiner_os.is_admin():
+        print("This script needs to be run as an administrator to set high priority.")
+        return
+
+    print("Attempting to set script priority to high...")
+    if pywiner_os.set_high_priority():
+        print("Priority successfully set to high.")
+    else:
+        print("Failed to set priority.")
+
+if __name__ == "__main__":
+    main()
+```
+to show in explorer:
+
+```python
+import os
+import sys
+from pywiner.os import os as pywiner_os
+
+def main():
+    # Example 1: Open the C:\Windows directory
+    windows_path = "C:\\Windows"
+    print(f"Opening directory: {windows_path}")
+    pywiner_os.show_in_explorer(windows_path)
+    
+    # Example 2: Open the current script's directory
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    print(f"\nOpening script directory: {script_directory}")
+    pywiner_os.show_in_explorer(script_directory)
+
+if __name__ == "__main__":
+    main()
+```
+
+to detect if is admin:
+
+```python
+import sys
+from pywiner.os import os as pywiner_os
+
+def main():
+    if pywiner_os.is_admin():
+        print("This script is running with administrator privileges.")
+        print("It can perform system-level tasks.")
+    else:
+        print("This script is running with standard user privileges.")
+        print("It cannot perform tasks that require administrator access.")
+
+if __name__ == "__main__":
+    main()
+```
+to get the username:
+
+```python
+import sys
+from pywiner.os import os as pywiner_os
+
+def main():
+    username = pywiner_os.get_current_user()
+    if username:
+        print(f"Current logged-in user: {username}")
+    else:
+        print("Could not retrieve the current username.")
+
+if __name__ == "__main__":
+    main()
+```
+to create a image with img_mnipltion:
+
+```python
+import os
+from pywiner.imgMnipltion.imgmni import ImgManipulation
+
+output_file = "drawing.png"
+
+print("Creating and drawing on a new image...")
+
+ImgManipulation(output_file) \
+    .create_image(600, 400, color=(255, 255, 255)) \
+    .draw_filled_rectangle(50, 50, 200, 150, color=(255, 0, 0)) \
+    .draw_rectangle(250, 100, 400, 250, color=(0, 0, 255), outline=(0, 0, 0)) \
+    .draw_line(50, 300, 550, 300, color=(0, 255, 0)) \
+    .draw_circle(500, 100, 75, color=(255, 255, 0)) \
+    .draw_pixel(50, 50, color=(0, 0, 0)) \
+    .add_text("Drawing", 100, 350, font_size=40, color=(0, 0, 0)) \
+    .save()
+
+print(f"Image saved successfully to {output_file}")
+```
+
+Credits:
+@miguel_3330 on discord thank you for ideas
+@nikolasteladecelula123 on discord the owner.

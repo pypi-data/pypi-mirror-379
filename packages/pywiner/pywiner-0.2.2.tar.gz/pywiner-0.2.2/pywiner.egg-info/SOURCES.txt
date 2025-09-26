@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pywiner.egg-info/PKG-INFO
+pywiner.egg-info/SOURCES.txt
+pywiner.egg-info/dependency_links.txt
+pywiner.egg-info/requires.txt
+pywiner.egg-info/top_level.txt
