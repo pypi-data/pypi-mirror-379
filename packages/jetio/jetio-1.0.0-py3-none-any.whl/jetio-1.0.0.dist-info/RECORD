@@ -1,0 +1,12 @@
+jetio/__init__.py,sha256=6dtr4rk46tkKoh5klVxH4jptSqLz7CZVhdGROvkbc6k,1082
+jetio/auth.py,sha256=O-BYMaoAZway7kry5NkBxPFF-x7R0_0FKTa7SW3DIoo,3128
+jetio/config.py,sha256=Na6L5MFmeZqyxfSmbch_9xNMHvq4dQPknugEpkyQeiY,2305
+jetio/crud.py,sha256=eoUtOGiNZJ2wyv34fcC_1Jj4EZrl0Ipzx5eu2tGTdlQ,11474
+jetio/framework.py,sha256=omJuyL-__U0IGh8HDYHEwMa3PkCnNSWXgx0Uo49oJEo,19299
+jetio/middleware.py,sha256=WinVwsbmq_3c3SQ3UE0HJEsVhBt-P40heaZ9cYzu5SM,1546
+jetio/openapi.py,sha256=cj9wFdvioIJpidJ5dnnRw5YPl0IoPGAqogb4Fhfl2C0,8448
+jetio/orm.py,sha256=m8x9s7oGwTWoJjWNtPOjV627t9IitPqMJb0WvGD1_cs,11153
+jetio-1.0.0.dist-info/METADATA,sha256=RsUaL4fNWXBHFZQrYSDcoe_AgIfqZmohACOvpTuMWXg,3004
+jetio-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+jetio-1.0.0.dist-info/top_level.txt,sha256=2SSORNd9X0dTUX9DQoU6sI3M5weHTZKUvi-Kaom3P58,6
+jetio-1.0.0.dist-info/RECORD,,
