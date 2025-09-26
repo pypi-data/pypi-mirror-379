@@ -1,0 +1,16 @@
+kmeans_color_palette/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+kmeans_color_palette/about.py,sha256=NfnB2P3GtLj-3mLa8byPWoMac6yYAsw2ZWge9S1oxnk,561
+kmeans_color_palette/desktop.py,sha256=sN44Q4OrrkeUn5ne7kU7gqc3z-YZYyibTgiHSSDhip8,3518
+kmeans_color_palette/program.py,sha256=s5EEyS5NZ8D5IhNB-V-VtnwYOhOrM-rlQmhZ4gUXVbY,17853
+kmeans_color_palette/icons/check.svg,sha256=_CBL15AYk9XMpa1CAw0n2F1Q2Kn_NxH0sSmMjTC3U_4,1728
+kmeans_color_palette/icons/logo.png,sha256=VdYsAMeopDok6VTUS9I3hVAmCZXO3G_e9WOm-zlbiB8,24746
+kmeans_color_palette/modules/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+kmeans_color_palette/modules/color.py,sha256=aNj3dYuja2V577JB1PFYqIdyQMxIzt2yayvQegV5VxY,1421
+kmeans_color_palette/modules/configure.py,sha256=K48SPidC_LRDXE2Q5QLGOG2-zPiMHjFgu4gv-3WWnns,1923
+kmeans_color_palette/modules/wabout.py,sha256=a8WOE9FJ9AdmbFioK17lqbR0cWavBSKhTzjrhsMJn10,4455
+kmeans_color_palette-0.1.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+kmeans_color_palette-0.1.1.dist-info/METADATA,sha256=KRhFcYXQB_QO-m8sSx9VaSWKi3ZDVgv0WPyJHJR7cmc,2080
+kmeans_color_palette-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+kmeans_color_palette-0.1.1.dist-info/entry_points.txt,sha256=s81UEotewD-GEAXwAGsx0onGAQffobpwkPhi6YoEnp0,75
+kmeans_color_palette-0.1.1.dist-info/top_level.txt,sha256=Tcuew8rf4AGSZ-Rx7ISznGVgT5VzQnDUB9sb6p0uYoA,21
+kmeans_color_palette-0.1.1.dist-info/RECORD,,
