@@ -1,0 +1,36 @@
+{
+  "issue_title": "密码管理：不安全的随机数",
+  "issue_level": "High",
+  "issue_count": "15",
+  "issue_desc": "Java API中提供了`java.util.Random`类实现`PRNG()`，该PRNG是可移植和可重复的，如果两个`java.util.Random`类的实例使用相同的种子，会在所有Java实现中生成相同的数值序列。\n\n**例如**：下面代码片段中，使用了`java.util.Random`类，该类对每一个指定的种子值生成同一个序列。\n```java\nimport java.util.Random;\n// ...\npublic static void main (String args[]) {\n    // ...\n    for (int i = 0; i &lt; 10; i++) {\n        Random random = new Random(123456);\n        int number = random.nextInt(21);\n        ...\n    }\n}\n```",
+  "fix_advice": "在安全性要求较高的应用中，应使用更安全的随机数生成器，如`java.security.SecureRandom`类。\n\n**例如**：下面代码片段中，使用`java.security.SecureRandom`来生成更安全的随机数。\n```java\nimport java.security.SecureRandom;\nimport java.security.NoSuchAlgorithmException;\n// ...\npublic static void main (String args[]) {\n    try {\n        SecureRandom random = SecureRandom.getInstance(\"SHA1PRNG\");\n        for (int i = 0; i &lt; 10; i++) {\n            int number = random.nextInt(21);\n            ...\n        }\n    } catch (NoSuchAlgorithmException nsae) {\n        ...\n    }\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+      "code_line_num": "76",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java;76行randomAlphabetic()"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUploadRetrieval.java",
+      "code_line_num": "101",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUploadRetrieval.java;101行nextInt()"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+      "code_line_num": "37",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java;37行nextInt()"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/spoofcookie/encoders/EncDec.java",
+      "code_line_num": "22",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/spoofcookie/encoders/EncDec.java;22行randomAlphabetic()"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/csrf/CSRFGetFlag.java",
+      "code_line_num": "46",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/csrf/CSRFGetFlag.java;46行nextInt()"
+    }
+  ],
+  "next_block_start": 66
+}

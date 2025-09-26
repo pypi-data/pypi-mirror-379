@@ -1,0 +1,21 @@
+{
+  "issue_title": "代码质量：日志记录：使用系统输出流",
+  "issue_level": "Medium",
+  "issue_count": "7",
+  "issue_desc": "使用`System.out`或`System.err`进行程序日志输出，会导致程序的运行状况难以监控。\n\n**例如**：下列代码中使用`System.out`进行程序日志输出\n```java\n...\nSystem.out.println(log);\n...\n```",
+  "fix_advice": "建议使用日志记录工具代替`System.out`或`System.err`记录程序日志。\n  **例如**：下列代码中使用Log4j工具类进行程序日志输出\n```java\n...\nlogger.info(log);\n...\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/it/java/org/owasp/webgoat/integration/ProgressRaceConditionIntegrationTest.java",
+      "code_line_num": "57",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/it/java/org/owasp/webgoat/integration/ProgressRaceConditionIntegrationTest.java;57行println"
+    },
+    {
+      "code_location": "src/it/java/org/owasp/webgoat/integration/LabelAndHintIntegrationTest.java",
+      "code_line_num": "196",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/it/java/org/owasp/webgoat/integration/LabelAndHintIntegrationTest.java;196行println"
+    }
+  ],
+  "next_block_start": 34
+}

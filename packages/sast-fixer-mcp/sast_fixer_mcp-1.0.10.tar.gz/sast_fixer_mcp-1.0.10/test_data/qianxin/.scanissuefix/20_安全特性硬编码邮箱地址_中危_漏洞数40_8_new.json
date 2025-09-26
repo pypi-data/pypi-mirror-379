@@ -1,0 +1,36 @@
+{
+  "issue_title": "安全特性：硬编码邮箱地址",
+  "issue_level": "Medium",
+  "issue_count": "40",
+  "issue_desc": "程序中采用了硬编码方式处理邮箱地址，一方面会降低系统安全性，另一方面不易于程序维护。\n\n**例如**：下面代码采用了硬编码方式处理邮箱地址。\n```java\npublic class UserDAO {\n    private static Map&lt;Integer, User&gt; users = new LinkedHashMap&lt;Integer, User&gt;();\n\n    static {\n        users.put(1001, new User(1001, \"周卫国\", 22, \"18911295900\", \"meiya@cn-meiya.com\"));\n        users.put(1002, new User(1002, \"马东强\", 30, \"18911295766\", \"meiyahr@163.com\"));\n        users.put(1003, new User(1003, \"黄毅\", 27, \"18911297366\", \"chingpeplo@sina.com\"));\n        // ...\n    }\n\n    // 用户信息的增删改查方法\n    // ...\n}\npublic class User {\n    private int id;\n    private String name;\n    private int age;\n    private String tel;\n    private String email;\n\n    public User() {}\n\n    public User(int id, String name, int age, String tel, String email) {\n        this.id = id;\n        this.name = name;\n        this.age = age;\n        this.tel = tel;\n        this.email = email;\n    }\n\n    // Getter and Setter\n    // ...\n}\n```\n在上面的源码片段中，程序直接将用户的邮箱地址等个人信息以硬编码的方式进行存储，这样做会让数据与程序直接绑定，提高了系统的耦合性，使得系统和数据的维护变得困难。同时，如果对程序的执行文件做反编译操作，很容易就能够得到雇员的真实信息，导致敏感数据泄露，大大降低了系统的安全性。",
+  "fix_advice": "程序中不应对邮箱地址进行硬编码，可以使用配置文件或数据库存储的方式来存储系统所需的数据；并且录入数据时，还可以在对敏感数据做加密处理之后再进行数据的录入。\n\n**例如**：下面代码采用了从数据库查询邮箱地址并解密。\n```java\npublic class UserDAO {\n    private static Map&lt;Integer, User&gt; users = new LinkedHashMap&lt;Integer, User&gt;();\n\n    static {\n        users.put(1001, new User(1001, \"周卫国\", 22, EncryptUtil.encrypt(phoneDAO.getPhoneById(1001)), EncryptUtil.encrypt(emailDAO.getEmailById(1001))));\n        users.put(1002, new User(1002, \"马东强\", 30, EncryptUtil.encrypt(phoneDAO.getPhoneById(1002)), EncryptUtil.encrypt(emailDAO.getEmailById(1002))));\n        users.put(1003, new User(1003, \"黄毅\", 27, EncryptUtil.encrypt(phoneDAO.getPhoneById(1003)), EncryptUtil.encrypt(emailDAO.getEmailById(1003))));\n        // ...\n    }\n\n    // 用户信息的增删改查方法\n    // ...\n}\npublic class User {\n    private int id;\n    private String name;\n    private int age;\n    private String tel;\n    private String email;\n\n    public User() {}\n\n    public User(int id, String name, int age, String tel, String email) {\n        this.id = id;\n        this.name = name;\n        this.age = age;\n        this.tel = tel;\n        this.email = email;\n    }\n\n    // Getter and Setter\n    // ...\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxRepositoryTest.java",
+      "code_line_num": "25",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxRepositoryTest.java;25行语句"
+    },
+    {
+      "code_location": "src/it/java/org/owasp/webgoat/integration/SqlInjectionAdvancedIntegrationTest.java",
+      "code_line_num": "20",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/it/java/org/owasp/webgoat/integration/SqlInjectionAdvancedIntegrationTest.java;20行语句"
+    },
+    {
+      "code_location": "src/it/java/org/owasp/webgoat/playwright/webgoat/lessons/SqlInjectionAdvancedUITest.java",
+      "code_line_num": "69",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/it/java/org/owasp/webgoat/playwright/webgoat/lessons/SqlInjectionAdvancedUITest.java;69行语句"
+    },
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java",
+      "code_line_num": "80",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java;80行语句"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/passwordreset/SimpleMailAssignment.java",
+      "code_line_num": "49",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/passwordreset/SimpleMailAssignment.java;49行语句"
+    }
+  ],
+  "next_block_start": 166
+}

@@ -1,0 +1,26 @@
+{
+  "issue_title": "资源管理：资源未释放：数据库",
+  "issue_level": "Medium",
+  "issue_count": "33",
+  "issue_desc": "程序创建或分配数据库资源后，不进行合理释放，将会降低系统性能。攻击者可能会通过耗尽资源池的方式发起拒绝服务攻击。\n\n**例如**：在下面Java代码片段中，创建数据库对象资源后未进行合理释放，在繁忙的程序环境下，数据库连接池可能会耗尽，从而导致其他用户无法访问该数据库资源。\n```java\n...\ntry {\n    Connection conn = DriverManager.getConnection(some_connection_string)\n    PreparedStatement stmt = conn.prepareStatement(sqlquery);\n    ...\n} catch (Exception e) {\n    log(e);\n}\n...\n```",
+  "fix_advice": "程序不应依赖于虚拟机的`finalize()`方法自动的回收数据库资源，而应手动在finally代码块中进行数据库资源释放操作。\n\n**例如**：下面代码片段中，在finally代码块中合理释放了数据库资源。\n```java\nConnection conn=null;\nPreparedStatement stmt=null;\ntry{\n    conn = DriverManager.getConnection(some_connection_string);\n    stmt = conn.prepareStatement(sqlquery);\n    ...\n} catch(SQLException e){\n    log(e);\n}finally{\n    if(con!=null){\n        try {\n            conn.close();\n        } catch (SQLException e) {\n            log(e);\n        }\n    }\n    if(stmt!=null){\n        try {\n            stmt.close();\n        } catch (SQLException e) {\n            log(e);\n        }\n    }\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java",
+      "code_line_num": "83",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;56行connection = getConnection()\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;56行connection 引用一个数据库连接\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;63行statement = connection.createStatement(...)\n\n4 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;63行statement 引用一个数据库Statement\n\n5 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;83行getEmployeesDataOrderBySalaryDesc(...)\n\n6 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;117行statement.executeQuery(...)\n\n7 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;117行返回\n\n8 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;80行返回\n\n9 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;80行作用域结束\n\n10 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;80行connection 作用域结束 : 数据库ResultSet泄露"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java",
+      "code_line_num": "49",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;44行connection = getConnection()\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;44行connection 引用一个数据库连接\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;46行preparedStatement = connection.prepareStatement(...)\n\n4 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;45行preparedStatement 引用一个数据库Statement\n\n5 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;49行resultSet = preparedStatement.executeQuery()\n\n6 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;49行resultSet 引用一个数据库 ResultSet\n\n7 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;54行resultSet 不再引用一个数据库 ResultSet\n\n8 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;54行resultSet 作用域结束 : 抛出  java.lang.Throwable 异常\n\n9 src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/SqlInjectionLesson13.java;46行connection 作用域结束 : 数据库ResultSet泄露"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java",
+      "code_line_num": "68",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;63行statement = connection.createStatement(...)\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;63行statement 引用一个数据库Statement\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;68行*.getSumSalariesOfOtherEmployees(connection) : 数据库ResultSet泄露\n\n4 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;106行*.getSqlInt(connection, *) : 数据库ResultSet泄露\n\n5 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;94行results = statement.executeQuery(...)\n\n6 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;94行results 引用一个数据库 ResultSet\n\n7 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;96行results 不再引用一个数据库 ResultSet\n\n8 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java;96行results 作用域结束 : 数据库ResultSet泄露"
+    }
+  ],
+  "next_block_start": 138
+}

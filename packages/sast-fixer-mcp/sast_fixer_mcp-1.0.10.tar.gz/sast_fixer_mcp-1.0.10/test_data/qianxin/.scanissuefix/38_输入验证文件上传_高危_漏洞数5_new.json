@@ -1,0 +1,36 @@
+{
+  "issue_title": "输入验证：文件上传",
+  "issue_level": "High",
+  "issue_count": "5",
+  "issue_desc": "允许用户上传文件可能导致危险的文件或代码被注入，并在服务器执行。\n**例如**：\n\n```html\n&lt;input type=\"file\"&gt;\n```",
+  "fix_advice": "- 如果应用程序不需要文件上传功能，应该禁用文件上传功能。\n- 如果应用程序需要文件上传功能，可以参考以下建议：\n1. 文件上传的目录设置为不可执行。\n2. 采用白名单方式判断文件类型。在判断文件类型时，可采用MIME Type、 后缀检查等方式。\n3. 使用随机数改写文件名和文件路径。 如果应用程序采用随机数改写了文件名和路径，可以很大程度上增加攻击的成本。\n4. 对于图片的处理，可以采用压缩函数或者resize函数，在处理图片的同时，破坏图片中可能包含的脚本代码。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "85",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;85行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "140",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;140行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "31",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;31行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "236",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;236行input"
+    },
+    {
+      "code_location": "src/main/resources/webwolf/templates/files.html",
+      "code_line_num": "35",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webwolf/templates/files.html;35行input"
+    }
+  ],
+  "next_block_start": 26
+}

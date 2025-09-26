@@ -1,0 +1,16 @@
+{
+  "issue_title": "信息管理：系统信息泄露：Spring Boot Actuator",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "Actuator 是 Spring Boot 提供的服务监控和管理中间件。当 Spring Boot 应用程序运行时，它会自动将多个端点注册到路由进程中。而由于对这些端点的错误配置，就有可能导致一些系统信息泄露、XXE、甚至是 RCE 等安全问题。\n**例如**：下列配置文件中依赖了 Spring Boot Actuator。\n```xml\n&lt;dependencies&gt;\n    &lt;dependency&gt;\n        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;\n        &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;\n        &lt;version&gt;2.6.7&lt;/version&gt;\n    &lt;/dependency&gt;\n  ...\n&lt;/dependencies&gt;\n```",
+  "fix_advice": "如果请求接口不做任何安全限制，安全隐患显而易见。实际上Spring Boot也提供了安全限制功能。\n**示例1**：禁用需要禁用的接口，如/env接口\n```xml\nmanagement.endpoint.env.enabled=false\n```\n如果只想打开一两个接口，那就先禁用全部接口，然后启用需要的接口：\n```xml\nmanagement.endpoints.enabled-by-default=false\nmanagement.endpoint.health.enabled=true\n```\n**示例2**：可以引入spring-boot-starter-security依赖（必要）\n```xml\n&lt;dependencies&gt;\n    &lt;dependency&gt;\n        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;\n        &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;\n    &lt;/dependency&gt;\n  ...\n&lt;/dependencies&gt;\n```\n在application.yml中配置账号密码，这时再访问actuator功能时就会弹出登录窗口，需要输入账号密码验证后才允许访问。（非必要，若不配置账号密码，默认账号为user，密码会在控制台输出）\n```yml\nspring:\n  security:\n    user:\n      name: admin\n      password: admin\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "pom.xml",
+      "code_line_num": "254",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 pom.xml;254行spring-boot-starter-actuator:3.4.3"
+    }
+  ],
+  "next_block_start": 10
+}

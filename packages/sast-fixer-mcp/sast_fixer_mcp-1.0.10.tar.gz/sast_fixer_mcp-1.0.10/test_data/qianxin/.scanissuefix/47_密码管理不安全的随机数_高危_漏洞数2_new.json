@@ -1,0 +1,21 @@
+{
+  "issue_title": "密码管理：不安全的随机数",
+  "issue_level": "High",
+  "issue_count": "2",
+  "issue_desc": "JavaScript的`Math.random()`实现PRNG（伪随机数序列发生器），该PRNG是可移植和可重复的，因此如果两个\n\n`Math.random()`使用相同的种子，会生成相同的数值序列。\n**例如**：下面的代码使用\n\n```javascript\nMath.random()\n```\n\n创建的Token很容易被猜到。\n```javascript\nfunction getToken (){\n    var token =\n        Math.random();\n    return token;\n}\n```",
+  "fix_advice": "JavaScript在安全性要求较高的环境中生成随机数，常规的建议是使用 Mozilla API 中的`window.crypto.getRandomValues()`函数，但这种方法受限于浏览器的兼容性，只在较新的版本（Chrome&gt;=11.0, Firefox&gt;=21, Edge, IE&gt;=11, Safari&gt;=3.1）可以使用。如果考虑到旧版本浏览器，则应在javascript之外处理PRNG功能。\n**例如**：缺陷描述中的例子可以改写为。\n\n```javascript\nfunction getToken (){\n    var array = new Uint32Array(1);\n    window.crypto.getRandomValues(array);\n    var token = array[0];\n    return token;\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/chromedevtools/html/ChromeDevTools.html",
+      "code_line_num": "53",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/chromedevtools/html/ChromeDevTools.html;53行random"
+    },
+    {
+      "code_location": "src/main/resources/lessons/httpbasics/html/HttpBasics.html",
+      "code_line_num": "59",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/httpbasics/html/HttpBasics.html;59行random"
+    }
+  ],
+  "next_block_start": 14
+}

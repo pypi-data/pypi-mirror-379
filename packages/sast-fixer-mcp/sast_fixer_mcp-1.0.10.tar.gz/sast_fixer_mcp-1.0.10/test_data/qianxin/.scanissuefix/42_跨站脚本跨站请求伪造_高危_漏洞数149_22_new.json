@@ -1,0 +1,36 @@
+{
+  "issue_title": "跨站脚本：跨站请求伪造",
+  "issue_level": "High",
+  "issue_count": "149",
+  "issue_desc": "跨站请求伪造(CSRF)是伪造客户端请求的一种攻击。应用程序允许用户提交不包含任何nonce（与用户Session关联的加密随机值）的请求，将可能导致CSRF攻击。\n**例如**：以下代码片段用于银行转账功能，对于该重要敏感的操作没有进行相应防护，将易于导致跨站请求伪造攻击。\n\n```javascript\nvar req = new XMLHttpRequest();\nreq.open(\"POST\", \"/transferFunds\", true);\nbody = \"to_account=Bill&amp;amount=10000\";\nreq.send(body);\n```\n\n**例2**：下面是通过表单发送请求。\n\n```htm\n&lt;form method=\"GET\" action=\"/transferFunds \"&gt;\n    cash: &lt;input type=\"text\" name=\"cash\"&gt;\n    to: &lt;input type=\" text \" name=“to\"&gt;\n    &lt;input type=\"submit\" name=\"action\" value=\"TransferFunds\"&gt;\n&lt;/form&gt;\n```",
+  "fix_advice": "防止跨站请求伪造攻击的方法如下：\n防御策略\n1、验证HTTP Refer字段\n2、在请求地址中添加token验证\n3、在http头中自定义属性并验证\n4、Chrome浏览器端启用 SameSite cookie\n\n防御手段\n1、尽量使用POST, 限制GET\n2、调整浏览器Cookie策略\n3、加验证码，强制用户必须与应用进行交互，才能完成最终请求。在通常情况下，验证码能很好遏制CSRF攻击。但是出于用户体验考虑，网站不能给所有的操作都加上验证码。因此验证码只能作为一种辅助手段，不能作为主要解决方案\n4、Referer Check在Web最常见的应用就是“防止图片盗链”。\n同理，Referer Check也可以被用于检查请求是否来自合法的“源”（Referer值是否是指定页面，或者网站的域），如果都不是，那么就可能是CSRF攻击\n5、Anti CSRF token 业界推荐\n\nAnti CSRF token\n1、用户访问某个表单页面。\n2、服务端生成一个Token，放在用户的Session中，或者浏览器的Cookie中。\n3、在页面表单附带上Token参数。\n4、用户提交请求后， 服务端验证表单中的Token是否与用户Session（或Cookies）中的Token一致，一致为合法请求，不是则非法请求。\n\n这个Token的值必须是随机的，不可预测的。由于Token的存在，攻击者无法再构造一个带有合法Token的请求实施CSRF攻击。\n另外使用Token时应注意Token的保密性，尽量把敏感操作由GET改为POST，以form或AJAX形式提交，避免Token泄露。\n\n**例如**：下面代码片段中，在表单中增加了一个Token。\n\n```javascript\nreq.open(\"POST\", \"/transferFunds\", true);\nbody = \"to_account=Bill&amp;amount=10000&amp;token=\" + token;\n//token为与会话相关的一次性随机数。\nreq.send(body);\n```\n这样，服务器端程序响应用户请求前先验证Token，判断请求的合法性。对于Token，越难被猜出攻击者攻击成功的概率就越低。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/webgoat/static/js/quiz.js",
+      "code_line_num": "15",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/static/js/quiz.js;15行open"
+    },
+    {
+      "code_location": "src/main/resources/lessons/sqlinjection/html/SqlInjectionMitigations.html",
+      "code_line_num": "176",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/sqlinjection/html/SqlInjectionMitigations.html;176行form"
+    },
+    {
+      "code_location": "src/main/resources/lessons/lessontemplate/js/idor.js",
+      "code_line_num": "14",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/lessontemplate/js/idor.js;14行赋值语句"
+    },
+    {
+      "code_location": "src/main/resources/lessons/hijacksession/templates/hijackform.html",
+      "code_line_num": "3",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/hijacksession/templates/hijackform.html;3行form"
+    },
+    {
+      "code_location": "src/main/resources/lessons/deserialization/html/InsecureDeserialization.html",
+      "code_line_num": "26",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/deserialization/html/InsecureDeserialization.html;26行form"
+    }
+  ],
+  "next_block_start": 602
+}

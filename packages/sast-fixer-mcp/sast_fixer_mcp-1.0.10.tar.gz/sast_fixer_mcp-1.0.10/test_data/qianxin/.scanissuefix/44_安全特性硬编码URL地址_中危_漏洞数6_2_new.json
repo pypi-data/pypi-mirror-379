@@ -1,0 +1,16 @@
+{
+  "issue_title": "安全特性：硬编码URL地址",
+  "issue_level": "Medium",
+  "issue_count": "6",
+  "issue_desc": "程序中采用硬编码方式处理URL地址，一方面会降低系统安全性，另一方面不易于程序维护。\n\n**例如**：下列代码中采用硬编码方式处理IP地址。\n```java\npublic class ConnectionConfig{\n    String url = \"www.codesafe.cn\";\n    String name = \"admin\";\n    String password = \"123456\";\n    ...\n}\n```",
+  "fix_advice": "程序中不应对URL地址进行硬编码，可以使用配置文件或数据库存储的方式来存储系统所需的数据；并且录入数据时，还可以做加密处理之后再进行数据的录入，从而防止敏感数据泄露。\n\n**例如**：下列代码中从配置文件中获取经过加密的URL地址并解密使用。\n```java\npublic class ConnectionConfig{\n    String url = EncryptUtil.decrypt(PropertiesUtil.get(\"connection.url\"));\n    String name = EncryptUtil.decrypt(PropertiesUtil.get(\"connection.username\"));\n    String password = EncryptUtil.decrypt(PropertiesUtil.get(\"connection.password\"));\n    ...\n\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpointTest.java",
+      "code_line_num": "83",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpointTest.java;83行语句"
+    }
+  ],
+  "next_block_start": 30
+}

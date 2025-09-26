@@ -1,0 +1,21 @@
+{
+  "issue_title": "输入验证：关键参数篡改",
+  "issue_level": "Medium",
+  "issue_count": "2",
+  "issue_desc": "软件未经验证使用可能被改的关键参数如资产数据等。某些数据如页面隐藏域字段、Cookie URL 等外部渠道传入的关键参数可能被恶意的浏览插件、代理服务器等方式算改，若程序获取该类数据后不经验证直接使用,可能造成信息泄露、数据异常、系统故障等安全事件。\n\n**例如**：在以下代码片段中，使用外部控制的关键参数price。\n```java\nclass Example {\n    private HttpServletRequest request;\n\n    public void setRequest(HttpServletRequest request) {\n        this.request = request;\n    }\n\n    public String encode(String str) {\n        //编码转义函数，用于规避sql注入、跨站脚本等攻击\n        ...\n    }\n\n    public void exampleFun() {\n        /**\n         * 本例模拟黑客攻击购物网站\n         */\n        String prices = request.getParameter(\"price\"); //price 是页面隐藏域中的商品单价,属于关键参数\n        double price = Double.parseDouble(encode(prices));\n        String numbers = request.getParameter(\"number\"); //number 是商品数量,不属于关键参数\n        int number = Integer.parseInt(encode(numbers));\n        //该购物网站依赖页面隐藏城传回的商品单价生成账单,黑客可算改商品单价实现“0元”购物\n        double amount = price *number;\n        ...\n    }\n}\n```",
+  "fix_advice": "将关键参数缓存到服务端的会话中,程序使用该数据须通过会话获取。\n\n**例如**：在以下代码片段中，使用外部productID通过缓存获取price。\n```java\nclass Example {\n    private HttpServletRequest request;\n\n    public void setRequest(HttpServletRequest request) {\n        this.request = request;\n    }\n\n    public String encode(String str) {\n        //编码转义函数，用于规避sql注入、跨站脚本等攻击\n        ...\n    }\n\n    public void exampleFun() {\n        ...\n        String productID = request.getParameter(\"productID\") ;\n        double price = priceMap.get(encode(productID));\n        String numbers = request.getParameter(\"number\"); //number 是商品数量,不属于关键参数\n        int number = Integer.parseInt(encode(numbers));\n        //该购物网站依赖服务端缓存的商品单价生成账单,规避商品单价这一关键参数被筹改的风险\n        double amount = price * number;\n        ...\n    }\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/idor/IDOREditOtherProfile.java",
+      "code_line_num": "43",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/idor/IDOREditOtherProfile.java;43行userId"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/idor/IDORViewOtherProfile.java",
+      "code_line_num": "43",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/idor/IDORViewOtherProfile.java;43行userId"
+    }
+  ],
+  "next_block_start": 14
+}

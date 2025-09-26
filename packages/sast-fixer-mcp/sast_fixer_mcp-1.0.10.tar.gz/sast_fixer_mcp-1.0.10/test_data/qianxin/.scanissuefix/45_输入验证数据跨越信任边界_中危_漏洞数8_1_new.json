@@ -1,0 +1,36 @@
+{
+  "issue_title": "输入验证：数据跨越信任边界",
+  "issue_level": "Medium",
+  "issue_count": "8",
+  "issue_desc": "数据跨越信任边界是指，数据从一个不可信赖域存储到一个可信赖域导致程序错误信赖未验证的数据。\n\n**例如**：下面代码片段中将用户输入的数据`name`存储到Http Session中。\n```java\nprotected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n    String name = req.getParameter(\"userName\");\n    HttpSession sess = req.getSession();\n    sess.setAttribute(\"user\", name);\n}\n```",
+  "fix_advice": "数据跨越信任边界时需要进行合理的验证，保证信赖域中数据是安全的。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java",
+      "code_line_num": "90",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java;85行来自于http请求的数据从resetPassword()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java;89行不可信的数据从setResetLink()方法第1个参数进入,然后从this参数返回\n\n3 src/main/java/org/owasp/webgoat/lessons/passwordreset/resetlink/PasswordChangeForm.java;24行赋值不可信的数据给变量this.resetLink\n\n4 src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java;90行不可信的数据从addAttribute()方法第2个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/webwolf/FileServer.java",
+      "code_line_num": "116",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/webwolf/FileServer.java;116行读取来自于属性配置的数据this.port\n\n2 src/main/java/org/owasp/webgoat/webwolf/FileServer.java;54行Tainted value enters from config file, then be used \n\n3 src/main/java/org/owasp/webgoat/webwolf/FileServer.java;116行不可信的数据从addObject()方法第2个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/webwolf/FileServer.java",
+      "code_line_num": "116",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/webwolf/FileServer.java;116行读取来自于属性配置的数据this.server\n\n2 src/main/java/org/owasp/webgoat/webwolf/FileServer.java;48行Tainted value enters from config file, then be used \n\n3 src/main/java/org/owasp/webgoat/webwolf/FileServer.java;116行不可信的数据从addObject()方法第2个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/container/WebWolfRedirect.java",
+      "code_line_num": "23",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/container/WebWolfRedirect.java;21行来自于属性配置的数据从getProperty()方法返回值返回\n\n2 src/main/java/org/owasp/webgoat/container/WebWolfRedirect.java;21行赋值不可信的数据给变量url\n\n3 src/main/java/org/owasp/webgoat/container/WebWolfRedirect.java;23行不可信的数据从toString()方法this参数进入,然后从返回值返回\n\n4 src/main/java/org/owasp/webgoat/container/WebWolfRedirect.java;23行不可信的数据从ModelAndView()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java",
+      "code_line_num": "91",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java;85行来自于http请求的数据从resetPassword()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java;89行不可信的数据从setResetLink()方法第1个参数进入,然后从this参数返回\n\n3 src/main/java/org/owasp/webgoat/lessons/passwordreset/resetlink/PasswordChangeForm.java;24行赋值不可信的数据给变量this.resetLink\n\n4 src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java;91行不可信的数据从addObject()方法第2个参数进入"
+    }
+  ],
+  "next_block_start": 38
+}

@@ -1,0 +1,36 @@
+{
+  "issue_title": "安全特性：Cookie：未设置HTTPOnly属性",
+  "issue_level": "Medium",
+  "issue_count": "16",
+  "issue_desc": "Cookie设置HttpOnly属性意味着客户端脚本不允许读取cookie，对于防范跨站脚本攻击大有帮助，浏览器也不会将其发送给任何第三方。\n\n**例如**：下面代码示例中Cookie没有设置HttpOnly属性，HttpOnly属性默认为false。\n```java\n...\nCookie cookie = new Cookie(\"myCookieName\", value);\n...\n```",
+  "fix_advice": "检查代码逻辑，当客户端不需要读取cookie时，将HttpOnly属性设为true。\n\n**例如**：下面代码示例中设置了HttpOnly属性为true。\n```java\n...\nCookie cookie = new Cookie(\"myCookieName\", value);\ncookie.setHttpOnly(true);\n...\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+      "code_line_num": "217",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java;217行new Cookie(...) : 初始化\n\n2 src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java;219行作用域结束 : 没有设置HttpOnly"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java",
+      "code_line_num": "64",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java;64行cookie = new Cookie(...) : cookie初始化\n\n2 src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java;67行cookie 作用域结束 : cookie没有设置HttpOnly"
+    },
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+      "code_line_num": "109",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java;109行new Cookie(...) : 初始化\n\n2 src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java;114行作用域结束 : 没有设置HttpOnly"
+    },
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/csrf/CSRFFeedbackTest.java",
+      "code_line_num": "49",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/csrf/CSRFFeedbackTest.java;49行new Cookie(...) : 初始化\n\n2 src/test/java/org/owasp/webgoat/lessons/csrf/CSRFFeedbackTest.java;57行作用域结束 : 没有设置HttpOnly"
+    },
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignmentTest.java",
+      "code_line_num": "81",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignmentTest.java;81行cookie = new Cookie(...) : cookie初始化\n\n2 src/test/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignmentTest.java;89行cookie 作用域结束 : cookie没有设置HttpOnly"
+    }
+  ],
+  "next_block_start": 70
+}

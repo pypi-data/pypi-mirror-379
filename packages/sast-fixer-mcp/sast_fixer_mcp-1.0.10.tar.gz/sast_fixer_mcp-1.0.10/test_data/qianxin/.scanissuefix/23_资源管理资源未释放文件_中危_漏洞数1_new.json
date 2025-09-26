@@ -1,0 +1,16 @@
+{
+  "issue_title": "资源管理：资源未释放：文件",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "程序创建或分配文件句柄后，不进行合理释放，将会降低系统性能，攻击者还可能会通过耗尽资源池的方式发起拒绝服务攻击。\n\n**例如**：下面代码片段中，创建了一个文件句柄`zFile`，未进行合理释放。\n```java\npublic void getZipContents(String fileName){\n    ZipFile zFile = null;\n    try {\n        zFile = new ZipFile(fileName);\n        ...\n    } catch (IOException e) {\n        e.printStackTrace();\n    }\n}\n```",
+  "fix_advice": "程序不应依赖于`finalize()`回收文件句柄资源，应在finally代码块中手动释放文件句柄资源。\n\n**例如**：下面代码片段中，使用完之前创建的文件句柄`zFile`后，在finally代码块中进行了释放。\n```java\npublic void getZipContents(String fileName){\n    ZipFile zFile = null;\n    try {\n        zFile = new ZipFile(fileName);\n        ...\n    } catch (IOException e) {\n        e.printStackTrace();\n    }finally{\n        if(zFile!=null){\n            try {\n                zFile.close();\n            } catch (IOException e) {\n                e.printStackTrace();\n            }\n        }\n    }\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java",
+      "code_line_num": "75",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java;75行zip = new ZipFile(...)\n\n2 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java;75行zip 引用一个分配的资源\n\n3 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java;84行返回\n\n4 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java;84行zip 不再引用一个分配的资源\n\n5 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java;84行zip 作用域结束 : 资源泄漏"
+    }
+  ],
+  "next_block_start": 10
+}

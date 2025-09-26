@@ -1,0 +1,16 @@
+{
+  "issue_title": "输入验证：拒绝服务",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "拒绝服务攻击即是攻击者想办法让目标机器停止提供服务，是黑客常用的攻击手段之一。\n通过发送大量请求产生的拒绝服务，一般在网络层进行拦截。更严重的是利用系统漏洞，只需少量请求就能导致拒绝服务的攻击方式。\n**例如**：以下代码允许用户指定要使用的 file system 大小。通过指定一个较大的数字，攻击者可以耗尽 file system 资源。\n\n```javascript\nvar insecureInput = document.URL.indexOf('size=');\nvar fs = requestFileSystem(0, insecureInput);\n```",
+  "fix_advice": "拒绝服务攻击是一种滥用资源性的攻击。从程序源代码角度讲，对涉及到系统资源的外部数据应该进行严格校验，防止无限制的输入。\n**例如**：通过下面的代码，用户可以指定 file system 的大小，但是该值必须取自合理的范围。\n```javascript\nif (insecureInput &gt;= SIZE_MIN &amp;&amp;\n    insecureInput &lt;= SIZE_MAX) {\n    var fs = requestFileSystem(0, insecureInput);\n} else {\n    throw \"Invalid file system size\";\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/webgoat/static/js/libs/text.js",
+      "code_line_num": "254",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/static/js/libs/text.js;254行readFileSync"
+    }
+  ],
+  "next_block_start": 10
+}

@@ -1,0 +1,16 @@
+{
+  "issue_title": "输入验证：服务器端请求伪造",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "很多Web应用提供了从其他的服务器上获取数据的功能，例如用户指定URL让Web应用加载图片，下载文件等。如果恶意利用这个功能，可以让存在缺陷的Web应用作为代理攻击远程和本地的服务器。这种形式的攻击称为服务端请求伪造攻击`(Server-side Request Forgery, SSRF)`。攻击者利用SSRF可以实现的攻击主要有5种：\n1. 可以对外网、服务器所在内网、本地进行端口扫描，获取一些服务器的banner信息；\n2. 攻击运行在内网或本地的应用程序(比如溢出)；\n3. 对内网web应用进行指纹识别，通过访问默认文件实现；\n4. 攻击内外网的web应用，主要是使用get参数就可以实现的攻击(比如struts2，sqli等)；\n5. 利用file协议读取本地文件等。\n\n**例如**：下面的代码片段中,攻击者将能够控制服务器连接URL。\n```java\nString url = request.getParameter(\"url\");\nCloseableHttpClient httpclient = HttpClients.createDefault();\nHttpGet httpGet = new HttpGet(url);\nCloseableHttpResponse response1 = httpclient.execute(httpGet);\n```\n这种使用用户输入影响的资源可能存在风险。",
+  "fix_advice": "修复方案通常有下面5种：\n1. 过滤返回信息，验证远程服务器对请求的响应是比较容易的方法。如果web应用是去获取某一种类型的文件。那么在把返回结果展示给用户之前先验证返回的信息是否符合标准。\n2. 统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态。\n3. 限制请求的端口为http常用的端口，比如80,443,8080,8090。\n4. 禁用不需要的协议。仅仅允许http和https请求。可以防止类似于`file:///, gopher:// , ftp://` 等引起的问题。\n5. 过滤内网ip，限制访问内网",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java",
+      "code_line_num": "36",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java;29行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java;30行不可信的数据从furBall()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java;36行不可信的数据从URL()方法第1个参数进入,然后从this参数返回\n\n4 src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java;36行不可信的数据从openStream()方法this参数进入"
+    }
+  ],
+  "next_block_start": 10
+}

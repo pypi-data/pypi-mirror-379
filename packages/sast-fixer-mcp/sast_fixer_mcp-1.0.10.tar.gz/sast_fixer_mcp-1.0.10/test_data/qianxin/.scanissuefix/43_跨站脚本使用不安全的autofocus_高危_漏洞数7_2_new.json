@@ -1,0 +1,21 @@
+{
+  "issue_title": "跨站脚本：使用不安全的autofocus",
+  "issue_level": "High",
+  "issue_count": "7",
+  "issue_desc": "错误的使用`html5`的`autofocus`属性会触发多种js事件，降低应用程序的安全，可能会导致遭受XSS攻击。\n**例如**：以下示例在提交表单上使用`autofocus`属性。\n```html\n&lt;form name=\"logo\" method=\"POST\" action=\"http://192.168.1.2/\"&gt;\n\t&lt;input type=\"text\" name=\"log\"&gt;\n\t&lt;input type=\"hidden\" name=\"DNS\" value=\"255.255.255.255\"&gt;\n\t&lt;input type=\"submit\" name=\"submit\" value=\"submit\" autofocus&gt;\n&lt;/form&gt;\n```",
+  "fix_advice": "建议不使用或减少`autofocus`属性。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/passwordreset/html/PasswordReset.html",
+      "code_line_num": "58",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/passwordreset/html/PasswordReset.html;58行autofocus"
+    },
+    {
+      "code_location": "src/main/resources/webgoat/templates/registration.html",
+      "code_line_num": "32",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/templates/registration.html;32行autofocus"
+    }
+  ],
+  "next_block_start": 34
+}

@@ -1,0 +1,16 @@
+{
+  "issue_title": "密码管理：不安全的哈希算法",
+  "issue_level": "High",
+  "issue_count": "1",
+  "issue_desc": "在安全性要求较高的系统中，不应使用被业界公认的不安全的哈希算法（如MD2、MD4、MD5、SHA、SHA1等)来保证数据的完整性。\n\n**例如**：下面代码片段中，采用MD5算法来保证数据的完整性。\n```java\n...\nbyte[] b = str.getBytes();\nMessageDigest md = null;\ntry {\n    md = MessageDigest.getInstance(\"MD5\");\n    md.update(b);\n    ...\n}catch (NoSuchAlgorithmException e){\n    ...\n}\n...\n```",
+  "fix_advice": "在安全性要求较高的系统中，应采用散列值&gt;=224比特的SHA系列算法（如SHA-224、SHA-256、SHA-384和SHA-512）来保证敏感数据的完整性。\n\n**例如**：下面代码片段中，使用SHA-256算法取代MD5算法保证数据完整性。\n```java\n...\nbyte[] b = str.getBytes();\nMessageDigest md = null;\ntry {\n    md = MessageDigest.getInstance(\"SHA-256\");\n    md.update(b);\n    ...\n} catch (NoSuchAlgorithmException e) {\n...\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+      "code_line_num": "39",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java;39行getInstance()"
+    }
+  ],
+  "next_block_start": 10
+}

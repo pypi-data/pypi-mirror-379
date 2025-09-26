@@ -1,0 +1,21 @@
+{
+  "issue_title": "代码注入：资源注入",
+  "issue_level": "High",
+  "issue_count": "2",
+  "issue_desc": "使用用户输入控制资源标识符，借此攻击者可以访问或修改其他受保护的系统资源。当满足以下两个条件时，就会发生资源注入：\n1. 攻击者可以指定已使用的标识符来访问系统资源。例如：攻击者能够指定用来连接到网络资源的端口号。\n2. 攻击者可以通过指定特定资源来获取某种权限，而这种权限在一般情况下是不可能获得的。例如：程序可能会允许攻击者把敏感信息传输到第三方服务器。\n\n**例1**：下面的代码片段从HTTP请求获取端口号，并使用此端口号创建一个套接字，而不进行任何验证。使用代理的用户可以修改此端口并获得与服务器的直接连接。\n```java\nString port = request.getParameter(\"port\");\n...\nServerSocket serverSocket = new ServerSocket(port);\nSocket socket = serverSocket.accept();\n...\n```\n这种利用用户输入影响的资源可能存在风险。\n**例2**：下面的代码利用WebView的File域协议读取任意可读文件或受害应用的私有文件。\n```java\nWebView webView=(WebView) findViewById(R.id.webView);\nString url= getIntent().getData().toString();\nwebView.loadUrl(url);\n```\n查看hosts文件：`adb shell am start -n com.mytest/.MainActivity -d file:///system/etc/hosts `\n查看应用私有文件：`adb shell am start -n /data/data/com.cn.test/databases/user.db`",
+  "fix_advice": "为了避免资源注入漏洞攻击，可以采用黑名单或白名单策略。黑名单会有选择地拒绝或避免潜在的危险字符。但是，任何这样一份黑名单都不可能是完整的，而且将随着时间的推移而过时。比较好的方法是创建白名单，允许其中的字符出现在资源名称中，且只接受完全由这些被认可的字符所组成的输入。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7.java",
+      "code_line_num": "85",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7.java;85行来自于http请求的数据从getRequestURL()方法返回值返回\n\n2 src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7.java;85行不可信的数据从toString()方法this参数进入,然后从返回值返回\n\n3 src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7.java;85行不可信的数据从URI()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java",
+      "code_line_num": "36",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java;29行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java;30行不可信的数据从furBall()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/ssrf/SSRFTask2.java;36行不可信的数据从URL()方法第1个参数进入"
+    }
+  ],
+  "next_block_start": 14
+}

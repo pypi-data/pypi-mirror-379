@@ -1,0 +1,36 @@
+{
+  "issue_title": "输入验证：重定向",
+  "issue_level": "Medium",
+  "issue_count": "5",
+  "issue_desc": "应用程序允许未验证的用户输入控制重定向中的URL,可能会导致攻击者发动钓鱼攻击。\n**例1**：以下JavaScript代码从用户输入表单的dest参数中读取目的URL，然后在新窗口中打开。\n\n```javascript\ndsturl = myForm.dsturl.value;\nwindow.open(dsturl,\"newwin\");\n```\n假如攻击者可以控制这个表单，那么用户就有可能打开一个恶意站点。\n\n**例2**：以下是Node.js可能出现的。\n\n```javascript\nvar express = require('express');\nvar app = express();\napp.get('/', function (req, res) {\n    res.redirect(req.url);\n});\n```\n与例1一样假如攻击者控制了这个url，那么就会导致用户可能打开恶意站点。",
+  "fix_advice": "js和Node.js都要避免采用不可信数据源的数据来构造重定向的URL，如果业务逻辑需要涉及到用户输入，那么就创建一份合法URL列表，用户只能从中进行选择，进行重定向操作。\n**例如**：以下代码中，用户只能输入数字来选择URL。\n\n```javascript\ndst = myForm.dst.value;\nif(dst == \"1\"){\n    dsturl = \"http://www.1.com\"\n}else if(dst == \"2\"){\n    dsturl = \"http://www.2.com\"\n}else{\n    dsturl = \"http://www.3.com\"\n}\nwindow.open(dsturl,\"newwin\");\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "30",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;29行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/pathtraversal/js/path_traversal.js;30行赋值不可信的数据给变量src"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "14",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;13行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/pathtraversal/js/path_traversal.js;14行赋值不可信的数据给变量src"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "54",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;53行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/pathtraversal/js/path_traversal.js;54行赋值不可信的数据给变量src"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "60",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;59行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/pathtraversal/js/path_traversal.js;60行赋值不可信的数据给变量src"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "47",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;46行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/pathtraversal/js/path_traversal.js;47行赋值不可信的数据给变量src"
+    }
+  ],
+  "next_block_start": 26
+}

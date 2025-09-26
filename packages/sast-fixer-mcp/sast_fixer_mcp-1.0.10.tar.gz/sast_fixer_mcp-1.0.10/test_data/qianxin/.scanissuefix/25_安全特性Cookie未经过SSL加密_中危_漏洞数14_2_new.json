@@ -1,0 +1,36 @@
+{
+  "issue_title": "安全特性：Cookie：未经过SSL加密",
+  "issue_level": "Medium",
+  "issue_count": "14",
+  "issue_desc": "使用未加密的网络传输通道发送Cookie易受到网络截取攻击。创建Cookie时，需要将secure标记设置为true，表明浏览器必须通过HTTPS来加密传输Cookie。\n\n**例如**：下面代码片段中，将Cookie添加到HTTP响应中时，未设置secure标记。\n```java\n...\nCookie cookie = new Cookie(\"SessionID\", sessionID);\nresponse.addCookie(cookie);\n...\n```",
+  "fix_advice": "为Cookie添加secure标记，要求浏览器通过HTTPS发送Cookie，这样有助于保护Cookie值的保密性。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignmentTest.java",
+      "code_line_num": "81",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignmentTest.java;81行cookie = new Cookie(...)\n\n2 src/test/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignmentTest.java;89行cookie 作用域结束"
+    },
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+      "code_line_num": "69",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java;69行new Cookie(...)\n\n2 src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java;72行作用域结束"
+    },
+    {
+      "code_location": "src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java",
+      "code_line_num": "46",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java;46行cookie = new Cookie(...)\n\n2 src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java;56行cookie 作用域结束"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+      "code_line_num": "115",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java;114行cookie = new Cookie(...)\n\n2 src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java;115行addCookie(cookie)"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java",
+      "code_line_num": "66",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java;64行cookie = new Cookie(...)\n\n2 src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java;66行addCookie(cookie)"
+    }
+  ],
+  "next_block_start": 62
+}

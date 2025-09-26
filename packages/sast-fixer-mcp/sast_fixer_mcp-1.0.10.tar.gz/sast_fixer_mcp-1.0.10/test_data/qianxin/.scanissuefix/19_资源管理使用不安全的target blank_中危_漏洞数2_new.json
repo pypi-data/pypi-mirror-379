@@ -1,0 +1,21 @@
+{
+  "issue_title": "资源管理：使用不安全的target blank",
+  "issue_level": "Medium",
+  "issue_count": "2",
+  "issue_desc": "在 `&lt;a&gt;`标签中使用target属性，值设置为`_blank`攻击者会针对`window.opener`API进行恶意行为的攻击，有可能导致钓鱼安全漏洞问题。\n**例如**：以下示例使用的`targer`属性，但是没有设置`rel`属性。\n```html\n&lt;a href=\"www.example.com\" target=\"_blank\"/&gt;\n```",
+  "fix_advice": "建议使用`target=\"_blank\"`时，配合使用`rel=\"noopenner noreferrer\"`。\n**例如**：配合使用`rel`属性。\n```html\n&lt;a href=\"www.example.com\" target=\"_blank\" rel=\"noopenner noreferrer\"/&gt;\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/webwolfintroduction/html/WebWolfIntroduction.html",
+      "code_line_num": "73",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/webwolfintroduction/html/WebWolfIntroduction.html;73行unsafe use of target _blank"
+    },
+    {
+      "code_location": "src/main/resources/webgoat/templates/main_new.html",
+      "code_line_num": "41",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/templates/main_new.html;41行unsafe use of target _blank"
+    }
+  ],
+  "next_block_start": 14
+}

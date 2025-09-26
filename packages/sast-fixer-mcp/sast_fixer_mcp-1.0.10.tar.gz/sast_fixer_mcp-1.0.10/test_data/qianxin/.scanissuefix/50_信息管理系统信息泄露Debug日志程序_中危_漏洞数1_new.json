@@ -1,0 +1,16 @@
+{
+  "issue_title": "信息管理：系统信息泄露：Debug日志程序",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "程序将系统数据或调试信息通过Debug日志程序输出，就会发生内部信息泄露。\n\n**例如**：下面代码片段中，会话ID通过Debug日志程序输出。\n```java\n...\nHttpSession session = request.getSession(true);\nlogger.log(Level.FINEST, \"Username: \" + username + \" Session ID:\" + session.getId());\n...\n```",
+  "fix_advice": "程序不应将系统数据或调试信息通过Debug日志程序输出。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/container/i18n/PluginMessages.java",
+      "code_line_num": "44",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/container/i18n/PluginMessages.java;44行读取不可信的数据e\n\n2 src/main/java/org/owasp/webgoat/container/i18n/PluginMessages.java;44行不可信的数据从error()方法第2个参数进入"
+    }
+  ],
+  "next_block_start": 10
+}

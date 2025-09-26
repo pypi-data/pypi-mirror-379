@@ -1,0 +1,21 @@
+{
+  "issue_title": "安全特性：隐藏的表单字段",
+  "issue_level": "Medium",
+  "issue_count": "22",
+  "issue_desc": "隐藏字段是不安全的参数，攻击者能够在一个post请求中改变隐藏字段的值。\n**例如**：\n```html\n&lt;input type=\"hidden\"&gt;\n```",
+  "fix_advice": "将隐藏字段视为不可信赖的输入，不要在隐藏字段中存储敏感信息。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+      "code_line_num": "565",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/static/js/jquery_form/jquery.form.js;565行表达式"
+    },
+    {
+      "code_location": "src/main/resources/lessons/httpbasics/html/HttpBasics.html",
+      "code_line_num": "64",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/httpbasics/html/HttpBasics.html;64行input"
+    }
+  ],
+  "next_block_start": 94
+}

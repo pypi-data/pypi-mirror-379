@@ -1,0 +1,6 @@
+漏洞类型,漏洞等级,代码位置,代码行号,代码详情,修复状态,误报概率,误报原因澄清
+不安全的JSON反序列化【高危】(漏洞数：7),High,acepilot-server-common/src/main/java/com/chinamobile/cmss/acepilot/server/common/utils/JSONUtils.java,160,"objectMapper.readValue(json, listType)",fixed,低,测试修复
+不安全的JSON反序列化【高危】(漏洞数：7),High,acepilot-server-common/src/main/java/com/chinamobile/cmss/acepilot/server/common/utils/JSONUtils.java,122,"objectMapper.readValue(json, clazz)",fixed,低,测试修复
+StringBuilder拒绝服务攻击【中危】(漏洞数：3),Medium,acepilot-api-server/src/main/java/com/chinamobile/cmss/acepilot/api/server/utils/EcloudSignature.java,207,sbf.append(scanner.nextLine());,fixed,低,测试修复
+StringBuilder拒绝服务攻击【中危】(漏洞数：3),Medium,acepilot-api-server/src/main/java/com/chinamobile/cmss/acepilot/api/server/utils/EcloudSignature.java,207,sbf.append(scanner.nextLine());,fixed,低,测试修复
+StringBuilder拒绝服务攻击【中危】(漏洞数：3),Medium,acepilot-server-client/computer-feign-client/src/main/java/com/chinamobile/cmss/computer/client/config/EventStreamDecoder.java,30,"sb.append(line.substring(5)).append(""\n"");",fixed,低,测试修复

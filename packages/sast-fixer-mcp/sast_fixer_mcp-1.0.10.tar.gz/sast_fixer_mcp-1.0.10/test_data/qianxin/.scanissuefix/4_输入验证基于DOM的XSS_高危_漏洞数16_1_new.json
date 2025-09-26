@@ -1,0 +1,36 @@
+{
+  "issue_title": "输入验证：基于DOM的XSS",
+  "issue_level": "High",
+  "issue_count": "16",
+  "issue_desc": "应用程序的客户端代码从\n```javascript\ndocument.location、request.url、document.URL、document.referrer\n```\n或其他任何攻击者可以修改的浏览器对象获取数据，如果未验证数据是否存在恶意代码的情况下，就将其动态更新到页面的DOM节点,应用程序将易于受到基于DOM的XSS攻击。\n**例如**：下面的JavaScript代码片段可从URL中读取msg信息，并将其显示给用户。\n\n```javascript\nvar url=document.URL;\ndocument.write(url.substring(url.indexOf(\"msg=\")+4,url.length);\n```\n\n该段脚本解析URL，读取msg参数的值，并将其写入页面。如果攻击者设计一个恶意的URL，并以JavaScript代码作为msg参数，那么Web浏览器就会像显示HTTP响应那样执行该代码，应用程序将受到基于DOM的XSS攻击。",
+  "fix_advice": "基于DOM的XSS是将用户可控的JavaScript数据输出到HTML页面中而产生的漏洞，为了避免基于DOM的XSS攻击，避免将用户控制的数据直接输出到DOM或脚本中执行。如果不能避免，则应进行严格的过滤。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/xxe/js/xxe.js",
+      "code_line_num": "78",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/xxe/js/xxe.js;72行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/xxe/js/xxe.js;77行不可信的数据从replace()方法第2个参数进入,然后从返回值返回\n\n3 src/main/resources/lessons/xxe/js/xxe.js;77行赋值不可信的数据给变量comment\n\n4 src/main/resources/lessons/xxe/js/xxe.js;78行不可信的数据从append()方法第1个参数comment进入\n\n跟踪路径2:\n\n1 src/main/resources/lessons/xxe/js/xxe.js;72行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/xxe/js/xxe.js;76行不可信的数据从replace()方法第2个参数进入,然后从返回值返回\n\n3 src/main/resources/lessons/xxe/js/xxe.js;76行赋值不可信的数据给变量comment\n\n4 src/main/resources/lessons/xxe/js/xxe.js;77行不可信的数据从replace()方法this参数进入,然后从返回值返回\n\n5 src/main/resources/lessons/xxe/js/xxe.js;77行赋值不可信的数据给变量comment\n\n6 src/main/resources/lessons/xxe/js/xxe.js;78行不可信的数据从append()方法第1个参数comment进入\n\n跟踪路径3:\n\n1 src/main/resources/lessons/xxe/js/xxe.js;72行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/xxe/js/xxe.js;75行不可信的数据从replace()方法第2个参数进入,然后从返回值返回\n\n3 src/main/resources/lessons/xxe/js/xxe.js;75行赋值不可信的数据给变量comment\n\n4 src/main/resources/lessons/xxe/js/xxe.js;76行不可信的数据从replace()方法this参数进入,然后从返回值返回\n\n5 src/main/resources/lessons/xxe/js/xxe.js;76行赋值不可信的数据给变量comment\n\n6 src/main/resources/lessons/xxe/js/xxe.js;77行不可信的数据从replace()方法this参数进入,然后从返回值返回\n\n7 src/main/resources/lessons/xxe/js/xxe.js;77行赋值不可信的数据给变量comment\n\n8 src/main/resources/lessons/xxe/js/xxe.js;78行不可信的数据从append()方法第1个参数comment进入"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "60",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;59行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/pathtraversal/js/path_traversal.js;60行赋值不可信的数据给变量src"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "30",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;29行来自于http请求的数据从lambda()方法第1个参数result进入\n\n2 src/main/resources/lessons/pathtraversal/js/path_traversal.js;30行赋值不可信的数据给变量src"
+    },
+    {
+      "code_location": "src/main/resources/lessons/clientsidefiltering/js/clientSideFilteringFree.js",
+      "code_line_num": "41",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/clientsidefiltering/js/clientSideFilteringFree.js;40行来自于http请求的数据从val()方法返回值返回\n\n2 src/main/resources/lessons/clientsidefiltering/js/clientSideFilteringFree.js;40行赋值不可信的数据给变量checkoutCode\n\n3 src/main/resources/lessons/clientsidefiltering/js/clientSideFilteringFree.js;41行不可信的数据从get()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/resources/webgoat/static/js/goatApp/support/GoatUtils.js",
+      "code_line_num": "57",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/static/js/goatApp/support/GoatUtils.js;56行来自于http请求的数据从lambda()方法第1个参数reply进入\n\n2 src/main/resources/webgoat/static/js/goatApp/support/GoatUtils.js;57行不可信的数据从html()方法第1个参数reply进入"
+    }
+  ],
+  "next_block_start": 70
+}

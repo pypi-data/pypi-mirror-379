@@ -1,0 +1,16 @@
+{
+  "issue_title": "输入验证：有风险的资源使用",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "拒绝服务是攻击者通过消耗应用资源，以致程序崩溃使得其他用户无法继续正常使用的一种攻击方式。\n\n**例1**：下面代码片段中，解压文件前，未检查文件大小，攻击者可以通过提供一个超大文件来占用系统的计算资源从而实施DOS攻击。\n```java\nstatic final int SIZE= 512;\n...\npublic static void unZip(BufferedInputStream bin){\n    BufferedOutputStream  bop= null;\n    ZipInputStream zi = new ZipInputStream(bin);\n    ZipEntry  zentry;\n    while ((zentry= zi.getNextEntry()) != null) {\n        int count;\n        byte data[] = new byte[SIZE];\n        FileOutputStream fos = new FileOutputStream(zentry.getName());\n        bop= new BufferedOutputStream(fos, SIZE);\n        while ((count = zi.read(data, 0, SIZE)) != -1) {\n            bop.write(data, 0, count);\n        }\n        bop.flush();\n        bop.close();\n    }\n    zi.close();\n}\n```\n**例2**：下面使用了`waitFor`方法，意味着直到该进程结束才能继续执行后续代码，不正确的处理输入输出流有可能发生死锁，导致程序持续浪费资源甚至崩溃。\n`process.waitFor();`",
+  "fix_advice": "拒绝服务攻击是一种滥用资源性的攻击。从代码角度来考虑，对于涉及到需要占用系统资源的外部数据而言，代码逻辑中应该包含严格校验，防止无限制的输入。另外，谨慎使用线程阻塞的API，防止浪费系统资源或发生系统崩溃。\n\n**例如**：下面代码片段中，对解压文件进行验证，超过50M，将抛出异常。\n```java\nstatic final int MAX= 0x3200000; // 50MB\n// ...\n// write the files to the disk, but only if file is not insanely big\nif (entry.getSize() &gt; MAX) {\n    throw new IllegalStateException(\"File to be unzipped is huge.\");\n}\nif (entry.getSize() == -1) {\n    throw new IllegalStateException(\"File to be unzipped might be huge.\");\n}\nFileOutputStream fos = new FileOutputStream(entry.getName());\nbop = new BufferedOutputStream(fos, SIZE);\nwhile ((count = zis.read(data, 0, SIZE)) != -1) {\n    bop.write(data, 0, count);\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/dummy/insecure/framework/VulnerableTaskHolder.java",
+      "code_line_num": "72",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/dummy/insecure/framework/VulnerableTaskHolder.java;72行readLine()"
+    }
+  ],
+  "next_block_start": 10
+}

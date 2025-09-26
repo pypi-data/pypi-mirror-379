@@ -1,0 +1,31 @@
+{
+  "issue_title": "输入验证：拒绝服务：StringBuilder",
+  "issue_level": "Medium",
+  "issue_count": "4",
+  "issue_desc": "当StringBuilder或者StringBuffer使用`append`添加数据时，如果StringBuilder或者StringBuffer对象内部数组不足以存入所有数据时，会重新调整调整基础数组的大小来存放新的数据。而旧数组将继续留在堆中，一直等待系统回收。当旧数组过多时，可能导致堆栈溢出，从而拒绝服务。\n\n**例如**：在以下代码片段中，使用了不信任的数据添加到StringBuilder中。\n```java\n...\nString data = request.getParameter(\"data\");\nStringBuilder sb = new StringBuilder();\nsb.append(data);\n...\n```",
+  "fix_advice": "检查程序逻辑，对用户输入的大小进行了合理校验，以避免系统堆栈溢出而拒绝服务。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/xss/CrossSiteScriptingLesson5a.java",
+      "code_line_num": "65",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/xss/CrossSiteScriptingLesson5a.java;49行来自于http请求的数据从completed()方法第5个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/xss/CrossSiteScriptingLesson5a.java;65行不可信的数据从append()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson3.java",
+      "code_line_num": "54",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson3.java;37行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson3.java;38行不可信的数据从injectableQuery()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson3.java;54行不可信的数据从append()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson2.java",
+      "code_line_num": "55",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson2.java;42行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson2.java;43行不可信的数据从injectableQuery()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson2.java;55行不可信的数据从append()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson4.java",
+      "code_line_num": "52",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson4.java;38行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson4.java;39行不可信的数据从injectableQuery()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson4.java;52行不可信的数据从append()方法第1个参数进入"
+    }
+  ],
+  "next_block_start": 22
+}

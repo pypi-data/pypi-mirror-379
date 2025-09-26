@@ -1,0 +1,36 @@
+{
+  "issue_title": "代码注入：SQL注入",
+  "issue_level": "High",
+  "issue_count": "21",
+  "issue_desc": "SQL注入是一种数据库攻击手段。攻击者通过向应用程序提交恶意代码来改变原SQL语句的含义，进而执行任意SQL命令，达到入侵数据库乃至操作系统的目的。\n\n**例如**：下面代码片段中，动态构造并执行了一个SQL查询来认证用户。\n```java\npublic void doPrivilegedAction(HttpServletRequest request, char[] password) throws SQLException {\n    Connection connection = getConnection();\n    if (connection == null) {\n        // handle error\n    }\n    try {\n        String username = request.getParameter(\"username\");\n        String pwd = hashPassword(password);\n        String sqlString = \"SELECT * FROM db_user WHERE username = '\" + username + \"' AND password = '\" + pwd + \"'\";\n        Statement stmt = connection.createStatement();\n        ResultSet rs = stmt.executeQuery(sqlString);\n        if (!rs.next()) {\n            throw new SecurityException( \"User name or password incorrect\");\n        }\n        // Authenticated; proceed\n    } finally {\n        try {\n            connection.close();\n        } catch (SQLException x) {\n            // forward to handler\n        }\n    }\n}\n```\n在上面的例子中，攻击者能够自由控制输入的字符串变量`username`和`password`中的内容，他们可以使用下面的关于`username`的字符串进行SQL注入。\n`validuser' OR '1'='1`\n当其注入到命令时，命令就会变成：\n`SELECT * FROM db_user WHERE username='validuser' OR '1'='1' AND password=''`\n同样，攻击者可以为password提供如下字符串。\n`' OR '1'='1`\n当其注入到命令时，命令就会变成：\n`SELECT * FROM db_user WHERE username='' AND password='' OR '1'='1'`",
+  "fix_advice": "造成SQL注入攻击的根本原因在于攻击者可以改变SQL查询的上下文，使程序员原本要作为数据解析的数值，被篡改为命令了。防止SQL注入的方法如下：\n1. 正确使用参数化API进行SQL查询。\n2. 如果构造SQL指令时需要动态加入约束条件，可以通过创建一份合法字符串列表，使其对应于可能要加入到SQL指令中的不同元素，来避免SQL注入攻击。\n3. 避免出现一些详细的错误消息，防止攻击者利用报错信息来判断后台SQL的拼接形式，甚至是直接利用这些报错注入将数据库中的数据通过报错消息显示出来。\n\n**例如**：以下代码片段使用`java.sql.PreparedStatement`代替`java.sql.Statement`，在`java.sql.PreparedStatement`类中可以对输入字符串进行转义，如果使用正确的话，可以防止SQL注入。\n ```java\npublic void doPrivilegedAction(HttpServletRequest request, char[] password) throws SQLException {\n    Connection connection = getConnection();\n    if (connection == null) {\n        // handle error\n    }\n    try {\n        String username = request.getParameter(\"username\");\n        String pwd = hashPassword(password);\n        // Ensure that the length of user name is legitimate\n        if ((username.length() &gt; 8) {\n            // Handle error\n        }\n        String sqlString = \"select * from db_user where username=? and password=?\";\n        PreparedStatement stmt = connection.prepareStatement(sqlString);\n        stmt.setString(1, username);\n        stmt.setString(2, pwd);\n        ResultSet rs = stmt.executeQuery();\n        if (!rs.next()) {\n            throw new SecurityException(\"User name or password incorrect\");\n        }\n        // Authenticated, proceed\n    } finally {\n        try {\n            connection.close();\n        } catch (SQLException x) {\n            // forward to handler\n        }\n    }\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5b.java",
+      "code_line_num": "49",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5b.java;39行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5b.java;41行不可信的数据从injectableQuery()方法第2个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5b.java;45行赋值不可信的数据给变量queryString\n\n4 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5b.java;49行不可信的数据从prepareStatement()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java",
+      "code_line_num": "52",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;40行来自于http请求的数据从completed()方法第3个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;41行不可信的数据从injectableQuery()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;47行赋值不可信的数据给变量query\n\n4 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;52行不可信的数据从executeQuery()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5.java",
+      "code_line_num": "65",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5.java;55行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5.java;57行不可信的数据从injectableQuery()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5.java;65行不可信的数据从executeQuery()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson8.java",
+      "code_line_num": "62",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson8.java;43行来自于http请求的数据从completed()方法第2个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson8.java;44行不可信的数据从injectableQueryConfidentiality()方法第2个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson8.java;49行赋值不可信的数据给变量query\n\n4 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson8.java;62行不可信的数据从executeQuery()方法第1个参数进入"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java",
+      "code_line_num": "52",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;40行来自于http请求的数据从completed()方法第2个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;41行不可信的数据从injectableQuery()方法第1个参数进入\n\n3 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;47行赋值不可信的数据给变量query\n\n4 src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java;52行不可信的数据从executeQuery()方法第1个参数进入"
+    }
+  ],
+  "next_block_start": 90
+}

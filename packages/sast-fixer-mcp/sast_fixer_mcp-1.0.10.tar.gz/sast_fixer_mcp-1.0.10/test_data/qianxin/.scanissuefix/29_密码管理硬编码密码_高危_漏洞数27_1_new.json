@@ -1,0 +1,36 @@
+{
+  "issue_title": "密码管理：硬编码密码",
+  "issue_level": "High",
+  "issue_count": "27",
+  "issue_desc": "程序中采用硬编码方式处理密码，一方面会降低系统安全性，另一方面不易于程序维护。\n\n**例如**：下列代码中采用硬编码方式处理密码。\n```java\npublic class ConnectionConfig{\n    String url = \"localhost\";\n    String name = \"admin\";\n    String password = \"123456\";\n    ...\n}\n```",
+  "fix_advice": "程序中不应对密码进行硬编码，可以使用配置文件或数据库存储的方式来存储系统所需的数据；并且录入数据时，还可以在对敏感数据做加密处理之后再进行数据的录入。\n\n**例如**：下列代码中从配置文件中获取经过加密的密码值并解密使用。\n```java\npublic class ConnectionConfig{\n    String url = EncryptUtil.decrypt(PropertiesUtil.get(\"connection.url\"));\n    String name = EncryptUtil.decrypt(PropertiesUtil.get(\"connection.username\"));\n    String password = EncryptUtil.decrypt(PropertiesUtil.get(\"connection.password\"));\n    ...\n\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/idor/IDORLogin.java",
+      "code_line_num": "41",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/idor/IDORLogin.java;41行put"
+    },
+    {
+      "code_location": "src/it/java/org/owasp/webgoat/integration/ChallengeIntegrationTest.java",
+      "code_line_num": "82",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/it/java/org/owasp/webgoat/integration/ChallengeIntegrationTest.java;82行put"
+    },
+    {
+      "code_location": "src/it/java/org/owasp/webgoat/integration/CryptoIntegrationTest.java",
+      "code_line_num": "78",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/it/java/org/owasp/webgoat/integration/CryptoIntegrationTest.java;78行put"
+    },
+    {
+      "code_location": "src/it/java/org/owasp/webgoat/integration/GeneralLessonIntegrationTest.java",
+      "code_line_num": "133",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/it/java/org/owasp/webgoat/integration/GeneralLessonIntegrationTest.java;133行put"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/missingac/MissingFunctionAC.java",
+      "code_line_num": "14",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/missingac/MissingFunctionAC.java;14行PASSWORD_SALT_SIMPLE"
+    }
+  ],
+  "next_block_start": 114
+}

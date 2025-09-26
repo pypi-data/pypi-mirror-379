@@ -1,0 +1,16 @@
+{
+  "issue_title": "API误用：依赖未经验证和完整性检查的cookie",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "应用程序当执行安全性非常重要的操作时，依赖Cookies的存在或它的值，而有没有正确地保证这些设置对相关的用户是有效的。攻击者可以很容易地在浏览器中或浏览器外的客户端代码修改cookie。依赖未经验证和完整性检查的cookie可以允许攻击者绕过验证，执行像SQL注入这样的注入攻击和跨站脚本攻击或者以不期待的方式修改输入。\n\n**例如**：下面代码片段中，依赖未经验证和完整性检查的`cookie`进行身份鉴别。\n```java\npublic class Example {\n    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\n        Cookie[] cookies = request.getCookies();\n        if (cookies != null) {\n            for (int i=0; i&lt; cookies.length; i++) {\n                if (\"isAdmin\".equals(cookies[i].getName())) {\n                    String isAdmin = cookies[i].getValue();\n                    // 用cookie存储的isAdmin字段来判断用户是否为管理员\n                    if (\"true\".equals(isAdmin)) {\n                        ...\n                    }\n                    ...\n                    break;\n                }\n            }\n        }\n        ...\n    }\n```",
+  "fix_advice": "在做一个安全相关的决定时，依赖服务器端存储的数据，避免依赖客户端传过来的Cookie数据。\n**例如**：下面代码片段中，根据服务器端存储的session进行身份鉴别。\n```java\npublic class Example {\n    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\n        HttpSession session = request.getSession();\n        String isAdmin = (String) session.getAttribute(\"isAdmin\");\n        if (\"true\".equals(isAdmin)) { // 根据session判断用户是否为管理员\n            ...\n        }\n        ...\n    }\n}\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/csrf/CSRFFeedback.java",
+      "code_line_num": "92",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/csrf/CSRFFeedback.java;92行equals"
+    }
+  ],
+  "next_block_start": 10
+}

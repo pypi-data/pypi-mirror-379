@@ -1,0 +1,26 @@
+{
+  "issue_title": "输入验证：HTML5：表单验证关闭",
+  "issue_level": "Medium",
+  "issue_count": "3",
+  "issue_desc": "HTML5中新增简单的表单输入验证功能，它会根据输入标签的属性进行简单的验证。\n但是，当在表单标签上添加novalidate属性和提交输入标签上的formnovalidate属性时，这个验证就会被禁用。\n**例如**：\n\n```html\n&lt;form name=\"form01\" action=\"\" method=\"post\" enctype=\"\" novalidate = \"novalidate\"&gt;\n    E-mail01: &lt;input type=\"email\" name=\"email\"&gt;\n    &lt;input type=\"submit\" name=\"\" value=\"提交\"&gt;\n&lt;/form&gt;\n```",
+  "fix_advice": "虽然大多数的验证都是在服务端进行，但是能在客户端验证也是给系统增加一层保护，所以，建议避免使用novalidate和formnovalidate属性。\n**例如**：\n\n```html\n&lt;form name=\"form01\" action=\"\" method=\"post\" enctype=\"\"&gt;\n    E-mail01: &lt;input type=\"email\" name=\"email\"&gt;\n    &lt;input type=\"submit\" name=\"\" value=\"提交\"&gt;\n&lt;/form&gt;\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/passwordreset/html/PasswordReset.html",
+      "code_line_num": "48",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/passwordreset/html/PasswordReset.html;48行form"
+    },
+    {
+      "code_location": "src/main/resources/lessons/passwordreset/html/PasswordReset.html",
+      "code_line_num": "24",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/passwordreset/html/PasswordReset.html;24行form"
+    },
+    {
+      "code_location": "src/main/resources/lessons/passwordreset/templates/password_reset.html",
+      "code_line_num": "12",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/passwordreset/templates/password_reset.html;12行form"
+    }
+  ],
+  "next_block_start": 18
+}

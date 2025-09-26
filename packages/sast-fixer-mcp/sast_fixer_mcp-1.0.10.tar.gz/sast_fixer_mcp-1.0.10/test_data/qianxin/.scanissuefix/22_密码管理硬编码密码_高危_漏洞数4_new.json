@@ -1,0 +1,31 @@
+{
+  "issue_title": "密码管理：硬编码密码",
+  "issue_level": "High",
+  "issue_count": "4",
+  "issue_desc": "程序中采用硬编码方式处理密码，一方面会降低系统安全性，一方面不易于维护。\n**例如**：\n\n```javascript\nvar password = \"123456\"\n```",
+  "fix_advice": "程序中所需密码应从配置文件中获取经过加密的密码值。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/jwt/js/jwt-refresh.js",
+      "code_line_num": "10",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/jwt/js/jwt-refresh.js;10行password"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "70",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;70行append"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "8",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;8行append"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "41",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;41行append"
+    }
+  ],
+  "next_block_start": 22
+}

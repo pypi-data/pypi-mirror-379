@@ -1,0 +1,16 @@
+{
+  "issue_title": "代码注入：不安全的反序列化",
+  "issue_level": "High",
+  "issue_count": "1",
+  "issue_desc": "在反序列化过程中对用户输入，即不可信数据，没有进行校验就进行反序列化处理，那么攻击者可以通过构造恶意输入，让反序列化产生非预期的对象，非预期的对象在产生过程中就有可能带来任意代码执行。\n\n**例如**：以下代码使用从HTTP请求中读取的参数来进行反序列化。\n```java\n...\nString arg = request.getParameter(\"arg\");\n...\nString data = Base64.getDecoder().decode(arg);\n...\nObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data));\nObject o = ois.readObject();\n...\n```",
+  "fix_advice": "检查程序逻辑，是否对反序列化的数据进行了合理安全校验，以避免产生Java反序列化漏洞。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java",
+      "code_line_num": "45",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;34行来自于http请求的数据从completed()方法第1个参数进入\n\n2 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;40行不可信的数据从replace()方法this参数进入,然后从返回值返回\n\n3 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;40行不可信的数据从replace()方法this参数进入,然后从返回值返回\n\n4 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;40行赋值不可信的数据给变量b64token\n\n5 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;43行不可信的数据从decode()方法第1个参数进入,然后从返回值返回\n\n6 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;43行不可信的数据从ByteArrayInputStream()方法第1个参数进入,然后从this参数返回\n\n7 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;43行不可信的数据从ObjectInputStream()方法第1个参数进入,然后从this参数返回\n\n8 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;42行赋值不可信的数据给变量ois\n\n9 src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java;45行不可信的数据从readObject()方法this参数进入"
+    }
+  ],
+  "next_block_start": 10
+}

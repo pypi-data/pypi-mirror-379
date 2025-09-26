@@ -1,0 +1,36 @@
+{
+  "issue_title": "安全特性：隐藏的表单字段",
+  "issue_level": "Medium",
+  "issue_count": "22",
+  "issue_desc": "隐藏字段是不安全的参数，攻击者能够在一个post请求中改变隐藏字段的值。\n**例如**：\n```html\n&lt;input type=\"hidden\"&gt;\n```",
+  "fix_advice": "将隐藏字段视为不可信赖的输入，不要在隐藏字段中存储敏感信息。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/csrf/html/CSRF.html",
+      "code_line_num": "100",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/csrf/html/CSRF.html;100行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/ssrf/html/SSRF.html",
+      "code_line_num": "18",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/ssrf/html/SSRF.html;18行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/clientsidefiltering/html/ClientSideFiltering.html",
+      "code_line_num": "22",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/clientsidefiltering/html/ClientSideFiltering.html;22行input"
+    },
+    {
+      "code_location": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+      "code_line_num": "569",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/static/js/libs/jquery.form.js;569行表达式"
+    },
+    {
+      "code_location": "src/main/resources/lessons/clientsidefiltering/html/ClientSideFiltering.html",
+      "code_line_num": "14",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/clientsidefiltering/html/ClientSideFiltering.html;14行input"
+    }
+  ],
+  "next_block_start": 94
+}

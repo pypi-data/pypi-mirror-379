@@ -1,0 +1,36 @@
+{
+  "issue_title": "输入验证：文件上传",
+  "issue_level": "High",
+  "issue_count": "6",
+  "issue_desc": "文件可能会被攻击者注入危险内容或恶意代码，当程序允许用户上传时，攻击者可以通过文件将恶意代码在服务器上运行或者将危险内容注入程序。\n\n**例如**：在下面的示例中：`UserController`允许用户上传文件。\n```java\n@Controller\npublic class UserController{\n    ...\n    @ResponseBody\n    @RequestMapping(value = \"/fileUpload\",method = RequestMethod.POST)\n    public ResultData&lt;Object&gt; fileUpload(MultipartFile file,HttpServletRequest request) {\n        ...\n    }\n    ...\n}\n```",
+  "fix_advice": "#### 文件上传可以参考以下安全需求进行处理：\n\n1. 服务器配置：\n   （1）将上传目录和上传文件设置为不可执行， 杜绝脚本执行。\n   （2）应保证服务器安全，避免文件解析漏洞。\n\n2. 在服务端对上传文件进行检查：\n   （1）使用白名单控制上传文件类型，即只允许指定扩展名的文件上传。\n   （2）对上传文件后缀与MIME Type进行匹配校验， 对文件头信息与文件后缀进行匹配校验。\n   （3）对单个文件大小和总文件数进行限制， 避免拒绝服务攻击。\n   （4）对文件名进行输入校验，显示时进行输出编码。\n3. 文件存储：\n   （1）上传文件应保存在指定路径下。\n   （2）对上传文件进行随机数重命名，避免文件被覆盖。\n   （3）设置上传文件路径， 使用户不能轻易访问自己上传的文件 。\n   （4） 文件应尽量保存在内容服务器或web目录外部，避免通过web应用直接访问上传的文件。\n4. 对于图片文件进行二次渲染、压缩， 避免图片写马。\n5. 校验失败后，记录错误日志信息，内容至少包括时间、用户、IP、操作内容、校验失败的参数及参数内容等。\n\n* 上传临时文件处理：\n  单个文件夹下文件过多，会导致访问速度下降，建议分散储存，如根据文件名哈希按首字母建立子目录。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/webwolf/FileServer.java",
+      "code_line_num": "66",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/webwolf/FileServer.java;66行importFile"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUpload.java",
+      "code_line_num": "39",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUpload.java;39行uploadFileHandler"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUploadRemoveUserInput.java",
+      "code_line_num": "38",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUploadRemoveUserInput.java;38行uploadFileHandler"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java",
+      "code_line_num": "56",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java;56行uploadFileHandler"
+    },
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java",
+      "code_line_num": "66",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileZipSlip.java;66行processZipUpload"
+    }
+  ],
+  "next_block_start": 30
+}

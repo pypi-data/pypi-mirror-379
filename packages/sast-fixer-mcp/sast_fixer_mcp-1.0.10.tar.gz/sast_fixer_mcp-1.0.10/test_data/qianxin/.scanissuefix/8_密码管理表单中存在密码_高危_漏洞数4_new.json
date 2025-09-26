@@ -1,0 +1,31 @@
+{
+  "issue_title": "密码管理：表单中存在密码",
+  "issue_level": "High",
+  "issue_count": "4",
+  "issue_desc": "在HTML表单中填写密码可能造成系统信息泄露。\n在HTML中表单中填写密码可以让任何人都能在HTML中看到密码，这样会把系统置于危险之中。\n**例如**：\n```html\n&lt;form name=\"form01\" action=\"\" method=\"post\" enctype=\"\"&gt;\n  &lt;input type=\"password\" name=\"password\" value=\"123456789\"&gt;\n&lt;/form&gt;\n```",
+  "fix_advice": "不要在HTML中写入密码。\n**例如**：\n```html\n&lt;form name=\"form01\" action=\"\" method=\"post\"&gt;\n  &lt;input type=\"password\"&gt;\n&lt;/form&gt;\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "49",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;49行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "103",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;103行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "160",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;160行input"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+      "code_line_num": "256",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/html/PathTraversal.html;256行input"
+    }
+  ],
+  "next_block_start": 22
+}

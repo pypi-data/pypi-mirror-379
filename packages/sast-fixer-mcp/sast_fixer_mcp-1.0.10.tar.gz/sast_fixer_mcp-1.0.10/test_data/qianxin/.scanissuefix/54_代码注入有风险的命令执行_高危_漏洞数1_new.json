@@ -1,0 +1,16 @@
+{
+  "issue_title": "代码注入：有风险的命令执行",
+  "issue_level": "High",
+  "issue_count": "1",
+  "issue_desc": "命令注入是指，在应用程序执行的命令中包含来源于不可信数据时，程序本身没有对这些不可信数据做正确、合理的验证和过滤，导致系统执行恶意命令。系统库中的一些方法存在这样的风险，当传入方法的参数包含非可信数据源时，可能导致系统执行注入命令。\n*该分类判断数据来源是否为常量，主要起提醒作用。*\n\n**例1**：以下代码通过`Runtime.exec()`方法执行Windows的dir命令，列出目录列表。\n```java\nimport java.io.*;\npublic class DirList {\n    public static void main(String[] args) throws Exception {\n        Process proc = Runtime.getRuntime().exec(\"cmd.exe /c dir \" + args[0]);\n        int result = proc.waitFor();\n        if (result != 0) {\n            System.out.println(\"process error: \" + result);\n        }\n        InputStream in = (result == 0) ? proc.getInputStream() : proc.getErrorStream();\n        int c;\n        while ((c = in.read()) != -1) {\n            System.out.print((char) c);\n        }\n    }\n}\n```\n攻击者可以通过以下命令利用该程序：\n`java -Ddir='dummy &amp; echo bad' DirList`\n该命令实际上执行了两条命令：\n`cmd.exe /c dir dummy &amp; echo bad`\n\n**例2**：以下代码片段来自一个Web应用程序，该段代码通过运行rmanDB.bat脚本启动Oracle数据库备份，然后运行cleanup.bat脚本删除一些临时文件。脚本文件rmanDB.bat接受一个命令行参数，其中指明需要执行的备份类型。\n```java\n...\nString cmd = new String(\"cmd.exe /K \\\"c:\\\\util\\\\rmanDB.bat \"+backuptype+\"&amp;&amp; c:\\\\utl\\\\cleanup.bat\\\"\");\nSystem.Runtime.getRuntime().exec(cmd);\n...\n```\n该段代码没有对来自用户请求中的参数`backuptype`做任何校验。\n通常情况下，`Runtime.exec()`函数不会执行多条命令，但在上面的例子里，黑客为了注入多条执行命令，通过`“&amp;&amp;”`分隔符号来拼接多条命令，以达到依次执行指定命令的目的。",
+  "fix_advice": "防止命令注入的方法如下：\n1. 程序对非受信的用户输入数据进行净化，删除不安全的字符。\n2. 创建一份安全字符串列表，限定用户的输入只能在该列表的允许范围内。\n3. 不要让用户直接控制eval()、exec()、readObject()等函数的参数。\n\n**例1**：下面代码片段中，直接向`exec()`方法传入常量。\n```java\n...\nString backuptype = \"tables\";\nString cmd = \"cmd.exe /K \\\"c:\\\\util\\\\rmanDB.bat\\\" \" + backuptype;\nRuntime.getRuntime().exec(cmd);\n...\n```\n\n**例2**：下面代码片段中，直接向`exec()`方法传入常量。\n```java\n...\nString cmd = new String(\"cmd.exe /K \\\"c:\\\\util\\\\rmanDB.bat tables\\\"\");\nSystem.Runtime.getRuntime().exec(cmd);\n...\n```",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/dummy/insecure/framework/VulnerableTaskHolder.java",
+      "code_line_num": "69",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/dummy/insecure/framework/VulnerableTaskHolder.java;69行不可信的数据从exec()方法第1个参数进入"
+    }
+  ],
+  "next_block_start": 10
+}

@@ -1,0 +1,16 @@
+{
+  "issue_title": "安全特性：JavaEE程序：非受信代码终止JVM",
+  "issue_level": "Medium",
+  "issue_count": "1",
+  "issue_desc": "调用`System.exit()`会终止Java虚拟机，从而终止所有运行中的程序和线程。Web应用程序关闭自身的容器，有可能导致拒绝服务攻击，例如：一个嵌入在JSP中的`System.exit()`的调用会停止网络服务器，阻碍了对用户的服务。",
+  "fix_advice": "程序必须避免无意地和恶意地调用`System.exit()`。而且，在被强迫终止时（例如通过Windows任务管理器、POSIX kill命令或者其他机制），程序应该进行必要的清理操作。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/PasswordResetLink.java",
+      "code_line_num": "40",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/PasswordResetLink.java;40行exit()"
+    }
+  ],
+  "next_block_start": 10
+}

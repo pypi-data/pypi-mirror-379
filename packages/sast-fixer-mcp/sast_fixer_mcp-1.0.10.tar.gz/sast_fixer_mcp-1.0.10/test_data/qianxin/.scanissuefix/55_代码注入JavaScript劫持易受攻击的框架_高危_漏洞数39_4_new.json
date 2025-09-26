@@ -1,0 +1,36 @@
+{
+  "issue_title": "代码注入：JavaScript劫持：易受攻击的框架",
+  "issue_level": "High",
+  "issue_count": "39",
+  "issue_desc": "使用JavaScript传送敏感数据的应用程序可能会存在JavaScript劫持的漏洞，该漏洞允许未经授权的攻击者从一个易受攻击的应用程序中读取机密数据。\n\nJavaScript劫持可以简单的理解为模拟授权的用户，窃取用户在服务器上的信息。Web浏览器使用同源策略(Same Origin Policy)，以保护用户免受恶意网站的攻击。同源策略规定：如果要使用JavaScript来访问某个网页的内容的话，则JavaScript和网页必须都来源于相同的域。若不采取同源策略，恶意网站便可以使用受害者的客户端凭证来运行 JavaScript，从其他网站加载的敏感信息，并对这些信息进行处理，然后将其返回给攻击者。\n\n使用JSON传输数据的JavaScript应用更容易受到JavaScript劫持攻击。由于JSON使用JavaScript语法的子集表示对象、数组、简单值，JSON本身可以被当做JavaScript执行，且使用*eval*()函数对JSON数据结构求值早被认为是存在风险的，其可能执行恶意代码。\n\n应该注意的是，某些过时的第三方Javascript框架也可能存在上述的问题，使用它们将导致Javascript劫持。",
+  "fix_advice": "不使用过时的有风险的Javascript框架。",
+  "code_sample": "",
+  "code_list": [
+    {
+      "code_location": "src/main/resources/lessons/challenges/js/challenge8.js",
+      "code_line_num": "7",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/challenges/js/challenge8.js;7行get"
+    },
+    {
+      "code_location": "src/main/resources/lessons/pathtraversal/js/path_traversal.js",
+      "code_line_num": "29",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/pathtraversal/js/path_traversal.js;29行get"
+    },
+    {
+      "code_location": "src/main/resources/lessons/jwt/js/jwt-voting.js",
+      "code_line_num": "7",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/jwt/js/jwt-voting.js;7行ajax"
+    },
+    {
+      "code_location": "src/main/resources/lessons/jwt/js/jwt-voting.js",
+      "code_line_num": "43",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/lessons/jwt/js/jwt-voting.js;43行get"
+    },
+    {
+      "code_location": "src/main/resources/webgoat/static/js/goatApp/controller/LessonController.js",
+      "code_line_num": "140",
+      "code_details": "跟踪路径:跟踪路径1:\n\n1 src/main/resources/webgoat/static/js/goatApp/controller/LessonController.js;140行赋值语句"
+    }
+  ],
+  "next_block_start": 162
+}
