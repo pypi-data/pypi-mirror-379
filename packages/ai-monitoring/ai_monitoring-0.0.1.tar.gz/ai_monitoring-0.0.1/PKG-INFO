@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ai-monitoring
+Version: 0.0.1
+Summary: Whitecircle.ai hooks for monitoring prompts, responses, and model health.
+Author: White Circle
+License: MIT
+Keywords: ai,health,metrics,monitoring,telemetry,whitecircle.ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# ai-monitoring
+
+Whitecircle.ai hooks for monitoring prompts, responses, and model health.
+
+
