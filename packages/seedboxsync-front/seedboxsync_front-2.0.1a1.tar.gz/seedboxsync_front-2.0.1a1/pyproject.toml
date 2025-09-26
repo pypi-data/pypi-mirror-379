@@ -1,0 +1,55 @@
+[project]
+name = "seedboxsync-front"
+authors = [{name = "Guillaume Kulakowski", email = "guillaume@kulakowski.fr"}]
+version = "2.0.1a1"
+description = "The frontend for SeedboxSync."
+readme = "README.md"
+license-files = ["LICENSE"]
+license = "GPL-2.0-only"
+dependencies = [
+  "flask",
+  "pyyaml",
+  "peewee",
+  "seedboxsync>=3.2.0",
+]
+requires-python = ">=3.10"
+
+[project.urls]
+Home = "https://llaumgui.github.io/seedboxsync/"
+Source = "https://github.com/llaumgui/seedboxsync-front"
+
+[project.optional-dependencies]
+dev = [
+  "flake8",
+  "pytest",
+  "pytest-cov",
+  "flit",
+]
+
+[project.scripts]
+seedboxsync-front = "seedboxsync_front.app:app"
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.sdist]
+include = [
+  "seedboxsync_front/static/dist/**",
+]
+exclude = [
+  ".github/**",
+  "docker/**",
+  ".dockerignore",
+  ".editorconfig",
+  ".flake8",
+  ".gitignore",
+  ".hadolint.yaml",
+  ".markdownlint.yaml",
+  "Dockerfile",
+  "Makefile",
+  "package.json",
+  "package-lock.json",
+  "sonar-project.properties",
+  "vite.config.js",
+]
