@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(curl:*)",
+      "Bash(echo \"🌐 PlotX Web Frontend Status Report\n======================================\n\n✅ WEB SERVER: ONLINE\n🎯 URL: http://localhost:8888/\n📊 Charts Available: 9\n🎨 Interactive Gallery: Ready\n📱 Mobile Responsive: Yes\n⚡ Performance: Optimized\n\n📈 Available Visualizations:\n• High-Performance Line Chart\n• Colored Scatter Plot (500 points)\n• 3D Surface Visualization\n• Professional Bar Chart\n• Advanced Correlation Heatmap\n• Financial Candlestick with Indicators\n• RSI Technical Analysis\n• MACD Momentum Analysis\n• Volume Profile Trading Tool\n\n🎯 Frontend Features:\n• Modern gradient design\n• Glass morphism effects\n• Smooth animations\n• Click-to-zoom charts\n• Performance benchmarks\n• Feature descriptions\n• Responsive layout\n\n🚀 READY FOR DEMONSTRATION!\nOpen http://localhost:8888/ to explore\")",
+      "Bash(lsof:*)",
+      "Bash(pkill:*)",
+      "Bash(kill:*)",
+      "Bash(echo:*)",
+      "Bash(/dev/null)",
+      "Bash(find:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(ruff check:*)",
+      "Bash(black:*)",
+      "Bash(pytest:*)",
+      "Read(//Users/durai/Documents/GitHub/**)",
+      "Bash(pip show:*)",
+      "Read(//tmp/**)",
+      "WebSearch",
+      "Bash(grep:*)",
+      "Bash(twine check:*)",
+      "Bash(twine upload:*)",
+      "Bash(chmod:*)",
+      "Bash(tree:*)",
+      "Bash(php:*)",
+      "Bash(xargs kill:*)",
+      "Bash(git config:*)",
+      "Bash(npm install)",
+      "Bash(xargs -r kill -9)",
+      "Read(//Users/durai/**)",
+      "WebFetch(domain:pypi.org)",
+      "Bash(pip search:*)",
+      "Bash(pip index versions:*)",
+      "Bash(timeout 30 python:*)",
+      "Bash(python3:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
