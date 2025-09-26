@@ -1,0 +1,278 @@
+Metadata-Version: 2.4
+Name: ideajar
+Version: 1.0.0
+Summary: 💡 A simple CLI tool to capture and store your brilliant ideas in a snap
+License-File: LICENSE
+Keywords: ideas,notes,cli,productivity,brainstorm
+Author: ideajar
+Author-email: ideajar@example.com
+Requires-Python: >=3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Utilities
+Classifier: Topic :: Text Processing
+Provides-Extra: dev
+Requires-Dist: pytest (>=7.0.0) ; extra == "dev"
+Requires-Dist: pytest-cov (>=4.0.0) ; extra == "dev"
+Project-URL: Homepage, https://github.com/ideajar/ideajar
+Project-URL: Issues, https://github.com/ideajar/ideajar/issues
+Project-URL: Repository, https://github.com/ideajar/ideajar
+Description-Content-Type: text/markdown
+
+# IdeaJar 💡
+
+A simple, fast command-line tool for capturing and storing your sudden flashes of inspiration and ideas.
+
+## 💭 Why do you need IdeaJar?
+
+Have you ever experienced moments like these:
+
+- While programming, suddenly thinking of a brilliant project idea
+- Having a flash of inspiration while working in the terminal, wanting to quickly record a thought
+- Needing a simple tool to collect your creative ideas
+
+IdeaJar was created to solve these problems! It allows you to quickly record any idea without leaving the terminal.
+
+## 🚀 Installation
+
+```bash
+pip install ideajar
+```
+
+## 📖 Usage
+
+After installation, you can use the `idea` command anywhere!
+
+### 📝 Record an idea
+
+```bash
+idea "Create a CLI tool for recording ideas"
+```
+
+Output:
+```
+💡 Idea saved to March 2024: "Create a CLI tool for recording ideas"
+```
+
+### 👀 View ideas
+
+#### View current month's ideas (default)
+```bash
+idea
+```
+
+#### View all historical ideas
+```bash
+idea --all
+```
+
+#### View ideas from a specific month
+```bash
+idea --month 2024-03
+```
+
+Example output:
+```
+🎯 Ideas from March 2024:
+==================================================
+--- Ideas from March 2024 ---
+💡 Monthly inspiration record
+
+[2024-03-15 14:30:15] Create a CLI tool for recording ideas
+[2024-03-15 14:32:22] Add dark mode to blog website
+[2024-03-15 14:35:10] Learn Rust programming language
+==================================================
+```
+
+### 🔍 Search ideas
+
+```bash
+idea --search "CLI tool"
+```
+
+Output:
+```
+🔍 Search keyword: "CLI tool"
+==================================================
+
+📅 March 2024:
+  [2024-03-15 14:30:15] Create a CLI tool for recording ideas
+
+✅ Found 1 related idea.
+==================================================
+```
+
+### 📊 Statistics and Management
+
+#### View month list
+```bash
+idea --months
+```
+
+#### Count ideas
+```bash
+idea --count
+```
+
+Output:
+```
+📊 Ideas Statistics:
+==============================
+📝 March 2024: 3 ideas
+📝 April 2024: 5 ideas
+==============================
+🎯 Total: 8 ideas
+```
+
+#### Clear all ideas (with enhanced safety)
+```bash
+idea --clear
+```
+
+**⚠️ Enhanced Safety Features:**
+The clear command includes multiple confirmation steps to prevent accidental deletion:
+- Shows detailed statistics of ideas to be deleted
+- Requires typing "DELETE" to proceed
+- Requires confirming the exact number of ideas
+- Requires typing a random safety phrase as final confirmation
+- Cannot be undone once completed
+
+### 📋 View all commands
+
+```bash
+idea --help
+```
+
+## 📁 Data Storage
+
+### 🗂️ New Version Storage Structure (v0.2.0+)
+
+Ideas are now stored by month in the `~/.ideajar/` directory:
+
+```
+~/.ideajar/
+├── 2024-03.txt        # Ideas from March 2024
+├── 2024-04.txt        # Ideas from April 2024  
+├── 2025-09.txt        # Ideas from September 2025
+└── all_ideas.txt      # Summary of all ideas (legacy compatibility)
+```
+
+Format of each monthly file:
+```
+--- Ideas from March 2024 ---
+💡 Monthly inspiration record
+
+[2024-03-15 14:30:15] Create a CLI tool for recording ideas
+[2024-03-15 14:32:22] Add dark mode to blog website
+[2024-03-15 14:35:10] Learn Rust programming language
+```
+
+### 🔄 Automatic Migration
+
+If you previously used an older version (stored in `~/.ideas.txt`), the new version will automatically migrate your data:
+- Old data migrated to new directory structure
+- Original file backed up as `~/.ideas.txt.backup`
+- Seamless upgrade, no ideas lost!
+
+## ✨ Features
+
+- **🚀 Extremely Simple & Fast**: One command, instantly record ideas
+- **📅 Monthly Organization**: Ideas automatically organized by month, well-structured
+- **🔍 Powerful Search**: Quickly find keywords across all historical ideas
+- **💾 Local Storage**: All data stored in your home directory, completely private
+- **⏰ Automatic Timestamps**: Each idea comes with precise time recording
+- **🎨 Friendly Interface**: Uses emoji and colors to make terminal more vivid
+- **🔄 Automatic Migration**: Seamless upgrade from old versions, no data loss
+- **🔧 Multiple Operations**: Record, view, search, count, monthly management
+- **📱 Cross-platform**: Supports Linux, macOS, and Windows
+
+## 🎯 Use Cases
+
+### Developers
+```bash
+idea "Refactor user authentication module"
+idea "Try using GraphQL to replace REST API"
+idea "Add Docker support to the project"
+```
+
+### Creative Workers
+```bash
+idea "Write a blog post about remote work"
+idea "Design a minimalist style logo"
+idea "Create a programming tutorial video series"
+```
+
+### Daily Life
+```bash
+idea "Go hiking on the weekend"
+idea "Learn to make Italian pasta"
+idea "Finish reading 'Sapiens'"
+```
+
+## 🛠️ Technical Details
+
+- **Language**: Python 3.8+
+- **Dependencies**: Only uses Python standard library
+- **Storage**: Plain text files (`~/.ideajar/*.txt`)
+- **Encoding**: UTF-8 supports Chinese and emoji
+
+## 🤝 Contributing
+
+Issues and Pull Requests are welcome!
+
+### Development Environment Setup
+
+```bash
+git clone https://github.com/ideajar/ideajar.git
+cd ideajar
+poetry install
+poetry shell
+```
+
+### Run Tests
+
+```bash
+python -m pytest tests/
+```
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+## 🙋‍♀️ FAQ
+
+**Q: Where are idea files stored?**
+A: Stored in the `.ideajar/` directory in your home directory, organized by month.
+
+**Q: Can I backup my ideas?**
+A: Yes! Just copy the entire `~/.ideajar/` directory.
+
+**Q: How to search ideas?**
+A: Use the built-in search feature: `idea --search "keyword"`
+
+**Q: What if I have too many ideas?**
+A: The new version automatically categorizes by month, you can:
+- Use `idea --months` to view all months
+- Use `idea --month 2024-03` to view a specific month
+- Use `idea --search` to search for specific content
+- Use `idea --clear` to clear all ideas (use with caution)
+
+**Q: Will upgrading from an old version lose data?**
+A: No! The new version will automatically migrate old data to the new structure and backup the original file.
+
+**Q: How to check the number of ideas in a specific month?**
+A: Use `idea --count` to see monthly statistics and totals.
+
+---
+
+💡 Start recording your ideas! Every great project begins with a simple `idea`.
