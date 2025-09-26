@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: sipin-eark-models
+Version: 0.0.11
+Summary: Models for the meemoo SIP
+Author-email: Luca Soto De Graeve <luca.sotodegraeve@meemoo.be>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/viaacode/sipin-eark-models
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic==2.11.7
+Provides-Extra: dev
+Requires-Dist: pytest==8.3.5; extra == "dev"
+Requires-Dist: xmlschema==4.0.1; extra == "dev"
+Requires-Dist: ruff==0.12.1; extra == "dev"
+Requires-Dist: build==1.3; extra == "dev"
+Requires-Dist: twine==6.1.0; extra == "dev"
+Dynamic: license-file
+
+# sipin E-ARK models
+Pydantic models for the E-ARK CSIP. Currently only includes PREMIS.
+
+## Usage
+
+Create a PREMIS pydantic model with
+
+```py
+from eark_models.premis.v3_0 import Premis
+
+premis = Premis.from_xml("premis.xml")
+```
+

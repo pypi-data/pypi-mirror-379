@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sipin-eark-models"
+version = "0.0.11"
+dependencies = [
+    "pydantic==2.11.7"
+]
+authors = [
+  { name="Luca Soto De Graeve", email="luca.sotodegraeve@meemoo.be" },
+]
+description = "Models for the meemoo SIP"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Repository = "https://github.com/viaacode/sipin-eark-models"
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.5",
+    "xmlschema==4.0.1",
+    "ruff==0.12.1",
+    "build==1.3",
+    "twine==6.1.0",
+]
