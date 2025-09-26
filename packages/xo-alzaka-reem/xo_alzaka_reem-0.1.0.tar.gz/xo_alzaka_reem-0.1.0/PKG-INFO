@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: xo-alzaka-reem
+Version: 0.1.0
+Summary: Tic-Tac-Toe GUI (X-O) with Minimax AI by Reem Aljubri
+Author: Reem Aljubri
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# xo-alzaka-reem
+
+Tic-Tac-Toe (X-O) GUI with simple AI using Minimax.
+
+Author: Reem Aljubri
+
+Development:
+- Create and activate a virtual environment.
+- Run: `python -m xo_alzaka_reem.gui`
+
+After installation:
+- Run: `xo-alzaka-reem`

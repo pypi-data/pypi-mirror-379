@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/xo_alzaka_reem.egg-info/PKG-INFO
+src/xo_alzaka_reem.egg-info/SOURCES.txt
+src/xo_alzaka_reem.egg-info/dependency_links.txt
+src/xo_alzaka_reem.egg-info/entry_points.txt
+src/xo_alzaka_reem.egg-info/top_level.txt
+tests/test_game_logic.py
