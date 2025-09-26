@@ -1,0 +1,15 @@
+hyperbolic_optics/__init__.py,sha256=XLs9Ml8gQUJn6VP8GM28-9m17wqXRTW8aaiTZnYruS8,762
+hyperbolic_optics/anisotropy_utils.py,sha256=ELcg2tReyI7aRQ9oxn4ZQqxtXt1a7BEGX36oN-FNoV0,5001
+hyperbolic_optics/device_config.py,sha256=3k4ebFNKtCFUuRnPiZHD4bsWyR4Dvt28GTonGZvKUJ4,355
+hyperbolic_optics/layers.py,sha256=m5gLMXDNuti1xVB76vfSQYr1LDzDNIOlF-N-NbhXHtA,19373
+hyperbolic_optics/materials.py,sha256=nWMTtDk7r8XCL8pz0UmjwwQVgqOYF6ucAaTo9sy9yIc,19274
+hyperbolic_optics/mueller.py,sha256=rnwm7N-hymA5NjAhGvDEEHsANwAyzFODeP3o7hzWBX8,15528
+hyperbolic_optics/plots.py,sha256=NBv_1aLEQhUJpHAzqNOF_gatn_wE_8lMKSs8jTSwi9g,33099
+hyperbolic_optics/scenario.py,sha256=jaBtu2goz0xl7nZZ5UZ-GowWhpPkqGMW7Be_GtW20S4,2777
+hyperbolic_optics/structure.py,sha256=sJcrfyBToGgSMBYTfC_rIo5pnO-p07kAcmk0BuUZFTI,6466
+hyperbolic_optics/waves.py,sha256=BMjwQLGoLifVJ7kQ3Vh5ctaseVrV1folUvjA-dkOKjE,26962
+hyperbolic_optics/material_params.json,sha256=HusT70k7jN9nzKtxUVspY4Zg1ZO9HHIRuDp8jij4kbo,5031
+hyperbolic_optics-0.1.8.dist-info/METADATA,sha256=UTxLy_s1q37Lz_1K7lbABZfnNSDpwAQTFwWucvCdEGk,10714
+hyperbolic_optics-0.1.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyperbolic_optics-0.1.8.dist-info/licenses/LICENSE,sha256=yBXxagipOQuGBJAxE4aPHM4LBNc13trWwDtoyVkDdB0,1071
+hyperbolic_optics-0.1.8.dist-info/RECORD,,
