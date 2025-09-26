@@ -1,0 +1,9 @@
+clean_logging/__init__.py,sha256=TitWZSGyPrpKT42dDeCUHXjUoDaMikLt2pNLmK8_zSw,173
+clean_logging/core/interfaces/log_repository_interface.py,sha256=kmD5ECSmAZp15fXMcsPgA84m3fER3J41WXtz0ddH0Uw,443
+clean_logging/infrastructure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clean_logging/infrastructure/loggin_setup.py,sha256=V0_BgXoj3kGu4rewqKwntH4yyjferhRjuTlr5xfqLZw,3477
+clean_logging/infrastructure/repositories/file_log_repository.py,sha256=g4QnyURa1_Y8UI-8J1nSQQZw__IN2bpaBWrev6OmVTY,6244
+clean_logging-0.3.0.dist-info/METADATA,sha256=vfH1vlTkdiv5LulZ7rCESveX-GSSoilO7LfGz_f_NTw,1026
+clean_logging-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+clean_logging-0.3.0.dist-info/top_level.txt,sha256=lyi6HJxeiSbpxFxX4npEWPZTBls4Qaq7dyzF7w1zqRs,14
+clean_logging-0.3.0.dist-info/RECORD,,
