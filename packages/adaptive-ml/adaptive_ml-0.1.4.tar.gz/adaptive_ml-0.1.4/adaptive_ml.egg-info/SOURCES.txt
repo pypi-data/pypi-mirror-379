@@ -1,0 +1,15 @@
+setup.py
+adaptive_ml.egg-info/PKG-INFO
+adaptive_ml.egg-info/SOURCES.txt
+adaptive_ml.egg-info/dependency_links.txt
+adaptive_ml.egg-info/requires.txt
+adaptive_ml.egg-info/top_level.txt
+semisupervised/LabelPropagation.py
+semisupervised/LabelSpreading.py
+semisupervised/__init__.py
+supervised/KNN.py
+supervised/__init__.py
+unsupervised/DBSCAN.py
+unsupervised/Isomap.py
+unsupervised/UMAP.py
+unsupervised/__init__.py
