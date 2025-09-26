@@ -1,0 +1,10 @@
+fastapi_ai_sdk/__init__.py,sha256=5JT9dy3S519MtO5aiqx4SH57fOxe-6H4xnUu0bp276k,1687
+fastapi_ai_sdk/decorators.py,sha256=faPw8U0Ly7o_WBR9bAVB5xijvNiaAMqLtIMGc-ZW404,7424
+fastapi_ai_sdk/models.py,sha256=thHesVhNZ4vAa-3oxg_s5tVokRAe3P2YbtF3m3pxPc4,6245
+fastapi_ai_sdk/response.py,sha256=c-yLkurGdajVjwfu25PeqeM7N0NEZNUn7zu1i-m7NCc,4911
+fastapi_ai_sdk/stream.py,sha256=VjG9hPlf0D68AFF061K6HAKOMy95jMUeEX3Hphs66f0,14482
+fastapi_ai_sdk-0.1.0.dist-info/licenses/LICENSE,sha256=0ga4BB6q-nqx6xlDRhtrgKrYs0HgX02PQyIzNFRK09Q,1067
+fastapi_ai_sdk-0.1.0.dist-info/METADATA,sha256=wYn22UVF0FjkiNnwxaI4_9pXrVxij6uvP4dNE3NsHIA,9526
+fastapi_ai_sdk-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fastapi_ai_sdk-0.1.0.dist-info/top_level.txt,sha256=CqCpQwC_BqltbOt6k7MqaGa79Btgu1rv9_fpceMYtU8,15
+fastapi_ai_sdk-0.1.0.dist-info/RECORD,,
