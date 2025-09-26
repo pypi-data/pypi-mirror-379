@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: processing_image_alquimista
+Version: 0.0.1
+Summary: Um pacote simples para mesclar duas imagens.
+Author: Michael Costa
+Author-email: sambapunkboto@gmai.com
+Keywords: python,image processing,blend,PIL,Pillow
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: Pillow
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+Uma descrição mais longa pode ser adicionada aqui, ou lida de um arquivo README.
