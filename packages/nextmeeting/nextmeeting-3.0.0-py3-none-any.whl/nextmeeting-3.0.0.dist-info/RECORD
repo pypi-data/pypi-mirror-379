@@ -1,0 +1,8 @@
+nextmeeting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nextmeeting/caldav.py,sha256=cESYSt89-TVQvK0ibKsMyrlJGixlpUQXWePYOM4rWzc,10698
+nextmeeting/cli.py,sha256=BeUiNPWBlM0IKGFK3NutDwh2YwOtufaYlXgJKHwiOeg,45105
+nextmeeting-3.0.0.dist-info/METADATA,sha256=y__jOSE-kNy4bLaGKfQG3AzKVQN9tDbV5C4l0bp24Io,10578
+nextmeeting-3.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nextmeeting-3.0.0.dist-info/entry_points.txt,sha256=w8QdHxTw2-cmIXxgssodN-l4Z_68I6HA4QjeRP9Kd24,53
+nextmeeting-3.0.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nextmeeting-3.0.0.dist-info/RECORD,,
