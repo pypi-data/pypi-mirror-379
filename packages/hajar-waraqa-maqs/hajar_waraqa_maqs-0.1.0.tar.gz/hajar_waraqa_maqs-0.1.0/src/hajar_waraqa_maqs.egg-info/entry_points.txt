@@ -1,0 +1,2 @@
+[console_scripts]
+hajar-waraqa-maqs = hajar_waraqa_maqs.cli:main

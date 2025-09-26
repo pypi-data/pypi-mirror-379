@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/hajar_waraqa_maqs.egg-info/PKG-INFO
+src/hajar_waraqa_maqs.egg-info/SOURCES.txt
+src/hajar_waraqa_maqs.egg-info/dependency_links.txt
+src/hajar_waraqa_maqs.egg-info/entry_points.txt
+src/hajar_waraqa_maqs.egg-info/top_level.txt
+tests/test_rps.py
