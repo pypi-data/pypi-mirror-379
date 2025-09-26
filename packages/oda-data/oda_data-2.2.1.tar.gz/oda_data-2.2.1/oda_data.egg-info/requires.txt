@@ -1,0 +1,5 @@
+cachetools>=6.2.0
+pandas[excel,parquet,performance]>=2.3.2
+pydeflate>=2.1.3
+reader>=3.18
+thefuzz>=0.22.1
