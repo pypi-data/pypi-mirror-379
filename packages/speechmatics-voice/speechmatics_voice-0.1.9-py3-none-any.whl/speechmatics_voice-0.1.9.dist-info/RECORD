@@ -1,0 +1,10 @@
+speechmatics/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+speechmatics/voice/__init__.py,sha256=epE2gPLaFQs41NCgLqKRiH-E3mMpmPLngnXiEm-Ks9o,1296
+speechmatics/voice/_client.py,sha256=fgc-YF1RvN6e-CBn37DZy-mNyyEvLvWXucIQnVAL78s,37772
+speechmatics/voice/_helpers.py,sha256=IrdgqVo8v0FsCSSCQ_Armb72BM2Ku7Qx6b05wzaxAnE,1033
+speechmatics/voice/_logging.py,sha256=PMLbog3-QVpcDWWxnwf7K8fRX2S4vD3aOOKEah4Nu-A,1631
+speechmatics/voice/_models.py,sha256=NxMjM7nrd9xKNfUPrdeKt9mnxvxMHumke3REHyzxGSw,36122
+speechmatics_voice-0.1.9.dist-info/METADATA,sha256=QpnyNK_up-9Pf0CL-F3GCCZgKJe5lfnV8vjv1D_9ioM,17247
+speechmatics_voice-0.1.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+speechmatics_voice-0.1.9.dist-info/top_level.txt,sha256=ZS3Qz-FwYvfrJJHlVLJCKAavrNZSp9Z708A1YtmJvaM,13
+speechmatics_voice-0.1.9.dist-info/RECORD,,
