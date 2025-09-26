@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyvalidex"
+version = "0.1.0"
+description = "Python library to validate Indian identifiers like PAN, Aadhaar, GSTIN, and IFSC."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  {name = "Jobin Jose (PyPI: codedbyjobin)", email = "jobinj5210@gmail.com"}
+]
+requires-python = ">=3.8"
+dependencies = []
