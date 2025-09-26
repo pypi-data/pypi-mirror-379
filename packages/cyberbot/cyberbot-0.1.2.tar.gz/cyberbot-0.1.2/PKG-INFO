@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: cyberbot
+Version: 0.1.2
+Summary: CyberBot: a Flask companion that keeps routes alive and adds basic cyber-aware helpers.
+Author: Alex Austin
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Security
+Classifier: Framework :: Flask
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: Flask
+Requires-Dist: pycryptodome
+Requires-Dist: cryptography
+Dynamic: author
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
