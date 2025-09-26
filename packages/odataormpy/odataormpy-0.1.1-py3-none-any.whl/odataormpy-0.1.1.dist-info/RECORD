@@ -1,0 +1,15 @@
+odataormpy/__init__.py,sha256=trP3_5dlMrM9JfaGs0RjFDqwj_Zi5LOsVhKvwRy35sY,146
+odataormpy/exception/__init__.py,sha256=YjGAbCzZPoqFKNIHjfEV0uycu0a0dmo-6vy4OE6157Q,87
+odataormpy/exception/exception.py,sha256=ad3BNj5gU3RJh8x9583mB0hgZCie8wn5CW8iqc23SKE,424
+odataormpy/orm/__init__.py,sha256=JYZRsWIc5JpDSM2CCEXwH5S3PqhhZhdsetwqPxqSDkE,247
+odataormpy/orm/orm.py,sha256=DVreEYIcEdO3IrLwGGrg1tVDrIsF4-Ft5OpZX7gjMRw,4533
+odataormpy/orm/orm_expression.py,sha256=cH3keutgWR1pzvCKgVU5EE1-FCh7nqg9aH2m_3HPjms,571
+odataormpy/orm/orm_field.py,sha256=F4sdH6pwgA6VylSonJRFkXSGjes8QPyWexPx3wHUAC0,1296
+odataormpy/orm/orm_object.py,sha256=ZUDdI9W0qc8dMvcbKqCx0VHzjPGgGnBMv5OgP4kbvO0,3998
+odataormpy/session/__init__.py,sha256=IjdFyjGc0O7Vm1oVppYCwtJrWi8RthvJkfUBQdmehg0,66
+odataormpy/session/session.py,sha256=r06PR3jhtfVdRqf_UrNLCCxjBGSITeHRYq9ec6Jubjg,2642
+odataormpy-0.1.1.dist-info/licenses/LICENSE,sha256=Znn77DUF05XfRNBpHkaSMwPlMmrtu4yrleORrkuv_wI,1089
+odataormpy-0.1.1.dist-info/METADATA,sha256=dhxLiGDQ4hqc9445nexXU-QykeULGXqudXdffwY09Fc,1898
+odataormpy-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+odataormpy-0.1.1.dist-info/top_level.txt,sha256=IjeavnQsBzdvAHXSccSDatCUUsHAdQCuRlz3RaGN3uo,11
+odataormpy-0.1.1.dist-info/RECORD,,
