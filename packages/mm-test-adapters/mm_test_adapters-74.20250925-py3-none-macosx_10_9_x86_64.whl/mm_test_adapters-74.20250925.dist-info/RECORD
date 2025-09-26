@@ -1,0 +1,11 @@
+mm_test_adapters/version.py,sha256=nfFuGhMc1rQ0vqFA_jjyoDsLOxDIWWgqwkkfZwZylAk,118
+mm_test_adapters/__init__.py,sha256=5KAFhKTI58BhELgWOOMC6WZS4VDb0KpoXeySxsll8pg,458
+mm_test_adapters/libs/libmmgr_dal_SequenceTester,sha256=CgTZ7dHw_Y66i2XXZiZj1V9U1qketA78_7B2h-VkxYM,653872
+mm_test_adapters/libs/libmmgr_dal_NotificationTester,sha256=659XFA7gcWdp0j9CNoHrhcW0BsX-ZD2NDihMgCDwG3I,421776
+mm_test_adapters/libs/libmmgr_dal_DemoCamera,sha256=p0KhNBtz5CzLEyFLNYwf437NnWCfnucjhsTYoBgKuBw,643560
+mm_test_adapters/libs/MMConfig_demo.cfg,sha256=kWvAlJjInM-FMUcdVYyZ5aTU97oRcvcVAmcC5lJ0M-Y,6258
+mm_test_adapters/libs/libmmgr_dal_Utilities,sha256=j3BRn1Wvmr1lJ-AnlJdt9VThg5ayf-r6PTIdiS8RwVM,589752
+mm_test_adapters-74.20250925.dist-info/RECORD,,
+mm_test_adapters-74.20250925.dist-info/WHEEL,sha256=TZ2oyEa0a7ZuJaGTf6_ABnH0Rp_pOPDGOZqsuD1NdWw,134
+mm_test_adapters-74.20250925.dist-info/top_level.txt,sha256=6BD3ZIO5GEZjANHZd5lyY2hZa_bwKTzYC68qVu3oYuo,17
+mm_test_adapters-74.20250925.dist-info/METADATA,sha256=u_BYmZBhIDjd0yJ6SpJ6jcLW2d8wOCPuid9CnVKSdsc,2876
