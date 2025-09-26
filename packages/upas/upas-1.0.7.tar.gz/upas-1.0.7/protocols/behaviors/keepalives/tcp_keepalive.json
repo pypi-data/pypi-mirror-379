@@ -1,0 +1,78 @@
+{
+    "behavior": {
+        "name": "TCP_Keepalive",
+        "type": "keepalive",
+        "description": "TCP socket keep-alive mechanism for connection monitoring"
+    },
+    "keepalive_config": {
+        "tcp_keepalive_time": 7200,
+        "tcp_keepalive_interval": 75,
+        "tcp_keepalive_probes": 9,
+        "app_keepalive_enabled": true,
+        "app_keepalive_interval": 30000,
+        "app_keepalive_timeout": 5000,
+        "app_keepalive_max_fails": 3
+    },
+    "behavior_type": "periodic",
+    "interval": "[APP_KEEPALIVE_INTERVAL]",
+    "repeat_count": -1,
+    "variables": {
+        "CONNECTION_ID": "CONN_001",
+        "KEEPALIVE_SEQUENCE": 0,
+        "LAST_RESPONSE_TIME": 0,
+        "CONSECUTIVE_FAILURES": 0,
+        "CONNECTION_STATE": "ESTABLISHED"
+    },
+    "functions": {
+        "increment_seq": "lambda x: (x + 1) % 65536",
+        "current_timestamp": "lambda: int(time.time())",
+        "calculate_rtt": "lambda start, end: end - start"
+    },
+    "keepalive_packet": {
+        "payload": [
+            {
+                "message_type": "KEEPALIVE_PING"
+            },
+            {
+                "connection_id": "[CONNECTION_ID]"
+            },
+            {
+                "sequence": "[KEEPALIVE_SEQUENCE:2:increment_seq]"
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_timestamp]"
+            },
+            {
+                "data": "ping"
+            }
+        ]
+    },
+    "response_handler": {
+        "enabled": true,
+        "timeout": "[APP_KEEPALIVE_TIMEOUT]"
+    },
+    "states": {
+        "HEALTHY": "Connection is healthy",
+        "DEGRADED": "Some keep-alive failures",
+        "FAILING": "Multiple failures detected",
+        "DEAD": "Connection considered dead"
+    },
+    "transitions": {
+        "HEALTHY -> DEGRADED": "keepalive_failure",
+        "DEGRADED -> FAILING": "multiple_failures",
+        "FAILING -> DEAD": "max_failures_reached",
+        "DEGRADED -> HEALTHY": "keepalive_success",
+        "FAILING -> HEALTHY": "keepalive_recovery",
+        "* -> HEALTHY": "keepalive_success"
+    },
+    "error_handling": {
+        "timeout": 5000,
+        "max_retries": 3,
+        "error_codes": {
+            "0x01": "Keepalive timeout",
+            "0x02": "Connection lost",
+            "0x03": "Network error",
+            "0x04": "Max failures exceeded"
+        }
+    }
+}
