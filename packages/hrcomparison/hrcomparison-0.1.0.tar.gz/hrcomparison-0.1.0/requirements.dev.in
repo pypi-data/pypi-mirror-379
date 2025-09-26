@@ -1,0 +1,17 @@
+-r requirements.txt
+
+# test
+pytest
+pytest-mock
+pytest-cov
+coveralls
+
+# lint
+pre-commit
+mypy
+
+# build & reqs management
+-e .
+hatchling
+toml
+invoke
