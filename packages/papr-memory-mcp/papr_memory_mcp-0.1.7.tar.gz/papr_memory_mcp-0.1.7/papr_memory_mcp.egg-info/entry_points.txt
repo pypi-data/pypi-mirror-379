@@ -1,0 +1,4 @@
+[console_scripts]
+papr-mcp = papr_memory_mcp.paprmcp:main
+papr-memory-mcp = papr_memory_mcp.paprmcp:main
+setup-cursor-mcp = papr_memory_mcp.install_mcp_config:main
