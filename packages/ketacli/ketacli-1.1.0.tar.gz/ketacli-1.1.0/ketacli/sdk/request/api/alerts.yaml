@@ -1,0 +1,20 @@
+alerts:
+  path: alerts
+  desc: 告警规则
+  methods:
+    list:
+      path: alerts
+      default_fields:
+      - name: name
+        alias: 名称
+      - name: description
+        alias: 描述
+      - name: owner
+        alias: 负责人
+      - name: app
+        alias: 应用
+      - name: status
+        alias: 状态
+      - name: recovery
+        alias: 恢复
+    get: alerts
