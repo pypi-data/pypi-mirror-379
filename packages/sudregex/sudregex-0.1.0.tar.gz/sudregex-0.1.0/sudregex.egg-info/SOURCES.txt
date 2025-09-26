@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+sudregex/__init__.py
+sudregex/checklist.py
+sudregex/cli.py
+sudregex/helper.py
+sudregex/termslist.py
+sudregex/validation.py
+sudregex.egg-info/PKG-INFO
+sudregex.egg-info/SOURCES.txt
+sudregex.egg-info/dependency_links.txt
+sudregex.egg-info/entry_points.txt
+sudregex.egg-info/requires.txt
+sudregex.egg-info/top_level.txt
