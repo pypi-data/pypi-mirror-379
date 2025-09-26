@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: pyb1slayer
+Version: 0.1.2.dev3
+Summary: A clean and fluent Python client for SAP Business One Service Layer
+Author-email: Pedro Díaz Nicolás <peddiaznicolas@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/peddiaznicolas/py-b1s-layer
+Project-URL: Repository, https://github.com/peddiaznicolas/py-b1s-layer
+Project-URL: Documentation, https://github.com/peddiaznicolas/py-b1s-layer#readme
+Project-URL: Changelog, https://github.com/peddiaznicolas/py-b1s-layer/releases
+Keywords: sap,business-one,service-layer,b1s,odata
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: pydantic>=2.0.0; python_version >= "3.9"
+Dynamic: license-file
+
+# pyb1slayer
+
