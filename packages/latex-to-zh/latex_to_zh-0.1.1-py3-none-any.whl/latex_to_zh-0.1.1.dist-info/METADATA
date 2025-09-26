@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: latex-to-zh
+Version: 0.1.1
+Summary: 
+Author: yingzhe.zhang
+Author-email: zhangyingzhe@diyiedu.com
+Requires-Python: >=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: antlr4-python3-runtime (>=4.13.2,<5.0.0)
+Project-URL: Documentation, https://github.com/ripest/LatexToZh
+Project-URL: Homepage, https://github.com/ripest/LatexToZh
+Project-URL: Source Code, https://github.com/ripest/LatexToZh
+Description-Content-Type: text/markdown
+
+# 本项目可以将latex公式转换成中文
+使用:
+```
+from latex_to_zh import convert
+text = r'\begin{cases} x + y = 5 \\ x - y = 3 \\ x - y = 3 \end{cases}'
+result = convert(text)
+print(result)
+```
+目前支持的公式比较少
+欢迎提交需要支持的公式
+

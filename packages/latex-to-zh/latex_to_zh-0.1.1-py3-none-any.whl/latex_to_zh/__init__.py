@@ -1,0 +1,1 @@
+from .latex_to_zh import convert
