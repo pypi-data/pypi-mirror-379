@@ -1,0 +1,55 @@
+
+{% block content %}
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <!-- Day-wise Column -->
+  <div class="flex flex-col">
+    <!-- Selector Div -->
+    <div class="bg-white p-4 rounded shadow mb-4">
+      <label for="daySelector" class="font-medium text-gray-700 mb-1 block">Select Day</label>
+      <input type="date" id="daySelector" class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full" />
+    </div>
+
+    <!-- Chart Div -->
+    <div class="bg-white p-4 rounded shadow">
+      <h2 class="font-semibold mb-2">Day-wise Error Types</h2>
+      <canvas id="dayChart" class="w-full h-64"></canvas>
+    </div>
+  </div>
+
+  <!-- Month-wise Column -->
+  <div class="flex flex-col">
+    <!-- Selector Div -->
+    <div class="bg-white p-4 rounded shadow mb-4">
+      <label for="monthSelector" class="font-medium text-gray-700 mb-1 block">Select Month</label>
+      <input type="month" id="monthSelector" class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-full" />
+    </div>
+
+    <!-- Chart Div -->
+    <div class="bg-white p-4 rounded shadow">
+      <h2 class="font-semibold mb-2">Month-wise Logs</h2>
+      <canvas id="monthChart" class="w-full h-64"></canvas>
+    </div>
+  </div>
+
+  <!-- Year-wise Column -->
+  <div class="flex flex-col">
+    <!-- Selector Div -->
+    <div class="bg-white p-4 rounded shadow mb-4">
+      <label for="yearSelector" class="font-medium text-gray-700 mb-1 block">Select Year</label>
+      <input type="number" id="yearSelector" min="2000" max="2100" value="{{ current_year }}" class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full" />
+    </div>
+
+    <!-- Chart Div -->
+    <div class="bg-white p-4 rounded shadow">
+      <h2 class="font-semibold mb-2">Year-wise Logs</h2>
+      <canvas id="yearChart" class="w-full h-64"></canvas>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_head %}
+<script type="module" src="../static/js/charts.js"></script>
+{% endblock %}
