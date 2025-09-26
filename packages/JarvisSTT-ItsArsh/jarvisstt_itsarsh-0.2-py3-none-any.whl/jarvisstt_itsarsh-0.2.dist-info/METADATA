@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: JarvisSTT-ItsArsh
+Version: 0.2
+Summary: This is a speech to text package
+Author: ItsArsh
+Author-email: noamarsh2010@gmail.com
+Requires-Dist: selenium
+Requires-Dist: webdriver-manager
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
