@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "sqlalchemy", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolos"
+version = "1.2.3"
+description = "A lightweight Python app framework with mods, caching, settings and language API."
+authors = [
+  { name = "Lilias", email = "lilias.ge@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
