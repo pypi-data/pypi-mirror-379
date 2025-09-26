@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: Sameerpy
+Version: 1.0
+Summary: Test Package
+Author: Syed Sameer Ali
+Author-email: syedsameerali.official@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
