@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/UserManagerTemplate/__init__.py
+src/UserManagerTemplate/core.py
+src/UserManagerTemplate/log.py
+src/UserManagerTemplate/server.py
+src/usermanagertemplate.egg-info/PKG-INFO
+src/usermanagertemplate.egg-info/SOURCES.txt
+src/usermanagertemplate.egg-info/dependency_links.txt
+src/usermanagertemplate.egg-info/requires.txt
+src/usermanagertemplate.egg-info/top_level.txt
+tests/test_main.py
