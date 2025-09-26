@@ -1,0 +1,9 @@
+README.md
+setup.py
+GPTkeras/GPTkeras.py
+GPTkeras/__init__.py
+GPTkeras.egg-info/PKG-INFO
+GPTkeras.egg-info/SOURCES.txt
+GPTkeras.egg-info/dependency_links.txt
+GPTkeras.egg-info/requires.txt
+GPTkeras.egg-info/top_level.txt
