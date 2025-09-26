@@ -1,0 +1,114 @@
+Metadata-Version: 2.4
+Name: tracksdata
+Version: 0.1.0rc0
+Summary: A Python library for multi-object tracking data structures and algorithms
+Project-URL: Documentation, https://github.com/jookuma/tracksdata#readme
+Project-URL: Issues, https://github.com/jookuma/tracksdata/issues
+Project-URL: Source, https://github.com/jookuma/tracksdata
+Author-email: Jordao Bragantini <jordao.bragantini@czbiohub.org>, Ilan Theodoro <ilan.silva@czbiohub.org>, Alexander Nguyen <nguyencalex3@gmail.com>, Teun Huijben <teun.huijben@czbiohub.org>, "Yohsuke T. Fukai" <ysk@yfukai.net>, Caroline Malin-Mayor <malinmayorc@janelia.hhmi.org>, Anniek Stokkermans <a.stokkermans@hubrecht.eu>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Keywords: cell-tracking,computer-vision,graph,machine-learning,multi-object-tracking,tracking
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.10
+Requires-Dist: bidict>=0.23.1
+Requires-Dist: blosc2
+Requires-Dist: dask
+Requires-Dist: geff>=1.0.0
+Requires-Dist: ilpy>=0.5.1
+Requires-Dist: imagecodecs
+Requires-Dist: numba
+Requires-Dist: numpy>2
+Requires-Dist: polars
+Requires-Dist: pyarrow
+Requires-Dist: rich
+Requires-Dist: rustworkx>=0.17.1
+Requires-Dist: scikit-image>=0.24.0
+Requires-Dist: sqlalchemy>=2
+Requires-Dist: tqdm
+Requires-Dist: typing-extensions
+Provides-Extra: docs
+Requires-Dist: mike; extra == 'docs'
+Requires-Dist: mkdocs; extra == 'docs'
+Requires-Dist: mkdocs-api-autonav; extra == 'docs'
+Requires-Dist: mkdocs-material; extra == 'docs'
+Requires-Dist: mkdocs-mermaid2-plugin; extra == 'docs'
+Requires-Dist: mkdocstrings-python; extra == 'docs'
+Requires-Dist: mkdocstrings-python-xref; extra == 'docs'
+Provides-Extra: spatial
+Requires-Dist: spatial-graph; extra == 'spatial'
+Provides-Extra: test
+Requires-Dist: napari; extra == 'test'
+Requires-Dist: py-ctcmetrics; extra == 'test'
+Requires-Dist: pyqt5; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-html; extra == 'test'
+Requires-Dist: pytest-qt; extra == 'test'
+Requires-Dist: pytest>=7.0; extra == 'test'
+Requires-Dist: spatial-graph; extra == 'test'
+Description-Content-Type: text/markdown
+
+# TracksData
+
+[![PyPI - License](https://img.shields.io/pypi/l/tracksdata.svg?color=green)](https://github.com/royerlab/tracksdata/raw/main/LICENSE)
+[![PyPI - Version](https://img.shields.io/pypi/v/tracksdata.svg)](https://pypi.org/project/tracksdata)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tracksdata.svg)](https://pypi.org/project/tracksdata)
+[![CI](https://github.com/royerlab/tracksdata/actions/workflows/ci.yaml/badge.svg)](https://github.com/royerlab/tracksdata/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/royerlab/tracksdata/branch/main/graph/badge.svg)](https://codecov.io/gh/royerlab/tracksdata)
+
+A common data structure and basic tools for multi-object tracking.
+
+## Features
+
+- Graph-based representation of tracking problems
+- In-memory (RustWorkX) and database-backed (SQL) graph backends
+- Nodes and edges can take arbitrary attributes
+- Standardize API for node operators (e.g. defining objects and their attributes)
+- Standardize API for edge operators (e.g. creating edges between nodes)
+- Basic tracking solvers: nearest neighbors and integer linear programming
+- Compatible with Cell Tracking Challenge (CTC) format
+- Efficient subgraphing based on attributes on any graph backend
+- Integration with cell tracking evaluation metrics
+
+## Installation
+
+Until rustworkx 0.17.0 is released, you need to have rust installed to compile the latest rustworkx.
+
+```console
+conda install -c conda-forge rust
+```
+
+Then install tracksdata with the following command:
+
+```console
+pip install .
+```
+
+## Why tracksdata?
+
+TracksData provides a common data structure for multi-object tracking problems.
+It uses graphs to represent detections (nodes) and their connections (edges), making it easier to work with tracking data across different algorithms.
+
+Key benefits:
+- Consistent data representation for tracking problems
+- Modular components that can be combined as needed
+- Support for both small datasets (in-memory) and large datasets (database)
+
+## Documentation
+
+- [Full Documentation](https://royerlab.github.io/tracksdata/)
+- [Installation](https://royerlab.github.io/tracksdata/installation/)
+- [Core Concepts](https://royerlab.github.io/tracksdata/concepts/)
+- [Getting Started](https://royerlab.github.io/tracksdata/getting_started/)
+- [API Reference](https://royerlab.github.io/tracksdata/reference/tracksdata/)
+- [FAQ](https://royerlab.github.io/tracksdata/faq/)
