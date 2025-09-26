@@ -1,0 +1,2 @@
+[console_scripts]
+megan = graph_attention_student.cli:cli
