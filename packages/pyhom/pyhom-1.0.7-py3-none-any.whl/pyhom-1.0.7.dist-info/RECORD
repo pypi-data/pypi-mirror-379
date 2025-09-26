@@ -1,0 +1,16 @@
+pyhom/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyhom/pyhom_core.py,sha256=2AGNOoreKLlIlPCyDuaa2GmivOkwcrOmweypHUjUy4k,33890
+pyhom/built-in/dataset.zip,sha256=oEj9N5tvtF_W5iMLjxK0ZH_ApDXo2E-LisIKv62B2qk,46381
+pyhom/full_field/Cell_Problem.py,sha256=sha5jKRjT4hpDgkjOg3fOddFADJFsXWU0ZA6RtSNvZg,3668
+pyhom/full_field/FF_Hom.py,sha256=FaOF_yf0z-GGXrFeBtCDEebW4BAKrKNYsL_24thCrFQ,251
+pyhom/full_field/Linalg_FFT.py,sha256=cLp24jHVt9TqIoxqk67RfuLg29IlSsQ6_OT63kt6kDE,5454
+pyhom/image_processing/Ellipses_Builder.py,sha256=MWV49ZMIp90KF22JEAt35L87e7awTFB0wwY_SmKHz5c,4074
+pyhom/image_processing/Graph_Tools.py,sha256=xQxv-akdZFX9ZxC88TDD-t_Ad7oYGTg54BFVzCUpVbQ,69093
+pyhom/image_processing/Image.py,sha256=uLlSCuq3PpVVgE6bF1dQFfnaxQ_5_Jly1cKZIzROesc,19614
+pyhom/image_processing/Tessellations.py,sha256=_YFHiYXbjTf2v2DpC2oU23islDmkD9K3UdF3Xxx6eao,4184
+pyhom/mean_field/MF_Hom.py,sha256=_aNdMacjkK5ussafZL_j6hA9QG99dZNlAc8qKjIcsaU,18855
+pyhom/rsa/Build_RVE.py,sha256=V8ru9HigjYh2JqjtiD5wITZgaA4wV6Tc0q-fflfY7FY,26204
+pyhom-1.0.7.dist-info/METADATA,sha256=Zmz5Q5KXmDUBumSW5y-L_DdCrehjnncxl5yR--HuRJs,5263
+pyhom-1.0.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyhom-1.0.7.dist-info/licenses/LICENSE,sha256=-zSKUBrFQZL_icYbIXkasU9qcLuvZ6C6enPOdZ5JTpU,1101
+pyhom-1.0.7.dist-info/RECORD,,
