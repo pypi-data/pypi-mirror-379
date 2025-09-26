@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+uvexample.egg-info/PKG-INFO
+uvexample.egg-info/SOURCES.txt
+uvexample.egg-info/dependency_links.txt
+uvexample.egg-info/requires.txt
+uvexample.egg-info/top_level.txt
