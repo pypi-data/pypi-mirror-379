@@ -1,0 +1,9 @@
+modlib-0.0.1.dist-info/RECORD,,
+modlib-0.0.1.dist-info/WHEEL,sha256=GndFmsGQkhesJMB09xd5xy1JFawKJlDZt6AMMgqJ-Pw,122
+modlib-0.0.1.dist-info/METADATA,sha256=slc7HBqd9HIw59P-CTgs_3Gwhc08FfWlzbSc10xWHfQ,174
+modlib/fibonacci_cy.pyx,sha256=5iDtIrqv3pAkgs_trTbi_4mRyzy-7jQPs8As9reVrJc,157
+modlib/__init__.py,sha256=lDLdLJvmFVwBPRCgJxVVupxzsrJUV-bT5p8bJH06jt4,230
+modlib/fibonacci_cpp.cpp,sha256=RBq7xqdQp-Hxkel05UwY7G-uUKsXuMEuUatJOwlQnVg,755
+modlib/fibonacci_cy.cpython-312-darwin.so,sha256=pZvG2_gUxpo43Or5PLKHfSwiOzqW5oSKgmdJgW9-g5s,76416
+modlib/fibonacci_cpp.cpython-312-darwin.so,sha256=4lWCEqkL0BuGuglV4nD4d00Zyfm3aiTewnAURKw2ZPo,50256
+modlib/fibonacci_py.py,sha256=-vibrbbzPVCV7C32iYOpZ6k_IQ98rsMp-rycQT7iUF4,153
