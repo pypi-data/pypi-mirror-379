@@ -1,0 +1,2 @@
+[console_scripts]
+supercli = supervisor_cli.main:main

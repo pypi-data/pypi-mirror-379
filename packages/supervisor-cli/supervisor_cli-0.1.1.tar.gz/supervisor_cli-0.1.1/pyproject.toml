@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supervisor-cli"
+version = "0.1.1"
+description = "Interactive CLI tool to manage Supervisor services"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name="Hitesh", email="hiteshapr111@gmail.com" }
+]
+dependencies = []
+requires-python = ">=3.8"
+
+[project.scripts]
+supercli = "supervisor_cli.main:main"

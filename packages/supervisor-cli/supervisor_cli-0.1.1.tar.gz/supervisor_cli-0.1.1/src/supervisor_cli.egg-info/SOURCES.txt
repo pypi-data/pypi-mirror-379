@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/supervisor_cli/__init__.py
+src/supervisor_cli/main.py
+src/supervisor_cli.egg-info/PKG-INFO
+src/supervisor_cli.egg-info/SOURCES.txt
+src/supervisor_cli.egg-info/dependency_links.txt
+src/supervisor_cli.egg-info/entry_points.txt
+src/supervisor_cli.egg-info/top_level.txt
