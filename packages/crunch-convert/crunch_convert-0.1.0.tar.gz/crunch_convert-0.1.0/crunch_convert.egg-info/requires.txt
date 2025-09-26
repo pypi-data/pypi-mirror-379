@@ -1,0 +1,8 @@
+click
+libcst
+requirements-parser>=0.11.0
+
+[test]
+parameterized
+pytest
+pytest-cov
