@@ -1,0 +1,125 @@
+# pyenvedit
+
+A CLI tool for editing `.env` files with an intuitive interface. Edit environment variables from the command line or through an interactive TUI.
+
+## Installation
+
+Install from PyPI:
+
+```bash
+pip install pyenvedit
+```
+
+## Usage
+
+### Command Line Interface
+
+#### Display .env file contents
+```bash
+pyenvedit .env
+```
+
+#### Add a new environment variable
+```bash
+pyenvedit .env --add API_KEY=your_api_key_here
+pyenvedit .env --add DATABASE_URL=postgresql://localhost/mydb
+```
+
+#### Edit an existing environment variable
+```bash
+pyenvedit .env --edit API_KEY=new_api_key_value
+pyenvedit .env --edit DEBUG=true
+```
+
+#### Remove an environment variable
+```bash
+pyenvedit .env --remove API_KEY
+pyenvedit .env --remove UNUSED_VAR
+```
+
+### Interactive TUI Mode
+
+Launch the interactive TUI by running `pyenvedit` without any flags on a non-existent file:
+
+```bash
+pyenvedit myproject.env
+```
+
+The TUI provides:
+- **View**: Browse all environment variables in a table
+- **Add**: Add new variables through a modal dialog
+- **Edit**: Edit existing variables by selecting them and clicking "Edit Selected"
+- **Delete**: Remove variables by selecting them and clicking "Delete Selected"
+- **Navigation**: Use arrow keys to navigate, Enter to select
+
+### Key Features
+
+- **Safe editing**: Preserves comments and formatting
+- **Validation**: Ensures variable names follow proper conventions
+- **Error handling**: Clear error messages for invalid operations
+- **Cross-platform**: Works on Windows, macOS, and Linux
+- **UTF-8 support**: Handles international characters in values
+
+## Examples
+
+### Basic Usage
+```bash
+# Display current .env file
+pyenvedit
+
+# Add a database URL
+pyenvedit --add DATABASE_URL=sqlite:///app.db
+
+# Update an API key
+pyenvedit --edit API_KEY=sk-new-key-12345
+
+# Remove an old variable
+pyenvedit --remove OLD_API_KEY
+
+# Edit a different env file
+pyenvedit config/staging.env --add REDIS_URL=redis://localhost:6379
+```
+
+### Interactive Mode
+```bash
+# Launch TUI for current directory's .env
+pyenvedit
+
+# Launch TUI for specific file
+pyenvedit config/production.env
+```
+
+## File Format Support
+
+pyenvedit works with standard `.env` file format:
+
+```bash
+# Comments are preserved
+API_KEY=your_key_here
+DATABASE_URL=postgresql://user:pass@localhost/db
+DEBUG=true
+
+# Quoted values are supported
+MESSAGE="Hello, World!"
+PATH='/usr/local/bin:/usr/bin'
+```
+
+## Requirements
+
+- Python 3.8 or higher
+- textual >= 0.40.0
+- click >= 8.0.0
+
+## Development
+
+To set up for development:
+
+```bash
+git clone https://github.com/marcokotrotsos/envedit
+cd envedit
+pip install -e .
+```
+
+## License
+
+MIT License

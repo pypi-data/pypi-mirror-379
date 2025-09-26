@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+envedit/__init__.py
+envedit/cli.py
+envedit/env_parser.py
+envedit/tui.py
+pyenvedit.egg-info/PKG-INFO
+pyenvedit.egg-info/SOURCES.txt
+pyenvedit.egg-info/dependency_links.txt
+pyenvedit.egg-info/entry_points.txt
+pyenvedit.egg-info/requires.txt
+pyenvedit.egg-info/top_level.txt
