@@ -1,0 +1,12 @@
+setup.py
+primrea/__init__.py
+primrea/core.py
+primrea.egg-info/PKG-INFO
+primrea.egg-info/SOURCES.txt
+primrea.egg-info/dependency_links.txt
+primrea.egg-info/requires.txt
+primrea.egg-info/top_level.txt
+primrea/kh_table_gen/__init__.py
+primrea/kh_table_gen/entry_based.py
+primrea/kh_table_gen/pjdb.py
+primrea/tests/__init__.py
