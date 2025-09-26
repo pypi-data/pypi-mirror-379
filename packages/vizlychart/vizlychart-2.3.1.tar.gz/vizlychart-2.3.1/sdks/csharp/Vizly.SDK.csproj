@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Vizly.SDK</PackageId>
+    <Version>1.1.0</Version>
+    <Authors>Infinidatum Corporation</Authors>
+    <Company>Infinidatum Corporation</Company>
+    <Product>Vizly Visualization Library</Product>
+    <Description>Professional .NET SDK for Vizly visualization library with GPU acceleration, VR/AR support, and real-time streaming</Description>
+    <PackageTags>visualization;charts;gpu;vr;ar;realtime;data-science</PackageTags>
+    <RepositoryUrl>https://github.com/infinidatum/vizly</RepositoryUrl>
+    <PackageLicenseExpression>Commercial</PackageLicenseExpression>
+    <Copyright>© 2024 Infinidatum Corporation</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
