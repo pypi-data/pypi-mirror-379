@@ -1,0 +1,11 @@
+mm_test_adapters-74.20250925.post1.dist-info/RECORD,,
+mm_test_adapters-74.20250925.post1.dist-info/WHEEL,sha256=0wJZkrMXhHamlhyeyzwHZC6TVoCduvm5-sXAkwO3M0I,133
+mm_test_adapters-74.20250925.post1.dist-info/top_level.txt,sha256=6BD3ZIO5GEZjANHZd5lyY2hZa_bwKTzYC68qVu3oYuo,17
+mm_test_adapters-74.20250925.post1.dist-info/METADATA,sha256=2tgs_cQu9po1buQoEhVzuZvQgZlLNl2MQJjMGkFCeL4,2882
+mm_test_adapters/version.py,sha256=-ArihoO_bxdnQ8YHf9GYKyfiFAdnx8zEn8pJdhdnJUc,124
+mm_test_adapters/__init__.py,sha256=5KAFhKTI58BhELgWOOMC6WZS4VDb0KpoXeySxsll8pg,458
+mm_test_adapters/libs/libmmgr_dal_SequenceTester,sha256=_JY3c5gYZWeD_nynQlYm93CYddww7AKC19eBwQsxVNM,667776
+mm_test_adapters/libs/libmmgr_dal_NotificationTester,sha256=2NR3_5X32umr7-M865BiF80EhE2pjlUh8OC8JRAItTs,399640
+mm_test_adapters/libs/libmmgr_dal_DemoCamera,sha256=LGYc4ftPk7jicZ3bAKEUMFUA1hOnzsWoTJU1l7HPF68,653008
+mm_test_adapters/libs/MMConfig_demo.cfg,sha256=kWvAlJjInM-FMUcdVYyZ5aTU97oRcvcVAmcC5lJ0M-Y,6258
+mm_test_adapters/libs/libmmgr_dal_Utilities,sha256=6YdnV6Eh4444LD04k71OlSPx3dkITojj9-xf76Om5c8,616200
