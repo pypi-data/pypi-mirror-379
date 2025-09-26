@@ -1,0 +1,91 @@
+Metadata-Version: 2.4
+Name: lens-reasoning-sdk
+Version: 1.0.0
+Summary: Python SDK for the Lens Reasoning System
+Home-page: https://github.com/tupl-xyz/lens-sdk
+Author: tupl
+Author-email: TUPL Team <support@tupl.xyz>
+License: MIT
+Project-URL: Homepage, https://api.tupl.xyz
+Project-URL: Repository, https://github.com/tupl-xyz/lens-reasoning-sdk
+Keywords: ai,reasoning,lens,artificial-intelligence,sdk
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: pydantic>=2.0.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Lens Reasoning SDK
+
+A Python SDK for the Lens Reasoning System that provides query processing and reasoning capabilities.
+
+## Installation
+
+```bash
+# Install from PyPI
+pip install lens-reasoning-sdk
+
+# Or install from source
+cd /path/to/lens-sdk
+pip install -e .
+```
+
+## Prerequisites
+
+- Python 3.8+
+- Internet access to the Lens Reasoning System production API (`https://api.tupl.xyz`)
+
+## Quick Start
+
+```python
+from query_processor import LensQueryProcessor
+from exceptions import ProcessingError
+
+try:
+    # Initialize the query processor
+    processor = LensQueryProcessor("https://api.tupl.xyz")
+
+    # Process a query
+    result = processor.process_query("What are the implications of AI in healthcare?")
+
+    print(f"Answer: {result['final_answer']}")
+    print(f"Confidence: {result['confidence_overall']}")
+    print(f"Contract ID: {result['contract_id']}")
+
+except ProcessingError as e:
+    print(f"Processing failed: {e}")
+finally:
+    processor.close()
+```
+
+## Available Methods
+
+- `process_query(query, **kwargs)` - Process a query through the reasoning system
+- `get_contract(contract_id)` - Get complete contract details
+- `get_reasoning_trace(contract_id)` - Get detailed reasoning trace
+- `list_contracts(workflow_id=None, limit=20)` - List existing contracts
+
+## Requirements
+
+- Python 3.8+
+- httpx>=0.25.0
+- pydantic>=2.0.0
+
+## License
+
+MIT License
