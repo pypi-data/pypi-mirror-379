@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: hussain
+Version: 1.0
+Summary: this is just a test package
+Author: hussain
+Author-email: hussain8900.shs@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
