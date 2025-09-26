@@ -1,0 +1,2 @@
+[console_scripts]
+core-memory-server = memory_service:main
