@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "template_filler"
+version = "2025.9.26814"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Eugene Evstafev", email = "hi@eugene.plus" },
+]
+license = { file = "LICENSE" }
+dependencies = [
+    "template",
+    "substitution",
+    "variable",
+    "key",
+    "value",
+    "iteration",
+    "combination"
+]
+
+[project.urls]
+Repository = "https://pypi.org/project/template_filler/"
