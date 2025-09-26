@@ -1,0 +1,10 @@
+sfst_transduce.cpython-311-x86_64-linux-musl.so,sha256=wxAgV-xX8jui1O07fgdxtVEslGwA1ZrqeoCHX9LBalU,708025
+sfst_transduce/__init__.pyi,sha256=X608KO93EvUocMD5LRgx8JeofRV0UCL8UZOiZtKasgg,450
+sfst_transduce/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sfst_transduce.libs/libgcc_s-0cd532bd.so.1,sha256=yPk0-VjyKzucjnkP3mvC0vVaua6Ln17qZUJbICcXgtA,181737
+sfst_transduce.libs/libstdc++-5d72f927.so.6.0.33,sha256=fogxHsmB1_D6C-a_-uHh8Ei_6Qh52a8vLlicJRM3ehk,3562401
+sfst_transduce-1.3.1.dist-info/LICENSE,sha256=ucr1ErXYP34WGrYr35yRX0dx47vJWiOGodJH-AoB_mc,15123
+sfst_transduce-1.3.1.dist-info/METADATA,sha256=BJigze8oIrHODcIhixe5MJfBO2xasovyLsHKl1bUGQs,4178
+sfst_transduce-1.3.1.dist-info/WHEEL,sha256=RhaGuH6QTE7ENEuNoixxFzKXEt0KDbtlsTwJ21YePZI,112
+sfst_transduce-1.3.1.dist-info/top_level.txt,sha256=j4ZrgNBgPQ-ImEOznpEUsr-bay9S88rvdWXgV0xggrg,15
+sfst_transduce-1.3.1.dist-info/RECORD,,
