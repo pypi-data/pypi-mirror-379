@@ -1,0 +1,7 @@
+ord-schema
+py7zr
+pyarrow
+pqdm
+rdkit
+requests
+tqdm
