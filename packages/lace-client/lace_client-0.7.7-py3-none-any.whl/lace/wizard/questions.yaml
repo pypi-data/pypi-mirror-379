@@ -1,0 +1,497 @@
+# EU AI Act Compliance - Question Bank
+# Version: 1.0.0
+# Last Updated: 2025-08-18
+# Schema Target: eu_training_summary_2025_07.json
+# 
+# This question bank implements the mandatory fields from the EU AI Office's
+# "Explanatory Notice and Template for the Public Summary of Training Content"
+# as required by Article 53(1)(d) of the AI Act for GPAI providers.
+
+version: "1.0.0"
+schema_version: "2025-07"
+generated_by: "lace-wizard"
+
+# Global defaults
+defaults:
+  confidence_threshold: 0.80
+  email_regex: '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+  date_regex: '^\d{4}-\d{2}-\d{2}$'
+  domain_regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]?\.[a-zA-Z]{2,}$'
+
+# CRITICAL: Gating question determines template type (MUST BE FIRST)
+gating:
+  - id: provider_type
+    text: "Are you a General-Purpose AI (GPAI) model provider under the EU AI Act?"
+    help: |
+      Select 'Yes' if:
+      - Your model performs a wide range of tasks
+      - You're placing it on the EU market
+      - It meets GPAI criteria under Article 3(63) of the AI Act
+      
+      This determines whether you must use the official EU template.
+    type: select
+    required: true
+    always_ask: true
+    options: 
+      - value: "gpai_provider"
+        label: "Yes - GPAI Provider (Official Template Required)"
+      - value: "fine_tuner"
+        label: "No - Fine-tuner/Adapter (Voluntary Template)"
+      - value: "unsure"
+        label: "Unsure (Will use Official Template)"
+    determines: template_type
+    map_to: metadata.provider_type
+
+# Section 1: Model Identification (Required for all)
+model_identification:
+  - id: provider_name
+    text: "Legal name of the provider"
+    type: text
+    required: true
+    autofill_from: analyzer.org_name
+    confidence_field: analyzer.org_name_confidence
+    map_to: model_identification.provider_name
+    
+  - id: model_name
+    text: "Model name"
+    type: text
+    required: true
+    autofill_from: analyzer.model_name
+    confidence_field: analyzer.model_name_confidence
+    map_to: model_identification.model_name
+    
+  - id: model_version
+    text: "Model version/tag"
+    type: text
+    required: true
+    help: "e.g., v1.0, 2025-08-18, commit-hash"
+    map_to: model_identification.model_version
+    
+  - id: release_date
+    text: "Date placed on EU market (YYYY-MM-DD)"
+    type: date
+    required: true
+    validate:
+      regex: "${defaults.date_regex}"
+    map_to: model_identification.release_date
+    
+  - id: contact_email
+    text: "Public contact email for rights holders"
+    type: email
+    required: true
+    validate:
+      regex: "${defaults.email_regex}"
+    map_to: model_identification.contact_email
+
+# Section 2: Training Data Overview
+training_data:
+  - id: modalities
+    text: "Which modalities are in your training data?"
+    type: multiselect
+    required: true
+    options: ["text", "image", "audio", "video", "code", "other"]
+    autofill_from: analyzer.modalities
+    confidence_field: analyzer.modalities_confidence
+    map_to: training_data_overview.modalities
+    
+  - id: text_size_range
+    text: "Text data size (tokens)"
+    type: select
+    required_if: modalities.includes("text")
+    options: ["<1B", "1-10B", "10-100B", "100B-1T", ">1T"]
+    autofill_from: analyzer.text_size_bin
+    confidence_field: analyzer.text_size_confidence
+    map_to: training_data_overview.size_ranges.text_tokens
+    
+  - id: image_size_range
+    text: "Number of images"
+    type: select
+    required_if: modalities.includes("image")
+    options: ["<1M", "1-10M", "10-100M", ">100M"]
+    autofill_from: analyzer.image_size_bin
+    confidence_field: analyzer.image_size_confidence
+    map_to: training_data_overview.size_ranges.images
+    
+  - id: audio_size_range
+    text: "Audio data (hours)"
+    type: select
+    required_if: modalities.includes("audio")
+    options: ["<10K", "10K-100K", "100K-1M", ">1M"]
+    map_to: training_data_overview.size_ranges.audio_hours
+    
+  - id: video_size_range
+    text: "Video data (hours)"
+    type: select
+    required_if: modalities.includes("video")
+    options: ["<10K", "10K-100K", "100K-1M", ">1M"]
+    map_to: training_data_overview.size_ranges.video_hours
+    
+  - id: code_size_range
+    text: "Code files"
+    type: select
+    required_if: modalities.includes("code")
+    options: ["<100K", "100K-1M", "1M-10M", ">10M"]
+    autofill_from: analyzer.code_size_bin
+    confidence_field: analyzer.code_size_confidence
+    map_to: training_data_overview.size_ranges.code_files
+    
+  - id: knowledge_cutoff
+    text: "Knowledge cutoff date (YYYY-MM-DD)"
+    type: date
+    required: true
+    help: "Latest date of content in training data"
+    validate:
+      regex: "${defaults.date_regex}"
+    autofill_from: analyzer.knowledge_cutoff
+    confidence_field: analyzer.knowledge_cutoff_confidence
+    map_to: training_data_overview.knowledge_cutoff
+
+# Section 3: Data Sources
+data_sources:
+  - id: source_types
+    text: "Which types of data sources did you use?"
+    type: multiselect
+    required: true
+    options: 
+      - value: "public_datasets"
+        label: "Public datasets (e.g., Common Crawl, Wikipedia)"
+      - value: "licensed_private"
+        label: "Licensed/private datasets"
+      - value: "web_scraped"
+        label: "Web-scraped content"
+      - value: "user_generated"
+        label: "User-generated/interaction data"
+      - value: "synthetic"
+        label: "Synthetic/AI-generated data"
+    autofill_from: analyzer.source_types
+    confidence_field: analyzer.source_types_confidence
+    map_to: data_sources.source_types
+    
+  # PUBLIC DATASETS (conditional)
+  - id: public_datasets_list
+    text: "List main public datasets used (name, version, description, URL)"
+    type: table
+    required_if: source_types.includes("public_datasets")
+    columns:
+      - name: "Dataset Name"
+        field: "name"
+        type: "text"
+        required: true
+      - name: "Version"
+        field: "version"
+        type: "text"
+      - name: "Description"
+        field: "description"
+        type: "text"
+      - name: "URL"
+        field: "url"
+        type: "url"
+    autofill_from: analyzer.detected_public_datasets
+    confidence_field: analyzer.public_datasets_confidence
+    map_to: data_sources.public_datasets
+    
+  # LICENSED/PRIVATE DATASETS (conditional)
+  - id: licensed_datasets_description
+    text: "Describe licensed/private datasets (without revealing trade secrets)"
+    type: textarea
+    required_if: source_types.includes("licensed_private")
+    map_to: data_sources.licensed_private_datasets.description
+    
+  - id: licensed_datasets_types
+    text: "Types of licenses held"
+    type: multiselect
+    required_if: source_types.includes("licensed_private")
+    options: ["Commercial", "Academic", "Non-profit", "Custom agreement", "Other"]
+    map_to: data_sources.licensed_private_datasets.license_types
+    
+  # WEB-SCRAPED DATA (CRITICAL FOR GPAI - MANY MANDATORY FIELDS)
+  - id: web_scraped_domains
+    text: "Top domains by scraped content volume"
+    type: domain_list
+    required_if: source_types.includes("web_scraped")
+    critical: true
+    help: |
+      REQUIRED BY EU: List top 10% of domains by content volume
+      (SMEs: top 5% or 1000 domains, whichever is lower)
+      
+      System will calculate from full domain analysis.
+      This is mandatory for GPAI providers who scraped web content.
+    autofill_from: analyzer.top_10_percent_domains
+    confidence_field: analyzer.domains_confidence
+    validate:
+      min_coverage: 0.10  # Must represent at least 10% of content
+      attestation_required: true
+    map_to: data_sources.web_scraped_data.top_domains.domains_list
+    
+  - id: domain_measurement_method
+    text: "How was domain volume measured?"
+    type: select
+    required_if: source_types.includes("web_scraped")
+    options: 
+      - value: "bytes"
+        label: "By bytes/file size"
+      - value: "tokens"
+        label: "By token count"
+      - value: "documents"
+        label: "By document/page count"
+      - value: "mixed"
+        label: "Mixed measurement"
+    autofill_from: analyzer.measurement_method
+    map_to: data_sources.web_scraped_data.top_domains.measurement_method
+    
+  - id: domain_coverage_percentage
+    text: "What % of total scraped content do these top domains represent?"
+    type: number
+    required_if: source_types.includes("web_scraped")
+    validate:
+      min: 10
+      max: 100
+    autofill_from: analyzer.top_domains_coverage
+    map_to: data_sources.web_scraped_data.top_domains.coverage_percentage
+    
+  - id: crawler_names
+    text: "Web crawler name(s) used"
+    type: text_list
+    required_if: source_types.includes("web_scraped")
+    help: "e.g., CommonCrawl, custom crawler, third-party service"
+    map_to: data_sources.web_scraped_data.crawler_details.crawler_names
+    
+  - id: crawler_purpose
+    text: "Purpose of web crawling"
+    type: textarea
+    required_if: source_types.includes("web_scraped")
+    help: "Describe why and how content was crawled for training"
+    map_to: data_sources.web_scraped_data.crawler_details.purpose
+    
+  - id: crawler_behavior
+    text: "Crawler behavior and signal respect"
+    type: textarea
+    required_if: source_types.includes("web_scraped")
+    help: "How did your crawler handle robots.txt, rate limits, and other signals?"
+    map_to: data_sources.web_scraped_data.crawler_details.behavior
+    
+  - id: collection_start_date
+    text: "Web scraping start date (YYYY-MM-DD)"
+    type: date
+    required_if: source_types.includes("web_scraped")
+    validate:
+      regex: "${defaults.date_regex}"
+    map_to: data_sources.web_scraped_data.collection_period.start_date
+    
+  - id: collection_end_date
+    text: "Web scraping end date (YYYY-MM-DD)"
+    type: date
+    required_if: source_types.includes("web_scraped")
+    validate:
+      regex: "${defaults.date_regex}"
+      after: collection_start_date
+    map_to: data_sources.web_scraped_data.collection_period.end_date
+    
+  # USER-GENERATED DATA (conditional but important for GPAI)
+  - id: user_data_used
+    text: "Did you use user-generated/interaction data?"
+    type: boolean
+    required_if: source_types.includes("user_generated")
+    map_to: data_sources.user_generated_data.used
+    
+  - id: user_data_modalities
+    text: "Modalities of user data"
+    type: multiselect
+    required_if: user_data_used == true
+    options: ["text", "image", "audio", "video", "behavioral", "other"]
+    map_to: data_sources.user_generated_data.modalities
+    
+  - id: user_data_sources
+    text: "Which services/products did the user data come from?"
+    type: text_list
+    required_if: user_data_used == true
+    help: "e.g., 'ChatBot Service', 'Mobile App', 'Web Platform'"
+    map_to: data_sources.user_generated_data.services_products
+    
+  - id: user_data_consent
+    text: "Consent/legal basis for user data"
+    type: select
+    required_if: user_data_used == true
+    options: ["Terms of Service", "Explicit consent", "Legitimate interest", "Anonymized", "Other"]
+    map_to: data_sources.user_generated_data.consent_mechanism
+    
+  # SYNTHETIC DATA (conditional)
+  - id: synthetic_data_used
+    text: "Did you use synthetic/AI-generated data?"
+    type: boolean
+    required_if: source_types.includes("synthetic")
+    map_to: data_sources.synthetic_data.used
+    
+  - id: synthetic_percentage
+    text: "Approximate % of training data that is synthetic"
+    type: select
+    required_if: synthetic_data_used == true
+    options: ["0%", "<5%", "5-20%", "20-50%", ">50%"]
+    map_to: data_sources.synthetic_data.percentage
+    
+  - id: synthetic_source_models
+    text: "Which models generated the synthetic data?"
+    type: text_list
+    required_if: synthetic_data_used == true
+    help: "List model names/versions that generated synthetic data"
+    map_to: data_sources.synthetic_data.source_models
+
+# Section 4: Data Governance & Compliance (CRITICAL FOR GPAI)
+data_governance:
+  - id: lawful_basis
+    text: "Lawful basis for using copyrighted content (select all that apply)"
+    type: multiselect
+    required: true
+    options:
+      - value: "licenses_held"
+        label: "Licenses obtained from rights holders"
+      - value: "DSM_Art4_TDM"
+        label: "EU DSM Directive Article 4 (TDM exception)"
+      - value: "proprietary"
+        label: "Own/proprietary content"
+      - value: "public_domain"
+        label: "Public domain content"
+      - value: "user_tos"
+        label: "User-contributed under Terms of Service"
+    map_to: data_governance.lawful_basis
+    
+  - id: respects_opt_out_signals
+    text: "Do you respect opt-out signals?"
+    type: boolean
+    required: true
+    help: |
+      Opt-out signals include:
+      - robots.txt (traditional web crawler exclusion)
+      - ai.txt (AI-specific at /.well-known/ai.txt)
+      - trust.txt datatrainingallowed field (/.well-known/trust.txt)
+    map_to: data_governance.opt_out_compliance.respects_signals
+    
+  - id: opt_out_signals_checked
+    text: "Which opt-out signals do you check?"
+    type: multiselect
+    required_if: respects_opt_out_signals == true
+    options:
+      - value: "robots.txt"
+        label: "robots.txt (traditional web crawler exclusion)"
+      - value: "ai.txt"
+        label: "ai.txt (AI-specific exclusion at /.well-known/ai.txt)"
+      - value: "trust.txt_datatrainingallowed"
+        label: "trust.txt datatrainingallowed field (/.well-known/trust.txt)"
+    map_to: data_governance.opt_out_compliance.signals_checked
+    
+  - id: opt_out_implementation_date
+    text: "Since when have you respected opt-out signals? (YYYY-MM-DD)"
+    type: date
+    required_if: respects_opt_out_signals == true
+    validate:
+      regex: "${defaults.date_regex}"
+    map_to: data_governance.opt_out_compliance.implementation_date
+    
+  # ILLEGAL CONTENT HANDLING (MANDATORY FOR ALL GPAI)
+  - id: illegal_content_removal
+    text: "How do you handle removal of illegal content?"
+    type: textarea
+    required_for_gpai: true
+    required: true
+    help: |
+      Required by EU template - describe your approach to identifying
+      and removing illegal content from training data.
+    map_to: data_governance.illegal_content_handling.removal_method
+    
+  - id: illegal_content_detection
+    text: "How do you detect illegal content?"
+    type: textarea
+    required_for_gpai: true
+    required: true
+    help: "Describe detection methods (automated filters, manual review, third-party services, etc.)"
+    map_to: data_governance.illegal_content_handling.detection_approach
+    
+  # PII HANDLING (conditional on detection)
+  - id: pii_detection_methods
+    text: "PII detection methods used"
+    type: multiselect
+    required_if: analyzer.pii_detected == true
+    options: ["Regex patterns", "NER models", "Manual review", "Third-party service", "Other"]
+    autofill_from: analyzer.pii_detection_methods
+    map_to: data_governance.pii_handling.detection_methods
+    
+  - id: pii_mitigation
+    text: "PII mitigation approaches"
+    type: multiselect
+    required_if: analyzer.pii_detected == true
+    options: ["Removed", "Masked", "Anonymized", "Pseudonymized", "Consent obtained"]
+    map_to: data_governance.pii_handling.mitigation_approaches
+
+# Additional fields for model cards (optional but recommended)
+model_card:
+  - id: intended_uses
+    text: "Primary intended uses of the model"
+    type: textarea
+    required: false
+    map_to: model_card.intended_use.primary_uses
+    
+  - id: out_of_scope_uses
+    text: "Out-of-scope or discouraged uses"
+    type: textarea
+    required: false
+    map_to: model_card.intended_use.out_of_scope
+    
+  - id: evaluation_metrics
+    text: "Key evaluation metrics and benchmarks"
+    type: textarea
+    required: false
+    map_to: model_card.evaluation.metrics
+
+# Question selection rules
+selection_rules:
+  # Questions that are ALWAYS asked regardless of confidence
+  always_ask:
+    - provider_type  # GPAI gating - MUST BE FIRST
+    - provider_name
+    - model_name
+    - model_version
+    - release_date
+    - contact_email
+    - lawful_basis
+    - respects_opt_out_signals
+    - illegal_content_removal  # Mandatory for GPAI
+    - illegal_content_detection  # Mandatory for GPAI
+    
+  # Additional mandatory fields for GPAI providers
+  gpai_mandatory:
+    - web_scraped_domains  # If web scraping used
+    - domain_measurement_method
+    - domain_coverage_percentage
+    - crawler_names
+    - crawler_purpose
+    - crawler_behavior
+    - collection_start_date
+    - collection_end_date
+    - user_data_sources  # If user data used
+    - user_data_modalities
+    
+  # Fields that can be skipped if confidence is high
+  confidence_based:
+    - modalities
+    - text_size_range
+    - image_size_range
+    - code_size_range
+    - knowledge_cutoff
+    - source_types
+    - public_datasets_list
+    
+# Validation rules
+validation:
+  email_pattern: '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+  date_pattern: '^\d{4}-\d{2}-\d{2}$'
+  domain_pattern: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]?\.[a-zA-Z]{2,}$'
+  
+# Notes for implementation
+implementation_notes:
+  - "GPAI gating question MUST be asked first to determine template type"
+  - "Top 10% domains calculation must be accurate (full pass, not sampling)"
+  - "All field IDs must map canonically to analyzer outputs"
+  - "Confidence scores required for all autofillable fields"
+  - "Illegal content handling is mandatory for GPAI providers"
+  - "Web scraping details are mandatory if web_scraped is selected"
+  - "Opt-out signals use well-known paths: /.well-known/ai.txt and /.well-known/trust.txt"
