@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Filter</title>
+    <!-- Use tippy.js for tooltips -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+<body>
+    <div class="filters-box" style="display:flex;gap:1rem;align-items:center;padding:1rem 0;">
+      <label for="level-filter" data-tippy-content="Filter by log level">Log Level:</label>
+      <select id="level-filter" onchange="filterLogs()" data-tippy-content="Choose log level">
+        <option value="">All</option>
+        <option value="INFO">Info</option>
+        <option value="WARNING">Warning</option>
+        <option value="ERROR">Error</option>
+        <option value="CRITICAL">Critical</option>
+      </select>
+  
+      <label for="date-filter" data-tippy-content="Filter by date">Date:</label>
+      <input type="date" id="date-filter" onchange="filterLogs()" data-tippy-content="Pick a date" />
+  
+      <label for="search-filter" data-tippy-content="Search logs">Search:</label>
+      <input type="text" id="search-filter" placeholder="Search logs..." oninput="filterLogs()" data-tippy-content="Type to search" />
+  
+      <button onclick="resetFilters()" data-tippy-content="Reset all filters">Reset</button>
+    </div>
+    <script>
+    function filterLogs() {
+      // Example: Add your filtering logic here
+      // You can filter logs in the terminal or table based on selected values
+    }
+    function resetFilters() {
+      document.getElementById('level-filter').value = '';
+      document.getElementById('date-filter').value = '';
+      document.getElementById('search-filter').value = '';
+      filterLogs();
+    }
+    window.onload = function() {
+      tippy('[data-tippy-content]');
+    };
+    </script>
+</body>
+</html>
