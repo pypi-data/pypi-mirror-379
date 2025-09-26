@@ -1,0 +1,13 @@
+latex_to_zh/__init__.py,sha256=LdXoNeC-4LaIh_SU1oSIgTjOEpZlGcW3zc_RiXVg2c4,32
+latex_to_zh/g4/Latex.interp,sha256=l_balduUYLmND46KwI4EBJLMFADVJS9d8cu0faDLf2M,39917
+latex_to_zh/g4/Latex.tokens,sha256=yjxh69SxsxEzxHfTKfxcnIiHAOtQLtzzSvdrS1PMSlY,3888
+latex_to_zh/g4/LatexLexer.interp,sha256=sjaOAHfqQ2_0Q6yzjXFtMXkKcFJDVJ8vW9mmsoQoTG4,102481
+latex_to_zh/g4/LatexLexer.py,sha256=2KI4BSufnCxX9_8QsjIjhCIgYrjIhHecxaR1aJH1MHQ,95367
+latex_to_zh/g4/LatexLexer.tokens,sha256=yjxh69SxsxEzxHfTKfxcnIiHAOtQLtzzSvdrS1PMSlY,3888
+latex_to_zh/g4/LatexListener.py,sha256=Cmhuqrda9cp8Jkt0vEC4nFshKOm9bmMOBfdkrmaDOb4,19107
+latex_to_zh/g4/LatexParser.py,sha256=DkIRJs2NTx7m79hsB3dlB5qChEOGJavjMEzvJd1AZpE,265356
+latex_to_zh/g4/LatexVisitor.py,sha256=7VaqvuLJm6g0EuOTdggcrBcCVyPEgubDif-cveyuUZ0,11504
+latex_to_zh/latex_to_zh.py,sha256=_3AqZqh1IfdSxv6MaC0sskhSwvdCtbUccHOLdxWghgI,5624
+latex_to_zh-0.1.0.dist-info/METADATA,sha256=PkNUXnHcz9DY3gcJtiOVLoQO2HSd7Diz49Hrzcd2LNs,868
+latex_to_zh-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+latex_to_zh-0.1.0.dist-info/RECORD,,
