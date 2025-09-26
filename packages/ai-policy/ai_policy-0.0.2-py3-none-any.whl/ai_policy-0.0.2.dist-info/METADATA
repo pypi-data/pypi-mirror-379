@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ai-policy
+Version: 0.0.2
+Summary: Primitives for documenting and linting AI policy statements.
+Author: White Circle
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# ai-policy
+
+Primitives for documenting and linting AI policy statements for apps and services.
+
+
