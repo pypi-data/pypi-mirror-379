@@ -1,0 +1,15 @@
+# 包含额外的文件到Python包中
+include README.md
+include LICENSE
+include requirements.txt
+include doc/*.md
+include rule/*.md
+include harmony/*.ts
+include src/config/*.py
+include *.sh
+recursive-include src *.py
+recursive-include *.md
+recursive-include *.sh
+recursive-include *.ts
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
