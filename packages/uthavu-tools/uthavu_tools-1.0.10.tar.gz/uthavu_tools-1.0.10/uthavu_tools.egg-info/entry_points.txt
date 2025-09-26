@@ -1,0 +1,8 @@
+[console_scripts]
+checkbranch = uthavu_tools.git_tools.checkbranch:main
+checkin = uthavu_tools.git_tools.checkin:main
+cleanup = uthavu_tools.git_tools.cleanup:main
+deploymain = uthavu_tools.git_tools.deploymain:main
+pushmain = uthavu_tools.git_tools.pushmain:main
+release = uthavu_tools.git_tools.release:main
+ut = uthavu_tools.listtools:main
