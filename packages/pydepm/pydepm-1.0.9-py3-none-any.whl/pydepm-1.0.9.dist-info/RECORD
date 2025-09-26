@@ -1,0 +1,14 @@
+pydepm/__init__.py,sha256=Da84qhcrPveP7FV419vmge8Sj4QwI6f0adRjokJdeJc,311
+pydepm/__main__.py,sha256=Qd-f8z2Q2vpiEP2x6PBFsJrpACWDVxFKQk820MhFmHo,59
+pydepm/cli.py,sha256=b6MFekvxYczNexSgx6_5ohi0DpCTg7ZHufxNkNwX_c0,45542
+pydepm/config.py,sha256=caNxIW9tkqcjuVSMAKPksxHudM7Ae-3Qd2pH6IV_Qew,17520
+pydepm/installer.py,sha256=aNiilUvkOJViEQXPaw1ZU1kqFAbGMUGDrDf_39Rfy_0,22373
+pydepm/pydepx.py,sha256=eIeNcTtY8erCRD80apB9UrdOr8jthXGmTgvOZKg-WkE,14431
+pydepm/utils.py,sha256=_-ODyTis6gu6vZ4qsGG3p-m9POfS9oA5pICTDSQ123c,3732
+pydepm/validation.py,sha256=JYJRpZ1mF8sMxMZnsC3AqY88GCS5BEE7fiar11cCA8g,1848
+pydepm-1.0.9.dist-info/licenses/LICENSE,sha256=m8UYl-HrV1vKrWP59GX2xOSgSOa-FNSsYv6KqxDWP2I,1064
+pydepm-1.0.9.dist-info/METADATA,sha256=KyH4IFPR2UOJsynITeRrzJpqkft8Nz-lUemahN0MwHs,9622
+pydepm-1.0.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pydepm-1.0.9.dist-info/entry_points.txt,sha256=IdpAqfYFylI63D9KKiDmuacU9DQkCM5g1uktLtn6cSI,69
+pydepm-1.0.9.dist-info/top_level.txt,sha256=IpXg9OV5pGqU7BR4cu9vKAmYHC8_w-cHrt921tMsIa8,7
+pydepm-1.0.9.dist-info/RECORD,,
