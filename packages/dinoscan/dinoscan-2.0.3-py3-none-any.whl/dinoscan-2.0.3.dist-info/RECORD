@@ -1,0 +1,10 @@
+dinoscan/__init__.py,sha256=Nj5b1NGiNa8tX6k6_WeZYWUJji8wV8uxWFo84Ux0wb8,461
+dinoscan/__main__.py,sha256=0P-eh4zywDqqVrxF9AG4M19_rX39L0h7no8zZCeOseg,157
+dinoscan/analyzers.py,sha256=iPQXK0-a_c-kgREIqksXiintj5OPP5UN35eP5uu_Nto,17213
+dinoscan/cli.py,sha256=YrbmPg2l1lp2F1R3Rtj40XxB6ur5balsD-FLXWU8tQI,3019
+dinoscan/core.py,sha256=6yMFiI9mH_SXj-L6OQlDSwwWexbkmE_6nj3TkOygh3E,3334
+dinoscan-2.0.3.dist-info/METADATA,sha256=G_0JMndPlk53InvwrtvQ8wM0Xrj1YXqni8xLtz8mlRI,9941
+dinoscan-2.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dinoscan-2.0.3.dist-info/entry_points.txt,sha256=hc_MBeT_n2wjNciVQgwqEMrttBmMtaZEDiOst3q7IYk,47
+dinoscan-2.0.3.dist-info/top_level.txt,sha256=js7nfs_9PjFLh7Z7QSKBuDIpUC0HTIkrND8OiUV0ChU,9
+dinoscan-2.0.3.dist-info/RECORD,,
