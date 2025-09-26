@@ -1,0 +1,2 @@
+[console_scripts]
+fgclip-mcp = fgclip_mcp:main

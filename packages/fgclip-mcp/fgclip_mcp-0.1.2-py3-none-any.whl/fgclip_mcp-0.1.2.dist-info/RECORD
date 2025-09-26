@@ -1,0 +1,14 @@
+fgclip_mcp/__init__.py,sha256=dqbyjbsJGtxSPaBKYSyC6z4hFjeFBIEEwR-1P1O8eLo,551
+fgclip_mcp/__main__.py,sha256=CkkciCTafOzmYNaMnaHu1rfsaPgeyZSSgguzZEbpVHA,34
+fgclip_mcp/config.py,sha256=ZX-vIbpBAjsVhLaSgxB8fekcZZeDsErB1we6taS2PkM,3018
+fgclip_mcp/embedding_client.py,sha256=J_7vLWUxtQ6JgSA0_Yws_rUcaWDVB43Uefa03bPJCqU,2706
+fgclip_mcp/embedding_storage.py,sha256=54gJDgNTzW5RTFWrIRgqREnzn-CvX963UTl0emp-KzY,10075
+fgclip_mcp/exceptions.py,sha256=anzK9VpgXBRLDF7lkty7Og2jjMOZnQXRGrR1jHBgwp4,820
+fgclip_mcp/logging_config.py,sha256=J5_DO9I0TudimD1BWL9Ole7MqILR-iJ9jrE-RNOjCqk,1384
+fgclip_mcp/server.py,sha256=NjbVtDWeBKwtbXJarG1ewoPTl3dZa1bkAG2GLBYdqEc,4862
+fgclip_mcp/tools.py,sha256=sjpza7TfyhZNwXiI6siJEXl4V1yIAK_SpGvFpBAqYE8,12548
+fgclip_mcp-0.1.2.dist-info/METADATA,sha256=yzymz7pDca965-cr1-0ISGT3PRnNIW-91yT2cPN5pRM,4574
+fgclip_mcp-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fgclip_mcp-0.1.2.dist-info/entry_points.txt,sha256=rOIyH9qt4qhUNwUfrECfyrLQGB1zDyKBjVK4Ykwwewg,47
+fgclip_mcp-0.1.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fgclip_mcp-0.1.2.dist-info/RECORD,,
