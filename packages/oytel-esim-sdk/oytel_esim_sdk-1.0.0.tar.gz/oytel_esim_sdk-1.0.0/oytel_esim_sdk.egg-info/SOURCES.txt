@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+oytel/__init__.py
+oytel/client.py
+oytel/exceptions.py
+oytel/types.py
+oytel_esim_sdk.egg-info/PKG-INFO
+oytel_esim_sdk.egg-info/SOURCES.txt
+oytel_esim_sdk.egg-info/dependency_links.txt
+oytel_esim_sdk.egg-info/requires.txt
+oytel_esim_sdk.egg-info/top_level.txt
