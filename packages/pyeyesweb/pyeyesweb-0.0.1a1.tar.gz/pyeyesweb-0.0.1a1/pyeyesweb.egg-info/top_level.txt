@@ -1,0 +1,6 @@
+demos
+dist
+docs
+examples
+pyeyesweb
+resources
