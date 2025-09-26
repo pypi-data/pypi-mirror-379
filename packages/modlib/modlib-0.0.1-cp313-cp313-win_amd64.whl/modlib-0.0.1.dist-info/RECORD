@@ -1,0 +1,11 @@
+modlib-0.0.1.dist-info/METADATA,sha256=slc7HBqd9HIw59P-CTgs_3Gwhc08FfWlzbSc10xWHfQ,174
+modlib-0.0.1.dist-info/WHEEL,sha256=suq8ARrxbiI7iLH3BgK-82uzxQ-4Hm-m8w01oCokrtA,85
+modlib/fibonacci_cy.cp313-win_amd64.pyd,sha256=CaHG8tHr_AZ4L_RNuqOBssAhMeBCNadc66OFMPWszKI,89301
+modlib/fibonacci_cy.cp313-win_amd64.dll.a,sha256=FJ-A2JI148X-Jsd8k6TuTxD3ssK4iB0aGYBEA2sIx44,1800
+modlib/fibonacci_cpp.cp313-win_amd64.pyd,sha256=t62TQSruVv1lJZA5Bwdrg8RRnuwPUuxX-HNNiYtP-m4,48173
+modlib/fibonacci_cpp.cp313-win_amd64.dll.a,sha256=_hb1TRPsEXyCBHTcd2LnHxqq-3d8OKLRuTHSSWFXyZ4,1812
+modlib/__init__.py,sha256=R-xcjMWufWef-cv0Rnd0Qj0X7gfzEW52pKNoPOqE6W8,239
+modlib/fibonacci_cpp.cpp,sha256=KwsujH8Fm-tf2GpeK67_rxScdZD3ukzsX11Xa2VdvHg,797
+modlib/fibonacci_cy.pyx,sha256=pD6d9dad4BrFpHKHRz6X3mSwCSaDL-ezxf0NunTrnDQ,163
+modlib/fibonacci_py.py,sha256=wAaTPBlK_aQh7XqzDjcK4QsPXew3JxUaGDUtTfoF370,159
+modlib-0.0.1.dist-info/RECORD,,
