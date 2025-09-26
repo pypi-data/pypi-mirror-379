@@ -1,0 +1,13 @@
+hrcomparison/__about__.py,sha256=B2srA87ezB3Vc9sSJzdeZRKtyzNN0ly1hhaEsTAHXFo,67
+hrcomparison/__init__.py,sha256=-zkvKK7kr-3dJejtJLNVmcYt1ncSN1NlrHHtIqVK0Vc,144
+hrcomparison/activity_parser.py,sha256=pKHsF9c3lBDidZSQNaC0aVa48LPxAd3s-2YhEKwGs4o,559
+hrcomparison/base.py,sha256=_XEsyAZvtPOz8AcX9gQ-J1saKW1ZUW5A3m8qDcosECw,2166
+hrcomparison/chart.py,sha256=ZRGUT4C_wjkoR_iX3XNrPBpRVYFlq4N2TPNl92Jkkyk,3328
+hrcomparison/fit.py,sha256=x7ggGy6b4ch6RkgbgZJ2wC58YcNE-H9c2ntk0RuxfIQ,3722
+hrcomparison/gpx.py,sha256=wyy2xeJ9FgTWyrKvPGjUnNDWkmbOPXi94bSv32igibw,3659
+hrcomparison/tcx.py,sha256=Qi75wd6mWBNcI3Nly-f7OfpRnLYCkHEm70eglzsT4Bo,2956
+hrcomparison-0.1.0.dist-info/METADATA,sha256=Esuba-h5M26aLfSN4545vkyHqdlbR_-pOxIHBbmfbsc,4716
+hrcomparison-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hrcomparison-0.1.0.dist-info/entry_points.txt,sha256=YNPWeBL7cgvgsYWY9kCIkOY1X7op0C0BWwqWULD5IwM,66
+hrcomparison-0.1.0.dist-info/licenses/LICENSE.txt,sha256=u00xwANoGKWtsLHVZdLA0xh0i69grBcItX29x45oWrU,1092
+hrcomparison-0.1.0.dist-info/RECORD,,
