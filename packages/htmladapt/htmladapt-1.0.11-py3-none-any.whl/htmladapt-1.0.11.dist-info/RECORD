@@ -1,0 +1,13 @@
+htmladapt/__init__.py,sha256=ZPTTWdHApcZAFZ1618ulVyPeiYszDlcq25VpkmnuH3w,537
+htmladapt/__main__.py,sha256=ogIY9qbi8hfV34eCIYqs1aJUF-vdW52r-xWr5PnQ2YY,4043
+htmladapt/__version__.py,sha256=7bIm6TUvCGLdYUM-cPJhMFqr8rvUQzDXIV2eoN8iGYs,706
+htmladapt/config.py,sha256=MusRIFjXZVEtRTj61QpLNrWC8tjGwqbViPM2GBcJ0Kg,848
+htmladapt/id_generation.py,sha256=TMmRPyOmPW459KPX8YEhVW3qLldcEtBpuzwR2KgJT28,3211
+htmladapt/matcher.py,sha256=HVP9XfmuZ_iiRTttMn3x3qub-PoRG43m4tsy87EAQ50,6797
+htmladapt/parser.py,sha256=QT-cwBmLEWAZY6SGFpeQie6jk1eFdAFTInPvbNfqstc,1729
+htmladapt/tool.py,sha256=paKSIy-5EfsRaNClTKKqduSaC3kVJCz3gvo1_XyMSqE,13533
+htmladapt-1.0.11.dist-info/METADATA,sha256=O8gSPPxgQWEW0JdAJt8lrD3zybCekUExuoNbnsjjYo0,15031
+htmladapt-1.0.11.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+htmladapt-1.0.11.dist-info/entry_points.txt,sha256=oXQC0AhTKrEvcMfh5cRrBcmHF7pxtS2df6d5DWY4VQc,54
+htmladapt-1.0.11.dist-info/licenses/LICENSE,sha256=owbwpVdTHiU18mRyRzvr1DDQe_Rjs1FCkEdzMGJIU9U,1069
+htmladapt-1.0.11.dist-info/RECORD,,

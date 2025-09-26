@@ -1,0 +1,527 @@
+Metadata-Version: 2.4
+Name: htmladapt
+Version: 1.0.11
+Summary: Intelligent HTML content extraction and merge tool for bidirectional document transformation
+Project-URL: Documentation, https://github.com/twardoch/htmladapt#readme
+Project-URL: Issues, https://github.com/twardoch/htmladapt/issues
+Project-URL: Source, https://github.com/twardoch/htmladapt
+Author-email: Adam Twardoch <adam+github@twardoch.com>
+License: MIT
+License-File: LICENSE
+Keywords: content-extraction,diff,html,merge,parsing,reconciliation,translation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: fire>=0.4.0
+Requires-Dist: html5lib>=1.1
+Requires-Dist: lxml>=5.0.0
+Requires-Dist: python-levenshtein>=0.20.0
+Requires-Dist: rapidfuzz>=3.0.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: xxhash>=3.0.0
+Requires-Dist: zss>=1.2.0
+Provides-Extra: all
+Requires-Dist: httpx>=0.25.0; extra == 'all'
+Requires-Dist: openai>=1.0.0; extra == 'all'
+Requires-Dist: tenacity>=8.2.0; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: absolufy-imports>=0.3.1; extra == 'dev'
+Requires-Dist: isort>=6.0.1; extra == 'dev'
+Requires-Dist: mypy>=1.15.0; extra == 'dev'
+Requires-Dist: pre-commit>=4.1.0; extra == 'dev'
+Requires-Dist: pyupgrade>=3.19.1; extra == 'dev'
+Requires-Dist: ruff>=0.9.7; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-parser>=3.0.0; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints>=2.0.0; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme>=2.0.0; extra == 'docs'
+Requires-Dist: sphinx>=7.2.6; extra == 'docs'
+Provides-Extra: llm
+Requires-Dist: httpx>=0.25.0; extra == 'llm'
+Requires-Dist: openai>=1.0.0; extra == 'llm'
+Requires-Dist: tenacity>=8.2.0; extra == 'llm'
+Provides-Extra: test
+Requires-Dist: coverage[toml]>=7.6.12; extra == 'test'
+Requires-Dist: pytest-asyncio>=0.25.3; extra == 'test'
+Requires-Dist: pytest-benchmark[histogram]>=5.1.0; extra == 'test'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'test'
+Requires-Dist: pytest-xdist>=3.6.1; extra == 'test'
+Requires-Dist: pytest>=8.3.4; extra == 'test'
+Description-Content-Type: text/markdown
+
+# HTMLAdapt: HTML Content Extraction and Merge Tool
+
+HTMLAdapt is a Python tool for bidirectional HTML document transformation that preserves structural integrity while enabling content modification through an intermediate representation. Useful for translation workflows, content editing, and HTML processing where maintaining original formatting and styling matters.
+
+## Why HTMLAdapt?
+
+When working with complex HTML documents that need translation or content editing, traditional approaches often fail:
+
+- **Manual editing** risks breaking structure and styling
+- **Simple find-replace** can't handle complex markup
+- **Existing tools** lose formatting and hierarchy
+- **Translation tools** often mangle HTML
+
+HTMLAdapt solves these problems with algorithms that understand HTML structure and preserve it through the entire edit-merge cycle.
+
+## How It Works
+
+HTMLAdapt uses a two-phase workflow:
+
+### 1. Extract Phase
+Transforms the original HTML into two representations:
+
+- **Superset Document**: Original HTML with unique IDs added to all text-containing elements
+- **Subset Document**: Simplified version with only translatable content, preserving IDs
+
+```python
+from htmladapt import HTMLExtractMergeTool
+
+tool = HTMLExtractMergeTool()
+map_html, comp_html = tool.extract(original_html)
+```
+
+### 2. Merge Phase
+Recombines edited content with original structure using reconciliation algorithms:
+
+```python
+final_html = tool.merge(
+    edited_comp_html,
+    original_comp_html,
+    map_html,
+    original_html
+)
+```
+
+## Key Features
+
+### Structure Preservation
+Maintains all original HTML structure, CSS classes, JavaScript references, and formatting during content modification.
+
+### Element Matching
+Uses multiple strategies to match content between versions:
+- **Perfect ID matching** for unchanged elements
+- **Hash-based signatures** for content similarity
+- **Fuzzy matching** for modified text
+- **LLM integration** for ambiguous cases
+
+### Performance
+Optimized for large documents:
+- lxml parser for speed (2-3x faster than alternatives)
+- O(n) hash-based matching in most cases
+- Memory-efficient processing
+- Configurable performance profiles
+
+### AI Conflict Resolution
+Integrates with Large Language Models to resolve complex matching scenarios that algorithms alone cannot handle.
+
+### Error Handling
+Handles malformed HTML, deeply nested structures, and edge cases gracefully with fallback mechanisms.
+
+## Installation
+
+```bash
+pip install htmladapt
+```
+
+Or with LLM support:
+
+```bash
+pip install htmladapt[llm]
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+from htmladapt import HTMLExtractMergeTool
+
+# Initialize the tool
+tool = HTMLExtractMergeTool(id_prefix="trans_")
+
+# Step 1: Extract content
+original_html = open('document.html', 'r').read()
+map_html, comp_html = tool.extract(original_html)
+
+# Step 2: Edit the subset
+cnew_path = comp_html.replace('Hello', 'Hola').replace('World', 'Mundo')
+
+# Step 3: Merge back
+final_html = tool.merge(
+    cnew_path,      # Edited content
+    comp_html,        # Original subset for comparison
+    map_html,      # Enhanced original with IDs
+    original_html       # Original document
+)
+
+# Save result
+with open('translated_document.html', 'w') as f:
+    f.write(final_html)
+```
+
+### Advanced Configuration
+
+```python
+from htmladapt import HTMLExtractMergeTool, ProcessingConfig
+
+# Custom configuration
+config = ProcessingConfig(
+    id_prefix="my_prefix_",
+    simi_level=0.8,
+    llm_use=True,
+    model_llm="gpt-4o-mini",
+    perf="accurate"  # fast|balanced|accurate
+)
+
+tool = HTMLExtractMergeTool(config=config)
+```
+
+### With LLM Integration
+
+```python
+import os
+from htmladapt import HTMLExtractMergeTool, LLMReconciler
+
+# Set up LLM
+llm = LLMReconciler(
+    api_key=os.environ['OPENAI_API_KEY'],
+    model="gpt-4o-mini"
+)
+
+tool = HTMLExtractMergeTool(llm_reconciler=llm)
+
+# Automatic LLM use for ambiguous matches
+final_html = tool.merge(cnew_path, comp_html, map_html, original_html)
+```
+
+## Use Cases
+
+### Website Translation
+Translate content while preserving CSS classes, JavaScript, and design.
+
+```python
+# Extract content
+superset, subset = tool.extract(webpage_html)
+
+# Send to translation service
+translated_subset = translation_service.translate(subset, target_lang='es')
+
+# Merge back with styling intact
+localized_webpage = tool.merge(translated_subset, subset, superset, webpage_html)
+```
+
+### Content Management
+Edit HTML in a simplified interface while maintaining complex structure.
+
+```python
+# Extract for CMS
+_, editable_content = tool.extract(article_html)
+
+# User edits content
+edited_content = cms.edit_interface(editable_content)
+
+# Merge back with layout preserved
+updated_article = tool.merge(edited_content, editable_content, superset, article_html)
+```
+
+### Documentation Maintenance
+Update docs while preserving code highlighting and navigation.
+
+```python
+# Extract text
+superset, docs_text = tool.extract(documentation_html)
+
+# Update content
+updated_text = update_documentation(docs_text)
+
+# Merge with formatting intact
+final_docs = tool.merge(updated_text, docs_text, superset, documentation_html)
+```
+
+## Architecture
+
+HTMLAdapt uses a layered approach:
+
+### Layer 1: HTML Parsing
+- **Primary**: BeautifulSoup with lxml backend
+- **Fallback**: html.parser for malformed HTML
+- **Error Recovery**: Automatic tag closure and structure repair
+
+### Layer 2: ID Generation
+- **Base36 encoding** for compact IDs
+- **Hierarchical numbering** for traceability
+- **Collision detection** and prevention
+
+### Layer 3: Matching Strategies
+1. **Perfect Matching**: Identical ID preservation (fastest)
+2. **Hash Matching**: Content signature comparison (fast)
+3. **Fuzzy Matching**: Similarity scoring with difflib (accurate)
+4. **LLM Matching**: Semantic understanding for edge cases (most accurate)
+
+### Layer 4: Structural Analysis
+- **LCS algorithms** for sequence reordering
+- **Tree diff** algorithms for hierarchical changes
+- **Conflict identification** for manual resolution
+
+### Layer 5: Reconciliation
+- **Three-way merge** logic from version control
+- **Contextual conflict resolution** with minimal LLM calls
+- **Fallback heuristics** for offline operation
+
+## Performance
+
+| Document Size | Processing Time | Memory Usage | Recommended Profile |
+|---------------|----------------|--------------|-------------------|
+| < 1MB         | ~100ms         | 4-8MB        | balanced         |
+| 1-10MB        | ~1-5s          | 20-80MB      | fast             |
+| > 10MB        | ~5-30s         | 100-400MB    | fast             |
+
+## Error Handling
+
+HTMLAdapt handles common issues:
+
+- **Malformed tags**: Automatic closure and repair
+- **Deeply nested structures**: Configurable depth limits
+- **Large documents**: Memory-efficient streaming
+- **Encoding issues**: Automatic detection and conversion
+- **Missing elements**: Fallback matching
+
+## Testing
+
+HTMLAdapt includes comprehensive test suites:
+
+```bash
+# Run all tests
+pytest tests/
+
+# Run with coverage
+pytest --cov=htmladapt tests/
+
+# Performance benchmarks
+pytest tests/benchmarks/
+```
+
+Test categories:
+- **Unit tests** for components
+- **Integration tests** for workflows
+- **Performance tests** with various document sizes
+- **Edge case tests** for malformed HTML
+- **Round-trip tests** for content preservation
+
+## API Reference
+
+### Core Classes
+
+#### `HTMLExtractMergeTool`
+Main interface for extraction and merging.
+
+**Methods:**
+- `extract(html: str) -> Tuple[str, str]`: Create superset and subset
+- `merge(edited: str, subset: str, superset: str, original: str) -> str`: Merge content
+
+#### `ProcessingConfig`
+Configuration object.
+
+**Parameters:**
+- `id_prefix: str`: ID prefix (default: "xhq")
+- `simi_level: float`: Minimum similarity for fuzzy matching (default: 0.7)
+- `llm_use: bool`: Use LLM for conflicts (default: False)
+- `perf: str`: fast|balanced|accurate (default: "balanced")
+
+#### `LLMReconciler`
+LLM conflict resolution interface.
+
+**Parameters:**
+- `api_key: str`: OpenAI API key
+- `model: str`: Model name (default: "gpt-4o-mini")
+- `max_context_tokens: int`: Maximum tokens per request (default: 1000)
+
+### Utility Functions
+
+```python
+from htmladapt.utils import (
+    validate_html,
+    estimate_processing_time,
+    optimize_for_size
+)
+
+# Validate HTML
+is_valid, issues = validate_html(html_content)
+
+# Estimate processing time
+time_estimate, memory_estimate = estimate_processing_time(html_content)
+
+# Optimize large documents
+optimized_html = optimize_for_size(html_content, target_size_mb=5)
+```
+
+## Integration Examples
+
+### Flask Application
+
+```python
+from flask import Flask, request, jsonify
+from htmladapt import HTMLExtractMergeTool
+
+app = Flask(__name__)
+tool = HTMLExtractMergeTool()
+
+@app.route('/extract', methods=['POST'])
+def extract_content():
+    html = request.json['html']
+    superset, subset = tool.extract(html)
+    return jsonify({
+        'superset': superset,
+        'subset': subset
+    })
+
+@app.route('/merge', methods=['POST'])
+def merge_content():
+    data = request.json
+    result = tool.merge(
+        data['edited'],
+        data['subset'],
+        data['superset'],
+        data['original']
+    )
+    return jsonify({'result': result})
+```
+
+### Django Integration
+
+```python
+# models.py
+from django.db import models
+
+class Document(models.Model):
+    original_html = models.TextField()
+    map_html = models.TextField()
+    comp_html = models.TextField()
+
+    def extract_content(self):
+        from htmladapt import HTMLExtractMergeTool
+        tool = HTMLExtractMergeTool()
+        self.m_html, self.c_html = tool.extract(self.original_html)
+        self.save()
+
+    def merge_content(self, cnew_html):
+        from htmladapt import HTMLExtractMergeTool
+        tool = HTMLExtractMergeTool()
+        return tool.merge(
+            cnew_html,
+            self.c_html,
+            self.m_html,
+            self.original_html
+        )
+```
+
+### Celery Processing
+
+```python
+from celery import Celery
+from htmladapt import HTMLExtractMergeTool
+
+app = Celery('htmladapt_tasks')
+tool = HTMLExtractMergeTool()
+
+@app.task
+def process_large_document(html_content, user_id):
+    try:
+        superset, subset = tool.extract(html_content)
+        return {'status': 'success', 'comp_id': store_subset(subset)}
+    except Exception as e:
+        return {'status': 'error', 'message': str(e)}
+
+@app.task
+def merge_edited_content(cnew_html, comp_html, map_html, original_html):
+    result = tool.merge(cnew_html, comp_html, map_html, original_html)
+    return result
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Development Setup
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/htmladapt.git
+cd htmladapt
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install in development mode
+pip install -e ".[dev,test,llm]"
+
+# Run tests
+pytest
+
+# Run type checking
+mypy htmladapt/
+
+# Format code
+black htmladapt/
+ruff check htmladapt/
+```
+
+### Code Structure
+
+```
+htmladapt/
+├── core/
+│   ├── parser.py          # HTML parsing
+│   ├── extractor.py       # Content extraction
+│   ├── matcher.py         # Element matching
+│   └── merger.py          # Content reconciliation
+├── algorithms/
+│   ├── id_generation.py   # ID generation
+│   ├── tree_diff.py       # Tree comparison
+│   └── fuzzy_match.py     # Similarity scoring
+├── llm/
+│   ├── reconciler.py      # LLM integration
+│   └── prompts.py         # Prompt templates
+├── utils/
+│   ├── html_utils.py      # HTML utilities
+│   └── performance.py    # Performance optimization
+└── tests/
+    ├── unit/              # Unit tests
+    ├── integration/       # Integration tests
+    └── benchmarks/        # Performance tests
+```
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file.
+
+## Support
+
+- **Documentation**: [https://htmladapt.readthedocs.io](https://htmladapt.readthedocs.io)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/htmladapt/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/htmladapt/discussions)
+- **Email**: support@htmladapt.dev
+
+## Citation
+
+For academic use:
+
+```bibtex
+@software{htmladapt2024,
+  title={HTMLAdapt: HTML Content Extraction and Merge Tool},
+  author={Your Name},
+  year={2024},
+  url={https://github.com/yourusername/htmladapt}
+}
+```
