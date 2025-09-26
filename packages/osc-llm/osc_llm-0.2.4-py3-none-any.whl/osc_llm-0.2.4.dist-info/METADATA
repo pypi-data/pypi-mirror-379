@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: osc-llm
+Version: 0.2.4
+Summary: 轻量级大模型推理工具,专注于模型推理延迟,注重框架易用性和可拓展性。
+Author-email: wangmengdi <790990241@qq.com>
+Requires-Python: >=3.10
+Requires-Dist: huggingface-hub
+Requires-Dist: jinja2
+Requires-Dist: loguru
+Requires-Dist: modelscope
+Requires-Dist: osc-transformers>=0.2.7
+Requires-Dist: pydantic
+Requires-Dist: sentencepiece
+Requires-Dist: tokenizers
+Provides-Extra: serve
+Requires-Dist: fastapi>=0.110.2; extra == 'serve'
+Requires-Dist: pydantic>=1.10.8; extra == 'serve'
+Requires-Dist: uvicorn[standard]>=0.29.0; extra == 'serve'
+Description-Content-Type: text/markdown
+
+# OSC-LLM
+
+A lightweight LLM inference toolkit focused on minimizing inference latency.
+
+[Chinese README](./readme-zh.md)
+
+## Features
+
+- **CUDA Graph**: Compilation optimizations that reduce inference latency
+- **PagedAttention**: Efficient KV-cache management enabling long-sequence inference
+- **Continuous batching**: Supports dynamic batch inference optimization
+
+## Installation
+
+- Install the [latest PyTorch](https://pytorch.org/)
+- Install [flash-attn](https://github.com/Dao-AILab/flash-attention): recommended to use the official prebuilt wheel to avoid build issues
+- Install osc-llm
+```bash
+pip install osc-llm --upgrade
+```
+
+## Quick Start
+
+
+### Basic Usage
+
+```python
+from osc_llm import LLM, SamplingParams
+
+# Initialize the model
+llm = LLM("checkpoints/Qwen/Qwen3-0.6B", gpu_memory_utilization=0.5, device="cuda:0")
+
+# Chat
+messages = [
+    {"role": "user", "content": "Hello! What's your name?"}
+]
+sampling_params = SamplingParams(temperature=0.5, top_p=0.95, top_k=40)
+result = llm.chat(messages=messages, sampling_params=sampling_params, enable_thinking=True, stream=False)
+print(result)
+
+# Streaming generation
+for token in llm.chat(messages=messages, sampling_params=sampling_params, enable_thinking=True, stream=True):
+    print(token, end="", flush=True)
+```
+
+## Supported Models
+
+- Qwen3ForCausalLM
+- Qwen2ForCausalLM
