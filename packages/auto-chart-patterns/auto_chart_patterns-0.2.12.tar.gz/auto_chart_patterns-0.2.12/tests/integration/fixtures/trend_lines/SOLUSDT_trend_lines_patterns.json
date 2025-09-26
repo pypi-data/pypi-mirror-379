@@ -1,0 +1,576 @@
+[
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-08-24 00:00:00",
+                    "price": 162.3
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-09-06 00:00:00",
+                    "price": 120.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-09-13 00:00:00",
+                    "price": 139.8
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-09-18 00:00:00",
+                    "price": 127.07
+                },
+                "direction": -1
+            }
+        ],
+        "pattern_type": 7,
+        "pattern_name": "Converging Triangle (Bullish)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-08-24 00:00:00",
+                "price": 162.3
+            },
+            "p2": {
+                "time": "2024-09-18 00:00:00",
+                "price": 134.175
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-08-24 00:00:00",
+                "price": 112.34083333333334
+            },
+            "p2": {
+                "time": "2024-09-18 00:00:00",
+                "price": 127.07
+            }
+        },
+        "target_price_delta": 26.200000000000017,
+        "apex": {
+            "time": "2024-09-23 00:00:00",
+            "price": 128.55
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-07-05 00:00:00",
+                    "price": 121.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-07-21 00:00:00",
+                    "price": 185.17
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-07-25 00:00:00",
+                    "price": 165.41999999999996
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-07-29 00:00:00",
+                    "price": 193.98
+                },
+                "direction": 2
+            }
+        ],
+        "pattern_type": 9,
+        "pattern_name": "Rising Wedge (Contracting)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-07-05 00:00:00",
+                "price": 121.0
+            },
+            "p2": {
+                "time": "2024-07-29 00:00:00",
+                "price": 174.30399999999997
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-07-05 00:00:00",
+                "price": 167.54999999999998
+            },
+            "p2": {
+                "time": "2024-07-29 00:00:00",
+                "price": 193.98
+            }
+        },
+        "target_price_delta": 34.0,
+        "apex": {
+            "time": "2024-08-16 00:00:00",
+            "price": 213.8025
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-06-05 00:00:00",
+                    "price": 175.6
+                },
+                "direction": 1
+            },
+            {
+                "point": {
+                    "time": "2024-06-24 00:00:00",
+                    "price": 122.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-07-02 00:00:00",
+                    "price": 155.0
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-07-05 00:00:00",
+                    "price": 121.0
+                },
+                "direction": -2
+            }
+        ],
+        "pattern_type": 10,
+        "pattern_name": "Falling Wedge (Contracting)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-06-05 00:00:00",
+                "price": 175.6
+            },
+            "p2": {
+                "time": "2024-07-05 00:00:00",
+                "price": 152.7111111111111
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-06-05 00:00:00",
+                "price": 123.72727272727273
+            },
+            "p2": {
+                "time": "2024-07-05 00:00:00",
+                "price": 121.0
+            }
+        },
+        "target_price_delta": 14.280000000000001,
+        "apex": {
+            "time": "2024-08-22 00:00:00",
+            "price": 116.0888888888889
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-05-01 00:00:00",
+                    "price": 118.47
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-05-07 00:00:00",
+                    "price": 159.19
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-05-13 00:00:00",
+                    "price": 137.78
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-05-21 00:00:00",
+                    "price": 188.89
+                },
+                "direction": 2
+            }
+        ],
+        "pattern_type": 1,
+        "pattern_name": "Ascending Channel",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-05-01 00:00:00",
+                "price": 118.47
+            },
+            "p2": {
+                "time": "2024-05-21 00:00:00",
+                "price": 150.65333333333334
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-05-01 00:00:00",
+                "price": 146.46142857142857
+            },
+            "p2": {
+                "time": "2024-05-21 00:00:00",
+                "price": 188.89
+            }
+        },
+        "target_price_delta": 27.99142857142857
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-04-23 00:00:00",
+                    "price": 160.0
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-05-01 00:00:00",
+                    "price": 118.47
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-05-07 00:00:00",
+                    "price": 159.19
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-05-13 00:00:00",
+                    "price": 137.78
+                },
+                "direction": -2
+            }
+        ],
+        "pattern_type": 13,
+        "pattern_name": "Ascending Triangle (Contracting)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-04-23 00:00:00",
+                "price": 160.0
+            },
+            "p2": {
+                "time": "2024-05-13 00:00:00",
+                "price": 158.84285714285713
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-04-23 00:00:00",
+                "price": 105.59666666666666
+            },
+            "p2": {
+                "time": "2024-05-13 00:00:00",
+                "price": 137.78
+            }
+        },
+        "target_price_delta": 44.0,
+        "apex": {
+            "time": "2024-05-26 00:00:00",
+            "price": 158.09071428571426
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-04-13 00:00:00",
+                    "price": 116.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-04-23 00:00:00",
+                    "price": 160.0
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-05-01 00:00:00",
+                    "price": 118.47
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-05-07 00:00:00",
+                    "price": 159.19
+                },
+                "direction": 2
+            }
+        ],
+        "pattern_type": 5,
+        "pattern_name": "Ranging Channel (Bearish)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-04-13 00:00:00",
+                "price": 116.0
+            },
+            "p2": {
+                "time": "2024-05-07 00:00:00",
+                "price": 119.29333333333334
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-04-13 00:00:00",
+                "price": 160.57857142857142
+            },
+            "p2": {
+                "time": "2024-05-07 00:00:00",
+                "price": 159.19
+            }
+        },
+        "target_price_delta": 44.57857142857142
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-04-01 00:00:00",
+                    "price": 204.46
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-04-13 00:00:00",
+                    "price": 116.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-04-23 00:00:00",
+                    "price": 160.0
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-05-01 00:00:00",
+                    "price": 118.47
+                },
+                "direction": -2
+            }
+        ],
+        "pattern_type": 7,
+        "pattern_name": "Converging Triangle (Bullish)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-04-01 00:00:00",
+                "price": 204.46
+            },
+            "p2": {
+                "time": "2024-05-01 00:00:00",
+                "price": 143.83272727272725
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-04-01 00:00:00",
+                "price": 114.35333333333334
+            },
+            "p2": {
+                "time": "2024-05-01 00:00:00",
+                "price": 118.47
+            }
+        },
+        "target_price_delta": 42.01000000000002,
+        "apex": {
+            "time": "2024-05-13 00:00:00",
+            "price": 119.58181818181815
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-01-23 00:00:00",
+                    "price": 79.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-01-30 00:00:00",
+                    "price": 106.49
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-02-06 00:00:00",
+                    "price": 92.88
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-02-14 00:00:00",
+                    "price": 118.69
+                },
+                "direction": 2
+            }
+        ],
+        "pattern_type": 1,
+        "pattern_name": "Ascending Channel",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-01-23 00:00:00",
+                "price": 79.0
+            },
+            "p2": {
+                "time": "2024-02-14 00:00:00",
+                "price": 100.81142857142856
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-01-23 00:00:00",
+                "price": 100.79666666666665
+            },
+            "p2": {
+                "time": "2024-02-14 00:00:00",
+                "price": 118.69
+            }
+        },
+        "target_price_delta": 21.796666666666653
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-01-11 00:00:00",
+                    "price": 107.32
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-01-23 00:00:00",
+                    "price": 79.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-01-30 00:00:00",
+                    "price": 106.49
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-02-06 00:00:00",
+                    "price": 92.88
+                },
+                "direction": -2
+            }
+        ],
+        "pattern_type": 13,
+        "pattern_name": "Ascending Triangle (Contracting)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-01-11 00:00:00",
+                "price": 107.32
+            },
+            "p2": {
+                "time": "2024-02-06 00:00:00",
+                "price": 106.18421052631578
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-01-11 00:00:00",
+                "price": 67.10285714285715
+            },
+            "p2": {
+                "time": "2024-02-06 00:00:00",
+                "price": 92.88
+            }
+        },
+        "target_price_delta": 22.319999999999993,
+        "apex": {
+            "time": "2024-02-19 00:00:00",
+            "price": 105.61631578947367
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-01-03 00:00:00",
+                    "price": 85.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-01-11 00:00:00",
+                    "price": 107.32
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-01-23 00:00:00",
+                    "price": 79.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-01-30 00:00:00",
+                    "price": 106.49
+                },
+                "direction": 2
+            }
+        ],
+        "pattern_type": 5,
+        "pattern_name": "Ranging Channel (Bearish)",
+        "trend_line1": {
+            "p1": {
+                "time": "2024-01-03 00:00:00",
+                "price": 85.0
+            },
+            "p2": {
+                "time": "2024-01-30 00:00:00",
+                "price": 76.9
+            }
+        },
+        "trend_line2": {
+            "p1": {
+                "time": "2024-01-03 00:00:00",
+                "price": 107.66947368421052
+            },
+            "p2": {
+                "time": "2024-01-30 00:00:00",
+                "price": 106.49
+            }
+        },
+        "target_price_delta": 22.669473684210516
+    }
+]

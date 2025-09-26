@@ -1,0 +1,169 @@
+[
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-09-16 00:00:00",
+                    "price": 57493.3
+                },
+                "direction": -1
+            },
+            {
+                "point": {
+                    "time": "2024-09-20 00:00:00",
+                    "price": 64133.32
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-09-26 00:00:00",
+                    "price": 62670.0
+                },
+                "direction": -1
+            },
+            {
+                "point": {
+                    "time": "2024-09-27 00:00:00",
+                    "price": 66498.0
+                },
+                "direction": 1
+            },
+            {
+                "point": {
+                    "time": "2024-10-03 00:00:00",
+                    "price": 59828.11
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-10-07 00:00:00",
+                    "price": 64478.19
+                },
+                "direction": 1
+            },
+            {
+                "point": {
+                    "time": "2024-10-10 00:00:00",
+                    "price": 58946.0
+                },
+                "direction": -1
+            }
+        ],
+        "pattern_type": 5,
+        "pattern_name": "Head and Shoulders",
+        "support_line": {
+            "p1": {
+                "time": "2024-09-23 00:00:00",
+                "price": 63887.95285714286
+            },
+            "p2": {
+                "time": "2024-10-10 00:00:00",
+                "price": 56986.22
+            }
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-07-05 00:00:00",
+                    "price": 53485.93
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-07-22 00:00:00",
+                    "price": 68474.55
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-07-25 00:00:00",
+                    "price": 63456.7
+                },
+                "direction": -1
+            },
+            {
+                "point": {
+                    "time": "2024-07-29 00:00:00",
+                    "price": 70079.99
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-08-05 00:00:00",
+                    "price": 49000.0
+                },
+                "direction": -2
+            }
+        ],
+        "pattern_type": 1,
+        "pattern_name": "Double Tops",
+        "support_line": {
+            "p1": {
+                "time": "2024-07-15 00:00:00",
+                "price": 63456.7
+            },
+            "p2": {
+                "time": "2024-08-01 00:00:00",
+                "price": 63456.7
+            }
+        }
+    },
+    {
+        "pivots": [
+            {
+                "point": {
+                    "time": "2024-03-20 00:00:00",
+                    "price": 60775.0
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-03-27 00:00:00",
+                    "price": 71769.54
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-04-03 00:00:00",
+                    "price": 64493.07
+                },
+                "direction": -2
+            },
+            {
+                "point": {
+                    "time": "2024-04-08 00:00:00",
+                    "price": 72797.99
+                },
+                "direction": 2
+            },
+            {
+                "point": {
+                    "time": "2024-04-19 00:00:00",
+                    "price": 59600.01
+                },
+                "direction": -2
+            }
+        ],
+        "pattern_type": 1,
+        "pattern_name": "Double Tops",
+        "support_line": {
+            "p1": {
+                "time": "2024-03-20 00:00:00",
+                "price": 64493.07
+            },
+            "p2": {
+                "time": "2024-04-13 00:00:00",
+                "price": 64493.07
+            }
+        }
+    }
+]
