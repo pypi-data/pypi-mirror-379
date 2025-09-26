@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "physionet-mcp"
+version = "0.0.1"
+description = "Lean BigQuery-only MCP server for PhysioNet datasets"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Rafi Al Attrach", email = "rafiaa@mit.edu" },
+    { name = "Pedro Moreira", email = "pedrojfm@mit.edu" },
+    { name = "Rajna Fani", email = "rajnaf@mit.edu" },
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research", 
+    "Intended Audience :: Healthcare Industry",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11", 
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "fastmcp>=0.1.0",
+    "google-cloud-bigquery>=3.0.0",
+    "db-dtypes>=1.0.0", 
+    "pandas>=2.0.0",
+    "sqlparse>=0.4.0",
+]
+
+[project.scripts]
+physionet-mcp-server = "physionet_mcp.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/rafiattrach/physionet-mcp"
+Repository = "https://github.com/rafiattrach/physionet-mcp"
+Issues = "https://github.com/rafiattrach/physionet-mcp/issues"
