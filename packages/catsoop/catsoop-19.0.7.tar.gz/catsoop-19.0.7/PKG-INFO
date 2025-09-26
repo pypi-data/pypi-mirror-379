@@ -1,0 +1,129 @@
+Metadata-Version: 2.4
+Name: catsoop
+Version: 19.0.7
+Summary: CAT-SOOP is a tool for automatic collection and assessment of online exercises.
+Home-page: https://catsoop.org
+Author: CAT-SOOP Contributors
+Author-email: catsoop-dev@mit.edu
+License: AGPLv3+
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Education
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Description-Content-Type: text/plain
+License-File: LICENSE
+License-File: LICENSE.bundled_software
+License-File: LICENSE.included_software
+Requires-Dist: beautifulsoup4==4.13.5
+Requires-Dist: black==25.9.0
+Requires-Dist: bs4==0.0.2
+Requires-Dist: cffi==2.0.0
+Requires-Dist: cheroot==11.0.0
+Requires-Dist: click==8.3.0
+Requires-Dist: ecdsa==0.19.1
+Requires-Dist: filelock==3.19.1
+Requires-Dist: httplib2==0.31.0
+Requires-Dist: iniconfig==2.1.0
+Requires-Dist: jaraco.functools==4.3.0
+Requires-Dist: ldap3==2.9.1
+Requires-Dist: lxml==6.0.2
+Requires-Dist: mistletoe==1.4.0
+Requires-Dist: more-itertools==10.8.0
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: mypy_extensions==1.1.0
+Requires-Dist: oauth2==1.9.0.post1
+Requires-Dist: oauthlib==3.3.1
+Requires-Dist: packaging==25.0
+Requires-Dist: pathspec==0.12.1
+Requires-Dist: platformdirs==4.4.0
+Requires-Dist: pluggy==1.6.0
+Requires-Dist: ply==3.11
+Requires-Dist: pyasn1==0.6.1
+Requires-Dist: pycparser==2.23
+Requires-Dist: Pygments==2.19.2
+Requires-Dist: PyLTI==0.7.0
+Requires-Dist: PyNaCl==1.6.0
+Requires-Dist: pyparsing==3.2.5
+Requires-Dist: pytest==8.4.2
+Requires-Dist: python-jose==3.5.0
+Requires-Dist: pytokens==0.1.10
+Requires-Dist: rsa==4.9.1
+Requires-Dist: setuptools==80.9.0
+Requires-Dist: six==1.17.0
+Requires-Dist: soupsieve==2.8
+Requires-Dist: typing_extensions==4.15.0
+Requires-Dist: Unidecode==1.4.0
+Requires-Dist: websockets==12.0
+Provides-Extra: server
+Requires-Dist: uwsgi; extra == "server"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+\
+/    /\__/\
+\__=(  o_O )=
+(__________)
+ |_ |_ |_ |_
+
+CAT-SOOP
+
+
+CAT-SOOP is a flexible, programmable learning management system originally
+developed primarily for use in MIT's 6.01 (Introduction to Electrical
+Engineering and Computer Science via Robotics).
+
+CAT-SOOP is Free/Libre Software, available under the terms of the GNU Affero
+General Public License, version 3+. Please note that the terms of this license
+apply to the CAT-SOOP system itself, but not to any course material hosted on a
+CAT-SOOP instance, unless explicitly stated otherwise.
+
+
+CONTACT
+-------
+
+Web Site:
+
+  https://catsoop.org
+
+Mailing Lists:
+
+  catsoop-users@mit.edu, low-volume list for announcements and discussion
+    (subscribe at http://mailman.mit.edu/mailman/listinfo/catsoop-users)
+
+  catsoop-dev@mit.edu for development-related discussion
+    (subscribe at http://mailman.mit.edu/mailman/listinfo/catsoop-dev)
+
+
+INSTALLING
+----------
+
+See https://catsoop.org/website/docs/installing
+
+
+HACKING
+-------
+
+See https://catsoop.org/website/docs/contributing/hacking
+
+
+INCLUDED SOFTWARE
+-----------------
+
+CAT-SOOP incorporates pieces of third-party software.  Licensing information
+for the original programs is available in the LICENSE.included_software file.
+
+The CAT-SOOP distribution also includes several pieces of third-party software.
+Licensing information for these programs is included in this distribution, in
+the LICENSE.bundled_software file.
