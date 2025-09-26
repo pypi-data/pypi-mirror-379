@@ -1,0 +1,2 @@
+[console_scripts]
+imgtoolkit = imgtoolkit.tools:main
