@@ -1,0 +1,373 @@
+# ColorCor- **Flat-Field Correction (FFC)**  
+  Automatically detect or manually crops "white" background image. Fits an n-degree 2D surface to describe the light distribution in the FOV, extrapolates to full image. Includes pre-trained YOLO model for automatic white plane detection.ctionPipeline
+
+A step-wise, end-to-end color‐correction pipeline for digital images.  
+This package combines flat-field correction (**FFC**), gamma correction (**GC**), white-balance (**WB**), and color-correction (**CC**) into a single, easy-to-use workflow. Once you “train” on an image containing a color-checker (and a white-field for FFC), you can apply the learned corrections to any new image (no chart required, as long as it was captured with the same camera, and in the same lighting conditions).
+
+This package builds upon a previous package [ML_ColorCorrection_tool](https://github.com/collinswakholi/ML_ColorCorrection_tool) package.
+
+---
+## Features
+
+- **Flat-Field Correction (FFC)**  
+  Automatically detect or manually crops “white” background image. Fits an n-degree 2D surface to describe the light distribution in the FOV, extrapolates to full image.
+
+- **Saturation Check / Extrapolation**  
+  Identify and fix saturated patches on the chart before proceeding, ensuring accurate downstream corrections.
+
+- **Gamma Correction (GC)**  
+  Fits an optimum polynomial (up to configurable degree) mapping between measured neutral patch intensities and reference values, and applies it to the entire image.
+
+- **White Balance (WB)**  
+  Diagonal white-balance correction using the neutral patches of the color checker. Gets diagonal matrix and applies it to the entire image.
+
+- **Color Correction (CC)**  
+  Two methods:
+  - **Conventional (“conv”)**: configurable polynomial expansion with the Finlayson 2015 method, produces a 3xn matrix that can be applied to the entire image.
+  - **Custom (“ours”)**: uses ML with linear regression, pls regression, or neural networks, produces a model that can be applied to the entire image.
+
+- **Predict on New Images**  
+  Once models are saved, apply FFC → GC → WB → CC in sequence to any new photograph, no chart needed.
+
+---
+## Package Structure
+
+The ColorCorrectionPipeline package includes the following key components:
+
+```
+ColorCorrectionPipeline/
+├── ccp.py                    # Main ColorCorrection class
+├── key_functions.py          # Utility functions
+├── models.py                 # Model definitions
+├── quick_run.py              # Example usage script
+├── Configs/                  # Configuration files
+│   ├── __init__.py
+│   └── configs.py
+├── FFC/                      # Flat-Field Correction module
+│   ├── __init__.py
+│   ├── FF_correction.py
+│   └── Models/               # Pre-trained models (included in package)
+│       ├── __init__.py
+│       └── plane_det_model_YOLO_512_n.pt  # YOLO model for automatic white plane detection
+└── utils/                    # Utility modules
+    ├── __init__.py
+    ├── logger_.py
+    └── metrics_.py
+```
+
+**Note**: The YOLO model (`plane_det_model_YOLO_512_n.pt`) is automatically included when you install the package, so you don't need to download or specify the model path separately.
+
+---
+## Installation
+
+### Quick Start (Recommended)
+
+Install directly from PyPI:
+```bash
+pip install ColorCorrectionPipeline
+```
+
+### Development Installation
+
+For the latest features or development:
+```bash
+# Clone the repository
+git clone https://github.com/collinswakholi/ColorCorrectionPackage.git
+cd ColorCorrectionPackage
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Requirements
+
+- **Python**: 3.8 or higher
+- **Operating System**: Windows, macOS, Linux
+- **Memory**: Minimum 4GB RAM (8GB recommended for large images)
+- **GPU**: Optional (CUDA-compatible GPU for accelerated processing)
+
+### Dependencies
+
+The package automatically installs the following dependencies:
+
+**Core Dependencies:**
+- `numpy` - Numerical computing
+- `scipy` - Scientific computing
+- `scikit-learn` - Machine learning algorithms
+- `opencv-python`, `opencv-contrib-python` - Computer vision
+- `torch` - Deep learning framework
+- `ultralytics` - YOLO object detection
+
+**Image Processing:**
+- `scikit-image` - Image processing algorithms
+- `colour-science` - Color science computations
+- `colour-checker-detection` - Color checker detection
+
+**Visualization & Analysis:**
+- `matplotlib`, `plotly`, `seaborn` - Plotting and visualization
+- `pandas` - Data manipulation
+- `statsmodels` - Statistical modeling
+
+**Development & Testing:**
+- `pytest` - Testing framework
+
+### Verification
+
+Verify your installation:
+```python
+import ColorCorrectionPipeline
+from ColorCorrectionPipeline.ccp import ColorCorrection
+```
+
+---
+## Usage
+Below is a simple example of how to use the package (found in `ColorCorrectionPipeline/quick_run.py`):
+```python
+import os
+import cv2
+import numpy as np
+import pandas as pd
+
+from ColorCorrectionPipeline.ccp import ColorCorrection
+from ColorCorrectionPipeline.Configs.configs import Config
+from ColorCorrectionPipeline.key_functions import to_float64
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1. File paths
+# ─────────────────────────────────────────────────────────────────────────────
+IMG_PATH         = "Data/Images/Sample_1.JPG"        # Image containing color checker
+WHITE_PATH       = "Data/Images/white.JPG"           # Optional White background image for FFC
+TEST_IMAGE_PATH  = "Data/Images/Image_1.JPG"         # Optional New image for prediction
+
+# Output directory (only used if config.save=True)
+SAVE_PATH = os.path.join(os.getcwd(), "results")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2. Load images and convert to RGB float64 in [0,1]
+# ─────────────────────────────────────────────────────────────────────────────
+img_bgr   = cv2.imread(IMG_PATH)
+img_rgb   = to_float64(img_bgr[:, :, ::-1])# convert to RGB (64bit floats, 0-1, RGB)
+
+white_bgr = cv2.imread(WHITE_PATH)
+
+test_bgr  = cv2.imread(TEST_IMAGE_PATH)
+test_rgb  = to_float64(test_bgr[:, :, ::-1])# convert to RGB (64bit floats, 0-1, RGB)
+
+img_name = os.path.splitext(os.path.basename(IMG_PATH))[0]
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 3. Configure per‐stage parameters
+# ─────────────────────────────────────────────────────────────────────────────
+
+ffc_kwargs = {
+    "manual_crop": False, # Optional, for manual white plane ROI selection
+    "show": False, # Whether to show intermediate plots
+    "bins": 50, # Number of bins used for sampling the intesity profile of the white plane
+    "smooth_window": 5, # Window size for smoothing the intensity profile
+    "get_deltaE": True, # Whether to calculate and return deltaE (CIEDE2000)
+    "fit_method": "pls", # can be linear, nn, pls, or svm, default is linear
+    "interactions": True, # Whether to include interactions in the polynomial expansion
+    "max_iter": 1000, # Maximum number of iterations
+    "tol": 1e-8, # Tolerance for stopping criterion
+    "verbose": False, # Whether to print verbose output
+    "random_seed": 0, # Random seed
+}
+
+# Gamma Correction (GC) kwargs:
+gc_kwargs = {
+    "max_degree": 5, # Maximum polynomial degree for fitting gamma profile
+    "show": False, # Whether to show intermediate plots
+    "get_deltaE": True, # Whether to calculate and return deltaE (CIEDE2000)
+}
+
+# White Balance (WB) kwargs:
+wb_kwargs = {
+    "show": False, # Whether to show intermediate plots
+    "get_deltaE": True, # Whether to calculate and return deltaE (CIEDE2000)
+}
+
+# Color Correction (CC) kwargs:
+cc_kwargs = {
+    'cc_method': 'ours', # method to use for color correction
+    'method': 'Finlayson 2015', # if cc_method is 'conv', this is the method
+    'mtd': 'nn', # if cc_method is 'ours', this is the method, linear, nn, pls
+
+    'degree': 2, # degree of polynomial to fit
+    'max_iterations': 10000, # max iterations for fitting
+    'random_state': 0, # random seed
+    'tol': 1e-8, # tolerance for fitting
+    'verbose': False, # whether to print verbose output
+    'param_search': False, # whether to use parameter search
+    'show': False, # whether to show plots
+    'get_deltaE': True, # whether to compute deltaE
+    'n_samples': 50, # number of samples to use for parameter search
+
+    # only if mtd == 'pls'
+    'ncomp': 1, # number of components to use
+
+    # only if mtd == 'nn'
+    'nlayers': 100, # number of layers to use
+    'hidden_layers': [64, 32, 16], # hidden layers for neural network
+    'learning_rate': 0.001, # learning rate for neural network
+    'batch_size': 16, # batch size for neural network
+    'patience': 10, # patience for early stopping
+    'dropout_rate': 0.2, # dropout rate for neural network
+    'optim_type': 'adam', # optimizer type for neural network
+    'use_batch_norm': True, # whether to use batch normalization
+}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 4. Build Config and run the Training Pipeline
+# ─────────────────────────────────────────────────────────────────────────────
+config = Config(
+    do_ffc=True, # Change to False if you don't want to run FFC
+    do_gc=True, # Change to False if you don't want to run GC
+    do_wb=True, # Change to False if you don't want to run WB
+    do_cc=True, # Change to False if you don't want to run CC
+    save=False,            # Change to True if you want to save models + CSVs
+    save_path=SAVE_PATH,   # Directory for saving outputs (models & CSV)
+    check_saturation=True, # Change to False if you don't want to check if color chart patches are saturated
+    REF_ILLUMINANT=None,   # Defaults to D65; supply np.ndarray if needed
+    FFC_kwargs=ffc_kwargs,
+    GC_kwargs=gc_kwargs,
+    WB_kwargs=wb_kwargs,
+    CC_kwargs=cc_kwargs,
+)
+
+cc = ColorCorrection() # Initialize ColorCorrection class
+metrics, corrected_imgs, errors = cc.run(
+    Image=img_rgb,
+    White_Image=white_bgr, # Optional, you do have to pass anything
+    name_=img_name,
+    config=config,
+)
+
+# Convert metrics (dict) → pandas.DataFrame for display
+metrics_df = pd.DataFrame.from_dict(metrics)
+print("Per-patch and summary metrics for each stage:\n", metrics_df.head())
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 5. Predict on a New Image (no color-checker required)
+# ─────────────────────────────────────────────────────────────────────────────
+test_results = cc.predict_image(test_rgb, show=True)
+```
+
+### Assuming you have;
+1. A photograph with a color checker chart: `Data/Images/Sample_1.JPG`, 
+2. An optional matching white-field image (for FFC): `Data/Images/white.JPG`,
+3. The YOLO model for detecting the white plane is now automatically included in the package: `ColorCorrectionPipeline/FFC/Models/plane_det_model_YOLO_512_n.pt`
+4. Another optional image (no chart required) to test the learned corrections: `Data/Images/Image_1.JPG`
+
+## Sample Results
+Before color correction:
+![Before](ReadMe_Images/before.svg)
+
+Same images after color correction:
+![After](ReadMe_Images/After.svg)
+
+## Contributing
+
+We welcome contributions! Please see our contributing guidelines below:
+
+### Development Setup
+
+1. **Fork and Clone**
+   ```bash
+   git clone https://github.com/your-username/ColorCorrectionPackage.git
+   cd ColorCorrectionPackage
+   ```
+
+2. **Create Development Environment**
+   ```bash
+   # Create virtual environment
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   
+   # Install in development mode with dev dependencies
+   pip install -e ".[dev]"
+   ```
+
+3. **Run Tests**
+   ```bash
+   pytest tests/
+   ```
+
+4. **Code Style**
+   ```bash
+   # Format code
+   black .
+   
+   # Check style
+   flake8 .
+   ```
+
+### Submitting Changes
+
+1. Create a feature branch: `git checkout -b feature/amazing-feature`
+2. Make your changes and add tests
+3. Ensure tests pass: `pytest`
+4. Format code: `black .`
+5. Commit changes: `git commit -m 'Add amazing feature'`
+6. Push to branch: `git push origin feature/amazing-feature`
+7. Submit a Pull Request
+
+### Reporting Issues
+
+Please use the [GitHub issue tracker](https://github.com/collinswakholi/ColorCorrectionPackage/issues) to report bugs or request features.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Citation
+
+If you use this package in your research, please cite:
+
+```bibtex
+@software{colorcorrectionpipeline,
+  author = {Wakholi, Collins and Rippner, Devin A.},
+  title = {ColorCorrectionPipeline: A stepwise color‐correction pipeline},
+  url = {https://github.com/collinswakholi/ColorCorrectionPackage},
+  version = {1.2.0},
+  year = {2025}
+}
+```
+
+## References
+
+A detailed study that led to this package can be found at: [Awaiting Publication](https://www.yet_to_publish.com).
+
+**Key packages used:**
+- [Colour-science](https://colour-science.org) - Color science computations
+- [scikit-learn](https://scikit-learn.org) - Machine learning algorithms  
+- [OpenCV](https://pypi.org/project/opencv-python/) - Computer vision library
+- [PyTorch](https://pytorch.org) - Deep learning framework
+- [Ultralytics YOLO](https://ultralytics.com) - Object detection
+
+## Authors & Contributors
+
+- **[Collins Wakholi](https://github.com/collinswakholi)** - Primary author and maintainer
+- **[Devin A. Rippner](https://github.com/daripp)** - Co-author and contributor
+
+## Acknowledgements
+
+We would like to gratefully acknowledge:
+- **[Devin A. Rippner](https://github.com/daripp)** for invaluable technical guidance
+- **[ORISE](https://orise.orau.gov/index.html)** for fellowship support
+- **[USDA-ARS](https://www.ars.usda.gov)** for funding and research opportunities
+
+This project would not have been possible without their support and collaboration.
+
+## Release History
+
+- **v1.2.0** - Enhanced packaging, automatic YOLO model inclusion, improved documentation
+- **v1.1.x** - Bug fixes and performance improvements  
+- **v1.0.x** - Initial release with core color correction pipeline
+
+---
+
+<p align="center">
+  <strong>🎨 Happy Color Correcting! 🎨</strong>
+</p>
