@@ -1,0 +1,2 @@
+[console_scripts]
+xo-alzaka-reem = xo_alzaka_reem.gui:main
