@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+tstructs/__init__.py
+tstructs/cell.py
+tstructs/chunkedregion.py
+tstructs/coord.py
+tstructs/group.py
+tstructs/properties.py
+tstructs/region.py
+tstructs.egg-info/PKG-INFO
+tstructs.egg-info/SOURCES.txt
+tstructs.egg-info/dependency_links.txt
+tstructs.egg-info/top_level.txt
