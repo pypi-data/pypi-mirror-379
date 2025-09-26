@@ -1,0 +1,8 @@
+pyproject.toml
+setup.cfg
+userpathsfinder/__init__.py
+userpathsfinder/paths.py
+userpathsfinder.egg-info/PKG-INFO
+userpathsfinder.egg-info/SOURCES.txt
+userpathsfinder.egg-info/dependency_links.txt
+userpathsfinder.egg-info/top_level.txt
