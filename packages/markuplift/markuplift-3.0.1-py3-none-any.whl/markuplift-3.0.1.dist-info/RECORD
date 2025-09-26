@@ -1,0 +1,15 @@
+markuplift/__init__.py,sha256=jrQG8P1xdWQJUQg6fKE1nkvsmDl2lGEyBA2gyBDMjAc,2555
+markuplift/__main__.py,sha256=_98ISwaR8t7_OF37s_uEN0I4wjp24YVB2sC2YiY4p2U,182
+markuplift/annotation.py,sha256=XnxFCs1e1VYYnMmDuxhAT2xWI2fR56MpxPvteCp-eB0,18073
+markuplift/cli.py,sha256=YtCT6__SmSgbU9hfO2FHzLY-eawJyj2e-DYERxhq2bs,6839
+markuplift/document_formatter.py,sha256=Ob2Fg0K2MYpaGjl5yn0rwTxdNUvCW1yvzzMA_UYDbcE,17642
+markuplift/formatter.py,sha256=7esxAESvF3rLj2UzUVaBue39fCX7RzYv-_BiTKD8yIs,10927
+markuplift/predicates.py,sha256=vXUY5gI9Iij0zIWQbKqltDOH7fdscuXaak2HiZB9Hyo,20225
+markuplift/types.py,sha256=qmu6QGnrdg0jT5A988uO_uIwOa3TxRFSTTh76kJbT0A,1235
+markuplift/utilities.py,sha256=eNpVx7-f8COl6MXX4zTJ2KQWtWPzA2TSKntolIDqzSA,5326
+markuplift-3.0.1.dist-info/licenses/LICENSE,sha256=mGovZa-Obf_smAJFTtSkZrz85pgqp8UPz6W4XNi4xa4,1073
+markuplift-3.0.1.dist-info/METADATA,sha256=w9PqYQgtQvl1gU9XyYrlGVY5OQ1uG3_O13d8h0-hTbQ,12002
+markuplift-3.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+markuplift-3.0.1.dist-info/entry_points.txt,sha256=Y2uAs9QzZgyzdnlOwEtZPXffOgGR6zkDgV3An-IjX6A,50
+markuplift-3.0.1.dist-info/top_level.txt,sha256=kGc5-UC2LEWeaE-P3LUcaXxnt18lf2m6PL_8dnnlPDc,11
+markuplift-3.0.1.dist-info/RECORD,,
