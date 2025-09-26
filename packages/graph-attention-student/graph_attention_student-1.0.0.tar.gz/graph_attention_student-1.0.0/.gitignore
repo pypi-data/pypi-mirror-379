@@ -1,0 +1,44 @@
+# ide config
+.idea/*
+.vscode/*
+lightning_logs/*
+
+# local artifacts
+dist/*
+venv/*
+
+# python cache files
+*/__pycache__/*
+graph_attention_student/__pycache__/*
+graph_attention_student/torch/__pycache__/*
+graph_attention_student/experiments/__pycache__/*
+graph_attention_student/examples/__pycache__/*
+graph_attention_student/models/__pycache__/*
+
+# results
+graph_attention_student/experiments/_*
+**/results/*
+graph_attention_student/experiments/assets/*
+graph_attention_student/experiments/results/*
+graph_attention_student/examples/results/*
+graph_attention_student/examples/assets/*
+
+**/reports/*
+
+tests/artifacts/*
+
+graph_attention_student/scripts/*
+lightning_logs/
+
+# slurm logs
+slurm-*
+.slurm*
+
+*.egg-info 
+
+**/__pycache__/*
+*.pyc
+**/.aslurm/*
+
+*.sh
+*.pdf

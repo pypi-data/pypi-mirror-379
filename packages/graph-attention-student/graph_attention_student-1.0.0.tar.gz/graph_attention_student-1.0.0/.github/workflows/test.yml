@@ -1,0 +1,69 @@
+name: Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['3.10']
+
+    steps:
+    - uses: actions/checkout@v5
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v4
+
+    - name: Create and activate virtual environment
+      run: |
+        uv venv
+        echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+        echo ".venv/bin" >> $GITHUB_PATH
+
+    - name: Create and activate virtual environment (Windows)
+      if: runner.os == 'Windows'
+      run: |
+        uv venv
+        echo "VIRTUAL_ENV=.venv" >> $env:GITHUB_ENV
+        echo ".venv\Scripts" >> $env:GITHUB_PATH
+
+    # Windows: Install CairoSVG and WeasyPrint dependencies using MSYS2
+    - name: Setup MSYS2 and install Cairo/GTK dependencies
+      if: runner.os == 'Windows'
+      uses: msys2/setup-msys2@v2
+      id: msys2
+      with:
+        msystem: UCRT64
+        update: true
+        install: >-
+          mingw-w64-ucrt-x86_64-cairo
+          mingw-w64-ucrt-x86_64-gtk3
+          mingw-w64-ucrt-x86_64-glib2
+          mingw-w64-ucrt-x86_64-gobject-introspection
+          mingw-w64-ucrt-x86_64-pango
+          mingw-w64-ucrt-x86_64-gdk-pixbuf2
+
+    - name: Add MSYS2 UCRT64 to PATH (Windows)
+      if: runner.os == 'Windows'
+      run: |
+        echo "${{ steps.msys2.outputs.msys2-location }}/ucrt64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        echo "WEASYPRINT_DLL_DIRECTORIES=${{ steps.msys2.outputs.msys2-location }}\ucrt64\bin" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+    # --- install package dependencies ---
+
+    - name: Install package in development mode
+      run: uv pip install -e .
+
+    - name: Run tests with pytest
+      run: pytest

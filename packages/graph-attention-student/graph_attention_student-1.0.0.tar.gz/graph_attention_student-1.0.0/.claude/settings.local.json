@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pytest:*)",
+      "Bash(find:*)",
+      "Bash(python:*)",
+      "Bash(nox:*)",
+      "Bash(.nox/test-3-8/bin/python -m pytest tests/test_torch_advanced.py::test_explain_graph_joint_with_custom_color_maps -v)",
+      "Bash(.nox/test-3-8/bin/python -m pytest tests/test_torch_advanced.py::test_explain_graph_split_basically_works -v)",
+      "Bash(.nox/test-3-8/bin/python -m pytest tests/test_torch_advanced.py::test_megan_prediction_report_basically_works -v)",
+      "Bash(.nox/test-3-8/bin/python -c \"import pydyf; print(pydyf.__version__)\")",
+      "Bash(.nox/test-3-8/bin/python -c \"import pydyf; help(pydyf.PDF.__init__)\")",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
