@@ -1,0 +1,64 @@
+{
+    "transport": {
+        "name": "CAN_Bus",
+        "type": "canbus",
+        "description": "Controller Area Network (CAN) bus transport"
+    },
+    "can_config": {
+        "interface": "can0",
+        "bitrate": 500000,
+        "extended_frames": true,
+        "error_frames": true,
+        "remote_frames": false,
+        "sample_point": 0.875,
+        "sjw": 1
+    },
+    "filters": {
+        "promiscuous": {
+            "enabled": false
+        },
+        "obd2_range": {
+            "enabled": true,
+            "can_id_min": 2016,
+            "can_id_max": 2031,
+            "mask": 2032
+        },
+        "j1939_range": {
+            "enabled": false,
+            "can_id_min": 217055232,
+            "can_id_max": 218103807,
+            "mask": 267386880
+        },
+        "custom_range": {
+            "enabled": true,
+            "can_id_min": 256,
+            "can_id_max": 512,
+            "mask": 65280
+        }
+    },
+    "error_handling": {
+        "bus_off_recovery": true,
+        "error_passive_limit": 127,
+        "error_warning_limit": 96
+    },
+    "performance": {
+        "tx_queue_size": 1000,
+        "rx_queue_size": 1000,
+        "loopback": false,
+        "recv_own_msgs": false
+    },
+    "standard_ids": {
+        "engine_rpm": 513,
+        "vehicle_speed": 514,
+        "engine_temp": 515,
+        "fuel_level": 516,
+        "brake_status": 517,
+        "door_status": 518
+    },
+    "j1939_pgns": {
+        "engine_temperature": 65262,
+        "vehicle_speed": 65265,
+        "engine_hours": 65253,
+        "fuel_consumption": 65257
+    }
+}
