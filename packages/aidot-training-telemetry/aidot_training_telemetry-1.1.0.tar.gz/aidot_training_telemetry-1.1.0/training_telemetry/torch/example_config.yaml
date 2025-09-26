@@ -1,0 +1,14 @@
+backends:
+- backend_type: logger
+  log_level: INFO
+  name: training_telemetry
+  rank_aware: true
+- backend_type: otlp_logs
+  endpoint: http://localhost:4317
+  exporter: grpc
+  format: key_value
+  log_level: INFO
+  name: otlp_logs
+  rank_aware: true
+log_level: INFO
+log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
