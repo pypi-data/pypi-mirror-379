@@ -1,0 +1,74 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "django-comments-dab"
+dynamic = ["version"]
+description = "Django Comment app. It can be associated with any given model."
+readme = "README.rst"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["django", "comment", "comments", "ajax"]
+authors = [
+    { name = "Radico", email = "mus.radi85@gmail.com" },
+]
+maintainers = [
+    { name = "Radi Mustafa", email = "mus.radi85@gmail.com" },
+    { name = "Abhyudai", email = "5ifocyqgf@relay.firefox.com"},
+]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+dependencies = [
+    "django",
+]
+
+[project.optional-dependencies]
+markdown = ["markdown"]
+
+[project.urls]
+Homepage = "https://github.com/abhiabhi94/Comment"
+Documentation = "https://comment.readthedocs.io/index.html"
+"Source Code" = "https://github.com/abhiabhi94/Comment"
+
+[tool.hatch.version]
+path = "VERSION"
+pattern = "(?P<version>.*)"
+
+[tool.hatch.build.targets.wheel]
+packages = ["comment"]
+include = [
+    "comment/static/**/*",
+    "comment/templates/**/*",
+    "comment/locale/**/*",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/comment",
+    "/VERSION",
+    "/README.rst",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+exclude = [
+    "*.py[cod]",
+    "__pycache__",
+    "/comment/tests",
+]
