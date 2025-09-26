@@ -1,0 +1,135 @@
+Metadata-Version: 2.4
+Name: secretflow
+Version: 1.14.0b0
+Summary: Secretflow
+Author-Email: SecretFlow Team <secretflow-contact@service.alipay.com>
+License-Expression: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Homepage, https://github.com/secretflow/secretflow
+Project-URL: Repository, https://github.com/secretflow/secretflow
+Requires-Python: <3.12,>=3.10
+Requires-Dist: click
+Requires-Dist: grpcio>=1.56.2
+Requires-Dist: jax[cpu]<=0.4.26,>=0.4.16
+Requires-Dist: jaxlib<=0.4.26,>=0.4.16
+Requires-Dist: numpy<2,>=1.22.0
+Requires-Dist: pandas==1.5.3
+Requires-Dist: protobuf<5,>=4
+Requires-Dist: pyarrow==14.0.2
+Requires-Dist: duckdb==1.0.0
+Requires-Dist: aiobotocore==2.17.0
+Requires-Dist: s3fs==2024.2.0
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: aiohttp<4,>=3.9.4
+Requires-Dist: sqlglot==25.5.1
+Requires-Dist: requests==2.32.3
+Requires-Dist: multiprocess==0.70.18
+Requires-Dist: sdc-apis==0.1.0.dev240320; platform_machine == "x86_64"
+Requires-Dist: sdc-sdk==0.1.0.dev240320; platform_machine == "x86_64"
+Requires-Dist: kuscia==0.0.3b0
+Requires-Dist: spu==0.9.4.dev20250618
+Requires-Dist: sf-sml==0.1.0.dev20250623
+Requires-Dist: sf-heu==0.6.0.dev20250514
+Requires-Dist: secretflow_serving_lib==0.10.0.dev20250414
+Requires-Dist: secretflow-dataproxy==0.5.0.dev20250416
+Requires-Dist: secretflow-spec==1.1.0b0
+Provides-Extra: dev
+Requires-Dist: pytest==8.4.1; extra == "dev"
+Requires-Dist: build==1.2.2; extra == "dev"
+Requires-Dist: matplotlib; extra == "dev"
+Requires-Dist: statsmodels==0.13.2; extra == "dev"
+Requires-Dist: polars==0.19.3; extra == "dev"
+Requires-Dist: tweedie; extra == "dev"
+Requires-Dist: psutil; extra == "dev"
+Requires-Dist: tabulate; extra == "dev"
+Requires-Dist: filelock==3.18.0; extra == "dev"
+Requires-Dist: xgboost==1.7.5; extra == "dev"
+Requires-Dist: liac-arff==2.5.0; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: autodocsumm~=0.2.14; extra == "doc"
+Requires-Dist: linkify-it-py~=2.0; extra == "doc"
+Requires-Dist: matplotlib~=3.10; extra == "doc"
+Requires-Dist: mdutils==1.6; extra == "doc"
+Requires-Dist: myst-nb~=1.2; extra == "doc"
+Requires-Dist: secretflow-doctools~=0.8.5; extra == "doc"
+Requires-Dist: sphinx_design~=0.6.1; extra == "doc"
+Requires-Dist: sphinx-autobuild; extra == "doc"
+Requires-Dist: sphinx-intl~=2.3; extra == "doc"
+Requires-Dist: sphinx~=8.0; extra == "doc"
+Description-Content-Type: text/markdown
+
+<div align="center">
+    <img src="docs/_static/logo-light.png">
+</div>
+
+---
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/secretflow/secretflow/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/secretflow/secretflow/tree/main)
+[![GoodFirstIssue](https://img.shields.io/badge/SecretFlow-Good%20First%20Issue-green)](https://github.com/orgs/secretflow/projects/12/)
+[![Contribution Map](https://img.shields.io/badge/SecretFlow-Contribution%20Map-1677FF)](https://github.com/orgs/secretflow/projects/11/)
+
+<p align="center">
+<a href="./README.zh-CN.md">简体中文</a>｜<a href="./README.md">English</a>
+</p>
+
+SecretFlow is a unified framework for privacy-preserving data intelligence and machine learning. To achieve this goal,
+it provides:
+
+- An abstract device layer consists of plain devices and secret devices which encapsulate various cryptographic protocols.
+- A device flow layer modeling higher algorithms as device object flow and DAG.
+- An algorithm layer to do data analysis and machine learning with horizontal or vertical partitioned data.
+- A workflow layer that seamlessly integrates data processing, model training, and hyperparameter tuning.
+
+<div align="center">
+    <img src="docs/_static/secretflow_arch.svg">
+</div>
+
+## Documentation
+
+- [SecretFlow](https://www.secretflow.org.cn/docs/secretflow)
+  - [Getting Started](https://www.secretflow.org.cn/docs/secretflow/getting_started)
+  - [User Guide](https://www.secretflow.org.cn/docs/secretflow/user_guide)
+  - [API Reference](https://www.secretflow.org.cn/docs/secretflow/api)
+  - [Tutorial](https://www.secretflow.org.cn/docs/secretflow/tutorial)
+
+## SecretFlow Related Projects
+
+- [Kuscia](https://github.com/secretflow/kuscia): A lightweight privacy-preserving computing task orchestration framework based on K3s.
+- [SCQL](https://github.com/secretflow/scql): A system that allows multiple distrusting parties to run joint analysis without revealing their private data.
+- [SPU](https://github.com/secretflow/spu): A provable, measurable secure computation device, which provides computation ability while keeping your private data protected.
+- [HEU](https://github.com/secretflow/heu): A high-performance homomorphic encryption algorithm library.
+- [YACL](https://github.com/secretflow/yacl): A C++ library that contains cryptography, network and io modules which other SecretFlow code depends on.
+
+## Install
+
+Please check [INSTALLATION.md](./docs/getting_started/installation.md)
+
+## Deployment
+
+Please check [DEPLOYMENT.md](./docs/getting_started/deployment.md)
+
+## Learn PETs
+
+We also provide a curated list of papers and SecretFlow's tutorials on Privacy-Enhancing Technologies (PETs).
+
+Please check [AWESOME-PETS.md](./docs/awesome-pets/awesome-pets.md)
+
+## Contributing
+
+- Contributor Rewards: Thank you for contributing to SecretFlow! All contributors will receive: A SecretFlow Open Source Contributor Certificate & An exclusive SecretFlow T-shirt 📌 [Apply Now](https://studio.secretflow.com/activity/fhelc1w2nmx0g0n/detail)
+
+### Good First Issues
+We have a list of [good first issues](https://github.com/orgs/secretflow/projects/12/). This is a great place for newcomers and beginners alike to get started, gain experience, and get familiar with our contribution process.
+
+### Contribution Map
+We also welcome community collaboration on [more advanced initiatives](https://github.com/orgs/secretflow/projects/11/)! Whether you're refining features, optimizing workflows, or proposing new ideas – there are opportunities for contributors of all skill levels to shape SecretFlow's future.
+
+## Benchmarks
+
+Please check [OVERALL_BENCHMARK.md](./docs/developer/benchmark/overall_benchmark.md)
+
+## Disclaimer
+
+Non-release versions of SecretFlow are prohibited from using in any production environment due to possible bugs, glitches, lack of functionality, security issues or other problems.
