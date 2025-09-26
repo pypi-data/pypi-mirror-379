@@ -1,0 +1,19 @@
+[project]
+name = "ventricle"
+version = "0.0.1"
+description = "An opinionated modern server, worker and sheduler"
+authors = [
+    {name = "Bobby Lange",email = "info@robertlange.me"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "shipyard", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
