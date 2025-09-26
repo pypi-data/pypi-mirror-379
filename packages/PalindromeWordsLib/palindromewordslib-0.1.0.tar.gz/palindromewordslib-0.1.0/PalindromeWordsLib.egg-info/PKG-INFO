@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: PalindromeWordsLib
+Version: 0.1.0
+Summary: Extract palindrome words from text
+Author: Elaf Jamal Omar
+Author-email: Elaf Jamal Omar <o25635635@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Elaf Jamal Omar
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions...
+        
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# PalindromeWordsLib
+مكتبة لاستخراج الكلمات المتناظرة (Palindrome) من نص.
+
+## التثبيت
+pip install PalindromeWordsLib
+
+## CMD
+palindromewordslib "madam racecar test"
+# Palindrome words: ['madam', 'racecar']
+
+## Python
+from palindrome_words_lib import extract_palindrome_words
+text = "madam racecar test"
+print(extract_palindrome_words(text))  # ['madam', 'racecar']

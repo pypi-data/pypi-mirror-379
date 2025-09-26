@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PalindromeWordsLib.egg-info/PKG-INFO
+PalindromeWordsLib.egg-info/SOURCES.txt
+PalindromeWordsLib.egg-info/dependency_links.txt
+PalindromeWordsLib.egg-info/entry_points.txt
+PalindromeWordsLib.egg-info/top_level.txt
+palindrome_words_lib/__init__.py
+palindrome_words_lib/__main__.py
+palindrome_words_lib/core.py
