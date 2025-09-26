@@ -1,0 +1,5 @@
+[console_scripts]
+rcfd-ablate = rcfd_pcg.ablate:main
+rcfd-bench = rcfd_pcg.bench:main
+rcfd-pcg = rcfd_pcg.cli:main
+rcfd-suite = rcfd_pcg.suite:main

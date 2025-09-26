@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rcfd-pcg"
+version = "0.1.0"
+description = "RCFD-PCG: Ridge-Corrected Frequent-Directions Preconditioned Conjugate Gradient"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  {name = "RCFD Team"}
+]
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.9",
+  "threadpoolctl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black==24.4.2",
+  "ruff==0.5.5",
+  "isort==5.13.2",
+  "pytest>=7",
+]
+
+[project.scripts]
+rcfd-pcg = "rcfd_pcg.cli:main"
+rcfd-bench = "rcfd_pcg.bench:main"
+rcfd-ablate = "rcfd_pcg.ablate:main"
+rcfd-suite = "rcfd_pcg.suite:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rcfd_pcg*"]
+
+
