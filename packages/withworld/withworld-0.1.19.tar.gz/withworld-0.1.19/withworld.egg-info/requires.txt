@@ -1,0 +1,5 @@
+pyautogui
+pyperclip
+pynput
+requests
+python-dotenv
