@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: py-roblox-cloud
+Version: 0.1.0
+Summary: Unofficial Roblox Cloud API wrapper
+Author: G3tFun
+Author-email: 
+Requires-Python: >=3.7
+Requires-Dist: requests
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
