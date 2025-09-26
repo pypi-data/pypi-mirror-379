@@ -1,0 +1,10 @@
+primrea/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+primrea/core.py,sha256=8om8fs6Pw6jlvL7xBf2Ju9sRKuzTbrkjkjdt9Fkp5hA,1855
+primrea/kh_table_gen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+primrea/kh_table_gen/entry_based.py,sha256=CgWNE8sAiWuXzAa4pmyNoKM4Ov0P3nXBThefBxHGBj8,7217
+primrea/kh_table_gen/pjdb.py,sha256=-MCTL6vyPbPiky03DJD-dhdCheumBGg9Tniz6bH4wnA,2008
+primrea/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+primrea-0.1.0.dist-info/METADATA,sha256=uHhfDYONXUX0a-ixVLDG8evBtvfeA1HNvli2aoiaAxQ,252
+primrea-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+primrea-0.1.0.dist-info/top_level.txt,sha256=XVkQZXlge8HU4uLpiL_l620Gq1s_GkTvD-kM1USzyA8,8
+primrea-0.1.0.dist-info/RECORD,,
