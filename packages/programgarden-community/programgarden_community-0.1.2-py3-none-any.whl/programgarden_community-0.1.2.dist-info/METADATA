@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: programgarden-community
+Version: 0.1.2
+Summary: 증권 분석에 필요한 외부 전략 모아둔 플러그인
+Author: 프로그램동산
+Author-email: coding@programgarden.com
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: croniter (>=6.0.0,<7.0.0)
+Requires-Dist: programgarden-core (>=0.1.0,<0.2.0)
+Requires-Dist: programgarden-finance (>=0.1.0,<0.2.0)
+Requires-Dist: pydantic (>=2.11.7,<3.0.0)
+Requires-Dist: python-dotenv (>=1.1.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+외부 플러그인 모음
