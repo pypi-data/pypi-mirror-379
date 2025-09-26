@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/best_date_paris/__init__.py
+src/best_date_paris/cli.py
+src/best_date_paris_cli.egg-info/PKG-INFO
+src/best_date_paris_cli.egg-info/SOURCES.txt
+src/best_date_paris_cli.egg-info/dependency_links.txt
+src/best_date_paris_cli.egg-info/entry_points.txt
+src/best_date_paris_cli.egg-info/top_level.txt
