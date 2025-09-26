@@ -1,0 +1,115 @@
+[tool.poetry]
+name = "pyside6-cutewindow"
+version = "0.1.1"
+description = "Cross-platform customizable window library based on PySide6 with enhanced control"
+authors = ["Parham Oyan <parhamoyan@yahoo.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/parhamoyan/cutewindow"
+documentation = "https://pyside6-cutewindow.readthedocs.io"
+keywords = ["qt", "pyqt", "pyqt6", "pyqt5", "pyside", "pyside2", "pyside6", "customizable-window", "cross-platform", "gui", "window-customization", "pyside6-cutewindow"]
+packages = [{include = "cutewindow"}]
+include = ["CHANGELOG.md", "LICENSE", "README.md"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14"
+pyobjc-framework-Cocoa = { version = ">=9.0.1", markers = "sys_platform == 'darwin'" }
+pyobjc-framework-Quartz = { version = "*", markers = "sys_platform == 'darwin'" }
+pywin32 = { version = ">=304", markers = "sys_platform == 'win32'"}
+PySide6 = ">=6.0.0"
+
+ [tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+pytest-cov = "^4.0"
+black = "^23.0"
+isort = "^5.0"
+flake8 = "^6.0"
+mypy = "^1.0"
+bandit = "^1.7"
+safety = "^2.0"
+
+ [tool.poetry.extras]
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/parhamoyan/cutewindow/issues"
+"Changelog" = "https://github.com/parhamoyan/cutewindow/blob/main/CHANGELOG.md"
+"Documentation" = "https://pyside6-cutewindow.readthedocs.io"
+"Source" = "https://github.com/parhamoyan/cutewindow"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+  | docs/_build
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["cutewindow"]
+known_third_party = ["PySide6", "pytest"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "PySide6.*",
+    "pyobjc.*",
+    "win32.*",
+]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+    "tests.*",
+    "examples.*",
+    "compile_rcc",
+    "conf",
+]
+ignore_errors = true
