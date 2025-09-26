@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.17,<1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "threecx"
+version = "0.1.0"
+description = "Python client for 3CX HTTP APIs with Alkivi config integration"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  { name = "Alkivi" }
+]
+keywords = ["3cx", "voip", "cti", "api", "client"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "requests>=2.31.0",
+  "python-alkivi-config-manager>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/alkivi-sas/python-3cx"
+Issues = "https://github.com/alkivi-sas/python-3cx/issues"
+
+[tool.hatch.build]
+packages = ["threecx"]
+include = [
+  "README.md",
+  "LICENSE",
+]
+
+[tool.hatch.version]
+path = "threecx/__init__.py"
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0",
+]
+
+
