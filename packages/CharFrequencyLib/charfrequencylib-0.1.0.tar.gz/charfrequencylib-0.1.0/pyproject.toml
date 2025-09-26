@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CharFrequencyLib"
+version = "0.1.0"
+description = "Calculate character frequency in text"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Ashjan Walid Alakhaly", email = "alakhaly58@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+charfrequencylib = "char_frequency_lib.__main__:main"

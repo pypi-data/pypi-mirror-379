@@ -1,0 +1,2 @@
+[console_scripts]
+charfrequencylib = char_frequency_lib.__main__:main

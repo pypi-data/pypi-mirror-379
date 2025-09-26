@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+CharFrequencyLib.egg-info/PKG-INFO
+CharFrequencyLib.egg-info/SOURCES.txt
+CharFrequencyLib.egg-info/dependency_links.txt
+CharFrequencyLib.egg-info/entry_points.txt
+CharFrequencyLib.egg-info/top_level.txt
+char_frequency_lib/__init__.py
+char_frequency_lib/__main__.py
+char_frequency_lib/core.py
