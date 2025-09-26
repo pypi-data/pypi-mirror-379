@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ai-judge
+Version: 0.0.1
+Summary: Whitecircle.ai tools for judge-style evaluations and rubric scoring.
+Author: White Circle
+License: MIT
+Keywords: ai,evals,judge,rubrics,scoring,whitecircle.ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# ai-judge
+
+Whitecircle.ai tools for judge-style evaluations and rubric scoring.
+
+
