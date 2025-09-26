@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydepsdev"
+version = "0.2.2"
+authors = [
+  { name = "Robert-André Mauchin", email = "eclipseo@mauchin.fr" }
+]
+description = "A Python library for interacting with Open Source Insights API (deps.dev)"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = [ "LICENSE" ]
+requires-python = ">=3.9"
+keywords = ["Open Source Insights", "api", "deps.dev"]
+classifiers = [
+    "Topic :: Software Development :: Libraries",
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers"
+]
+dependencies = [
+  "aiohttp"
+]
+
+[project.urls]
+"Homepage"= "https://codeberg.org/eclipseo/pydepsdev"
+"Repository" = "https://codeberg.org/eclipseo/pydepsdev.git"
+"Bug Tracker" = "https://codeberg.org/eclipseo/pydepsdev/issues"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
