@@ -1,0 +1,155 @@
+# roblox-cloud-api
+
+📦 **roblox-cloud-api** — это неофициальный Python wrapper для работы с API Roblox.
+Библиотека упрощает работу с аккаунтами, пользователями, группами, играми и личными сообщениями Roblox.
+
+---
+
+## 🚀 Установка
+
+```bash
+pip install roblox-cloud-api
+```
+
+Требования:
+
+* Python 3.7+
+* `requests`
+
+---
+
+## ⚡ Быстрый старт
+
+```python
+from roblox_cloud_api import (
+    rocloud_cookie_account_valid,
+    rocloud_avatar_image,
+    rocloud_robux_balance,
+    rocloud_friends_list,
+    rocloud_game_info
+)
+
+# Проверка cookie
+status = rocloud_cookie_account_valid("COOKIE_HERE")
+print(status)  # "Valid cookie" или "Invalid cookie"
+
+# Получение аватара по нику
+avatar = rocloud_avatar_image("n:builderman")
+print(avatar)  # https://www.roblox.com/headshot-thumbnail/image...
+
+# Баланс Robux
+robux = rocloud_robux_balance("COOKIE_HERE")
+print(f"У вас {robux} Robux")
+
+# Список друзей
+friends = rocloud_friends_list(1)  # UserID
+print(friends)
+
+# Информация об игре
+game = rocloud_game_info(1818)  # UniverseId
+print(game)
+```
+
+---
+
+## 📖 Документация функций
+
+### 👤 Аккаунт
+
+| Функция                                                                                                                            | Аргументы     | Описание                          |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------- | --------------------------------- |
+| `rocloud_cookie_account_valid(cookie, var_name="robloxcookievalid0x09", invalid_text="Invalid cookie", valid_text="Valid cookie")` | Cookie Roblox | Проверяет валидность cookie.      |
+| `rocloud_robux_balance(cookie, var_name="robloxrobuxbalance")`                                                                     | Cookie Roblox | Возвращает количество Robux.      |
+| `rocloud_premium_status(cookie, var_name="robloxpremiumstatus")`                                                                   | Cookie Roblox | Проверяет наличие Roblox Premium. |
+
+---
+
+### 🧑 Пользователи
+
+| Функция                                                                | Аргументы          | Описание                      |
+| ---------------------------------------------------------------------- | ------------------ | ----------------------------- |
+| `rocloud_avatar_image(user_or_cookie, var_name="robloxavatarurl")`     | `n:ник` или UserID | Возвращает ссылку на аватар.  |
+| `rocloud_count_friends(user_or_cookie, var_name="robloxfriendscount")` | UserID             | Количество друзей.            |
+| `rocloud_userid_from_name("n:ник", var_name="robloxuserid")`           | Ник                | Возвращает UserID.            |
+| `rocloud_name_from_userid(userid, var_name="robloxusername")`          | UserID             | Возвращает ник.               |
+| `rocloud_friends_list(userid, var_name="robloxfriendslist")`           | UserID             | Список друзей (массив ников). |
+
+---
+
+### 👥 Группы
+
+| Функция                                                                             | Аргументы               | Описание                       |
+| ----------------------------------------------------------------------------------- | ----------------------- | ------------------------------ |
+| `rocloud_groups_list(userid, var_name="robloxgroupslist")`                          | UserID                  | Список групп пользователя.     |
+| `rocloud_group_roles(groupid, userid, var_name="robloxgrouprole")`                  | groupId, userId         | Узнать роль в группе.          |
+| `rocloud_join_requests(groupid, cookie, var_name="robloxjoinrequests")`             | groupId, cookie         | Заявки на вступление в группу. |
+| `rocloud_accept_request(groupid, userid, cookie, var_name="robloxrequestaccepted")` | groupId, userId, cookie | Принимает заявку.              |
+
+---
+
+### 🎮 Игры
+
+| Функция                                                               | Аргументы  | Описание                                              |
+| --------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |
+| `rocloud_game_info(universe_id, var_name="robloxgameinfo")`           | UniverseId | Информация об игре (название, создатель, активность). |
+| `rocloud_thumbnail_game(universe_id, var_name="robloxgamethumbnail")` | UniverseId | Ссылка на превью игры.                                |
+
+---
+
+### ✉️ Сообщения
+
+| Функция                                                                                          | Аргументы                        | Описание                         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------- |
+| `rocloud_send_message(cookie, recipient_userid, subject, message, var_name="robloxmessagesent")` | Cookie, userId, subject, message | Отправка сообщения пользователю. |
+
+---
+
+## 📂 Структура проекта
+
+```
+roblox-cloud-api/
+│
+├── roblox_cloud_api/
+│   ├── __init__.py
+│   ├── account.py
+│   ├── users.py
+│   ├── groups.py
+│   ├── games.py
+│   └── messages.py
+│
+├── tests/
+│   ├── test_account.py
+│   ├── test_users.py
+│   └── ...
+│
+├── setup.py
+├── README.md
+├── LICENSE
+└── pyproject.toml
+```
+
+---
+
+## ⚠️ Предупреждения
+
+* Это **неофициальная** библиотека. Roblox может менять API без предупреждения.
+* Используйте только свои cookie (`.ROBLOSECURITY`). Никогда не делитесь ими с другими людьми.
+* Некоторые методы доступны только при наличии Premium или прав в группе.
+
+---
+
+## 🤝 Вклад в проект
+
+Хотите помочь? Отлично!
+
+1. Сделайте форк репозитория.
+2. Создайте новую ветку: `git checkout -b feature-branch`.
+3. Добавьте изменения.
+4. Отправьте pull request.
+
+---
+
+## 📄 Лицензия
+
+Лицензия: **MIT**
+Автор: [Твой ник]
