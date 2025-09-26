@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: abspasschek1
+Version: 0.1.0
+Summary: CLI to check password at JSON path
+Author-email: Rose 25 <rose25121111@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
