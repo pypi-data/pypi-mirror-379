@@ -1,0 +1,9 @@
+financial_advisor_mcp/__init__.py,sha256=VWMJ_IfeVkpF1ZlQGLbdLCFq3gEns33VZid7XQoDO-E,110
+financial_advisor_mcp/data_provider.py,sha256=vxPKdEQpkPBE9kHU-tynBtVe_kftI6aQu1KPIbPgWRU,18797
+financial_advisor_mcp/munger_persona.py,sha256=dl8VcTxPzlh1t9srGACAdmbS-Q495PVERDvDiAchRIQ,17152
+financial_advisor_mcp/server.py,sha256=7uuf2VE8UErZzu67F4badtsupR_-anMuxI9ZB3z7vos,21439
+financial_advisor_mcp/web_api.py,sha256=9QolYLTMOEoTjD27rXlldU8a3JizN4ED2Ej3k59WCZk,13002
+financial_advisor_munger-0.2.0.dist-info/METADATA,sha256=iLoLpidRunTgWHTRAhye_tkQQlkyrXLEx5Y4QSvI97c,7805
+financial_advisor_munger-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+financial_advisor_munger-0.2.0.dist-info/entry_points.txt,sha256=IsQad42CvSKyGIVfVpxk68BIYkj9y5slvcU_cuV0Owk,113
+financial_advisor_munger-0.2.0.dist-info/RECORD,,
