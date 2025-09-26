@@ -1,0 +1,37 @@
+{
+  "invalid_signature": {
+    "en": "Invalid token signature.",
+    "es": "Firma del token no válida.",
+    "fr": "Signature du jeton invalide."
+  },
+  "expired_token": {
+    "en": "Token has expired.",
+    "es": "El token ha expirado.",
+    "fr": "Le jeton a expiré."
+  },
+  "invalid_audience": {
+    "en": "Invalid audience in token.",
+    "es": "Audiencia no válida en el token.",
+    "fr": "Audience invalide dans le jeton."
+  },
+  "invalid_issuer": {
+    "en": "Invalid token issuer.",
+    "es": "Emisor del token no válido.",
+    "fr": "Émetteur du jeton invalide."
+  },
+  "invalid_not_before": {
+    "en": "Token is not valid yet (nbf claim).",
+    "es": "El token aún no es válido (atributo nbf).",
+    "fr": "Le jeton n'est pas encore valide (champ nbf)."
+  },
+  "invalid_claims": {
+    "en": "Token contains invalid claims.",
+    "es": "El token contiene atributos no válidos.",
+    "fr": "Le jeton contient des revendications invalides."
+  },
+  "invalid_token": {
+    "en": "Token is invalid.",
+    "es": "El token no es válido.",
+    "fr": "Le jeton est invalide."
+  }
+}
