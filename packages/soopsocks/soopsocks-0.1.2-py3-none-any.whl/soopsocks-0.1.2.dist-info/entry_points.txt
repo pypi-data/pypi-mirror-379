@@ -1,0 +1,2 @@
+[console_scripts]
+soopsocks = soopsocks.cli:main
