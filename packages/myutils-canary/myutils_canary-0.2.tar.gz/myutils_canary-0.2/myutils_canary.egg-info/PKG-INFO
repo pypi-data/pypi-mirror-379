@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: myutils-canary
+Version: 0.2
+Summary: Funciones matemáticas simples para proyectos Python
+Home-page: https://github.com/AlejandroGlezSan/myutils-canary
+Author: Alejandro González
+Author-email: alejandro.dev@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# myutils-canary 🐍
+
+Funciones matemáticas simples para proyectos Python.  
+Incluye suma y resta con tests automatizados y CI con GitHub Actions.
+
+## 📦 Instalación
+
+```bash
+pip install myutils-canary

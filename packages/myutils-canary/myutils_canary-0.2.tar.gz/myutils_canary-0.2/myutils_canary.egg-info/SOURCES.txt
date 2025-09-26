@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+myutils/__init__.py
+myutils_canary.egg-info/PKG-INFO
+myutils_canary.egg-info/SOURCES.txt
+myutils_canary.egg-info/dependency_links.txt
+myutils_canary.egg-info/top_level.txt
+tests/test_math.py
