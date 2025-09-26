@@ -1,0 +1,2 @@
+[console_scripts]
+lightbench = lightbench.run_all_benchmarks:main
