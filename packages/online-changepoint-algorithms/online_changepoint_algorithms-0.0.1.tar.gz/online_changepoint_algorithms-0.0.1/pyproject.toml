@@ -1,0 +1,37 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "src"
+module-name = "change_point_algorithms._change_point_algorithms"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[project]
+name = "online-changepoint-algorithms"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+readme = "README.md"
+keywords = ["changepoint", "detection", "online detection"]
+
+dependencies = [
+    "numba", # speeding up some python functions
+    "numpy"
+]
+
+[project.optional-dependencies]
+progress = ["tqdm"]
+test = [
+    "pytest",
+    "pytest-benchmark"
+]
