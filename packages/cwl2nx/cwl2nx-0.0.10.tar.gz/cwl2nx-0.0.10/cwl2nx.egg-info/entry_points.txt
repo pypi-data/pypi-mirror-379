@@ -1,0 +1,2 @@
+[console_scripts]
+cwl2nx = cwl2nx.cli:app
