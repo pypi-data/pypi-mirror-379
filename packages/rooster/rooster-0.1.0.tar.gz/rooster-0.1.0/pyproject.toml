@@ -1,0 +1,75 @@
+[project]
+name = "rooster"
+version = "0.1.0"
+description = ""
+authors = [{name = "Zanie", email = "contact@zanie.dev"}]
+readme = "README.md"
+repository = "https://github.com/zanieb/rooster"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Environment :: Plugins",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+]
+dependencies = [
+    "typer>=0.15.0",
+    "packaging>=23.1",
+    "pygit2>=1.13.1",
+    "httpx>=0.25.0",
+    "tqdm>=4.66.1",
+    "hishel>=0.0.24",
+    "pydantic>=2.4.2",
+    "marko>=2.0.2",
+]
+
+[project.scripts]
+rooster = "rooster:app"
+
+[dependency-groups]
+dev = [
+    "mypy>=0.971",
+    "ruff>=0.0.287",
+    "pytest>=7.4.2",
+    "inline-snapshot>=0.23.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.6.16,<0.8"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "rooster"
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+# Ignore line length; the formatter handles it
+ignore = ["E501"]
+
+# Ignore some codes that break due to pytest fixtures in tests
+per-file-ignores = { "tests/**/*.py" = ["F401", "F811"] }
+
+[tool.rooster]
+major_labels = []  # We do not use the major version number
+minor_labels = []  # We will bump on breaking changes here once more stable
+changelog_ignore_labels = ["internal"]
+changelog_sections.breaking = "Breaking changes"
+changelog_sections.enhancement = "Enhancements"
+changelog_sections.cli = "CLI"
+changelog_sections.configuration = "Configuration"
+changelog_sections.bug = "Bug fixes"
+changelog_sections.documentation = "Documentation"
+changelog_sections.__unknown__ = "Other changes"
+changelog_contributors = false
