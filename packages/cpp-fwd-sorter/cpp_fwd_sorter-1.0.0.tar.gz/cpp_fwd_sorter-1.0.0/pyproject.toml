@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpp-fwd-sorter"
+version = "1.0.0"
+description = "Sort C++ forward declarations after clang-format"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [ {name = "FakeTruth"} ]
+requires-python = ">=3.8"
+
+dependencies = []
+
+keywords = ["clang-format", "cpp", "forward-declarations", "formatter", "sorter"]
+
+classifiers = [
+	"License :: OSI Approved :: MIT License",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/FakeTruth/cpp-fwd-sorter"
+Source = "https://github.com/FakeTruth/cpp-fwd-sorter"
+BugTracker = "https://github.com/FakeTruth/cpp-fwd-sorter/issues"
+
+[project.scripts]
+cpp-fwd-sorter = "cpp_fwd_sorter.sorter:main"
+cpp-fwd-format = "cpp_fwd_sorter.formatter:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=6.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
