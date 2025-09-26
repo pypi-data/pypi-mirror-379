@@ -1,0 +1,604 @@
+# 🎓 EduCode - Apprendre Python par la pratique
+
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI version](https://badge.fury.io/py/educode.svg)](https://badge.fury.io/py/educode)
+[![Downloads](https://pepy.tech/badge/educode)](https://pepy.tech/project/educode)
+
+EduCode est un système interactif de **200+ exercices progressifs** pour apprendre Python, avec authentification sécurisée, correction automatique et génération de certificats professionnels.
+
+---
+
+## 📋 Table des matières
+
+- [✨ Fonctionnalités](#-fonctionnalités)
+- [🚀 Installation](#-installation)
+- [💻 Utilisation](#-utilisation)
+- [🔐 Système d'authentification](#-système-dauthentification)
+- [📚 Catalogue d'exercices](#-catalogue-dexercices)
+- [🏆 Système de certification](#-système-de-certification)
+- [📊 Suivi de progression](#-suivi-de-progression)
+- [🎯 Exemples d'utilisation](#-exemples-dutilisation)
+- [🔧 Configuration avancée](#-configuration-avancée)
+- [🛠 Développement](#-développement)
+- [📖 Documentation](#-documentation)
+- [🤝 Contribution](#-contribution)
+- [📝 Licence](#-licence)
+- [🔮 Roadmap](#-roadmap)
+
+---
+
+## ✨ Fonctionnalités
+
+### 🔐 Authentification et sécurité
+- **Comptes utilisateur sécurisés** avec chiffrement PBKDF2
+- **Sessions automatiques** avec expiration après 24h
+- **Protection contre les attaques** par force brute
+- **Fichiers de progression individuels** et protégés
+
+### 📚 Apprentissage interactif
+- **200+ exercices progressifs** répartis en 3 niveaux
+- **Correction automatique** avec tests unitaires intégrés
+- **Interface colorée** avec codes ANSI pour terminal
+- **Système d'indices** et templates pour l'aide
+- **Installation automatique** de modules Python externes
+
+### 🏆 Certification professionnelle
+- **Certificats PDF authentifiés** avec votre nom complet
+- **5 niveaux de certification** selon vos performances
+- **Validation sécurisée** de l'identité utilisateur
+- **QR codes** et identifiants uniques pour vérification
+
+### 📊 Suivi avancé
+- **Statistiques détaillées** personnalisées par utilisateur
+- **Historique complet** des réussites et échecs
+- **Barres de progression** visuelles
+- **Export des données** au format JSON
+
+---
+
+## 🚀 Installation
+
+### Installation via pip (recommandée)
+
+```bash
+pip install educode
+```
+
+### Installation depuis les sources
+
+```bash
+git clone https://github.com/Moesthetics-code/educode.git
+cd educode
+pip install -e .
+```
+
+### Vérification de l'installation
+
+```bash
+python -m educode version
+```
+
+---
+
+## 💻 Utilisation
+
+### Mode authentifié (expérience complète)
+
+```bash
+python -m educode
+```
+
+**Première utilisation :** Créez votre compte sécurisé avec email et mot de passe fort.
+
+### Mode démo (fonctionnalités limitées)
+
+```bash
+python -m educode demo
+```
+
+⚠️ **Limitation :** Progression non sauvegardée, pas de certificats.
+
+### Commandes disponibles
+
+| Commande | Description | Authentification requise |
+|----------|-------------|--------------------------|
+| `python -m educode` | Interface principale | ✅ |
+| `python -m educode stats` | Vos statistiques | ✅ |
+| `python -m educode certificate` | Générer un certificat | ✅ |
+| `python -m educode demo` | Mode démo | ❌ |
+| `python -m educode help` | Aide complète | ❌ |
+| `python -m educode version` | Informations version | ❌ |
+
+---
+
+## 🔐 Système d'authentification
+
+### Sécurité avancée
+
+- **Chiffrement PBKDF2** avec 100 000 itérations
+- **Salt aléatoire** de 32 octets par mot de passe
+- **Protection contre les attaques** temporelles
+- **Blocage automatique** après 3 tentatives échouées
+
+### Politique des mots de passe
+
+Votre mot de passe doit contenir :
+- **Minimum 8 caractères**
+- **Au moins une majuscule**
+- **Au moins une minuscule** 
+- **Au moins un chiffre**
+- **Au moins un caractère spécial**
+
+### Gestion de session
+
+- **Sessions sécurisées** avec tokens aléatoires
+- **Expiration automatique** après 24 heures
+- **Reconnexion transparente** si session valide
+- **Déconnexion sécurisée** sur demande
+
+[📘 Documentation complète de l'authentification](docs/authentication.md)
+
+---
+
+## 📚 Catalogue d'exercices
+
+### 🟢 Niveau Facile (60 exercices)
+
+**Thèmes abordés :**
+- Fonctions basiques (carré, maximum, calculatrice)
+- Chaînes de caractères (palindromes, comptage)
+- Listes simples (somme, recherche, tri basique)
+- Conditions et boucles (factorielle, Fibonacci)
+
+**Exemple d'exercice :**
+```python
+# Exercice : Fonction carré
+def carre(n):
+    return n * n
+
+# Tests automatiques : carre(2) = 4, carre(-3) = 9
+```
+
+### 🟡 Niveau Moyen (70 exercices)
+
+**Thèmes abordés :**
+- Algorithmes de tri (insertion, sélection, bulles)
+- Dictionnaires (fréquences, fusion, filtrage)
+- Expressions régulières basiques
+- Structures de données (piles, files)
+- Manipulation avancée de chaînes
+
+### 🔴 Niveau Difficile (70 exercices)
+
+**Thèmes abordés :**
+- Algorithmes avancés (QuickSort, MergeSort, Dijkstra)
+- Structures complexes (arbres binaires, graphes)
+- Programmation dynamique
+- Problèmes classiques (N-Reines, sac à dos)
+- Optimisation et complexité
+
+[📚 Catalogue complet des exercices](docs/exercises-catalog.md)
+
+---
+
+## 🏆 Système de certification
+
+### Niveaux de certification
+
+| Niveau | Exercices requis | Taux de réussite | Certificat |
+|--------|------------------|------------------|------------|
+| 🌱 **Apprenti Python** | 3+ | 50%+ | Certificat basique |
+| 📜 **Développeur Intermédiaire** | 25+ | 60%+ | Certificat bronze |
+| 🥉 **Développeur Confirmé** | 50+ | 75%+ | Certificat argent |
+| 🥈 **Développeur Avancé** | 100+ | 85%+ | Certificat or |
+| 🏆 **Expert Python** | 150+ | 95%+ | Certificat platine |
+
+### Fonctionnalités des certificats
+
+- **PDF professionnel** avec mise en page élégante
+- **Nom complet authentifié** depuis votre profil
+- **Statistiques détaillées** de performance
+- **QR code de vérification** unique
+- **Horodatage sécurisé** de délivrance
+- **Identifiant de certificat** traçable
+
+### Exemple de génération
+
+```bash
+python -m educode certificate
+```
+
+[🏆 Guide complet de certification](docs/certification-guide.md)
+
+---
+
+## 📊 Suivi de progression
+
+### Métriques trackées
+
+- **Exercices complétés** avec succès
+- **Taux de réussite global** des tentatives
+- **Temps de progression** depuis l'inscription
+- **Répartition par difficulté** des exercices réussis
+- **Catégories maîtrisées** (algorithmes, structures, etc.)
+
+### Visualisation des données
+
+```
+📈 Progression:
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 25.0%
+
+🏆 Derniers succès:
+  ✨ Fonction carré (FACILE)
+  ✨ Tri par insertion (MOYEN)
+  ✨ Arbre binaire de recherche (DIFFICILE)
+```
+
+### Export des données
+
+```bash
+# Depuis l'interface → Paramètres → Exporter les données
+# Génère un fichier JSON complet sur votre bureau
+```
+
+[📊 Guide du suivi de progression](docs/progress-tracking.md)
+
+---
+
+## 🎯 Exemples d'utilisation
+
+### Session d'apprentissage typique
+
+```bash
+$ python -m educode
+🎓 EduCode - Système d'exercices Python avec authentification
+═══════════════════════════════════════════════════════════
+
+👋 Bon retour, Marie Dubois !
+📧 Connecté en tant que: marie.dubois@email.com
+
+🎯 Menu Principal
+─────────────────────────
+1. 🎲 Exercice aléatoire
+2. 📈 Exercice par difficulté  
+3. 📚 Exercice par catégorie
+4. 📊 Mes statistiques
+5. 🏆 Générer certificat
+
+👉 Votre choix (1-8): 2
+```
+
+### Résolution d'un exercice
+
+```
+═══════════════════════════════════════════════════
+🎓 Maximum de trois nombres
+📚 Catégorie: Fonctions basiques
+🔥 Difficulté: FACILE
+─────────────────────────────────────────────────────
+📝 Description:
+Écrivez une fonction maximum_trois(a, b, c) qui retourne 
+le plus grand des trois nombres donnés.
+
+💡 Template de solution:
+def maximum_trois(a, b, c):
+    # Votre code ici
+    pass
+─────────────────────────────────────────────────────
+
+ 1>>> def maximum_trois(a, b, c):
+ 2...     return max(a, b, c)
+ 3... 
+
+🧪 Tests en cours...
+─────────────────────────────────────────────────────
+  Test 1: ✅ RÉUSSI
+     maximum_trois(1, 3, 2) = 3
+  Test 2: ✅ RÉUSSI  
+     maximum_trois(-1, -5, -2) = -1
+
+🎉 FÉLICITATIONS ! 🎉
+Score parfait: 2/2 tests réussis
+═══════════════════════════════════════════════════
+```
+
+### Génération de certificat
+
+```bash
+$ python -m educode certificate
+
+🏆 CERTIFICAT GÉNÉRÉ AVEC SUCCÈS !
+─────────────────────────────────────────────
+
+✨ Félicitations Marie Dubois !
+📄 Votre certificat EduCode a été créé dans ~/EduCode_Certificates/
+📁 Fichier: EduCode_Certificate_Marie_Dubois_Confirmé_20251225_143052.pdf
+
+📊 Vos accomplissements:
+   • 52 exercices réussis
+   • 78.3% de taux de réussite
+   • 125 tentatives au total
+```
+
+[🎯 Plus d'exemples d'utilisation](docs/usage-examples.md)
+
+---
+
+## 🔧 Configuration avancée
+
+### Variables d'environnement
+
+```bash
+# Désactiver les couleurs
+export NO_COLOR=1
+
+# Répertoire personnalisé pour les certificats
+export EDUCODE_CERT_DIR="/path/to/certificates"
+
+# Durée de session personnalisée (en heures)
+export EDUCODE_SESSION_HOURS=48
+```
+
+### Fichiers de configuration
+
+```bash
+# Profils utilisateur
+~/.educode_users.json
+
+# Session actuelle  
+~/.educode_session.json
+
+# Progression individuelle
+~/.educode_progress_{user_hash}.json
+
+# Certificats générés
+~/EduCode_Certificates/
+```
+
+### Personnalisation de l'interface
+
+```python
+# Dans votre environnement Python
+from educode.core import EduCode, Colors
+
+# Désactiver les couleurs programmatiquement
+Colors.is_supported = lambda: False
+
+# Utiliser un fichier de progression personnalisé
+educode = EduCode(progress_file="/chemin/custom.json")
+```
+
+[🔧 Guide de configuration complète](docs/advanced-configuration.md)
+
+---
+
+## 🛠 Développement
+
+### Prérequis de développement
+
+```bash
+# Cloner le repository
+git clone https://github.com/Moesthetics-code/educode.git
+cd educode
+
+# Créer un environnement virtuel
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+
+# Installer en mode développement
+pip install -e .
+
+# Installer les dépendances de développement
+pip install -r requirements-dev.txt
+```
+
+### Structure du projet
+
+```
+educode/
+├── educode/                    # Package principal
+│   ├── __init__.py            # Métadonnées du package
+│   ├── __main__.py            # Point d'entrée (python -m educode)
+│   ├── core.py                # Logique principale et interface
+│   ├── exercises.py           # Base de données des exercices
+│   ├── auth.py                # Système d'authentification
+│   └── certification.py      # Génération de certificats PDF
+├── tests/                     # Tests unitaires
+├── docs/                      # Documentation
+├── setup.py                   # Configuration d'installation
+├── requirements.txt           # Dépendances de production
+├── requirements-dev.txt       # Dépendances de développement
+└── README.md                  # Ce fichier
+```
+
+### Ajouter de nouveaux exercices
+
+```python
+# Dans educode/exercises.py
+from .core import Exercise
+
+def get_all_exercises():
+    exercises = []
+    
+    # Nouvel exercice
+    exercises.append(Exercise(
+        id="mon_exercice_unique",
+        title="Titre de l'exercice", 
+        description="Description détaillée avec exemples",
+        difficulty="facile",  # ou "moyen", "difficile"
+        category="Ma catégorie",
+        test_cases=[
+            {
+                "function": "ma_fonction",
+                "inputs": [param1, param2], 
+                "expected": resultat_attendu
+            }
+        ],
+        solution_template="def ma_fonction():\n    pass",
+        hints=["Indice 1", "Indice 2"]
+    ))
+    
+    return exercises
+```
+
+### Tests
+
+```bash
+# Lancer tous les tests
+python -m pytest
+
+# Tests avec couverture
+python -m pytest --cov=educode
+
+# Tests d'un module spécifique
+python -m pytest tests/test_core.py
+```
+
+[🛠 Guide de développement complet](docs/development-guide.md)
+
+---
+
+## 📖 Documentation
+
+### Documentation utilisateur
+
+- [🚀 Guide de démarrage rapide](docs/quick-start.md)
+- [🔐 Authentification et sécurité](docs/authentication.md)
+- [📚 Catalogue d'exercices complet](docs/exercises-catalog.md)
+- [🏆 Guide de certification](docs/certification-guide.md)
+- [📊 Suivi de progression](docs/progress-tracking.md)
+- [🎯 Exemples d'utilisation](docs/usage-examples.md)
+- [❓ FAQ](docs/faq.md)
+
+### Documentation technique
+
+- [🛠 Guide de développement](docs/development-guide.md)
+- [🔧 Configuration avancée](docs/advanced-configuration.md)
+- [📡 API Reference](docs/api-reference.md)
+- [🏗 Architecture du système](docs/architecture.md)
+- [🔒 Modèle de sécurité](docs/security-model.md)
+
+### Ressources communautaires
+
+- [💬 Discussions GitHub](https://github.com/Moesthetics-code/educode/discussions)
+- [📖 Wiki du projet](https://github.com/Moesthetics-code/educode/wiki)
+- [🎥 Tutoriels vidéo](https://youtube.com/educode-tutorials)
+- [📝 Blog officiel](https://blog.educode.dev)
+
+---
+
+## 🤝 Contribution
+
+### Comment contribuer
+
+1. **Fork** le projet sur GitHub
+2. **Créer** une branche pour votre fonctionnalité : `git checkout -b feature/ma-fonctionnalite`
+3. **Implémenter** vos modifications avec tests
+4. **Tester** avec `python -m pytest`
+5. **Commiter** : `git commit -m "Ajout: ma fonctionnalité"`
+6. **Push** : `git push origin feature/ma-fonctionnalite`
+7. **Créer** une Pull Request
+
+### Types de contributions recherchées
+
+- 📚 **Nouveaux exercices** avec tests complets
+- 🐛 **Corrections de bugs** et améliorations
+- 📖 **Documentation** et tutoriels
+- 🌍 **Traductions** (internationalisation)
+- 🎨 **Améliorations UX/UI** de l'interface terminal
+- 🔒 **Audits de sécurité** et suggestions
+
+### Standards de contribution
+
+- **Code style** : PEP 8 avec Black formatter
+- **Tests** : Couverture minimale de 80%
+- **Documentation** : Docstrings pour toutes les fonctions publiques
+- **Commits** : Messages clairs et descriptifs
+- **Issues** : Template de rapport de bug ou demande de fonctionnalité
+
+[🤝 Guide détaillé de contribution](CONTRIBUTING.md)
+
+---
+
+## 📝 Licence
+
+Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour les détails.
+
+### Résumé de la licence
+
+✅ **Autorisé :**
+- Utilisation commerciale
+- Modification du code
+- Distribution
+- Usage privé
+
+❌ **Interdit :**
+- Responsabilité
+- Garantie
+
+### Attribution
+
+Si vous utilisez EduCode dans votre projet, merci d'inclure :
+```
+EduCode - Système d'apprentissage Python
+Copyright (c) 2025 Mohamed Ndiaye
+Disponible sous licence MIT
+```
+
+---
+
+## 🔮 Roadmap
+
+### Version 1.2.0 (Q1 2025)
+- [ ] **Support multi-langues** (FR, EN, ES)
+- [ ] **Exercices collaboratifs** avec revue de code
+- [ ] **Métriques de performance** détaillées
+- [ ] **Plugin VS Code** officiel
+
+### Version 1.3.0 (Q2 2025)
+- [ ] **Interface web** complémentaire
+- [ ] **Classements et défis** communautaires
+- [ ] **Integration GitHub** pour portfolios
+- [ ] **API REST** pour intégrations tierces
+
+### Version 2.0.0 (Q3 2025)
+- [ ] **Modules d'apprentissage** structurés (débutant → expert)
+- [ ] **Mentorat virtuel** avec IA
+- [ ] **Certification officielle** reconnue industrie
+- [ ] **Plateforme enterprise** pour entreprises
+
+[🔮 Roadmap complète et votes](https://github.com/Moesthetics-code/educode/projects/1)
+
+---
+
+## 📞 Support et communauté
+
+### Channels officiels
+
+- 🐛 **Bugs et issues** : [GitHub Issues](https://github.com/Moesthetics-code/educode/issues)
+- 💬 **Discussions** : [GitHub Discussions](https://github.com/Moesthetics-code/educode/discussions)  
+- 📧 **Contact direct** : mintok2000@gmail.com
+- 🐦 **Twitter** : [@EduCodePython](https://twitter.com/EduCodePython)
+
+### Stats du projet
+
+![GitHub Stars](https://img.shields.io/github/stars/Moesthetics-code/educode?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/Moesthetics-code/educode?style=social)
+![GitHub Issues](https://img.shields.io/github/issues/Moesthetics-code/educode)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Moesthetics-code/educode)
+
+---
+
+<div align="center">
+
+**⭐ Si EduCode vous aide à apprendre Python, donnez-nous une étoile sur GitHub ! ⭐**
+
+[⭐ Star sur GitHub](https://github.com/Moesthetics-code/educode) •
+[📦 Voir sur PyPI](https://pypi.org/project/educode/) •
+[📖 Documentation](https://educode.readthedocs.io/)
+
+Fait avec ❤️ pour la communauté Python
+
+</div>
