@@ -1,0 +1,15 @@
+requests
+ddgs
+playwright
+google-generativeai
+openai
+beautifulsoup4
+tenacity
+httpx
+
+[dev]
+pytest>=6.0
+pytest-asyncio
+black
+flake8
+mypy
