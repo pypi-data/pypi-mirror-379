@@ -1,0 +1,10 @@
+lair/__init__.py,sha256=DGIfIhXxweqCtoIiv9p4vOPG8zsHjtqvRQ0ZU681SKo,145
+lair/f2f.py,sha256=ItSfT0RnCvPzGWOm1s847MJzGswpVdrxmoB9_acgX4Y,1084
+lair/g_game.py,sha256=HJzpQwI86LWETVBRHodAsm0Mh34JYEj_4aLJUZWpdLs,810
+lair/odeve.py,sha256=T13i_58FnPdU65K1iKvrarhiDzJl6cOsh9m8NANTqvE,2076
+lair/rps.py,sha256=DlgS7bDO1pmYyZL-pKYxw4ekpht4PkSepInuuYevJQA,1318
+mylair-0.0.2.dist-info/licenses/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mylair-0.0.2.dist-info/METADATA,sha256=CcyQvsSlyAKaEnlmRpDlNAB3yxkhPVdX92LZvOXAOXo,681
+mylair-0.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mylair-0.0.2.dist-info/top_level.txt,sha256=WUCigC_WJHfGJDe1bqfVuVr87kl5AojePp2A6Xn91Go,5
+mylair-0.0.2.dist-info/RECORD,,
