@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: deepKernel
+Version: 0.0.4
+Summary: PaiZi DeepLine python SDK
+Author: meichiyuan
+Author-email: meichiyuan@pzeda.com
+License: GPL Licence
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: python-rapidjson==1.9
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+***
