@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+gliner_korre.egg-info/PKG-INFO
+gliner_korre.egg-info/SOURCES.txt
+gliner_korre.egg-info/dependency_links.txt
+gliner_korre.egg-info/requires.txt
+gliner_korre.egg-info/top_level.txt
+korre/__init__.py
+korre/entity_label.json
+korre/korre.py
+korre/relid2label.json
+korre/utils.py
