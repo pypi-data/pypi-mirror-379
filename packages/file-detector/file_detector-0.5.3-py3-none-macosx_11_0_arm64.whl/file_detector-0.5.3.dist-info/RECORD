@@ -1,0 +1,7 @@
+file_detector-0.5.3.dist-info/METADATA,sha256=S68F4p3XvC7FNg56N6t_tXEOMMFvng4pgBv_DXtg8KQ,85
+file_detector-0.5.3.dist-info/RECORD,,
+file_detector-0.5.3.dist-info/WHEEL,sha256=fnQopzE75wlJKiz-IOmRV1cvsZYDT_DOAVm8vB7J3wE,102
+file_detector/__init__.py,sha256=yW84_PqVJ5xVKGowfLINK9UGngoulnG8_NOdvqQgYzw,442
+file_detector/_file_detect.dylib,sha256=HiF3c_-stxeTfcs5GzGviCiNYnu6Bfo-7L0JARNcydA,217568
+file_detector/detect.py,sha256=3rOZvjfY6QiUXNOVTVcFbBmk5zJJO0Zzxk9B6WcZfiA,15927
+file_detector/magic.mgc,sha256=k3uuA_TERpsqrPFAOMzTlXA4TvTtRsqD2c7LZSdJmZc,10355472
