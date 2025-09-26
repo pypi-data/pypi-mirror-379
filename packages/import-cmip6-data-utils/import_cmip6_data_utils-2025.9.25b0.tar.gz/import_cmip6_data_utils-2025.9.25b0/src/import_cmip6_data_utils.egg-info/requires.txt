@@ -1,0 +1,10 @@
+intake-esgf>=v2025.7.16
+ipykernel
+ipywidgets
+pandas
+xarray
+xcdat
+tabulate
+
+[dev]
+pytest
