@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: lzhlog
+Version: 25.0.0
+Author-email: zhlei <leizuoho@mail.ustc.edu.cn>
+Requires-Python: >=3.10
+Requires-Dist: pandas
+Requires-Dist: logging
+Requires-Dist: inspect
+Requires-Dist: colorlog
