@@ -1,0 +1,12 @@
+README.md
+setup.py
+vittoriadb/__init__.py
+vittoriadb/client.py
+vittoriadb/configure.py
+vittoriadb/types.py
+vittoriadb.egg-info/PKG-INFO
+vittoriadb.egg-info/SOURCES.txt
+vittoriadb.egg-info/dependency_links.txt
+vittoriadb.egg-info/entry_points.txt
+vittoriadb.egg-info/requires.txt
+vittoriadb.egg-info/top_level.txt
