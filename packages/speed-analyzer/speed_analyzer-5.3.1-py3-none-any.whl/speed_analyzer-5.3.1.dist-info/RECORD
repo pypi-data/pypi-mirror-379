@@ -1,0 +1,15 @@
+speed_analyzer/__init__.py,sha256=UYpf2n99x1sSg8Z7fvH2Eu2wIx7To6DW3ocGpGkW_F0,13707
+speed_analyzer/analysis_modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+speed_analyzer/analysis_modules/bids_converter.py,sha256=NfftTmao1cYApnA_rEyoQscV-g9oI7WJ0IULEzG9r2E,8778
+speed_analyzer/analysis_modules/classify_cli.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+speed_analyzer/analysis_modules/device_converters.py,sha256=rB2pb8nXpZ4JofHHUw0IiAJDjk9I5XM5ippTc91F2qQ,2342
+speed_analyzer/analysis_modules/dicom_converter.py,sha256=TnZzWyfnTnal6N3vI2T0R1aI9XJwTHm7bd5puuKdjzw,8346
+speed_analyzer/analysis_modules/realtime_analyzer.py,sha256=evancy2vzyLoIfWr9SoqGShauzH0UG5WvnzABKGBMZI,26700
+speed_analyzer/analysis_modules/speed_script_events.py,sha256=EhPf4kaHtkkeoVlBXIzvY4CiM2Ncse8C4SvduRiHu7g,29059
+speed_analyzer/analysis_modules/video_generator.py,sha256=3Sc6ujagpXUzk8FAVHeI6GzFWKsDGBW2veDQmOom1k0,38793
+speed_analyzer/analysis_modules/yolo_analyzer.py,sha256=tqycrFVaHb8nQGfaw0an6XlxPxGeNoZ8GdwKECPKVx4,20402
+speed_analyzer-5.3.1.dist-info/licenses/LICENSE,sha256=jDzVUnVAAG0P1I6SmTdT0j854_nisiT5LhCaQWwgm08,1109
+speed_analyzer-5.3.1.dist-info/METADATA,sha256=bjLF_BIvAXvKLMIuYQNErpJmb78H6E69cFqCzI7n5c8,31813
+speed_analyzer-5.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+speed_analyzer-5.3.1.dist-info/top_level.txt,sha256=wGvlzmmhxp0PvQXO3UhrrhVuf7USj9L3y-S49EfDRiw,15
+speed_analyzer-5.3.1.dist-info/RECORD,,
