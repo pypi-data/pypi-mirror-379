@@ -1,0 +1,9 @@
+README.md
+setup.py
+image_processing/__init__.py
+image_processing/processing.py
+processing_image_alquimista.egg-info/PKG-INFO
+processing_image_alquimista.egg-info/SOURCES.txt
+processing_image_alquimista.egg-info/dependency_links.txt
+processing_image_alquimista.egg-info/requires.txt
+processing_image_alquimista.egg-info/top_level.txt
