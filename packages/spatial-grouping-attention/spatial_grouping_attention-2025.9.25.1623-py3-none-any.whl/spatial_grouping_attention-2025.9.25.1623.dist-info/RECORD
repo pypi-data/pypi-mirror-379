@@ -1,0 +1,7 @@
+spatial_grouping_attention/__init__.py,sha256=P1KcjvhCW3dKZ55SbKz9PBqdFOOyJJaEQFYx3MugGNc,952
+spatial_grouping_attention/spatial_grouping_attention.py,sha256=cEEhrHAF4aGU7DUpCHiTLysi8GXIRXTDL7tVzwo2BIY,15401
+spatial_grouping_attention/utils.py,sha256=UkZ2IoijC7Ql4yxCfRphscKOJASn_PPzDfS20c6FkDw,3548
+spatial_grouping_attention-2025.9.25.1623.dist-info/METADATA,sha256=h_3C4Ki5p4wTnUxtvPUzhYmWF-6SXIC0I3VmbhDx-ac,12757
+spatial_grouping_attention-2025.9.25.1623.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spatial_grouping_attention-2025.9.25.1623.dist-info/licenses/LICENSE,sha256=HwlSXeXjCa6g5pgzJ81ymOYIHVQ5cuFmpNsswDec29M,1511
+spatial_grouping_attention-2025.9.25.1623.dist-info/RECORD,,
