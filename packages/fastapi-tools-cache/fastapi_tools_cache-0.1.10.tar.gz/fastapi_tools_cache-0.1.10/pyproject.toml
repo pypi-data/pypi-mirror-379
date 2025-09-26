@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "fastapi-tools-cache"
+version = "0.1.10"
+readme = "README.md"
+description = "Fastapi cache"
+authors = ["Andrei Churin <aachurin@gmail.com>"]
+packages = [{ include = "fastapi_tools" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+redis = "^6.4.0"
+cachetools = "^6.2.0"
+pydantic = "^2.10.5"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.5"
+mypy = "^1.15.0"
+types-cachetools = "^5.5.0"
+
+[tool.ruff]
+unsafe-fixes = false
+line-length = 89
+
+[tool.ruff.lint]
+select = ["I"]
+
+[tool.mypy]
+no_namespace_packages = true
+disallow_untyped_defs = true
+follow_imports = "silent"
+extra_checks = true
+pretty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
