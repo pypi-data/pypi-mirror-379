@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kakaomail
+Version: 0.1.4
+Summary: send simple text using kakao mail
+Home-page: https://github.com/aloecandy/kakaomail
+Author: Kyunghonn
+Author-email: aloecandy@gmail.com
+License: MIT
+Keywords: kakao,mail,korean
+License-File: LICENSE
