@@ -1,0 +1,12 @@
+odoo/addons/calendar_document_popup/README.rst,sha256=DE7n5JkzT6F7mMFtfiNid6kKbpD4RAnGb-7f2hirHm8,1543
+odoo/addons/calendar_document_popup/__init__.py,sha256=fKmPF9-tnfhcCr-fK4yJc8-vXlsL-xa8eIxjarPEZ4s,155
+odoo/addons/calendar_document_popup/__manifest__.py,sha256=EshxmFD5wPeT3Z2-Uhjy0XxdavpU3i6Le_JxTd-yKjg,581
+odoo/addons/calendar_document_popup/i18n/es.po,sha256=BTKdKBT7kgAXY0ar3MSasL8kOTS3XU5aT9WkhS32LQs,1051
+odoo/addons/calendar_document_popup/models/__init__.py,sha256=1KmdAlgUAseznBvchKe7dhn5-r0WRLgqg1aQo_QhCjQ,163
+odoo/addons/calendar_document_popup/models/calendar_event.py,sha256=lFscGfdMXCh5UqVD1Lzq8FNZ1C2-wxIMmH4HsbqNytM,823
+odoo/addons/calendar_document_popup/static/description/icon.png,sha256=bVbNdnyk7PXHuZ3ye_Aqh1M9tbfPJ5zU5W1VnoO8mBQ,35820
+odoo/addons/calendar_document_popup/views/calendar_views.xml,sha256=ZRFXBTOk-bGpRc2v3SUsszFDwCr1D0BGXIrWLJltjGc,906
+odoo_addon_calendar_document_popup-15.0.1.0.1.dist-info/METADATA,sha256=yPLltJiiXsD7x5y6Skfw1zv4I4OAeIGGtNoi5C4kx1Y,2119
+odoo_addon_calendar_document_popup-15.0.1.0.1.dist-info/WHEEL,sha256=ZhOvUsYhy81Dx67gN3TV0RchQWBIIzutDZaJODDg2Vo,81
+odoo_addon_calendar_document_popup-15.0.1.0.1.dist-info/top_level.txt,sha256=QE6RBQ0QX5f4eFuUcGgU5Kbq1A_qJcDs-e_vpr6pmfU,4
+odoo_addon_calendar_document_popup-15.0.1.0.1.dist-info/RECORD,,
