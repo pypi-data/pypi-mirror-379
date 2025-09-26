@@ -1,0 +1,9 @@
+pydantic_neomodel_dict/__init__.py,sha256=gOApASEDqk9DbZJD2hfmEt5-qVh2OXMPAtY3l20wRd8,113
+pydantic_neomodel_dict/converter.py,sha256=84xesfXQ37Qs7uH-KE2hzGM1htIUKosD_1YKKh21NHc,47618
+pydantic_neomodel_dict/errors.py,sha256=omjNdFpyNHhGaDQzE25P6u8FIc3cJwGQClVA9NQQ6pI,106
+pydantic_neomodel_dict/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydantic_neomodel_dict-0.3.0.dist-info/licenses/LICENSE,sha256=b-mWAqmZRM27vesJF23hLvO--xPRGp-L4MmUqXQQEgY,1068
+pydantic_neomodel_dict-0.3.0.dist-info/METADATA,sha256=v3fNfVo8ji3uBrg-u0DE9-K0ynqbCht8KN-9-yfAS-4,20637
+pydantic_neomodel_dict-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pydantic_neomodel_dict-0.3.0.dist-info/top_level.txt,sha256=i0QVuLyAF56P-Ilqrg1YFoPh2xzoyRc4J8qUXxqpO9E,23
+pydantic_neomodel_dict-0.3.0.dist-info/RECORD,,
