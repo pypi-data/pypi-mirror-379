@@ -1,0 +1,40 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include uv.lock
+
+# 소스 코드 포함
+recursive-include src/eq1core *.py
+
+# 문서 포함
+recursive-include docs *.md *.rst *.txt
+
+# 예제 코드 포함
+recursive-include example *.py *.md
+
+# 설정 파일 포함
+recursive-include scripts *.py
+
+# 로그 디렉토리 제외
+global-exclude *.log
+global-exclude logs/
+global-exclude public/logs/
+
+# 캐시 파일 제외
+global-exclude __pycache__/
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+
+# 개발 환경 파일 제외
+global-exclude .git/
+global-exclude .venv/
+global-exclude .env
+global-exclude .DS_Store
+global-exclude *.swp
+global-exclude *.swo
+
+# 빌드 파일 제외
+global-exclude build/
+global-exclude dist/
+global-exclude *.egg-info/
