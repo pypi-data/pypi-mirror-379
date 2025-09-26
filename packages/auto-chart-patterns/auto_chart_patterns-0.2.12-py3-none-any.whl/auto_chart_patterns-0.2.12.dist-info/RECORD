@@ -1,0 +1,12 @@
+auto_chart_patterns/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auto_chart_patterns/chart_pattern.py,sha256=dlqbdM8tdQCBA4y1jDjHHFu1sdgZCLgp94HFqpoHbkg,7348
+auto_chart_patterns/flag_pennant_patterns.py,sha256=tZ4SiD_Impfz-0XWDs0Y8zw3504vSEB3l0_YGgliM-I,13009
+auto_chart_patterns/line.py,sha256=3GxjgVKGIqOqOXFhL1XiW5fnOLt1VfJ3bVq6fDK21zQ,3088
+auto_chart_patterns/reversal_patterns.py,sha256=_muzzZQViLCD5hi-SY7tEwYbYufFKhaZjmzbi8uXmwA,13854
+auto_chart_patterns/rsi_div_patterns.py,sha256=IaarULKZ-k7ohJVcpHbUVJvFqMfLxYKFF7LgLRmGboU,8254
+auto_chart_patterns/trendline_patterns.py,sha256=NuNHg7_aRqkIG6nmQLTCtbc3CpPZCCiPVtSFGTkFVDw,31324
+auto_chart_patterns/zigzag.py,sha256=muBivWhO1lEWbQevT2LKujy08JlhI9QICyKjk2s3jUs,11255
+auto_chart_patterns-0.2.12.dist-info/METADATA,sha256=m4xIIYxkLXawoMeZNgHhuY8MSh556-ZwtL4XHCPPrns,677
+auto_chart_patterns-0.2.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+auto_chart_patterns-0.2.12.dist-info/licenses/LICENSE,sha256=1YoFL1mg5DVYt9jUfKKxbE98PX8YjvrPoIGhHx4RV8w,1061
+auto_chart_patterns-0.2.12.dist-info/RECORD,,
