@@ -1,0 +1,471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS">
+<title>FIEライブラリ: 実行</title>
+<link href="fvalg-prod.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.6-FASTSP-p2 -->
+<script type="text/javascript">
+<!--
+function changeDisplayState (e){
+  var num=this.id.replace(/[^[0-9]/g,'');
+  var button=this.firstChild;
+  var sectionDiv=document.getElementById('dynsection'+num);
+  if (sectionDiv.style.display=='none'||sectionDiv.style.display==''){
+    sectionDiv.style.display='block';
+    button.src='open.gif';
+  }else{
+    sectionDiv.style.display='none';
+    button.src='closed.gif';
+  }
+}
+function initDynSections(){
+  var divs=document.getElementsByTagName('div');
+  var sectionCounter=1;
+  for(var i=0;i<divs.length-1;i++){
+    if(divs[i].className=='dynheader'&&divs[i+1].className=='dynsection'){
+      var header=divs[i];
+      var section=divs[i+1];
+      var button=header.firstChild;
+      if (button!='IMG'){
+        divs[i].insertBefore(document.createTextNode(' '),divs[i].firstChild);
+        button=document.createElement('img');
+        divs[i].insertBefore(button,divs[i].firstChild);
+      }
+      header.style.cursor='pointer';
+      header.onclick=changeDisplayState;
+      header.id='dynheader'+sectionCounter;
+      button.src='closed.gif';
+      section.id='dynsection'+sectionCounter;
+      section.style.display='none';
+      section.style.marginLeft='14px';
+      sectionCounter++;
+    }
+  }
+}
+window.onload = initDynSections;
+-->
+</script>
+<div class="contents">
+<h1>実行<br>
+<small>
+[<a class="el" href="group__fie__ps.html">照度差ステレオ</a>]</small>
+</h1>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__ps__do.html#gc87a29d344bb0c7db6793f55dd40454c">fnFIE_ps_curvature</a> (FHANDLE hsrc, FHANDLE hdst, DOUBLE normal_thresh, INT curvature_type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">曲率画像生成  <a href="#gc87a29d344bb0c7db6793f55dd40454c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__ps__do.html#gfb4c8e4ddeddb60818d98698e746f8c4">fnFIE_ps_frankot_chellappa</a> (FHANDLE hsrc, FHANDLE hdst, DOUBLE normal_thresh)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Frankot-Chellappa法による高さ画像生成  <a href="#gfb4c8e4ddeddb60818d98698e746f8c4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__ps__do.html#g12788a4a0352b677c510ba36fc76ece6">fnFIE_ps_horn_brooks</a> (FHANDLE hsrc, FHANDLE hdst, DOUBLE normal_thresh, INT niter)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Horn-Brooks法による高さ画像生成  <a href="#g12788a4a0352b677c510ba36fc76ece6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8">fnFIE_ps_woodham</a> (FHANDLE hsrc, DOUBLE *slant, DOUBLE *tilt, FHANDLE hdst_normal, FHANDLE hdst_albedo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"> <img class= inline-img src="oss.png" alt="[[OSS]]">  Woodhamによる法線画像生成  <a href="#g6489cb8d698cae140a74885c0a0a66b8"></a><br></td></tr>
+</table>
+<hr><h2>関数</h2>
+<a class="anchor" name="gc87a29d344bb0c7db6793f55dd40454c"></a><!-- doxytag: member="fie_ps_curvature.c::fnFIE_ps_curvature" ref="gc87a29d344bb0c7db6793f55dd40454c" args="(FHANDLE hsrc, FHANDLE hdst, DOUBLE normal_thresh, INT curvature_type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_ps_curvature           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hsrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hdst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>normal_thresh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>curvature_type</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+曲率画像生成 
+<p>
+法線画像から曲率画像を計算します。<p>
+引数 <em>hsrc</em> で法線画像を指定します。DOUBLE型3チャネルで、0,1,2チャネルにそれぞれx,y,z方向となる法線画像を入力します。 <a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> で作成した画像が利用出来ます。<p>
+引数 <em>curvature_type</em> で曲率の種類を指定します。種類は以下の値にて指定してください。<ul>
+<li>F_CURVATURE_GAUSSIAN</li></ul>
+<p>
+ガウス曲率を計算します。本関数では以下の式に従い計算します。<p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \textrm{gaussian curvature}=\dfrac {Z_{xx}Z_{yy}-Z_{xy}Z_{yx}}{({Z_x}^2+{Z_y}^2+1)^2} \]" src="form_904.png">
+<p>
+<p>
+<ul>
+<li>F_CURVATURE_MEAN</li></ul>
+<p>
+平均曲率を計算します。本関数では以下の式に従い計算します。<p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \textrm{mean curvature}=\dfrac {Z_{xx}(1+{Z_y}^2)-Z_{xy}Z_{x}Z_{y}-Z_{yx}Z_{x}Z_{y}+Z_{yy}(1+{Z_x}^2)}{2({Z_x}^2+{Z_y}^2+1)^{\frac {3} {2}}} \]" src="form_905.png">
+<p>
+<p>
+ここで<img class="formulaInl" alt="$ Z=Z(x,y) $" src="form_498.png">は法線画像の(x,y)の位置での高さを意味し、<img class="formulaInl" alt="$ Z_{x} $" src="form_906.png">は高さ<img class="formulaInl" alt="$ Z $" src="form_497.png">のxに関する偏微分を指します。<img class="formulaInl" alt="$ Z_{xy} $" src="form_907.png">は高さのxに関する偏微分を、yに関して偏微分したものを指します。他の記号についても同様です。<p>
+引数 <em>normal_thresh</em> は法線画像のZ成分が小さい場合の閾値です。 <em>normal_thresh</em> は法線:<img class="formulaInl" alt="$ (n_{x},n_{y},n_{z})$" src="form_908.png"> のZ成分が小さすぎる場合、勾配:<img class="formulaInl" alt="$ (Z_{x},Z_{y})=(-\dfrac{n_{x}}{n_{z}},-\dfrac{n_{y}}{n_{z}})$" src="form_909.png"> が計算出来なくなることを防ぐため、<img class="formulaInl" alt="$ n_z $" src="form_910.png"> を指定された値に置き換えて計算します。0より大きい数値を入力してください。（推奨値：単位法線ベクトル画像の場合、0.1）<p>
+<dl class="user" compact><dt><b>境界部分処理について</b></dt><dd>画像の周囲1画素については、本関数ではボーダー拡張を行い擬似的に周囲1画素の結果値を出力します。</dd></dl>
+引数 <em>hdst</em> は出力画像であり、指定された曲率の種類で計算された曲率画像を出力します。DOUBLE型1チャネル画像でなければいけません。<p>
+入力画像と出力画像の幅、高さは同じでなければなりません。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hsrc</em>&nbsp;</td><td>入力画像 ( type: double / ch: 3 ) </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>hdst</em>&nbsp;</td><td>出力画像(曲率画像) ( type: double / ch: 1 ) </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>normal_thresh</em>&nbsp;</td><td>法線のZ成分が小さい場合の閾値 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>curvature_type</em>&nbsp;</td><td>曲率の種類。下記のいずれかを指定。<ul>
+<li>F_CURVATURE_GAUSSIAN ガウス曲率</li><li>F_CURVATURE_MEAN 平均曲率</li></ul>
+</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td>不正な画像ハンドルが渡された。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td>パラメータ異常 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NOMEMORY</em>&nbsp;</td><td>メモリ不足エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー、または未初期化エラー</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>処理結果例:</b></dt><dd><table class="layoutTable">
+<tr>
+<td><div align="center">
+<img src="fie_ps_sample_code_normal.png" alt="fie_ps_sample_code_normal.png">
+<p><strong>入力法線画像</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_curvature_gaussian.png" alt="fie_ps_sample_code_curvature_gaussian.png">
+<p><strong>出力画像(ガウス曲率)</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_curvature_mean.png" alt="fie_ps_sample_code_curvature_mean.png">
+<p><strong>出力画像(平均曲率)</strong></p></div>
+  <p>
+</td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="gfb4c8e4ddeddb60818d98698e746f8c4"></a><!-- doxytag: member="fie_ps_depth.c::fnFIE_ps_frankot_chellappa" ref="gfb4c8e4ddeddb60818d98698e746f8c4" args="(FHANDLE hsrc, FHANDLE hdst, DOUBLE normal_thresh)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_ps_frankot_chellappa           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hsrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hdst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>normal_thresh</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Frankot-Chellappa法による高さ画像生成 
+<p>
+法線画像からFrankot-Chellappa法を用いて高さ画像を計算します。<p>
+引数 <em>hsrc</em> で法線画像を指定します。DOUBLE型3chで、0,1,2chにそれぞれx,y,z方向となる法線画像を入力します。 <a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> で作成した法線画像などが利用できます。<p>
+引数 <em>normal_thresh</em> は法線画像のZ成分が小さい場合の閾値です。 <em>normal_thresh</em> は法線:<img class="formulaInl" alt="$ (n_{x},n_{y},n_{z})$" src="form_908.png"> のZ成分が小さすぎる場合、勾配:<img class="formulaInl" alt="$ (Z_{x},Z_{y})=(-\dfrac{n_{x}}{n_{z}},-\dfrac{n_{y}}{n_{z}})$" src="form_909.png"> が計算出来なくなることを防ぐため、<img class="formulaInl" alt="$ n_z $" src="form_910.png"> を指定された値に置き換えて計算します。0より大きい数値を入力してください。（推奨値：単位法線ベクトル画像の場合、0.1）<p>
+引数 <em>hdst</em> は出力画像であり、Frankot-Chellappa法で計算された高さ画像を出力します。<p>
+高さ画像は値が大きいほどカメラに近いことを意味し、撮像した画像中で最も高さが低い箇所を0となるようにした高さを出力します。 高さ画像に出力される数値の単位は入力画像のxやyと同一のサイズである画素となります。 一般には<a class="el" href="group__fie__ps__doc.html#photometric_stereo_coordinate">本ライブラリでの座標系</a> の高さの値と一致しません。<p>
+入力画像と出力画像の幅、高さは同じでなければなりません。<p>
+法線を得ることが難しいため、高さ画像を得ることも難しい場合があります。例として、本ライブラリ座標系でのxy平面に対して垂直な段差を持つ物体で高さ画像を計算する場合、段差の高さは高さ画像に反映されません。 詳しくは<a class="el" href="group__fie__ps__doc.html#ps_warning">説明：注意</a> をご覧ください。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hsrc</em>&nbsp;</td><td>入力法線画像 ( type: double / ch: 3 ) </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>hdst</em>&nbsp;</td><td>出力高さ画像 ( type: double / ch: 1 ) </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>normal_thresh</em>&nbsp;</td><td>法線のZ成分が小さい場合の閾値</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td>不正な画像ハンドルが渡された。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td>パラメータ異常 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NOMEMORY</em>&nbsp;</td><td>メモリ不足エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー、または未初期化エラー</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>参考文献: </b></dt><dd></dd></dl>
+<ul>
+<li>Robert T. Frankot, Rama Chellappa(1988), "A Method for Enforcing Integrability in Shape from Shading Algorithms"</li>
+</ul>
+<dl class="user" compact><dt><b>処理結果例:</b></dt><dd><table class="layoutTable">
+<tr>
+<td><div align="center">
+<img src="fie_ps_sample_code_normal.png" alt="fie_ps_sample_code_normal.png">
+<p><strong>入力法線画像</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_frankot_chellappa.png" alt="fie_ps_sample_code_frankot_chellappa.png">
+<p><strong>出力画像</strong></p></div>
+  <p>
+</td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g12788a4a0352b677c510ba36fc76ece6"></a><!-- doxytag: member="fie_ps_depth.c::fnFIE_ps_horn_brooks" ref="g12788a4a0352b677c510ba36fc76ece6" args="(FHANDLE hsrc, FHANDLE hdst, DOUBLE normal_thresh, INT niter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_ps_horn_brooks           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hsrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hdst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>normal_thresh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>niter</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Horn-Brooks法による高さ画像生成 
+<p>
+法線画像からHorn-Brooks法を用いて高さ画像を計算します。<p>
+引数 <em>hsrc</em> で法線画像を指定します。DOUBLE型3chで、0,1,2chにそれぞれx,y,z方向となる法線画像を入力します。 <a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> で作成した法線画像などが利用できます。<p>
+引数 <em>normal_thresh</em> は法線画像のZ成分が小さい場合の閾値です。 <em>normal_thresh</em> は法線:<img class="formulaInl" alt="$ (n_{x},n_{y},n_{z})$" src="form_908.png"> のZ成分が小さすぎる場合、勾配:<img class="formulaInl" alt="$ (Z_{x},Z_{y})=(-\dfrac{n_{x}}{n_{z}},-\dfrac{n_{y}}{n_{z}})$" src="form_909.png"> が計算出来なくなることを防ぐため、<img class="formulaInl" alt="$ n_z $" src="form_910.png"> を指定された値に置き換えて計算します。0より大きい数値を入力してください。（推奨値：単位法線ベクトル画像の場合、0.1）<p>
+引数<em>niter</em> でHorn-Brooks法のイテレーション数を指定します。0以上の整数を入力してください。<p>
+100程度で輪郭強調の効果があります。イテレーション数が多い方が高さは正確になりますが、処理時間も増えます。<p>
+引数 <em>hdst</em> は出力画像であり、Horn-Brooks法で計算された高さ画像を出力します。<p>
+高さ画像は値が大きいほどカメラに近いことを意味し、撮像した画像中で最も高さが低い箇所を0となるようにした高さを出力します。 高さ画像に出力される数値の単位は入力画像のxやyと同一のサイズである画素となります。 一般には<a class="el" href="group__fie__ps__doc.html#photometric_stereo_coordinate">本ライブラリの座標系</a> での高さの値と一致しません。<p>
+入力画像と出力画像の幅、高さは同じでなければなりません。 また、入出力画像の幅、高さはともに3以上である必要があります。<p>
+法線を得ることが難しいため、高さ画像を得ることも難しい場合があります。例として、本ライブラリ座標系でのxy平面に対して垂直な段差を持つ物体で高さ画像を計算する場合、段差の高さは高さ画像に反映されません。 詳しくは<a class="el" href="group__fie__ps__doc.html#ps_warning">説明：注意</a> をご覧ください。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hsrc</em>&nbsp;</td><td>入力法線画像 ( type: double / ch: 3 ) </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>hdst</em>&nbsp;</td><td>出力高さ画像 ( type: double / ch: 1 ) </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>normal_thresh</em>&nbsp;</td><td>法線のZ成分が小さい場合の閾値 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>niter</em>&nbsp;</td><td>イテレーション数</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td>不正な画像ハンドルが渡された。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td>パラメータ異常 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NOMEMORY</em>&nbsp;</td><td>メモリ不足エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー、または未初期化エラー</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>参考文献: </b></dt><dd></dd></dl>
+<ul>
+<li>K. Ikeuchi(1983), "Constructing a Depth Map from Images" </li>
+<li>Berthold K.P Horn, Michael J Brooks(1986), "The variational approach to shape from shading" </li>
+<li>Y. Queau, Jean-Denis Durou, Jean-Francois Aujol(2018), "Normal Integration: A Survey"</li>
+</ul>
+<dl class="user" compact><dt><b>処理結果例:</b></dt><dd><table class="layoutTable">
+<tr>
+<td><div align="center">
+<img src="fie_ps_sample_code_normal.png" alt="fie_ps_sample_code_normal.png">
+<p><strong>入力法線画像</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_horn_brooks.png" alt="fie_ps_sample_code_horn_brooks.png">
+<p><strong>出力画像(niter=100)</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_horn_brooks_iter10000.png" alt="fie_ps_sample_code_horn_brooks_iter10000.png">
+<p><strong>出力画像(niter=10000)</strong></p></div>
+  <p>
+</td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g6489cb8d698cae140a74885c0a0a66b8"></a><!-- doxytag: member="fie_ps_woodham.c::fnFIE_ps_woodham" ref="g6489cb8d698cae140a74885c0a0a66b8" args="(FHANDLE hsrc, DOUBLE *slant, DOUBLE *tilt, FHANDLE hdst_normal, FHANDLE hdst_albedo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_ps_woodham           </td>
+          <td>(</td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hsrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE *&nbsp;</td>
+          <td class="paramname"> <em>slant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE *&nbsp;</td>
+          <td class="paramname"> <em>tilt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hdst_normal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FHANDLE&nbsp;</td>
+          <td class="paramname"> <em>hdst_albedo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ <img class= inline-img src="oss.png" alt="[[OSS]]">  Woodhamによる法線画像生成 
+<p>
+Woodham の手法を用いて法線画像を計算します。相異なる光源ベクトルの照明を用いて撮像された画像たちから物体の表面の法線を推定します。本手法では光源ベクトルは3つ以上必要で、光源ベクトルたちは全て同一平面上に存在してはいけません。手法や推奨環境について、詳しくは<a class="el" href="group__fie__ps__doc.html#about_ps">説明</a> をご覧ください。 手法の性質上、法線を得ることが難しい場合があります。詳しくは<a class="el" href="group__fie__ps__doc.html#ps_warning">説明：注意</a> をご覧ください。<p>
+<em>slant</em>, <em>tilt</em> は<a class="el" href="group__fie__ps__doc.html#photometric_stereo_normal_vector_and_light_source_vector">光源ベクトル</a> の情報を格納する配列です。入力画像のcチャネルに格納されている画像を撮像した際の光源ベクトルの情報をslant[c],tilt[c]に格納します。<em>slant</em>, <em>tilt</em> の要素の単位は度（°）です。 <em>slant</em> や<em>tilt</em> について、直接計測が難しい場合のための補助関数があります。<p>
+<a class="el" href="group__fie__ps__tool.html#gbd4d5a917c521687c8ed9aa97ea20a2c" title="照度差ステレオ光源ベクトルの情報補助関数（空間座標）">fnFIE_ps_woodham_calc_light_from_pos()</a><p>
+<a class="el" href="group__fie__ps__tool.html#g238f3f409973ec266af30803eba91adc" title="照度差ステレオ光源ベクトルの情報補助関数（リング照明）...">fnFIE_ps_woodham_calc_light_ring()</a><p>
+入力画像は複数枚撮像した画像を統合し一枚の画像にして入力します。 詳しくは<a class="el" href="group__fie__ps__sample.html">サンプルコード</a> をご覧ください。また各画像での光源は同一の輝度である前提です。<p>
+出力画像について、本関数では法線画像とアルベド画像を計算できます。<ul>
+<li>法線画像は各点について法線ベクトルのノルムが1になるよう正規化され、x成分、y成分、z成分がそれぞれ法線画像の0ch、1ch、2chに格納されます。</li><li>アルベド画像は入射光輝度について、入力画像の型がF_IMG_UC8型の場合はUC8_MAX,F_IMG_US16型の場合はUS16_MAX,DOUBLE型の場合は1である、としたものが計算されます。</li></ul>
+<p>
+出力画像について、法線画像かアルベド画像で不要なものがある場合NULLを指定出来ます。<p>
+入力画像と出力画像は下記の条件を全て満たしていなければいけません。<p>
+<ul>
+<li>入力画像の型はF_IMG_UC8,F_IMG_US16,F_IMG_DOUBLEのいずれか</li><li>入力画像がF_IMG_DOUBLE型の場合、全ての画素値が0以上</li><li>入力画像のチャネル数は3以上16以下</li><li>出力画像の型はF_IMG_DOUBLE型</li><li>出力画像のチャネル数について、法線画像は3、アルベド画像は1</li><li>入力画像の幅と高さは出力画像と等しい</li></ul>
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hsrc</em>&nbsp;</td><td>入力画像 ( type: uc8, us16, double ) </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>slant</em>&nbsp;</td><td>光源ベクトルの情報であるslantの配列 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>tilt</em>&nbsp;</td><td>光源ベクトルの情報であるtiltの配列 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>hdst_normal</em>&nbsp;</td><td>出力法線画像 ( type: double, / ch: 3 ) </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>hdst_albedo</em>&nbsp;</td><td>出力アルベド画像 ( type: double, / ch: 1 )</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_IMAGE</em>&nbsp;</td><td>不正な画像ハンドルが渡された。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td>パラメータ異常 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NOMEMORY</em>&nbsp;</td><td>メモリ不足エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_CALC_IMPOSSIBLE</em>&nbsp;</td><td>計算不能エラー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー、または未初期化エラー</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>参考文献: </b></dt><dd></dd></dl>
+<ul>
+<li>Rober J.Woodham(1980) ,"Photometric method for determining surface orientation from multiple images"</li>
+</ul>
+<dl class="user" compact><dt><b>処理結果例:</b></dt><dd><table class="layoutTable">
+<tr>
+<td><div align="center">
+<img src="fie_ps_sample_code_input_00.png" alt="fie_ps_sample_code_input_00.png">
+<p><strong>入力画像0チャネル</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_input_01.png" alt="fie_ps_sample_code_input_01.png">
+<p><strong>入力画像1チャネル</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_input_02.png" alt="fie_ps_sample_code_input_02.png">
+<p><strong>入力画像2チャネル</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_input_03.png" alt="fie_ps_sample_code_input_03.png">
+<p><strong>入力画像3チャネル</strong></p></div>
+  <p>
+</td></tr>
+<tr>
+<td><div align="center">
+<img src="fie_ps_sample_code_input_04.png" alt="fie_ps_sample_code_input_04.png">
+<p><strong>入力画像4チャネル</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_input_05.png" alt="fie_ps_sample_code_input_05.png">
+<p><strong>入力画像5チャネル</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_input_06.png" alt="fie_ps_sample_code_input_06.png">
+<p><strong>入力画像6チャネル</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_sample_code_input_07.png" alt="fie_ps_sample_code_input_07.png">
+<p><strong>入力画像7チャネル</strong></p></div>
+  <p>
+</td></tr>
+<tr>
+<td><div align="center">
+<img src="fie_ps_sample_code_normal.png" alt="fie_ps_sample_code_normal.png">
+<p><strong>出力法線画像</strong></p></div>
+  <p>
+</td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1">
+<address style="align: right; color: #cccccc;">
+	<small>
+	Documentation copyright &copy; 2009-2025 TOKYO ELECTRON DEVICE LIMITED. <br>
+	Generated on Tue Sep 16 09:08:52 2025 for FIEライブラリ by&nbsp;<a href="http://www.doxygen.org/index.html">doxygen</a> 1.5.6-FASTSP-p2
+	</small>
+</address>
+</body>
+</html>

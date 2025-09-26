@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS">
+<title>FIEライブラリ: ツール</title>
+<link href="fvalg-prod.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.6-FASTSP-p2 -->
+<script type="text/javascript">
+<!--
+function changeDisplayState (e){
+  var num=this.id.replace(/[^[0-9]/g,'');
+  var button=this.firstChild;
+  var sectionDiv=document.getElementById('dynsection'+num);
+  if (sectionDiv.style.display=='none'||sectionDiv.style.display==''){
+    sectionDiv.style.display='block';
+    button.src='open.gif';
+  }else{
+    sectionDiv.style.display='none';
+    button.src='closed.gif';
+  }
+}
+function initDynSections(){
+  var divs=document.getElementsByTagName('div');
+  var sectionCounter=1;
+  for(var i=0;i<divs.length-1;i++){
+    if(divs[i].className=='dynheader'&&divs[i+1].className=='dynsection'){
+      var header=divs[i];
+      var section=divs[i+1];
+      var button=header.firstChild;
+      if (button!='IMG'){
+        divs[i].insertBefore(document.createTextNode(' '),divs[i].firstChild);
+        button=document.createElement('img');
+        divs[i].insertBefore(button,divs[i].firstChild);
+      }
+      header.style.cursor='pointer';
+      header.onclick=changeDisplayState;
+      header.id='dynheader'+sectionCounter;
+      button.src='closed.gif';
+      section.id='dynsection'+sectionCounter;
+      section.style.display='none';
+      section.style.marginLeft='14px';
+      sectionCounter++;
+    }
+  }
+}
+window.onload = initDynSections;
+-->
+</script>
+<div class="contents">
+<h1>ツール<br>
+<small>
+[<a class="el" href="group__fie__ps.html">照度差ステレオ</a>]</small>
+</h1>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__ps__tool.html#gbd4d5a917c521687c8ed9aa97ea20a2c">fnFIE_ps_woodham_calc_light_from_pos</a> (<a class="el" href="structDPNT3__T.html">DPNT3_T</a> *source, <a class="el" href="structDPNT3__T.html">DPNT3_T</a> *target, DOUBLE *slant, DOUBLE *tilt, INT n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">照度差ステレオ光源ベクトルの情報補助関数（空間座標）  <a href="#gbd4d5a917c521687c8ed9aa97ea20a2c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">INT FVALGAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fie__ps__tool.html#g238f3f409973ec266af30803eba91adc">fnFIE_ps_woodham_calc_light_ring</a> (DOUBLE height, DOUBLE radius, DOUBLE initial_angle, INT light_order, DOUBLE *slant, DOUBLE *tilt, INT n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">照度差ステレオ光源ベクトルの情報補助関数（リング照明）  <a href="#g238f3f409973ec266af30803eba91adc"></a><br></td></tr>
+</table>
+<hr><h2>関数</h2>
+<a class="anchor" name="gbd4d5a917c521687c8ed9aa97ea20a2c"></a><!-- doxytag: member="fie_ps_tool.c::fnFIE_ps_woodham_calc_light_from_pos" ref="gbd4d5a917c521687c8ed9aa97ea20a2c" args="(DPNT3_T *source, DPNT3_T *target, DOUBLE *slant, DOUBLE *tilt, INT n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_ps_woodham_calc_light_from_pos           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDPNT3__T.html">DPNT3_T</a> *&nbsp;</td>
+          <td class="paramname"> <em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDPNT3__T.html">DPNT3_T</a> *&nbsp;</td>
+          <td class="paramname"> <em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE *&nbsp;</td>
+          <td class="paramname"> <em>slant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE *&nbsp;</td>
+          <td class="paramname"> <em>tilt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+照度差ステレオ光源ベクトルの情報補助関数（空間座標） 
+<p>
+<a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> で用いる<em>slant</em>, <em>tilt</em> 形式の光源ベクトルの情報を計算する補助関数です。<p>
+本関数での座標系は、<a class="el" href="group__fie__ps__doc.html#photometric_stereo_coordinate">説明：照度差ステレオモジュールで用いる座標系</a> に説明があります。<p>
+本関数は光源本体の座標と照射先の座標が既知である場合を想定しています。計算した角度は度(°)で出力されます。<p>
+<div align="center">
+<img src="fie_ps_woodham_calc_light_from_pos_figure.png" alt="fie_ps_woodham_calc_light_from_pos_figure.png">
+</div>
+<p>
+<em>n</em> で光源の個数を入力します。<em>n</em> は1以上の整数を入力してください。<p>
+光源の位置の配列 <em>source</em> と光源の照射先の位置の配列 <em>target</em>, 出力する光源ベクトルの情報の配列 <em>slant</em>, <em>tilt</em> について、配列の要素数は光源の個数と同じ<em>n</em> でなければいけません。<p>
+<em>slant</em>, <em>tilt</em> について、<ul>
+<li>slant[i]には、target[i]からsource[i]への方向ベクトルのslantが格納されます。</li><li>tilt[i]には、target[i]からsource[i]への方向ベクトルのtiltが格納されます。</li></ul>
+<p>
+slantとtiltの定義は <a class="el" href="group__fie__ps__doc.html#slant_and_tilt">slantとtilt</a> を参照ください。<p>
+またsource[i]とtarget[i]の距離が非常に近い場合はパラメータエラーとなります。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>source</em>&nbsp;</td><td>光源の始点の座標 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>target</em>&nbsp;</td><td>光源の終点の座標 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>slant</em>&nbsp;</td><td>出力光源ベクトルの情報であるslantの配列 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>tilt</em>&nbsp;</td><td>出力光源ベクトルの情報であるtiltの配列 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>n</em>&nbsp;</td><td>光源の数（1以上の整数）</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td>パラメータ異常 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー、または未初期化エラー</td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>参照:</b></dt><dd><a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="g238f3f409973ec266af30803eba91adc"></a><!-- doxytag: member="fie_ps_tool.c::fnFIE_ps_woodham_calc_light_ring" ref="g238f3f409973ec266af30803eba91adc" args="(DOUBLE height, DOUBLE radius, DOUBLE initial_angle, INT light_order, DOUBLE *slant, DOUBLE *tilt, INT n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT FVALGAPI fnFIE_ps_woodham_calc_light_ring           </td>
+          <td>(</td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE&nbsp;</td>
+          <td class="paramname"> <em>initial_angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>light_order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE *&nbsp;</td>
+          <td class="paramname"> <em>slant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DOUBLE *&nbsp;</td>
+          <td class="paramname"> <em>tilt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+照度差ステレオ光源ベクトルの情報補助関数（リング照明） 
+<p>
+<a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> で用いる<em>slant</em>, <em>tilt</em> 形式の光源ベクトルの情報を計算する補助関数です。<p>
+本関数での座標系は、<a class="el" href="group__fie__ps__doc.html#photometric_stereo_coordinate">説明：照度差ステレオモジュールで用いる座標系</a> に説明があります。<p>
+本関数はリング照明において等間隔で部分点灯した場合を想定しています。<p>
+撮像画像のx,yのスケールが同じと仮定します。 リング照明のなす平面がカメラ光軸と直交する場合のみ利用でき、 照明の光は、それぞれのリングの位置から、リングの中心からｚ軸負の方向に<em>height</em> だけ移動した点にむかって照射されるとします。<p>
+リング照明の半径、光源の高さ、リングの点灯順序を入力し<em>slant</em>, <em>tilt</em> を計算します。計算した角度は度(°)で出力されます。<p>
+光源の半径、光源の高さは単位を揃える必要があります。例えばどちらもmmで入力して下さい。<p>
+光源の半径<em>radius</em> は0より大きい値を入力してください。<p>
+光源の高さ<em>height</em> は0より大きい値を入力して下さい。<p>
+<table class="layoutTable">
+<tr>
+<td><div align="center">
+<img src="fie_ps_woodham_calc_light_ring_ring_lighting.png" alt="fie_ps_woodham_calc_light_ring_ring_lighting.png">
+<p><strong>Fig.1 リング照明(ring lighting)</strong></p></div>
+  </td><td><div align="center">
+<img src="fie_ps_woodham_calc_light_ring_initial_angle_n4_clockwise.png" alt="fie_ps_woodham_calc_light_ring_initial_angle_n4_clockwise.png">
+<p><strong>Fig.2 n=4,light_order=0(時計回り,clockwise)</strong></p></div>
+   </td></tr>
+</table>
+<p>
+<em>light_order</em> では、リング照明の点灯順序を指定します。カメラの方向から見た場合の回転方向で時計回りか反時計回りを指定します。 <ul>
+<li>時計回りの場合は0 </li>
+<li>反時計回りの場合は1</li>
+</ul>
+を入力してください。<p>
+光源の初期角度：<em>tilt</em> の初期角度です。単位は度(°)で入力し、0以上360未満の値を入力してください。<p>
+<em>n</em> で光源の個数を入力します。<em>n</em> は1以上の整数を入力してください。<p>
+<em>slant</em>, <em>tilt</em> はDOUBLE型の配列を光源の個数<em>n</em> 分確保して下さい。<p>
+Fig.2はn=4,light_order=0(時計回り)のリング照明をカメラの方向から見たイメージ図です。黄色は照明を表し、0→1→2→3 の順で点灯した場合です。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>height</em>&nbsp;</td><td>光源の高さ（0＜height） </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>radius</em>&nbsp;</td><td>光源の半径（0＜radius） </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>initial_angle</em>&nbsp;</td><td>光源の初期角度（0≦initial_angle＜360） </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>light_order</em>&nbsp;</td><td>光源の点灯順序</td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>slant</em>&nbsp;</td><td>出力光源ベクトルの情報であるslantの配列 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>tilt</em>&nbsp;</td><td>出力光源ベクトルの情報であるtiltの配列</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>n</em>&nbsp;</td><td>光源の個数（1以上の整数）</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NONE</em>&nbsp;</td><td>正常終了 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_INVALID_PARAM</em>&nbsp;</td><td>パラメータ異常 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>F_ERR_NO_LICENCE</em>&nbsp;</td><td>ライセンスエラー、または未初期化エラー</td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>参照:</b></dt><dd><a class="el" href="group__fie__ps__do.html#g6489cb8d698cae140a74885c0a0a66b8" title=" &lt;img class= inline-img src=&quot;oss.png&quot; alt=&quot;[[OSS]]&quot;&gt;  Woodhamによる法...">fnFIE_ps_woodham()</a> </dd></dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1">
+<address style="align: right; color: #cccccc;">
+	<small>
+	Documentation copyright &copy; 2009-2025 TOKYO ELECTRON DEVICE LIMITED. <br>
+	Generated on Tue Sep 16 09:08:52 2025 for FIEライブラリ by&nbsp;<a href="http://www.doxygen.org/index.html">doxygen</a> 1.5.6-FASTSP-p2
+	</small>
+</address>
+</body>
+</html>
