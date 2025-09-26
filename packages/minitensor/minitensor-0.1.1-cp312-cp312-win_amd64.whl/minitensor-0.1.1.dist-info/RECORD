@@ -1,0 +1,13 @@
+minitensor-0.1.1.dist-info/METADATA,sha256=LSxs1UY7nSeRiVZXxhAdwA6nm58fPqR2CUaxZoOcF4g,10952
+minitensor-0.1.1.dist-info/WHEEL,sha256=4hYCffp0RsSVQAuv2PMtXQ9QS7YSHeZi4PrSg-wi2q0,96
+minitensor-0.1.1.dist-info/licenses/LICENSE,sha256=Pk4BrOctYkzVK2UWi6Q-tnM7oVaj00gV-CQNnKYkpg0,11137
+minitensor/__init__.py,sha256=s5WWsm7GPgaimFu7sfUruYBoK9_b8ugIB6iLqnqV40Y,10483
+minitensor/_core.cp312-win_amd64.pyd,sha256=yMkW9RZi9E4r6Cs18uU3tkIG9qIt-VlL4BadDV-unZ4,9958400
+minitensor/_version.py,sha256=qiu5tRIdxP1xgXKvg3IvLtodKjRHzko_yM-7xO6wyvo,145
+minitensor/functional.py,sha256=VpIKDp-vZGgipSMz6dY9jbg9vKhbsAG_DphMsIUCM3g,20698
+minitensor/nn/__init__.py,sha256=GGSF9dm4hCZjOmGvyVoRoIMv2SQILB3z3jMs3GoT6k0,7663
+minitensor/numpy_compat.py,sha256=76C1X4uenQ-jOqsTqXBkVSqXTMpYjHzSQD6tHNxAOgU,1163
+minitensor/optim/__init__.py,sha256=46LqbWmW70KnnUaHAjWwB8CYwJ9p6Dwrk1bB_jysU2Y,3856
+minitensor/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minitensor/tensor.py,sha256=kA6ZwjMXlZagZvIhmBb7IBh8vdjJK2ymvFSAkJnodHg,61067
+minitensor-0.1.1.dist-info/RECORD,,
