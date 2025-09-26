@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: fsoe_master
+Version: 0.2.0
+Summary: FSoE Master Library
+Author-email: Ingenia Motion Control <support@ingeniamc.com>
+Requires-Python: >=3.9
+License-File: LICENSE.md
+
