@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dekho_cli/__init__.py
+dekho_cli/__main__.py
+dekho_cli/main.py
+dekho_cli.egg-info/PKG-INFO
+dekho_cli.egg-info/SOURCES.txt
+dekho_cli.egg-info/dependency_links.txt
+dekho_cli.egg-info/entry_points.txt
+dekho_cli.egg-info/requires.txt
+dekho_cli.egg-info/top_level.txt

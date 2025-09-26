@@ -1,0 +1,2 @@
+[console_scripts]
+dekho-cli = dekho_cli.main:main
