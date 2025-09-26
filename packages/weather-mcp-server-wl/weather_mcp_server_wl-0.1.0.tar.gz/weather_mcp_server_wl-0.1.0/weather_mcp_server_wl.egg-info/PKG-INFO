@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: weather_mcp_server_wl
+Version: 0.1.0
+Summary: 给一个地名，然后获取该地方的天气情况
+Requires-Python: >=3.13.2
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.14.1
