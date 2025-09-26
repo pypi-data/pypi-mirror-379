@@ -1,0 +1,14 @@
+<div class="bg-black text-green-400 p-4 rounded shadow h-64 overflow-y-auto font-mono" id="logsTerminal">
+    {% for log in logs %}
+        <div>[{{ log.timestamp }}] [{{ log.level }}] {{ log.message }}</div>
+    {% endfor %}
+</div>
+<button class="mt-2 px-2 py-1 bg-gray-700 text-white rounded" onclick="toggleTerminalFullScreen()">Toggle Fullscreen</button>
+
+<script>
+function toggleTerminalFullScreen() {
+    const terminal = document.getElementById('logsTerminal');
+    terminal.classList.toggle('h-screen');
+    terminal.classList.toggle('overflow-auto');
+}
+</script>
