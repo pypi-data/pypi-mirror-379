@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uthavu-tools"
+version = "0.1.1"
+description = "Collection of CLI utilities from Uthavu Software"
+authors = [
+    { name = "Uthavu Software - People’s Solution", email = "your-email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+
+[project.scripts]
+pushmain = "uthavu_tools.pushmain:main"
+checkbranch = "uthavu_tools.checkbranch:main"
+cleanup = "uthavu_tools.cleanup:main"
