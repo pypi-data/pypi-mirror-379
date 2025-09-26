@@ -1,0 +1,2 @@
+[console_scripts]
+vgd = visual_graph_datasets.cli:cli
