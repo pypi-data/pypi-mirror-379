@@ -1,0 +1,6 @@
+include README.md LICENSE
+recursive-include easyjudge/templates *.html
+recursive-include easyjudge/download *
+include easyjudge/participants.json
+include easyjudge/config.json
+

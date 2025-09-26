@@ -1,0 +1,2 @@
+[console_scripts]
+easyjudge = easyjudge.app:run
