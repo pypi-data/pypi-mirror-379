@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: CharFrequencyLib
+Version: 0.1.0
+Summary: Calculate character frequency in text
+Author: Ashjan Walid Alakhaly
+Author-email: Ashjan Walid Alakhaly <alakhaly58@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions...
+        
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# CharFrequencyLib
+مكتبة لحساب تكرار كل حرف في نص. 
+
+## التثبيت
+pip install CharFrequencyLib 
+
+## CMD
+charfrequencylib "hello"
+# 'h':1
+# 'e':1
+# 'l':2
+# 'o':1 
+
+## Python
+from char_frequency_lib import char_frequency
+text = "hello"
+print(char_frequency(text))  
+# {'h':1, 'e':1, 'l':2, 'o':1} 
