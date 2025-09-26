@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ubpe-native
+Version: 0.1.0
+Summary: Python implementayion of UBPE tokenization algorithm.
+License: MIT
+License-File: LICENSE
+Author: Scurrra (Ilja Baroŭski)
+Author-email: iscurrra@gmail.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: Implementation
+Description-Content-Type: text/markdown
+
+# ubpe-native
+
+Plain Python implementation of the Universal Byte Pair Encoding Tokenizer.
