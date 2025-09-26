@@ -1,0 +1,39 @@
+
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "takucyrpt"
+version = "1.0.0"
+description = "A simple and comprehensive text encryption/decryption library"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Tarun Kumar", email = "tarunkum8800@gmail.com"},
+]
+keywords = ["encryption", "decryption", "cipher", "text", "security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Text Processing",
+]
+
+[project.urls]
+Homepage = "https://github.com/tarun922/takucyrpt"
+"Bug Reports" = "https://github.com/tarun922/takucyrpt/issues"
+"Source" = "https://github.com/tarun922/takucyrpt"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["takucyrpt*"]
