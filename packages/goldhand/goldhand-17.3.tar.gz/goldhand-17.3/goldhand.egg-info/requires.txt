@@ -1,0 +1,10 @@
+pandas_datareader
+pandas==2.2.2
+pandas_ta
+plotly
+scipy
+numpy==1.26.4
+numpy
+requests
+cloudscraper
+tqdm
