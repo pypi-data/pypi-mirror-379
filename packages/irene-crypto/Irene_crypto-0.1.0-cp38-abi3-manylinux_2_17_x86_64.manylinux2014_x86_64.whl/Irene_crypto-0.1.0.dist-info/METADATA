@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: Irene_crypto
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Security :: Cryptography
+Summary: Encrypt an arbitrary list of messages into one ciphertext and decrypt back (AEAD)
+Home-Page: 
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# multimsg-aead
+
+Rust library (exposed to Python via **pyo3 + maturin**) that encrypts an arbitrary list of messages
+into a single authenticated ciphertext and decrypts it back.
+
+- AEAD ciphers: **AES-256-GCM** (default) or **ChaCha20-Poly1305**
+- Self-describing envelope: `[version | alg | noncelen | nonce | ciphertext+tag]`
+- Optional **AAD** binds context and header for integrity
+- Enforces **>= 3 messages**
+- Cross-platform: pure Rust crypto crates (Linux/Windows)
+
+## Build (dev install into current venv)
+```bash
+pip install maturin
+maturin develop --release
+```
+
+## Use from Python
+```python
+from multimsg_aead import generate_key, encrypt_texts, decrypt_texts
+
+key = generate_key()  # 32 random bytes
+msgs = ["hello", "from", "rust+python"]
+aad = b"example-context"           # optional
+
+ct = encrypt_texts(msgs, key, algorithm="aes256gcm", aad=aad)
+print("ciphertext len:", len(ct))
+
+roundtrip = decrypt_texts(ct, key, aad=aad)
+print(roundtrip)                    # ['hello', 'from', 'rust+python']
+```
+
+## Notes
+- Do **not** reuse a (key, nonce) pair. Nonce is random & included in the envelope.
+- If decryption fails, you likely used the wrong key/AAD or the data was corrupted.
+- Import name is `multimsg_aead` (underscore); pip package is `multimsg-aead` (hyphen).
+
