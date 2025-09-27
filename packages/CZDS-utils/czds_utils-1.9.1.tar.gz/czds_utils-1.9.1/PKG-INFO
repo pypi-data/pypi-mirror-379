@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: CZDS-utils
+Version: 1.9.1
+Summary: Tools for processing XAS spectra.
+Author-email: James Moraes de Almeida <james@almeida.page>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: regex
+Requires-Dist: scipy
+Requires-Dist: lmfit
+Requires-Dist: matplotlib
+Dynamic: license-file
+
+# Cruzeiro-do-Sul-Utils
+Libraries for Cruzeiro do Sul Database
+
+
+# XDI -> json example:
+
+```
+import CZDS_utils
+from CZDS_utils import XDI
+
+#instantiate XDI class
+xdi = XDI("somefile.xdi")
+
+# print json string before normalization
+print(xdi)
+
+# include normalized data column 
+xdi.normalize()
+
+#print json string after normalization
+print(xdi)
+
+#save to file (json)
+
+xdi.save("somefile.json")
+```
