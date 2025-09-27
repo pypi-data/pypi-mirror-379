@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/HotReload/HotReload.py
+src/HotReload/__init__.py
+src/HotReload/main.py
+src/universal_hotreload_python.egg-info/PKG-INFO
+src/universal_hotreload_python.egg-info/SOURCES.txt
+src/universal_hotreload_python.egg-info/dependency_links.txt
+src/universal_hotreload_python.egg-info/entry_points.txt
+src/universal_hotreload_python.egg-info/requires.txt
+src/universal_hotreload_python.egg-info/top_level.txt
