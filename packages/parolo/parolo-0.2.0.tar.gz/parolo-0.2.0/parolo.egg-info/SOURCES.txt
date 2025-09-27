@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+parolo/__init__.py
+parolo/_core.py
+parolo/prompt.py
+parolo/tenants.py
+parolo.egg-info/PKG-INFO
+parolo.egg-info/SOURCES.txt
+parolo.egg-info/dependency_links.txt
+parolo.egg-info/requires.txt
+parolo.egg-info/top_level.txt
+tests/test_backcompat_behavior.py
+tests/test_namespaced_api.py
+tests/test_packaging_slow.py
+tests/test_prompt.py
+tests/test_tenants.py
