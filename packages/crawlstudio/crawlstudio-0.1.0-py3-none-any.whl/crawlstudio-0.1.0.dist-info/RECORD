@@ -1,0 +1,16 @@
+crawlstudio/__init__.py,sha256=tF4MzSXHzkoVnKZAMcb3pTdqQovhl9trP-UJc0ujZGE,359
+crawlstudio/cli.py,sha256=EEGTN0Ba5LML3F2nE_JUGWvvP6pEQfijVX_FVxh1scM,3193
+crawlstudio/exceptions.py,sha256=rXm-e1UAvQzJ9SBH8f9jRSKfuEM0mC8X5PbGZAc5goA,429
+crawlstudio/models.py,sha256=K-ZCjliDAP9ktYiyudi1YAB9t--v4st4Uoi-2QUuW_w,1015
+crawlstudio/utils.py,sha256=K-OIeG0rzVgQo3UEk7ADjsm7EpsC3LfAbpvNOuF0vX8,960
+crawlstudio/backends/__init__.py,sha256=Tyf21wOrFY3dVqvDAPapvBuS3viHTMXqb_N7zOviZrE,392
+crawlstudio/backends/base.py,sha256=MtpAleOt8g6whwv9aeeF4ibjRORZ32dFKrHIRoZT2RE,293
+crawlstudio/backends/browser_use.py,sha256=G0_qftdpuFi8lKCAntKncJ1oGxXgCLJkTUa0HxzOCOQ,12124
+crawlstudio/backends/crawl4ai.py,sha256=wWWfxYauArt3k04eHgQO4L-WPcm_xWbBhXTot9O1uvY,5200
+crawlstudio/backends/firecrawl.py,sha256=MnUFBJUC6qNDC6FeWmIutytAE2aQDHtKMOafE1JMoyY,3887
+crawlstudio/backends/scrapy.py,sha256=KKX7oBlEmCovXZjnybvU_XNBU_u40qifUAtDG4uc4PE,6034
+crawlstudio-0.1.0.dist-info/METADATA,sha256=BMziC5aY6wSgn1DVmQ10O5RAl4kTWnKDYdWqznz6cg4,10078
+crawlstudio-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+crawlstudio-0.1.0.dist-info/entry_points.txt,sha256=t9sfvqm9AHLSO7j-TT6WVDFNBMF_USFBFMG8JE-3X4U,53
+crawlstudio-0.1.0.dist-info/licenses/LICENSE,sha256=f1QI6iYln4y_iShoyXLDGQcAUHAXXItnpCramEXBRhE,1221
+crawlstudio-0.1.0.dist-info/RECORD,,

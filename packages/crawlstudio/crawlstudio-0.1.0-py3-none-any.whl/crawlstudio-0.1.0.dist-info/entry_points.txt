@@ -1,0 +1,2 @@
+[console_scripts]
+crawlstudio = crawlstudio.cli:main
