@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: properpath
+Version: 0.2.2
+Summary: A pathlib.Path drop-in replacement with extra features. 
+Keywords: path
+Author: Alexander Haller, Mahadi Xion
+Author-email: Alexander Haller, Mahadi Xion <elabftw@uni-heidelberg.de>
+License-Expression: MIT
+Requires-Dist: platformdirs>=4.4.0,<4.5.0
+Maintainer: Mahadi Xion
+Maintainer-email: Mahadi Xion <mahadi.xion@urz.uni-heidelberg.de>
+Requires-Python: >=3.12
