@@ -1,0 +1,14 @@
+cocorum/__init__.py,sha256=E3V7ZfFKGo7Yn-8I-2sxjD1yjx1ac_isRS_lLZZoiAE,31654
+cocorum/accountapi.py,sha256=gViOyEqCV4kcveSVsbowwpERDl6fGN8hRE2xNrsLqlE,8402
+cocorum/basehandles.py,sha256=AbRGI_OzbQo06k99HbHJ_kUu3DA3yZ8-vxMVrw63Xo0,10441
+cocorum/chatapi.py,sha256=VceFWtePwxQHLrvc7Q_RdQN05PWscTgg_IoMhx86Gj4,30053
+cocorum/jsonhandles.py,sha256=bScXfowZlAXqQe_v436mwW2Asq0HJTDl_ujLjejD2ac,3701
+cocorum/scraping.py,sha256=Xvr5nOh2Vh37zesDc6uMR6L0geMK3I3lQ4kDXUs9XLQ,24971
+cocorum/servicephp.py,sha256=N7yJtP4la5ZM4gXKLy768W_aXAlrhZ0uyPCt7DtXMPs,28814
+cocorum/static.py,sha256=8S2oIgpO666Oue3bP4NnR1tkJcWSXBv_PWAhWElVWAQ,5503
+cocorum/uploadphp.py,sha256=8WSaW7e_tdOoGpUbwzlogrfY40pWpmNuWcIkmSePOV0,15585
+cocorum/utils.py,sha256=io9hPPad8ZwX8W2UQoPdlYjS9E2uYwoVmM9WOZ6JH1k,8942
+cocorum-2.12.0.dist-info/METADATA,sha256=9WJBBXtPuC4x6of3MzO0qHjW_kDdYjF1Q9403T8OutI,4492
+cocorum-2.12.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cocorum-2.12.0.dist-info/licenses/LICENSE.txt,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+cocorum-2.12.0.dist-info/RECORD,,
