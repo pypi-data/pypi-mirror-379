@@ -1,0 +1,30 @@
+[CDF-25840] 🧹 Remove view deployment recovery mechanism (#2019)
+
+# Description
+
+The bug has now been pinpointed: The server does multiple operations
+when you deploy a view. The relevant two for this bug is 1. It looks up
+all properties for views that implements other views. 2. For all reverse
+direct relations, it finds out which container the direct relation that
+the reverse is pointing to is located. The bug was that it did operation
+2 before 1. It is now fixed by doing 1 before 2.
+
+This PR removes the recovery mechanism that we added to Toolkit through
+trial-and-error as it is no longer relevant.
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Removed
+
+- In `cdf deploy`, removing the recovery mechanism for failed deployment
+of views. This is because the API has been fixed, so it is no longer
+necessary.
+
+## templates
+
+No changes.
