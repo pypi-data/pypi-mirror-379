@@ -1,0 +1,17 @@
+pydata-sphinx-theme>=0.16.1
+packaging
+docutils-stubs==0.0.22
+types-docutils==0.21.0.20250728
+types-pygments
+
+[dev]
+pyyaml
+pre-commit
+nox
+mypy
+types-docutils
+napari-sphinx-theme[coverage]
+
+[doc]
+numpydoc
+sphinx-design
