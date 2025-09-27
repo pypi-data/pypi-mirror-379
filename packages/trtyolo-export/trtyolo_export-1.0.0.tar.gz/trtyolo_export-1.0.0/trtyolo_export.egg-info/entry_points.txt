@@ -1,0 +1,2 @@
+[console_scripts]
+trtyolo = trtyolo_export.cli:trtyolo
