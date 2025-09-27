@@ -1,0 +1,7 @@
+JOSS_paper
+Notebooks
+dist
+docs
+saves
+tests
+wind_ae
