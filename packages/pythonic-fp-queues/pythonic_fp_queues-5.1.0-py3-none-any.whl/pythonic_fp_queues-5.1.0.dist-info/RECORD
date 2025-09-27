@@ -1,0 +1,9 @@
+pythonic_fp/queues/__init__.py,sha256=BagRl3n3W-lxxPigkGNFMDFNs8surchki-YNXczrPto,1352
+pythonic_fp/queues/de.py,sha256=qHDFe1djYGcDMn1THApsYtAd_iZDnJyrMJK0gHkD2vA,6072
+pythonic_fp/queues/fifo.py,sha256=V7kAxqnBBBgheBHbaCo1tyORHJqeVR-HMzWiDdAulbU,4593
+pythonic_fp/queues/lifo.py,sha256=HAlSz4eKlVatLXkL6uux_gZXjFwiA4X_btDTAF6PM10,4406
+pythonic_fp/queues/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_fp_queues-5.1.0.dist-info/licenses/LICENSE,sha256=IJMkVWQUVy-SonK6SMaMotDQ6Zb-lVi2bUTiGp1GUO8,10774
+pythonic_fp_queues-5.1.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+pythonic_fp_queues-5.1.0.dist-info/METADATA,sha256=6AAV5vX106ojMsJtRQXGxZHz7ROKCZsghKcpYcuzASo,2282
+pythonic_fp_queues-5.1.0.dist-info/RECORD,,
