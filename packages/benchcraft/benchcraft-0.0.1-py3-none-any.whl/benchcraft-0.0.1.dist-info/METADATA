@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: benchcraft
+Version: 0.0.1
+Summary: Craft and run benchmarks.
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: black
+Requires-Dist: celery
+Requires-Dist: flask
+Requires-Dist: openai
+Requires-Dist: redis
+Requires-Dist: ruff
+Requires-Dist: sqlalchemy
+Requires-Dist: tqdm
+Provides-Extra: developer
+Requires-Dist: bandit[toml]; extra == 'developer'
+Requires-Dist: black; extra == 'developer'
+Requires-Dist: hatch; extra == 'developer'
+Requires-Dist: mypy; extra == 'developer'
+Requires-Dist: pytest; extra == 'developer'
+Requires-Dist: pytest-cov; extra == 'developer'
+Requires-Dist: ruff; extra == 'developer'
+Description-Content-Type: text/markdown
+
+# Eval Editor
+
+
+![Eval Editor Screenshot](docs/image.png)
+
+
+## Features
+  - Web-Based UI: Easy-to-use interface that runs in your browser.
+  - Create, Load, and Edit: Full CRUD (Create, Read, Update, Delete) functionality for evaluation files.
+  - Structured JSON Output: Saves evaluations in a clean, human-readable .json format.
+  - Rich Metadata: Define essential metadata for each evaluation, including a name, author, revision, and description.
+  - Shared System Prompt: Set a single system prompt that applies to all questions within an evaluation set for consistency.
+  - Dynamic Question/Answer Pairs: Easily add or remove multiple user questions and their corresponding ideal answers.
+
+
+## Tech Stack
+  - Backend: Python with Flask
+  - Frontend: HTML, Tailwind CSS, and Vanilla JavaScript (ES6+)
+
+
+## Quick Start
+```
+pip install Flask
+python main.py
+```
+
+Open your browser and navigate to `http://localhost:5000`

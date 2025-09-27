@@ -1,0 +1,3 @@
+[console_scripts]
+benchcraft = benchcraft.entrypoint:main
+benchcraft-test = benchcraft.main:main
