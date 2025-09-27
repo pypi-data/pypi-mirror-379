@@ -1,0 +1,17 @@
+[build-system]
+requires = [
+    "requests",
+    "setuptools>=65.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "silverflaghwdata"
+version = "0.1.4"
+description = "Scrapers for all of the DoT websites."
+authors = [{ name="SilverFlag", email="contact@silverflag.net"}]
+dependencies = []
+
+[project.scripts]
+silverflag-dot-scraper = "silverflaghwdata.main:main"
