@@ -1,0 +1,6 @@
+dataset_name,description,samples
+heart_disease,"UCI Heart Disease: 1000 samples with age, sex, chest pain, BP, cholesterol features",1000
+breast_cancer,Breast Cancer Wisconsin: 569 samples with tumor characteristics,569
+financial,"Financial Time Series: 2000 samples with price, volume, volatility features",2000
+iot_sensors,"IoT Sensor Monitoring: 1500 samples with temperature, humidity, pressure sensors",1500
+network_security,"Network Security: 1200 samples with packet size, duration, traffic patterns",1200
