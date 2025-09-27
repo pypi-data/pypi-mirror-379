@@ -1,0 +1,9 @@
+vandc/__init__.py,sha256=MMIzBD9n-dulNtelS2gBSm4P2zBY7OYRSOjvJ8zGooU,1823
+vandc/cli.py,sha256=YbbmdNTRchRvOydwINmZTx_nc3CI3i5e9zKPUhtRI8E,4840
+vandc/fetch.py,sha256=Isv0OCv3cD-8HsFKwg59uUn8QGR3OiptiKG7GweEg2o,2468
+vandc/util.py,sha256=FYFHskwVCooLTjxMSjuS8QNL4nWSv_bYC1jm-B12Ido,1360
+vandc/writer.py,sha256=IStypXB2yfDUMgoUUIKB3piWHcXvhGf18yOucnIvvv8,4009
+vandc-0.1.0.dist-info/METADATA,sha256=Rx4XkXk62Wtdg3Ttkwx80UtdS2SRG862jpL1t68X84w,530
+vandc-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vandc-0.1.0.dist-info/entry_points.txt,sha256=OI87xuQxciTyk8B0yeTM0iz_zdsxqNpIdyPiOvcS4xY,41
+vandc-0.1.0.dist-info/RECORD,,
