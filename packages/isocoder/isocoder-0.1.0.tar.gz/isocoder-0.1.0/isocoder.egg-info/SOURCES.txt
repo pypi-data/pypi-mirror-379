@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+isocoder/__init__.py
+isocoder/api.py
+isocoder/errors.py
+isocoder/utils.py
+isocoder.egg-info/PKG-INFO
+isocoder.egg-info/SOURCES.txt
+isocoder.egg-info/dependency_links.txt
+isocoder.egg-info/requires.txt
+isocoder.egg-info/top_level.txt
