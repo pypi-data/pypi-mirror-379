@@ -1,0 +1,16 @@
+{
+  "concepts": [
+    "UnknownThing"
+  ],
+  "dependencies": [
+    "wowool/english-entity-extended@3.2.0"
+  ],
+  "short_description": "Concepts not found in the entity domain",
+  "examples": [
+    {
+      "concept": "UnknownThing",
+      "sample": "Yttrium ",
+      "desc": "Unknown concept"
+    }
+  ]
+}
