@@ -1,0 +1,7 @@
+boto3_dataclass_finspace/__init__.py,sha256=-FPbp_ZYYi-E9A1j6m7MkMInaBQIxkxTX3ULGHDgw04,110
+boto3_dataclass_finspace/caster.py,sha256=aTbUAd2nZgfReuj4iNOaAxvbbAyp59oeYI4ZRi1ujU0,7590
+boto3_dataclass_finspace/type_defs.py,sha256=F6cYoythRY3UcrCZXBDQGOtokLX9Kk7QgF5hXtKnbvY,147098
+boto3_dataclass_finspace-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_finspace-1.40.0.dist-info/METADATA,sha256=S39sa-55XSTgcyOjVh32Y_TbRrX72_9gT0io3Ssil-0,1648
+boto3_dataclass_finspace-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_finspace-1.40.0.dist-info/RECORD,,
