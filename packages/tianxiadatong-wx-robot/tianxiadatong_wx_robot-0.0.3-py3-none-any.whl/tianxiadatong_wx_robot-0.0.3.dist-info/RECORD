@@ -1,0 +1,16 @@
+tianxiadatong_wx_robot/WX_robot.cp312-win_amd64.pyd,sha256=TN8uvytkeP19TFMTzvKcZNWxfMeuVk9W02RQfcxKY_Y,116736
+tianxiadatong_wx_robot/config.cp312-win_amd64.pyd,sha256=g5Gt3ERILShv9nxdKk_U92HzAyGzc66SUFnkc-zLtaA,34816
+tianxiadatong_wx_robot/config.json,sha256=u-EYq_TPc2KwqiqVYkX5VheAGSFFMDYce_f_fukzZ3M,341
+tianxiadatong_wx_robot/db.cp312-win_amd64.pyd,sha256=u6dKh5iqIJihoRibKzYCvCwkTSuamtTXOFcMfCvAPCM,119296
+tianxiadatong_wx_robot/model.cp312-win_amd64.pyd,sha256=PliY38OLePYRnVURb2vtAdSkKK7yTouwZFiW6C1Xh9Q,23040
+tianxiadatong_wx_robot/models.cp312-win_amd64.pyd,sha256=KWaMTB7xRsK_SyT3Z2KgttdqXJqwtoRYQU9X2Wp8MvA,23040
+tianxiadatong_wx_robot/robot.cp312-win_amd64.pyd,sha256=FydEzsjwpOqtl24e51PswAJ3TtMUPlYAecES4by-UfE,366592
+tianxiadatong_wx_robot/wxauto/__init__.py,sha256=AwZQ4yWvH_F9iMb1UcUGdWs9IFcyB0edtWQb8ggNpqY,179
+tianxiadatong_wx_robot/wxauto/uiautomation.py,sha256=nvU0mIQpOs9e4x6ghQd1sQOmEj2uERAL6nIvXMWqMP4,376972
+tianxiadatong_wx_robot/wxauto/msgs/__init__.py,sha256=qYF7_BzeY3UhgD3j4obpCSxwTqWgaXGfZ86HRvaPXIw,1369
+tianxiadatong_wx_robot/wxauto/ui/__init__.py,sha256=-a_5Qkp158wwxt1GXK45YWaptf4smS2zDoxD_1eW5fc,138
+tianxiadatong_wx_robot/wxauto/utils/__init__.py,sha256=V_oqYA7Od7Y8Bwj9aYfOVH1LJLen_0razav3kFhZuJk,41
+tianxiadatong_wx_robot-0.0.3.dist-info/METADATA,sha256=o7aARrFTDPwoLk98Qr1S9cfgmMThhJ5BIVY0l778qOI,330
+tianxiadatong_wx_robot-0.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tianxiadatong_wx_robot-0.0.3.dist-info/top_level.txt,sha256=HaUGfN_K9RT-fKrBglEQ7Pz2XsU8yXRh6gQOPjiPb58,23
+tianxiadatong_wx_robot-0.0.3.dist-info/RECORD,,
