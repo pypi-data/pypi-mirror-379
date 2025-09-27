@@ -1,0 +1,8 @@
+Django>=4.2
+ordered-set
+
+[psycopg]
+psycopg[binary]>=3.0
+
+[psycopg2]
+psycopg2-binary

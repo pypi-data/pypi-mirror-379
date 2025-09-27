@@ -1,0 +1,12 @@
+*~
+*.pyc
+*.swp
+.DS_Store
+VERSION
+_build/
+build/
+dist/
+*.egg-info
+.eggs/
+.idea/
+uv.lock
