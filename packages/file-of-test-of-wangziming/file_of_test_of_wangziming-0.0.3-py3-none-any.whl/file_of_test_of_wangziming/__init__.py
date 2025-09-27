@@ -1,0 +1,1 @@
+from .file_of_test_of_wangziming import str1 as sentence
