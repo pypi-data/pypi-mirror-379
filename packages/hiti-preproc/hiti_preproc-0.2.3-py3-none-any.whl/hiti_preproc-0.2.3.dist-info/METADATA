@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: hiti-preproc
+Version: 0.2.3
+Requires-Dist: numpy>=2.3
+Requires-Dist: opencv_python>=4.10
+Requires-Dist: pydicom>=3.0
