@@ -1,0 +1,7 @@
+boto3_dataclass_eks_auth/__init__.py,sha256=lmZLhn_e5VL4tgFXDzMP1yVq7IGM50JqD9wUl4EQSpw,110
+boto3_dataclass_eks_auth/caster.py,sha256=QrpLhg5H-ffGwTJWg0d4UYABA8D3zI7Utgk46b5WBv8,469
+boto3_dataclass_eks_auth/type_defs.py,sha256=3nrSB5aVCExTVnP3ICj_HqU2VO2k_2hYIu778kstiB4,6803
+boto3_dataclass_eks_auth-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_eks_auth-1.40.0.dist-info/METADATA,sha256=Bz4zS28Fj3y82O4CYXsYthwdfBqkjaxSTWh_KEo9plA,1648
+boto3_dataclass_eks_auth-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_eks_auth-1.40.0.dist-info/RECORD,,
