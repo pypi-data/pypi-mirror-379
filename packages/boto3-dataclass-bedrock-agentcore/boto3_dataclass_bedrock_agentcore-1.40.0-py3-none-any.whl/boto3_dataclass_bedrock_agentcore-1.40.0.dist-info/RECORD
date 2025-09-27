@@ -1,0 +1,7 @@
+boto3_dataclass_bedrock_agentcore/__init__.py,sha256=0tJeMUPDsVgQHVddNB5BQrxsNClW9ocU917UoeDIlyQ,128
+boto3_dataclass_bedrock_agentcore/caster.py,sha256=GuQzaokWdmZ0Il-ygUE92jjGJIyFEA8GFQ6Wf2FZs0Y,5711
+boto3_dataclass_bedrock_agentcore/type_defs.py,sha256=b-y3GeNxotxzgUT5x4_i2hUPy1dcTcED_YvbpvvBBsk,93164
+boto3_dataclass_bedrock_agentcore-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_bedrock_agentcore-1.40.0.dist-info/METADATA,sha256=QoGScxcnHmEFpR8hsFshA0vHvRuQeEv_pdys7dWtH14,1711
+boto3_dataclass_bedrock_agentcore-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_bedrock_agentcore-1.40.0.dist-info/RECORD,,
