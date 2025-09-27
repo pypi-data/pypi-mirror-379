@@ -1,0 +1,50 @@
+{
+  "tokenizer": "wowool/norwegian@3.1.1.tkz",
+  "abbreviations": "wowool/norwegian@3.1.1.abbrev",
+  "apostrophe": "wowool/norwegian@3.1.1.apostrophe",
+  "measure": "wowool/norwegian@3.1.1.measure",
+  "hmm": "wowool/norwegian@3.1.1.hmm",
+  "postagger": "wowool/norwegian@3.1.1.postagger",
+  "morph_chain": [
+    {
+      "file": "wowool/norwegian@3.1.1.morph",
+      "lookup": "plain",
+      "transform": "none"
+    },
+    {
+      "file": "wowool/norwegian-numbers-num-std@3.1.1.morph",
+      "lookup": "compound_numbers",
+      "transform": "none"
+    },
+    {
+      "file": "wowool/norwegian-compound@3.1.1.morph",
+      "lookup": "compound_v3",
+      "transform": "tolower"
+    },
+    {
+      "file": "wowool/norwegian-endings@3.1.1.morph",
+      "lookup": "endings"
+    }
+  ],
+  "property_chain": {
+    "abbrev": [
+      {
+        "file": "wowool/norwegian-abbreviation@3.1.1.morph",
+        "lookup": "plain"
+      }
+    ]
+  },
+  "not_found": [
+    {
+      "file": "wowool/norwegian-educated-guesser@3.1.1.morph",
+      "lookup": "plain",
+      "transform": "none"
+    },
+    {
+      "file": "wowool/norwegian@3.1.1.morph",
+      "lookup": "cleaner",
+      "transform": "none"
+    }
+  ],
+  "short_description": "A language module that enriches words with root forms, part of speech and properties for norwegian"
+}

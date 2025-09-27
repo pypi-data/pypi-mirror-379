@@ -1,0 +1,22 @@
+{
+  "dependencies": [
+    "wowool/norwegian-syntax@3.1.1"
+  ],
+  "concepts": [
+    "Date",
+    "TimePhrase"
+  ],
+  "short_description": "Solving time adverbials into absolute dates.",
+  "examples": [
+    {
+      "concept": "Date",
+      "sample": "22. juli",
+      "desc": "An attribute will resolve the absolute date from the date that has been set"
+    },
+    {
+      "concept": "TimePhrase",
+      "sample": "i sommer, n\u00e5",
+      "desc": "A phrase expressing time, including dates"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "dependencies": [
+    "wowool/norwegian-syntax@3.1.1"
+  ],
+  "concepts": [
+    "Address",
+    "City",
+    "Continent",
+    "Company",
+    "Country",
+    "CurrencyUnit",
+    "WorldRegion",
+    "Address",
+    "Date",
+    "Email",
+    "Event",
+    "Facility",
+    "MoneyAmount",
+    "Measure",
+    "Month",
+    "Organization",
+    "Person",
+    "PersonMention",
+    "Position",
+    "Street",
+    "Url",
+    "WeekDay"
+  ],
+  "short_description": "Named entity annotations, such as: Person, City, Country, Company, Organization, etc.",
+  "examples": [
+    {
+      "concept": "Address",
+      "sample": "Storgata 1, 0155 Oslo",
+      "desc": "Captures the Street, City and the complete Address"
+    },
+    {
+      "concept": "City",
+      "sample": "Oslo",
+      "desc": "Name of a City"
+    },
+    {
+      "concept": "Company",
+      "sample": "Aftenposten",
+      "desc": "Name of a Company"
+    },
+    {
+      "concept": "Country",
+      "sample": "Storbritannia, Danmark, Litauen, Tyskland",
+      "desc": "Name of a Country"
+    },
+    {
+      "concept": "Date",
+      "sample": "27. desember",
+      "desc": "Date and Month"
+    },
+    {
+      "concept": "Email",
+      "sample": "info@wowool.com",
+      "desc": "Email address"
+    },
+    {
+      "concept": "Event",
+      "sample": "pandemi, krise",
+      "desc": "Something that happens"
+    },
+    {
+      "concept": "Facility",
+      "sample": "restaurant",
+      "desc": "A building or place that provides a particular service or is used for a particular industry"
+    },
+    {
+      "concept": "MoneyAmount",
+      "sample": "1,5 milliard krone",
+      "desc": "Amount of money"
+    },
+    {
+      "concept": "Month",
+      "sample": "oktober",
+      "desc": "Name of a month"
+    },
+    {
+      "concept": "Organization",
+      "sample": "direktorat, NHO",
+      "desc": "Name of an Organization"
+    },
+    {
+      "concept": "Person",
+      "sample": "Raymond Johansen",
+      "desc": "Name of a Person, it captures as well the PersonGiv (first name) and PersonFam (family name)"
+    },
+    {
+      "concept": "PersonMention",
+      "sample": "transperson, hacker",
+      "desc": "A mention of a person in a general way"
+    },
+    {
+      "concept": "Position",
+      "sample": "statsminister",
+      "desc": "Subclass of PersonMention. The professional occupation of a person."
+    },
+    {
+      "concept": "Url",
+      "sample": "https://www.wowool.com",
+      "desc": "Url"
+    },
+    {
+      "concept": "WorldRegion",
+      "sample": "Kanari\u00f8yene",
+      "desc": "A geographical place, like a continent, a region, a county, etc."
+    }
+  ],
+  "unknown_things": true,
+  "instances": true
+}

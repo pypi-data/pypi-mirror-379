@@ -1,0 +1,137 @@
+Metadata-Version: 2.4
+Name: wowool-norwegian
+Version: 3.1.1
+Summary: Wowool NLP norwegian Package
+Description-Content-Type: text/markdown
+
+# Wowool NLP norwegian Package
+This package contains the language file and domains for norwegian.
+To use this package, you need to install the wowool-sdk package and request a license file at info@wowool.com
+
+## Usage
+
+```python
+from wowool.sdk import Pipeline
+from pathlib import Path
+input_text = Path("input.txt").read_text()
+pipeline = Pipeline("norwegian,entity")
+doc = pipeline(input_text)
+print(doc)
+```
+
+## Domains
+
+### norwegian-event.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| Event |An event, in very general terms. | eksplosjon |
+
+
+### norwegian-contact-info.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| Address |Captures the Street, City and the complete Address | Stensberggata 999, 0170 Oslo |
+| City |Name of a City | Reykjavík, Oslo |
+| Company |Name of a Company | Orkla, Telenor |
+| Country |Name of a Country | Norge, Storbritannia, Spania, Malaysia |
+| Email |Email address | info@wowool.com |
+| Person |Name of a Person, it captures as well the PersonGiv (first name) and PersonFam (family name) | Ola Nordmann, Magnus Carlsen |
+| PersonFam |Surname of a Person. Subannotation of the Person annotation | Carlsen |
+| PersonGiv |Given name of a Person. Subannotation of the Person annotation | Magnus |
+| PhoneNr |A phone number | +47 55 29 32 05 |
+| PhoneNrCandidate |A possible phone number, but we do not have enough evidence | 0330 333 1212 |
+| Position |Subclass of PersonMention. The professional occupation of a person. | energiminister, finansdirektør, konsernsjef |
+| Street |The name of a street with or without number. | Stensberggata 999 |
+| Url |Url | https://www.wowool.com |
+
+
+### norwegian-semantic-theme.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| Theme |Theme, in this case animals. | orangutan, kamel |
+
+
+### norwegian-syntax.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| NP |Noun phrase. | den anatoliske provinsen Kappadokia |
+| PronPhrase |Pronoun phrase. | hun, man |
+| VP |Verb phrase. | reagerer, har sett |
+
+
+### norwegian-discovery.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| Definition |A definition. A sentence that explains what something or someone is. | Sasolburg er en stor industriby |
+| Descriptor | descriptor is something like 'painter', which will allow us to classify an concept as a Person when it appears in certain definition context. In the sample above 'asteroide' is the descriptor |  4652 Iannini ( 1975 QO ) er en asteroide |
+| DescriptorMarker |A DescriptorMarker is a descriptor no matter the context | fotballspiller, musikkalbum, landsby |
+
+
+### norwegian-entity.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| Address |Captures the Street, City and the complete Address | Storgata 1, 0155 Oslo |
+| City |Name of a City | Oslo |
+| Company |Name of a Company | Aftenposten |
+| Country |Name of a Country | Storbritannia, Danmark, Litauen, Tyskland |
+| Date |Date and Month | 27. desember |
+| Email |Email address | info@wowool.com |
+| Event |Something that happens | pandemi, krise |
+| Facility |A building or place that provides a particular service or is used for a particular industry | restaurant |
+| MoneyAmount |Amount of money | 1,5 milliard krone |
+| Month |Name of a month | oktober |
+| Organization |Name of an Organization | direktorat, NHO |
+| Person |Name of a Person, it captures as well the PersonGiv (first name) and PersonFam (family name) | Raymond Johansen |
+| PersonMention |A mention of a person in a general way | transperson, hacker |
+| Position |Subclass of PersonMention. The professional occupation of a person. | statsminister |
+| Url |Url | https://www.wowool.com |
+| WorldRegion |A geographical place, like a continent, a region, a county, etc. | Kanariøyene |
+
+
+### norwegian-anonymizer.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| Address |Captures the Street, City and the complete Address | Storgata 1, 0155 Oslo |
+| City |Name of a City | Bergen |
+| Company |Name of a Company | Statoil |
+| Country |Name of a Country | Norge |
+| Email |Email address | info@wowool.com |
+| Person |Name of a Person, it captures as well the PersonGiv (first name) and PersonFam (family name) | Ola Nordmann |
+| PersonFam |Surname of a Person. Subannotation of the Person annotation | Nordmann |
+| PersonGiv |Given name of a Person. Subannotation of the Person annotation | Ola |
+| PhoneNr |A phone number | +47 22 10 50 23 |
+| Position |Subclass of PersonMention. The professional occupation of a person. | talsmann |
+| Street |The name of a street with or without number. | Storgata 1 |
+| Url |Url | https://www.wowool.com |
+
+
+### norwegian-dates.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| Date |An attribute will resolve the absolute date from the date that has been set | 22. juli |
+| TimePhrase |A phrase expressing time, including dates | i sommer, nå |
+
+
+### norwegian-unknown.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| UnknownThing |Unknown concept | Yttrium  |
+
+
+### norwegian-topics.dom_info
+
+| Entity | Description | Sample |
+| ------ | ----------- | ------ |
+| TopicCandidate |Possible topics | Klimakrise, kunstig intelligens |
+
+
+

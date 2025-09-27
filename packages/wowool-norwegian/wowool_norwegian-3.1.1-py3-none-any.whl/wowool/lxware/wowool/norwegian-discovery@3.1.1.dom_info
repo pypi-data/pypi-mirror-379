@@ -1,0 +1,28 @@
+{
+  "dependencies": [
+    "wowool/norwegian-entity@3.1.1"
+  ],
+  "short_description": "Descriptors for knowledge discovery. A descriptor is something like 'painter' to classify an item as a Person. ",
+  "concepts": [
+    "Definition",
+    "Descriptor",
+    "DescriptorMarker"
+  ],
+  "examples": [
+    {
+      "concept": "Definition",
+      "sample": "Sasolburg er en stor industriby",
+      "desc": "A definition. A sentence that explains what something or someone is."
+    },
+    {
+      "concept": "Descriptor",
+      "sample": " 4652 Iannini ( 1975 QO ) er en asteroide",
+      "desc": " descriptor is something like 'painter', which will allow us to classify an concept as a Person when it appears in certain definition context. In the sample above 'asteroide' is the descriptor"
+    },
+    {
+      "concept": "DescriptorMarker",
+      "sample": "fotballspiller, musikkalbum, landsby",
+      "desc": "A DescriptorMarker is a descriptor no matter the context"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "concepts": [
+    "NP",
+    "PronPhrase",
+    "VP",
+    "TimePhrase"
+  ],
+  "short_description": "Syntax annotations: NP (en brasiliansk politiker, VP (vil fjerne) and PronPhrase (man). ",
+  "examples": [
+    {
+      "concept": "NP",
+      "sample": "den anatoliske provinsen Kappadokia",
+      "desc": "Noun phrase."
+    },
+    {
+      "concept": "PronPhrase",
+      "sample": "hun, man",
+      "desc": "Pronoun phrase."
+    },
+    {
+      "concept": "VP",
+      "sample": "reagerer, har sett",
+      "desc": "Verb phrase."
+    }
+  ]
+}
