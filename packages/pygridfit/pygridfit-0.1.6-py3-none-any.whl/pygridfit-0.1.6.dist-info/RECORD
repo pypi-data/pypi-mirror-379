@@ -1,0 +1,10 @@
+pygridfit/__init__.py,sha256=jf3cj0aYtCvUqiMjrAbfOe3yClXV6ZzFLHBJiUR3DmA,81
+pygridfit/gridfit.py,sha256=dHLfLHqAhnAro8bVb-AGAtfdwf4z30gcGmZ0L4bwFS0,16125
+pygridfit/interpolation.py,sha256=UV3NTPq9WJLKge7TBeEXJhlA6vTCOYbEcjZzIDrGH24,6300
+pygridfit/regularizers.py,sha256=C8ynnppWYY0f7hvo1l49N3ZHBKoNWFsgiyEd1muoYrI,12265
+pygridfit/solvers.py,sha256=SOAVLQmHvMXt4Zf6O3BMaSB0QZVonu1UI4-4wzjxsaw,4359
+pygridfit/utils.py,sha256=ffPkmh8bK-yXvzU7NW6rL_ZjFScmozB8t1Dv38zhqRk,12840
+pygridfit-0.1.6.dist-info/METADATA,sha256=QBnb22klcrFQCTBuyhJNPiow0gPmAmz0tlg9xSyCDnU,1591
+pygridfit-0.1.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pygridfit-0.1.6.dist-info/licenses/LICENSE,sha256=oPit1LNghVkgPOBC_VDjENGXw1uyZp0aVzz0Vw3VPRg,2871
+pygridfit-0.1.6.dist-info/RECORD,,
