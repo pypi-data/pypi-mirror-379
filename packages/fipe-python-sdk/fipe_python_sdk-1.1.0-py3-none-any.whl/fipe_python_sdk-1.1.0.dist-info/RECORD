@@ -1,0 +1,14 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fipe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fipe/api.py,sha256=sP7v3ftOIhxh-BU338-KtayEdhKepEwSsJoXYzoIpcA,404
+fipe/apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fipe/apis/anos_modelo.py,sha256=k5ascyrUO8iT29M9s4WmsOs_536XO8oQGYUuLu4UXTU,737
+fipe/apis/fipe_info.py,sha256=g_7f07GWjT7BGVPLoC0_DIB7w4d3D0NVyWHh-UVGR0s,740
+fipe/apis/marcas.py,sha256=i8Ks3HwTQsXjf7kcFVYP1vHYkROPFL_NXzSRHVH2vyM,623
+fipe/apis/modelos.py,sha256=GqUQRLQ76O6ywu1h9NYESgWBBvnauJh8AmGaTCJ3JDM,707
+fipe/apis/tabelas_referencia.py,sha256=9YbMNMCnEGO4UNl9BXaYn26sKcD0nyOEbLlyoQnXYi4,618
+fipe_python_sdk-1.1.0.dist-info/licenses/LICENSE,sha256=YZjQnFjzXGFa0D3iCQkNDwGBNuTGJREkRmItGX1B3YM,122
+fipe_python_sdk-1.1.0.dist-info/METADATA,sha256=WIvrzY0yjwuNzKtKWnBT_2PRxCyt-Lkr-4uTl4_yo9k,763
+fipe_python_sdk-1.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fipe_python_sdk-1.1.0.dist-info/top_level.txt,sha256=6Qk6GRTRLeCfQuemDCGOZrM_YRJ2jSUFYY0zqjbvcm0,14
+fipe_python_sdk-1.1.0.dist-info/RECORD,,
