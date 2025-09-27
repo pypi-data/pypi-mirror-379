@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: yta-stock-common
+Version: 0.0.1
+Summary: Youtube Autonomous Stock Common module
+License-File: LICENSE
+Author: danialcala94
+Author-email: danielalcalavalera@gmail.com
+Requires-Python: ==3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# Youtube Autónomo Stock Common Module
+
+The common module for the stock functionality.
