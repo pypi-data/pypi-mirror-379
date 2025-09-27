@@ -1,0 +1,6 @@
+hello_library/__init__.py,sha256=1DePB4x9ydSo1PiuF9KkpwttzWWQ3e3slKYv2lUQn7Q,30
+hello_library/hello.py,sha256=MeLZ9jjIQWjaeCRLGOvgCa-N6YR3_AJBRXD6MA4xAq0,50
+hello_library-0.0.0.dist-info/METADATA,sha256=LBFC9CNZ_AiWbz3UTF4EdO384bHK87EioXdJC9tcEkk,520
+hello_library-0.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+hello_library-0.0.0.dist-info/top_level.txt,sha256=5xKETYa9O10H72rK1JOm7zerMihqosJ5cqdi4Xl9jyY,14
+hello_library-0.0.0.dist-info/RECORD,,
