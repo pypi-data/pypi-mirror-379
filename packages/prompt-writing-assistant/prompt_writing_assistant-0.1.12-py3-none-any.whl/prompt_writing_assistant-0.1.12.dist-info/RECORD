@@ -1,0 +1,12 @@
+prompt_writing_assistant/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prompt_writing_assistant/coder.py,sha256=44p6LCgjv9oXHTwDtdGU5TlqXqhXYgTqOYqIrXWqaT0,43754
+prompt_writing_assistant/log.py,sha256=RUrqWNSal1_ZFix-3e94kFvTDKhsAKIucGhyuOCq6ms,5052
+prompt_writing_assistant/prompt_helper.py,sha256=6Op-CBwRDvyrJpwgQZuHWd5S6PzEmKMh5Grq5h5dFd0,15152
+prompt_writing_assistant/prompts.py,sha256=KvAhfgwhxuPp_JnDUI0c83PFCbMtUDLlUT5USSDPHXo,11968
+prompt_writing_assistant/server.py,sha256=8n2pmju6F0fJg2RaqkG6BGAViN93a3D0JvwajkLAh_s,1602
+prompt_writing_assistant/utils.py,sha256=m9Mv7ClzsIp-OM72dnBkoSBqWCM32G3tpox0x6NrAms,5506
+prompt_writing_assistant/web.py,sha256=ilbRCmVXq65knDJaWbej9kf-wNEzGxq15247tAQ4sBg,18050
+prompt_writing_assistant-0.1.12.dist-info/METADATA,sha256=gsISrxUqbBI6bIOSk03AIL2SgMdL7kLmRcUNqaW1c2E,518
+prompt_writing_assistant-0.1.12.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+prompt_writing_assistant-0.1.12.dist-info/top_level.txt,sha256=84pt0Jkyfaml0sLxif4mowe0rYoPq3-OAZ9DGCM8d08,25
+prompt_writing_assistant-0.1.12.dist-info/RECORD,,
