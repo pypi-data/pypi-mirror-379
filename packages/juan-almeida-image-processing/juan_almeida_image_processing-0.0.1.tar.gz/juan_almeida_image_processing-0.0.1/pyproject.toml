@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "juan_almeida_image_processing"
+version = "0.0.1"
+authors = [
+  { name="JUAN", email="juanhl_almeida@hotmail.com"},
+]
+description = "Image Processing Package using scikit-image"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "scikit-image",
+    "numpy",
+    "matplotlib"
+]
+
+[project.urls]
+Homepage = "https://github.com/juanhlalmeida/dio-image-processing-package.git"

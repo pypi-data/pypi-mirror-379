@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: juan_almeida_image_processing
+Version: 0.0.1
+Summary: Image Processing Package using scikit-image
+Author-email: JUAN <juanhl_almeida@hotmail.com>
+Project-URL: Homepage, https://github.com/juanhlalmeida/dio-image-processing-package.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-image
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# Projeto DIO: Pacote de Processamento de Imagens em Python
+
+### Autora: Karina Kato
+### Disponível em: https://pypi.org/project/wallet-python-pacotes-imagens/
+### Repositório de exemplos do template: https://github.com/tiemi/
+
+---
+
+## Descomplicando a criação de pacotes de processamento de imagens em Python
+
+
+### O pacote "image_processing" é usado para:
+
+Módulo "Processing":
+- Correspondência de histograma;
+- Similaridade estrutural;
+- Redimensionar imagem;
+
+Módulo "Utils":
+- Ler imagem;
+- Salvar imagem;
+- Plotar imagem;
+- Plotar gráfico;
+- Plotar histograma;
+
+
+### Resultado do processamento:
+
+<p align="left"><img src="./ex_img.jpg" width="800"></p>

@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+image_processing/__init__.py
+image_processing/processing/__init__.py
+image_processing/processing/combination.py
+image_processing/processing/transformation.py
+image_processing/utils/__init__.py
+image_processing/utils/io.py
+image_processing/utils/plot.py
+juan_almeida_image_processing.egg-info/PKG-INFO
+juan_almeida_image_processing.egg-info/SOURCES.txt
+juan_almeida_image_processing.egg-info/dependency_links.txt
+juan_almeida_image_processing.egg-info/requires.txt
+juan_almeida_image_processing.egg-info/top_level.txt
