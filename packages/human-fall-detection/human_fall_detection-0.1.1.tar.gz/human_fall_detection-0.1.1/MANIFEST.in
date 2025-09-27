@@ -1,0 +1,24 @@
+# Include documentation files
+include README.md
+include README_CN.md
+include LICENSE
+
+# Include all model files
+recursive-include fall_detection/models *.pt
+
+# Include example notebook
+include example_usage.ipynb
+
+# Exclude cache and temporary files
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+global-exclude *.swp
+global-exclude *~
+
+# Exclude test and development files
+prune tests
+prune scripts
+prune results
+prune models
+prune src
