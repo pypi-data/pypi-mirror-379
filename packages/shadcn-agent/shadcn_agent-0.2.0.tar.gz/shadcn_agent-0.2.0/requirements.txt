@@ -1,0 +1,23 @@
+# Core dependencies for shadcn-agent
+requests>=2.25.0,<3.0.0
+beautifulsoup4>=4.9.0,<5.0.0
+python-dotenv>=0.19.0,<2.0.0
+
+# Optional: langgraph not available on Python 3.8
+# Install conditionally in workflow instead
+
+# Optional: deep-translator for translation features
+# Make it optional to avoid CI failures
+# deep-translator>=1.9.0,<2.0.0
+
+# Additional packages
+lxml>=4.9.4,<6.0.0
+urllib3>=1.26.0,<3.0.0
+certifi>=2021.0.0
+
+# Test dependencies (needed for CI)
+pytest>=6.0,<8.0
+pytest-cov>=2.0,<5.0
+flake8>=3.8,<7.0
+black>=21.0,<24.0; python_version >= "3.9"
+black>=21.0,<23.0; python_version == "3.8"
