@@ -1,0 +1,10 @@
+fetchgraph/__init__.py,sha256=h5avwAp6DWkPTB9yUuY5k5Th1_KpLYkZtYobfZrYx0o,773
+fetchgraph/core.py,sha256=7_ILrJDR8JSCeLlgA_vT4ocf3roKFIan0TLt2EXdueI,17531
+fetchgraph/utils.py,sha256=4Wgy4GHLtK5jTjypAxj82JJOqjTjD825upFL0bSP2Hs,655
+fetchgraph/prompts/plan_generic.md,sha256=LNhxLrld5f2wlhfGBpoyDXZd1E-JOSII3JDwBUwB-Lg,1370
+fetchgraph/prompts/synth_generic.md,sha256=xmtYbg7q5IDBzeBjyFlvfFTNBZMxrMU-uz_SG6iTBlI,738
+fetchgraph-0.0.1.dist-info/licenses/LICENSE,sha256=kKodoFFTS9O2yO6us55S3EvFufPs-9MkJgBpgZ-gpHk,16
+fetchgraph-0.0.1.dist-info/METADATA,sha256=knfMQ0inoZ4kwJDrTxULLfncpZvUaQQ4hXVurhCz3YE,2263
+fetchgraph-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fetchgraph-0.0.1.dist-info/top_level.txt,sha256=4Y6kSrVtD5i7xHj7KvGU8eQXsF_AYmQIL8iREFOzrO4,11
+fetchgraph-0.0.1.dist-info/RECORD,,
