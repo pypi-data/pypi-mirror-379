@@ -1,0 +1,7 @@
+boto3_dataclass_devicefarm/__init__.py,sha256=dNKyakziPrkJxUhzvB4OTGhTe0yaKGHmhNeHxp7XF2s,114
+boto3_dataclass_devicefarm/caster.py,sha256=Lx5gq-LmX5e21QaCxrxhWkzhCTpLx4VxuQbVs4Y1y3U,13142
+boto3_dataclass_devicefarm/type_defs.py,sha256=tFODcC4hsqY2h8e-acdGlWwbpqP52PLTHkgVpqKOqFY,210199
+boto3_dataclass_devicefarm-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_devicefarm-1.40.0.dist-info/METADATA,sha256=ivaVSPv4GFbZMnkHwvl-h1O1VqwgAPE_rgzFv6vBsPw,1662
+boto3_dataclass_devicefarm-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_devicefarm-1.40.0.dist-info/RECORD,,
