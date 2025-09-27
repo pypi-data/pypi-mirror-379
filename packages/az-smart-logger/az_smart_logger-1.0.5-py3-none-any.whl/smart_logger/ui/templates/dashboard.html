@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  {% include "partials/cards.html" %}
+</section>
+
+<section class="mt-6">
+  {% include "partials/stats.html" %}
+</section>
+
+<section class="mt-6">
+  {% include "dashboard_charts.html" %}
+</section>
+
+<section class="mt-6">
+  {% include "partials/system_info.html" %}
+</section>
+
+<section>
+  {% include "partials/alerts.html" %}
+</section>
+
+{% endblock %}
+
+{% block extra_head %}
+<script src="/static/js/dashboard.js" defer></script>
+{% endblock %}

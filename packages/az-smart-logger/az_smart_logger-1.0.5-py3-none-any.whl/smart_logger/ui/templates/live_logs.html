@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex h-screen bg-gray-100">
+  <div class="flex-1 p-6 flex flex-col">
+    <h2 class="text-2xl font-bold mb-4">Live Logs</h2>
+
+    <div id="logsTerminal" class="bg-black text-green-400 p-2 rounded flex-1 overflow-y-auto font-mono">
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_head %}
+<script src="../static/js/live_logs.js"></script>
+{% endblock %}
