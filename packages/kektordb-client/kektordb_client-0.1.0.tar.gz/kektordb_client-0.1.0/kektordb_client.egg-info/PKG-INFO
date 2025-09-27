@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: kektordb_client
+Version: 0.1.0
+Summary: An official Python client for KektorDB, a high-performance in-memory vector database.
+Home-page: https://github.com/sanonone/kektordb
+Author: Sanonone
+Author-email: fedeld023@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
