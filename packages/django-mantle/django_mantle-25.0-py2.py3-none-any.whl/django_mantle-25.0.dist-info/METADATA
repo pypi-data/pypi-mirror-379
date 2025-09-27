@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: django-mantle
+Version: 25.0
+Summary: django-mantle: Your type-safe wrapper around Django's liquid core.
+Author-email: Carlton Gibson <carlton.gibson@noumenal.es>
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: Sphinx ; extra == "docs"
+Project-URL: Home, https://noumenal.es/mantle/
+Provides-Extra: docs
