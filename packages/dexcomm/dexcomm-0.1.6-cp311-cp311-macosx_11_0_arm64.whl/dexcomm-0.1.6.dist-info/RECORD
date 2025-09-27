@@ -1,0 +1,10 @@
+dexcomm.cpython-311-darwin.so,sha256=ldDEGmarye8yOmQvoa2Z1OdaxTVuEaSu7Nfgv4yOkzw,1691392
+dexcomm.pyi,sha256=fstUWx1x8zcw8VAEULwLVbKF6m30BL6Fs0EwRjXBcJg,3504
+dexcomm/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dexcomm/serialization/protobuf/lidar2d_pb2.pyi,sha256=Wy32rFnjfzJCjGlz8zqFzsRNI0Bm8zQsNLjK-nwvZBg,2136
+dexcomm-0.1.6.dist-info/licenses/LICENSE,sha256=0J2KCMNNnW5WZPK5x8xUiCxApBf7h83693ggSJYiue0,31745
+dexcomm.build/.gitignore,sha256=aEiIwOuxfzdCmLZe4oB1JsBmCUxwG8x-u-HBCV9JT8E,1
+dexcomm-0.1.6.dist-info/METADATA,sha256=1ZsiNUXFKn-8Y4kG-JoaPjl_aNKN6U9YheBXJMSSpSw,9933
+dexcomm-0.1.6.dist-info/WHEEL,sha256=R_u7Xxv7-YaJ7GegLu_5Tmp8GAF_TL-DEkR49j_ZWGE,105
+dexcomm-0.1.6.dist-info/top_level.txt,sha256=HxOSa-2r1LWUCgaGigQiF4n_u5VjFQpIFg9bGcggaqQ,8
+dexcomm-0.1.6.dist-info/RECORD,,
