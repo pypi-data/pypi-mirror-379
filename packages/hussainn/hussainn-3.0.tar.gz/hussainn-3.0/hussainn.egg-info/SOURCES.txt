@@ -1,0 +1,7 @@
+setup.py
+hussain2/__init__.py
+hussain2/hussainn.py
+hussainn.egg-info/PKG-INFO
+hussainn.egg-info/SOURCES.txt
+hussainn.egg-info/dependency_links.txt
+hussainn.egg-info/top_level.txt
