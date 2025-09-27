@@ -1,0 +1,3 @@
+PROJECT_DIR = "project_app_4"
+
+LLMs = ["GEMINI","OPENAI","ANTHROPIC","PERPLEXITY"]
