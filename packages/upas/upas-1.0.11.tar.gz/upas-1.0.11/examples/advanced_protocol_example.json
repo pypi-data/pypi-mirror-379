@@ -1,0 +1,163 @@
+{
+    "protocol": {
+        "name": "AdvancedProtocol",
+        "version": "2.0",
+        "description": "Protocol with custom functions and state machine",
+        "category": "industrial"
+    },
+    "variables": {
+        "DEVICE_ID": "ABC123",
+        "BASE_DELAY": 100,
+        "PRIORITY": 3,
+        "ERROR_THRESHOLD": 5
+    },
+    "functions": {
+        "calculate_response_delay": "lambda base, priority: base // priority",
+        "custom_checksum": "lambda data: sum(data if isinstance(data, list) else []) & 0xFF",
+        "encode_device_status": "lambda status, battery: (status << 4) | (battery & 0x0F)",
+        "temperature_convert": "lambda celsius: int((celsius * 9/5) + 32)"
+    },
+    "state_machine": {
+        "initial_state": "IDLE",
+        "states": {
+            "IDLE": {
+                "description": "Waiting for activity",
+                "entry_action": "reset_counters"
+            },
+            "DISCOVERING": {
+                "description": "Sending discovery packets",
+                "entry_action": "start_discovery_timer",
+                "exit_action": "stop_discovery_timer"
+            },
+            "CONNECTED": {
+                "description": "Established communication session",
+                "entry_action": "start_keepalive"
+            },
+            "ERROR": {
+                "description": "Error state with recovery attempts",
+                "entry_action": "log_error"
+            }
+        },
+        "transitions": [
+            {
+                "from": "IDLE",
+                "to": "DISCOVERING",
+                "trigger": "start_discovery",
+                "condition": "device_ready",
+                "action": "send_discovery_beacon"
+            },
+            {
+                "from": "DISCOVERING",
+                "to": "CONNECTED",
+                "trigger": "discovery_response_received",
+                "action": "establish_session"
+            },
+            {
+                "from": "CONNECTED",
+                "to": "IDLE",
+                "trigger": "session_timeout",
+                "action": "cleanup_session"
+            },
+            {
+                "from": "*",
+                "to": "ERROR",
+                "trigger": "error_occurred",
+                "action": "handle_error"
+            },
+            {
+                "from": "ERROR",
+                "to": "IDLE",
+                "trigger": "recovery_complete",
+                "action": "reset_error_state"
+            }
+        ]
+    },
+    "transports": {
+        "primary_network": {
+            "type": "ethernet",
+            "services": {
+                "control_service": {
+                    "type": "udp_unicast",
+                    "bind": "0.0.0.0:8080"
+                },
+                "discovery_service": {
+                    "type": "udp_multicast",
+                    "bind": "0.0.0.0:9999",
+                    "multicast_groups": [
+                        "224.1.1.1"
+                    ]
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "discovery_beacon": {
+            "type": "periodic",
+            "interval": 2000,
+            "active_states": [
+                "DISCOVERING"
+            ],
+            "transport": "primary_network",
+            "destination": "224.1.1.1:9999",
+            "payload": [
+                "DISCOVERY[DEVICE_ID][TIMESTAMP:8:current_time][RAND_ID:2:random_id]"
+            ]
+        },
+        "keepalive": {
+            "type": "periodic",
+            "interval": 10000,
+            "active_states": [
+                "CONNECTED"
+            ],
+            "transport": "primary_network",
+            "destination": "192.168.1.100:8080",
+            "payload": [
+                "KEEPALIVE[DEVICE_ID][COUNTER:4:increment][CHECKSUM:1:custom_checksum]"
+            ]
+        },
+        "status_reporter": {
+            "type": "periodic",
+            "interval": 5000,
+            "active_states": [
+                "CONNECTED"
+            ],
+            "transport": "primary_network",
+            "destination": "192.168.1.100:8080",
+            "payload": [
+                "STATUS[DEVICE_ID][STATUS:1:encode_device_status][TIMESTAMP:8:current_time]"
+            ]
+        },
+        "error_recovery": {
+            "type": "periodic",
+            "interval": 1000,
+            "active_states": [
+                "ERROR"
+            ],
+            "transport": "primary_network",
+            "destination": "192.168.1.100:8080",
+            "payload": [
+                "ERROR_REPORT[DEVICE_ID][ERROR_CODE:2][RETRY_COUNT:1:increment]"
+            ]
+        },
+        "control_responder": {
+            "type": "reactive",
+            "active_states": [
+                "CONNECTED"
+            ],
+            "listen_transport": "primary_network",
+            "response_transport": "primary_network",
+            "trigger": {
+                "source_pattern": "192.168.1.100:*",
+                "destination_pattern": "*:8080",
+                "payload_pattern": "CONTROL_REQUEST"
+            },
+            "response": {
+                "delay": "[BASE_DELAY:calculate_response_delay:PRIORITY]",
+                "destination": "sender",
+                "payload": [
+                    "CONTROL_RESPONSE[DEVICE_ID][TIMESTAMP:8:current_time][STATUS:1]"
+                ]
+            }
+        }
+    }
+}

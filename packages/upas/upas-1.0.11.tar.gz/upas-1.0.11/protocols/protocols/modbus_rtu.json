@@ -1,0 +1,343 @@
+{
+    "protocol": {
+        "name": "Modbus_RTU",
+        "version": "1.0",
+        "description": "Industrial Modbus RTU protocol over RS-485",
+        "category": "industrial"
+    },
+    "modbus_config": {
+        "slave_id": 1,
+        "baud_rate": 9600,
+        "data_bits": 8,
+        "parity": "none",
+        "stop_bits": 1,
+        "timeout": 1000,
+        "t1_5": 750,
+        "t3_5": 1750
+    },
+    "variables": {
+        "SLAVE_ADDRESS": 1,
+        "TRANSACTION_ID": 0,
+        "REGISTER_BASE": 4096,
+        "COIL_BASE": 0
+    },
+    "functions": {
+        "modbus_crc": "lambda data: calculate_modbus_crc16(data)",
+        "increment_transaction": "lambda x: (x + 1) % 65536"
+    },
+    "transports": {
+        "serial_bus": {
+            "type": "serial",
+            "device": "/dev/ttyUSB0",
+            "baudrate": 9600,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 1,
+            "timeout": 1.0,
+            "rts_cts": false,
+            "dsr_dtr": false
+        }
+    },
+    "behaviors": {
+        "read_coils": {
+            "type": "triggered",
+            "trigger_event": "read_coils_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "01"
+                },
+                {
+                    "starting_address": "[START_ADDR:2]"
+                },
+                {
+                    "quantity": "[COIL_COUNT:2]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "read_discrete_inputs": {
+            "type": "triggered",
+            "trigger_event": "read_inputs_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "02"
+                },
+                {
+                    "starting_address": "[START_ADDR:2]"
+                },
+                {
+                    "quantity": "[INPUT_COUNT:2]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "read_holding_registers": {
+            "type": "triggered",
+            "trigger_event": "read_registers_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "03"
+                },
+                {
+                    "starting_address": "[START_ADDR:2]"
+                },
+                {
+                    "quantity": "[REG_COUNT:2]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "read_input_registers": {
+            "type": "triggered",
+            "trigger_event": "read_input_regs_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "04"
+                },
+                {
+                    "starting_address": "[START_ADDR:2]"
+                },
+                {
+                    "quantity": "[REG_COUNT:2]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "write_single_coil": {
+            "type": "triggered",
+            "trigger_event": "write_coil_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "05"
+                },
+                {
+                    "coil_address": "[COIL_ADDR:2]"
+                },
+                {
+                    "coil_value": "[COIL_VALUE:2]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "write_single_register": {
+            "type": "triggered",
+            "trigger_event": "write_register_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "06"
+                },
+                {
+                    "register_address": "[REG_ADDR:2]"
+                },
+                {
+                    "register_value": "[REG_VALUE:2]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "write_multiple_coils": {
+            "type": "triggered",
+            "trigger_event": "write_coils_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "0F"
+                },
+                {
+                    "starting_address": "[START_ADDR:2]"
+                },
+                {
+                    "quantity": "[COIL_COUNT:2]"
+                },
+                {
+                    "byte_count": "[BYTE_COUNT:1]"
+                },
+                {
+                    "coil_values": "[COIL_DATA]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "write_multiple_registers": {
+            "type": "triggered",
+            "trigger_event": "write_registers_request",
+            "payload": [
+                {
+                    "slave_address": "[SLAVE_ADDRESS:1]"
+                },
+                {
+                    "function_code": "10"
+                },
+                {
+                    "starting_address": "[START_ADDR:2]"
+                },
+                {
+                    "quantity": "[REG_COUNT:2]"
+                },
+                {
+                    "byte_count": "[BYTE_COUNT:1]"
+                },
+                {
+                    "register_values": "[REG_DATA]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        }
+    },
+    "exception_responses": {
+        "illegal_function": {
+            "function_code": "[ORIGINAL_FUNC + 0x80]",
+            "exception_code": "01"
+        },
+        "illegal_data_address": {
+            "function_code": "[ORIGINAL_FUNC + 0x80]",
+            "exception_code": "02"
+        },
+        "illegal_data_value": {
+            "function_code": "[ORIGINAL_FUNC + 0x80]",
+            "exception_code": "03"
+        },
+        "server_device_failure": {
+            "function_code": "[ORIGINAL_FUNC + 0x80]",
+            "exception_code": "04"
+        }
+    },
+    "state_machine": {
+        "initial_state": "IDLE",
+        "states": {
+            "IDLE": {
+                "description": "Waiting for request"
+            },
+            "PROCESSING": {
+                "description": "Processing request"
+            },
+            "RESPONDING": {
+                "description": "Sending response"
+            },
+            "ERROR": {
+                "description": "Error state"
+            }
+        },
+        "transitions": [
+            {
+                "from": "IDLE",
+                "to": "PROCESSING",
+                "trigger": "request_received"
+            },
+            {
+                "from": "PROCESSING",
+                "to": "RESPONDING",
+                "trigger": "processing_complete"
+            },
+            {
+                "from": "RESPONDING",
+                "to": "IDLE",
+                "trigger": "response_sent"
+            },
+            {
+                "from": "*",
+                "to": "ERROR",
+                "trigger": "error_occurred"
+            }
+        ]
+    },
+    "device_simulation": {
+        "coils": {
+            "0": false,
+            "1": true,
+            "2": false,
+            "3": true
+        },
+        "discrete_inputs": {
+            "0": true,
+            "1": false,
+            "2": true,
+            "3": false
+        },
+        "input_registers": {
+            "0": 23.5,
+            "1": 65.2,
+            "2": 1013.25,
+            "3": 87.3
+        },
+        "holding_registers": {
+            "4096": 25.0,
+            "4097": 60.0,
+            "4098": 100.0,
+            "4099": 0
+        }
+    },
+    "polling_behavior": {
+        "enabled": false,
+        "type": "periodic",
+        "interval": 1000,
+        "poll_sequence": [
+            {
+                "function": "read_holding_registers",
+                "address": 4096,
+                "count": 4
+            },
+            {
+                "function": "read_input_registers",
+                "address": 0,
+                "count": 4
+            },
+            {
+                "function": "read_coils",
+                "address": 0,
+                "count": 8
+            }
+        ]
+    },
+    "data_logging": {
+        "enabled": true,
+        "log_file": "modbus_data.log",
+        "log_events": [
+            "request_received",
+            "response_sent",
+            "exception_generated",
+            "register_value_changed"
+        ]
+    },
+    "compliance": {
+        "modbus_org_certified": true,
+        "strict_timing": true,
+        "error_checking": true
+    }
+}
