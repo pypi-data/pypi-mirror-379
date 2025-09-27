@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/py_manage_nginx/__about__.py
+src/py_manage_nginx/__init__.py
+src/py_manage_nginx/hosting.py
+src/py_manage_nginx/manager.py
+src/py_manage_nginx.egg-info/PKG-INFO
+src/py_manage_nginx.egg-info/SOURCES.txt
+src/py_manage_nginx.egg-info/dependency_links.txt
+src/py_manage_nginx.egg-info/top_level.txt
+tests/test.py
