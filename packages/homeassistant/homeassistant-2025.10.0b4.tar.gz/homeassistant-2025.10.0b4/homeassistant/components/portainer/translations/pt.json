@@ -1,0 +1,49 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "timeout_connect": "Excedido o tempo limite para estabelecer liga\u00e7\u00e3o",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "Chave da API",
+                    "host": "Anfitri\u00e3o"
+                },
+                "data_description": {
+                    "api_key": "A chave da API para autentica\u00e7\u00e3o com o Portainer",
+                    "host": "O anfitri\u00e3o/URL, incluindo a porta, da sua inst\u00e2ncia Portainer"
+                },
+                "description": "Pode criar uma chave de API na IU do Portainer. Aceda a **A minha conta > Chaves de API** e selecione **Adicionar chave de API**"
+            }
+        }
+    },
+    "device": {
+        "unknown_container": {
+            "name": "Contentor desconhecido"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "status": {
+                "name": "Estado"
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "Ocorreu um erro ao tentar ligar-se \u00e0 inst\u00e2ncia do Portainer: {error}"
+        },
+        "invalid_auth": {
+            "message": "Ocorreu um erro ao tentar autenticar-se: {error}"
+        },
+        "timeout_connect": {
+            "message": "Tempo excedido ao tentar ligar \u00e0 inst\u00e2ncia do Portainer: {error}"
+        }
+    }
+}
