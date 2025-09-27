@@ -1,0 +1,9 @@
+json_to_parquet/__init__.py,sha256=yN8h722ZiERzyDDtpiKXosjK6v2sS73Ke_Mbe0RR_3s,84
+json_to_parquet/_native.cpython-311-darwin.so,sha256=h80dU-pfOJXmYnaNtH0snoi-sCORTHAQ54Y6N6cBimI,7519584
+json_to_parquet/cli.py,sha256=7whGecTBeFFOG370kp-shTV__yhDvlsuhHDxPp8z368,2319
+json_to_parquet/__main__.py,sha256=MHKZ_ae3fSLGTLUUMOx15fWdeOnJSHhq-zslRP5F5Lc,79
+json_to_parquet-0.1.0.dist-info/RECORD,,
+json_to_parquet-0.1.0.dist-info/WHEEL,sha256=pGJpEo4DOKEzBGWnU3xFyLerLnYe_orSvk0HBpcuyVU,132
+json_to_parquet-0.1.0.dist-info/entry_points.txt,sha256=qxBbHRPL0EK4jBMMoYyzv1TM9Enq32ZH51J-yvVlul0,59
+json_to_parquet-0.1.0.dist-info/METADATA,sha256=WmmQVo04CcpKt7BaYyDO89PViM5p0esl4VEYxbt-ok8,550
+json_to_parquet-0.1.0.dist-info/licenses/LICENSE,sha256=3RshcXhO4MMK2pgF3sqOyRl2wdbcddDMcoMvxuiCUZs,1056
