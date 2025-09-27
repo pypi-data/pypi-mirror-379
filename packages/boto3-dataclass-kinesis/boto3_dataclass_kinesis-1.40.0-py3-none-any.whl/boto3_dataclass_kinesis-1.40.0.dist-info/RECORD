@@ -1,0 +1,7 @@
+boto3_dataclass_kinesis/__init__.py,sha256=DO2OAw1f-xy-8Vf7_8jsBlNIxr_107KvFVGvWc2mxo4,108
+boto3_dataclass_kinesis/caster.py,sha256=EyXaKjdoBA_YajIx27wdi1dx4OI0OD4YY5P5K49razA,6983
+boto3_dataclass_kinesis/type_defs.py,sha256=GYq2389QooI2KDzJHwSW66t9dSFPowTK0KDYR5VtHfU,85512
+boto3_dataclass_kinesis-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_kinesis-1.40.0.dist-info/METADATA,sha256=m2nYpRd632RDBBf-IXfoI93-WSHPXQISKefu1rvJAwk,1641
+boto3_dataclass_kinesis-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_kinesis-1.40.0.dist-info/RECORD,,
