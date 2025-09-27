@@ -1,0 +1,319 @@
+# ==============================================================================
+# BUILD SYSTEM
+# ==============================================================================
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lock-and-key"
+dynamic = ["version"]
+description = "Comprehensive cloud security scanner for IAM and resource-based policies"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = ["security", "cloud", "iam", "aws", "azure", "gcp", "scanner"]
+dependencies = [
+  "boto3>=1.40.0",
+  "botocore>=1.40.0",
+  "click>=8.0.0", 
+  "pydantic>=2.0.0",
+  "rich>=13.0.0",
+]
+authors = [
+  { name = "WinterShadow", email = "wolf@cyberwolf.dev" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Security",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+lock-and-key = "lock_and_key.cli:cli"
+
+[project.urls]
+Documentation = "https://thewintershadow.github.io/Lock-And-Key/"
+Homepage = "https://github.com/TheWinterShadow/lock-and-key"
+Repository = "https://github.com/TheWinterShadow/lock-and-key"
+Issues = "https://github.com/TheWinterShadow/lock-and-key/issues"
+Changelog = "https://github.com/TheWinterShadow/lock-and-key/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+# Enhanced AWS support with type stubs for better IDE support
+aws = [
+  "boto3-stubs>=1.40.0",
+  "mypy-boto3-iam>=1.40.0",
+  "mypy-boto3-s3>=1.40.0",
+  "mypy-boto3-dynamodb>=1.40.0",
+  "mypy-boto3-lambda>=1.40.0",
+  "mypy-boto3-sns>=1.40.0",
+  "mypy-boto3-sqs>=1.40.0",
+  "mypy-boto3-sts>=1.40.0",
+]
+
+# Development dependencies
+dev = [
+  "black>=23.0.0",
+  "isort>=5.12.0",
+  "flake8>=6.0.0",
+  "mypy>=1.0.0",
+  "pytest>=7.0.0",
+  "pytest-cov>=4.0.0",
+  "bandit>=1.7.0",
+]
+
+# Documentation dependencies
+docs = [
+  "sphinx>=5.0.0",
+  "furo>=2023.0.0",
+  "myst-parser>=2.0.0",
+]
+
+# All optional dependencies combined
+all = [
+  "boto3-stubs>=1.40.0",
+  "mypy-boto3-iam>=1.40.0",
+  "mypy-boto3-s3>=1.40.0", 
+  "mypy-boto3-dynamodb>=1.40.0",
+  "mypy-boto3-lambda>=1.40.0",
+  "mypy-boto3-sns>=1.40.0",
+  "mypy-boto3-sqs>=1.40.0",
+  "mypy-boto3-sts>=1.40.0",
+  "black>=23.0.0",
+  "isort>=5.12.0",
+  "flake8>=6.0.0",
+  "mypy>=1.0.0",
+  "pytest>=7.0.0",
+  "pytest-cov>=4.0.0",
+  "bandit>=1.7.0",
+  "sphinx>=5.0.0",
+  "furo>=2.0.0", 
+  "myst-parser>=2.0.0",
+]
+
+# ==============================================================================
+# HATCH CONFIGURATION
+# ==============================================================================
+[tool.hatch.version]
+path = "lock_and_key/__about__.py"
+
+[tool.hatch.build]
+directory = "dist"
+
+[tool.hatch.build.targets.wheel]
+packages = ["lock_and_key"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "lock_and_key/",
+  "README.md",
+  "LICENSE.txt",
+  "CHANGELOG.md",
+]
+exclude = [
+  "tests/",
+  "docs/",
+  ".github/",
+  "*.pyc",
+  "__pycache__/",
+]
+
+# ==============================================================================
+# HATCH ENVIRONMENTS
+# ==============================================================================
+[tool.hatch.envs.default]
+dependencies = [
+  # Core dependencies
+  "boto3",
+  "click",
+  "pydantic",
+  "rich",
+  # Type stubs for better IDE support
+  "boto3-stubs",
+  "mypy-boto3-dynamodb",
+  "mypy-boto3-glue",
+  "mypy-boto3-iam",
+  "mypy-boto3-lambda",
+  "mypy-boto3-s3",
+  "mypy-boto3-sns",
+  "mypy-boto3-sqs",
+  "mypy-boto3-sts",
+]
+
+[tool.hatch.envs.dev]
+dependencies = [
+  # Core dependencies (needed for type checking)
+  "boto3",
+  "botocore",
+  "click", 
+  "pydantic",
+  "rich",
+  # Documentation
+  "sphinx",
+  "furo",
+  "myst-parser", 
+  # Type stubs for better IDE support and mypy
+  "boto3-stubs",
+  "mypy-boto3-dynamodb",
+  "mypy-boto3-glue",
+  "mypy-boto3-iam",
+  "mypy-boto3-lambda",
+  "mypy-boto3-s3",
+  "mypy-boto3-sns",
+  "mypy-boto3-sqs",
+  "mypy-boto3-sts",
+  # Code formatting and linting
+  "black",
+  "flake8",
+  "flake8-pyproject",
+  "isort",
+  "mypy",
+  # Testing
+  "pytest",
+  "coverage[toml]>=6.5",
+  # Security
+  "bandit",
+]
+
+[tool.hatch.envs.dev.scripts]
+# Type checking scripts
+typecheck = "mypy lock_and_key"
+typecheck-strict = "mypy --strict lock_and_key"
+typecheck-report = "mypy --html-report mypy-report lock_and_key"
+# Documentation scripts  
+docs = "sphinx-build -b html docs/source docs/build"
+docs-clean = "sphinx-build -b html -E docs/source docs/build"
+docs-serve = "python -m http.server 8000 --directory docs/build"
+
+[tool.hatch.envs.hatch-test]
+dependencies = [
+    # Core dependencies
+    "boto3",
+    "click",
+    "pydantic",
+    "rich",
+    # Type stubs for better IDE support
+    "boto3-stubs",
+    "mypy-boto3-dynamodb",
+    "mypy-boto3-glue",
+    "mypy-boto3-iam",
+    "mypy-boto3-lambda",
+    "mypy-boto3-s3",
+    "mypy-boto3-sns",
+    "mypy-boto3-sqs",
+    "mypy-boto3-sts",
+    "pytest",
+    "pytest-cov",
+]
+
+# Keep test environment for backwards compatibility
+[tool.hatch.envs.test]
+template = "hatch-test"
+
+# ==============================================================================
+# HATCH SCRIPTS
+# ==============================================================================
+[tool.hatch.envs.default.scripts]
+# Application scripts
+scan = "python -m lock_and_key.cli {args}"
+# Documentation scripts
+docs = "sphinx-build -b html docs/source docs/build"
+docs-clean = "sphinx-build -b html -E docs/source docs/build"
+docs-serve = "python -m http.server 8000 --directory docs/build"
+
+# Testing scripts
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+# Development scripts
+isort = "python -m isort {args}"
+black = "python -m black {args}"
+flake8 = "python -m flake8 {args}"
+mypy = "python -m mypy --exclude 'docs' {args}"
+
+# Build scripts
+build = "python -m build"
+clean = "hatch clean"
+pre-build = [
+  "isort lock_and_key tests",
+  "black --check lock_and_key tests",
+  "mypy lock_and_key",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+# ==============================================================================
+# TOOL CONFIGURATION
+# ==============================================================================
+
+# Coverage configuration
+[tool.coverage.run]
+source_pkgs = ["lock_and_key", "tests"]
+branch = true
+parallel = true
+omit = [
+  "lock_and_key/__about__.py",
+]
+
+[tool.coverage.paths]
+lock_and_key = ["lock_and_key", "*/lock-and-key/lock_and_key"]
+tests = ["tests", "*/lock-and-key/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+# Code formatting configuration
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+# Linting configuration
+[tool.flake8]
+max-line-length = 120
+
+# Type checking configuration
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+exclude = ["docs/.*"]
+# Allow imports that might not be available at runtime (like type stubs)
+ignore_missing_imports = true
+# Show error codes for easier debugging
+show_error_codes = true
+# Be strict about TYPE_CHECKING imports
+warn_unused_ignores = true
