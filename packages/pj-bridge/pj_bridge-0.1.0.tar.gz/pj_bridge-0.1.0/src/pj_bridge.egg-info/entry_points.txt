@@ -1,0 +1,5 @@
+[console_scripts]
+derive-struct = derive_struct:main
+pj-bridge = bridge:main
+socket-client = socket_client:main
+tcp-parser = tcp_parser:main
