@@ -1,0 +1,11 @@
+mf_toolkit-1.1.1.dist-info/licenses/LICENSE,sha256=mX9fsdzZwZbgELP8BAmf5sbsgp7_LLCSeIooGEaPSrY,1068
+mftoolkit/MFDFA.py,sha256=D4T5BHSIPijUTyG-5PefunmjcWdYd9pLIqugKwJyczc,15469
+mftoolkit/__init__.py,sha256=vIcHqGFR37oZQOokaMA_fN3tj1sBX88tLMmVFwKoEfs,461
+mftoolkit/crossovers.py,sha256=QTscP_jsJAkH8lK6vNYbgbs4p1rSJPWS9jBOYVJ2NsE,25582
+mftoolkit/mfgeneration.py,sha256=8bRXVMSVoV9u2AmAaZ-rKr17lOEOtI3tneDhJgq8BWY,8814
+mftoolkit/mfsources.py,sha256=SZkBQKwwCI3z0hzvt6EcYN8xrRFdhaZB3ELQDF2TgC4,6067
+mftoolkit/test.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mf_toolkit-1.1.1.dist-info/METADATA,sha256=RYEHyW-z1-LVGFX1xI3OPnOl4Rq_z7M6HYrOUYza0RE,9787
+mf_toolkit-1.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mf_toolkit-1.1.1.dist-info/top_level.txt,sha256=QD9EvdpcGWytrNkEhuDSREiJsQvymITXIW5VdWXGUZg,10
+mf_toolkit-1.1.1.dist-info/RECORD,,
