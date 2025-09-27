@@ -1,0 +1,9 @@
+bpe_qwen-0.1.3.dist-info/METADATA,sha256=v8vL7GjXCEV-MlkakUiC5_avFievJp0HZe0iNaOdF98,4384
+bpe_qwen-0.1.3.dist-info/WHEEL,sha256=aXz49xVjjC2bkgTnE4xcanfAmG9wdfNG_Q2OldK7oKM,104
+bpe_qwen-0.1.3.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+bpe_qwen/__init__.py,sha256=oszH7M-Lhi9Gc9E5GX1VRD6kgANUkF0bG2oXYfuf1Lc,1785
+bpe_qwen/__init__.pyi,sha256=yXZg074U1d2nz3UtUkFDcKWEt4_bcRXrMeN8Uh-Q_Qg,5346
+bpe_qwen/auto_linear_tokenizer.py,sha256=37dXpzVloWJaxSVBPle4CwZrxZ-Y6JcrrfrR1nm0gfw,12970
+bpe_qwen/bpe_qwen.cpython-310-darwin.so,sha256=qjxxAW_jMo8kMETl8E8KKhawT6y6lPHM_y1yYhHS8Pc,2327232
+bpe_qwen/hf_patch.py,sha256=75j1SHBc7bxT7UDqu9QM6tcDMBUXP7uXHI5ImayGtfg,12707
+bpe_qwen-0.1.3.dist-info/RECORD,,
