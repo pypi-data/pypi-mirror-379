@@ -1,0 +1,7 @@
+boto3_dataclass_chime_sdk_meetings/__init__.py,sha256=QjJPp4l8una6K7eqqlENPMEDM8SFHQvqCBvoaxGTLns,130
+boto3_dataclass_chime_sdk_meetings/caster.py,sha256=QJjqxRyjjAXh3VPdmKiU0sPOzHiLJr2PKoz7SqScWfs,3088
+boto3_dataclass_chime_sdk_meetings/type_defs.py,sha256=5uO_mqA4V6ft-4tYBU6H3CzI1kBE5dsWFeQVxLGEOhc,44010
+boto3_dataclass_chime_sdk_meetings-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_chime_sdk_meetings-1.40.0.dist-info/METADATA,sha256=aAiS2rS4WEGC7H3V0LDQiDoy76jYQ3cNmSQqFgyYQxo,1718
+boto3_dataclass_chime_sdk_meetings-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_chime_sdk_meetings-1.40.0.dist-info/RECORD,,
