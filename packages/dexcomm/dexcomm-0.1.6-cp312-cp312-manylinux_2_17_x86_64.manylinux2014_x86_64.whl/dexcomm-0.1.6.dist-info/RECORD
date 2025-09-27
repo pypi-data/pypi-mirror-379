@@ -1,0 +1,10 @@
+dexcomm.cpython-312-x86_64-linux-gnu.so,sha256=YXhlUHTbMaRSP87400h2V4DlQq6AQdM8m4lRmNHtQtA,2172640
+dexcomm.pyi,sha256=fstUWx1x8zcw8VAEULwLVbKF6m30BL6Fs0EwRjXBcJg,3504
+dexcomm/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dexcomm/serialization/protobuf/lidar2d_pb2.pyi,sha256=Wy32rFnjfzJCjGlz8zqFzsRNI0Bm8zQsNLjK-nwvZBg,2136
+dexcomm.build/.gitignore,sha256=aEiIwOuxfzdCmLZe4oB1JsBmCUxwG8x-u-HBCV9JT8E,1
+dexcomm-0.1.6.dist-info/METADATA,sha256=1ZsiNUXFKn-8Y4kG-JoaPjl_aNKN6U9YheBXJMSSpSw,9933
+dexcomm-0.1.6.dist-info/WHEEL,sha256=743weSDipdIXBS7pR4XM1an_yKfZ2ougnHyT4lwFSHk,147
+dexcomm-0.1.6.dist-info/top_level.txt,sha256=HxOSa-2r1LWUCgaGigQiF4n_u5VjFQpIFg9bGcggaqQ,8
+dexcomm-0.1.6.dist-info/RECORD,,
+dexcomm-0.1.6.dist-info/licenses/LICENSE,sha256=0J2KCMNNnW5WZPK5x8xUiCxApBf7h83693ggSJYiue0,31745
