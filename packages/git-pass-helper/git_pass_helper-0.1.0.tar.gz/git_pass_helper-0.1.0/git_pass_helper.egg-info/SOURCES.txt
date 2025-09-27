@@ -1,0 +1,8 @@
+pyproject.toml
+git_pass/__init__.py
+git_pass_helper.egg-info/PKG-INFO
+git_pass_helper.egg-info/SOURCES.txt
+git_pass_helper.egg-info/dependency_links.txt
+git_pass_helper.egg-info/entry_points.txt
+git_pass_helper.egg-info/requires.txt
+git_pass_helper.egg-info/top_level.txt
