@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+headless/__init__.py
+headless/core.py
+headless_driver.egg-info/PKG-INFO
+headless_driver.egg-info/SOURCES.txt
+headless_driver.egg-info/dependency_links.txt
+headless_driver.egg-info/requires.txt
+headless_driver.egg-info/top_level.txt
+tests/test_core.py
