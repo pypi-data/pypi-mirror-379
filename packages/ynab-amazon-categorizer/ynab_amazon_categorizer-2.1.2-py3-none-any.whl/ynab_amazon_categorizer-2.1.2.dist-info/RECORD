@@ -1,0 +1,16 @@
+ynab_amazon_categorizer/__init__.py,sha256=l3y1V8nE6sEubOOdj7Efvey_naedhrQhDYbe43Hbwbs,621
+ynab_amazon_categorizer/__main__.py,sha256=D1YS-BymPbkp4v49qVL8GCqoApe7N6hYupS8mCwOgE4,146
+ynab_amazon_categorizer/_version.py,sha256=1HfU5X4wnJmiuzlejKwSquKM3pc6v_HUoAD1U98eCOw,704
+ynab_amazon_categorizer/amazon_parser.py,sha256=V4kG-rBpWdCHaJ9LQEcCi1jIxaKsuvV69X5loWtccrc,4995
+ynab_amazon_categorizer/cli.py,sha256=FQbH6ITo17NuQ7HVEVyFRfsa-5fR3kpNytiMm4hX4c4,35773
+ynab_amazon_categorizer/config.py,sha256=ASgl6ZqdXlt569aIc-ltIJqC1O9rkkCbjFboDHk1R5M,1447
+ynab_amazon_categorizer/exceptions.py,sha256=xvZvdYeX5ptPwDvxFks4c8JXpHyWtoauRRE6VAWqRMA,161
+ynab_amazon_categorizer/memo_generator.py,sha256=Fkgc7Mb47CTIvvImvu6qA8N9d9XqnwDdZAt_Eljyxy0,984
+ynab_amazon_categorizer/transaction_matcher.py,sha256=2ftAhV1tpJUNeaBJZBYpTJwpuo66FtfQnKduPQ8JSFM,3597
+ynab_amazon_categorizer/ynab_client.py,sha256=OCKGvMGGmG_qSJx1Ds_MYt7VkzoDkAsp7rKyjdLmJCw,2972
+ynab_amazon_categorizer-2.1.2.dist-info/licenses/LICENSE,sha256=ILBn-G3jdarm2w8oOrLmXeJNU3czuJvVhDLBASWdhM8,34522
+ynab_amazon_categorizer-2.1.2.dist-info/METADATA,sha256=3kB1wgI4dnXOT9qJUXAMnkPnDCb08JxIrf_Ng0sBVFA,7634
+ynab_amazon_categorizer-2.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ynab_amazon_categorizer-2.1.2.dist-info/entry_points.txt,sha256=3EQsT7OlRKS75ng8fTd7_0i-wiQkYcayC60XYO71DGk,77
+ynab_amazon_categorizer-2.1.2.dist-info/top_level.txt,sha256=RcTzi-yrEd7t6aG8D9W3lOfZiYMi8JlZV3U9E7tVAE0,24
+ynab_amazon_categorizer-2.1.2.dist-info/RECORD,,
