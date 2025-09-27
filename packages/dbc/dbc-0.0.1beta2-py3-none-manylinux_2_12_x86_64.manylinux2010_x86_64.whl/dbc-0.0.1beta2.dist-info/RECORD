@@ -1,0 +1,11 @@
+dbc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbc/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dbc/__main__.py,sha256=4A37svOcgEZO2mY5iX2AVfrxsZTX6bjzBziCwkZDlAA,300
+dbc/README.md,sha256=mA_ssGDI8pHKZtEq0Y3F1zzz_fs74znBeWPArupHTes,6381
+dbc/dbc_linux_amd64.sig,sha256=EIACj7CBwRS7y0zbcDpwNrSkcpha9Eqxl2DAZKJ_Vsw,140
+dbc/dbc,sha256=8sNW5JayBmg-d8pGPSV3-8Jcehk-sHh62lFrfJUXdOc,9113784
+dbc-0.0.1beta2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dbc-0.0.1beta2.dist-info/entry_points.txt,sha256=scfA_gBPHhsqF_0r-c_84cf3Lo_7QI-4lpIhoqAuIYk,43
+dbc-0.0.1beta2.dist-info/METADATA,sha256=agiOTLAr5CCARAnf_IinFcx7n6JvfiXCEIXolFEm9vo,6601
+dbc-0.0.1beta2.dist-info/WHEEL,sha256=8iMA3G3I-BoinwSawePtPQwbPdqaKIT3xQd4Hs2cSjQ,132
+dbc-0.0.1beta2.dist-info/RECORD,,
