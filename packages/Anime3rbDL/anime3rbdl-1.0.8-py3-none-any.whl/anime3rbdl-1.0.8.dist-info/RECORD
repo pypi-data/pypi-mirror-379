@@ -1,0 +1,16 @@
+Anime3rbDL/__init__.py,sha256=KnsHN4km7YdgBYr8gOChoX3cY3b6-ntzV_pn9rj8PUs,13993
+Anime3rbDL/__main__.py,sha256=4ykEf2zdp3LMnLLST36nycSKzn-OQUJ4HzbZ9wXHC30,21907
+Anime3rbDL/bot.py,sha256=TwS06gd9p3ibMignM5xoNI_rY5PDm_kCqUpMoIH0rNE,12106
+Anime3rbDL/client.py,sha256=nKnnpkE4UxwD83Bp-aD2jUcZ0XQXNonRSlrcIAirfuY,20754
+Anime3rbDL/config.py,sha256=LDq9wzYt8A9Z78hVATBDahRpgiZIevlM1i7QaAh19Po,17922
+Anime3rbDL/downloader.py,sha256=3RFtWugo-RxrbFkwmtnhblXhSY_0xNcjbshynVAlV2o,30682
+Anime3rbDL/enums.py,sha256=-cky26BlC7DrYnEDG-avbKzjPWiy0sWSX_NLFOwQ-eI,19414
+Anime3rbDL/exceptions.py,sha256=FFydPu7m0TDDHrcPV0hqyqf2HfY_NSUjNZsz9JDRLsA,2736
+Anime3rbDL/logger.py,sha256=7aOwGfOHUJkCt7vMJXR_pT5-Pv4j9-OViOXKTL2U7C8,9608
+Anime3rbDL/parser.py,sha256=z1Tk0-Epd_4T7mlOj1QnpUIy2PHnK3WSh73gmBjgoPM,46890
+anime3rbdl-1.0.8.dist-info/licenses/LICENSE,sha256=ZP0Jrg6XYkAzOm_HYiUWRk9K5ZZObMInGQxcsSUphqE,1065
+anime3rbdl-1.0.8.dist-info/METADATA,sha256=Vf7sSLFsozCLHoq9TDcKY4ypUl7ImVDq_lrUWfP-pOY,18038
+anime3rbdl-1.0.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+anime3rbdl-1.0.8.dist-info/entry_points.txt,sha256=h74TMwtsVpQOfm1y4xO5V2vcUhptQw1g7rEbYoWxz0I,125
+anime3rbdl-1.0.8.dist-info/top_level.txt,sha256=SuB0HfhdAdEjs9K0_Cp-42fMqH2tOHFA0NqSGfTOKlg,11
+anime3rbdl-1.0.8.dist-info/RECORD,,
