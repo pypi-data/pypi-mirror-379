@@ -1,0 +1,12 @@
+.gitignore
+README.md
+example.ipynb
+pyproject.toml
+.github/workflows/publish.yml
+hiti_preproc/__init__.py
+hiti_preproc/dicoms.py
+hiti_preproc/rois.py
+hiti_preproc.egg-info/PKG-INFO
+hiti_preproc.egg-info/SOURCES.txt
+hiti_preproc.egg-info/dependency_links.txt
+hiti_preproc.egg-info/top_level.txt
