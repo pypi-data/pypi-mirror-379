@@ -1,0 +1,7 @@
+boto3_dataclass_elb/__init__.py,sha256=ewdSbnM-QtJfapDtxzIdZpGDUFD41CY1ULiRXjUM-SI,100
+boto3_dataclass_elb/caster.py,sha256=1R55VY2-PY6eSlz35u8BwEnQKK8QkitLCI0VKrdDrY4,4099
+boto3_dataclass_elb/type_defs.py,sha256=FuI9QpOE2M_x0msQ3xyTI6rkjeckuHgSE6Z6u2nwMsU,78726
+boto3_dataclass_elb-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_elb-1.40.0.dist-info/METADATA,sha256=7nYmsh7UcxJs-C42krgTnUrvYJ50U610S8SRx33e0KA,1613
+boto3_dataclass_elb-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_elb-1.40.0.dist-info/RECORD,,
