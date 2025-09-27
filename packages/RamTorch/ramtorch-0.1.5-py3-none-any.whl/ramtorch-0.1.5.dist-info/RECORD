@@ -1,0 +1,16 @@
+ramtorch/__init__.py,sha256=qLLv0HD4818tQ4opZDgQcEY37k9yeJQA_NlrndtDZMQ,113
+ramtorch/helpers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ramtorch/zero1.py,sha256=pUVnBudoP8HyIwv-KxgPySMGsVtkk3f5kGd1pql6Pmg,3070
+ramtorch/zero2.py,sha256=5mCOxXa64hq7h4bai5g91z8St5MyDh1nanD_FE2SkK8,1472
+ramtorch/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ramtorch/modules/linear copy 2.py,sha256=5cVO0gEI6PNVXJoghgbxWV0Q7hfSFICW0qDvZoodoes,10095
+ramtorch/modules/linear copy.py,sha256=B4P3TjIaodGJiJZojoPdXwguwxS8ENN2TeJgva6eKRY,9760
+ramtorch/modules/linear.py,sha256=KuaefaKH4R7_EQeR9WtqLmGgnj4-GEcOqPSKqWBFyw8,8632
+ramtorch/modules/linear_2.py,sha256=GttHzLMoqCb8tqoAu-NX49PBNwJ-S24aGU1cKNlrCsM,9888
+ramtorch/stochastic_optimizers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ramtorch/stochastic_optimizers/adamw.py,sha256=1-HfBsFIm4Q44cN85a8EcsGORUeMQqXohTh14yre578,8608
+ramtorch-0.1.5.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ramtorch-0.1.5.dist-info/METADATA,sha256=n3t4rtmtd2iPzU9CnKNZfOtQWGlep6_9yOBpu_dQ_uE,5828
+ramtorch-0.1.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ramtorch-0.1.5.dist-info/top_level.txt,sha256=kWBPU_SeCWDtD4lE-2uWacgsKA_MspWJhpMFMoyo8sQ,9
+ramtorch-0.1.5.dist-info/RECORD,,
