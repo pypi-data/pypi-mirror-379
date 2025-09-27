@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: oxbow
+Version: 0.4.2
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: arro3-core>=0.4.6
+Requires-Dist: polars>=1.26.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: fsspec>=2025.5.1
+Requires-Dist: typing-extensions ; python_full_version < '3.10'
+Summary: Read genomic file formats into data frames and more.
+Keywords: genomics,ngs,bioinformatics,dataframe,arrow
+Author-email: Oxbow Developers <nabdennur@gmail.com>
+License: MIT OR Apache-2.0
+Requires-Python: >=3.9
+Project-URL: homepage, https://github.com/abdenlab/oxbow
+Project-URL: documentation, https://oxbow.readthedocs.io/
+Project-URL: repository, https://github.com/abdenlab/oxbow
+Project-URL: issues, https://github.com/abdenlab/oxbow/issues
