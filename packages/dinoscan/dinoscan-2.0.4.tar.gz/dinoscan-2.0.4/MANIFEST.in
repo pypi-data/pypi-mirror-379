@@ -1,0 +1,9 @@
+include README.md
+include CHANGELOG.md
+include LICENSE
+include pyproject.toml
+include pytest.ini
+recursive-include src *.py
+recursive-include src *.txt *.json *.yaml *.yml *.ini *.toml
+recursive-include scripts *.py
+global-exclude *.pyc __pycache__ .pytest_cache .mypy_cache *.egg-info
