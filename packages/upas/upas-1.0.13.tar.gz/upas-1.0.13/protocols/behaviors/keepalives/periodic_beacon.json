@@ -1,0 +1,316 @@
+{
+    "behavior": {
+        "name": "Periodic_Beacon",
+        "type": "keepalive",
+        "description": "Periodic beacon transmission for presence announcement"
+    },
+    "beacon_config": {
+        "beacon_interval": 30000,
+        "beacon_power": "high",
+        "beacon_range": "local",
+        "content_type": "presence",
+        "collision_avoidance": true,
+        "random_jitter": 2000,
+        "backoff_multiplier": 1.5
+    },
+    "behavior_type": "periodic",
+    "interval": "[BEACON_INTERVAL]",
+    "jitter": "[RANDOM_JITTER]",
+    "repeat_count": -1,
+    "variables": {
+        "BEACON_ID": "BEACON_001",
+        "DEVICE_TYPE": "SENSOR_NODE",
+        "BEACON_SEQUENCE": 0,
+        "TRANSMISSION_POWER": 14,
+        "BATTERY_LEVEL": 100,
+        "SIGNAL_QUALITY": 0
+    },
+    "functions": {
+        "increment_beacon_seq": "lambda x: (x + 1) % 65536",
+        "get_battery_level": "lambda: random.randint(85, 100)",
+        "get_signal_quality": "lambda: random.randint(-80, -30)",
+        "calculate_next_beacon": "lambda interval, jitter: interval + random.randint(-jitter, jitter)"
+    },
+    "presence_beacon": {
+        "enabled": true,
+        "payload": [
+            {
+                "beacon_type": "PRESENCE"
+            },
+            {
+                "beacon_id": "[BEACON_ID]"
+            },
+            {
+                "device_type": "[DEVICE_TYPE]"
+            },
+            {
+                "sequence": "[BEACON_SEQUENCE:2:increment_beacon_seq]"
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_time]"
+            },
+            {
+                "tx_power": "[TRANSMISSION_POWER:1]"
+            },
+            {
+                "next_beacon": "[NEXT_BEACON:4:calculate_next_beacon]"
+            }
+        ]
+    },
+    "status_beacon": {
+        "enabled": false,
+        "payload": [
+            {
+                "beacon_type": "STATUS"
+            },
+            {
+                "beacon_id": "[BEACON_ID]"
+            },
+            {
+                "device_type": "[DEVICE_TYPE]"
+            },
+            {
+                "sequence": "[BEACON_SEQUENCE:2:increment_beacon_seq]"
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_time]"
+            },
+            {
+                "battery_level": "[BATTERY_LEVEL:1:get_battery_level]"
+            },
+            {
+                "signal_quality": "[SIGNAL_QUALITY:1:get_signal_quality]"
+            },
+            {
+                "operational_state": "ACTIVE"
+            },
+            {
+                "error_code": "00"
+            },
+            {
+                "uptime": "[UPTIME:4:get_uptime]"
+            },
+            {
+                "network_id": "[NETWORK_ID]"
+            },
+            {
+                "parent_node": "[PARENT_NODE:2]"
+            },
+            {
+                "hop_count": "[HOPS:1]"
+            }
+        ]
+    },
+    "data_beacon": {
+        "enabled": false,
+        "payload": [
+            {
+                "beacon_type": "DATA"
+            },
+            {
+                "beacon_id": "[BEACON_ID]"
+            },
+            {
+                "sequence": "[BEACON_SEQUENCE:2:increment_beacon_seq]"
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_time]"
+            },
+            {
+                "temperature": "[TEMP:2:read_temperature]"
+            },
+            {
+                "humidity": "[HUMIDITY:2:read_humidity]"
+            },
+            {
+                "pressure": "[PRESSURE:4:read_pressure]"
+            },
+            {
+                "light_level": "[LIGHT:2:read_light]"
+            },
+            {
+                "data_age": "[AGE:2]"
+            },
+            {
+                "confidence": "[CONFIDENCE:1]"
+            },
+            {
+                "checksum": "[CRC:2:calculate_crc]"
+            }
+        ]
+    },
+    "emergency_beacon": {
+        "enabled": false,
+        "priority": "high",
+        "trigger_conditions": [
+            "battery_level < 10",
+            "temperature > 85",
+            "pressure < threshold",
+            "manual_trigger"
+        ],
+        "payload": [
+            {
+                "beacon_type": "EMERGENCY"
+            },
+            {
+                "beacon_id": "[BEACON_ID]"
+            },
+            {
+                "emergency_code": "[EMERGENCY:2]"
+            },
+            {
+                "severity": "[SEVERITY:1]"
+            },
+            {
+                "timestamp": "[TIMESTAMP:8:current_time]"
+            },
+            {
+                "location": "[GPS_COORDS:8]"
+            },
+            {
+                "description": "[EMERGENCY_MSG]"
+            }
+        ]
+    },
+    "adaptive_timing": {
+        "enabled": true,
+        "power_adaptation": {
+            "high_battery": {
+                "condition": "battery_level > 80",
+                "interval": 30000,
+                "power_level": "high"
+            },
+            "medium_battery": {
+                "condition": "battery_level > 40 AND battery_level <= 80",
+                "interval": 60000,
+                "power_level": "medium"
+            },
+            "low_battery": {
+                "condition": "battery_level <= 40",
+                "interval": 300000,
+                "power_level": "low"
+            }
+        },
+        "network_adaptation": {
+            "low_traffic": {
+                "condition": "network_utilization < 20%",
+                "interval_multiplier": 1.0
+            },
+            "medium_traffic": {
+                "condition": "network_utilization >= 20% AND network_utilization < 70%",
+                "interval_multiplier": 1.5
+            },
+            "high_traffic": {
+                "condition": "network_utilization >= 70%",
+                "interval_multiplier": 2.0
+            }
+        }
+    },
+    "collision_handling": {
+        "detection": {
+            "enabled": true,
+            "detection_window": 100
+        },
+        "avoidance": {
+            "carrier_sense": true,
+            "sense_duration": 10,
+            "backoff": {
+                "initial_window": 100,
+                "max_window": 3200,
+                "multiplier": 2
+            }
+        },
+        "scheduling": {
+            "method": "random_jitter",
+            "priority_based": {
+                "enabled": false,
+                "priorities": {
+                    "emergency": 1,
+                    "status": 2,
+                    "data": 3,
+                    "presence": 4
+                }
+            }
+        }
+    },
+    "neighbor_discovery": {
+        "enabled": true,
+        "neighbor_tracking": {
+            "timeout": 180000,
+            "max_neighbors": 50
+        },
+        "beacon_analysis": {
+            "rssi_tracking": true,
+            "timing_analysis": true,
+            "content_parsing": true
+        },
+        "topology_mapping": {
+            "enabled": true,
+            "update_interval": 60000,
+            "share_topology": false
+        }
+    },
+    "power_management": {
+        "dynamic_power": {
+            "enabled": true,
+            "adjust_based_on": [
+                "battery",
+                "distance",
+                "neighbors"
+            ]
+        },
+        "sleep_coordination": {
+            "enabled": false,
+            "sleep_schedule": "coordinated",
+            "wake_window": 5000
+        }
+    },
+    "security": {
+        "authentication": {
+            "enabled": false,
+            "method": "hmac_sha256",
+            "shared_key": "[BEACON_KEY:32]"
+        },
+        "encryption": {
+            "enabled": false,
+            "algorithm": "aes_128_ctr",
+            "encryption_key": "[ENC_KEY:16]"
+        },
+        "anti_replay": {
+            "enabled": true,
+            "sequence_window": 100
+        }
+    },
+    "qos": {
+        "reliability": {
+            "retransmission": false,
+            "acknowledgment": false
+        },
+        "prioritization": {
+            "enabled": true,
+            "priority_queue": [
+                "emergency",
+                "status",
+                "data",
+                "presence"
+            ]
+        }
+    },
+    "monitoring": {
+        "collect_stats": true,
+        "statistics": [
+            "beacons_transmitted",
+            "transmission_failures",
+            "collisions_detected",
+            "neighbors_discovered",
+            "average_rssi",
+            "battery_consumption"
+        ],
+        "performance": [
+            "beacon_success_rate",
+            "neighbor_discovery_rate",
+            "network_coverage",
+            "energy_efficiency"
+        ]
+    }
+}

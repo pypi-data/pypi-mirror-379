@@ -1,0 +1,98 @@
+{
+    "protocol": {
+        "name": "AnalyzedProtocol",
+        "version": "1.0",
+        "description": "Protocol extracted from Wireshark trace analysis",
+        "category": "industrial"
+    },
+    "variables": {
+        "UDP_PREFIX": "A0B1C2D3E4F5000000000000",
+        "UDP_SUFFIX": "EF34AB56",
+        "TCP_PREFIX": "A0B1C2D3E4F5000000000000",
+        "TCP_SUFFIX": "EF34AB56"
+    },
+    "transports": {
+        "primary_ethernet": {
+            "type": "ethernet",
+            "services": {
+                "udp_service": {
+                    "type": "udp_unicast",
+                    "bind": "0.0.0.0:3777"
+                },
+                "tcp_service": {
+                    "type": "tcp_server",
+                    "bind": "0.0.0.0:0"
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "reactive_udp_1": {
+            "type": "reactive",
+            "listen_transport": "ethernet",
+            "response_transport": "ethernet",
+            "trigger": {
+                "source_pattern": "192.168.81.253:53114",
+                "destination_pattern": "192.168.81.254:3777",
+                "payload_pattern": "[UDP_PREFIX:11]280108000000AB12CD0804000000AB12CD0000000200000001[UDP_SUFFIX:4]"
+            },
+            "response": {
+                "delay": 0,
+                "destination": "192.168.81.253:53114",
+                "payload": [
+                    "[UDP_PREFIX:11]340804000000AB12CD0108000000AB12CD000000030000000100000001000003E800000000[UDP_SUFFIX:4]"
+                ]
+            }
+        },
+        "reactive_udp_2": {
+            "type": "reactive",
+            "listen_transport": "ethernet",
+            "response_transport": "ethernet",
+            "triggers": [
+                {
+                    "source_pattern": "192.168.81.253:53114",
+                    "destination_pattern": "192.168.81.254:3777",
+                    "payload_pattern": "[UDP_PREFIX:11]280108000000AB12CD0804000000AB12CD0000000200000001[UDP_SUFFIX:4]"
+                },
+                {
+                    "source_pattern": "192.168.81.253:53114",
+                    "destination_pattern": "192.168.81.254:3777",
+                    "payload_pattern": "[UDP_PREFIX:11]280108000000AB12CD0804000000AB12CD0000000400000000[UDP_SUFFIX:4]"
+                }
+            ],
+            "response": {
+                "delay": 102,
+                "destination": "sender",
+                "payload": [
+                    "[UDP_PREFIX:11]280804000000AB12CD0108000000AB12CD0000000700000000[UDP_SUFFIX:4]"
+                ]
+            }
+        },
+        "udp_periodic_19": {
+            "type": "periodic",
+            "interval": 1261,
+            "transport": "ethernet",
+            "destination": "224.0.10.13:7001",
+            "payload": [
+                "[UDP_PREFIX:11]",
+                "3000000000000000000108000000AB12CD0000000100000001000000",
+                "[COUNTER_8:increment]",
+                "00000000",
+                "[UDP_SUFFIX:4]"
+            ]
+        },
+        "tcp_periodic_20": {
+            "type": "periodic",
+            "interval": 5000,
+            "transport": "ethernet",
+            "destination": "192.168.81.253:53116",
+            "payload": [
+                "[TCP_PREFIX:11]",
+                "300804000000AB12CD0108000000AB12CD0000000E0000002101000000",
+                "[COUNTER_8:increment]",
+                "000000",
+                "[TCP_SUFFIX:4]"
+            ]
+        }
+    }
+}
