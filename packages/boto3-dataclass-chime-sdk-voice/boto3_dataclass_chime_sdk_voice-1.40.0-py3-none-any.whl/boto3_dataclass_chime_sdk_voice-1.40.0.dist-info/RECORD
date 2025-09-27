@@ -1,0 +1,7 @@
+boto3_dataclass_chime_sdk_voice/__init__.py,sha256=hH3Ffp_9zZE0s8EClskdd2iqcXHxCXcuiVwVorX81PU,124
+boto3_dataclass_chime_sdk_voice/caster.py,sha256=c76HljYIylnqhrFn5NTPlq8wZZCOr2girYviFnwnh_I,22721
+boto3_dataclass_chime_sdk_voice/type_defs.py,sha256=NzroQiYyNBYq9AgRXLqgAqzLuGKLG9jUxxdsADPhUBc,228201
+boto3_dataclass_chime_sdk_voice-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_chime_sdk_voice-1.40.0.dist-info/METADATA,sha256=FLHCPrQ8CxFQoZmlNsBy2uX7QfMHB6_6_-pLj_DIQj4,1697
+boto3_dataclass_chime_sdk_voice-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_chime_sdk_voice-1.40.0.dist-info/RECORD,,
