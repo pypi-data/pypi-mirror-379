@@ -1,0 +1,18 @@
+[package]
+name = "qitesse"
+version = "0.0.3"
+edition = "2021"
+description = "High-performance Rust state-vector quantum simulator with Python bindings"
+readme = "README.md"
+
+[lib]
+name = "qitesse"
+crate-type = ["cdylib"]
+
+[dependencies]
+num-complex = "0.4"
+rand = "0.8"
+rayon = "1.6"
+pyo3 = { version = "0.19", features = ["extension-module"] }
+numpy = "0.19"
+num_cpus = "1.17.0"

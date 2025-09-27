@@ -1,0 +1,8 @@
+/target
+**/*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.maturin/
+dist/
+.venv
