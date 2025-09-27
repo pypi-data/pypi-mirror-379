@@ -1,0 +1,25 @@
+# {{ name }}
+
+## Run
+
+```bash
+RELOAD=1 docker compose up --build
+```
+
+## Port
+
+The container's internal port is 8080. The host port is assigned dynamically.
+
+```bash
+docker port {{ name.lower().replace(' ', '-') }} 8080/tcp
+```
+
+To override the port:
+
+```bash
+PORT=1010 RELOAD=1 docker compose up --build
+```
+
+## License
+
+MIT
