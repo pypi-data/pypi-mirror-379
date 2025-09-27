@@ -1,0 +1,7 @@
+boto3_dataclass_detective/__init__.py,sha256=aNXYslvIymDjGT36HMQqD7nsmj1mXU-kdxCh_iSam0k,112
+boto3_dataclass_detective/caster.py,sha256=TOcgl_eXhlOD1bN2_ZSSCYoJkCRVuQoda1Y2uWMkx0w,5763
+boto3_dataclass_detective/type_defs.py,sha256=rpZrFkquZeP37_svJ73Sz3BhxwyRusgI7i2TPxWJ3HU,68211
+boto3_dataclass_detective-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_detective-1.40.0.dist-info/METADATA,sha256=k37cEghAm7mRvuMYEbPmkniJrswqEOhQWbqAgo1kdlY,1655
+boto3_dataclass_detective-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_detective-1.40.0.dist-info/RECORD,,
