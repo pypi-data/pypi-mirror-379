@@ -1,0 +1,15 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    .venv,
+    .tox,
+    versioneer.py,
+    ganrec/_version.py,
+    ganrectf/_version.py,
+    ganrectorch/_version.py,
+    docs/source/conf.py
+max-line-length = 115
+extend-ignore = E203, W503
