@@ -1,0 +1,7 @@
+boto3_dataclass_braket/__init__.py,sha256=Xwc8iKZGmmVoEgzJQYfdm_SnJKGH94loOH_lOkUrpGU,106
+boto3_dataclass_braket/caster.py,sha256=41jqzt-Fv6DcHK4Xz0yzDTHcD-sQVkqC8VyvmQ2CnSs,2282
+boto3_dataclass_braket/type_defs.py,sha256=tX_HtvnpXBNaH6k4OlK0MCOOcgxU0-bcOtJU54_WnX0,50418
+boto3_dataclass_braket-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_braket-1.40.0.dist-info/METADATA,sha256=jtZxjkWMONeV7J7Eg71ViyNQgXQ-aykzVZF7uzk8Mcc,1634
+boto3_dataclass_braket-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_braket-1.40.0.dist-info/RECORD,,
