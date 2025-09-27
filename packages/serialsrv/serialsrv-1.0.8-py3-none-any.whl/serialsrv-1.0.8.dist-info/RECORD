@@ -1,0 +1,11 @@
+serialsrv/__init__.py,sha256=2xPuaWGuH_vZrfmC1qU8fVMuqZ_r0-5sSiLk52RYmBA,25094
+serialsrv/serialsrv.json,sha256=D3mwU2c6-71PIyICWNySTG9OQpekgpAEB-Lb_Dkt7RI,1036
+serialsrv/abap/serial_method_test.abap,sha256=fl2uL6SvdJprMHzAq8EXxZ2tY-xpnI5Kfbgc5-MKcfo,4998
+serialsrv/abap/serial_service_method.abap,sha256=WJf97uzMgsM-FE60EEaMZvdWWX4OjXrbCPeaPMF3TUo,10630
+serialsrv/abap/serial_service_test.abap,sha256=KuCaW8HGbMdOm_-b31ga1M23arLUfb-QdSslcgX5C-w,25830
+serialsrv-1.0.8.dist-info/licenses/LICENSE,sha256=W0GxbB-S03JZKqhguULkpsdU2TlXUx5NVDpSeH5YCdM,1066
+serialsrv-1.0.8.dist-info/METADATA,sha256=8IRJKckmuO9cksBwVccA67LE4y-VxgXFq-MefXrjTcw,17453
+serialsrv-1.0.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+serialsrv-1.0.8.dist-info/entry_points.txt,sha256=h40teBcLQYiltd7OC-89VlEnUVJktGv0CNXAmC0Augk,45
+serialsrv-1.0.8.dist-info/top_level.txt,sha256=BqMzzMcr2VoOBIu7FClAnNbOfXrYpqgkG-kJ7lgtXOM,10
+serialsrv-1.0.8.dist-info/RECORD,,
