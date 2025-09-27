@@ -1,0 +1,7 @@
+boto3_dataclass_acm_pca/__init__.py,sha256=ZKPO0fbaRBGcBjv_8E6UsY_Xxh8uYGJ6HPdKoMm_p5o,108
+boto3_dataclass_acm_pca/caster.py,sha256=oygwxDUNBILczF1QrYpqY9RWYg9Tc3CSGbpj7b5t4Ds,5131
+boto3_dataclass_acm_pca/type_defs.py,sha256=W4AQWJc7dK82pZRkNkFQwrbaU94x48o02p-ld98thDk,75005
+boto3_dataclass_acm_pca-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_acm_pca-1.40.0.dist-info/METADATA,sha256=jbz23D6JIAbLeOtiIA74WQRJeMbglbYcA_iNcEHX2dM,1641
+boto3_dataclass_acm_pca-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_acm_pca-1.40.0.dist-info/RECORD,,
