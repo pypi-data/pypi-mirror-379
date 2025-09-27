@@ -1,0 +1,8 @@
+setup.py
+firstpracticalclass.egg-info/PKG-INFO
+firstpracticalclass.egg-info/SOURCES.txt
+firstpracticalclass.egg-info/dependency_links.txt
+firstpracticalclass.egg-info/top_level.txt
+pypi project/__init__.py
+pypi project/firstpracticalclass.py
+pypi project/quiz 16-sep-25(hussain).py
