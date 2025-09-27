@@ -1,0 +1,30 @@
+name: s1-frame-enumerator
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11 # required for shapely 2.0.0
+  - pip
+  # For packaging, and testing
+  - ipympl
+  - setuptools
+  - setuptools_scm
+  - wheel
+  - pytest
+  - pytest-console-scripts
+  - pytest-cov
+  # For running
+  - importlib_metadata
+  # jupyter
+  - jupyter
+  - ipykernel
+  # gis
+  - rasterio
+  - geopandas
+  - shapely>=2.0
+  - pandas
+  - tqdm
+  - requests
+  - rasterio
+  - asf_search
+  - hyp3_sdk
+  - ruff
