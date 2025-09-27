@@ -1,0 +1,10 @@
+{
+    "games": [
+        {
+            "name": "uno",
+            "type": "card",
+            "row": 1,
+            "col": 1
+        }
+    ]
+}
