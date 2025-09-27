@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+ae/templates.py
+ae_templates.egg-info/PKG-INFO
+ae_templates.egg-info/SOURCES.txt
+ae_templates.egg-info/dependency_links.txt
+ae_templates.egg-info/requires.txt
+ae_templates.egg-info/top_level.txt
+ae_templates.egg-info/zip-safe
+tests/test_templates.py
