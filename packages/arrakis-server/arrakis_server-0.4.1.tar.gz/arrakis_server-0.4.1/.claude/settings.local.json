@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make:*)",
+      "Bash(python -m pytest arrakis_server/tests/test_partition.py -v)",
+      "Bash(ruff check:*)",
+      "Bash(python -m pytest arrakis_server/tests/test_server_coverage.py -v)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
