@@ -1,0 +1,5 @@
+langmem_cloudflare_vectorize/__init__.py,sha256=KcnHCDrNwXC5fNoV25cNQvPQ6Sa6FPQsaGdFxDkVlys,449
+langmem_cloudflare_vectorize/langmem_vectorize_basestore.py,sha256=EM5khZiOs9Uv5dT9T_YUgncO5Dr66tm6aBIGYfbSuNI,21277
+langmem_cloudflare_vectorize-0.1.0.dist-info/METADATA,sha256=KanrlTndKa5NtG6IDny2Yxlr5c3DtggjRXCdJuKSbM0,5246
+langmem_cloudflare_vectorize-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+langmem_cloudflare_vectorize-0.1.0.dist-info/RECORD,,
