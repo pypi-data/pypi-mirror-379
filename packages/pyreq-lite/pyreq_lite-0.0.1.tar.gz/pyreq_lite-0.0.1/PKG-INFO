@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pyreq-lite
+Version: 0.0.1
+Summary: Safe demo package for teaching supply-chain concepts (explicit-run only)
+Author: Demo Author
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# pyreq-lite (safe demo)
+
+This is a *safe* demonstration package. It **does not** run on import.
+To demonstrate behavior, run:
+
+- `pyreq-lite` (after installing) or
+- `python -m pyreq_lite`
+
+This will create a file `pyreq_lite_demo.txt` in the current directory with a harmless message.

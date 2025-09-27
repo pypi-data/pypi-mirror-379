@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pyreq-lite/__init__.py
+src/pyreq-lite/__main__.py
+src/pyreq-lite/cli.py
+src/pyreq_lite.egg-info/PKG-INFO
+src/pyreq_lite.egg-info/SOURCES.txt
+src/pyreq_lite.egg-info/dependency_links.txt
+src/pyreq_lite.egg-info/entry_points.txt
+src/pyreq_lite.egg-info/top_level.txt
