@@ -1,0 +1,7 @@
+boto3_dataclass_cognito_identity/__init__.py,sha256=PQL67j7llRyOZF9-cKFoAWpx8fJbX3QUzVmOszUHYBc,126
+boto3_dataclass_cognito_identity/caster.py,sha256=LfBO_LBHf_95HZRThTN6jEnRUdOCactb-9_ocJ8Cd_o,4587
+boto3_dataclass_cognito_identity/type_defs.py,sha256=r7vgUfMw6uYKa_5HNLi1lAI3pRR_6fq6lopzud-Ki3Y,49991
+boto3_dataclass_cognito_identity-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_cognito_identity-1.40.0.dist-info/METADATA,sha256=MrdaGfOBpUUE6O29rsyEenxi7_gw7DEJ3f0tl-q4dko,1704
+boto3_dataclass_cognito_identity-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_cognito_identity-1.40.0.dist-info/RECORD,,
