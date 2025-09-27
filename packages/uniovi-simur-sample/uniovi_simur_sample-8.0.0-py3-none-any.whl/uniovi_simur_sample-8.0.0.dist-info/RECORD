@@ -1,0 +1,9 @@
+simur_sample/__init__.py,sha256=_lH4XOkeKzmFAwUBEwBhmYwzmXwWWM1E3hH0xm7NwyQ,590
+simur_sample/skeleton.py,sha256=vVEFDQyfUEBZ9wXkpOB6EhgqK5_Ocf_hqJ4SHvvk1zQ,4506
+simur_sample/core/__init__.py,sha256=8TbEaHwhypxGnMWnZlLWxUqAomtNzFXUzcep1bAJrVs,49
+simur_sample/core/_versions.py,sha256=HVWE5mQS5ohKKELgnod6fTyNJFdn7UOtuOL30kmJzF4,212
+uniovi_simur_sample-8.0.0.dist-info/licenses/LICENSE.txt,sha256=MJSf2LY2uh50n0Y7vPzbMcIfTXiY_IvEp7dQMhSHBWo,1089
+uniovi_simur_sample-8.0.0.dist-info/METADATA,sha256=1pcFVKlBuy1Lh6XPw8Am26rMfSJD8GLk12i-T9EQL7E,3043
+uniovi_simur_sample-8.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+uniovi_simur_sample-8.0.0.dist-info/top_level.txt,sha256=W9cYHzsjggTLIU4C3NkIn1GGyJMQnxV_hgKlGccmOP4,13
+uniovi_simur_sample-8.0.0.dist-info/RECORD,,
