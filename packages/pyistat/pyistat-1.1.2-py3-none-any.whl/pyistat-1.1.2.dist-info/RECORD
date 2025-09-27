@@ -1,0 +1,9 @@
+pyistat/__init__.py,sha256=Q7eNC_gJ47g8DZ17vdVULd6z2XkrL6iM9TFeQpKoL78,183
+pyistat/errors.py,sha256=ClS-EsPN-zE7gy4JpJL-do8JeKzEs1QSXJr22mQHB8w,3935
+pyistat/get.py,sha256=H9JI4C1SJ_MsZorQ_WOYgIQLeavVsd8F9FhJMeSy8Cg,15001
+pyistat/rate_limiter.py,sha256=4GLae_-xRaqnhFbpgCsZqIvbWgcr4j7qVWwcMvczrtI,1486
+pyistat/search.py,sha256=eIAQAak_7yalZ8-O8O2SIFk14Cfa_aW7esJld3CbKQA,9985
+pyistat-1.1.2.dist-info/LICENSE,sha256=kiHC-TYVm4RG0ykkn7TA8lvlEPRHODoPEzNqx5hWaKM,17099
+pyistat-1.1.2.dist-info/METADATA,sha256=HKoUPF5jBnwfDaLLQOKzAtIgf2hKhRIPHHd4ooaoWlk,7808
+pyistat-1.1.2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pyistat-1.1.2.dist-info/RECORD,,
