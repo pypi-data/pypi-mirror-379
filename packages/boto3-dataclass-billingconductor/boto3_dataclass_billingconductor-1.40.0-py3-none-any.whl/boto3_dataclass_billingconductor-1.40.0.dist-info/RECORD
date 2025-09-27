@@ -1,0 +1,7 @@
+boto3_dataclass_billingconductor/__init__.py,sha256=H75lOHantjovOilm8qSkgPBeC1UXngXjI2utkG6ydu0,126
+boto3_dataclass_billingconductor/caster.py,sha256=ezxy2hiSVcK5KUtCekK5UXGUTkfcb-W_Woh0MtGGSBw,6954
+boto3_dataclass_billingconductor/type_defs.py,sha256=QRULzkLTN0_0KWM8O23vZcqWHxy3eH1M6y4g6Fu7mb8,122605
+boto3_dataclass_billingconductor-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_billingconductor-1.40.0.dist-info/METADATA,sha256=gMzcplhd9l12VOpZ4a2JVku91lsuxxd0mmqoqEivKj8,1704
+boto3_dataclass_billingconductor-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_billingconductor-1.40.0.dist-info/RECORD,,
