@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: zjt_trading_lib
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: metatrader5>=5.0.5260
+Requires-Dist: pydantic>=2.11.9
+Requires-Dist: sqlalchemy>=2.0.43
