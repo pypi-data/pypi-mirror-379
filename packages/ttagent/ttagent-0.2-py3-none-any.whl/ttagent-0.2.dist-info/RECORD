@@ -1,0 +1,15 @@
+example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example/agent.py,sha256=b9id5g2-rC4y23wrWKLf7EyDD0tvEMEZa32JSTj1Kgo,303
+example/agent_with_api.py,sha256=caryLnY2LV5uqMsVdd4cZPlSX308xnu_RcRA2Bf5qjY,675
+ttagent/__init__.py,sha256=-H4MCjUSHzUOh9dP5PgEotC8Hk9BRwmD4EuDh2NjH2g,102
+ttagent/abc.py,sha256=-MPodEd5mLdcf8nTYf840tswU-3ynSs0e9JgYD3HetQ,870
+ttagent/agent.py,sha256=JNwTGqirYCr7DZdDMyUDtfmBOoaqzvnQQPf7aYW5tZU,8732
+ttagent/main.py,sha256=57dEDBU8Rk7c-fAwKb1QDlHO1apym_3rKDMdT3XutpI,1071
+ttagent/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ttagent/settings.py,sha256=76-2wX2OgexSYFCUiBRfARLZlu2W3x6U8qLus2wPHgs,932
+ttagent-0.2.dist-info/licenses/LICENSE.md,sha256=bKdsXp_VzhGpI9IAqLroOu4Qm0lHil2sWk3_aF3RuEY,1070
+ttagent-0.2.dist-info/METADATA,sha256=47pImuJzDG9CXb562KEFxP85IXNBaZ-wwWxla86A3Yo,5248
+ttagent-0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ttagent-0.2.dist-info/entry_points.txt,sha256=mmzriA6iorBlPFalOELqAbrHw0iNFy3rAwdAFJogMSc,46
+ttagent-0.2.dist-info/top_level.txt,sha256=JyJtsASaY4E-iGb-osaGFZyt1j-DobDwDLh4rq8X0MU,29
+ttagent-0.2.dist-info/RECORD,,
