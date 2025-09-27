@@ -1,0 +1,47 @@
+name: pytest
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**/README.md'
+      - 'docs/**'
+      - 'tests/**'
+      - 'CITATION.cff'
+      - 'LICENSE'
+      - '.gitignore'
+      - '.python-version'
+      - '*.py'
+      - '*.yaml'
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**/README.md'
+      - 'docs/**'
+      - 'tests/**'
+      - 'CITATION.cff'
+      - 'LICENSE'
+      - '.gitignore'
+      - '.python-version'
+      - '*.py'
+      - '*.yaml'
+
+concurrency:
+  group: pytest-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "latest"
+          python-version: "3.13"
+
+      - name: Run pytest
+        run: uv run --dev pytest
