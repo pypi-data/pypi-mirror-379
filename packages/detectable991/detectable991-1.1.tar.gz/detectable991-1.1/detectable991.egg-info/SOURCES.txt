@@ -1,0 +1,7 @@
+setup.py
+detectable991/__init__.py
+detectable991/detectable991.py
+detectable991.egg-info/PKG-INFO
+detectable991.egg-info/SOURCES.txt
+detectable991.egg-info/dependency_links.txt
+detectable991.egg-info/top_level.txt
