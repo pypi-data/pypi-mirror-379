@@ -1,0 +1,7 @@
+boto3_dataclass_glue/__init__.py,sha256=l9Zr_-d8PqRoplvjvkcIaiDK339ejost4SWv_y32jds,102
+boto3_dataclass_glue/caster.py,sha256=g7GCw5sbV5ZtHLpOdcRNcuf4wWLbDnPcZGUrG6GjWb4,40741
+boto3_dataclass_glue/type_defs.py,sha256=WvVOuNvoG3R_vQRiF6P4Gj1Us2vy1FSz5VkPOr_heq4,1076105
+boto3_dataclass_glue-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_glue-1.40.0.dist-info/METADATA,sha256=emI3O49SKsQd5-1NCI9ftspkkWN_eMIMyaBaQa8UOI0,1620
+boto3_dataclass_glue-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_glue-1.40.0.dist-info/RECORD,,
