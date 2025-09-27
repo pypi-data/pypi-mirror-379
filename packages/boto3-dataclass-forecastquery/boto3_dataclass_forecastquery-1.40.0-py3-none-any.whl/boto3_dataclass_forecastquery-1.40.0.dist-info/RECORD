@@ -1,0 +1,7 @@
+boto3_dataclass_forecastquery/__init__.py,sha256=sujVTz_I1GfOKJgONkhKvpOG7pdlfCjgaIYejvyTGnA,120
+boto3_dataclass_forecastquery/caster.py,sha256=igvBzkMTUpFjKJmtV-h64JcyFkVxoA3L6h8y-7bW1Ak,655
+boto3_dataclass_forecastquery/type_defs.py,sha256=Yltew8zEzFJ3Ocr7QRp5C0AqG_CmxRrYdLt9q1xIu1I,6525
+boto3_dataclass_forecastquery-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_forecastquery-1.40.0.dist-info/METADATA,sha256=ljy27nKfHC7chgBhYqthGd14LsOPs7cf664iAxbl9uE,1683
+boto3_dataclass_forecastquery-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_forecastquery-1.40.0.dist-info/RECORD,,
