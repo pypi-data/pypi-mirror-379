@@ -1,0 +1,112 @@
+Metadata-Version: 2.4
+Name: geo_features_generator
+Version: 0.2.0
+Summary: Sklearn-style generator of geo features: distances, angles, cosine similarity, KMeans, NN, polar features
+Project-URL: Homepage, https://pypi.org/project/geo-features-generator/
+Project-URL: Repository, https://github.com/sefixnep/geo_features_generator
+Project-URL: Bug Tracker, https://github.com/sefixnep/geo_features_generator/issues
+Author-email: sefixnep <rodionovs337@gmail.com>
+License-Expression: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.20
+Requires-Dist: pandas>=1.3
+Provides-Extra: h3
+Requires-Dist: h3>=4.0.0; extra == 'h3'
+Provides-Extra: ml
+Requires-Dist: scikit-learn>=1.1; extra == 'ml'
+Description-Content-Type: text/markdown
+
+geo-features-generator
+======================
+
+Генератор гео-признаков для больших данных: расстояния (Haversine, equirectangular, Manhattan), углы/синусы/косинусы, средние точки, дельты, квадраты расстояний, косинусная близость (3D), кластеризация KMeans, расстояния до ближайшего соседа, полярные признаки относительно базовой точки, H3 ячейки.
+
+Установка
+---------
+
+```bash
+pip install geo-features-generator
+```
+
+Быстрый старт
+-------------
+
+```python
+from geo_features_generator import GeoFeaturesGenerator
+
+# Основные гео-признаки
+gen = GeoFeaturesGenerator(
+    [("lat1", "lon1"), ("lat2", "lon2")],
+    enable_squared_distances=True,
+    enable_normed_deltas=True,
+    enable_cosine_similarity=True,
+    enable_h3=True,
+)
+
+features = gen.fit_transform(df)
+```
+
+Параметры
+---------
+
+**Обязательные параметры:**
+- `coordinate_pairs`: список пар имен столбцов `(lat, lon)`. Первый аргумент, передается как `[("lat1", "lon1"), ("lat2", "lon2")]`.
+
+**Опциональные параметры (переключатели функций True/False):**
+- `enable_squared_distances` (по умолчанию True): добавляет `_m2` признаки квадратов расстояний (`haversine_m2`, `equirect_m2`, `manhattan_m2`)
+- `enable_normed_deltas` (по умолчанию True): добавляет `abs_dlat_m`, `abs_dlon_m` - абсолютные разности координат в метрах
+- `enable_cosine_similarity` (по умолчанию True): добавляет `cosine_sim`, `cosine_dist` косинусную близость по 3D векторному произведению на сфере
+- `enable_kmeans` (по умолчанию False): добавляет `*_kmeans_label` метки кластеров для каждой точки. Требуется scikit-learn.
+- `enable_nearest_neighbor` (по умолчанию False): добавляет `*_nn_haversine_m` расстояния до ближайшего соседа. Требуется scikit-learn.
+- `enable_polar_features` (по умолчанию False): добавляет полярные признаки `*_polar_bearing_deg`, `*_polar_dist_m` относительно базовой точки
+- `enable_h3` (по умолчанию False): добавляет H3 ячейки для каждой геофичи. Требует скачанную библиотеку 'h3'.
+**Дополнительные параметры:**
+- `radius` (по умолчанию 6371000): радиус сферы в метрах для расчета расстояний
+- `output_format` (по умолчанию "pandas"): формат вывода - "pandas" или "numpy"
+- `polar_base_point`: координаты `(lat, lon)` базовой точки для полярных признаков
+- `h3_resolutions` (по умолчанию [8, 10]): список разрешений H3 ячеек для генерации признаков
+
+## Описание функций
+
+### Геодетические расстояния
+- **Haversine**: точное сферическое расстояние по формуле гаверсинуса
+- **Equirectangular**: быстрое приближенное расстояние на основе равнопрямоугольной проекции
+- **Manhattan**: приближенное манхэттен-расстояние вдоль параллелей и меридианов
+
+### Математические признаки координат  
+- **Тригонометрические**: sin/cos преобразования широты и долготы для цикличности признаков
+- **Полярные признаки**: азимут и расстояние от заданной базовой точки
+
+### Угловые признаки
+- **Начальный азимут**: угол направления между двумя точками
+- **Синусы и косинусы**: циклическое представление углов
+- **Косинусное сходство**: скалярное произведение векторов на единичной сфере
+
+### Расстояния и геометрия
+- **Квадраты расстояний**: для машинного обучения, увеличенная роль больших расстояний
+- **Нормализованные дельты**: разности координат в метрах вдоль меридианов и параллелей
+- **Средние точки**: геометрический центр между двумя точками по большой окружности
+
+### Машинное обучение
+- **KMeans кластеризация**: автоматическая группировка точек по схожести координат
+- **Ближайший сосед**: расстояние до наиболее похожей точки в наборе данных
+
+### H3 геопространственные признаки
+- **H3 ячейки**: добавляет для каждой геофичи H3 ячейки с заданными разрешениями (например, [8, 10])
+
+Контакты
+--------
+
+- [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/sefixnep)  
+- [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/sefixnep)
+
+Лицензия
+--------
+
+MIT. См. файл LICENSE.
+
+
