@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: soopsocks
+Version: 0.2.3
+Summary: SOCKS5 server with Discord egress + Windows auto-start (service or scheduled task)
+Author-email: Your Name <you@example.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# soopsocks (v0.2.0)
+
+- SOCKS5 (CONNECT + UDP), Discord webhook, Windows 방화벽 보조
+- Windows 자동 시작: 먼저 pywin32 서비스 시도 → 실패 시 작업 스케줄러(Task Scheduler) 폴백
+- 커스텀 autorun: `soopsocks/_autorun.py` 또는 `config.CUSTOM_BOOT`로 `soopsocks`만 입력해도 원하는 코드 실행
+- 단일 EXE 빌드 지원: `soopsocks pack` → PyInstaller로 onefile 빌드
+
+## 빠른 시작
+```bat
+pip install -e .
+soopsocks            :: 자동 시작 설정(서비스→스케줄러 폴백), 방화벽 자동 보정
+soopsocks run        :: 포그라운드 실행
+soopsocks pack       :: PyInstaller 헬퍼 스크립트 생성
+```
+
+## PyInstaller 예시
+```bat
+soopsocks pack
+pip install pyinstaller
+pyinstaller -F -n soopsocks run_soopsocks_cli.py
+```
