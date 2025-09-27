@@ -1,0 +1,9 @@
+mcgt/__init__.py,sha256=dVsOsQPPM1VFo9jRwzQIggm-tkxKgGf26AZmRsPZAwo,5001
+mcgt/__main__.py,sha256=1OcOppGlBAvrxaZD53o7Wc5Ja_U5nQK65HMw1ZGlFsQ,627
+mcgt/phase.py,sha256=tdfdyZJKOPasuee8i8ZWOIMxGpF4G7SRe0gkfRksWqg,6633
+mcgt/scalar_perturbations.py,sha256=Az8jniiU799S_3urIYZi0B7HiPofsOMBXCL-ECrYf30,10609
+mcgt/backends/ref_phase.py,sha256=plH603pqQCIvoBDe3s6SkVBTZ4Y6xUzz0LC97ORU500,16317
+mcgt_core-0.2.36rc1.dist-info/METADATA,sha256=ec_QkB0SJf33F4mOEKh_PDueJSrx70VgdLVTg3J5WGk,21091
+mcgt_core-0.2.36rc1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mcgt_core-0.2.36rc1.dist-info/top_level.txt,sha256=M7v3HCLWiCwIKgOA7dkEhcFUtqJ0hfiQEkfqMUdfjCY,5
+mcgt_core-0.2.36rc1.dist-info/RECORD,,
