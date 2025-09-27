@@ -1,0 +1,7 @@
+boto3_dataclass_aiops/__init__.py,sha256=Ms7FlgPAkpNFgT4esTdb48Bpe-Ipkm8auQzQiWjY-fw,104
+boto3_dataclass_aiops/caster.py,sha256=eTzeK_OCEuJ4U7l4b41oxsgoAFzpxUzA01qVqAl5JT8,1787
+boto3_dataclass_aiops/type_defs.py,sha256=4I0umv2F3wcrTWFLCysSNbEvMuwuqlLwFYdJ5kPMASY,23987
+boto3_dataclass_aiops-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_aiops-1.40.0.dist-info/METADATA,sha256=xGMKnL9B0p-4-YdcjswzQnmJFQ5PnHE59MZG_ySpvfU,1627
+boto3_dataclass_aiops-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_aiops-1.40.0.dist-info/RECORD,,
