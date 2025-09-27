@@ -1,0 +1,3 @@
+aiohttp<4.0,>=3.0
+beautifulsoup4<5.0,>=4.0
+lxml<7.0,>=5.0
