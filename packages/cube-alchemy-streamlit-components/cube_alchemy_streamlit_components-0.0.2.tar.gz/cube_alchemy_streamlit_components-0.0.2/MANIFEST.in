@@ -1,0 +1,4 @@
+copying cube_alchemy_streamlit_components\filter\frontend\node_modules\streamlit-component-lib\node_modules\react-dom\cjs\react-dom-server.browser.development.js -> cube_alchemy_streamlit_components-0.0.2\cube_alchemy_streamlit_components\filter\frontend\node_modules\streamlit-component-lib\node_modules\react-dom\cjs
+error: could not create 'cube_alchemy_streamlit_components-0.0.2\cube_alchemy_streamlit_components\filter\frontend\node_modules\streamlit-component-lib\node_modules\react-dom\cjs\react-dom-server.browser.development.js': No such file or directory
+
+ERROR Backend subprocess exited when trying to invoke build_sdist
