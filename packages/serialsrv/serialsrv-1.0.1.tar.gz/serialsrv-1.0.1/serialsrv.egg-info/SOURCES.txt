@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+serialsrv/__init__.py
+serialsrv/serialsrv.json
+serialsrv.egg-info/PKG-INFO
+serialsrv.egg-info/SOURCES.txt
+serialsrv.egg-info/dependency_links.txt
+serialsrv.egg-info/entry_points.txt
+serialsrv.egg-info/requires.txt
+serialsrv.egg-info/top_level.txt
+serialsrv/abap/zakir_serial_test.abap
