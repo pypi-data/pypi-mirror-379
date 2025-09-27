@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: {{ name.lower() }}:latest
+    container_name: {{ name.lower().replace(' ', '-') }}
+    environment:
+      - PORT=8080
+    ports:
+      - "0:8080"
+    volumes:
+      - .:/app
+    command: sh -c "python -m {{ package_name }}.app --host 0.0.0.0 --port ${PORT}"
+
