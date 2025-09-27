@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: Hafsa
+Version: 1.0.5
+Summary: simple package
+Author: Syeda Hafsa Tariq
+Author-email: hafsatariq987123@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
