@@ -1,0 +1,10 @@
+maniac/__init__.py,sha256=ToO7DTpo1ngYdazcQZ3k7G6JRXQprw06yQYJOib4DSk,49
+maniac/client.py,sha256=SODCZToM7teHMEAgoPgSCLIyjQ23UFOgxEBzko_h9dM,16094
+maniac/token_manager.py,sha256=K8BkrtkVaoCYWc7oPM7pmH8wt9SAUV7XplmgBP2qzag,4097
+maniac/types.py,sha256=sOlhQJE8l8B-ub1n8Pe-jTK1cTOaEipxRLd9sH0vhnU,3812
+maniac/utils_training.py,sha256=-Sr_6vlAL3ANQQCmrVhVD3VAt3iQ91MzjSaBtSB2Yqk,4763
+maniac-0.2.0.dist-info/licenses/LICENSE,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+maniac-0.2.0.dist-info/METADATA,sha256=HmNyhLKx3YgjnDwMN8UI8L408KVJh85X6WvRC5tdvTQ,44097
+maniac-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+maniac-0.2.0.dist-info/top_level.txt,sha256=yCM1dx09HxGe9fRyFeVLisxwuZ8J1vYdQ2REXm1oHDM,7
+maniac-0.2.0.dist-info/RECORD,,
