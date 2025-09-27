@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: structural_starterkit
+Version: 0.5.0
+Summary: A module to designed to perform package installations, and verification of install,
+Author-email: Connor Ferster <connor@structuralpython.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: lxml
+Requires-Dist: shapely>=2.0.0
+Requires-Dist: matplotlib
+Requires-Dist: plotly
+Requires-Dist: sectionproperties>=3.5.0
+Requires-Dist: concreteproperties>=0.6.4
+Requires-Dist: pycba>=0.5.2
+Requires-Dist: PyNiteFEA==1.1.2
+Requires-Dist: scipy
+Requires-Dist: handcalcs
+Requires-Dist: more-itertools
+Requires-Dist: forallpeople
+Requires-Dist: pytest
+Requires-Dist: rich
+Requires-Dist: tqdm
+Requires-Dist: papermodels
+Requires-Dist: xlwings
+Requires-Dist: IPython
+Requires-Dist: ipywidgets
+Requires-Dist: ipykernel
+Requires-Dist: jupyterlab
+Requires-Dist: jupyterlab-mathjax3
+Requires-Dist: nbconvert
+Requires-Dist: python-docx
+Requires-Dist: pynite-tools>=0.6.4
+Requires-Dist: sectionproperties-tools>=0.2.0
+Requires-Dist: millrun>=0.3.0
+Requires-Dist: jsonchain>=0.5.1
+Requires-Dist: papermill>=2.6.0
+Requires-Dist: great-tables>=0.17.0
+Requires-Dist: xl-engine>=0.4.0
+Requires-Dist: nb-hideinputs>=0.2.0
+Project-URL: Home, https://github.com/structuralpython/structural_starterkit
+
+# structural_starterkit
+A Python package that installs all required packages for Structural Python core training for Python version >= 3.13.
+
+```toml
+dependencies = [
+    "numpy",
+    "pandas",
+    "openpyxl",
+    "lxml",
+    "shapely>=2.0.0",
+    "matplotlib",
+    "plotly",
+    "sectionproperties>=3.5.0",
+    "concreteproperties>=0.6.4",
+    "pycba>=0.5.2",
+    "PyNiteFEA==1.1.2",
+    "scipy",
+    "handcalcs",
+    "more-itertools",
+    "forallpeople",
+    "pytest",
+    "rich",
+    "tqdm",
+    "papermodels",
+    "xlwings",
+    "IPython",
+    "ipywidgets",
+    "ipykernel",
+    "jupyterlab",
+    "jupyterlab-mathjax3",
+    "nbconvert",
+    "python-docx",
+    "pynite-tools>=0.6.4",
+    "sectionproperties-tools>=0.2.0",
+    "millrun>=0.3.0",
+    "jsonchain>=0.5.1",
+    "papermill>=2.6.0",
+    "great-tables>=0.17.0",
+    "xl-engine>=0.4.0",
+    "nb-hideinputs>=0.2.0",
+]
+```
+
