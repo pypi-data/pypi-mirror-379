@@ -1,0 +1,7 @@
+boto3_dataclass_codeguruprofiler/__init__.py,sha256=481UHP6Hgr_yxkX2bl5jYgyrVfvLiYGWTOMycXloEUs,126
+boto3_dataclass_codeguruprofiler/caster.py,sha256=m-KB9GM5KiW7XnV-gtGQK3qhdFQJrf-HA944BVobd9w,4094
+boto3_dataclass_codeguruprofiler/type_defs.py,sha256=7mbC_NXuVLJtvRAwSwppjMl6Y88CCRBzBaG24n-QQdM,62181
+boto3_dataclass_codeguruprofiler-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_codeguruprofiler-1.40.0.dist-info/METADATA,sha256=t4tm5zT1X23D-21KeX9b3oS7pxpeu0e91cHKIjsAZd8,1704
+boto3_dataclass_codeguruprofiler-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_codeguruprofiler-1.40.0.dist-info/RECORD,,
