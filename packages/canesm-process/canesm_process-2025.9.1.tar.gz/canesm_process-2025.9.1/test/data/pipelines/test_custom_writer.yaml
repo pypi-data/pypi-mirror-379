@@ -1,0 +1,42 @@
+setup:
+  stages:
+    - daily
+    - monthly
+
+  output_directories:
+    daily: "daily"
+    monthly: "monthly"
+
+  canesm_version: "6.0"
+  file_format: "netcdf4"
+  encoding:
+    dtype: float32
+    _FillValue: 1.0e+20
+
+  writer:
+    function: to_netcdf
+    kwargs:
+      template: "{variable}_setup.nc"
+
+daily:
+  writer:
+    function: to_netcdf
+    kwargs:
+      engine: netcdf4
+  variables:
+    - PCP
+
+monthly:
+  reuse: daily
+  variables:
+    - PCP:
+         writer:
+           function: to_netcdf
+           kwargs:
+             template: "{variable}_mon.nc"
+    - ST:
+         writer:
+           function: to_netcdf
+           kwargs:
+             engine: h5netcdf
+    - GT

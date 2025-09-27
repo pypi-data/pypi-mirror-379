@@ -1,0 +1,37 @@
+setup:
+  canesm_version: "6.0"
+  file_format: "netcdf4"
+  output_directories:
+    daily: 'diags/daily'
+    monthly: 'diags/monthly'
+  encoding:
+    dtype: float32
+    _FillValue: 1.0E+20
+    time:
+      units: "days since 1850-01-01 00:00:00"
+      calendar: "gregorian"
+      dtype: float64
+
+  stages:
+    - daily
+    - monthly
+
+
+monthly:
+  reuse: daily
+  encoding:
+    dtype: float64
+    _FillValue: -999
+    time:
+      units: "days since 2003-01-01 00:00:00"
+      calendar: "standard"
+  variables:
+    - ST
+    - GT:
+        encoding:
+          dtype: float64
+          _FillValue: 1.0E+20
+
+daily:
+  variables:
+    - ST
