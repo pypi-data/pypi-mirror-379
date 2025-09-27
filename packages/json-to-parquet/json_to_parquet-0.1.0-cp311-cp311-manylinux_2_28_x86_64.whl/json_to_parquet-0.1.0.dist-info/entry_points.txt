@@ -1,0 +1,2 @@
+[console_scripts]
+json_to_parquet=json_to_parquet.cli:main
