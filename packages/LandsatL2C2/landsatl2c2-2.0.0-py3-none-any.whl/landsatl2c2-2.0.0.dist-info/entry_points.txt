@@ -1,0 +1,2 @@
+[console_scripts]
+LandsatL2C2-credentials = LandsatL2C2.M2M_credentials:main
