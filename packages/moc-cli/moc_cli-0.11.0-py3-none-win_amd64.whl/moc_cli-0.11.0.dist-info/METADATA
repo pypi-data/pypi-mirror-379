@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: moc-cli
+Version: 0.11.0
+License-File: LICENSE-APACHE
+License-File: LICENSE-MIT
+License-File: COPYING
+Home-Page: https://github.com/cds-astro/cds-moc-rust/tree/main/crates/cli
+Project-URL: repository, https://github.com/cds-astro/cds-moc-rust/tree/main/crates/cli
