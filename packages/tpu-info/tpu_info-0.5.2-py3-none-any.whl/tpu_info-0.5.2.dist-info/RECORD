@@ -1,0 +1,15 @@
+tpu_info/__init__.py,sha256=OVxt7gIRZ2EeBdXEE26jlMJeImGl4ApzQ0dmdgWO7u0,656
+tpu_info/args.py,sha256=f4o3cp52kIzUYQRJPIIiJWZxdBXPQgMyzrxRrIqv2Ko,3697
+tpu_info/args_helper.py,sha256=QQN1xWumum2dsvGPKlo7wSXVGnTNXcaP_MYP0KmKK08,3610
+tpu_info/cli.py,sha256=L3LYUMWUpgtOH1CJWK3pVxYFiyFXfNDpoJAU1YgFGZg,7263
+tpu_info/cli_helper.py,sha256=UK8t6ao4MoXa3hN-eC_CeDKI6mSgzhIuSUBtwIiITzQ,16487
+tpu_info/device.py,sha256=3_9Ek51Ss2azYF8Kb-rGnuvqmfAmeMVOO_V_SHwJH74,3704
+tpu_info/metrics.py,sha256=_k-_r-jUUYgeaU2Ux_jQvOBSLguUDHA5qQRxc21xapA,7104
+tpu_info/proto/__init__.py,sha256=vgkM7VfbXA0J3wsbgyr75V-IVePMPeQq5o1EY0Edb7A,651
+tpu_info/proto/tpu_metric_service_pb2.py,sha256=Fow3R77Rnj4c-o_tpuCuaDnUOYw3RPVK-3bdCwQQuZw,9256
+tpu_info/proto/tpu_metric_service_pb2.pyi,sha256=03brVLT9B1UTBJ7KmPg3PZiCO_XY9bzEzT1t_3gOI7c,11543
+tpu_info/proto/tpu_metric_service_pb2_grpc.py,sha256=Y66iO0cDnzieNB-ogS_k5Vv6wIuLQ7lLM6FyvVVLnVg,6284
+tpu_info-0.5.2.dist-info/METADATA,sha256=QF1PIf-4cuvRRZt48En6oJpxP53NnZjVT5vPdp6b16c,14513
+tpu_info-0.5.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tpu_info-0.5.2.dist-info/entry_points.txt,sha256=wPhTW-DRM9pO8n6UDT9ZsNap129P49AhFy7kCbfXghU,58
+tpu_info-0.5.2.dist-info/RECORD,,
