@@ -1,0 +1,5 @@
+boto3_dataclass/__init__.py,sha256=t_HMe57JQyPRknsWK-C7jwb8yajjgSzJORSe5N8hHDQ,47
+boto3_dataclass-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass-1.40.0.dist-info/METADATA,sha256=R4dDx3ynFQndi05kuzJ7JY0nOwCI088DVAKjeV5t6v4,85611
+boto3_dataclass-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass-1.40.0.dist-info/RECORD,,
