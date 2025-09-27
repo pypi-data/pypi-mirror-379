@@ -1,0 +1,1357 @@
+Metadata-Version: 2.3
+Name: boto3_dataclass
+Version: 1.40.0.dev3
+Summary: Dataclass for boto3.
+License: MIT
+Author: Sanhe Hu
+Author-email: husanhe@email.com
+Maintainer: Sanhe Hu
+Maintainer-email: husanhe@email.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: accessanalyzer
+Provides-Extra: account
+Provides-Extra: acm
+Provides-Extra: acm-pca
+Provides-Extra: aiops
+Provides-Extra: all
+Provides-Extra: amp
+Provides-Extra: amplify
+Provides-Extra: amplifybackend
+Provides-Extra: amplifyuibuilder
+Provides-Extra: apigateway
+Provides-Extra: apigatewaymanagementapi
+Provides-Extra: apigatewayv2
+Provides-Extra: appconfig
+Provides-Extra: appconfigdata
+Provides-Extra: appfabric
+Provides-Extra: appflow
+Provides-Extra: appintegrations
+Provides-Extra: application-autoscaling
+Provides-Extra: application-insights
+Provides-Extra: application-signals
+Provides-Extra: applicationcostprofiler
+Provides-Extra: appmesh
+Provides-Extra: apprunner
+Provides-Extra: appstream
+Provides-Extra: appsync
+Provides-Extra: apptest
+Provides-Extra: arc-region-switch
+Provides-Extra: arc-zonal-shift
+Provides-Extra: artifact
+Provides-Extra: athena
+Provides-Extra: auditmanager
+Provides-Extra: autoscaling
+Provides-Extra: autoscaling-plans
+Provides-Extra: b2bi
+Provides-Extra: backup
+Provides-Extra: backup-gateway
+Provides-Extra: backupsearch
+Provides-Extra: batch
+Provides-Extra: bcm-dashboards
+Provides-Extra: bcm-data-exports
+Provides-Extra: bcm-pricing-calculator
+Provides-Extra: bcm-recommended-actions
+Provides-Extra: bedrock
+Provides-Extra: bedrock-agent
+Provides-Extra: bedrock-agent-runtime
+Provides-Extra: bedrock-agentcore
+Provides-Extra: bedrock-agentcore-control
+Provides-Extra: bedrock-data-automation
+Provides-Extra: bedrock-data-automation-runtime
+Provides-Extra: bedrock-runtime
+Provides-Extra: billing
+Provides-Extra: billingconductor
+Provides-Extra: braket
+Provides-Extra: budgets
+Provides-Extra: ce
+Provides-Extra: chatbot
+Provides-Extra: chime
+Provides-Extra: chime-sdk-identity
+Provides-Extra: chime-sdk-media-pipelines
+Provides-Extra: chime-sdk-meetings
+Provides-Extra: chime-sdk-messaging
+Provides-Extra: chime-sdk-voice
+Provides-Extra: cleanrooms
+Provides-Extra: cleanroomsml
+Provides-Extra: cloud9
+Provides-Extra: cloudcontrol
+Provides-Extra: clouddirectory
+Provides-Extra: cloudformation
+Provides-Extra: cloudfront
+Provides-Extra: cloudfront-keyvaluestore
+Provides-Extra: cloudhsm
+Provides-Extra: cloudhsmv2
+Provides-Extra: cloudsearch
+Provides-Extra: cloudsearchdomain
+Provides-Extra: cloudtrail
+Provides-Extra: cloudtrail-data
+Provides-Extra: cloudwatch
+Provides-Extra: codeartifact
+Provides-Extra: codebuild
+Provides-Extra: codecatalyst
+Provides-Extra: codecommit
+Provides-Extra: codeconnections
+Provides-Extra: codedeploy
+Provides-Extra: codeguru-reviewer
+Provides-Extra: codeguru-security
+Provides-Extra: codeguruprofiler
+Provides-Extra: codepipeline
+Provides-Extra: codestar-connections
+Provides-Extra: codestar-notifications
+Provides-Extra: cognito-identity
+Provides-Extra: cognito-idp
+Provides-Extra: cognito-sync
+Provides-Extra: comprehend
+Provides-Extra: comprehendmedical
+Provides-Extra: compute-optimizer
+Provides-Extra: config
+Provides-Extra: connect
+Provides-Extra: connect-contact-lens
+Provides-Extra: connectcampaigns
+Provides-Extra: connectcampaignsv2
+Provides-Extra: connectcases
+Provides-Extra: connectparticipant
+Provides-Extra: controlcatalog
+Provides-Extra: controltower
+Provides-Extra: cost-optimization-hub
+Provides-Extra: cur
+Provides-Extra: customer-profiles
+Provides-Extra: databrew
+Provides-Extra: dataexchange
+Provides-Extra: datapipeline
+Provides-Extra: datasync
+Provides-Extra: datazone
+Provides-Extra: dax
+Provides-Extra: deadline
+Provides-Extra: detective
+Provides-Extra: devicefarm
+Provides-Extra: devops-guru
+Provides-Extra: directconnect
+Provides-Extra: discovery
+Provides-Extra: dlm
+Provides-Extra: dms
+Provides-Extra: docdb
+Provides-Extra: docdb-elastic
+Provides-Extra: drs
+Provides-Extra: ds
+Provides-Extra: ds-data
+Provides-Extra: dsql
+Provides-Extra: dynamodb
+Provides-Extra: dynamodbstreams
+Provides-Extra: ebs
+Provides-Extra: ec2
+Provides-Extra: ec2-instance-connect
+Provides-Extra: ecr
+Provides-Extra: ecr-public
+Provides-Extra: ecs
+Provides-Extra: efs
+Provides-Extra: eks
+Provides-Extra: eks-auth
+Provides-Extra: elasticache
+Provides-Extra: elasticbeanstalk
+Provides-Extra: elastictranscoder
+Provides-Extra: elb
+Provides-Extra: elbv2
+Provides-Extra: emr
+Provides-Extra: emr-containers
+Provides-Extra: emr-serverless
+Provides-Extra: entityresolution
+Provides-Extra: es
+Provides-Extra: events
+Provides-Extra: evidently
+Provides-Extra: evs
+Provides-Extra: finspace
+Provides-Extra: finspace-data
+Provides-Extra: firehose
+Provides-Extra: fis
+Provides-Extra: fms
+Provides-Extra: forecast
+Provides-Extra: forecastquery
+Provides-Extra: frauddetector
+Provides-Extra: freetier
+Provides-Extra: fsx
+Provides-Extra: gamelift
+Provides-Extra: gameliftstreams
+Provides-Extra: geo-maps
+Provides-Extra: geo-places
+Provides-Extra: geo-routes
+Provides-Extra: glacier
+Provides-Extra: globalaccelerator
+Provides-Extra: glue
+Provides-Extra: grafana
+Provides-Extra: greengrass
+Provides-Extra: greengrassv2
+Provides-Extra: groundstation
+Provides-Extra: guardduty
+Provides-Extra: health
+Provides-Extra: healthlake
+Provides-Extra: iam
+Provides-Extra: identitystore
+Provides-Extra: imagebuilder
+Provides-Extra: importexport
+Provides-Extra: inspector
+Provides-Extra: inspector-scan
+Provides-Extra: inspector2
+Provides-Extra: internetmonitor
+Provides-Extra: invoicing
+Provides-Extra: iot
+Provides-Extra: iot-data
+Provides-Extra: iot-jobs-data
+Provides-Extra: iot-managed-integrations
+Provides-Extra: iotanalytics
+Provides-Extra: iotdeviceadvisor
+Provides-Extra: iotevents
+Provides-Extra: iotevents-data
+Provides-Extra: iotfleethub
+Provides-Extra: iotfleetwise
+Provides-Extra: iotsecuretunneling
+Provides-Extra: iotsitewise
+Provides-Extra: iotthingsgraph
+Provides-Extra: iottwinmaker
+Provides-Extra: iotwireless
+Provides-Extra: ivs
+Provides-Extra: ivs-realtime
+Provides-Extra: ivschat
+Provides-Extra: kafka
+Provides-Extra: kafkaconnect
+Provides-Extra: kendra
+Provides-Extra: kendra-ranking
+Provides-Extra: keyspaces
+Provides-Extra: keyspacesstreams
+Provides-Extra: kinesis
+Provides-Extra: kinesis-video-archived-media
+Provides-Extra: kinesis-video-media
+Provides-Extra: kinesis-video-signaling
+Provides-Extra: kinesis-video-webrtc-storage
+Provides-Extra: kinesisanalytics
+Provides-Extra: kinesisanalyticsv2
+Provides-Extra: kinesisvideo
+Provides-Extra: kms
+Provides-Extra: lakeformation
+Provides-Extra: lambda
+Provides-Extra: launch-wizard
+Provides-Extra: lex-models
+Provides-Extra: lex-runtime
+Provides-Extra: lexv2-models
+Provides-Extra: lexv2-runtime
+Provides-Extra: license-manager
+Provides-Extra: license-manager-linux-subscriptions
+Provides-Extra: license-manager-user-subscriptions
+Provides-Extra: lightsail
+Provides-Extra: location
+Provides-Extra: logs
+Provides-Extra: lookoutequipment
+Provides-Extra: lookoutmetrics
+Provides-Extra: lookoutvision
+Provides-Extra: m2
+Provides-Extra: machinelearning
+Provides-Extra: macie2
+Provides-Extra: mailmanager
+Provides-Extra: managedblockchain
+Provides-Extra: managedblockchain-query
+Provides-Extra: marketplace-agreement
+Provides-Extra: marketplace-catalog
+Provides-Extra: marketplace-deployment
+Provides-Extra: marketplace-entitlement
+Provides-Extra: marketplace-reporting
+Provides-Extra: marketplacecommerceanalytics
+Provides-Extra: mediaconnect
+Provides-Extra: mediaconvert
+Provides-Extra: medialive
+Provides-Extra: mediapackage
+Provides-Extra: mediapackage-vod
+Provides-Extra: mediapackagev2
+Provides-Extra: mediastore
+Provides-Extra: mediastore-data
+Provides-Extra: mediatailor
+Provides-Extra: medical-imaging
+Provides-Extra: memorydb
+Provides-Extra: meteringmarketplace
+Provides-Extra: mgh
+Provides-Extra: mgn
+Provides-Extra: migration-hub-refactor-spaces
+Provides-Extra: migrationhub-config
+Provides-Extra: migrationhuborchestrator
+Provides-Extra: migrationhubstrategy
+Provides-Extra: mpa
+Provides-Extra: mq
+Provides-Extra: mturk
+Provides-Extra: mwaa
+Provides-Extra: neptune
+Provides-Extra: neptune-graph
+Provides-Extra: neptunedata
+Provides-Extra: network-firewall
+Provides-Extra: networkflowmonitor
+Provides-Extra: networkmanager
+Provides-Extra: networkmonitor
+Provides-Extra: notifications
+Provides-Extra: notificationscontacts
+Provides-Extra: oam
+Provides-Extra: observabilityadmin
+Provides-Extra: odb
+Provides-Extra: omics
+Provides-Extra: opensearch
+Provides-Extra: opensearchserverless
+Provides-Extra: organizations
+Provides-Extra: osis
+Provides-Extra: outposts
+Provides-Extra: panorama
+Provides-Extra: partnercentral-selling
+Provides-Extra: payment-cryptography
+Provides-Extra: payment-cryptography-data
+Provides-Extra: pca-connector-ad
+Provides-Extra: pca-connector-scep
+Provides-Extra: pcs
+Provides-Extra: personalize
+Provides-Extra: personalize-events
+Provides-Extra: personalize-runtime
+Provides-Extra: pi
+Provides-Extra: pinpoint
+Provides-Extra: pinpoint-email
+Provides-Extra: pinpoint-sms-voice
+Provides-Extra: pinpoint-sms-voice-v2
+Provides-Extra: pipes
+Provides-Extra: polly
+Provides-Extra: pricing
+Provides-Extra: proton
+Provides-Extra: qapps
+Provides-Extra: qbusiness
+Provides-Extra: qconnect
+Provides-Extra: qldb
+Provides-Extra: qldb-session
+Provides-Extra: quicksight
+Provides-Extra: ram
+Provides-Extra: rbin
+Provides-Extra: rds
+Provides-Extra: rds-data
+Provides-Extra: redshift
+Provides-Extra: redshift-data
+Provides-Extra: redshift-serverless
+Provides-Extra: rekognition
+Provides-Extra: repostspace
+Provides-Extra: resiliencehub
+Provides-Extra: resource-explorer-2
+Provides-Extra: resource-groups
+Provides-Extra: resourcegroupstaggingapi
+Provides-Extra: robomaker
+Provides-Extra: rolesanywhere
+Provides-Extra: route53
+Provides-Extra: route53-recovery-cluster
+Provides-Extra: route53-recovery-control-config
+Provides-Extra: route53-recovery-readiness
+Provides-Extra: route53domains
+Provides-Extra: route53profiles
+Provides-Extra: route53resolver
+Provides-Extra: rum
+Provides-Extra: s3
+Provides-Extra: s3control
+Provides-Extra: s3outposts
+Provides-Extra: s3tables
+Provides-Extra: s3vectors
+Provides-Extra: sagemaker
+Provides-Extra: sagemaker-a2i-runtime
+Provides-Extra: sagemaker-edge
+Provides-Extra: sagemaker-featurestore-runtime
+Provides-Extra: sagemaker-geospatial
+Provides-Extra: sagemaker-metrics
+Provides-Extra: sagemaker-runtime
+Provides-Extra: savingsplans
+Provides-Extra: scheduler
+Provides-Extra: schemas
+Provides-Extra: sdb
+Provides-Extra: secretsmanager
+Provides-Extra: security-ir
+Provides-Extra: securityhub
+Provides-Extra: securitylake
+Provides-Extra: serverlessrepo
+Provides-Extra: service-quotas
+Provides-Extra: servicecatalog
+Provides-Extra: servicecatalog-appregistry
+Provides-Extra: servicediscovery
+Provides-Extra: ses
+Provides-Extra: sesv2
+Provides-Extra: shield
+Provides-Extra: signer
+Provides-Extra: simspaceweaver
+Provides-Extra: snow-device-management
+Provides-Extra: snowball
+Provides-Extra: sns
+Provides-Extra: socialmessaging
+Provides-Extra: sqs
+Provides-Extra: ssm
+Provides-Extra: ssm-contacts
+Provides-Extra: ssm-guiconnect
+Provides-Extra: ssm-incidents
+Provides-Extra: ssm-quicksetup
+Provides-Extra: ssm-sap
+Provides-Extra: sso
+Provides-Extra: sso-admin
+Provides-Extra: sso-oidc
+Provides-Extra: stepfunctions
+Provides-Extra: storagegateway
+Provides-Extra: sts
+Provides-Extra: supplychain
+Provides-Extra: support
+Provides-Extra: support-app
+Provides-Extra: swf
+Provides-Extra: synthetics
+Provides-Extra: taxsettings
+Provides-Extra: textract
+Provides-Extra: timestream-influxdb
+Provides-Extra: timestream-query
+Provides-Extra: timestream-write
+Provides-Extra: tnb
+Provides-Extra: transcribe
+Provides-Extra: transfer
+Provides-Extra: translate
+Provides-Extra: trustedadvisor
+Provides-Extra: verifiedpermissions
+Provides-Extra: voice-id
+Provides-Extra: vpc-lattice
+Provides-Extra: waf
+Provides-Extra: waf-regional
+Provides-Extra: wafv2
+Provides-Extra: wellarchitected
+Provides-Extra: wisdom
+Provides-Extra: workdocs
+Provides-Extra: workmail
+Provides-Extra: workmailmessageflow
+Provides-Extra: workspaces
+Provides-Extra: workspaces-instances
+Provides-Extra: workspaces-thin-client
+Provides-Extra: workspaces-web
+Provides-Extra: xray
+Requires-Dist: boto3-dataclass (>=1.40.0,<1.41.0)
+Requires-Dist: boto3-dataclass-accessanalyzer (>=1.40.0,<1.41.0) ; extra == "accessanalyzer"
+Requires-Dist: boto3-dataclass-accessanalyzer (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-account (>=1.40.0,<1.41.0) ; extra == "account"
+Requires-Dist: boto3-dataclass-account (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-acm (>=1.40.0,<1.41.0) ; extra == "acm"
+Requires-Dist: boto3-dataclass-acm (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-acm-pca (>=1.40.0,<1.41.0) ; extra == "acm-pca"
+Requires-Dist: boto3-dataclass-acm-pca (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-aiops (>=1.40.0,<1.41.0) ; extra == "aiops"
+Requires-Dist: boto3-dataclass-aiops (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-amp (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-amp (>=1.40.0,<1.41.0) ; extra == "amp"
+Requires-Dist: boto3-dataclass-amplify (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-amplify (>=1.40.0,<1.41.0) ; extra == "amplify"
+Requires-Dist: boto3-dataclass-amplifybackend (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-amplifybackend (>=1.40.0,<1.41.0) ; extra == "amplifybackend"
+Requires-Dist: boto3-dataclass-amplifyuibuilder (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-amplifyuibuilder (>=1.40.0,<1.41.0) ; extra == "amplifyuibuilder"
+Requires-Dist: boto3-dataclass-apigateway (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-apigateway (>=1.40.0,<1.41.0) ; extra == "apigateway"
+Requires-Dist: boto3-dataclass-apigatewaymanagementapi (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-apigatewaymanagementapi (>=1.40.0,<1.41.0) ; extra == "apigatewaymanagementapi"
+Requires-Dist: boto3-dataclass-apigatewayv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-apigatewayv2 (>=1.40.0,<1.41.0) ; extra == "apigatewayv2"
+Requires-Dist: boto3-dataclass-appconfig (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appconfig (>=1.40.0,<1.41.0) ; extra == "appconfig"
+Requires-Dist: boto3-dataclass-appconfigdata (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appconfigdata (>=1.40.0,<1.41.0) ; extra == "appconfigdata"
+Requires-Dist: boto3-dataclass-appfabric (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appfabric (>=1.40.0,<1.41.0) ; extra == "appfabric"
+Requires-Dist: boto3-dataclass-appflow (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appflow (>=1.40.0,<1.41.0) ; extra == "appflow"
+Requires-Dist: boto3-dataclass-appintegrations (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appintegrations (>=1.40.0,<1.41.0) ; extra == "appintegrations"
+Requires-Dist: boto3-dataclass-application-autoscaling (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-application-autoscaling (>=1.40.0,<1.41.0) ; extra == "application-autoscaling"
+Requires-Dist: boto3-dataclass-application-insights (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-application-insights (>=1.40.0,<1.41.0) ; extra == "application-insights"
+Requires-Dist: boto3-dataclass-application-signals (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-application-signals (>=1.40.0,<1.41.0) ; extra == "application-signals"
+Requires-Dist: boto3-dataclass-applicationcostprofiler (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-applicationcostprofiler (>=1.40.0,<1.41.0) ; extra == "applicationcostprofiler"
+Requires-Dist: boto3-dataclass-appmesh (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appmesh (>=1.40.0,<1.41.0) ; extra == "appmesh"
+Requires-Dist: boto3-dataclass-apprunner (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-apprunner (>=1.40.0,<1.41.0) ; extra == "apprunner"
+Requires-Dist: boto3-dataclass-appstream (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appstream (>=1.40.0,<1.41.0) ; extra == "appstream"
+Requires-Dist: boto3-dataclass-appsync (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-appsync (>=1.40.0,<1.41.0) ; extra == "appsync"
+Requires-Dist: boto3-dataclass-apptest (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-apptest (>=1.40.0,<1.41.0) ; extra == "apptest"
+Requires-Dist: boto3-dataclass-arc-region-switch (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-arc-region-switch (>=1.40.0,<1.41.0) ; extra == "arc-region-switch"
+Requires-Dist: boto3-dataclass-arc-zonal-shift (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-arc-zonal-shift (>=1.40.0,<1.41.0) ; extra == "arc-zonal-shift"
+Requires-Dist: boto3-dataclass-artifact (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-artifact (>=1.40.0,<1.41.0) ; extra == "artifact"
+Requires-Dist: boto3-dataclass-athena (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-athena (>=1.40.0,<1.41.0) ; extra == "athena"
+Requires-Dist: boto3-dataclass-auditmanager (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-auditmanager (>=1.40.0,<1.41.0) ; extra == "auditmanager"
+Requires-Dist: boto3-dataclass-autoscaling (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-autoscaling (>=1.40.0,<1.41.0) ; extra == "autoscaling"
+Requires-Dist: boto3-dataclass-autoscaling-plans (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-autoscaling-plans (>=1.40.0,<1.41.0) ; extra == "autoscaling-plans"
+Requires-Dist: boto3-dataclass-b2bi (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-b2bi (>=1.40.0,<1.41.0) ; extra == "b2bi"
+Requires-Dist: boto3-dataclass-backup (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-backup (>=1.40.0,<1.41.0) ; extra == "backup"
+Requires-Dist: boto3-dataclass-backup-gateway (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-backup-gateway (>=1.40.0,<1.41.0) ; extra == "backup-gateway"
+Requires-Dist: boto3-dataclass-backupsearch (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-backupsearch (>=1.40.0,<1.41.0) ; extra == "backupsearch"
+Requires-Dist: boto3-dataclass-batch (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-batch (>=1.40.0,<1.41.0) ; extra == "batch"
+Requires-Dist: boto3-dataclass-bcm-dashboards (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bcm-dashboards (>=1.40.0,<1.41.0) ; extra == "bcm-dashboards"
+Requires-Dist: boto3-dataclass-bcm-data-exports (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bcm-data-exports (>=1.40.0,<1.41.0) ; extra == "bcm-data-exports"
+Requires-Dist: boto3-dataclass-bcm-pricing-calculator (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bcm-pricing-calculator (>=1.40.0,<1.41.0) ; extra == "bcm-pricing-calculator"
+Requires-Dist: boto3-dataclass-bcm-recommended-actions (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bcm-recommended-actions (>=1.40.0,<1.41.0) ; extra == "bcm-recommended-actions"
+Requires-Dist: boto3-dataclass-bedrock (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock (>=1.40.0,<1.41.0) ; extra == "bedrock"
+Requires-Dist: boto3-dataclass-bedrock-agent (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock-agent (>=1.40.0,<1.41.0) ; extra == "bedrock-agent"
+Requires-Dist: boto3-dataclass-bedrock-agent-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock-agent-runtime (>=1.40.0,<1.41.0) ; extra == "bedrock-agent-runtime"
+Requires-Dist: boto3-dataclass-bedrock-agentcore (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock-agentcore (>=1.40.0,<1.41.0) ; extra == "bedrock-agentcore"
+Requires-Dist: boto3-dataclass-bedrock-agentcore-control (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock-agentcore-control (>=1.40.0,<1.41.0) ; extra == "bedrock-agentcore-control"
+Requires-Dist: boto3-dataclass-bedrock-data-automation (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock-data-automation (>=1.40.0,<1.41.0) ; extra == "bedrock-data-automation"
+Requires-Dist: boto3-dataclass-bedrock-data-automation-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock-data-automation-runtime (>=1.40.0,<1.41.0) ; extra == "bedrock-data-automation-runtime"
+Requires-Dist: boto3-dataclass-bedrock-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-bedrock-runtime (>=1.40.0,<1.41.0) ; extra == "bedrock-runtime"
+Requires-Dist: boto3-dataclass-billing (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-billing (>=1.40.0,<1.41.0) ; extra == "billing"
+Requires-Dist: boto3-dataclass-billingconductor (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-billingconductor (>=1.40.0,<1.41.0) ; extra == "billingconductor"
+Requires-Dist: boto3-dataclass-braket (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-braket (>=1.40.0,<1.41.0) ; extra == "braket"
+Requires-Dist: boto3-dataclass-budgets (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-budgets (>=1.40.0,<1.41.0) ; extra == "budgets"
+Requires-Dist: boto3-dataclass-ce (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ce (>=1.40.0,<1.41.0) ; extra == "ce"
+Requires-Dist: boto3-dataclass-chatbot (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-chatbot (>=1.40.0,<1.41.0) ; extra == "chatbot"
+Requires-Dist: boto3-dataclass-chime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-chime (>=1.40.0,<1.41.0) ; extra == "chime"
+Requires-Dist: boto3-dataclass-chime-sdk-identity (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-chime-sdk-identity (>=1.40.0,<1.41.0) ; extra == "chime-sdk-identity"
+Requires-Dist: boto3-dataclass-chime-sdk-media-pipelines (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-chime-sdk-media-pipelines (>=1.40.0,<1.41.0) ; extra == "chime-sdk-media-pipelines"
+Requires-Dist: boto3-dataclass-chime-sdk-meetings (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-chime-sdk-meetings (>=1.40.0,<1.41.0) ; extra == "chime-sdk-meetings"
+Requires-Dist: boto3-dataclass-chime-sdk-messaging (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-chime-sdk-messaging (>=1.40.0,<1.41.0) ; extra == "chime-sdk-messaging"
+Requires-Dist: boto3-dataclass-chime-sdk-voice (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-chime-sdk-voice (>=1.40.0,<1.41.0) ; extra == "chime-sdk-voice"
+Requires-Dist: boto3-dataclass-cleanrooms (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cleanrooms (>=1.40.0,<1.41.0) ; extra == "cleanrooms"
+Requires-Dist: boto3-dataclass-cleanroomsml (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cleanroomsml (>=1.40.0,<1.41.0) ; extra == "cleanroomsml"
+Requires-Dist: boto3-dataclass-cloud9 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloud9 (>=1.40.0,<1.41.0) ; extra == "cloud9"
+Requires-Dist: boto3-dataclass-cloudcontrol (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudcontrol (>=1.40.0,<1.41.0) ; extra == "cloudcontrol"
+Requires-Dist: boto3-dataclass-clouddirectory (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-clouddirectory (>=1.40.0,<1.41.0) ; extra == "clouddirectory"
+Requires-Dist: boto3-dataclass-cloudformation (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudformation (>=1.40.0,<1.41.0) ; extra == "cloudformation"
+Requires-Dist: boto3-dataclass-cloudfront (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudfront (>=1.40.0,<1.41.0) ; extra == "cloudfront"
+Requires-Dist: boto3-dataclass-cloudfront-keyvaluestore (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudfront-keyvaluestore (>=1.40.0,<1.41.0) ; extra == "cloudfront-keyvaluestore"
+Requires-Dist: boto3-dataclass-cloudhsm (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudhsm (>=1.40.0,<1.41.0) ; extra == "cloudhsm"
+Requires-Dist: boto3-dataclass-cloudhsmv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudhsmv2 (>=1.40.0,<1.41.0) ; extra == "cloudhsmv2"
+Requires-Dist: boto3-dataclass-cloudsearch (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudsearch (>=1.40.0,<1.41.0) ; extra == "cloudsearch"
+Requires-Dist: boto3-dataclass-cloudsearchdomain (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudsearchdomain (>=1.40.0,<1.41.0) ; extra == "cloudsearchdomain"
+Requires-Dist: boto3-dataclass-cloudtrail (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudtrail (>=1.40.0,<1.41.0) ; extra == "cloudtrail"
+Requires-Dist: boto3-dataclass-cloudtrail-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudtrail-data (>=1.40.0,<1.41.0) ; extra == "cloudtrail-data"
+Requires-Dist: boto3-dataclass-cloudwatch (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cloudwatch (>=1.40.0,<1.41.0) ; extra == "cloudwatch"
+Requires-Dist: boto3-dataclass-codeartifact (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codeartifact (>=1.40.0,<1.41.0) ; extra == "codeartifact"
+Requires-Dist: boto3-dataclass-codebuild (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codebuild (>=1.40.0,<1.41.0) ; extra == "codebuild"
+Requires-Dist: boto3-dataclass-codecatalyst (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codecatalyst (>=1.40.0,<1.41.0) ; extra == "codecatalyst"
+Requires-Dist: boto3-dataclass-codecommit (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codecommit (>=1.40.0,<1.41.0) ; extra == "codecommit"
+Requires-Dist: boto3-dataclass-codeconnections (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codeconnections (>=1.40.0,<1.41.0) ; extra == "codeconnections"
+Requires-Dist: boto3-dataclass-codedeploy (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codedeploy (>=1.40.0,<1.41.0) ; extra == "codedeploy"
+Requires-Dist: boto3-dataclass-codeguru-reviewer (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codeguru-reviewer (>=1.40.0,<1.41.0) ; extra == "codeguru-reviewer"
+Requires-Dist: boto3-dataclass-codeguru-security (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codeguru-security (>=1.40.0,<1.41.0) ; extra == "codeguru-security"
+Requires-Dist: boto3-dataclass-codeguruprofiler (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codeguruprofiler (>=1.40.0,<1.41.0) ; extra == "codeguruprofiler"
+Requires-Dist: boto3-dataclass-codepipeline (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codepipeline (>=1.40.0,<1.41.0) ; extra == "codepipeline"
+Requires-Dist: boto3-dataclass-codestar-connections (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codestar-connections (>=1.40.0,<1.41.0) ; extra == "codestar-connections"
+Requires-Dist: boto3-dataclass-codestar-notifications (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-codestar-notifications (>=1.40.0,<1.41.0) ; extra == "codestar-notifications"
+Requires-Dist: boto3-dataclass-cognito-identity (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cognito-identity (>=1.40.0,<1.41.0) ; extra == "cognito-identity"
+Requires-Dist: boto3-dataclass-cognito-idp (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cognito-idp (>=1.40.0,<1.41.0) ; extra == "cognito-idp"
+Requires-Dist: boto3-dataclass-cognito-sync (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cognito-sync (>=1.40.0,<1.41.0) ; extra == "cognito-sync"
+Requires-Dist: boto3-dataclass-comprehend (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-comprehend (>=1.40.0,<1.41.0) ; extra == "comprehend"
+Requires-Dist: boto3-dataclass-comprehendmedical (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-comprehendmedical (>=1.40.0,<1.41.0) ; extra == "comprehendmedical"
+Requires-Dist: boto3-dataclass-compute-optimizer (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-compute-optimizer (>=1.40.0,<1.41.0) ; extra == "compute-optimizer"
+Requires-Dist: boto3-dataclass-config (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-config (>=1.40.0,<1.41.0) ; extra == "config"
+Requires-Dist: boto3-dataclass-connect (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-connect (>=1.40.0,<1.41.0) ; extra == "connect"
+Requires-Dist: boto3-dataclass-connect-contact-lens (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-connect-contact-lens (>=1.40.0,<1.41.0) ; extra == "connect-contact-lens"
+Requires-Dist: boto3-dataclass-connectcampaigns (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-connectcampaigns (>=1.40.0,<1.41.0) ; extra == "connectcampaigns"
+Requires-Dist: boto3-dataclass-connectcampaignsv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-connectcampaignsv2 (>=1.40.0,<1.41.0) ; extra == "connectcampaignsv2"
+Requires-Dist: boto3-dataclass-connectcases (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-connectcases (>=1.40.0,<1.41.0) ; extra == "connectcases"
+Requires-Dist: boto3-dataclass-connectparticipant (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-connectparticipant (>=1.40.0,<1.41.0) ; extra == "connectparticipant"
+Requires-Dist: boto3-dataclass-controlcatalog (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-controlcatalog (>=1.40.0,<1.41.0) ; extra == "controlcatalog"
+Requires-Dist: boto3-dataclass-controltower (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-controltower (>=1.40.0,<1.41.0) ; extra == "controltower"
+Requires-Dist: boto3-dataclass-cost-optimization-hub (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cost-optimization-hub (>=1.40.0,<1.41.0) ; extra == "cost-optimization-hub"
+Requires-Dist: boto3-dataclass-cur (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-cur (>=1.40.0,<1.41.0) ; extra == "cur"
+Requires-Dist: boto3-dataclass-customer-profiles (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-customer-profiles (>=1.40.0,<1.41.0) ; extra == "customer-profiles"
+Requires-Dist: boto3-dataclass-databrew (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-databrew (>=1.40.0,<1.41.0) ; extra == "databrew"
+Requires-Dist: boto3-dataclass-dataexchange (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-dataexchange (>=1.40.0,<1.41.0) ; extra == "dataexchange"
+Requires-Dist: boto3-dataclass-datapipeline (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-datapipeline (>=1.40.0,<1.41.0) ; extra == "datapipeline"
+Requires-Dist: boto3-dataclass-datasync (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-datasync (>=1.40.0,<1.41.0) ; extra == "datasync"
+Requires-Dist: boto3-dataclass-datazone (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-datazone (>=1.40.0,<1.41.0) ; extra == "datazone"
+Requires-Dist: boto3-dataclass-dax (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-dax (>=1.40.0,<1.41.0) ; extra == "dax"
+Requires-Dist: boto3-dataclass-deadline (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-deadline (>=1.40.0,<1.41.0) ; extra == "deadline"
+Requires-Dist: boto3-dataclass-detective (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-detective (>=1.40.0,<1.41.0) ; extra == "detective"
+Requires-Dist: boto3-dataclass-devicefarm (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-devicefarm (>=1.40.0,<1.41.0) ; extra == "devicefarm"
+Requires-Dist: boto3-dataclass-devops-guru (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-devops-guru (>=1.40.0,<1.41.0) ; extra == "devops-guru"
+Requires-Dist: boto3-dataclass-directconnect (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-directconnect (>=1.40.0,<1.41.0) ; extra == "directconnect"
+Requires-Dist: boto3-dataclass-discovery (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-discovery (>=1.40.0,<1.41.0) ; extra == "discovery"
+Requires-Dist: boto3-dataclass-dlm (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-dlm (>=1.40.0,<1.41.0) ; extra == "dlm"
+Requires-Dist: boto3-dataclass-dms (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-dms (>=1.40.0,<1.41.0) ; extra == "dms"
+Requires-Dist: boto3-dataclass-docdb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-docdb (>=1.40.0,<1.41.0) ; extra == "docdb"
+Requires-Dist: boto3-dataclass-docdb-elastic (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-docdb-elastic (>=1.40.0,<1.41.0) ; extra == "docdb-elastic"
+Requires-Dist: boto3-dataclass-drs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-drs (>=1.40.0,<1.41.0) ; extra == "drs"
+Requires-Dist: boto3-dataclass-ds (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ds (>=1.40.0,<1.41.0) ; extra == "ds"
+Requires-Dist: boto3-dataclass-ds-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ds-data (>=1.40.0,<1.41.0) ; extra == "ds-data"
+Requires-Dist: boto3-dataclass-dsql (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-dsql (>=1.40.0,<1.41.0) ; extra == "dsql"
+Requires-Dist: boto3-dataclass-dynamodb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-dynamodb (>=1.40.0,<1.41.0) ; extra == "dynamodb"
+Requires-Dist: boto3-dataclass-dynamodbstreams (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-dynamodbstreams (>=1.40.0,<1.41.0) ; extra == "dynamodbstreams"
+Requires-Dist: boto3-dataclass-ebs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ebs (>=1.40.0,<1.41.0) ; extra == "ebs"
+Requires-Dist: boto3-dataclass-ec2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ec2 (>=1.40.0,<1.41.0) ; extra == "ec2"
+Requires-Dist: boto3-dataclass-ec2-instance-connect (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ec2-instance-connect (>=1.40.0,<1.41.0) ; extra == "ec2-instance-connect"
+Requires-Dist: boto3-dataclass-ecr (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ecr (>=1.40.0,<1.41.0) ; extra == "ecr"
+Requires-Dist: boto3-dataclass-ecr-public (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ecr-public (>=1.40.0,<1.41.0) ; extra == "ecr-public"
+Requires-Dist: boto3-dataclass-ecs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ecs (>=1.40.0,<1.41.0) ; extra == "ecs"
+Requires-Dist: boto3-dataclass-efs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-efs (>=1.40.0,<1.41.0) ; extra == "efs"
+Requires-Dist: boto3-dataclass-eks (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-eks (>=1.40.0,<1.41.0) ; extra == "eks"
+Requires-Dist: boto3-dataclass-eks-auth (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-eks-auth (>=1.40.0,<1.41.0) ; extra == "eks-auth"
+Requires-Dist: boto3-dataclass-elasticache (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-elasticache (>=1.40.0,<1.41.0) ; extra == "elasticache"
+Requires-Dist: boto3-dataclass-elasticbeanstalk (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-elasticbeanstalk (>=1.40.0,<1.41.0) ; extra == "elasticbeanstalk"
+Requires-Dist: boto3-dataclass-elastictranscoder (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-elastictranscoder (>=1.40.0,<1.41.0) ; extra == "elastictranscoder"
+Requires-Dist: boto3-dataclass-elb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-elb (>=1.40.0,<1.41.0) ; extra == "elb"
+Requires-Dist: boto3-dataclass-elbv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-elbv2 (>=1.40.0,<1.41.0) ; extra == "elbv2"
+Requires-Dist: boto3-dataclass-emr (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-emr (>=1.40.0,<1.41.0) ; extra == "emr"
+Requires-Dist: boto3-dataclass-emr-containers (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-emr-containers (>=1.40.0,<1.41.0) ; extra == "emr-containers"
+Requires-Dist: boto3-dataclass-emr-serverless (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-emr-serverless (>=1.40.0,<1.41.0) ; extra == "emr-serverless"
+Requires-Dist: boto3-dataclass-entityresolution (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-entityresolution (>=1.40.0,<1.41.0) ; extra == "entityresolution"
+Requires-Dist: boto3-dataclass-es (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-es (>=1.40.0,<1.41.0) ; extra == "es"
+Requires-Dist: boto3-dataclass-events (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-events (>=1.40.0,<1.41.0) ; extra == "events"
+Requires-Dist: boto3-dataclass-evidently (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-evidently (>=1.40.0,<1.41.0) ; extra == "evidently"
+Requires-Dist: boto3-dataclass-evs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-evs (>=1.40.0,<1.41.0) ; extra == "evs"
+Requires-Dist: boto3-dataclass-finspace (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-finspace (>=1.40.0,<1.41.0) ; extra == "finspace"
+Requires-Dist: boto3-dataclass-finspace-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-finspace-data (>=1.40.0,<1.41.0) ; extra == "finspace-data"
+Requires-Dist: boto3-dataclass-firehose (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-firehose (>=1.40.0,<1.41.0) ; extra == "firehose"
+Requires-Dist: boto3-dataclass-fis (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-fis (>=1.40.0,<1.41.0) ; extra == "fis"
+Requires-Dist: boto3-dataclass-fms (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-fms (>=1.40.0,<1.41.0) ; extra == "fms"
+Requires-Dist: boto3-dataclass-forecast (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-forecast (>=1.40.0,<1.41.0) ; extra == "forecast"
+Requires-Dist: boto3-dataclass-forecastquery (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-forecastquery (>=1.40.0,<1.41.0) ; extra == "forecastquery"
+Requires-Dist: boto3-dataclass-frauddetector (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-frauddetector (>=1.40.0,<1.41.0) ; extra == "frauddetector"
+Requires-Dist: boto3-dataclass-freetier (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-freetier (>=1.40.0,<1.41.0) ; extra == "freetier"
+Requires-Dist: boto3-dataclass-fsx (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-fsx (>=1.40.0,<1.41.0) ; extra == "fsx"
+Requires-Dist: boto3-dataclass-gamelift (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-gamelift (>=1.40.0,<1.41.0) ; extra == "gamelift"
+Requires-Dist: boto3-dataclass-gameliftstreams (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-gameliftstreams (>=1.40.0,<1.41.0) ; extra == "gameliftstreams"
+Requires-Dist: boto3-dataclass-geo-maps (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-geo-maps (>=1.40.0,<1.41.0) ; extra == "geo-maps"
+Requires-Dist: boto3-dataclass-geo-places (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-geo-places (>=1.40.0,<1.41.0) ; extra == "geo-places"
+Requires-Dist: boto3-dataclass-geo-routes (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-geo-routes (>=1.40.0,<1.41.0) ; extra == "geo-routes"
+Requires-Dist: boto3-dataclass-glacier (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-glacier (>=1.40.0,<1.41.0) ; extra == "glacier"
+Requires-Dist: boto3-dataclass-globalaccelerator (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-globalaccelerator (>=1.40.0,<1.41.0) ; extra == "globalaccelerator"
+Requires-Dist: boto3-dataclass-glue (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-glue (>=1.40.0,<1.41.0) ; extra == "glue"
+Requires-Dist: boto3-dataclass-grafana (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-grafana (>=1.40.0,<1.41.0) ; extra == "grafana"
+Requires-Dist: boto3-dataclass-greengrass (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-greengrass (>=1.40.0,<1.41.0) ; extra == "greengrass"
+Requires-Dist: boto3-dataclass-greengrassv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-greengrassv2 (>=1.40.0,<1.41.0) ; extra == "greengrassv2"
+Requires-Dist: boto3-dataclass-groundstation (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-groundstation (>=1.40.0,<1.41.0) ; extra == "groundstation"
+Requires-Dist: boto3-dataclass-guardduty (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-guardduty (>=1.40.0,<1.41.0) ; extra == "guardduty"
+Requires-Dist: boto3-dataclass-health (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-health (>=1.40.0,<1.41.0) ; extra == "health"
+Requires-Dist: boto3-dataclass-healthlake (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-healthlake (>=1.40.0,<1.41.0) ; extra == "healthlake"
+Requires-Dist: boto3-dataclass-iam (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iam (>=1.40.0,<1.41.0) ; extra == "iam"
+Requires-Dist: boto3-dataclass-identitystore (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-identitystore (>=1.40.0,<1.41.0) ; extra == "identitystore"
+Requires-Dist: boto3-dataclass-imagebuilder (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-imagebuilder (>=1.40.0,<1.41.0) ; extra == "imagebuilder"
+Requires-Dist: boto3-dataclass-importexport (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-importexport (>=1.40.0,<1.41.0) ; extra == "importexport"
+Requires-Dist: boto3-dataclass-inspector (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-inspector (>=1.40.0,<1.41.0) ; extra == "inspector"
+Requires-Dist: boto3-dataclass-inspector-scan (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-inspector-scan (>=1.40.0,<1.41.0) ; extra == "inspector-scan"
+Requires-Dist: boto3-dataclass-inspector2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-inspector2 (>=1.40.0,<1.41.0) ; extra == "inspector2"
+Requires-Dist: boto3-dataclass-internetmonitor (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-internetmonitor (>=1.40.0,<1.41.0) ; extra == "internetmonitor"
+Requires-Dist: boto3-dataclass-invoicing (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-invoicing (>=1.40.0,<1.41.0) ; extra == "invoicing"
+Requires-Dist: boto3-dataclass-iot (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iot (>=1.40.0,<1.41.0) ; extra == "iot"
+Requires-Dist: boto3-dataclass-iot-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iot-data (>=1.40.0,<1.41.0) ; extra == "iot-data"
+Requires-Dist: boto3-dataclass-iot-jobs-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iot-jobs-data (>=1.40.0,<1.41.0) ; extra == "iot-jobs-data"
+Requires-Dist: boto3-dataclass-iot-managed-integrations (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iot-managed-integrations (>=1.40.0,<1.41.0) ; extra == "iot-managed-integrations"
+Requires-Dist: boto3-dataclass-iotanalytics (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotanalytics (>=1.40.0,<1.41.0) ; extra == "iotanalytics"
+Requires-Dist: boto3-dataclass-iotdeviceadvisor (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotdeviceadvisor (>=1.40.0,<1.41.0) ; extra == "iotdeviceadvisor"
+Requires-Dist: boto3-dataclass-iotevents (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotevents (>=1.40.0,<1.41.0) ; extra == "iotevents"
+Requires-Dist: boto3-dataclass-iotevents-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotevents-data (>=1.40.0,<1.41.0) ; extra == "iotevents-data"
+Requires-Dist: boto3-dataclass-iotfleethub (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotfleethub (>=1.40.0,<1.41.0) ; extra == "iotfleethub"
+Requires-Dist: boto3-dataclass-iotfleetwise (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotfleetwise (>=1.40.0,<1.41.0) ; extra == "iotfleetwise"
+Requires-Dist: boto3-dataclass-iotsecuretunneling (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotsecuretunneling (>=1.40.0,<1.41.0) ; extra == "iotsecuretunneling"
+Requires-Dist: boto3-dataclass-iotsitewise (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotsitewise (>=1.40.0,<1.41.0) ; extra == "iotsitewise"
+Requires-Dist: boto3-dataclass-iotthingsgraph (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotthingsgraph (>=1.40.0,<1.41.0) ; extra == "iotthingsgraph"
+Requires-Dist: boto3-dataclass-iottwinmaker (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iottwinmaker (>=1.40.0,<1.41.0) ; extra == "iottwinmaker"
+Requires-Dist: boto3-dataclass-iotwireless (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-iotwireless (>=1.40.0,<1.41.0) ; extra == "iotwireless"
+Requires-Dist: boto3-dataclass-ivs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ivs (>=1.40.0,<1.41.0) ; extra == "ivs"
+Requires-Dist: boto3-dataclass-ivs-realtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ivs-realtime (>=1.40.0,<1.41.0) ; extra == "ivs-realtime"
+Requires-Dist: boto3-dataclass-ivschat (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ivschat (>=1.40.0,<1.41.0) ; extra == "ivschat"
+Requires-Dist: boto3-dataclass-kafka (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kafka (>=1.40.0,<1.41.0) ; extra == "kafka"
+Requires-Dist: boto3-dataclass-kafkaconnect (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kafkaconnect (>=1.40.0,<1.41.0) ; extra == "kafkaconnect"
+Requires-Dist: boto3-dataclass-kendra (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kendra (>=1.40.0,<1.41.0) ; extra == "kendra"
+Requires-Dist: boto3-dataclass-kendra-ranking (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kendra-ranking (>=1.40.0,<1.41.0) ; extra == "kendra-ranking"
+Requires-Dist: boto3-dataclass-keyspaces (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-keyspaces (>=1.40.0,<1.41.0) ; extra == "keyspaces"
+Requires-Dist: boto3-dataclass-keyspacesstreams (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-keyspacesstreams (>=1.40.0,<1.41.0) ; extra == "keyspacesstreams"
+Requires-Dist: boto3-dataclass-kinesis (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesis (>=1.40.0,<1.41.0) ; extra == "kinesis"
+Requires-Dist: boto3-dataclass-kinesis-video-archived-media (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesis-video-archived-media (>=1.40.0,<1.41.0) ; extra == "kinesis-video-archived-media"
+Requires-Dist: boto3-dataclass-kinesis-video-media (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesis-video-media (>=1.40.0,<1.41.0) ; extra == "kinesis-video-media"
+Requires-Dist: boto3-dataclass-kinesis-video-signaling (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesis-video-signaling (>=1.40.0,<1.41.0) ; extra == "kinesis-video-signaling"
+Requires-Dist: boto3-dataclass-kinesis-video-webrtc-storage (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesis-video-webrtc-storage (>=1.40.0,<1.41.0) ; extra == "kinesis-video-webrtc-storage"
+Requires-Dist: boto3-dataclass-kinesisanalytics (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesisanalytics (>=1.40.0,<1.41.0) ; extra == "kinesisanalytics"
+Requires-Dist: boto3-dataclass-kinesisanalyticsv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesisanalyticsv2 (>=1.40.0,<1.41.0) ; extra == "kinesisanalyticsv2"
+Requires-Dist: boto3-dataclass-kinesisvideo (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kinesisvideo (>=1.40.0,<1.41.0) ; extra == "kinesisvideo"
+Requires-Dist: boto3-dataclass-kms (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-kms (>=1.40.0,<1.41.0) ; extra == "kms"
+Requires-Dist: boto3-dataclass-lakeformation (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lakeformation (>=1.40.0,<1.41.0) ; extra == "lakeformation"
+Requires-Dist: boto3-dataclass-lambda (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lambda (>=1.40.0,<1.41.0) ; extra == "lambda"
+Requires-Dist: boto3-dataclass-launch-wizard (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-launch-wizard (>=1.40.0,<1.41.0) ; extra == "launch-wizard"
+Requires-Dist: boto3-dataclass-lex-models (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lex-models (>=1.40.0,<1.41.0) ; extra == "lex-models"
+Requires-Dist: boto3-dataclass-lex-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lex-runtime (>=1.40.0,<1.41.0) ; extra == "lex-runtime"
+Requires-Dist: boto3-dataclass-lexv2-models (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lexv2-models (>=1.40.0,<1.41.0) ; extra == "lexv2-models"
+Requires-Dist: boto3-dataclass-lexv2-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lexv2-runtime (>=1.40.0,<1.41.0) ; extra == "lexv2-runtime"
+Requires-Dist: boto3-dataclass-license-manager (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-license-manager (>=1.40.0,<1.41.0) ; extra == "license-manager"
+Requires-Dist: boto3-dataclass-license-manager-linux-subscriptions (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-license-manager-linux-subscriptions (>=1.40.0,<1.41.0) ; extra == "license-manager-linux-subscriptions"
+Requires-Dist: boto3-dataclass-license-manager-user-subscriptions (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-license-manager-user-subscriptions (>=1.40.0,<1.41.0) ; extra == "license-manager-user-subscriptions"
+Requires-Dist: boto3-dataclass-lightsail (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lightsail (>=1.40.0,<1.41.0) ; extra == "lightsail"
+Requires-Dist: boto3-dataclass-location (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-location (>=1.40.0,<1.41.0) ; extra == "location"
+Requires-Dist: boto3-dataclass-logs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-logs (>=1.40.0,<1.41.0) ; extra == "logs"
+Requires-Dist: boto3-dataclass-lookoutequipment (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lookoutequipment (>=1.40.0,<1.41.0) ; extra == "lookoutequipment"
+Requires-Dist: boto3-dataclass-lookoutmetrics (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lookoutmetrics (>=1.40.0,<1.41.0) ; extra == "lookoutmetrics"
+Requires-Dist: boto3-dataclass-lookoutvision (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-lookoutvision (>=1.40.0,<1.41.0) ; extra == "lookoutvision"
+Requires-Dist: boto3-dataclass-m2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-m2 (>=1.40.0,<1.41.0) ; extra == "m2"
+Requires-Dist: boto3-dataclass-machinelearning (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-machinelearning (>=1.40.0,<1.41.0) ; extra == "machinelearning"
+Requires-Dist: boto3-dataclass-macie2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-macie2 (>=1.40.0,<1.41.0) ; extra == "macie2"
+Requires-Dist: boto3-dataclass-mailmanager (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mailmanager (>=1.40.0,<1.41.0) ; extra == "mailmanager"
+Requires-Dist: boto3-dataclass-managedblockchain (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-managedblockchain (>=1.40.0,<1.41.0) ; extra == "managedblockchain"
+Requires-Dist: boto3-dataclass-managedblockchain-query (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-managedblockchain-query (>=1.40.0,<1.41.0) ; extra == "managedblockchain-query"
+Requires-Dist: boto3-dataclass-marketplace-agreement (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-marketplace-agreement (>=1.40.0,<1.41.0) ; extra == "marketplace-agreement"
+Requires-Dist: boto3-dataclass-marketplace-catalog (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-marketplace-catalog (>=1.40.0,<1.41.0) ; extra == "marketplace-catalog"
+Requires-Dist: boto3-dataclass-marketplace-deployment (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-marketplace-deployment (>=1.40.0,<1.41.0) ; extra == "marketplace-deployment"
+Requires-Dist: boto3-dataclass-marketplace-entitlement (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-marketplace-entitlement (>=1.40.0,<1.41.0) ; extra == "marketplace-entitlement"
+Requires-Dist: boto3-dataclass-marketplace-reporting (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-marketplace-reporting (>=1.40.0,<1.41.0) ; extra == "marketplace-reporting"
+Requires-Dist: boto3-dataclass-marketplacecommerceanalytics (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-marketplacecommerceanalytics (>=1.40.0,<1.41.0) ; extra == "marketplacecommerceanalytics"
+Requires-Dist: boto3-dataclass-mediaconnect (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediaconnect (>=1.40.0,<1.41.0) ; extra == "mediaconnect"
+Requires-Dist: boto3-dataclass-mediaconvert (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediaconvert (>=1.40.0,<1.41.0) ; extra == "mediaconvert"
+Requires-Dist: boto3-dataclass-medialive (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-medialive (>=1.40.0,<1.41.0) ; extra == "medialive"
+Requires-Dist: boto3-dataclass-mediapackage (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediapackage (>=1.40.0,<1.41.0) ; extra == "mediapackage"
+Requires-Dist: boto3-dataclass-mediapackage-vod (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediapackage-vod (>=1.40.0,<1.41.0) ; extra == "mediapackage-vod"
+Requires-Dist: boto3-dataclass-mediapackagev2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediapackagev2 (>=1.40.0,<1.41.0) ; extra == "mediapackagev2"
+Requires-Dist: boto3-dataclass-mediastore (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediastore (>=1.40.0,<1.41.0) ; extra == "mediastore"
+Requires-Dist: boto3-dataclass-mediastore-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediastore-data (>=1.40.0,<1.41.0) ; extra == "mediastore-data"
+Requires-Dist: boto3-dataclass-mediatailor (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mediatailor (>=1.40.0,<1.41.0) ; extra == "mediatailor"
+Requires-Dist: boto3-dataclass-medical-imaging (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-medical-imaging (>=1.40.0,<1.41.0) ; extra == "medical-imaging"
+Requires-Dist: boto3-dataclass-memorydb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-memorydb (>=1.40.0,<1.41.0) ; extra == "memorydb"
+Requires-Dist: boto3-dataclass-meteringmarketplace (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-meteringmarketplace (>=1.40.0,<1.41.0) ; extra == "meteringmarketplace"
+Requires-Dist: boto3-dataclass-mgh (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mgh (>=1.40.0,<1.41.0) ; extra == "mgh"
+Requires-Dist: boto3-dataclass-mgn (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mgn (>=1.40.0,<1.41.0) ; extra == "mgn"
+Requires-Dist: boto3-dataclass-migration-hub-refactor-spaces (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-migration-hub-refactor-spaces (>=1.40.0,<1.41.0) ; extra == "migration-hub-refactor-spaces"
+Requires-Dist: boto3-dataclass-migrationhub-config (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-migrationhub-config (>=1.40.0,<1.41.0) ; extra == "migrationhub-config"
+Requires-Dist: boto3-dataclass-migrationhuborchestrator (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-migrationhuborchestrator (>=1.40.0,<1.41.0) ; extra == "migrationhuborchestrator"
+Requires-Dist: boto3-dataclass-migrationhubstrategy (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-migrationhubstrategy (>=1.40.0,<1.41.0) ; extra == "migrationhubstrategy"
+Requires-Dist: boto3-dataclass-mpa (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mpa (>=1.40.0,<1.41.0) ; extra == "mpa"
+Requires-Dist: boto3-dataclass-mq (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mq (>=1.40.0,<1.41.0) ; extra == "mq"
+Requires-Dist: boto3-dataclass-mturk (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mturk (>=1.40.0,<1.41.0) ; extra == "mturk"
+Requires-Dist: boto3-dataclass-mwaa (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-mwaa (>=1.40.0,<1.41.0) ; extra == "mwaa"
+Requires-Dist: boto3-dataclass-neptune (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-neptune (>=1.40.0,<1.41.0) ; extra == "neptune"
+Requires-Dist: boto3-dataclass-neptune-graph (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-neptune-graph (>=1.40.0,<1.41.0) ; extra == "neptune-graph"
+Requires-Dist: boto3-dataclass-neptunedata (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-neptunedata (>=1.40.0,<1.41.0) ; extra == "neptunedata"
+Requires-Dist: boto3-dataclass-network-firewall (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-network-firewall (>=1.40.0,<1.41.0) ; extra == "network-firewall"
+Requires-Dist: boto3-dataclass-networkflowmonitor (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-networkflowmonitor (>=1.40.0,<1.41.0) ; extra == "networkflowmonitor"
+Requires-Dist: boto3-dataclass-networkmanager (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-networkmanager (>=1.40.0,<1.41.0) ; extra == "networkmanager"
+Requires-Dist: boto3-dataclass-networkmonitor (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-networkmonitor (>=1.40.0,<1.41.0) ; extra == "networkmonitor"
+Requires-Dist: boto3-dataclass-notifications (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-notifications (>=1.40.0,<1.41.0) ; extra == "notifications"
+Requires-Dist: boto3-dataclass-notificationscontacts (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-notificationscontacts (>=1.40.0,<1.41.0) ; extra == "notificationscontacts"
+Requires-Dist: boto3-dataclass-oam (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-oam (>=1.40.0,<1.41.0) ; extra == "oam"
+Requires-Dist: boto3-dataclass-observabilityadmin (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-observabilityadmin (>=1.40.0,<1.41.0) ; extra == "observabilityadmin"
+Requires-Dist: boto3-dataclass-odb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-odb (>=1.40.0,<1.41.0) ; extra == "odb"
+Requires-Dist: boto3-dataclass-omics (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-omics (>=1.40.0,<1.41.0) ; extra == "omics"
+Requires-Dist: boto3-dataclass-opensearch (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-opensearch (>=1.40.0,<1.41.0) ; extra == "opensearch"
+Requires-Dist: boto3-dataclass-opensearchserverless (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-opensearchserverless (>=1.40.0,<1.41.0) ; extra == "opensearchserverless"
+Requires-Dist: boto3-dataclass-organizations (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-organizations (>=1.40.0,<1.41.0) ; extra == "organizations"
+Requires-Dist: boto3-dataclass-osis (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-osis (>=1.40.0,<1.41.0) ; extra == "osis"
+Requires-Dist: boto3-dataclass-outposts (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-outposts (>=1.40.0,<1.41.0) ; extra == "outposts"
+Requires-Dist: boto3-dataclass-panorama (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-panorama (>=1.40.0,<1.41.0) ; extra == "panorama"
+Requires-Dist: boto3-dataclass-partnercentral-selling (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-partnercentral-selling (>=1.40.0,<1.41.0) ; extra == "partnercentral-selling"
+Requires-Dist: boto3-dataclass-payment-cryptography (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-payment-cryptography (>=1.40.0,<1.41.0) ; extra == "payment-cryptography"
+Requires-Dist: boto3-dataclass-payment-cryptography-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-payment-cryptography-data (>=1.40.0,<1.41.0) ; extra == "payment-cryptography-data"
+Requires-Dist: boto3-dataclass-pca-connector-ad (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pca-connector-ad (>=1.40.0,<1.41.0) ; extra == "pca-connector-ad"
+Requires-Dist: boto3-dataclass-pca-connector-scep (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pca-connector-scep (>=1.40.0,<1.41.0) ; extra == "pca-connector-scep"
+Requires-Dist: boto3-dataclass-pcs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pcs (>=1.40.0,<1.41.0) ; extra == "pcs"
+Requires-Dist: boto3-dataclass-personalize (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-personalize (>=1.40.0,<1.41.0) ; extra == "personalize"
+Requires-Dist: boto3-dataclass-personalize-events (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-personalize-events (>=1.40.0,<1.41.0) ; extra == "personalize-events"
+Requires-Dist: boto3-dataclass-personalize-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-personalize-runtime (>=1.40.0,<1.41.0) ; extra == "personalize-runtime"
+Requires-Dist: boto3-dataclass-pi (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pi (>=1.40.0,<1.41.0) ; extra == "pi"
+Requires-Dist: boto3-dataclass-pinpoint (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pinpoint (>=1.40.0,<1.41.0) ; extra == "pinpoint"
+Requires-Dist: boto3-dataclass-pinpoint-email (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pinpoint-email (>=1.40.0,<1.41.0) ; extra == "pinpoint-email"
+Requires-Dist: boto3-dataclass-pinpoint-sms-voice (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pinpoint-sms-voice (>=1.40.0,<1.41.0) ; extra == "pinpoint-sms-voice"
+Requires-Dist: boto3-dataclass-pinpoint-sms-voice-v2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pinpoint-sms-voice-v2 (>=1.40.0,<1.41.0) ; extra == "pinpoint-sms-voice-v2"
+Requires-Dist: boto3-dataclass-pipes (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pipes (>=1.40.0,<1.41.0) ; extra == "pipes"
+Requires-Dist: boto3-dataclass-polly (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-polly (>=1.40.0,<1.41.0) ; extra == "polly"
+Requires-Dist: boto3-dataclass-pricing (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-pricing (>=1.40.0,<1.41.0) ; extra == "pricing"
+Requires-Dist: boto3-dataclass-proton (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-proton (>=1.40.0,<1.41.0) ; extra == "proton"
+Requires-Dist: boto3-dataclass-qapps (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-qapps (>=1.40.0,<1.41.0) ; extra == "qapps"
+Requires-Dist: boto3-dataclass-qbusiness (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-qbusiness (>=1.40.0,<1.41.0) ; extra == "qbusiness"
+Requires-Dist: boto3-dataclass-qconnect (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-qconnect (>=1.40.0,<1.41.0) ; extra == "qconnect"
+Requires-Dist: boto3-dataclass-qldb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-qldb (>=1.40.0,<1.41.0) ; extra == "qldb"
+Requires-Dist: boto3-dataclass-qldb-session (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-qldb-session (>=1.40.0,<1.41.0) ; extra == "qldb-session"
+Requires-Dist: boto3-dataclass-quicksight (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-quicksight (>=1.40.0,<1.41.0) ; extra == "quicksight"
+Requires-Dist: boto3-dataclass-ram (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ram (>=1.40.0,<1.41.0) ; extra == "ram"
+Requires-Dist: boto3-dataclass-rbin (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-rbin (>=1.40.0,<1.41.0) ; extra == "rbin"
+Requires-Dist: boto3-dataclass-rds (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-rds (>=1.40.0,<1.41.0) ; extra == "rds"
+Requires-Dist: boto3-dataclass-rds-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-rds-data (>=1.40.0,<1.41.0) ; extra == "rds-data"
+Requires-Dist: boto3-dataclass-redshift (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-redshift (>=1.40.0,<1.41.0) ; extra == "redshift"
+Requires-Dist: boto3-dataclass-redshift-data (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-redshift-data (>=1.40.0,<1.41.0) ; extra == "redshift-data"
+Requires-Dist: boto3-dataclass-redshift-serverless (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-redshift-serverless (>=1.40.0,<1.41.0) ; extra == "redshift-serverless"
+Requires-Dist: boto3-dataclass-rekognition (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-rekognition (>=1.40.0,<1.41.0) ; extra == "rekognition"
+Requires-Dist: boto3-dataclass-repostspace (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-repostspace (>=1.40.0,<1.41.0) ; extra == "repostspace"
+Requires-Dist: boto3-dataclass-resiliencehub (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-resiliencehub (>=1.40.0,<1.41.0) ; extra == "resiliencehub"
+Requires-Dist: boto3-dataclass-resource-explorer-2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-resource-explorer-2 (>=1.40.0,<1.41.0) ; extra == "resource-explorer-2"
+Requires-Dist: boto3-dataclass-resource-groups (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-resource-groups (>=1.40.0,<1.41.0) ; extra == "resource-groups"
+Requires-Dist: boto3-dataclass-resourcegroupstaggingapi (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-resourcegroupstaggingapi (>=1.40.0,<1.41.0) ; extra == "resourcegroupstaggingapi"
+Requires-Dist: boto3-dataclass-robomaker (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-robomaker (>=1.40.0,<1.41.0) ; extra == "robomaker"
+Requires-Dist: boto3-dataclass-rolesanywhere (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-rolesanywhere (>=1.40.0,<1.41.0) ; extra == "rolesanywhere"
+Requires-Dist: boto3-dataclass-route53 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-route53 (>=1.40.0,<1.41.0) ; extra == "route53"
+Requires-Dist: boto3-dataclass-route53-recovery-cluster (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-route53-recovery-cluster (>=1.40.0,<1.41.0) ; extra == "route53-recovery-cluster"
+Requires-Dist: boto3-dataclass-route53-recovery-control-config (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-route53-recovery-control-config (>=1.40.0,<1.41.0) ; extra == "route53-recovery-control-config"
+Requires-Dist: boto3-dataclass-route53-recovery-readiness (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-route53-recovery-readiness (>=1.40.0,<1.41.0) ; extra == "route53-recovery-readiness"
+Requires-Dist: boto3-dataclass-route53domains (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-route53domains (>=1.40.0,<1.41.0) ; extra == "route53domains"
+Requires-Dist: boto3-dataclass-route53profiles (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-route53profiles (>=1.40.0,<1.41.0) ; extra == "route53profiles"
+Requires-Dist: boto3-dataclass-route53resolver (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-route53resolver (>=1.40.0,<1.41.0) ; extra == "route53resolver"
+Requires-Dist: boto3-dataclass-rum (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-rum (>=1.40.0,<1.41.0) ; extra == "rum"
+Requires-Dist: boto3-dataclass-s3 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-s3 (>=1.40.0,<1.41.0) ; extra == "s3"
+Requires-Dist: boto3-dataclass-s3control (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-s3control (>=1.40.0,<1.41.0) ; extra == "s3control"
+Requires-Dist: boto3-dataclass-s3outposts (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-s3outposts (>=1.40.0,<1.41.0) ; extra == "s3outposts"
+Requires-Dist: boto3-dataclass-s3tables (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-s3tables (>=1.40.0,<1.41.0) ; extra == "s3tables"
+Requires-Dist: boto3-dataclass-s3vectors (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-s3vectors (>=1.40.0,<1.41.0) ; extra == "s3vectors"
+Requires-Dist: boto3-dataclass-sagemaker (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sagemaker (>=1.40.0,<1.41.0) ; extra == "sagemaker"
+Requires-Dist: boto3-dataclass-sagemaker-a2i-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sagemaker-a2i-runtime (>=1.40.0,<1.41.0) ; extra == "sagemaker-a2i-runtime"
+Requires-Dist: boto3-dataclass-sagemaker-edge (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sagemaker-edge (>=1.40.0,<1.41.0) ; extra == "sagemaker-edge"
+Requires-Dist: boto3-dataclass-sagemaker-featurestore-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sagemaker-featurestore-runtime (>=1.40.0,<1.41.0) ; extra == "sagemaker-featurestore-runtime"
+Requires-Dist: boto3-dataclass-sagemaker-geospatial (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sagemaker-geospatial (>=1.40.0,<1.41.0) ; extra == "sagemaker-geospatial"
+Requires-Dist: boto3-dataclass-sagemaker-metrics (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sagemaker-metrics (>=1.40.0,<1.41.0) ; extra == "sagemaker-metrics"
+Requires-Dist: boto3-dataclass-sagemaker-runtime (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sagemaker-runtime (>=1.40.0,<1.41.0) ; extra == "sagemaker-runtime"
+Requires-Dist: boto3-dataclass-savingsplans (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-savingsplans (>=1.40.0,<1.41.0) ; extra == "savingsplans"
+Requires-Dist: boto3-dataclass-scheduler (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-scheduler (>=1.40.0,<1.41.0) ; extra == "scheduler"
+Requires-Dist: boto3-dataclass-schemas (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-schemas (>=1.40.0,<1.41.0) ; extra == "schemas"
+Requires-Dist: boto3-dataclass-sdb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sdb (>=1.40.0,<1.41.0) ; extra == "sdb"
+Requires-Dist: boto3-dataclass-secretsmanager (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-secretsmanager (>=1.40.0,<1.41.0) ; extra == "secretsmanager"
+Requires-Dist: boto3-dataclass-security-ir (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-security-ir (>=1.40.0,<1.41.0) ; extra == "security-ir"
+Requires-Dist: boto3-dataclass-securityhub (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-securityhub (>=1.40.0,<1.41.0) ; extra == "securityhub"
+Requires-Dist: boto3-dataclass-securitylake (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-securitylake (>=1.40.0,<1.41.0) ; extra == "securitylake"
+Requires-Dist: boto3-dataclass-serverlessrepo (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-serverlessrepo (>=1.40.0,<1.41.0) ; extra == "serverlessrepo"
+Requires-Dist: boto3-dataclass-service-quotas (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-service-quotas (>=1.40.0,<1.41.0) ; extra == "service-quotas"
+Requires-Dist: boto3-dataclass-servicecatalog (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-servicecatalog (>=1.40.0,<1.41.0) ; extra == "servicecatalog"
+Requires-Dist: boto3-dataclass-servicecatalog-appregistry (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-servicecatalog-appregistry (>=1.40.0,<1.41.0) ; extra == "servicecatalog-appregistry"
+Requires-Dist: boto3-dataclass-servicediscovery (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-servicediscovery (>=1.40.0,<1.41.0) ; extra == "servicediscovery"
+Requires-Dist: boto3-dataclass-ses (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ses (>=1.40.0,<1.41.0) ; extra == "ses"
+Requires-Dist: boto3-dataclass-sesv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sesv2 (>=1.40.0,<1.41.0) ; extra == "sesv2"
+Requires-Dist: boto3-dataclass-shield (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-shield (>=1.40.0,<1.41.0) ; extra == "shield"
+Requires-Dist: boto3-dataclass-signer (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-signer (>=1.40.0,<1.41.0) ; extra == "signer"
+Requires-Dist: boto3-dataclass-simspaceweaver (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-simspaceweaver (>=1.40.0,<1.41.0) ; extra == "simspaceweaver"
+Requires-Dist: boto3-dataclass-snow-device-management (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-snow-device-management (>=1.40.0,<1.41.0) ; extra == "snow-device-management"
+Requires-Dist: boto3-dataclass-snowball (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-snowball (>=1.40.0,<1.41.0) ; extra == "snowball"
+Requires-Dist: boto3-dataclass-sns (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sns (>=1.40.0,<1.41.0) ; extra == "sns"
+Requires-Dist: boto3-dataclass-socialmessaging (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-socialmessaging (>=1.40.0,<1.41.0) ; extra == "socialmessaging"
+Requires-Dist: boto3-dataclass-sqs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sqs (>=1.40.0,<1.41.0) ; extra == "sqs"
+Requires-Dist: boto3-dataclass-ssm (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ssm (>=1.40.0,<1.41.0) ; extra == "ssm"
+Requires-Dist: boto3-dataclass-ssm-contacts (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ssm-contacts (>=1.40.0,<1.41.0) ; extra == "ssm-contacts"
+Requires-Dist: boto3-dataclass-ssm-guiconnect (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ssm-guiconnect (>=1.40.0,<1.41.0) ; extra == "ssm-guiconnect"
+Requires-Dist: boto3-dataclass-ssm-incidents (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ssm-incidents (>=1.40.0,<1.41.0) ; extra == "ssm-incidents"
+Requires-Dist: boto3-dataclass-ssm-quicksetup (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ssm-quicksetup (>=1.40.0,<1.41.0) ; extra == "ssm-quicksetup"
+Requires-Dist: boto3-dataclass-ssm-sap (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-ssm-sap (>=1.40.0,<1.41.0) ; extra == "ssm-sap"
+Requires-Dist: boto3-dataclass-sso (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sso (>=1.40.0,<1.41.0) ; extra == "sso"
+Requires-Dist: boto3-dataclass-sso-admin (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sso-admin (>=1.40.0,<1.41.0) ; extra == "sso-admin"
+Requires-Dist: boto3-dataclass-sso-oidc (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sso-oidc (>=1.40.0,<1.41.0) ; extra == "sso-oidc"
+Requires-Dist: boto3-dataclass-stepfunctions (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-stepfunctions (>=1.40.0,<1.41.0) ; extra == "stepfunctions"
+Requires-Dist: boto3-dataclass-storagegateway (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-storagegateway (>=1.40.0,<1.41.0) ; extra == "storagegateway"
+Requires-Dist: boto3-dataclass-sts (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-sts (>=1.40.0,<1.41.0) ; extra == "sts"
+Requires-Dist: boto3-dataclass-supplychain (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-supplychain (>=1.40.0,<1.41.0) ; extra == "supplychain"
+Requires-Dist: boto3-dataclass-support (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-support (>=1.40.0,<1.41.0) ; extra == "support"
+Requires-Dist: boto3-dataclass-support-app (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-support-app (>=1.40.0,<1.41.0) ; extra == "support-app"
+Requires-Dist: boto3-dataclass-swf (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-swf (>=1.40.0,<1.41.0) ; extra == "swf"
+Requires-Dist: boto3-dataclass-synthetics (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-synthetics (>=1.40.0,<1.41.0) ; extra == "synthetics"
+Requires-Dist: boto3-dataclass-taxsettings (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-taxsettings (>=1.40.0,<1.41.0) ; extra == "taxsettings"
+Requires-Dist: boto3-dataclass-textract (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-textract (>=1.40.0,<1.41.0) ; extra == "textract"
+Requires-Dist: boto3-dataclass-timestream-influxdb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-timestream-influxdb (>=1.40.0,<1.41.0) ; extra == "timestream-influxdb"
+Requires-Dist: boto3-dataclass-timestream-query (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-timestream-query (>=1.40.0,<1.41.0) ; extra == "timestream-query"
+Requires-Dist: boto3-dataclass-timestream-write (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-timestream-write (>=1.40.0,<1.41.0) ; extra == "timestream-write"
+Requires-Dist: boto3-dataclass-tnb (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-tnb (>=1.40.0,<1.41.0) ; extra == "tnb"
+Requires-Dist: boto3-dataclass-transcribe (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-transcribe (>=1.40.0,<1.41.0) ; extra == "transcribe"
+Requires-Dist: boto3-dataclass-transfer (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-transfer (>=1.40.0,<1.41.0) ; extra == "transfer"
+Requires-Dist: boto3-dataclass-translate (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-translate (>=1.40.0,<1.41.0) ; extra == "translate"
+Requires-Dist: boto3-dataclass-trustedadvisor (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-trustedadvisor (>=1.40.0,<1.41.0) ; extra == "trustedadvisor"
+Requires-Dist: boto3-dataclass-verifiedpermissions (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-verifiedpermissions (>=1.40.0,<1.41.0) ; extra == "verifiedpermissions"
+Requires-Dist: boto3-dataclass-voice-id (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-voice-id (>=1.40.0,<1.41.0) ; extra == "voice-id"
+Requires-Dist: boto3-dataclass-vpc-lattice (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-vpc-lattice (>=1.40.0,<1.41.0) ; extra == "vpc-lattice"
+Requires-Dist: boto3-dataclass-waf (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-waf (>=1.40.0,<1.41.0) ; extra == "waf"
+Requires-Dist: boto3-dataclass-waf-regional (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-waf-regional (>=1.40.0,<1.41.0) ; extra == "waf-regional"
+Requires-Dist: boto3-dataclass-wafv2 (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-wafv2 (>=1.40.0,<1.41.0) ; extra == "wafv2"
+Requires-Dist: boto3-dataclass-wellarchitected (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-wellarchitected (>=1.40.0,<1.41.0) ; extra == "wellarchitected"
+Requires-Dist: boto3-dataclass-wisdom (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-wisdom (>=1.40.0,<1.41.0) ; extra == "wisdom"
+Requires-Dist: boto3-dataclass-workdocs (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-workdocs (>=1.40.0,<1.41.0) ; extra == "workdocs"
+Requires-Dist: boto3-dataclass-workmail (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-workmail (>=1.40.0,<1.41.0) ; extra == "workmail"
+Requires-Dist: boto3-dataclass-workmailmessageflow (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-workmailmessageflow (>=1.40.0,<1.41.0) ; extra == "workmailmessageflow"
+Requires-Dist: boto3-dataclass-workspaces (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-workspaces (>=1.40.0,<1.41.0) ; extra == "workspaces"
+Requires-Dist: boto3-dataclass-workspaces-instances (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-workspaces-instances (>=1.40.0,<1.41.0) ; extra == "workspaces-instances"
+Requires-Dist: boto3-dataclass-workspaces-thin-client (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-workspaces-thin-client (>=1.40.0,<1.41.0) ; extra == "workspaces-thin-client"
+Requires-Dist: boto3-dataclass-workspaces-web (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-workspaces-web (>=1.40.0,<1.41.0) ; extra == "workspaces-web"
+Requires-Dist: boto3-dataclass-xray (>=1.40.0,<1.41.0) ; extra == "all"
+Requires-Dist: boto3-dataclass-xray (>=1.40.0,<1.41.0) ; extra == "xray"
+Requires-Dist: typing-extensions ; python_version < "3.12"
+Project-URL: Documentation, https://boto3-dataclass.readthedocs.io/en/latest/
+Project-URL: Download, https://pypi.org/pypi/boto3-dataclass#files
+Project-URL: Homepage, https://github.com/MacHu-GWU/boto3_dataclass-project
+Project-URL: Issues, https://github.com/MacHu-GWU/boto3_dataclass-project/issues
+Project-URL: Repository, https://github.com/MacHu-GWU/boto3_dataclass-project
+Description-Content-Type: text/x-rst
+
+
+.. image:: https://readthedocs.org/projects/boto3-dataclass/badge/?version=latest
+    :target: https://boto3-dataclass.readthedocs.io/en/latest/
+    :alt: Documentation Status
+
+.. image:: https://img.shields.io/pypi/v/boto3-dataclass.svg
+    :target: https://pypi.python.org/pypi/boto3-dataclass
+
+.. image:: https://img.shields.io/pypi/l/boto3-dataclass.svg
+    :target: https://pypi.python.org/pypi/boto3-dataclass
+
+.. image:: https://img.shields.io/pypi/pyversions/boto3-dataclass.svg
+    :target: https://pypi.python.org/pypi/boto3-dataclass
+
+.. image:: https://img.shields.io/badge/✍️_Release_History!--None.svg?style=social&logo=github
+    :target: https://github.com/MacHu-GWU/boto3_dataclass-project/blob/main/release-history.rst
+
+.. image:: https://img.shields.io/badge/⭐_Star_me_on_GitHub!--None.svg?style=social&logo=github
+    :target: https://github.com/MacHu-GWU/boto3_dataclass-project
+
+------
+
+.. image:: https://img.shields.io/badge/Link-API-blue.svg
+    :target: https://boto3-dataclass.readthedocs.io/en/latest/py-modindex.html
+
+.. image:: https://img.shields.io/badge/Link-Install-blue.svg
+    :target: `install`_
+
+.. image:: https://img.shields.io/badge/Link-GitHub-blue.svg
+    :target: https://github.com/MacHu-GWU/boto3_dataclass-project
+
+.. image:: https://img.shields.io/badge/Link-Submit_Issue-blue.svg
+    :target: https://github.com/MacHu-GWU/boto3_dataclass-project/issues
+
+.. image:: https://img.shields.io/badge/Link-Request_Feature-blue.svg
+    :target: https://github.com/MacHu-GWU/boto3_dataclass-project/issues
+
+.. image:: https://img.shields.io/badge/Link-Download-blue.svg
+    :target: https://pypi.org/pypi/boto3-dataclass#files
+
+🚀 boto3-dataclass: Transform Your boto3 Experience
+==============================================================================
+.. image:: https://boto3-dataclass.readthedocs.io/en/latest/_static/boto3_dataclass-logo.png
+    :target: https://boto3-dataclass.readthedocs.io/en/latest/
+
+📚READ `FULL DOCUMENTATION HERE <https://boto3-dataclass.readthedocs.io/en/latest/>`_
+
+Welcome to **boto3-dataclass**! This library transforms boring boto3 dictionaries into beautiful, type-safe dataclasses with full autocomplete support. Say goodbye to ``response['Key']['SubKey']`` and hello to ``response.Key.SubKey`` with full IDE support!
+
+.. code-block:: python
+
+    import boto3
+    from boto3_dataclass_iam import iam_caster
+
+    # Use boto3 normally
+    iam_client = boto3.client("iam")
+    response = iam_client.get_role(RoleName="MyRole")
+
+    # Convert to structured dataclass
+    response = iam_caster.get_role(response)
+    # Now you get full IDE autocompletion and type safety!
+    # IDE shows available attributes
+
+.. image:: https://github.com/user-attachments/assets/7a76fde3-6786-48e6-a809-0a6bc3913d9b
+
+.. image:: https://github.com/user-attachments/assets/718bfed0-5aee-457f-b84a-f1221948dca1
+
+.. _install:
+
+📦 Installation
+------------------------------------------------------------------------------
+
+Install the service you need (e.g., for IAM, S3):
+
+.. code-block:: console
+
+    $ pip install boto3-dataclass[iam,s3]
+
+Or match with your boto3 version:
+
+.. code-block:: console
+
+    $ pip install "boto3-dataclass[iam,s3]>=1.40.0,<1.41.0"
+
+Or install everything at once:
+
+.. code-block:: console
+
+    $ pip install boto3-dataclass[all]  # Installs all AWS services
+
+To upgrade to latest version:
+
+.. code-block:: console
+
+    $ pip install --upgrade boto3-dataclass
