@@ -1,0 +1,7 @@
+boto3_dataclass_s3vectors/__init__.py,sha256=HV_j2e_j43o99KJxnjTYynhGvaksb5nPekbZyk4_d_4,112
+boto3_dataclass_s3vectors/caster.py,sha256=756oE26s2O_che0bxL6hyhmz2wCjap3zGzf7n-YPprE,1695
+boto3_dataclass_s3vectors/type_defs.py,sha256=aUFs68V3exdh5Y1UYriOABdXr4xqKgXt1Yd40GjgsCg,38870
+boto3_dataclass_s3vectors-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_s3vectors-1.40.0.dist-info/METADATA,sha256=t06g55musSQpzqmwlzI3vJTzWVCM3kjDglcZPmikmig,1655
+boto3_dataclass_s3vectors-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_s3vectors-1.40.0.dist-info/RECORD,,
