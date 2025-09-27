@@ -1,0 +1,16 @@
+
+[doc]
+cutgeneratingfunctionology[passagemath]
+sage-package
+sphinx
+sphinxcontrib-bibtex
+
+[passagemath]
+passagemath-pari
+passagemath-polyhedra
+passagemath-plot
+passagemath-repl
+passagemath-flint
+passagemath-graphs
+passagemath-singular
+passagemath-symbolics
