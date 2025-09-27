@@ -1,0 +1,12 @@
+mkdocs_excel/__init__.py,sha256=rfHBXBUUtcBMPLPifxkxqzZid1-_rKCa_LS_cBRGDJ0,193
+mkdocs_excel/_version.py,sha256=o2ynUMhPXxIa2AEz0z0g58br3M_1Ui4l8WNNo3EutH0,770
+mkdocs_excel/cache.py,sha256=AGObo9cCZhexe-V3a0hpHLdAUU9AOWx1g5Y--df8ij8,2095
+mkdocs_excel/color_utils.py,sha256=ktCQVkArEnZY2Mq4IIh4y7S8n5pGfqt4DmpzngwWeS8,4451
+mkdocs_excel/plugin.py,sha256=zwuAbUvSjskHN-yrhtBgHXaD0aliAgufUCHz718VrJE,7308
+mkdocs_excel/renderer.py,sha256=WOXHLDpZjBKUNNVPnqZxxUw3CQ51eVLGs1JKZ3XpBe0,14324
+mkdocs_excel_plugin-1.0.0.dist-info/licenses/LICENSE,sha256=u_sZIBXQuyQ4ws61on3I6fGjVccIwUXlw9RtfWbnvOQ,1088
+mkdocs_excel_plugin-1.0.0.dist-info/METADATA,sha256=Ho906H8BgQh3n50Y7eVdti00xkHCX6KKNTWbAHDJlvU,4931
+mkdocs_excel_plugin-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mkdocs_excel_plugin-1.0.0.dist-info/entry_points.txt,sha256=xIKTGWXX1DWQA0OFc39CaMh89jevwjX08rqtFw48UuM,57
+mkdocs_excel_plugin-1.0.0.dist-info/top_level.txt,sha256=ob3d76iDahEsHe0eCuHr-lKBMkmrpYTrDfZvGiPIPvc,13
+mkdocs_excel_plugin-1.0.0.dist-info/RECORD,,
