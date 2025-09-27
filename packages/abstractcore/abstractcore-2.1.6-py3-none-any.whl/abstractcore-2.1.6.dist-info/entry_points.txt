@@ -1,0 +1,3 @@
+[console_scripts]
+abstractllm-summarizer = abstractllm.apps.summarizer:main
+summarizer = abstractllm.apps.summarizer:main
