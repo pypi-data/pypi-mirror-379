@@ -1,0 +1,13 @@
+pyproject.toml
+setup.py
+L4/ARVORE.PY
+L4/__init__.py
+L4/arvore2.py
+L4/c45.py
+L4/cart.py
+L4/id3.py
+arvoredecisao.egg-info/PKG-INFO
+arvoredecisao.egg-info/SOURCES.txt
+arvoredecisao.egg-info/dependency_links.txt
+arvoredecisao.egg-info/requires.txt
+arvoredecisao.egg-info/top_level.txt

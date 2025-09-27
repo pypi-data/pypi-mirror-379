@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arvoredecisao"
+version = "0.1.0"
+description = "Implementações de ID3, C4.5 e CART do zero"
+authors = [
+    { name="Seu Nome", email="seuemail@email.com" }
+]
+dependencies = ["numpy", "pandas"]
