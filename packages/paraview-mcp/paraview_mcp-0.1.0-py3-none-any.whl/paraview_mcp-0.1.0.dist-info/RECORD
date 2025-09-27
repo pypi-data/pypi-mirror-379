@@ -1,0 +1,10 @@
+paraview_mcp/__init__.py,sha256=8kr39kEb37-JB_bziJtw472KrWAr5ApIQpHRnAc1Qas,238
+paraview_mcp/paraview_manager.py,sha256=p2Q-bs3vmZcQu9O3lh7HqujWmJTh3QqmcdA3g4f6OFk,120228
+paraview_mcp/paraview_mcp_server.py,sha256=8R4Tspt8uL4iHsGfg0mC5N636eShPuqkhtVYRSXqzmM,42627
+paraview_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=uMYhmWV-Qm-OuVoDiIjtr-rFIKUh-krFkgisk0JVNnw,1568
+paraview_mcp-0.1.0.dist-info/licenses/NOTICE,sha256=Sf5VRhG3wLpHn5Fhye5mNsmeAsZo1a2D5CmQQYVnLR8,1179
+paraview_mcp-0.1.0.dist-info/METADATA,sha256=ThDz5RMxs-FRQLMFoC5-Sx74nSDEsyIW8R8-1QSFkYQ,7894
+paraview_mcp-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+paraview_mcp-0.1.0.dist-info/entry_points.txt,sha256=IFx30VOBsGN13VfvySALVHYznPMZDdrMTfRizarSsBc,78
+paraview_mcp-0.1.0.dist-info/top_level.txt,sha256=z_FryPnI3rvGqwBysnaW8PywmpnRAixIFoL0j0AGTk0,13
+paraview_mcp-0.1.0.dist-info/RECORD,,
