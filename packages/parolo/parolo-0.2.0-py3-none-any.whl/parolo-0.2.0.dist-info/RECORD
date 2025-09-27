@@ -1,0 +1,8 @@
+parolo/__init__.py,sha256=vPjUmv7caiq2m2hQvKwBnfp4jfbO16mMWLynq6YKu8M,1344
+parolo/_core.py,sha256=NtEsVb2oVGiD1oPiQNb_9OOZFMh-qitz9yv1INn0XUw,6191
+parolo/prompt.py,sha256=PSD5m-E5wQ-F0VA8DVs4v9g5YFU7Eq1Jq413byXybRo,7614
+parolo/tenants.py,sha256=Mjcm3PSMWJQWctpPSWLwfInOHKNZdqvo8idtggYhXV4,3984
+parolo-0.2.0.dist-info/METADATA,sha256=D96GugIoLlWflUdkcz8NXqJaYwIrt22jUxaYQtS8mV4,3657
+parolo-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+parolo-0.2.0.dist-info/top_level.txt,sha256=_a6XCiEKCLXr8ioSgwMMQxje4QA-CdunbLrE2wUX3pU,7
+parolo-0.2.0.dist-info/RECORD,,
