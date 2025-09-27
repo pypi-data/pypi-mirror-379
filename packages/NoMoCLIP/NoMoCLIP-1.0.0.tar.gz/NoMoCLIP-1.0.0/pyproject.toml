@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=65.3.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NoMoCLIP"
+version = "1.0.0"
+description = "Interpretable Modeling of RNA–Protein Interactions from eCLIP-Seq Profiles for Motif-Free RBPs"
+authors = [
+  { name = "Yuning Yang, Qiongyao Yu, Xinyuan Zhao and Xiangtao Li", email = "yangyn533@nenu.edu.cn" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7.16"
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+]
+
+keywords = ["Deep learning", "RNA-binding protein", "Post-transcriptional regulation"]
+
+dependencies = [
+  "click>=8.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.package-data]
+nomoclip = ["acgu_colored.npz", "install.sh"]
+
+[project.scripts]
+nomoclip = "nomoclip.cli:cli"
