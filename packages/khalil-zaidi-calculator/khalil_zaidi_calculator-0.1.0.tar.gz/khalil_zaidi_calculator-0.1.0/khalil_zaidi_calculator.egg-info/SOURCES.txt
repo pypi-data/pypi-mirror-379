@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+khalil_zaidi_calculator/__init__.py
+khalil_zaidi_calculator/calculator.py
+khalil_zaidi_calculator.egg-info/PKG-INFO
+khalil_zaidi_calculator.egg-info/SOURCES.txt
+khalil_zaidi_calculator.egg-info/dependency_links.txt
+khalil_zaidi_calculator.egg-info/top_level.txt
+tests/test_calculator.py

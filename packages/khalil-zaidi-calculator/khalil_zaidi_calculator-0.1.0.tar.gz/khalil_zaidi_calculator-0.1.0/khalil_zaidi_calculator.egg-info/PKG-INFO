@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: khalil-zaidi-calculator
+Version: 0.1.0
+Summary: Advanced calculator with extra math operations
+Home-page: https://github.com/yourusername/khalil-zaidi-calculator
+Author: خليل الزايدي
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# khalil-zaidi-calculator
+
+آلة حاسبة متقدمة بلغة بايثون تدعم العمليات الأساسية والإضافية.
+
+## التثبيت
+```bash
+pip install khalil-zaidi-calculator
+```
+
+## الاستخدام
+```python
+from khalil_zaidi_calculator import Calculator
+
+calc = Calculator()
+
+print(calc.add(5, 3))       # 8
+print(calc.divide(10, 2))   # 5
+print(calc.power(2, 4))     # 16
+print(calc.sqrt(25))        # 5
+print(calc.average([1,2,3])) # 2
+```
+
+## المزايا
+- جمع، طرح، ضرب، قسمة
+- رفع للأس (Power)
+- جذر تربيعي
+- باقي القسمة (Modulo)
+- المتوسط الحسابي
+- معالجة أخطاء ذكية
