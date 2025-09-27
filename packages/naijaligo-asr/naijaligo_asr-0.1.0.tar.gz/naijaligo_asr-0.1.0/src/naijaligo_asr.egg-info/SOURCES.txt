@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/naijaligo_asr/__init__.py
+src/naijaligo_asr/audio.py
+src/naijaligo_asr/cli.py
+src/naijaligo_asr/engine.py
+src/naijaligo_asr/logging_utils.py
+src/naijaligo_asr/registry.py
+src/naijaligo_asr/transcriber.py
+src/naijaligo_asr.egg-info/PKG-INFO
+src/naijaligo_asr.egg-info/SOURCES.txt
+src/naijaligo_asr.egg-info/dependency_links.txt
+src/naijaligo_asr.egg-info/entry_points.txt
+src/naijaligo_asr.egg-info/requires.txt
+src/naijaligo_asr.egg-info/top_level.txt
+tests/test_transcribe.py
