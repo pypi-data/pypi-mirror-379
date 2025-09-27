@@ -1,0 +1,10 @@
+pdf_appendix/__init__.py,sha256=5RFb79TuI-53EYb12gDaTDblM8-7A4rfz8aqCvDUxRk,100
+pdf_appendix/cli.py,sha256=unkj1CT79gZelWy6z-5pJgg3mqX2UWn9Tr1wDfxVBfY,2337
+pdf_appendix/core.py,sha256=RA7VUUP9IZTdMRoA-QF85tfvbn2ana3nvHhiAzyFT4g,10586
+pdf_appendix-1.0.0.dist-info/licenses/LICENSE,sha256=sVmWtRFj6MYd9gwMDJgaCHNBHuI83oRaFBD7sB6pQ3k,1099
+pdf_appendix-1.0.0.dist-info/licenses/THIRD_PARTY_LICENSES,sha256=AC5vOanIqOUEHzQVQdWGSmciiXvh4RQykhGZ-hRMh00,47002
+pdf_appendix-1.0.0.dist-info/METADATA,sha256=MOgAAiqOpExu4GGgA1ZrWiXcXQPJQhjVSSv8j8HwPas,4902
+pdf_appendix-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pdf_appendix-1.0.0.dist-info/entry_points.txt,sha256=52d4FoX_tOPkIh2G6HuaRH6M9IIufDUjvlYP1eK7cyY,55
+pdf_appendix-1.0.0.dist-info/top_level.txt,sha256=CFTsmkQ7oVjfAxDu_FZS67czLuJlSFUdOmkse9wgRF8,13
+pdf_appendix-1.0.0.dist-info/RECORD,,

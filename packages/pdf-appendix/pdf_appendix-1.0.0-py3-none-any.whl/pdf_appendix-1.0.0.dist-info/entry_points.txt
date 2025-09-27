@@ -1,0 +1,2 @@
+[console_scripts]
+pdf-appendix = pdf_appendix.cli:main
