@@ -1,0 +1,17 @@
+[Unit]
+Description=gancho daemon
+Requires=gancho.socket
+After=network.target
+
+[Service]
+User=gancho
+Group=www-data
+WorkingDirectory=/opt/gancho
+ExecStart=/opt/gancho/.venv/bin/gancho
+Restart=always
+RestartSec=5
+StandardInput=socket
+
+[Install]
+WantedBy=multi-user.target
+
