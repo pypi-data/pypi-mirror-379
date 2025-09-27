@@ -1,0 +1,7 @@
+boto3_dataclass_apprunner/__init__.py,sha256=wd4leNqO7N6VO5CiNteyz9frmaQqO8cNrcZmN34CLiY,112
+boto3_dataclass_apprunner/caster.py,sha256=S_LToyBB0aqYrEgIusZuASXIXxdW74W_ioEpSm-eQvY,8130
+boto3_dataclass_apprunner/type_defs.py,sha256=Vl_R_0TCEZ2-nDRizTTNby4OWTybVsFBlPsmE3JudnQ,117733
+boto3_dataclass_apprunner-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_apprunner-1.40.0.dist-info/METADATA,sha256=dFagGujYysbbgKi3yVc3WJCNqaK_8f-zTxB2J4D3i0Y,1655
+boto3_dataclass_apprunner-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_apprunner-1.40.0.dist-info/RECORD,,
