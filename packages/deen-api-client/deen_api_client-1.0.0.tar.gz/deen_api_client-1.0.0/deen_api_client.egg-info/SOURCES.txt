@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+deen_api/__init__.py
+deen_api/client.py
+deen_api/exceptions.py
+deen_api/models.py
+deen_api_client.egg-info/PKG-INFO
+deen_api_client.egg-info/SOURCES.txt
+deen_api_client.egg-info/dependency_links.txt
+deen_api_client.egg-info/requires.txt
+deen_api_client.egg-info/top_level.txt
+examples/__init__.py
+examples/hadith_example.py
+tests/__init__.py
+tests/test_client.py
