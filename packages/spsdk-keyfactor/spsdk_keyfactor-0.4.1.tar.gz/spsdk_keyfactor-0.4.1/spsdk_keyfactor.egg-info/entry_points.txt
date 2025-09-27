@@ -1,0 +1,8 @@
+[console_scripts]
+nxp-keyfactor = spsdk_keyfactor.cli:main
+
+[pyinstaller40]
+hook-dirs = spsdk_keyfactor.__pyinstaller:get_hook_dirs
+
+[spsdk.sp]
+keyfactor = spsdk_keyfactor.provider
