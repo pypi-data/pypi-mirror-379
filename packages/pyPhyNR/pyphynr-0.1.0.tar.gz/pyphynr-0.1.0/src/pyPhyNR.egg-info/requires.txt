@@ -1,0 +1,10 @@
+numpy
+matplotlib
+scipy
+ipykernel
+jupyter
+
+[dev]
+pytest
+black
+flake8
