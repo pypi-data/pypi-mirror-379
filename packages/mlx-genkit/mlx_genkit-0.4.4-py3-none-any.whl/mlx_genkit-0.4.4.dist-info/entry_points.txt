@@ -1,0 +1,4 @@
+[console_scripts]
+mlxgk-download = mlx_genkit.cli:download_cmd
+mlxgk-eval = mlx_genkit.cli:eval_cmd
+mlxgk-generate = mlx_genkit.cli:generate_cmd
