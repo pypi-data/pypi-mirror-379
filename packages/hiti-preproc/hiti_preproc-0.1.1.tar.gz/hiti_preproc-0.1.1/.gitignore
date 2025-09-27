@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+*/.ipynb_checkpoints
+
+# exclude notebook used to generate example images
+examples.ipynb
+
+.vscode
+.vscode/*
