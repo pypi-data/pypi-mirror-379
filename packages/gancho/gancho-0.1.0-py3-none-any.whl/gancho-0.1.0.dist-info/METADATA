@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: gancho
+Version: 0.1.0
+Summary: Gancho receives webhooks and triggers actions in response.
+Author-email: Bruno Rocha <rochacbruno@gmail.com>
+License: AGPL-3.0
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.117.1
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: uvicorn[standard]>=0.37.0
+Description-Content-Type: text/markdown
+
+# Gancho takes websocket payload and perform actions
+
+## Usage:
+
+On github set websocket for the desired events,
+recommended **Tag Creation**.
+
+## Deployment on VM
+
+#### Set dir and user
+
+```bash
+mkdir /opt/gancho
+sudo useradd -r -s /usr/sbin/nologin -d /opt/gancho -M gancho
+
+# This gives permission to manipulate /var/www, adjust for your needs
+sudo chown -R gancho:www-data /opt/gancho
+```
+
+
+
+
