@@ -1,0 +1,7 @@
+boto3_dataclass_cloudcontrol/__init__.py,sha256=SWJOiE39O4IgtWNdV5HJsIHbdp1SJ_S8L5N9XsGWZDI,118
+boto3_dataclass_cloudcontrol/caster.py,sha256=ZDjKkk4ftpB5r8hb0b-n--AWL3Qrq2ZuFkmNl_-WfmM,1811
+boto3_dataclass_cloudcontrol/type_defs.py,sha256=uOLHZ1GtpF8xTal1_clXYu6eQmzXzLRwZsbBlRxidyM,25900
+boto3_dataclass_cloudcontrol-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_cloudcontrol-1.40.0.dist-info/METADATA,sha256=-9dc_3hOnkEI1f7REfzXjW-H2AJkrTdEOd3q9c1Sd68,1676
+boto3_dataclass_cloudcontrol-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_cloudcontrol-1.40.0.dist-info/RECORD,,
