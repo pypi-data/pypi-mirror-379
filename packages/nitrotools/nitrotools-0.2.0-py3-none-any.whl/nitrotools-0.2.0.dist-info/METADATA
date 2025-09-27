@@ -1,0 +1,212 @@
+Metadata-Version: 2.4
+Name: nitrotools
+Version: 0.2.0
+Summary: A shared library for common utilities.
+Project-URL: Homepage, https://github.com/introvenk/nitro
+Project-URL: Repository, https://github.com/introvenk/nitro
+Project-URL: Issues, https://github.com/introvenk/nitro/issues
+Author-email: Venkatesh Khatri <venkatesh.khatri@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: library,shared,utilities
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Requires-Dist: python-dotenv
+Requires-Dist: pyyaml
+Provides-Extra: llm
+Requires-Dist: json-repair; extra == 'llm'
+Requires-Dist: langchain-core; extra == 'llm'
+Requires-Dist: langchain-openai; extra == 'llm'
+Requires-Dist: openai; extra == 'llm'
+Description-Content-Type: text/markdown
+
+# Nitro
+
+A shared library for common utilities, including LLM management.
+
+## Installation
+
+```bash
+pip install nitrotools
+```
+
+For LLM functionality with LangChain and OpenAI support:
+
+```bash
+pip install nitrotools[llm]
+```
+
+## Usage
+
+### Core Utilities
+
+```python
+from nitro.core import hello
+
+print(hello())
+```
+
+### LLM Management
+
+Nitro provides a configurable LLM factory for easy integration with multiple providers.
+
+#### Setup
+
+1. Copy the sample config and customize it:
+
+```bash
+cp /path/to/site-packages/nitro/llm_config.yaml.sample llm_config.yaml
+# Or create llm_config.yaml in your project root (or set NITRO_CONFIG_PATH env var)
+```
+
+Example `llm_config.yaml`:
+
+```yaml
+servers:
+  llamacpp:
+    - endpoint: "http://your-llamacpp-server:11435"
+      interface: "langchain"
+      models:
+        - name: "qwen"
+          model_name: "gpt-oss-20b-Q6_K.gguf"
+          temperature: 0.7
+          max_tokens: 1000
+  openrouter:
+    endpoint: "https://openrouter.ai/api/v1"
+    api_key: "${OPENROUTER_API_KEY}"
+    interface: "openai_compatible"
+    headers:
+      HTTP-Referer: "${OPENROUTER_HTTP_REFERER}"
+      X-Title: "${OPENROUTER_X_TITLE}"
+    models:
+      - name: "grok-fast-free"
+        model: "x-ai/grok-4-fast:free"
+        temperature: 0.3
+        max_tokens: 1000
+      - name: "nemotron-nano-free"
+        model: "nvidia/nemotron-nano-9b-v2:free"
+        temperature: 0.1
+        max_tokens: 1500
+
+purposes:
+  general: "llamacpp:qwen"
+  coding: "llamacpp:qwen"
+  reasoning: "openrouter:grok-fast-free"
+  analysis: "openrouter:nemotron-nano-free"
+  assistant: "openrouter:grok-fast-free"
+```
+
+2. Set environment variables in `.env`:
+
+```bash
+OPENROUTER_API_KEY=your_key_here
+OPENROUTER_HTTP_REFERER=https://your-site.com
+OPENROUTER_X_TITLE=Your App
+LLAMACPP_BASE_URL=http://localhost:11435
+```
+
+#### Basic Usage
+
+```python
+from nitro import get_llm
+
+# Get LLM for a purpose
+llm = get_llm("coding")
+
+# Generate text
+response = llm.generate([
+    {"role": "user", "content": "Write a Python function to reverse a string."}
+])
+print(response)
+
+# Full chat response
+full_response = llm.chat([
+    {"role": "user", "content": "Explain recursion."}
+])
+print(full_response)  # Raw response object
+```
+
+#### Advanced Usage
+
+```python
+from nitro import LLMFactory
+
+factory = LLMFactory()
+
+# Health check
+status = factory.health_check()
+print(status)  # {'general': '✅ llamacpp:qwen', ...}
+
+# Direct factory usage
+llm = factory.get_llm("assistant")
+```
+
+#### JSON Generation
+
+Nitro supports structured JSON generation with automatic repair for malformed responses. This is useful for generating structured data like quizzes, profiles, or any custom JSON format.
+
+```python
+from nitro import get_llm
+
+# Get an LLM instance
+llm = get_llm("reasoning")
+
+# Generate a quiz in JSON format
+quiz_prompt = """Create a quiz of 3 questions on current Indian affairs.
+Each question should have:
+- question: the question text
+- options: array of 4 possible answers
+- correct_option: index (0-3) of the correct answer
+
+Return as a JSON array of question objects."""
+
+quiz_data = llm.generate_json(quiz_prompt)
+print(quiz_data)
+# Output: [{'question': '...', 'options': [...], 'correct_option': 0}, ...]
+
+# Generate with JSON schema guidance
+schema = {
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "age": {"type": "integer"},
+        "skills": {"type": "array", "items": {"type": "string"}}
+    },
+    "required": ["name", "age"]
+}
+
+profile = llm.generate_json("Generate a software engineer profile", json_schema=schema)
+print(profile)
+# Output: {'name': 'John Doe', 'age': 30, 'skills': ['Python', 'JavaScript']}
+
+# Custom role (optional)
+todo_data = llm.generate_json("Generate 3 todo items with priorities", role="user")
+print(todo_data)
+```
+
+**Note**: JSON generation requires the `json-repair` package, which is included in `pip install nitrotools[llm]`. The method automatically repairs any malformed JSON from the LLM response.
+
+### Testing with Real LLMs
+
+To run integration tests with real endpoints:
+
+1. Set credentials in `.env` as above.
+2. Run tests: `pytest tests/test_llm.py::TestLLMIntegration -v`
+
+Tests will skip if credentials are not provided.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
+
+## License
+
+MIT
