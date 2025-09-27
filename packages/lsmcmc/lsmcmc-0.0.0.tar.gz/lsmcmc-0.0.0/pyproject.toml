@@ -1,0 +1,88 @@
+[project]
+authors = [{ name = "Maximilian Kruse", email = "maximilian.kruse@kit.edu" }]
+maintainers = [
+    { name = "Maximilian Kruse", email = "maximilian.kruse@kit.edu" },
+]
+name = "lsmcmc"
+description = "A light-weight library for large-scale Markov Chain Monte Carlo sampling"
+license = { text = "MIT" }
+readme = "README.md"
+dynamic = ["version"]
+requires-python = ">=3.12"
+keywords = [
+    "markov chain monte carlo",
+    "large-scale",
+    "Bayesian inverse problems",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+]
+urls = { repository = "https://github.com/UQatKIT/ls-mcmc" }
+
+# --------------------------------------------------------------------------------------------------
+dependencies = ["numpy>=2.1.2", "zarr>=2.18.3"]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1,<2",
+    "matplotlib>=3.9.2,<4",
+    "pandas>=2.2.2,<3",
+    "seaborn>=0.13.2,<0.14",
+]
+style = ["ruff>=0.8.6"]
+docs = [
+    "git-cliff>=2.7.0",
+    "mkdocs-material>=9.5.49",
+    "mkdocs-autorefs>=1.2.0",
+    "mkdocstrings[python]>=0.27.0",
+]
+test = [
+    "fim-python>=1.2.2",
+    "pytest>=8.3.4,<9",
+    "pytest-cov>=6.0.0,<7",
+    "pytest-xdist>=3.6.1,<4",
+]
+
+# --------------------------------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "COM812",
+    "EM101",
+    "EM102",
+    "FBT001",
+    "FBT003",
+    "F722",
+    "F821",
+    "ISC001",
+    "PD008",
+    "PD011",
+    "PLR2004",
+    "PT003",
+    "RET504",
+    "S101",
+    "TRY003",
+]
+pydocstyle.convention = "google"
+
+# --------------------------------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["test"]
+addopts = [
+    "-v",
+    "--import-mode=importlib",
+    "--cov=ls-mcmc",
+    "--cov-config=.coveragerc",
+]
+markers = [
+    "unit: unit tests",
+    "integration: integration tests",
+    "slow: tests with long runtime",
+]
