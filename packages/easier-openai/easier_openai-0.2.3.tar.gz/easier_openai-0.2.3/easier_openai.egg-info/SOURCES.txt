@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+easier_openai.egg-info/PKG-INFO
+easier_openai.egg-info/SOURCES.txt
+easier_openai.egg-info/dependency_links.txt
+easier_openai.egg-info/requires.txt
+easier_openai.egg-info/top_level.txt
+openai_wrapper/__init__.py
+openai_wrapper/assistant.py
+openai_wrapper/tempCodeRunnerFile.py
+tests/test.py
