@@ -1,0 +1,39 @@
+site_name: WRF Ensembly
+site_description: Documentation for WRF Ensembly, a WRF/DART assimilation toolkit
+repo_url: https://github.com/NOA-ReACT/wrf_ensembly
+theme:
+  name: terminal
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - mkdocs-click
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_style: default
+      noclasses: true
+  - pymdownx.inlinehilite
+
+extra_javascript:
+  - config.js
+  - https://cdn.jsdelivr.net/npm/mermaid@11.7.0/dist/mermaid.min.js
+
+nav:
+  - Home: index.md
+  - Core Concepts: core-concepts.md
+  - Tutorial: tutorial.md
+  - User Guide:
+    - Installation: installation.md
+    - Usage: usage.md
+    - Configuration: configuration.md
+    - Observations: observations.md
+    - Postprocessing: postprocess.md
+    - WRF-Chem: wrf-chem.md

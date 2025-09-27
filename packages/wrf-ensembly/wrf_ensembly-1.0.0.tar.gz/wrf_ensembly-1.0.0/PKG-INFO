@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: wrf-ensembly
+Version: 1.0.0
+Summary: Support scripts for using DART w/ WRF
+Author-email: Thanasis Georgiou <ageorgiou@noa.gr>
+Requires-Python: <3.14,>=3.11
+Requires-Dist: cartopy>=0.24.1
+Requires-Dist: click>=8.2.0
+Requires-Dist: dask>=2025.9.1
+Requires-Dist: dataclass-binder>=0.3.4
+Requires-Dist: duckdb>=1.4.0
+Requires-Dist: interpolator-for-wrfchem>=1.5.1
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: mashumaro[toml]>=3.15
+Requires-Dist: matplotlib>=3.10.3
+Requires-Dist: netcdf4>=1.7.2
+Requires-Dist: pyarrow>=21.0.0
+Requires-Dist: pyproj>=3.7.1
+Requires-Dist: pytest>=7.4.3
+Requires-Dist: rich>=14.0.0
+Requires-Dist: scikit-learn>=1.7.2
+Requires-Dist: scipy>=1.15.3
+Requires-Dist: setuptools>=80.7.1
+Requires-Dist: tomli-w>=1.2.0
+Requires-Dist: tomli>=2.2.1
+Requires-Dist: xarray>=2025.4.0
+Requires-Dist: xwrf==0.0.5
+Provides-Extra: dev
+Requires-Dist: ipykernel>=6.29.5; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-click>=0.9.0; extra == 'docs'
+Requires-Dist: mkdocs-mermaid2-plugin>=1.2.1; extra == 'docs'
+Requires-Dist: mkdocs-terminal>=4.7.0; extra == 'docs'
+Requires-Dist: mkdocs>=1.6.1; extra == 'docs'
+Requires-Dist: pygments>=2.19.2; extra == 'docs'
+Requires-Dist: pymdown-extensions>=10.16; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# WRF-Ensembly
+
+WRF-Ensembly is a tool for conducting Ensemble Assimilation experiments using the WRF (and WRF-CHEM) model and DART. It is implemented as a toolkit of Python scripts that handle the "gluing" between [WRF](https://github.com/wrf-model/wrf) and [DART](https://github.com/NCAR/DART), handling activities like running the necessary DART programs, creating the namelists, and converting observations using the appropriate converters, etc. Configuration for an experiment is handled through one config file to maximize reproducibility.
+
+Running an experiment is done through a series of commands, each handling a separate task.
