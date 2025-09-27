@@ -1,0 +1,16 @@
+madrigalWeb/__init__.py,sha256=cosnCNlx-QO1RqI8EPlK07X3wY9-BppEQvuSLeCDW1Y,312
+madrigalWeb/exampleMadrigalWebServices.py,sha256=DBxqJVnwNC5ikFZ_nDzsyRjnGLIhMu1VU9pW7LCpNkM,4169
+madrigalWeb/globalCitation.py,sha256=FP0G6vKxqyWOJFFjbFPhwPp1FE0OiF6IkNIj0alxVD4,9724
+madrigalWeb/globalDownload.py,sha256=4KLIDZkzDzgOdHpq_bZHeOccukK1PWc3agn5p1M2JqQ,27461
+madrigalWeb/globalIsprint.py,sha256=IB_79-x1IDyel29452bV2CH4HX5KIs1mux1wLYhk9nI,37316
+madrigalWeb/madrigalWeb.py,sha256=t5JXF7ANOC4CHUNsli-QSe4KHkvTOd4m-d3v8P-ijxE,101920
+madrigalWeb/tests/__init__.py,sha256=Xxf6xXdbnni3Nv4do2yyf3PcIv7Wnh9trDxarkZ88Wc,128
+madrigalWeb/tests/testMadrigalWeb.py,sha256=nghDRsDwPX_s6bHb-6t89vVt5wZnxJSknJPLZwub46w,10463
+madrigalweb-3.3.5.data/scripts/exampleMadrigalWebServices.py,sha256=DBxqJVnwNC5ikFZ_nDzsyRjnGLIhMu1VU9pW7LCpNkM,4169
+madrigalweb-3.3.5.data/scripts/globalCitation.py,sha256=FP0G6vKxqyWOJFFjbFPhwPp1FE0OiF6IkNIj0alxVD4,9724
+madrigalweb-3.3.5.data/scripts/globalDownload.py,sha256=4KLIDZkzDzgOdHpq_bZHeOccukK1PWc3agn5p1M2JqQ,27461
+madrigalweb-3.3.5.data/scripts/globalIsprint.py,sha256=PNSQoYILxV58QEyWYBArX5myoCuB7mtvN6ckWG3cYiI,37303
+madrigalweb-3.3.5.dist-info/METADATA,sha256=HPmWO4oR6FS3YCS9b_3Ckd9dZt5_59YrHDS_qAk-Xx4,2090
+madrigalweb-3.3.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+madrigalweb-3.3.5.dist-info/top_level.txt,sha256=uTxHUp5iBfGB6u2v2IVas8iFx_wOnl7_J1IiJb0VcEY,12
+madrigalweb-3.3.5.dist-info/RECORD,,
