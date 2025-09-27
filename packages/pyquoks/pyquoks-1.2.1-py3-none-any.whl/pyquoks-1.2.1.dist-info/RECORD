@@ -1,0 +1,10 @@
+pyquoks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyquoks/data.py,sha256=9vL7UciizlTp5-wHnvdTey2FuqGxC5wf-NOKX9wpN-I,7752
+pyquoks/localhost.py,sha256=X3JPGybKjiQLl7jqkyGFt_1D2jTNyFr_2qGu9FmKceI,479
+pyquoks/models.py,sha256=_2mxn7nBZzm8jALJSKcFHal06RGh2whHYp7De-bBxqk,2187
+pyquoks/utils.py,sha256=uQd1GoMOBHzab6xfAVovgG89MoXKKDqhD3ep8bs1lc4,362
+pyquoks-1.2.1.dist-info/licenses/LICENSE,sha256=eEd8UIYxvKUY7vqrV1XTFo70_FQdiW6o1fznseCXRJs,1095
+pyquoks-1.2.1.dist-info/METADATA,sha256=ZreScvmW3tV8Dj7r6l2Be0sH7trgjr25GQKorGVnskA,1702
+pyquoks-1.2.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyquoks-1.2.1.dist-info/top_level.txt,sha256=4Eqn44TCCp-D8V6To92e8-KKr49ZGf0dCcsdRQmPkhc,8
+pyquoks-1.2.1.dist-info/RECORD,,
