@@ -1,0 +1,13 @@
+sshsig/__init__.py,sha256=cmPN2m77kbnWk2aZXUQ5l5xHjMzcRJXeIYcb7nA0WGU,193
+sshsig/_version.py,sha256=HzPz9rq3s1AiZXregKlqKaJJ2wGMtvH_a3V9la9CnpM,411
+sshsig/allowed_signers.py,sha256=kSGQML5aJatklrCptuE-rutJO0oAxaOAQ394FLJcD-0,6594
+sshsig/binary_io.py,sha256=fo_P2Q9-a7HVfizJFIPj_nXVBEYjK7G7kBlDUbMukxo,2882
+sshsig/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sshsig/ssh_public_key.py,sha256=UoOPE7HeTNT511-GBYQiorLaa5DBzsZvEeYEdtoEpYE,8631
+sshsig/sshsig.py,sha256=bIfWgih3233dEAMV979SH50xnBvmSa9p9V0V4AUsdZY,9546
+sshsig/unexceptional.py,sha256=50twPNHGDlhzlmOUbhweQ692QU2vSrrfwgyRrqPzjzM,1983
+sshsig-0.3.1.dist-info/LICENSE,sha256=b10wx_68AbZ0PDpfXDyctT5_tLzljcar7HuvjaQjsYM,1073
+sshsig-0.3.1.dist-info/METADATA,sha256=5lTaN3WmUn4tHk-HgQpGv4pjctNlJCt8vZ50NM6uPiU,2062
+sshsig-0.3.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sshsig-0.3.1.dist-info/top_level.txt,sha256=NcjJbV1qo6FOq6amiZLQyKahJcuX9ffTdGPdXd0AD9w,7
+sshsig-0.3.1.dist-info/RECORD,,
