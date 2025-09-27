@@ -1,0 +1,7 @@
+boto3_dataclass_applicationcostprofiler/__init__.py,sha256=cWvXdbTj6gBvOK5zq2zwUKRSehCHcA7ZfwbLWEFBq6k,140
+boto3_dataclass_applicationcostprofiler/caster.py,sha256=diXSz1Ln-2QbUROrN21f0bTsU1mmpb4pe5G5CCtP--s,1575
+boto3_dataclass_applicationcostprofiler/type_defs.py,sha256=j9BoFVoxzbnnBuZdZ_1P31J3L7L29ehK4NJxPOWkPXs,17509
+boto3_dataclass_applicationcostprofiler-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_applicationcostprofiler-1.40.0.dist-info/METADATA,sha256=F39aGCwq443qYkl0d8dEIYVt5qWioletjxuEFE4UZ6g,1753
+boto3_dataclass_applicationcostprofiler-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_applicationcostprofiler-1.40.0.dist-info/RECORD,,
