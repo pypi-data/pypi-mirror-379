@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+email_sender/__init__.py
+email_sender/config.py
+email_sender/exceptions.py
+email_sender/gmail_sender.py
+mailworks.egg-info/PKG-INFO
+mailworks.egg-info/SOURCES.txt
+mailworks.egg-info/dependency_links.txt
+mailworks.egg-info/requires.txt
+mailworks.egg-info/top_level.txt
