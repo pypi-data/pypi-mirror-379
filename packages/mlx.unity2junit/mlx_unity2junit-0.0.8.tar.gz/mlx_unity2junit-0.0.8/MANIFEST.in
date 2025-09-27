@@ -1,0 +1,19 @@
+include LICENSE
+include README.rst
+include LICENSE
+include SECURITY.md
+
+recursive-include mlx *.py
+recursive-exclude mlx *version__.py
+
+exclude .gitignore
+exclude .pylintrc
+exclude codecov.yml
+exclude requirements.txt
+exclude tox.ini
+
+recursive-exclude .github *
+recursive-exclude build *
+recursive-exclude doc *
+recursive-exclude tests *
+global-exclude *.py[co]
