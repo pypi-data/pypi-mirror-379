@@ -1,0 +1,2 @@
+[console_scripts]
+meemoo-sip-validator = meemoo_sip_validator._cli.validator:validator_cli
