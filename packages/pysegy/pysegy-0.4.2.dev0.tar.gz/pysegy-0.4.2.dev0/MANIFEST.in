@@ -1,0 +1,1 @@
+prune data\nprune docs\nprune notebooks\nprune benchmarks
