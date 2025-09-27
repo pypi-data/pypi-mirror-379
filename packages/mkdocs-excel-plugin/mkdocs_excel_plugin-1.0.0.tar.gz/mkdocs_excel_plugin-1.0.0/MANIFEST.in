@@ -1,0 +1,11 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include requirements-dev.txt
+recursive-include mkdocs_excel/assets *
+recursive-include tests *.py
+recursive-include docs *.md
+recursive-include examples *
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store

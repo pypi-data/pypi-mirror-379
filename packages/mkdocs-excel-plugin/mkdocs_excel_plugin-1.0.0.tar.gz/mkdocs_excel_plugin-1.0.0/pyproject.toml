@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mkdocs-excel-plugin"
+version = "1.0.0"
+description = "MkDocs plugin for rendering Excel files as HTML tables"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Wangjunyu", email = "wjyzc@foxmail.com"},
+]
+keywords = ["mkdocs", "excel", "plugin", "documentation", "tables"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Text Processing :: Markup :: HTML",
+]
+dependencies = [
+    "mkdocs>=1.1",
+    "openpyxl>=3.0.0",
+    "markupsafe>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "isort",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mkdocs-excel-plugin"
+Documentation = "https://github.com/yourusername/mkdocs-excel-plugin"
+Repository = "https://github.com/yourusername/mkdocs-excel-plugin.git"
+Issues = "https://github.com/yourusername/mkdocs-excel-plugin/issues"
+
+[project.entry-points."mkdocs.plugins"]
+excel = "mkdocs_excel.plugin:ExcelPlugin"
+
+[tool.setuptools_scm]
+write_to = "mkdocs_excel/_version.py"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
