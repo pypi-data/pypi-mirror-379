@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-personal-assistant = src.server:main
