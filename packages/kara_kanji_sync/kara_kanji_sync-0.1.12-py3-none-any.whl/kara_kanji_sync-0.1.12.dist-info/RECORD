@@ -1,0 +1,13 @@
+kara_kanji_sync/__init__.py,sha256=dg9QSrWvkljuZW92OjP-p_VjH_T-wCbxlY9Mbl1zbSY,87
+kara_kanji_sync/kanji_syncer.py,sha256=DzQzQDlGF-9aqBYtT3rotbygGUtson2xJ9QV_rQgO3Y,21219
+kara_kanji_sync/lyrics.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kara_kanji_sync/pronunciation.py,sha256=e3880In9dEibkCRbw7KGcFknkX1M2tZMcgT626VE8AA,6789
+kara_kanji_sync/tests.py,sha256=x1ky2kKGf-maX3llrTSFHczOtd-bKySkCKao3Xh6IGg,3672
+kara_kanji_sync/utils.py,sha256=0ypXk6BSrqVT0L6CgOsSN_3ze7GVEN6NrdTINixC0tI,728
+kara_kanji_sync/resources/JmdictFurigana.json,sha256=1eZMiwCT7PZl-DxLOPJQUiEB7IsK376kxStbrC19fsc,32793201
+kara_kanji_sync/resources/manual_additions.json,sha256=Rrk7o1QkR4UOGoIRGc3NQ_4Ap_GLQfVKxjt6hVqpAHY,114
+kara_kanji_sync/resources/template.ass,sha256=aBRuCi3hX3aOfJ6Sc1LIM91NygL6imAcIIdj1wF9uV4,2280
+kara_kanji_sync-0.1.12.dist-info/METADATA,sha256=xbIHoE-kXqLT8sd-yPS5Iq6nyf43fGDSufQAwLLdrLo,3947
+kara_kanji_sync-0.1.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+kara_kanji_sync-0.1.12.dist-info/licenses/LICENSE,sha256=tUQDWTkZSXgMkvOV5UYyu93_YK0SfHs1dK1Ws_Dy_5A,1063
+kara_kanji_sync-0.1.12.dist-info/RECORD,,
