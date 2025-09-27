@@ -1,0 +1,10 @@
+numpy
+pandas
+torch
+transformers
+typer
+antiberty
+ablang
+rjieba
+sentencepiece
+anndata
