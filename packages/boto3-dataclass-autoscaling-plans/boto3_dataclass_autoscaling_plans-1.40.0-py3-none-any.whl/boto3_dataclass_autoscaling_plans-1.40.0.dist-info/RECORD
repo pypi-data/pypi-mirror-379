@@ -1,0 +1,7 @@
+boto3_dataclass_autoscaling_plans/__init__.py,sha256=1Rl5KscoRVt4xzbLzD0IF-xoMzL1n9YEBzwW7i6AwTg,128
+boto3_dataclass_autoscaling_plans/caster.py,sha256=LHW8vAYtkLmLvus_CnPEnFcXnWaHWisZk4lqvJx1n5w,1215
+boto3_dataclass_autoscaling_plans/type_defs.py,sha256=FyWPOBl09ETnAPdQFRgSsFJmC23aPMcJ209qNXzFBUA,35963
+boto3_dataclass_autoscaling_plans-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_autoscaling_plans-1.40.0.dist-info/METADATA,sha256=u0c7KTOM5rA31jlRBXS9vqpb_zrF08pL_o9bDkhCWjk,1711
+boto3_dataclass_autoscaling_plans-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_autoscaling_plans-1.40.0.dist-info/RECORD,,
