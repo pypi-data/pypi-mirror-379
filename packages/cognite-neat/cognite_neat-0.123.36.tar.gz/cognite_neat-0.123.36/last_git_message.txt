@@ -1,0 +1,19 @@
+THIS-363 MD5 hashing of long constraint ids (#1295)
+
+# Description
+
+Fixes an issue where container constraint IDs longer than 43 characters
+caused errors.
+Now, such IDs are hashed using MD5, we keep 1/2 of the original id,
+remaining is replaced by MD5 hash.
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Fixed
+
+- Constraint IDs >=43 chars are now replace 1/2 original 1/2 MD5-hashed
