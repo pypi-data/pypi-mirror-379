@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: firstpracticalclass
+Version: 1.0
+Summary: This is just a package
+Author: Farhan
+Author-email: farhanqamar360@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
