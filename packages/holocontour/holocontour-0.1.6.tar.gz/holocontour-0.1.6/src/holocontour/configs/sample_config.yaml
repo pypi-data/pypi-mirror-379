@@ -1,0 +1,21 @@
+contour:
+  avg_thresh: 81
+  max_attempts: 10
+  increase_avg: 5
+  seed_thresh: 150
+  min_contour_area: 30
+  median: false
+  hist_match: true
+  ref_path: 'src\holocontour\data\001-4923.pgm(406,428)-Z43.50.png'
+  sharpening_alpha: 1
+  median_blur_ksize: 3
+  erode_ksize: 1
+  convex_hull: true
+  keep_init_mask: true
+  save_plot: true
+
+input_metadata:
+  lat: 54.0123
+  lon: 1.0123
+  date: 2024-06-01
+  ext: ".png"
