@@ -1,0 +1,7 @@
+boto3_dataclass_codestar_connections/__init__.py,sha256=eft_4Fbl3hQXKt1Ei8cpKI6aC-cUcGnupzOJCUvQqh8,134
+boto3_dataclass_codestar_connections/caster.py,sha256=dvuwIxs5YO9ahakvsPB5K0YXRm19N-rOfIgRw6tP2T8,4338
+boto3_dataclass_codestar_connections/type_defs.py,sha256=0AhoTxG0s0v8W-9d6SY8iWQKE7eMS6giZ1JejiHIwtU,61524
+boto3_dataclass_codestar_connections-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_codestar_connections-1.40.0.dist-info/METADATA,sha256=UT-UtUoZnLBRSF7MsyLHesbdOYe5rKB5bSaUWPsetoM,1732
+boto3_dataclass_codestar_connections-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_codestar_connections-1.40.0.dist-info/RECORD,,
