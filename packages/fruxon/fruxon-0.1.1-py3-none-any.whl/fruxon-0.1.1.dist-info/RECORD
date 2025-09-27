@@ -1,0 +1,12 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fruxon/__init__.py,sha256=xWU3APUH451TOsJzHx0HoAaGDPnHFVF53Z2hGVPocug,107
+fruxon/__main__.py,sha256=Qd-f8z2Q2vpiEP2x6PBFsJrpACWDVxFKQk820MhFmHo,59
+fruxon/cli.py,sha256=TmgTaNRx2UgS0v0pj2P2hrRJO7jsfXv-PLMJ_kUqa5g,474
+fruxon/fruxon.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+fruxon/utils.py,sha256=1RxiNQM7rpegUEPuFvOlbSGesR4gnWpXr82bZQCgELM,77
+fruxon-0.1.1.dist-info/licenses/LICENSE,sha256=LaBiHVBSFp1uzscXdTmBXphmtLZoC4gCKtumKFhKkBw,1069
+fruxon-0.1.1.dist-info/METADATA,sha256=EEKSWJSACixjvJ6ifTkYNbDOffj99AvTdRITcmosZEM,1472
+fruxon-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fruxon-0.1.1.dist-info/entry_points.txt,sha256=6gd8zIKLKN-OfQBylJXvPwOTzQTWzEc4rr4M5vBkO2s,42
+fruxon-0.1.1.dist-info/top_level.txt,sha256=aSPZR34-_DDkYLF40Pr9eRhcS2RRKFxd_9Tj3xTNEms,16
+fruxon-0.1.1.dist-info/RECORD,,
