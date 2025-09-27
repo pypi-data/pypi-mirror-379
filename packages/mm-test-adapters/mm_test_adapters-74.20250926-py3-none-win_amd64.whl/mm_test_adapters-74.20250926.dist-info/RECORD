@@ -1,0 +1,11 @@
+mm_test_adapters/__init__.py,sha256=lNHmuaDWgUJroagpr-LrVBgvIQdH48P9Y7bHgS4i0PE,477
+mm_test_adapters/version.py,sha256=FqGRi9bsril5lKvhs3ibJfGElML1D92a8eizhAD0jPk,120
+mm_test_adapters/libs/MMConfig_demo.cfg,sha256=Z7RYfDtpx0gP-9Mgn5EjsSoMbUADpZCZUjucU7NtjBE,6487
+mm_test_adapters/libs/mmgr_dal_DemoCamera.dll,sha256=HK6JL40e6DwEK7-s5aTrMcA0ZB2SMgLqyC9wFdAKn78,286208
+mm_test_adapters/libs/mmgr_dal_NotificationTester.dll,sha256=sVbKIYlxDtYjs5S89_XRgEEBrIwvkwbzGtPORjK1tpA,162816
+mm_test_adapters/libs/mmgr_dal_SequenceTester.dll,sha256=VJID56PHEgWI_lrRExjyJtRTnS0-mHf7f8Xgp9ajnIQ,363008
+mm_test_adapters/libs/mmgr_dal_Utilities.dll,sha256=uzj4cdRXJ1Nz_glK2peDua-9UD1MPzW-aCr6GEnMuZE,258560
+mm_test_adapters-74.20250926.dist-info/METADATA,sha256=X4QKCYjaOZ5URuRx9c8nV1aApNiha_z_3wBOCy7SI-M,2997
+mm_test_adapters-74.20250926.dist-info/WHEEL,sha256=BlXG8Qkq_mCTKpY-toCToAQAmGPE73xawTOhla8_4pE,98
+mm_test_adapters-74.20250926.dist-info/top_level.txt,sha256=6BD3ZIO5GEZjANHZd5lyY2hZa_bwKTzYC68qVu3oYuo,17
+mm_test_adapters-74.20250926.dist-info/RECORD,,
