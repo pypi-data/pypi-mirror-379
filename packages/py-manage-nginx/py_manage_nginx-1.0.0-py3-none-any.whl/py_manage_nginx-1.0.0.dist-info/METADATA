@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: py-manage-nginx
+Version: 1.0.0
+Summary: Use Python to manage Nginx on the machine.
+Author-email: Trương Hải Đăng <haidanghth910@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025-present Trương Hải Đăng <haidanghth910@gmail.com>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Documentation, https://github.com/TruongHaiDang/py-manage-nginx#readme
+Project-URL: Issues, https://github.com/TruongHaiDang/py-manage-nginx/issues
+Project-URL: Source, https://github.com/TruongHaiDang/py-manage-nginx
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# py-manage-nginx
+
+[![PyPI - Version](https://img.shields.io/pypi/v/py-manage-nginx.svg)](https://pypi.org/project/py-manage-nginx)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/py-manage-nginx.svg)](https://pypi.org/project/py-manage-nginx)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```bash
+pip install py-manage-nginx
+```
+
+## License
+
+`py-manage-nginx` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+## Run test
+
+```bash
+sudo $(which pytest) -s -v test.py::<function name>
+```
+
+### Example
+
+```bash
+sudo $(which pytest) -s -v test.py::test_create_hosting_no_cert
+```
+
+```bash
+sudo $(which pytest) -s -v test.py::test_create_hosting_with_cert
+```
+
+```bash
+sudo $(which pytest) -s -v test.py::test_remove_hosting
+```
+
+## Self-Signed SSL
+
+```bash
+sudo mkdir -p /etc/nginx/ssl/test.local
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+  -keyout /etc/nginx/ssl/test.local/privkey.pem \
+  -out /etc/nginx/ssl/test.local/fullchain.pem \
+  -subj "/CN=test.local"
+```
+
+```nginx
+server {
+    listen 443 ssl;
+    server_name test.local;
+
+    ssl_certificate /etc/nginx/ssl/test.local/fullchain.pem;
+    ssl_certificate_key /etc/nginx/ssl/test.local/privkey.pem;
+
+    root /var/www/test.local;
+}
+```
