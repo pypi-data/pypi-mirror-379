@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/coverage-universe/run.schema.json",
+  "type": "object",
+  "required": ["tests"],
+  "properties": {
+    "run_id": {"type": ["string", "number"]},
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["test_id", "inputs"],
+        "properties": {
+          "test_id": {"type": ["string", "number"]},
+          "outcome": {
+            "type": ["string"],
+            "enum": [
+              "passed", "pass", "ok", "success",
+              "failed", "fail", "error", "failure", "errored",
+              "skipped", "skip"
+            ]
+          },
+          "inputs": {"type": "object"}
+        }
+      }
+    }
+  }
+}
