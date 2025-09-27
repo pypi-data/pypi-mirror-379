@@ -1,0 +1,487 @@
+Metadata-Version: 2.4
+Name: trgenpy
+Version: 1.0.0
+Summary: ## A Python library for Trgen Device
+Home-page: https://gitlab.com/b00leant/trgenpy
+Author: Stefano Latini
+Author-email: Stefano Latini <stefanoelatini@hotmail.it>
+License: MIT License
+        
+        Copyright (c) 2025 Stefano Latini, CoSANLab
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+Project-URL: Homepage, https://gitlab.com/b00leant/trgenpy
+Project-URL: Repository, https://gitlab.com/b00leant/trgenpy
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# `trgenpy` 🐍🧠
+
+## A Python library for Trgen Device
+
+[![PyPI version](https://img.shields.io/pypi/v/trgenpy.svg)](https://pypi.org/project/trgenpy/)
+[![Python Version](https://img.shields.io/pypi/pyversions/trgenpy?style=flat&logo=python&logoColor=white)](https://pypi.org/project/trgenpy/)
+[![License](https://img.shields.io/pypi/l/trgenpy.svg)](https://pypi.org/project/trgenpy/)
+[![pipeline status](https://gitlab.com/b00leant/trgenpy/badges/main/pipeline.svg)](https://gitlab.com/b00leant/trgenpy/pipelines)
+[![coverage report](https://gitlab.com/b00leant/trgenpy/badges/main/coverage.svg)](https://gitlab.com/b00leant/trgenpy/commits/main)
+
+The full documentation is available [here](https://b00leant.gitlab.io/trgenpy/).
+
+---
+
+## Index
+
+- [📚 Getting started](#getting-started)
+  - [How to install](#how-to-install)
+  - [Architecture](#architecture)
+  - [Client](#client)
+  - [Single Trigger Send](#single-trigger-send)
+  - [Custom Trigger Send](#custom-trigger-send)
+  - [Sending Markers](#sending-markers)
+  - [TrgenPort](#trgenport)
+  - [TrgenPin List](#trgenpin-list)
+  - [Instruction Helpers ](#instruction-helpers)
+  - [Native Commands ](#native-commands)
+- [🧠 E-Prime integration](#e-prime-integration)
+- [🚀 How To build](#how-to-build)
+- [💪 Examples](./examples/)
+
+---
+
+## Getting started
+
+### How to install
+
+To install this package use is required `Python >= 3.9`
+
+```shell
+pip install trgenpy
+```
+
+### Architecture
+
+As explained in this [Mermaid](https://github.com/mermaid-js/mermaid) diagram, we see that we can "attach" n (0-25) TrgenPorts to the `TrgenClient`
+
+```mermaid
+graph TD
+    A[TrgenClient]
+    A --> Impl[TrgenImplementation]
+    A --> B0[TrgenPort 0]
+    A --> B1[TrgenPort 1]
+    A --> BN[TrgenPort n]
+    B0 --> P0[TrgenPin]
+    B1 --> P1[TrgenPin]
+    BN --> PN[TrgenPin]
+    B0 --> M0[Memory]
+    B1 --> M1[Memory]
+    BN --> MN[Memory]
+    M0 --> I0[Instruction 0]
+    M0 --> I1[Instruction 1]
+    M0 --> I2[Instruction n]
+    M1 --> J0[Instruction 0]
+    M1 --> J1[Instruction 1]
+    M1 --> J2[Instruction n]
+    MN --> K0[Instruction 0]
+    MN --> K1[Instruction 1]
+    MN --> K2[Instruction n]
+```
+
+```python
+client = TrgenClient() # now I can use this client for any purpose.
+```
+
+Each `TrgenPort`can be programmed with a bunch of instructions.
+We can use the function `set_instruction()` in many memory slots.
+Finally, we can use `set_trgen_memory` to a specific `TrgenPort` and execute the `TrgenClient` with `client.start()`
+
+#### NOTE
+Each TrgenPort can support a list of N instructions, where N = 2^MTML (Max TrgenPort Memory Length)
+
+#### the import ways
+
+```python
+# you can us it like this:
+import trgenpy as tp
+client = tp.TrgenClient()
+
+# or like this:
+from from trgenpy import TrgenClient,TrgenPin,active_for_us,unactive_for_us,end,wait_ne,wait_pe
+client = TrgenClient()
+```
+
+### Client
+
+The `TrgenClient` is the object that stores all the information about the socket connection between you and the Trgen.  
+You can instantiate the `TrgenClient` object like this:
+
+```python
+client = TrgenClient() 
+```
+
+Once the client object is created you can connect to Trgen...
+
+```python
+client.connect()
+```
+
+...or check device availability
+
+```python
+isAavailable = client.is_available() # true / false
+```
+
+### Single TrgenPort Send
+
+To send a defaul trigger signal (positive square with a logic state of 20µs) you can use the `sendTrigger()` function:
+
+```python
+client.sendTrigger()
+```
+
+### Custom Trigger Send
+
+If you want to send trigger to a custom list inside the pinout you can use the `sendCustomTrigger()` function:
+
+```python
+client.sendCustomTrigger([TrgenPin.NS0,TrgenPin.GPIO0])
+```
+
+### Sending Markers
+
+If you want to send a marker value to all (Neuroscan,Synamps and GPIO) ports you can use the `sendMarker()` function:
+
+```python
+client.sendMarker(13)
+```
+
+#### Pin Binary Mapping
+
+Both `sendMarker()` and `sendCustomTrigger()` use a binary mapping system where each pin corresponds to a specific bit position. This allows for efficient encoding of multiple pin states in a single value:
+
+| Pin | Binary Position | Decimal Value | Binary Representation |
+|-----|----------------|---------------|---------------------|
+| NS0 | Bit 0 (2^0) | 1 | 00000001 |
+| NS1 | Bit 1 (2^1) | 2 | 00000010 |
+| NS2 | Bit 2 (2^2) | 4 | 00000100 |
+| NS3 | Bit 3 (2^3) | 8 | 00001000 |
+| NS4 | Bit 4 (2^4) | 16 | 00010000 |
+| NS5 | Bit 5 (2^5) | 32 | 00100000 |
+| NS6 | Bit 6 (2^6) | 64 | 01000000 |
+| NS7 | Bit 7 (2^7) | 128 | 10000000 |
+
+This suggests the pins might be mapped differently than the sequential naming suggests. Please verify the complete mapping to ensure accuracy.
+
+**Examples based on your observation:**
+- `sendMarker(1)` → activates only NS0
+- `sendMarker(128)` → activates only NS6
+- `sendMarker(129)` → activates NS0 + NS6 (binary: 10000001)
+
+This same mapping applies to Synamps (SA0-SA7) and GPIO (GPIO0-GPIO7) pins when using their respective marker parameters.
+
+if you want invert the bit order, just flag the `LSB` argument (`True`by default)
+
+```python
+client.sendMarker(13,LSB=False)
+```
+
+if you want to send different markers simultaiously on different ports you can use the arguments:
+
+- `markerNS`
+- `markerSA`
+- `markerGPIO`
+
+like this:
+
+```python
+client.sendMarker(markerNS=8,markerSA=2,markerGPIO=15)
+```
+
+### TrgenPort
+
+The `TrgenPort` object defines a single trigger behaviours through its id.
+This is the list of supported [`TrgenPin`](#trgenpin-list) values for the Trgen:
+
+#### TrgenPin List
+
+- Neuroscan IDs
+    The Neuroscan pinout (only for used pins) goes from 0 to 7  
+    - `[NS0,NS1,NS2,NS3,NS4,NS5,NS6,NS7]`
+- Synamps IDs
+     The Neuroscan pinout (only for used pins) goes from 0 to 7  
+    - `[SA0,SA1,SA2,SA3,SA4,SA5,SA6,SA7]`
+- TMSI/O IDs
+    - `TMSO`
+    - `TMSI`
+- GPIO IDs
+    The GPIO pinout goes from 0 to 7  
+    - `[GPIO0,GPIO01,GPIO02,GPIO03,GPIO04,GPIO05,GPIO06,GPIO07]`
+
+You can instantiate the `TrgenPort` object with:
+
+```python
+neuroScan = TrgenClient.create_trgen(TrgenPin.NS3)
+```
+
+passing ad only argument the constant from `TrgenPin`
+
+Now you're ready to define the instruction set for `TrgenPort` with the `set_instruction()` function.
+Each trgenport has a `memory` property, a list that can contain 32 instructions, so this function is defined:
+
+```
+def set_instruction(self, index, instruction):
+# index: 0-32 value
+# instruction: instruction_code
+```
+
+Each instruction code can be encoded using the [Instruction Helpers](#instruction-helpers)
+
+```python
+# call the function directly on the same TrgenPort object
+neuroScan.set_instruction(0, active_for_us(5))
+neuroScan.set_instruction(1, unactive_for_us(3))
+# ...
+```
+
+### Instruction Helpers
+
+The supported instruction set for TrgenPort is:
+
+| Instruction | 1° Param | 2° Param | Description |
+| ----------- | ----------- | ------------ | ----------- |
+| `unactive_for_us(us)` | µ seconds duration | | Set the unactivation time for µ seconds |
+| `active_for_us(us)` | µ seconds duration | | Set the activation time for µ seconds |
+| `wait_pe(tr)` | TrgenPort ID | | Wait the positive edge for a specific [TrgenPort ID](#trigger-id-list) |
+| `wait_ne(tr)` | TrgenPort ID | | Wait the negative edge for a specific [TrgenPort ID](#trigger-id-list) |
+| `repeat(addr,time)` | Instruction address | Time of repeat | Set the activation time for µ seconds |
+| `end()` | | | End the behaviour |
+| `not_admissible()` | | | Empty instruction, it has to be placed after the `end()`|
+
+You can access to the `mtml` value by
+
+```python
+# Add this in try block to manage errors
+try:
+    impl = client.get_implementation()
+    mtml = impml.mtml
+except InvalidAckError as e:
+    print(f"⚠️ ACK sbagliato: {e}")
+except AckFormatError as e:
+    print(f"⚠️ ACK malformato: {e}")
+except TimeoutError as e:
+    print(f"⏱️ Timeout: {e}")
+```
+
+---
+
+### Native Commands 
+
+IIT's Trgen can receive some commands, the full instruction set includes:
+
+- Program TrgenPort
+- Start TrgenPort
+- Set GPIO I/O Direction
+- Request Implementation parameters
+- Request TrgenPort Status
+- Set the TrgenPort level
+- Get GPIO I/O Direction
+- Get the TrgenPort Level
+- Stop the TrgenPort
+
+### Program TrgenPort
+
+You can program a trigger memory in two ways:
+
+1. **Default trigger** using `program_default_trigger()`  
+   This sets a predefined impulse of duration (default 20µs).
+
+```python
+tr = client.create_trgen(TrgenPin.GPIO0)
+client.program_default_trigger(tr, us=50)  # impulse of 50µs
+```
+
+2. **Advanced programming** by manually setting instructions with `set_instruction()`
+
+```python
+tr = client.create_trgen(TrgenPin.NS1)
+tr.set_instruction(0, active_for_us(10))
+tr.set_instruction(1, unactive_for_us(5))
+tr.set_instruction(2, repeat(0, 3))
+tr.set_instruction(3, end())
+client.set_trgen_memory(tr)
+```
+
+### Start Trigger
+
+After programming triggers, you can start them with:
+
+```python
+client.start()
+```
+
+This command makes the Trgen execute all programmed triggers.  
+Remember: you must have previously sent at least one trigger memory.
+
+### Set GPIO I/O Direction
+
+#### the "byte" way
+
+```python
+# Set GPIO directions (example: GPIO0-3 as outputs)
+client.set_gpio_direction(0b00001111)
+```
+
+#### helper way
+
+
+You can use this helper to build the complete or partial pinout map to set.
+
+```python
+# we choose to set just GPIO0 -> High and the GPIO1 -> Low
+mask = DirectionConfig().out(TrgenPin.GPIO0).in(TrgenPin.GPIO1).build()
+# once you have it, you can use it as argument in the set_level function
+client.set_gpio_direction(mask)
+```
+
+
+### Request Implementation
+
+You can get information about the hardware configuration (number of channels, memory length, etc.) with:
+
+```python
+impl = client.get_implementation()
+print(impl.memory_length)  # max number of instructions per trigger
+```
+
+### Request TrgenPort Status
+
+To check current status of triggers (active/inactive state):
+
+```python
+status = client.get_status()
+print(status)
+```
+
+This returns an integer bitmask where each bit represents the state of a trigger pin.
+
+### Set the Trigger level
+
+#### the "byte" way
+You can change polarity (active-high or active-low) of all triggers:
+
+```python
+# Set all triggers active-high
+client.set_level(0xFF)
+
+# Set only GPIO0 active-high, rest active-low
+client.set_level(0b00000001)
+```
+
+#### helper way
+
+You can use this helper to build the complete or partial pinout map to set.
+
+```python
+# we choose to set just GPIO0 -> High and the GPIO1 -> Low
+mask = LevelConfig().high(TrgenPin.GPIO0, TrgenPin.TMSO).low(TrgenPin.GPIO1).build()
+# once you have it, you can use it as argument in the set_level function
+client.set_level(mask)
+```
+
+### Get the GPIO I/O Direction
+
+To retrieve the current GPIO configuration:
+
+```python
+gpio_state = client.get_gpio_direction()
+print(bin(gpio_state))
+```
+
+### Get the Trigger Level
+
+To check trigger polarity:
+
+```python
+level = client.get_level()
+print(bin(level))
+```
+
+---
+
+## E-Prime integration
+
+trgenpy offers a wrapper version to integrate its behaviour inside the [E-Prime](https://pstnet.com/products/e-prime/) software via Python COM-visible.
+
+Install pywin32
+
+```bash
+pip install pywin32
+```
+
+Register the COM wrapper
+
+```
+python trgen_com.py --register
+```
+
+So that you can use in E-Prime like this
+
+```vb
+Dim tb
+Set tb = CreateObject("Trgen.COM")
+
+If tb.IsAvailable() Then
+    tb.Connect
+    tb.SendTrigger
+    tb.SendMarker 13
+Else
+    MsgBox "Trgen not available!"
+End If
+```
+
+### E-Prime example
+
+See [here](./exmaples/) for the complete examples
+---
+
+## How to build
+
+trgenpy uses [setuptools](https://pypi.org/project/setuptools/) to have a much clear and minimal build process.
+
+### Step 1 - install twine
+`pip install --upgrade build twine`
+
+### Step 2 - build
+`python -m build`
+
+### Step 3 - use it anywhere!
+In the same directory (pwd) of this project, run:
+`pip install .`
+
+### Deploy
+`twine upload --repository testpypi dist/*`
