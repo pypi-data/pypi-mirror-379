@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+./nfo_art/__init__.py
+./nfo_art/cli.py
+./nfo_art/core.py
+nfo_art/__init__.py
+nfo_art/cli.py
+nfo_art/core.py
+nfo_maker.egg-info/PKG-INFO
+nfo_maker.egg-info/SOURCES.txt
+nfo_maker.egg-info/dependency_links.txt
+nfo_maker.egg-info/entry_points.txt
+nfo_maker.egg-info/requires.txt
+nfo_maker.egg-info/top_level.txt
