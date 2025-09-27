@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: strala-core-infrastructure
+Version: 0.1.0
+Summary: Shared Python package containing common utilities, schemas, and services for Strala's claims platform
+Project-URL: Homepage, https://github.com/strala/core-infrastructure
+Project-URL: Repository, https://github.com/strala/core-infrastructure
+Project-URL: Issues, https://github.com/strala/core-infrastructure/issues
+Author-email: Strala <dev@strala.com>
+License: MIT
+License-File: LICENSE
+Keywords: claims,insurance,platform,utilities
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dateutil>=2.8.0
+Provides-Extra: dev
+Requires-Dist: pre-commit>=3.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.3.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Strala Core Infrastructure
+
+A shared Python package containing common utilities, schemas, and services used across Strala's claims platform applications.
+
+## Installation
+
+### From PyPI (when published)
+```bash
+pip install strala-core-infrastructure
+```
+
+### From source
+```bash
+git clone https://github.com/strala/core-infrastructure.git
+cd core-infrastructure
+pip install -e .
+```
+
+## Usage
+
+```python
+from strala_core import schemas, utils, services
+
+# Use the base model
+from strala_core.schemas import BaseModel
+
+class MyModel(BaseModel):
+    name: str
+    value: int
+```
+
+## Development
+
+### Building the package
+```bash
+./scripts/build.sh
+```
+
+### Publishing to PyPI
+```bash
+./scripts/publish.sh
+```
+
+## Package Structure
+
+- `strala_core.schemas` - Common data models and schemas (api, pubsub)
+- `strala_core.utils` - Utility functions and helpers
+- `strala_core.services` - Service interfaces and base classes
+
+## License
+
+MIT License - see LICENSE file for details.
