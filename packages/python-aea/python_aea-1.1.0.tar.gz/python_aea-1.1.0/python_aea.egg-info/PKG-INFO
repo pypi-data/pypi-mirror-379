@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: python-aea
+Version: 1.1.0
+Summary: Apple Encrypted Archive tools
+Home-page: https://github.com/kinnay/AEA
+Author: Yannik Marchand
+Author-email: ymarchand@me.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: cryptography
+Requires-Dist: lz4
+Requires-Dist: pyliblzfse
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+This package implements the Apple Encrypted Archive format.
