@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: dcnr-scheduler
+Version: 0.1.0
+Summary: Scheduling python functions for execution.
+Project-URL: Homepage, https://dcnr-utilities.com
+Author-email: Rocky Wilson <rocky.wilson@gopal.home.sk>
+License: MIT
+Keywords: python,scheduler
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# hello-pkg-yourname
+
+Minimal example package. After installation:
+
+```bash
+python -c "import hello_pkg as h; print(h.greet('Alice'))"
+# or from shell if installed:
+hello Alice
