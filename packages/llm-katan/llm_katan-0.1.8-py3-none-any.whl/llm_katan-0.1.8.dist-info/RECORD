@@ -1,0 +1,10 @@
+llm_katan/__init__.py,sha256=bwjVGqEfmYiOXHnEWrSkEdA8ApMsQ7Zdhk9vWwwkVEg,504
+llm_katan/cli.py,sha256=6wnHoGmOGRTdzgBaTzDNaNLijV-6H3lv3Chq4Ve7-bo,4952
+llm_katan/config.py,sha256=R3PBp0rheCqVCn3Xa4NmgFOk_DxewOsU0FgLzJ3v6CA,1613
+llm_katan/model.py,sha256=audT1NmqbNV1Hh54xz65sIRCF1qXdZfqkk3Dm9vdMKg,12947
+llm_katan/server.py,sha256=c0A2ox0VF3LvALfd3j2KKFSm_TiLITYplDMvEwxth68,8760
+llm_katan-0.1.8.dist-info/METADATA,sha256=exJpc07KPuQo6tzu-TflAPs2LCFhorxj3jrfOAEIhIM,7979
+llm_katan-0.1.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+llm_katan-0.1.8.dist-info/entry_points.txt,sha256=O9Ne3Z4-9B2GA6hZYoOfdrPfFLlHi86wa5f7g5TDZzY,49
+llm_katan-0.1.8.dist-info/top_level.txt,sha256=plwYSrMVRELciKlerEtTIkWxTTSG6RxM5i8tKrVtT5A,10
+llm_katan-0.1.8.dist-info/RECORD,,
