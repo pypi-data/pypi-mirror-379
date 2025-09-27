@@ -1,0 +1,7 @@
+boto3_dataclass_arc_zonal_shift/__init__.py,sha256=0mhyTvVB4Q21R-wtAFx0emOU2hCc7vRztLo3WsZ03eQ,124
+boto3_dataclass_arc_zonal_shift/caster.py,sha256=WoxTpa62mh1cfDUtEu_LpK6gWNXd4f8b0NcvB3JGjG0,3583
+boto3_dataclass_arc_zonal_shift/type_defs.py,sha256=XdzLH_w9HQASKC7SjH-lqf83k9mjgw7eWQBEMp8IBFQ,40501
+boto3_dataclass_arc_zonal_shift-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_arc_zonal_shift-1.40.0.dist-info/METADATA,sha256=MqYD09lVQ_Rs98Xzv2v_V7s_ROOr1OQ9xs02l38PkcE,1697
+boto3_dataclass_arc_zonal_shift-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_arc_zonal_shift-1.40.0.dist-info/RECORD,,
