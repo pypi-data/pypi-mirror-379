@@ -1,0 +1,2 @@
+[console_scripts]
+pyreq-lite = pyreq_lite.cli:main
