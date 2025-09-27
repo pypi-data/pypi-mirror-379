@@ -1,0 +1,19 @@
+=========
+Changelog
+=========
+
+
+0.2 (2025-09-26)
+================
+
+- Add logging settings
+- Add on_startup, on_shutdown, on_connect, on_retry handlers
+
+
+0.1 (2025-08-06)
+================
+
+- SSE connection with restore connection on errors
+- Application protocol handling
+- Base dataclasses
+- Tests, CICD configuration
