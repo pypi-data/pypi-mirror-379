@@ -1,0 +1,6 @@
+argparse>=1.4
+gevent
+jsonobject
+PyYAML
+requests
+dimagi-memoized
