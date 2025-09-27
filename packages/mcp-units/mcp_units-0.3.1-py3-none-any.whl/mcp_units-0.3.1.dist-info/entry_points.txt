@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-units = mcp_units.server:main
