@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: polars-runtime-compat
+Version: 0.0.0
+Requires-Python: >=3.8
+Dynamic: requires-python
