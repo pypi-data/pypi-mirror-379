@@ -1,0 +1,8 @@
+somepackage>=1.1.0
+ipaddress==1.0.23
+socket
+trio-websocket==0.12.2
+colorama==0.4.2
+requests==2.32.5
+threading
+websocket-client==1.8.0

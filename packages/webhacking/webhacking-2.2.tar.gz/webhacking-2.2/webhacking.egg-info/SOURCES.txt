@@ -1,0 +1,13 @@
+LICENCE
+README.md
+setup.py
+mypackage/__init__.py
+mypackage/packet search/__init__.py
+mypackage/packet search/search.py
+mypackage/packet webatack/__init__.py
+mypackage/packet webatack/webattack.py
+webhacking.egg-info/PKG-INFO
+webhacking.egg-info/SOURCES.txt
+webhacking.egg-info/dependency_links.txt
+webhacking.egg-info/requires.txt
+webhacking.egg-info/top_level.txt
