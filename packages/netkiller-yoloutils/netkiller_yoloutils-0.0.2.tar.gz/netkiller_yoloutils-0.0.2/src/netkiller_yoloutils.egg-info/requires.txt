@@ -1,0 +1,6 @@
+pillow
+opencv-python
+pyyaml
+tqdm
+texttable
+ultralytics
