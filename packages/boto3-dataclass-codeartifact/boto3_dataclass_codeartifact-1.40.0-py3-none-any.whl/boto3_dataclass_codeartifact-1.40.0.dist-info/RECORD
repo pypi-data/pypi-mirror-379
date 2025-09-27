@@ -1,0 +1,7 @@
+boto3_dataclass_codeartifact/__init__.py,sha256=pAlWHZnRHLnwcGXVZVRymAtglzT5fGztAECz5lDESxM,118
+boto3_dataclass_codeartifact/caster.py,sha256=9jw1UY1vMhOs2J5G0DpICqV-sRrAFr3nyW3ruzeQCvY,10207
+boto3_dataclass_codeartifact/type_defs.py,sha256=sXgzgAwpTBfyNDfDAumYQ5gE4BRo3OzPne6vWk4d7nE,139125
+boto3_dataclass_codeartifact-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_codeartifact-1.40.0.dist-info/METADATA,sha256=wWr7NRHnVdmzR2YBjin68t02Pwfo1WIKoP5QLQF1pqQ,1676
+boto3_dataclass_codeartifact-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_codeartifact-1.40.0.dist-info/RECORD,,
