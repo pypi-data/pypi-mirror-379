@@ -1,0 +1,17 @@
+a003558/__init__.py,sha256=jWUzNscmeYnaHpGZSYvN0b79I7DYWum5n40cEtBvLAM,280
+a003558/brain.py,sha256=Q_KVtSgtgronnt8rUt7WBTt-oJNCcUOIxyX-mL1p-Yg,616
+a003558/core.py,sha256=wDQuaNAl_2N_ItMWMsDcfWBynqK9TZHTAwWfDU8AN4I,256
+a003558/cosmos.py,sha256=WavCNdbEM47kKR43Qit4ODO6yliiNjVFmmr9ysGk16E,689
+a003558/coupling.py,sha256=baLbsHVUGRJXZT75MkU1L1kpYNlr9Lcs18Ng3DXrdLE,527
+a003558/export_blender.py,sha256=oiBeEhHTA2MIPO1VyIQ8newLw1IefPLPeqNpd1Lj7P0,3556
+a003558/horizons.py,sha256=TJ3I-66Ifj4692z-G_v4PeKg7ferscslHe8KALSZ6Ok,521
+a003558/number_theory.py,sha256=p2PPzIUWYPfO65-k3upTKB_eAmw19CutWt4DUt3_WxE,2169
+a003558/octahedral_matrix.py,sha256=RvKLT0PAIXUAEAnMBoCfpaYR90-aO52ZVV4T07jftFw,828
+a003558/octonions.py,sha256=cOwK5XmgUrprMz7jGo_InhP_oiGnXGBCdCimC1g1dl4,3277
+a003558/viz.py,sha256=znRECZXZ8dy9Mqsy9b7NsICp7oB-_ERZZB8w_Gd0zYg,842
+a003558/viz_octa.py,sha256=JRkafSQt1X6Glr6hRhoH_62RPGrP43PSV2V9aqEgNkE,1785
+a003558-0.1.9.dist-info/licenses/LICENSE,sha256=6QtyT0h_JYa6RShOkjFW-IHshdHLKibYDtOINOiy_Bo,1068
+a003558-0.1.9.dist-info/METADATA,sha256=gB2mii6msGIlvmIksEDFEuPcSK7fns5nGUPjQTKMrhk,2582
+a003558-0.1.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+a003558-0.1.9.dist-info/top_level.txt,sha256=ABjudkfpISOv5STkiuJ_UyaDOL-ALZ3Chh-uIGem9aE,8
+a003558-0.1.9.dist-info/RECORD,,
