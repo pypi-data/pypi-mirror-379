@@ -1,0 +1,20 @@
+jax
+jaxtyping
+
+[:python_version < "3.11"]
+typing-extensions
+
+[recommended]
+s2fft
+
+[test]
+healpy
+matplotlib
+pandas
+pytest
+pytest-cov
+pytest-mock
+setuptools_scm
+typer
+PyYAML
+chex
