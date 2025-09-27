@@ -1,0 +1,7 @@
+boto3_dataclass_cloudhsmv2/__init__.py,sha256=5TD61cYKqOz1P2ucPcl9kgYcUJt_fXcK5_cXDZMPZKE,114
+boto3_dataclass_cloudhsmv2/caster.py,sha256=C4wnrbrIgY8kccywf2uY9CtrOxzVy2t3OxvcxEWEEQw,3337
+boto3_dataclass_cloudhsmv2/type_defs.py,sha256=bIDB5s_kWYrI21Ndny0r2jUFVxdrR01CNEQRjBQ1gv0,43995
+boto3_dataclass_cloudhsmv2-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_cloudhsmv2-1.40.0.dist-info/METADATA,sha256=D33ewDfSx09BTckmuW6KAr1q8nsPa1RLUpQE5mpQQXE,1662
+boto3_dataclass_cloudhsmv2-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_cloudhsmv2-1.40.0.dist-info/RECORD,,
