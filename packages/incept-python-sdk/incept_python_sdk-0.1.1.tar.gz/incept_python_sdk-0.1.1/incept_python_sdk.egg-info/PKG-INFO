@@ -1,0 +1,327 @@
+Metadata-Version: 2.4
+Name: incept-python-sdk
+Version: 0.1.1
+Summary: Python SDK for Incept Question Generation API
+Home-page: https://github.com/incept/incept-python-sdk
+Author: Incept
+Author-email: Incept <support@inceptapi.com>
+License: MIT
+Project-URL: Homepage, https://github.com/incept/incept-python-sdk
+Project-URL: Documentation, https://docs.inceptapi.com
+Project-URL: Repository, https://github.com/incept/incept-python-sdk
+Project-URL: Bug Tracker, https://github.com/incept/incept-python-sdk/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+Requires-Dist: pydantic>=1.8.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: requests-mock>=1.9.0; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.9; extra == "dev"
+Requires-Dist: mypy>=0.910; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Incept Python SDK
+
+A Python client library for the Incept Question Generation API.
+
+## Installation
+
+```bash
+pip install incept-python-sdk
+```
+
+## Quick Start
+
+```python
+from incept import InceptClient
+
+# Initialize the client
+client = InceptClient(api_key="your-api-key-here")
+
+# Generate questions
+response = client.generate_questions(
+    grade=5,
+    instructions="Generate questions about fractions",
+    count=3,
+    difficulty="medium"
+)
+
+print(f"Generated {len(response.data)} questions")
+for question in response.data:
+    print(f"Q: {question.question}")
+    print(f"A: {question.answer}")
+```
+
+## Configuration
+
+### Initialize Client
+
+```python
+from incept import InceptClient
+
+# Basic configuration
+client = InceptClient(api_key="your-api-key")
+
+# Custom endpoint and timeout
+client = InceptClient(
+    api_key="your-api-key",
+    base_url="https://your-custom-endpoint.com",
+    timeout=60  # seconds
+)
+```
+
+## API Methods
+
+### Generate Questions
+
+Generate educational questions with comprehensive options:
+
+```python
+response = client.generate_questions(
+    grade=7,
+    instructions="Create algebra problems",
+    count=5,
+    question_type="mcq",
+    language="english",
+    difficulty="medium",
+    subject="mathematics",
+    model="openai",
+    translate=False,
+    evaluate=True,
+    skill={
+        "id": "algebra_basics",
+        "title": "Linear Equations",
+        "unit_name": "Algebra",
+        "lesson_title": "Solving Equations"
+    },
+    topic="Linear Equations",
+    student_level="average"
+)
+
+# Access generated questions
+for question in response.data:
+    print(f"Question: {question.question}")
+    print(f"Answer: {question.answer}")
+    print(f"Difficulty: {question.difficulty}")
+    if question.options:
+        print(f"Options: {question.options}")
+    if question.detailed_explanation:
+        for step in question.detailed_explanation.steps:
+            print(f"Step: {step.title} - {step.content}")
+
+# Check evaluation results (if evaluate=True)
+if response.evaluation:
+    print(f"Overall Score: {response.evaluation.overall_score}")
+    print(f"Recommendations: {response.evaluation.recommendations}")
+```
+
+### Completions
+
+Get text completions:
+
+```python
+response = client.completions(
+    messages=[
+        {"role": "system", "content": "You are a helpful math tutor"},
+        {"role": "user", "content": "Explain the Pythagorean theorem"}
+    ],
+    provider="openai",
+    max_tokens=1000,
+    language="english"
+)
+
+print(response.response)
+```
+
+### Wolfram Alpha Integration
+
+Solve math problems using Wolfram Alpha:
+
+```python
+response = client.wolfram_solve(
+    question_text="What is the derivative of x^2 + 3x + 2?",
+    subject="calculus",
+    app_id="your-wolfram-app-id"
+)
+
+print(f"Solution: {response.solution}")
+if response.steps:
+    for step in response.steps:
+        print(f"Step: {step}")
+```
+
+### Health Check
+
+Check API status:
+
+```python
+health = client.health_check()
+print(f"Status: {health['status']}")
+```
+
+### API Documentation
+
+Get API documentation:
+
+```python
+docs = client.get_api_documentation()
+print(docs)
+```
+
+## Request Parameters
+
+### GenerateQuestionsRequest
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `grade` | int | required | Grade level (0-12) |
+| `instructions` | str | required | Instructions for question generation |
+| `count` | int | 5 | Number of questions (1-100) |
+| `question_type` | str | "mcq" | Question type (currently only "mcq") |
+| `language` | str | "english" | Content language |
+| `difficulty` | str | "mixed" | Difficulty level: "easy", "medium", "hard", "expert", "mixed" |
+| `subject` | str | None | Subject override |
+| `model` | str | "openai" | AI model: "openai", "falcon" |
+| `translate` | bool | False | Enable translation |
+| `evaluate` | bool | False | Enable quality evaluation |
+| `skill` | dict | None | Skill context information |
+| `topic` | str | None | Topic specification |
+| `subtopic` | str | None | Subtopic specification |
+| `unit` | str | None | Unit specification |
+| `student_level` | str | None | Student level: "struggling", "average", "advanced" |
+| `previous_mistakes` | list | None | Previous student mistakes |
+
+## Response Models
+
+### GeneratedQuestion
+
+```python
+{
+    "type": "mcq",
+    "question": "What is 2 + 2?",
+    "answer": "A",
+    "difficulty": "easy",
+    "explanation": "Addition of two numbers...",
+    "options": ["4", "3", "5", "6"],
+    "detailed_explanation": {
+        "steps": [...],
+        "personalized_academic_insights": [...]
+    },
+    "voiceover_script": {...},
+    "image_url": "https://...",
+    "di_formats_used": [...]
+}
+```
+
+### EvaluationInfo
+
+```python
+{
+    "overall_score": 0.85,
+    "scores": {
+        "clarity": 0.9,
+        "difficulty": 0.8,
+        "relevance": 0.9
+    },
+    "recommendations": [
+        "Consider adding more visual aids",
+        "Simplify the language for grade level"
+    ],
+    "report": "Overall excellent question quality..."
+}
+```
+
+## Error Handling
+
+The SDK provides specific exception types for different error scenarios:
+
+```python
+from incept import InceptClient
+from incept.exceptions import (
+    AuthenticationError,
+    ValidationError,
+    RateLimitError,
+    ServerError,
+    NetworkError,
+    InceptAPIError
+)
+
+client = InceptClient(api_key="your-api-key")
+
+try:
+    response = client.generate_questions(
+        grade=5,
+        instructions="Generate questions about fractions",
+        count=3
+    )
+except AuthenticationError:
+    print("Invalid API key")
+except ValidationError as e:
+    print(f"Validation error: {e}")
+except RateLimitError:
+    print("Rate limit exceeded, please wait")
+except ServerError as e:
+    print(f"Server error: {e}")
+except NetworkError as e:
+    print(f"Network error: {e}")
+except InceptAPIError as e:
+    print(f"API error: {e}")
+```
+
+## Development
+
+### Install from source
+
+```bash
+git clone https://github.com/incept/incept-python-sdk
+cd incept-python-sdk
+pip install -e .
+```
+
+### Install development dependencies
+
+```bash
+pip install -e ".[dev]"
+```
+
+### Run tests
+
+```bash
+pytest
+```
+
+### Format code
+
+```bash
+black incept/
+```
+
+### Lint code
+
+```bash
+flake8 incept/
+```
+
+## License
+
+MIT License
+
+## Support
+
+For support, please contact support@inceptapi.com or visit our documentation at https://docs.inceptapi.com.
