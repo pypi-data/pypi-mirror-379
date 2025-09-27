@@ -1,0 +1,3 @@
+[console_scripts]
+scine_autocas = scine_autocas.__main__:main
+scine_autocas_consistent_active_space = scine_autocas.workflows.consistent_active_space.protocol:run_from_command_line
