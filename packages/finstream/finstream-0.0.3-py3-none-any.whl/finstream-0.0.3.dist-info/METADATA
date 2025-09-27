@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: finstream
+Version: 0.0.3
+Summary: finstream Python SDK
+Project-URL: Homepage, https://example.com/finstream
+Author-email: finstream <support@finstream.dev>
+License: See root LICENSE.
+        
+        
+License-File: LICENSE
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# finstream Python SDK
+
+Install (editable):
+
+```bash
+uv venv && uv pip install -e .
+```
+
+Usage:
+
+```python
+from finstream import version
+print(version())
+```
+
+
