@@ -1,0 +1,491 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" width="1200" height="618" onload="init(evt)" viewBox="0 0 1200 618" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:fg="http://github.com/jonhoo/inferno"><!--Flame graph stack visualization. See https://github.com/brendangregg/FlameGraph for latest version, and http://www.brendangregg.com/flamegraphs.html for examples.--><!--NOTES: --><defs><linearGradient id="background" y1="0" y2="1" x1="0" x2="0"><stop stop-color="#eeeeee" offset="5%"/><stop stop-color="#eeeeb0" offset="95%"/></linearGradient></defs><style type="text/css">
+text { font-family:monospace; font-size:12px }
+#title { text-anchor:middle; font-size:17px; }
+#matched { text-anchor:end; }
+#search { text-anchor:end; opacity:0.1; cursor:pointer; }
+#search:hover, #search.show { opacity:1; }
+#subtitle { text-anchor:middle; font-color:rgb(160,160,160); }
+#unzoom { cursor:pointer; }
+#frames > *:hover { stroke:black; stroke-width:0.5; cursor:pointer; }
+.hide { display:none; }
+.parent { opacity:0.5; }
+</style><script type="text/ecmascript"><![CDATA[
+        var nametype = 'Function:';
+        var fontsize = 12;
+        var fontwidth = 0.59;
+        var xpad = 10;
+        var inverted = true;
+        var searchcolor = 'rgb(230,0,230)';
+        var fluiddrawing = true;
+        var truncate_text_right = false;
+    ]]><![CDATA["use strict";
+var details, searchbtn, unzoombtn, matchedtxt, svg, searching, frames, known_font_width;
+function init(evt) {
+    details = document.getElementById("details").firstChild;
+    searchbtn = document.getElementById("search");
+    unzoombtn = document.getElementById("unzoom");
+    matchedtxt = document.getElementById("matched");
+    svg = document.getElementsByTagName("svg")[0];
+    frames = document.getElementById("frames");
+    known_font_width = get_monospace_width(frames);
+    total_samples = parseInt(frames.attributes.total_samples.value);
+    searching = 0;
+
+    // Use GET parameters to restore a flamegraph's state.
+    var restore_state = function() {
+        var params = get_params();
+        if (params.x && params.y)
+            zoom(find_group(document.querySelector('[*|x="' + params.x + '"][y="' + params.y + '"]')));
+        if (params.s)
+            search(params.s);
+    };
+
+    if (fluiddrawing) {
+        // Make width dynamic so the SVG fits its parent's width.
+        svg.removeAttribute("width");
+        // Edge requires us to have a viewBox that gets updated with size changes.
+        var isEdge = /Edge\/\d./i.test(navigator.userAgent);
+        if (!isEdge) {
+            svg.removeAttribute("viewBox");
+        }
+        var update_for_width_change = function() {
+            if (isEdge) {
+                svg.attributes.viewBox.value = "0 0 " + svg.width.baseVal.value + " " + svg.height.baseVal.value;
+            }
+
+            // Keep consistent padding on left and right of frames container.
+            frames.attributes.width.value = svg.width.baseVal.value - xpad * 2;
+
+            // Text truncation needs to be adjusted for the current width.
+            update_text_for_elements(frames.children);
+
+            // Keep search elements at a fixed distance from right edge.
+            var svgWidth = svg.width.baseVal.value;
+            searchbtn.attributes.x.value = svgWidth - xpad;
+            matchedtxt.attributes.x.value = svgWidth - xpad;
+        };
+        window.addEventListener('resize', function() {
+            update_for_width_change();
+        });
+        // This needs to be done asynchronously for Safari to work.
+        setTimeout(function() {
+            unzoom();
+            update_for_width_change();
+            restore_state();
+        }, 0);
+    } else {
+        restore_state();
+    }
+}
+// event listeners
+window.addEventListener("click", function(e) {
+    var target = find_group(e.target);
+    if (target) {
+        if (target.nodeName == "a") {
+            if (e.ctrlKey === false) return;
+            e.preventDefault();
+        }
+        if (target.classList.contains("parent")) unzoom();
+        zoom(target);
+
+        // set parameters for zoom state
+        var el = target.querySelector("rect");
+        if (el && el.attributes && el.attributes.y && el.attributes["fg:x"]) {
+            var params = get_params()
+            params.x = el.attributes["fg:x"].value;
+            params.y = el.attributes.y.value;
+            history.replaceState(null, null, parse_params(params));
+        }
+    }
+    else if (e.target.id == "unzoom") {
+        unzoom();
+
+        // remove zoom state
+        var params = get_params();
+        if (params.x) delete params.x;
+        if (params.y) delete params.y;
+        history.replaceState(null, null, parse_params(params));
+    }
+    else if (e.target.id == "search") search_prompt();
+}, false)
+// mouse-over for info
+// show
+window.addEventListener("mouseover", function(e) {
+    var target = find_group(e.target);
+    if (target) details.nodeValue = nametype + " " + g_to_text(target);
+}, false)
+// clear
+window.addEventListener("mouseout", function(e) {
+    var target = find_group(e.target);
+    if (target) details.nodeValue = ' ';
+}, false)
+// ctrl-F for search
+window.addEventListener("keydown",function (e) {
+    if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
+        e.preventDefault();
+        search_prompt();
+    }
+}, false)
+// functions
+function get_params() {
+    var params = {};
+    var paramsarr = window.location.search.substr(1).split('&');
+    for (var i = 0; i < paramsarr.length; ++i) {
+        var tmp = paramsarr[i].split("=");
+        if (!tmp[0] || !tmp[1]) continue;
+        params[tmp[0]]  = decodeURIComponent(tmp[1]);
+    }
+    return params;
+}
+function parse_params(params) {
+    var uri = "?";
+    for (var key in params) {
+        uri += key + '=' + encodeURIComponent(params[key]) + '&';
+    }
+    if (uri.slice(-1) == "&")
+        uri = uri.substring(0, uri.length - 1);
+    if (uri == '?')
+        uri = window.location.href.split('?')[0];
+    return uri;
+}
+function find_child(node, selector) {
+    var children = node.querySelectorAll(selector);
+    if (children.length) return children[0];
+    return;
+}
+function find_group(node) {
+    var parent = node.parentElement;
+    if (!parent) return;
+    if (parent.id == "frames") return node;
+    return find_group(parent);
+}
+function orig_save(e, attr, val) {
+    if (e.attributes["fg:orig_" + attr] != undefined) return;
+    if (e.attributes[attr] == undefined) return;
+    if (val == undefined) val = e.attributes[attr].value;
+    e.setAttribute("fg:orig_" + attr, val);
+}
+function orig_load(e, attr) {
+    if (e.attributes["fg:orig_"+attr] == undefined) return;
+    e.attributes[attr].value = e.attributes["fg:orig_" + attr].value;
+    e.removeAttribute("fg:orig_" + attr);
+}
+function g_to_text(e) {
+    var text = find_child(e, "title").firstChild.nodeValue;
+    return (text)
+}
+function g_to_func(e) {
+    var func = g_to_text(e);
+    // if there's any manipulation we want to do to the function
+    // name before it's searched, do it here before returning.
+    return (func);
+}
+function get_monospace_width(frames) {
+    // Given the id="frames" element, return the width of text characters if
+    // this is a monospace font, otherwise return 0.
+    text = find_child(frames.children[0], "text");
+    originalContent = text.textContent;
+    text.textContent = "!";
+    bangWidth = text.getComputedTextLength();
+    text.textContent = "W";
+    wWidth = text.getComputedTextLength();
+    text.textContent = originalContent;
+    if (bangWidth === wWidth) {
+        return bangWidth;
+    } else {
+        return 0;
+    }
+}
+function update_text_for_elements(elements) {
+    // In order to render quickly in the browser, you want to do one pass of
+    // reading attributes, and one pass of mutating attributes. See
+    // https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/ for details.
+
+    // Fall back to inefficient calculation, if we're variable-width font.
+    // TODO This should be optimized somehow too.
+    if (known_font_width === 0) {
+        for (var i = 0; i < elements.length; i++) {
+            update_text(elements[i]);
+        }
+        return;
+    }
+
+    var textElemNewAttributes = [];
+    for (var i = 0; i < elements.length; i++) {
+        var e = elements[i];
+        var r = find_child(e, "rect");
+        var t = find_child(e, "text");
+        var w = parseFloat(r.attributes.width.value) * frames.attributes.width.value / 100 - 3;
+        var txt = find_child(e, "title").textContent.replace(/\([^(]*\)$/,"");
+        var newX = format_percent((parseFloat(r.attributes.x.value) + (100 * 3 / frames.attributes.width.value)));
+
+        // Smaller than this size won't fit anything
+        if (w < 2 * known_font_width) {
+            textElemNewAttributes.push([newX, ""]);
+            continue;
+        }
+
+        // Fit in full text width
+        if (txt.length * known_font_width < w) {
+            textElemNewAttributes.push([newX, txt]);
+            continue;
+        }
+
+        var substringLength = Math.floor(w / known_font_width) - 2;
+        if (truncate_text_right) {
+            // Truncate the right side of the text.
+            textElemNewAttributes.push([newX, txt.substring(0, substringLength) + ".."]);
+            continue;
+        } else {
+            // Truncate the left side of the text.
+            textElemNewAttributes.push([newX, ".." + txt.substring(txt.length - substringLength, txt.length)]);
+            continue;
+        }
+    }
+
+    console.assert(textElemNewAttributes.length === elements.length, "Resize failed, please file a bug at https://github.com/jonhoo/inferno/");
+
+    // Now that we know new textContent, set it all in one go so we don't refresh a bazillion times.
+    for (var i = 0; i < elements.length; i++) {
+        var e = elements[i];
+        var values = textElemNewAttributes[i];
+        var t = find_child(e, "text");
+        t.attributes.x.value = values[0];
+        t.textContent = values[1];
+    }
+}
+
+function update_text(e) {
+    var r = find_child(e, "rect");
+    var t = find_child(e, "text");
+    var w = parseFloat(r.attributes.width.value) * frames.attributes.width.value / 100 - 3;
+    var txt = find_child(e, "title").textContent.replace(/\([^(]*\)$/,"");
+    t.attributes.x.value = format_percent((parseFloat(r.attributes.x.value) + (100 * 3 / frames.attributes.width.value)));
+
+    // Smaller than this size won't fit anything
+    if (w < 2 * fontsize * fontwidth) {
+        t.textContent = "";
+        return;
+    }
+    t.textContent = txt;
+    // Fit in full text width
+    if (t.getComputedTextLength() < w)
+        return;
+    if (truncate_text_right) {
+        // Truncate the right side of the text.
+        for (var x = txt.length - 2; x > 0; x--) {
+            if (t.getSubStringLength(0, x + 2) <= w) {
+                t.textContent = txt.substring(0, x) + "..";
+                return;
+            }
+        }
+    } else {
+        // Truncate the left side of the text.
+        for (var x = 2; x < txt.length; x++) {
+            if (t.getSubStringLength(x - 2, txt.length) <= w) {
+                t.textContent = ".." + txt.substring(x, txt.length);
+                return;
+            }
+        }
+    }
+    t.textContent = "";
+}
+// zoom
+function zoom_reset(e) {
+    if (e.tagName == "rect") {
+        e.attributes.x.value = format_percent(100 * parseInt(e.attributes["fg:x"].value) / total_samples);
+        e.attributes.width.value = format_percent(100 * parseInt(e.attributes["fg:w"].value) / total_samples);
+    }
+    if (e.childNodes == undefined) return;
+    for(var i = 0, c = e.childNodes; i < c.length; i++) {
+        zoom_reset(c[i]);
+    }
+}
+function zoom_child(e, x, zoomed_width_samples) {
+    if (e.tagName == "text") {
+        var parent_x = parseFloat(find_child(e.parentNode, "rect[x]").attributes.x.value);
+        e.attributes.x.value = format_percent(parent_x + (100 * 3 / frames.attributes.width.value));
+    } else if (e.tagName == "rect") {
+        e.attributes.x.value = format_percent(100 * (parseInt(e.attributes["fg:x"].value) - x) / zoomed_width_samples);
+        e.attributes.width.value = format_percent(100 * parseInt(e.attributes["fg:w"].value) / zoomed_width_samples);
+    }
+    if (e.childNodes == undefined) return;
+    for(var i = 0, c = e.childNodes; i < c.length; i++) {
+        zoom_child(c[i], x, zoomed_width_samples);
+    }
+}
+function zoom_parent(e) {
+    if (e.attributes) {
+        if (e.attributes.x != undefined) {
+            e.attributes.x.value = "0.0%";
+        }
+        if (e.attributes.width != undefined) {
+            e.attributes.width.value = "100.0%";
+        }
+    }
+    if (e.childNodes == undefined) return;
+    for(var i = 0, c = e.childNodes; i < c.length; i++) {
+        zoom_parent(c[i]);
+    }
+}
+function zoom(node) {
+    var attr = find_child(node, "rect").attributes;
+    var width = parseInt(attr["fg:w"].value);
+    var xmin = parseInt(attr["fg:x"].value);
+    var xmax = xmin + width;
+    var ymin = parseFloat(attr.y.value);
+    unzoombtn.classList.remove("hide");
+    var el = frames.children;
+    var to_update_text = [];
+    for (var i = 0; i < el.length; i++) {
+        var e = el[i];
+        var a = find_child(e, "rect").attributes;
+        var ex = parseInt(a["fg:x"].value);
+        var ew = parseInt(a["fg:w"].value);
+        // Is it an ancestor
+        if (!inverted) {
+            var upstack = parseFloat(a.y.value) > ymin;
+        } else {
+            var upstack = parseFloat(a.y.value) < ymin;
+        }
+        if (upstack) {
+            // Direct ancestor
+            if (ex <= xmin && (ex+ew) >= xmax) {
+                e.classList.add("parent");
+                zoom_parent(e);
+                to_update_text.push(e);
+            }
+            // not in current path
+            else
+                e.classList.add("hide");
+        }
+        // Children maybe
+        else {
+            // no common path
+            if (ex < xmin || ex >= xmax) {
+                e.classList.add("hide");
+            }
+            else {
+                zoom_child(e, xmin, width);
+                to_update_text.push(e);
+            }
+        }
+    }
+    update_text_for_elements(to_update_text);
+}
+function unzoom() {
+    unzoombtn.classList.add("hide");
+    var el = frames.children;
+    for(var i = 0; i < el.length; i++) {
+        el[i].classList.remove("parent");
+        el[i].classList.remove("hide");
+        zoom_reset(el[i]);
+    }
+    update_text_for_elements(el);
+}
+// search
+function reset_search() {
+    var el = document.querySelectorAll("#frames rect");
+    for (var i = 0; i < el.length; i++) {
+        orig_load(el[i], "fill")
+    }
+    var params = get_params();
+    delete params.s;
+    history.replaceState(null, null, parse_params(params));
+}
+function search_prompt() {
+    if (!searching) {
+        var term = prompt("Enter a search term (regexp " +
+            "allowed, eg: ^ext4_)", "");
+        if (term != null) {
+            search(term)
+        }
+    } else {
+        reset_search();
+        searching = 0;
+        searchbtn.classList.remove("show");
+        searchbtn.firstChild.nodeValue = "Search"
+        matchedtxt.classList.add("hide");
+        matchedtxt.firstChild.nodeValue = ""
+    }
+}
+function search(term) {
+    var re = new RegExp(term);
+    var el = frames.children;
+    var matches = new Object();
+    var maxwidth = 0;
+    for (var i = 0; i < el.length; i++) {
+        var e = el[i];
+        // Skip over frames which are either not visible, or below the zoomed-to frame
+        if (e.classList.contains("hide") || e.classList.contains("parent")) {
+            continue;
+        }
+        var func = g_to_func(e);
+        var rect = find_child(e, "rect");
+        if (func == null || rect == null)
+            continue;
+        // Save max width. Only works as we have a root frame
+        var w = parseInt(rect.attributes["fg:w"].value);
+        if (w > maxwidth)
+            maxwidth = w;
+        if (func.match(re)) {
+            // highlight
+            var x = parseInt(rect.attributes["fg:x"].value);
+            orig_save(rect, "fill");
+            rect.attributes.fill.value = searchcolor;
+            // remember matches
+            if (matches[x] == undefined) {
+                matches[x] = w;
+            } else {
+                if (w > matches[x]) {
+                    // overwrite with parent
+                    matches[x] = w;
+                }
+            }
+            searching = 1;
+        }
+    }
+    if (!searching)
+        return;
+    var params = get_params();
+    params.s = term;
+    history.replaceState(null, null, parse_params(params));
+
+    searchbtn.classList.add("show");
+    searchbtn.firstChild.nodeValue = "Reset Search";
+    // calculate percent matched, excluding vertical overlap
+    var count = 0;
+    var lastx = -1;
+    var lastw = 0;
+    var keys = Array();
+    for (k in matches) {
+        if (matches.hasOwnProperty(k))
+            keys.push(k);
+    }
+    // sort the matched frames by their x location
+    // ascending, then width descending
+    keys.sort(function(a, b){
+        return a - b;
+    });
+    // Step through frames saving only the biggest bottom-up frames
+    // thanks to the sort order. This relies on the tree property
+    // where children are always smaller than their parents.
+    for (var k in keys) {
+        var x = parseInt(keys[k]);
+        var w = matches[keys[k]];
+        if (x >= lastx + lastw) {
+            count += w;
+            lastx = x;
+            lastw = w;
+        }
+    }
+    // display matched percent
+    matchedtxt.classList.remove("hide");
+    var pct = 100 * count / maxwidth;
+    if (pct != 100) pct = pct.toFixed(1);
+    matchedtxt.firstChild.nodeValue = "Matched: " + pct + "%";
+}
+function format_percent(n) {
+    return n.toFixed(4) + "%";
+}
+]]></script><rect x="0" y="0" width="100%" height="618" fill="url(#background)"/><text id="title" fill="rgb(0,0,0)" x="50.0000%" y="24.00">py-spy record --native --rate 50 -o profile.svg --pid 1123251</text><text id="details" fill="rgb(0,0,0)" x="10" y="40.00"> </text><text id="unzoom" class="hide" fill="rgb(0,0,0)" x="10" y="24.00">Reset Zoom</text><text id="search" fill="rgb(0,0,0)" x="1190" y="24.00">Search</text><text id="matched" fill="rgb(0,0,0)" x="1190" y="607.00"> </text><svg id="frames" x="10" width="1180" total_samples="51438"><g><title>__futex_abstimed_wait_common (libc.so.6) (1,556 samples, 3.03%)</title><rect x="0.0078%" y="276" width="3.0250%" height="15" fill="rgb(227,0,7)" fg:x="4" fg:w="1556"/><text x="0.2578%" y="286.50">__f..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (1,585 samples, 3.08%)</title><rect x="0.0078%" y="260" width="3.0814%" height="15" fill="rgb(217,0,24)" fg:x="4" fg:w="1585"/><text x="0.2578%" y="270.50">pth..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (1,319 samples, 2.56%)</title><rect x="3.1961%" y="404" width="2.5643%" height="15" fill="rgb(221,193,54)" fg:x="1644" fg:w="1319"/><text x="3.4461%" y="414.50">__..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (1,334 samples, 2.59%)</title><rect x="3.1961%" y="388" width="2.5934%" height="15" fill="rgb(248,212,6)" fg:x="1644" fg:w="1334"/><text x="3.4461%" y="398.50">pt..</text></g><g><title>CallState_end (confluent_kafka/cimpl.cpython-311-x86_64-linux-gnu.so) (1,337 samples, 2.60%)</title><rect x="3.1961%" y="372" width="2.5992%" height="15" fill="rgb(208,68,35)" fg:x="1644" fg:w="1337"/><text x="3.4461%" y="382.50">Ca..</text></g><g><title>cnd_timedwait_abs (librdkafka-9ddca43a.so.1) (1,331 samples, 2.59%)</title><rect x="5.8498%" y="404" width="2.5876%" height="15" fill="rgb(232,128,0)" fg:x="3009" fg:w="1331"/><text x="6.0998%" y="414.50">cn..</text></g><g><title>cnd_timedwait_ms (librdkafka-9ddca43a.so.1) (1,331 samples, 2.59%)</title><rect x="5.8498%" y="420" width="2.5876%" height="15" fill="rgb(207,160,47)" fg:x="3009" fg:w="1331"/><text x="6.0998%" y="430.50">cn..</text></g><g><title>cnd_timedwait@GLIBC_2.28 (libc.so.6) (1,331 samples, 2.59%)</title><rect x="5.8498%" y="436" width="2.5876%" height="15" fill="rgb(228,23,34)" fg:x="3009" fg:w="1331"/><text x="6.0998%" y="446.50">cn..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (1,331 samples, 2.59%)</title><rect x="5.8498%" y="452" width="2.5876%" height="15" fill="rgb(218,30,26)" fg:x="3009" fg:w="1331"/><text x="6.0998%" y="462.50">pt..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (1,331 samples, 2.59%)</title><rect x="5.8498%" y="468" width="2.5876%" height="15" fill="rgb(220,122,19)" fg:x="3009" fg:w="1331"/><text x="6.0998%" y="478.50">__..</text></g><g><title>rd_kafka_consume0 (librdkafka-9ddca43a.so.1) (1,333 samples, 2.59%)</title><rect x="5.8478%" y="372" width="2.5915%" height="15" fill="rgb(250,228,42)" fg:x="3008" fg:w="1333"/><text x="6.0978%" y="382.50">rd..</text></g><g><title>rd_kafka_q_pop_serve.localalias (librdkafka-9ddca43a.so.1) (1,332 samples, 2.59%)</title><rect x="5.8498%" y="388" width="2.5895%" height="15" fill="rgb(240,193,28)" fg:x="3009" fg:w="1332"/><text x="6.0998%" y="398.50">rd..</text></g><g><title>read (arrakis_backend_kafka/backend.py:312) (2,714 samples, 5.28%)</title><rect x="3.1708%" y="340" width="5.2763%" height="15" fill="rgb(216,20,37)" fg:x="1631" fg:w="2714"/><text x="3.4208%" y="350.50">read (..</text></g><g><title>Consumer_poll (confluent_kafka/cimpl.cpython-311-x86_64-linux-gnu.so) (2,708 samples, 5.26%)</title><rect x="3.1825%" y="356" width="5.2646%" height="15" fill="rgb(206,188,39)" fg:x="1637" fg:w="2708"/><text x="3.4325%" y="366.50">Consum..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (316 samples, 0.61%)</title><rect x="8.4684%" y="404" width="0.6143%" height="15" fill="rgb(217,207,13)" fg:x="4356" fg:w="316"/><text x="8.7184%" y="414.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (324 samples, 0.63%)</title><rect x="8.4684%" y="388" width="0.6299%" height="15" fill="rgb(231,73,38)" fg:x="4356" fg:w="324"/><text x="8.7184%" y="398.50"></text></g><g><title>__exit__ (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (330 samples, 0.64%)</title><rect x="8.4587%" y="356" width="0.6415%" height="15" fill="rgb(225,20,46)" fg:x="4351" fg:w="330"/><text x="8.7087%" y="366.50"></text></g><g><title>close (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (330 samples, 0.64%)</title><rect x="8.4587%" y="372" width="0.6415%" height="15" fill="rgb(210,31,41)" fg:x="4351" fg:w="330"/><text x="8.7087%" y="382.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (888 samples, 1.73%)</title><rect x="9.1236%" y="484" width="1.7264%" height="15" fill="rgb(221,200,47)" fg:x="4693" fg:w="888"/><text x="9.3736%" y="494.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (904 samples, 1.76%)</title><rect x="9.1236%" y="468" width="1.7575%" height="15" fill="rgb(226,26,5)" fg:x="4693" fg:w="904"/><text x="9.3736%" y="478.50"></text></g><g><title>arrow::ipc::RecordBatchStreamReaderImpl::~RecordBatchStreamReaderImpl (pyarrow/libarrow.so.2000) (919 samples, 1.79%)</title><rect x="9.1022%" y="372" width="1.7866%" height="15" fill="rgb(249,33,26)" fg:x="4682" fg:w="919"/><text x="9.3522%" y="382.50">a..</text></g><g><title>std::_Sp_counted_base&lt;(__gnu_cxx::_Lock_policy)2&gt;::_M_release_last_use_cold (pyarrow/libarrow.so.2000) (918 samples, 1.78%)</title><rect x="9.1042%" y="388" width="1.7847%" height="15" fill="rgb(235,183,28)" fg:x="4683" fg:w="918"/><text x="9.3542%" y="398.50">s..</text></g><g><title>arrow::io::BufferReader::~BufferReader (pyarrow/libarrow.so.2000) (918 samples, 1.78%)</title><rect x="9.1042%" y="404" width="1.7847%" height="15" fill="rgb(221,5,38)" fg:x="4683" fg:w="918"/><text x="9.3542%" y="414.50">a..</text></g><g><title>std::_Sp_counted_base&lt;(__gnu_cxx::_Lock_policy)2&gt;::_M_release (pyarrow/libarrow.so.2000) (918 samples, 1.78%)</title><rect x="9.1042%" y="420" width="1.7847%" height="15" fill="rgb(247,18,42)" fg:x="4683" fg:w="918"/><text x="9.3542%" y="430.50">s..</text></g><g><title>std::_Sp_counted_ptr&lt;arrow::py::PyBuffer*, (__gnu_cxx::_Lock_policy)2&gt;::_M_dispose (pyarrow/libarrow_python.so.2000) (918 samples, 1.78%)</title><rect x="9.1042%" y="436" width="1.7847%" height="15" fill="rgb(241,131,45)" fg:x="4683" fg:w="918"/><text x="9.3542%" y="446.50">s..</text></g><g><title>arrow::py::PyBuffer::~PyBuffer (pyarrow/libarrow_python.so.2000) (918 samples, 1.78%)</title><rect x="9.1042%" y="452" width="1.7847%" height="15" fill="rgb(249,31,29)" fg:x="4683" fg:w="918"/><text x="9.3542%" y="462.50">a..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (1,018 samples, 1.98%)</title><rect x="10.8888%" y="388" width="1.9791%" height="15" fill="rgb(225,111,53)" fg:x="5601" fg:w="1018"/><text x="11.1388%" y="398.50">_..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (1,030 samples, 2.00%)</title><rect x="10.8888%" y="372" width="2.0024%" height="15" fill="rgb(238,160,17)" fg:x="5601" fg:w="1030"/><text x="11.1388%" y="382.50">p..</text></g><g><title>__pyx_tp_dealloc_7pyarrow_3lib_RecordBatchReader (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (1,952 samples, 3.79%)</title><rect x="9.1003%" y="356" width="3.7949%" height="15" fill="rgb(214,148,48)" fg:x="4681" fg:w="1952"/><text x="9.3503%" y="366.50">__py..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (2,041 samples, 3.97%)</title><rect x="13.0098%" y="420" width="3.9679%" height="15" fill="rgb(232,36,49)" fg:x="6692" fg:w="2041"/><text x="13.2598%" y="430.50">__fu..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (2,083 samples, 4.05%)</title><rect x="13.0098%" y="404" width="4.0495%" height="15" fill="rgb(209,103,24)" fg:x="6692" fg:w="2083"/><text x="13.2598%" y="414.50">pthr..</text></g><g><title>read (arrakis_backend_kafka/backend.py:317) (4,429 samples, 8.61%)</title><rect x="8.4548%" y="340" width="8.6104%" height="15" fill="rgb(229,88,8)" fg:x="4349" fg:w="4429"/><text x="8.7048%" y="350.50">read (arraki..</text></g><g><title>open_stream (pyarrow/ipc.py:190) (2,135 samples, 4.15%)</title><rect x="12.9146%" y="356" width="4.1506%" height="15" fill="rgb(213,181,19)" fg:x="6643" fg:w="2135"/><text x="13.1646%" y="366.50">open_..</text></g><g><title>__init__ (pyarrow/ipc.py:52) (2,127 samples, 4.14%)</title><rect x="12.9301%" y="372" width="4.1351%" height="15" fill="rgb(254,191,54)" fg:x="6651" fg:w="2127"/><text x="13.1801%" y="382.50">__ini..</text></g><g><title>_open (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (2,127 samples, 4.14%)</title><rect x="12.9301%" y="388" width="4.1351%" height="15" fill="rgb(241,83,37)" fg:x="6651" fg:w="2127"/><text x="13.1801%" y="398.50">_open..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (2,582 samples, 5.02%)</title><rect x="17.1177%" y="404" width="5.0196%" height="15" fill="rgb(233,36,39)" fg:x="8805" fg:w="2582"/><text x="17.3677%" y="414.50">__fute..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (2,624 samples, 5.10%)</title><rect x="17.1177%" y="388" width="5.1013%" height="15" fill="rgb(226,3,54)" fg:x="8805" fg:w="2624"/><text x="17.3677%" y="398.50">pthrea..</text></g><g><title>read (arrakis_backend_kafka/backend.py:318) (2,658 samples, 5.17%)</title><rect x="17.0652%" y="340" width="5.1674%" height="15" fill="rgb(245,192,40)" fg:x="8778" fg:w="2658"/><text x="17.3152%" y="350.50">read (..</text></g><g><title>read_all_batches (arrakis_backend_kafka/backend.py:392) (2,654 samples, 5.16%)</title><rect x="17.0730%" y="356" width="5.1596%" height="15" fill="rgb(238,167,29)" fg:x="8782" fg:w="2654"/><text x="17.3230%" y="366.50">read_a..</text></g><g><title>read_next_batch (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (2,651 samples, 5.15%)</title><rect x="17.0788%" y="372" width="5.1538%" height="15" fill="rgb(232,182,51)" fg:x="8785" fg:w="2651"/><text x="17.3288%" y="382.50">read_n..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (233 samples, 0.45%)</title><rect x="22.2831%" y="452" width="0.4530%" height="15" fill="rgb(231,60,39)" fg:x="11462" fg:w="233"/><text x="22.5331%" y="462.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (240 samples, 0.47%)</title><rect x="22.2831%" y="436" width="0.4666%" height="15" fill="rgb(208,69,12)" fg:x="11462" fg:w="240"/><text x="22.5331%" y="446.50"></text></g><g><title>arrow::py::(anonymous namespace)::MakeWriter (pyarrow/libarrow_python.so.2000) (249 samples, 0.48%)</title><rect x="22.2695%" y="404" width="0.4841%" height="15" fill="rgb(235,93,37)" fg:x="11455" fg:w="249"/><text x="22.5195%" y="414.50"></text></g><g><title>arrow::py::(anonymous namespace)::PandasWriter::PandasWriter (pyarrow/libarrow_python.so.2000) (249 samples, 0.48%)</title><rect x="22.2695%" y="420" width="0.4841%" height="15" fill="rgb(213,116,39)" fg:x="11455" fg:w="249"/><text x="22.5195%" y="430.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (564 samples, 1.10%)</title><rect x="22.7614%" y="452" width="1.0965%" height="15" fill="rgb(222,207,29)" fg:x="11708" fg:w="564"/><text x="23.0114%" y="462.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (570 samples, 1.11%)</title><rect x="22.7614%" y="436" width="1.1081%" height="15" fill="rgb(206,96,30)" fg:x="11708" fg:w="570"/><text x="23.0114%" y="446.50"></text></g><g><title>arrow::py::(anonymous namespace)::PandasWriter::GetSeriesResult (pyarrow/libarrow_python.so.2000) (577 samples, 1.12%)</title><rect x="22.7536%" y="404" width="1.1217%" height="15" fill="rgb(218,138,4)" fg:x="11704" fg:w="577"/><text x="23.0036%" y="414.50"></text></g><g><title>arrow::py::(anonymous namespace)::PandasWriter::MakeBlock1D (pyarrow/libarrow_python.so.2000) (577 samples, 1.12%)</title><rect x="22.7536%" y="420" width="1.1217%" height="15" fill="rgb(250,191,14)" fg:x="11704" fg:w="577"/><text x="23.0036%" y="430.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (291 samples, 0.57%)</title><rect x="23.8851%" y="452" width="0.5657%" height="15" fill="rgb(239,60,40)" fg:x="12286" fg:w="291"/><text x="24.1351%" y="462.50"></text></g><g><title>arrow::py::ConvertArrayToPandas (pyarrow/libarrow_python.so.2000) (1,127 samples, 2.19%)</title><rect x="22.2695%" y="372" width="2.1910%" height="15" fill="rgb(206,27,48)" fg:x="11455" fg:w="1127"/><text x="22.5195%" y="382.50">a..</text></g><g><title>arrow::py::ConvertChunkedArrayToPandas (pyarrow/libarrow_python.so.2000) (1,127 samples, 2.19%)</title><rect x="22.2695%" y="388" width="2.1910%" height="15" fill="rgb(225,35,8)" fg:x="11455" fg:w="1127"/><text x="22.5195%" y="398.50">a..</text></g><g><title>arrow::py::(anonymous namespace)::TypedPandasWriter&lt;7&gt;::TransferSingle (pyarrow/libarrow_python.so.2000) (301 samples, 0.59%)</title><rect x="23.8753%" y="404" width="0.5852%" height="15" fill="rgb(250,213,24)" fg:x="12281" fg:w="301"/><text x="24.1253%" y="414.50"></text></g><g><title>arrow::py::(anonymous namespace)::MakeNumPyView (pyarrow/libarrow_python.so.2000) (301 samples, 0.59%)</title><rect x="23.8753%" y="420" width="0.5852%" height="15" fill="rgb(247,123,22)" fg:x="12281" fg:w="301"/><text x="24.1253%" y="430.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (296 samples, 0.58%)</title><rect x="23.8851%" y="436" width="0.5755%" height="15" fill="rgb(231,138,38)" fg:x="12286" fg:w="296"/><text x="24.1351%" y="446.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (623 samples, 1.21%)</title><rect x="24.4625%" y="388" width="1.2112%" height="15" fill="rgb(231,145,46)" fg:x="12583" fg:w="623"/><text x="24.7125%" y="398.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (635 samples, 1.23%)</title><rect x="24.4625%" y="372" width="1.2345%" height="15" fill="rgb(251,118,11)" fg:x="12583" fg:w="635"/><text x="24.7125%" y="382.50"></text></g><g><title>read (arrakis_backend_kafka/backend.py:320) (1,783 samples, 3.47%)</title><rect x="22.2326%" y="340" width="3.4663%" height="15" fill="rgb(217,147,25)" fg:x="11436" fg:w="1783"/><text x="22.4826%" y="350.50">rea..</text></g><g><title>to_numpy (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (1,764 samples, 3.43%)</title><rect x="22.2695%" y="356" width="3.4294%" height="15" fill="rgb(247,81,37)" fg:x="11455" fg:w="1764"/><text x="22.5195%" y="366.50">to_..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (850 samples, 1.65%)</title><rect x="25.7475%" y="420" width="1.6525%" height="15" fill="rgb(209,12,38)" fg:x="13244" fg:w="850"/><text x="25.9975%" y="430.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (874 samples, 1.70%)</title><rect x="25.7475%" y="404" width="1.6991%" height="15" fill="rgb(227,1,9)" fg:x="13244" fg:w="874"/><text x="25.9975%" y="414.50"></text></g><g><title>_filter_table (pyarrow/acero.py:369) (889 samples, 1.73%)</title><rect x="25.7281%" y="372" width="1.7283%" height="15" fill="rgb(248,47,43)" fg:x="13234" fg:w="889"/><text x="25.9781%" y="382.50"></text></g><g><title>from_batches (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (888 samples, 1.73%)</title><rect x="25.7300%" y="388" width="1.7264%" height="15" fill="rgb(221,10,30)" fg:x="13235" fg:w="888"/><text x="25.9800%" y="398.50"></text></g><g><title>arrow::FutureImpl::Wait (pyarrow/libarrow.so.2000) (136 samples, 0.26%)</title><rect x="27.4797%" y="436" width="0.2644%" height="15" fill="rgb(210,229,1)" fg:x="14135" fg:w="136"/><text x="27.7297%" y="446.50"></text></g><g><title>std::condition_variable::wait (libstdc++.so.6.0.29) (135 samples, 0.26%)</title><rect x="27.4816%" y="452" width="0.2625%" height="15" fill="rgb(222,148,37)" fg:x="14136" fg:w="135"/><text x="27.7316%" y="462.50"></text></g><g><title>pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6) (135 samples, 0.26%)</title><rect x="27.4816%" y="468" width="0.2625%" height="15" fill="rgb(234,67,33)" fg:x="14136" fg:w="135"/><text x="27.7316%" y="478.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (135 samples, 0.26%)</title><rect x="27.4816%" y="484" width="0.2625%" height="15" fill="rgb(247,98,35)" fg:x="14136" fg:w="135"/><text x="27.7316%" y="494.50"></text></g><g><title>arrow::acero::(anonymous namespace)::ExecPlanImpl::StartProducing (pyarrow/libarrow_acero.so.2000) (60 samples, 0.12%)</title><rect x="27.7480%" y="468" width="0.1166%" height="15" fill="rgb(247,138,52)" fg:x="14273" fg:w="60"/><text x="27.9980%" y="478.50"></text></g><g><title>arrow::util::AsyncTaskScheduler::Make (pyarrow/libarrow.so.2000) (58 samples, 0.11%)</title><rect x="27.7519%" y="484" width="0.1128%" height="15" fill="rgb(213,79,30)" fg:x="14275" fg:w="58"/><text x="28.0019%" y="494.50"></text></g><g><title>arrow::internal::FnOnce&lt;arrow::Status(arrow::util::AsyncTaskScheduler*)&gt;::FnImpl&lt;arrow::acero::(anonymous namespace)::ExecPlanImpl::StartProducing()::{lambda(arrow::util::AsyncTaskScheduler*)#1}&gt;::invoke (pyarrow/libarrow_acero.so.2000) (58 samples, 0.11%)</title><rect x="27.7519%" y="500" width="0.1128%" height="15" fill="rgb(246,177,23)" fg:x="14275" fg:w="58"/><text x="28.0019%" y="510.50"></text></g><g><title>arrow::internal::FnOnce&lt;arrow::Future&lt;std::shared_ptr&lt;arrow::Table&gt; &gt;(arrow::internal::Executor*)&gt;::FnImpl&lt;arrow::acero::DeclarationToTable(arrow::acero::Declaration, bool, arrow::MemoryPool*, arrow::compute::FunctionRegistry*)::{lambda(arrow::internal::Executor*)#1}&gt;::invoke (pyarrow/libarrow_acero.so.2000) (85 samples, 0.17%)</title><rect x="27.7441%" y="436" width="0.1652%" height="15" fill="rgb(230,62,27)" fg:x="14271" fg:w="85"/><text x="27.9941%" y="446.50"></text></g><g><title>arrow::acero::(anonymous namespace)::DeclarationToTableImpl (pyarrow/libarrow_acero.so.2000) (84 samples, 0.16%)</title><rect x="27.7460%" y="452" width="0.1633%" height="15" fill="rgb(216,154,8)" fg:x="14272" fg:w="84"/><text x="27.9960%" y="462.50"></text></g><g><title>arrow::acero::DeclarationToTable (pyarrow/libarrow_acero.so.2000) (222 samples, 0.43%)</title><rect x="27.4797%" y="404" width="0.4316%" height="15" fill="rgb(244,35,45)" fg:x="14135" fg:w="222"/><text x="27.7297%" y="414.50"></text></g><g><title>arrow::internal::RunSynchronously&lt;arrow::Future&lt;std::shared_ptr&lt;arrow::Table&gt; &gt;, std::shared_ptr&lt;arrow::Table&gt; &gt; (pyarrow/libarrow_dataset.so.2000) (222 samples, 0.43%)</title><rect x="27.4797%" y="420" width="0.4316%" height="15" fill="rgb(251,115,12)" fg:x="14135" fg:w="222"/><text x="27.7297%" y="430.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (4,207 samples, 8.18%)</title><rect x="27.9190%" y="420" width="8.1788%" height="15" fill="rgb(240,54,50)" fg:x="14361" fg:w="4207"/><text x="28.1690%" y="430.50">__futex_abs..</text></g><g><title>__pthread_mutex_cond_lock (libc.so.6) (72 samples, 0.14%)</title><rect x="36.0978%" y="420" width="0.1400%" height="15" fill="rgb(233,84,52)" fg:x="18568" fg:w="72"/><text x="36.3478%" y="430.50"></text></g><g><title>__lll_lock_wait (libc.so.6) (72 samples, 0.14%)</title><rect x="36.0978%" y="436" width="0.1400%" height="15" fill="rgb(207,117,47)" fg:x="18568" fg:w="72"/><text x="36.3478%" y="446.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (4,283 samples, 8.33%)</title><rect x="27.9190%" y="404" width="8.3265%" height="15" fill="rgb(249,43,39)" fg:x="14361" fg:w="4283"/><text x="28.1690%" y="414.50">pthread_cond..</text></g><g><title>_filter_table (pyarrow/acero.py:376) (4,547 samples, 8.84%)</title><rect x="27.4700%" y="372" width="8.8398%" height="15" fill="rgb(209,38,44)" fg:x="14130" fg:w="4547"/><text x="27.7200%" y="382.50">_filter_tabl..</text></g><g><title>to_table (pyarrow/_acero.cpython-311-x86_64-linux-gnu.so) (4,546 samples, 8.84%)</title><rect x="27.4719%" y="388" width="8.8378%" height="15" fill="rgb(236,212,23)" fg:x="14131" fg:w="4546"/><text x="27.7219%" y="398.50">to_table (py..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (490 samples, 0.95%)</title><rect x="36.3739%" y="420" width="0.9526%" height="15" fill="rgb(242,79,21)" fg:x="18710" fg:w="490"/><text x="36.6239%" y="430.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (499 samples, 0.97%)</title><rect x="36.3739%" y="404" width="0.9701%" height="15" fill="rgb(211,96,35)" fg:x="18710" fg:w="499"/><text x="36.6239%" y="414.50"></text></g><g><title>combine_chunks (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (529 samples, 1.03%)</title><rect x="36.3175%" y="388" width="1.0284%" height="15" fill="rgb(253,215,40)" fg:x="18681" fg:w="529"/><text x="36.5675%" y="398.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (1,405 samples, 2.73%)</title><rect x="37.3615%" y="420" width="2.7314%" height="15" fill="rgb(211,81,21)" fg:x="19218" fg:w="1405"/><text x="37.6115%" y="430.50">__..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (1,420 samples, 2.76%)</title><rect x="37.3615%" y="404" width="2.7606%" height="15" fill="rgb(208,190,38)" fg:x="19218" fg:w="1420"/><text x="37.6115%" y="414.50">pt..</text></g><g><title>read (arrakis_backend_kafka/backend.py:321) (7,422 samples, 14.43%)</title><rect x="25.6989%" y="340" width="14.4290%" height="15" fill="rgb(235,213,38)" fg:x="13219" fg:w="7422"/><text x="25.9489%" y="350.50">read (arrakis_backend_..</text></g><g><title>filter (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (7,415 samples, 14.42%)</title><rect x="25.7125%" y="356" width="14.4154%" height="15" fill="rgb(237,122,38)" fg:x="13226" fg:w="7415"/><text x="25.9625%" y="366.50">filter (pyarrow/lib.cp..</text></g><g><title>_filter_table (pyarrow/acero.py:378) (1,964 samples, 3.82%)</title><rect x="36.3097%" y="372" width="3.8182%" height="15" fill="rgb(244,218,35)" fg:x="18677" fg:w="1964"/><text x="36.5597%" y="382.50">_fil..</text></g><g><title>to_batches (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (1,431 samples, 2.78%)</title><rect x="37.3459%" y="388" width="2.7820%" height="15" fill="rgb(240,68,47)" fg:x="19210" fg:w="1431"/><text x="37.5959%" y="398.50">to..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (120 samples, 0.23%)</title><rect x="40.2212%" y="420" width="0.2333%" height="15" fill="rgb(210,16,53)" fg:x="20689" fg:w="120"/><text x="40.4712%" y="430.50"></text></g><g><title>arrow::py::ConvertPySequence (pyarrow/libarrow_python.so.2000) (139 samples, 0.27%)</title><rect x="40.1882%" y="388" width="0.2702%" height="15" fill="rgb(235,124,12)" fg:x="20672" fg:w="139"/><text x="40.4382%" y="398.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (122 samples, 0.24%)</title><rect x="40.2212%" y="404" width="0.2372%" height="15" fill="rgb(224,169,11)" fg:x="20689" fg:w="122"/><text x="40.4712%" y="414.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (240 samples, 0.47%)</title><rect x="40.4642%" y="404" width="0.4666%" height="15" fill="rgb(250,166,2)" fg:x="20814" fg:w="240"/><text x="40.7142%" y="414.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (246 samples, 0.48%)</title><rect x="40.4642%" y="388" width="0.4782%" height="15" fill="rgb(242,216,29)" fg:x="20814" fg:w="246"/><text x="40.7142%" y="398.50"></text></g><g><title>read (arrakis_backend_kafka/backend.py:324) (403 samples, 0.78%)</title><rect x="40.1629%" y="340" width="0.7835%" height="15" fill="rgb(230,116,27)" fg:x="20659" fg:w="403"/><text x="40.4129%" y="350.50"></text></g><g><title>array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (402 samples, 0.78%)</title><rect x="40.1649%" y="356" width="0.7815%" height="15" fill="rgb(228,99,48)" fg:x="20660" fg:w="402"/><text x="40.4149%" y="366.50"></text></g><g><title>lib__sequence_to_array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (396 samples, 0.77%)</title><rect x="40.1765%" y="372" width="0.7699%" height="15" fill="rgb(253,11,6)" fg:x="20666" fg:w="396"/><text x="40.4265%" y="382.50"></text></g><g><title>PyThread_acquire_lock_timed (libpython3.11.so.1.0) (6,685 samples, 13.00%)</title><rect x="41.0280%" y="468" width="12.9962%" height="15" fill="rgb(247,143,39)" fg:x="21104" fg:w="6685"/><text x="41.2780%" y="478.50">PyThread_acquire_loc..</text></g><g><title>__new_sem_wait_slow64.constprop.0 (libc.so.6) (6,685 samples, 13.00%)</title><rect x="41.0280%" y="484" width="12.9962%" height="15" fill="rgb(236,97,10)" fg:x="21104" fg:w="6685"/><text x="41.2780%" y="494.50">__new_sem_wait_slow6..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (6,685 samples, 13.00%)</title><rect x="41.0280%" y="500" width="12.9962%" height="15" fill="rgb(233,208,19)" fg:x="21104" fg:w="6685"/><text x="41.2780%" y="510.50">__futex_abstimed_wai..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (620 samples, 1.21%)</title><rect x="54.0301%" y="484" width="1.2053%" height="15" fill="rgb(216,164,2)" fg:x="27792" fg:w="620"/><text x="54.2801%" y="494.50"></text></g><g><title>handle (logging/__init__.py:976) (7,311 samples, 14.21%)</title><rect x="41.0280%" y="436" width="14.2132%" height="15" fill="rgb(220,129,5)" fg:x="21104" fg:w="7311"/><text x="41.2780%" y="446.50">handle (logging/__init..</text></g><g><title>acquire (logging/__init__.py:927) (7,311 samples, 14.21%)</title><rect x="41.0280%" y="452" width="14.2132%" height="15" fill="rgb(242,17,10)" fg:x="21104" fg:w="7311"/><text x="41.2780%" y="462.50">acquire (logging/__ini..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (623 samples, 1.21%)</title><rect x="54.0301%" y="468" width="1.2112%" height="15" fill="rgb(242,107,0)" fg:x="27792" fg:w="623"/><text x="54.2801%" y="478.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (314 samples, 0.61%)</title><rect x="55.2471%" y="484" width="0.6104%" height="15" fill="rgb(251,28,31)" fg:x="28418" fg:w="314"/><text x="55.4971%" y="494.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (318 samples, 0.62%)</title><rect x="55.2471%" y="468" width="0.6182%" height="15" fill="rgb(233,223,10)" fg:x="28418" fg:w="318"/><text x="55.4971%" y="478.50"></text></g><g><title>handle (logging/__init__.py:978) (322 samples, 0.63%)</title><rect x="55.2413%" y="436" width="0.6260%" height="15" fill="rgb(215,21,27)" fg:x="28415" fg:w="322"/><text x="55.4913%" y="446.50"></text></g><g><title>emit (logging/__init__.py:1113) (320 samples, 0.62%)</title><rect x="55.2451%" y="452" width="0.6221%" height="15" fill="rgb(232,23,21)" fg:x="28417" fg:w="320"/><text x="55.4951%" y="462.50"></text></g><g><title>read (arrakis_backend_kafka/backend.py:327) (7,676 samples, 14.92%)</title><rect x="40.9464%" y="340" width="14.9228%" height="15" fill="rgb(244,5,23)" fg:x="21062" fg:w="7676"/><text x="41.1964%" y="350.50">read (arrakis_backend_k..</text></g><g><title>push (arrakis/mux.py:138) (7,645 samples, 14.86%)</title><rect x="41.0066%" y="356" width="14.8626%" height="15" fill="rgb(226,81,46)" fg:x="21093" fg:w="7645"/><text x="41.2566%" y="366.50">push (arrakis/mux.py:13..</text></g><g><title>warning (logging/__init__.py:1501) (7,645 samples, 14.86%)</title><rect x="41.0066%" y="372" width="14.8626%" height="15" fill="rgb(247,70,30)" fg:x="21093" fg:w="7645"/><text x="41.2566%" y="382.50">warning (logging/__init..</text></g><g><title>_log (logging/__init__.py:1634) (7,634 samples, 14.84%)</title><rect x="41.0280%" y="388" width="14.8412%" height="15" fill="rgb(212,68,19)" fg:x="21104" fg:w="7634"/><text x="41.2780%" y="398.50">_log (logging/__init__...</text></g><g><title>handle (logging/__init__.py:1644) (7,634 samples, 14.84%)</title><rect x="41.0280%" y="404" width="14.8412%" height="15" fill="rgb(240,187,13)" fg:x="21104" fg:w="7634"/><text x="41.2780%" y="414.50">handle (logging/__init_..</text></g><g><title>callHandlers (logging/__init__.py:1706) (7,634 samples, 14.84%)</title><rect x="41.0280%" y="420" width="14.8412%" height="15" fill="rgb(223,113,26)" fg:x="21104" fg:w="7634"/><text x="41.2780%" y="430.50">callHandlers (logging/_..</text></g><g><title>PyThread_acquire_lock_timed (libpython3.11.so.1.0) (2,635 samples, 5.12%)</title><rect x="55.8848%" y="468" width="5.1227%" height="15" fill="rgb(206,192,2)" fg:x="28746" fg:w="2635"/><text x="56.1348%" y="478.50">PyThre..</text></g><g><title>__new_sem_wait_slow64.constprop.0 (libc.so.6) (2,635 samples, 5.12%)</title><rect x="55.8848%" y="484" width="5.1227%" height="15" fill="rgb(241,108,4)" fg:x="28746" fg:w="2635"/><text x="56.1348%" y="494.50">__new_..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (2,635 samples, 5.12%)</title><rect x="55.8848%" y="500" width="5.1227%" height="15" fill="rgb(247,173,49)" fg:x="28746" fg:w="2635"/><text x="56.1348%" y="510.50">__fute..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (297 samples, 0.58%)</title><rect x="61.0074%" y="484" width="0.5774%" height="15" fill="rgb(224,114,35)" fg:x="31381" fg:w="297"/><text x="61.2574%" y="494.50"></text></g><g><title>handle (logging/__init__.py:976) (2,933 samples, 5.70%)</title><rect x="55.8848%" y="436" width="5.7020%" height="15" fill="rgb(245,159,27)" fg:x="28746" fg:w="2933"/><text x="56.1348%" y="446.50">handle ..</text></g><g><title>acquire (logging/__init__.py:927) (2,933 samples, 5.70%)</title><rect x="55.8848%" y="452" width="5.7020%" height="15" fill="rgb(245,172,44)" fg:x="28746" fg:w="2933"/><text x="56.1348%" y="462.50">acquire..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (298 samples, 0.58%)</title><rect x="61.0074%" y="468" width="0.5793%" height="15" fill="rgb(236,23,11)" fg:x="31381" fg:w="298"/><text x="61.2574%" y="478.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (137 samples, 0.27%)</title><rect x="61.5887%" y="484" width="0.2663%" height="15" fill="rgb(205,117,38)" fg:x="31680" fg:w="137"/><text x="61.8387%" y="494.50"></text></g><g><title>handle (logging/__init__.py:978) (139 samples, 0.27%)</title><rect x="61.5868%" y="436" width="0.2702%" height="15" fill="rgb(237,72,25)" fg:x="31679" fg:w="139"/><text x="61.8368%" y="446.50"></text></g><g><title>emit (logging/__init__.py:1113) (138 samples, 0.27%)</title><rect x="61.5887%" y="452" width="0.2683%" height="15" fill="rgb(244,70,9)" fg:x="31680" fg:w="138"/><text x="61.8387%" y="462.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (138 samples, 0.27%)</title><rect x="61.5887%" y="468" width="0.2683%" height="15" fill="rgb(217,125,39)" fg:x="31680" fg:w="138"/><text x="61.8387%" y="478.50"></text></g><g><title>pull (arrakis/mux.py:166) (3,074 samples, 5.98%)</title><rect x="55.8828%" y="356" width="5.9761%" height="15" fill="rgb(235,36,10)" fg:x="28745" fg:w="3074"/><text x="56.1328%" y="366.50">pull (ar..</text></g><g><title>debug (logging/__init__.py:1477) (3,074 samples, 5.98%)</title><rect x="55.8828%" y="372" width="5.9761%" height="15" fill="rgb(251,123,47)" fg:x="28745" fg:w="3074"/><text x="56.1328%" y="382.50">debug (l..</text></g><g><title>_log (logging/__init__.py:1634) (3,073 samples, 5.97%)</title><rect x="55.8848%" y="388" width="5.9742%" height="15" fill="rgb(221,13,13)" fg:x="28746" fg:w="3073"/><text x="56.1348%" y="398.50">_log (lo..</text></g><g><title>handle (logging/__init__.py:1644) (3,073 samples, 5.97%)</title><rect x="55.8848%" y="404" width="5.9742%" height="15" fill="rgb(238,131,9)" fg:x="28746" fg:w="3073"/><text x="56.1348%" y="414.50">handle (..</text></g><g><title>callHandlers (logging/__init__.py:1706) (3,073 samples, 5.97%)</title><rect x="55.8848%" y="420" width="5.9742%" height="15" fill="rgb(211,50,8)" fg:x="28746" fg:w="3073"/><text x="56.1348%" y="430.50">callHand..</text></g><g><title>read (arrakis_backend_kafka/backend.py:330) (3,085 samples, 6.00%)</title><rect x="55.8692%" y="340" width="5.9975%" height="15" fill="rgb(245,182,24)" fg:x="28738" fg:w="3085"/><text x="56.1192%" y="350.50">read (ar..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (104 samples, 0.20%)</title><rect x="61.9445%" y="484" width="0.2022%" height="15" fill="rgb(242,14,37)" fg:x="31863" fg:w="104"/><text x="62.1945%" y="494.50"></text></g><g><title>arrow::py::(anonymous namespace)::PandasWriter::GetSeriesResult (pyarrow/libarrow_python.so.2000) (106 samples, 0.21%)</title><rect x="61.9445%" y="436" width="0.2061%" height="15" fill="rgb(246,228,12)" fg:x="31863" fg:w="106"/><text x="62.1945%" y="446.50"></text></g><g><title>arrow::py::(anonymous namespace)::PandasWriter::MakeBlock1D (pyarrow/libarrow_python.so.2000) (106 samples, 0.21%)</title><rect x="61.9445%" y="452" width="0.2061%" height="15" fill="rgb(213,55,15)" fg:x="31863" fg:w="106"/><text x="62.1945%" y="462.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (106 samples, 0.21%)</title><rect x="61.9445%" y="468" width="0.2061%" height="15" fill="rgb(209,9,3)" fg:x="31863" fg:w="106"/><text x="62.1945%" y="478.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (60 samples, 0.12%)</title><rect x="62.1506%" y="484" width="0.1166%" height="15" fill="rgb(230,59,30)" fg:x="31969" fg:w="60"/><text x="62.4006%" y="494.50"></text></g><g><title>arrow::py::ConvertArrayToPandas (pyarrow/libarrow_python.so.2000) (206 samples, 0.40%)</title><rect x="61.8687%" y="404" width="0.4005%" height="15" fill="rgb(209,121,21)" fg:x="31824" fg:w="206"/><text x="62.1187%" y="414.50"></text></g><g><title>arrow::py::ConvertChunkedArrayToPandas (pyarrow/libarrow_python.so.2000) (206 samples, 0.40%)</title><rect x="61.8687%" y="420" width="0.4005%" height="15" fill="rgb(220,109,13)" fg:x="31824" fg:w="206"/><text x="62.1187%" y="430.50"></text></g><g><title>arrow::py::(anonymous namespace)::TypedPandasWriter&lt;7&gt;::TransferSingle (pyarrow/libarrow_python.so.2000) (61 samples, 0.12%)</title><rect x="62.1506%" y="436" width="0.1186%" height="15" fill="rgb(232,18,1)" fg:x="31969" fg:w="61"/><text x="62.4006%" y="446.50"></text></g><g><title>arrow::py::(anonymous namespace)::MakeNumPyView (pyarrow/libarrow_python.so.2000) (61 samples, 0.12%)</title><rect x="62.1506%" y="452" width="0.1186%" height="15" fill="rgb(215,41,42)" fg:x="31969" fg:w="61"/><text x="62.4006%" y="462.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (61 samples, 0.12%)</title><rect x="62.1506%" y="468" width="0.1186%" height="15" fill="rgb(224,123,36)" fg:x="31969" fg:w="61"/><text x="62.4006%" y="478.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (176 samples, 0.34%)</title><rect x="62.2691%" y="420" width="0.3422%" height="15" fill="rgb(240,125,3)" fg:x="32030" fg:w="176"/><text x="62.5191%" y="430.50"></text></g><g><title>from_row_batch (arrakis/block.py:403) (385 samples, 0.75%)</title><rect x="61.8667%" y="372" width="0.7485%" height="15" fill="rgb(205,98,50)" fg:x="31823" fg:w="385"/><text x="62.1167%" y="382.50"></text></g><g><title>to_numpy (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (384 samples, 0.75%)</title><rect x="61.8687%" y="388" width="0.7465%" height="15" fill="rgb(205,185,37)" fg:x="31824" fg:w="384"/><text x="62.1187%" y="398.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (178 samples, 0.35%)</title><rect x="62.2691%" y="404" width="0.3460%" height="15" fill="rgb(238,207,15)" fg:x="32030" fg:w="178"/><text x="62.5191%" y="414.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (102 samples, 0.20%)</title><rect x="62.6813%" y="500" width="0.1983%" height="15" fill="rgb(213,199,42)" fg:x="32242" fg:w="102"/><text x="62.9313%" y="510.50"></text></g><g><title>arrow::py::(anonymous namespace)::PandasWriter::GetSeriesResult (pyarrow/libarrow_python.so.2000) (107 samples, 0.21%)</title><rect x="62.6774%" y="452" width="0.2080%" height="15" fill="rgb(235,201,11)" fg:x="32240" fg:w="107"/><text x="62.9274%" y="462.50"></text></g><g><title>arrow::py::(anonymous namespace)::PandasWriter::MakeBlock1D (pyarrow/libarrow_python.so.2000) (107 samples, 0.21%)</title><rect x="62.6774%" y="468" width="0.2080%" height="15" fill="rgb(207,46,11)" fg:x="32240" fg:w="107"/><text x="62.9274%" y="478.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (105 samples, 0.20%)</title><rect x="62.6813%" y="484" width="0.2041%" height="15" fill="rgb(241,35,35)" fg:x="32242" fg:w="105"/><text x="62.9313%" y="494.50"></text></g><g><title>arrow::py::ConvertArrayToPandas (pyarrow/libarrow_python.so.2000) (188 samples, 0.37%)</title><rect x="62.6210%" y="420" width="0.3655%" height="15" fill="rgb(243,32,47)" fg:x="32211" fg:w="188"/><text x="62.8710%" y="430.50"></text></g><g><title>arrow::py::ConvertChunkedArrayToPandas (pyarrow/libarrow_python.so.2000) (188 samples, 0.37%)</title><rect x="62.6210%" y="436" width="0.3655%" height="15" fill="rgb(247,202,23)" fg:x="32211" fg:w="188"/><text x="62.8710%" y="446.50"></text></g><g><title>from_row_batch (arrakis/block.py:409) (348 samples, 0.68%)</title><rect x="62.6210%" y="372" width="0.6765%" height="15" fill="rgb(219,102,11)" fg:x="32211" fg:w="348"/><text x="62.8710%" y="382.50"></text></g><g><title>_arrow_to_numpy_array (arrakis/block.py:511) (348 samples, 0.68%)</title><rect x="62.6210%" y="388" width="0.6765%" height="15" fill="rgb(243,110,44)" fg:x="32211" fg:w="348"/><text x="62.8710%" y="398.50"></text></g><g><title>to_numpy (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (348 samples, 0.68%)</title><rect x="62.6210%" y="404" width="0.6765%" height="15" fill="rgb(222,74,54)" fg:x="32211" fg:w="348"/><text x="62.8710%" y="414.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (159 samples, 0.31%)</title><rect x="62.9885%" y="420" width="0.3091%" height="15" fill="rgb(216,99,12)" fg:x="32400" fg:w="159"/><text x="63.2385%" y="430.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (159 samples, 0.31%)</title><rect x="62.9885%" y="436" width="0.3091%" height="15" fill="rgb(226,22,26)" fg:x="32400" fg:w="159"/><text x="63.2385%" y="446.50"></text></g><g><title>read (arrakis_backend_kafka/backend.py:332) (737 samples, 1.43%)</title><rect x="61.8667%" y="340" width="1.4328%" height="15" fill="rgb(217,163,10)" fg:x="31823" fg:w="737"/><text x="62.1167%" y="350.50"></text></g><g><title>&lt;listcomp&gt; (arrakis_backend_kafka/backend.py:333) (737 samples, 1.43%)</title><rect x="61.8667%" y="356" width="1.4328%" height="15" fill="rgb(213,25,53)" fg:x="31823" fg:w="737"/><text x="62.1167%" y="366.50"></text></g><g><title>stream (arrakis_backend_kafka/backend.py:177) (30,962 samples, 60.19%)</title><rect x="3.1689%" y="324" width="60.1929%" height="15" fill="rgb(252,105,26)" fg:x="1630" fg:w="30962"/><text x="3.4189%" y="334.50">stream (arrakis_backend_kafka/backend.py:177)</text></g><g><title>_convert_blocks_to_batches (arrakis_server/server.py:588) (30,965 samples, 60.20%)</title><rect x="3.1650%" y="308" width="60.1987%" height="15" fill="rgb(220,39,43)" fg:x="1628" fg:w="30965"/><text x="3.4150%" y="318.50">_convert_blocks_to_batches (arrakis_server/server.py:588)</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (1,134 samples, 2.20%)</title><rect x="63.4356%" y="484" width="2.2046%" height="15" fill="rgb(229,68,48)" fg:x="32630" fg:w="1134"/><text x="63.6856%" y="494.50">_..</text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (1,159 samples, 2.25%)</title><rect x="63.4356%" y="468" width="2.2532%" height="15" fill="rgb(252,8,32)" fg:x="32630" fg:w="1159"/><text x="63.6856%" y="478.50">p..</text></g><g><title>arrow::py::NumPyBuffer::NumPyBuffer (pyarrow/libarrow_python.so.2000) (1,171 samples, 2.28%)</title><rect x="63.4220%" y="452" width="2.2765%" height="15" fill="rgb(223,20,43)" fg:x="32623" fg:w="1171"/><text x="63.6720%" y="462.50">a..</text></g><g><title>arrow::py::NumPyConverter::VisitNative&lt;arrow::DoubleType&gt; (pyarrow/libarrow_python.so.2000) (1,182 samples, 2.30%)</title><rect x="63.4025%" y="404" width="2.2979%" height="15" fill="rgb(229,81,49)" fg:x="32613" fg:w="1182"/><text x="63.6525%" y="414.50">a..</text></g><g><title>arrow::py::NumPyConverter::ConvertData&lt;arrow::DoubleType&gt; (pyarrow/libarrow_python.so.2000) (1,173 samples, 2.28%)</title><rect x="63.4200%" y="420" width="2.2804%" height="15" fill="rgb(236,28,36)" fg:x="32622" fg:w="1173"/><text x="63.6700%" y="430.50">a..</text></g><g><title>arrow::py::NumPyConverter::PrepareInputData&lt;arrow::DoubleType&gt; (pyarrow/libarrow_python.so.2000) (1,172 samples, 2.28%)</title><rect x="63.4220%" y="436" width="2.2785%" height="15" fill="rgb(249,185,26)" fg:x="32623" fg:w="1172"/><text x="63.6720%" y="446.50">a..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (449 samples, 0.87%)</title><rect x="65.7180%" y="484" width="0.8729%" height="15" fill="rgb(249,174,33)" fg:x="33804" fg:w="449"/><text x="65.9680%" y="494.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (454 samples, 0.88%)</title><rect x="65.7180%" y="468" width="0.8826%" height="15" fill="rgb(233,201,37)" fg:x="33804" fg:w="454"/><text x="65.9680%" y="478.50"></text></g><g><title>arrow::py::NumPyConverter::ConvertData&lt;arrow::FloatType&gt; (pyarrow/libarrow_python.so.2000) (457 samples, 0.89%)</title><rect x="65.7141%" y="420" width="0.8884%" height="15" fill="rgb(221,78,26)" fg:x="33802" fg:w="457"/><text x="65.9641%" y="430.50"></text></g><g><title>arrow::py::NumPyConverter::PrepareInputData&lt;arrow::FloatType&gt; (pyarrow/libarrow_python.so.2000) (457 samples, 0.89%)</title><rect x="65.7141%" y="436" width="0.8884%" height="15" fill="rgb(250,127,30)" fg:x="33802" fg:w="457"/><text x="65.9641%" y="446.50"></text></g><g><title>arrow::py::NumPyBuffer::NumPyBuffer (pyarrow/libarrow_python.so.2000) (457 samples, 0.89%)</title><rect x="65.7141%" y="452" width="0.8884%" height="15" fill="rgb(230,49,44)" fg:x="33802" fg:w="457"/><text x="65.9641%" y="462.50"></text></g><g><title>arrow::py::NdarrayToArrow (pyarrow/libarrow_python.so.2000) (1,647 samples, 3.20%)</title><rect x="63.4025%" y="356" width="3.2019%" height="15" fill="rgb(229,67,23)" fg:x="32613" fg:w="1647"/><text x="63.6525%" y="366.50">arr..</text></g><g><title>arrow::py::NumPyConverter::Convert (pyarrow/libarrow_python.so.2000) (1,647 samples, 3.20%)</title><rect x="63.4025%" y="372" width="3.2019%" height="15" fill="rgb(249,83,47)" fg:x="32613" fg:w="1647"/><text x="63.6525%" y="382.50">arr..</text></g><g><title>arrow::VisitTypeInline&lt;arrow::py::NumPyConverter, &gt; (pyarrow/libarrow_python.so.2000) (1,647 samples, 3.20%)</title><rect x="63.4025%" y="388" width="3.2019%" height="15" fill="rgb(215,43,3)" fg:x="32613" fg:w="1647"/><text x="63.6525%" y="398.50">arr..</text></g><g><title>arrow::py::NumPyConverter::VisitNative&lt;arrow::FloatType&gt; (pyarrow/libarrow_python.so.2000) (465 samples, 0.90%)</title><rect x="65.7005%" y="404" width="0.9040%" height="15" fill="rgb(238,154,13)" fg:x="33795" fg:w="465"/><text x="65.9505%" y="414.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (772 samples, 1.50%)</title><rect x="66.6103%" y="372" width="1.5008%" height="15" fill="rgb(219,56,2)" fg:x="34263" fg:w="772"/><text x="66.8603%" y="382.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (786 samples, 1.53%)</title><rect x="66.6103%" y="356" width="1.5281%" height="15" fill="rgb(233,0,4)" fg:x="34263" fg:w="786"/><text x="66.8603%" y="366.50"></text></g><g><title>lib__ndarray_to_array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (2,443 samples, 4.75%)</title><rect x="63.3948%" y="340" width="4.7494%" height="15" fill="rgb(235,30,7)" fg:x="32609" fg:w="2443"/><text x="63.6448%" y="350.50">lib__n..</text></g><g><title>_convert_blocks_to_batches (arrakis_server/server.py:597) (2,455 samples, 4.77%)</title><rect x="63.3812%" y="308" width="4.7727%" height="15" fill="rgb(250,79,13)" fg:x="32602" fg:w="2455"/><text x="63.6312%" y="318.50">_conve..</text></g><g><title>array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (2,455 samples, 4.77%)</title><rect x="63.3812%" y="324" width="4.7727%" height="15" fill="rgb(211,146,34)" fg:x="32602" fg:w="2455"/><text x="63.6312%" y="334.50">array ..</text></g><g><title>__pyx_sq_item_7pyarrow_3lib_Array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (110 samples, 0.21%)</title><rect x="68.7643%" y="452" width="0.2138%" height="15" fill="rgb(228,22,38)" fg:x="35371" fg:w="110"/><text x="69.0143%" y="462.50"></text></g><g><title>Array__assert_cpu (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (294 samples, 0.57%)</title><rect x="69.8316%" y="484" width="0.5716%" height="15" fill="rgb(235,168,5)" fg:x="35920" fg:w="294"/><text x="70.0816%" y="494.50"></text></g><g><title>arrow::ArrayData::device_type (pyarrow/libarrow.so.2000) (221 samples, 0.43%)</title><rect x="69.9736%" y="500" width="0.4296%" height="15" fill="rgb(221,155,16)" fg:x="35993" fg:w="221"/><text x="70.2236%" y="510.50"></text></g><g><title>Array__assert_cpu (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (125 samples, 0.24%)</title><rect x="71.1731%" y="500" width="0.2430%" height="15" fill="rgb(215,215,53)" fg:x="36610" fg:w="125"/><text x="71.4231%" y="510.50"></text></g><g><title>arrow::ArrayData::device_type (pyarrow/libarrow.so.2000) (69 samples, 0.13%)</title><rect x="71.2819%" y="516" width="0.1341%" height="15" fill="rgb(223,4,10)" fg:x="36666" fg:w="69"/><text x="71.5319%" y="526.50"></text></g><g><title>Scalar_init (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (117 samples, 0.23%)</title><rect x="75.1196%" y="516" width="0.2275%" height="15" fill="rgb(234,103,6)" fg:x="38640" fg:w="117"/><text x="75.3696%" y="526.50"></text></g><g><title>__Pyx_PyObject_FastCallDict (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (95 samples, 0.18%)</title><rect x="75.3470%" y="516" width="0.1847%" height="15" fill="rgb(227,97,0)" fg:x="38757" fg:w="95"/><text x="75.5970%" y="526.50"></text></g><g><title>__Pyx_TypeTest (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (62 samples, 0.12%)</title><rect x="75.5317%" y="516" width="0.1205%" height="15" fill="rgb(234,150,53)" fg:x="38852" fg:w="62"/><text x="75.7817%" y="526.50"></text></g><g><title>__pyx_tp_new_7pyarrow_3lib_DoubleScalar (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (218 samples, 0.42%)</title><rect x="75.6522%" y="516" width="0.4238%" height="15" fill="rgb(228,201,54)" fg:x="38914" fg:w="218"/><text x="75.9022%" y="526.50"></text></g><g><title>__pyx_tp_new_7pyarrow_3lib_FloatScalar (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (52 samples, 0.10%)</title><rect x="76.0761%" y="516" width="0.1011%" height="15" fill="rgb(222,22,37)" fg:x="39132" fg:w="52"/><text x="76.3261%" y="526.50"></text></g><g><title>lib_get_scalar_class_from_type (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (336 samples, 0.65%)</title><rect x="76.1771%" y="516" width="0.6532%" height="15" fill="rgb(237,53,32)" fg:x="39184" fg:w="336"/><text x="76.4271%" y="526.50"></text></g><g><title>__Pyx_PyDict_GetItem (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (254 samples, 0.49%)</title><rect x="76.3366%" y="532" width="0.4938%" height="15" fill="rgb(233,25,53)" fg:x="39266" fg:w="254"/><text x="76.5866%" y="542.50"></text></g><g><title>Scalar_wrap (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (2,855 samples, 5.55%)</title><rect x="71.4161%" y="500" width="5.5504%" height="15" fill="rgb(210,40,34)" fg:x="36735" fg:w="2855"/><text x="71.6661%" y="510.50">Scalar_..</text></g><g><title>std::_Sp_counted_base&lt;(__gnu_cxx::_Lock_policy)2&gt;::_M_release (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (70 samples, 0.14%)</title><rect x="76.8304%" y="516" width="0.1361%" height="15" fill="rgb(241,220,44)" fg:x="39520" fg:w="70"/><text x="77.0804%" y="526.50"></text></g><g><title>arrow::Array::IsValid (pyarrow/libarrow_python.so.2000) (57 samples, 0.11%)</title><rect x="77.4972%" y="532" width="0.1108%" height="15" fill="rgb(235,28,35)" fg:x="39863" fg:w="57"/><text x="77.7472%" y="542.50"></text></g><g><title>operator new (libstdc++.so.6.0.29) (114 samples, 0.22%)</title><rect x="78.4012%" y="564" width="0.2216%" height="15" fill="rgb(210,56,17)" fg:x="40328" fg:w="114"/><text x="78.6512%" y="574.50"></text></g><g><title>malloc (libc.so.6) (100 samples, 0.19%)</title><rect x="78.4284%" y="580" width="0.1944%" height="15" fill="rgb(224,130,29)" fg:x="40342" fg:w="100"/><text x="78.6784%" y="590.50"></text></g><g><title>std::__shared_ptr&lt;arrow::Scalar, (__gnu_cxx::_Lock_policy)2&gt;::operator=&lt;arrow::DoubleScalar&gt; (pyarrow/libarrow.so.2000) (61 samples, 0.12%)</title><rect x="78.7025%" y="564" width="0.1186%" height="15" fill="rgb(235,212,8)" fg:x="40483" fg:w="61"/><text x="78.9525%" y="574.50"></text></g><g><title>arrow::MakeNullScalar (pyarrow/libarrow.so.2000) (745 samples, 1.45%)</title><rect x="77.6080%" y="532" width="1.4483%" height="15" fill="rgb(223,33,50)" fg:x="39920" fg:w="745"/><text x="77.8580%" y="542.50"></text></g><g><title>arrow::VisitTypeInline&lt;arrow::(anonymous namespace)::MakeNullImpl, &gt; (pyarrow/libarrow.so.2000) (591 samples, 1.15%)</title><rect x="77.9074%" y="548" width="1.1490%" height="15" fill="rgb(219,149,13)" fg:x="40074" fg:w="591"/><text x="78.1574%" y="558.50"></text></g><g><title>std::__weak_ptr&lt;arrow::Scalar, (__gnu_cxx::_Lock_policy)2&gt;::_M_assign (pyarrow/libarrow_python.so.2000) (97 samples, 0.19%)</title><rect x="78.8678%" y="564" width="0.1886%" height="15" fill="rgb(250,156,29)" fg:x="40568" fg:w="97"/><text x="79.1178%" y="574.50"></text></g><g><title>Array_getitem (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (4,490 samples, 8.73%)</title><rect x="70.4032%" y="484" width="8.7290%" height="15" fill="rgb(216,193,19)" fg:x="36214" fg:w="4490"/><text x="70.6532%" y="494.50">Array_getite..</text></g><g><title>arrow::Array::GetScalar (pyarrow/libarrow.so.2000) (1,114 samples, 2.17%)</title><rect x="76.9664%" y="500" width="2.1657%" height="15" fill="rgb(216,135,14)" fg:x="39590" fg:w="1114"/><text x="77.2164%" y="510.50">a..</text></g><g><title>arrow::internal::ScalarFromArraySlotImpl::Finish &amp;&amp; (pyarrow/libarrow.so.2000) (1,084 samples, 2.11%)</title><rect x="77.0248%" y="516" width="2.1074%" height="15" fill="rgb(241,47,5)" fg:x="39620" fg:w="1084"/><text x="77.2748%" y="526.50">a..</text></g><g><title>__pyx_sq_item_7pyarrow_3lib_StructType (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (5,281 samples, 10.27%)</title><rect x="68.9782%" y="452" width="10.2667%" height="15" fill="rgb(233,42,35)" fg:x="35481" fg:w="5281"/><text x="69.2282%" y="462.50">__pyx_sq_item_7..</text></g><g><title>__getitem__ (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (4,966 samples, 9.65%)</title><rect x="69.5906%" y="468" width="9.6543%" height="15" fill="rgb(231,13,6)" fg:x="35796" fg:w="4966"/><text x="69.8406%" y="478.50">__getitem__ (p..</text></g><g><title>arrow::Status::~Status (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (135 samples, 0.26%)</title><rect x="79.2449%" y="452" width="0.2625%" height="15" fill="rgb(207,181,40)" fg:x="40762" fg:w="135"/><text x="79.4949%" y="462.50"></text></g><g><title>arrow::ArrayBuilder::UnsafeAppendToBitmap (pyarrow/libarrow_python.so.2000) (207 samples, 0.40%)</title><rect x="80.5338%" y="500" width="0.4024%" height="15" fill="rgb(254,173,49)" fg:x="41425" fg:w="207"/><text x="80.7838%" y="510.50"></text></g><g><title>arrow::BufferBuilder::UnsafeAppend (pyarrow/libarrow_python.so.2000) (96 samples, 0.19%)</title><rect x="80.9363%" y="500" width="0.1866%" height="15" fill="rgb(221,1,38)" fg:x="41632" fg:w="96"/><text x="81.1863%" y="510.50"></text></g><g><title>arrow::VisitTypeInline&lt;arrow::(anonymous namespace)::AppendScalarImpl&lt;arrow::Scalar const*&gt;, &gt; (pyarrow/libarrow.so.2000) (538 samples, 1.05%)</title><rect x="80.1722%" y="484" width="1.0459%" height="15" fill="rgb(206,124,46)" fg:x="41239" fg:w="538"/><text x="80.4222%" y="494.50"></text></g><g><title>arrow::ArrayBuilder::AppendScalar (pyarrow/libarrow.so.2000) (790 samples, 1.54%)</title><rect x="79.9817%" y="468" width="1.5358%" height="15" fill="rgb(249,21,11)" fg:x="41141" fg:w="790"/><text x="80.2317%" y="478.50"></text></g><g><title>std::_Sp_counted_base&lt;(__gnu_cxx::_Lock_policy)2&gt;::_M_release (pyarrow/libarrow.so.2000) (154 samples, 0.30%)</title><rect x="81.2182%" y="484" width="0.2994%" height="15" fill="rgb(222,201,40)" fg:x="41777" fg:w="154"/><text x="81.4682%" y="494.50"></text></g><g><title>arrow::Result&lt;std::shared_ptr&lt;arrow::Scalar&gt; &gt;::Destroy (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (128 samples, 0.25%)</title><rect x="81.5176%" y="468" width="0.2488%" height="15" fill="rgb(235,61,29)" fg:x="41931" fg:w="128"/><text x="81.7676%" y="478.50"></text></g><g><title>arrow::Status::~Status (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (80 samples, 0.16%)</title><rect x="81.7664%" y="468" width="0.1555%" height="15" fill="rgb(219,207,3)" fg:x="42059" fg:w="80"/><text x="82.0164%" y="478.50"></text></g><g><title>arrow::py::is_scalar (pyarrow/libarrow_python.so.2000) (69 samples, 0.13%)</title><rect x="81.9219%" y="468" width="0.1341%" height="15" fill="rgb(222,56,46)" fg:x="42139" fg:w="69"/><text x="82.1719%" y="478.50"></text></g><g><title>lib_pyarrow_is_scalar (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (63 samples, 0.12%)</title><rect x="81.9336%" y="484" width="0.1225%" height="15" fill="rgb(239,76,54)" fg:x="42145" fg:w="63"/><text x="82.1836%" y="494.50"></text></g><g><title>arrow::py::unwrap_scalar (pyarrow/libarrow_python.so.2000) (413 samples, 0.80%)</title><rect x="82.0561%" y="468" width="0.8029%" height="15" fill="rgb(231,124,27)" fg:x="42208" fg:w="413"/><text x="82.3061%" y="478.50"></text></g><g><title>pyarrow_unwrap_scalar (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (376 samples, 0.73%)</title><rect x="82.1280%" y="484" width="0.7310%" height="15" fill="rgb(249,195,6)" fg:x="42245" fg:w="376"/><text x="82.3780%" y="494.50"></text></g><g><title>arrow::py::(anonymous namespace)::PyPrimitiveConverter&lt;arrow::DoubleType, void&gt;::Append (pyarrow/libarrow_python.so.2000) (1,774 samples, 3.45%)</title><rect x="79.5074%" y="452" width="3.4488%" height="15" fill="rgb(237,174,47)" fg:x="40897" fg:w="1774"/><text x="79.7574%" y="462.50">arr..</text></g><g><title>arrow::VisitTypeInline&lt;arrow::(anonymous namespace)::AppendScalarImpl&lt;arrow::Scalar const*&gt;, &gt; (pyarrow/libarrow.so.2000) (111 samples, 0.22%)</title><rect x="83.1739%" y="484" width="0.2158%" height="15" fill="rgb(206,201,31)" fg:x="42783" fg:w="111"/><text x="83.4239%" y="494.50"></text></g><g><title>arrow::ArrayBuilder::AppendScalar (pyarrow/libarrow.so.2000) (196 samples, 0.38%)</title><rect x="83.0942%" y="468" width="0.3810%" height="15" fill="rgb(231,57,52)" fg:x="42742" fg:w="196"/><text x="83.3442%" y="478.50"></text></g><g><title>arrow::py::unwrap_scalar (pyarrow/libarrow_python.so.2000) (102 samples, 0.20%)</title><rect x="83.5841%" y="468" width="0.1983%" height="15" fill="rgb(248,177,22)" fg:x="42994" fg:w="102"/><text x="83.8341%" y="478.50"></text></g><g><title>pyarrow_unwrap_scalar (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (93 samples, 0.18%)</title><rect x="83.6016%" y="484" width="0.1808%" height="15" fill="rgb(215,211,37)" fg:x="43003" fg:w="93"/><text x="83.8516%" y="494.50"></text></g><g><title>arrow::py::(anonymous namespace)::PyPrimitiveConverter&lt;arrow::FloatType, void&gt;::Append (pyarrow/libarrow_python.so.2000) (440 samples, 0.86%)</title><rect x="82.9562%" y="452" width="0.8554%" height="15" fill="rgb(241,128,51)" fg:x="42671" fg:w="440"/><text x="83.2062%" y="462.50"></text></g><g><title>arrow::py::CheckPyError (pyarrow/libarrow_python.so.2000) (67 samples, 0.13%)</title><rect x="83.8116%" y="452" width="0.1303%" height="15" fill="rgb(227,165,31)" fg:x="43111" fg:w="67"/><text x="84.0616%" y="462.50"></text></g><g><title>free (libc.so.6) (306 samples, 0.59%)</title><rect x="84.8050%" y="484" width="0.5949%" height="15" fill="rgb(228,167,24)" fg:x="43622" fg:w="306"/><text x="85.0550%" y="494.50"></text></g><g><title>_int_free (libc.so.6) (168 samples, 0.33%)</title><rect x="85.0733%" y="500" width="0.3266%" height="15" fill="rgb(228,143,12)" fg:x="43760" fg:w="168"/><text x="85.3233%" y="510.50"></text></g><g><title>arrow::DoubleScalar::~DoubleScalar (pyarrow/libarrow_python.so.2000) (82 samples, 0.16%)</title><rect x="85.6604%" y="500" width="0.1594%" height="15" fill="rgb(249,149,8)" fg:x="44062" fg:w="82"/><text x="85.9104%" y="510.50"></text></g><g><title>std::_Sp_counted_ptr_inplace&lt;arrow::DoubleScalar, std::allocator&lt;void&gt;, (__gnu_cxx::_Lock_policy)2&gt;::_M_dispose (pyarrow/libarrow_python.so.2000) (88 samples, 0.17%)</title><rect x="85.8743%" y="500" width="0.1711%" height="15" fill="rgb(243,35,44)" fg:x="44172" fg:w="88"/><text x="86.1243%" y="510.50"></text></g><g><title>std::_Sp_counted_base&lt;(__gnu_cxx::_Lock_policy)2&gt;::_M_release_last_use_cold (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (326 samples, 0.63%)</title><rect x="85.4485%" y="484" width="0.6338%" height="15" fill="rgb(246,89,9)" fg:x="43953" fg:w="326"/><text x="85.6985%" y="494.50"></text></g><g><title>__pyx_tp_dealloc_7pyarrow_3lib_Scalar (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (820 samples, 1.59%)</title><rect x="84.4901%" y="468" width="1.5942%" height="15" fill="rgb(233,213,13)" fg:x="43460" fg:w="820"/><text x="84.7401%" y="478.50"></text></g><g><title>arrow::py::internal::VisitSequenceGeneric&lt;arrow::py::internal::VisitSequence&lt;arrow::py::(anonymous namespace)::PyConverter::Extend(_object*, long, long)::{lambda(_object*, bool*)#1}&gt;(_object*, long, arrow::py::(anonymous namespace)::PyConverter::Extend(_object*, long, long)::{lambda(_object*, bool*)#1}&amp;&amp;)::{lambda(_object*, long, bool*)#1}&gt; (pyarrow/libarrow_python.so.2000) (9,231 samples, 17.95%)</title><rect x="68.2530%" y="372" width="17.9459%" height="15" fill="rgb(233,141,41)" fg:x="35108" fg:w="9231"/><text x="68.5030%" y="382.50">arrow::py::internal::VisitSe..</text></g><g><title>arrow::py::(anonymous namespace)::PyListConverter&lt;arrow::ListType&gt;::Append (pyarrow/libarrow_python.so.2000) (9,231 samples, 17.95%)</title><rect x="68.2530%" y="388" width="17.9459%" height="15" fill="rgb(239,167,4)" fg:x="35108" fg:w="9231"/><text x="68.5030%" y="398.50">arrow::py::(anonymous namesp..</text></g><g><title>arrow::py::(anonymous namespace)::PyListConverter&lt;arrow::ListType&gt;::AppendSequence (pyarrow/libarrow_python.so.2000) (9,230 samples, 17.94%)</title><rect x="68.2550%" y="404" width="17.9439%" height="15" fill="rgb(209,217,16)" fg:x="35109" fg:w="9230"/><text x="68.5050%" y="414.50">arrow::py::(anonymous namesp..</text></g><g><title>arrow::py::(anonymous namespace)::PyConverter::Extend (pyarrow/libarrow_python.so.2000) (9,230 samples, 17.94%)</title><rect x="68.2550%" y="420" width="17.9439%" height="15" fill="rgb(219,88,35)" fg:x="35109" fg:w="9230"/><text x="68.5050%" y="430.50">arrow::py::(anonymous namesp..</text></g><g><title>arrow::py::internal::VisitSequenceGeneric&lt;arrow::py::internal::VisitSequence&lt;arrow::py::(anonymous namespace)::PyConverter::Extend(_object*, long, long)::{lambda(_object*, bool*)#1}&gt;(_object*, long, arrow::py::(anonymous namespace)::PyConverter::Extend(_object*, long, long)::{lambda(_object*, bool*)#1}&amp;&amp;)::{lambda(_object*, long, bool*)#1}&gt; (pyarrow/libarrow_python.so.2000) (9,228 samples, 17.94%)</title><rect x="68.2589%" y="436" width="17.9400%" height="15" fill="rgb(220,193,23)" fg:x="35111" fg:w="9228"/><text x="68.5089%" y="446.50">arrow::py::internal::VisitSe..</text></g><g><title>arrow::py::OwnedRef::~OwnedRef (pyarrow/libarrow_python.so.2000) (1,161 samples, 2.26%)</title><rect x="83.9418%" y="452" width="2.2571%" height="15" fill="rgb(230,90,52)" fg:x="43178" fg:w="1161"/><text x="84.1918%" y="462.50">a..</text></g><g><title>__pyx_tp_dealloc_7pyarrow_3lib__Weakrefable (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (59 samples, 0.11%)</title><rect x="86.0842%" y="468" width="0.1147%" height="15" fill="rgb(252,106,19)" fg:x="44280" fg:w="59"/><text x="86.3342%" y="478.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (83 samples, 0.16%)</title><rect x="86.2184%" y="372" width="0.1614%" height="15" fill="rgb(206,74,20)" fg:x="44349" fg:w="83"/><text x="86.4684%" y="382.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (83 samples, 0.16%)</title><rect x="86.2184%" y="388" width="0.1614%" height="15" fill="rgb(230,138,44)" fg:x="44349" fg:w="83"/><text x="86.4684%" y="398.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (345 samples, 0.67%)</title><rect x="86.3797%" y="388" width="0.6707%" height="15" fill="rgb(235,182,43)" fg:x="44432" fg:w="345"/><text x="86.6297%" y="398.50"></text></g><g><title>pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6) (388 samples, 0.75%)</title><rect x="86.3797%" y="372" width="0.7543%" height="15" fill="rgb(242,16,51)" fg:x="44432" fg:w="388"/><text x="86.6297%" y="382.50"></text></g><g><title>arrow::py::ConvertPySequence (pyarrow/libarrow_python.so.2000) (9,750 samples, 18.95%)</title><rect x="68.1811%" y="356" width="18.9549%" height="15" fill="rgb(248,9,4)" fg:x="35071" fg:w="9750"/><text x="68.4311%" y="366.50">arrow::py::ConvertPySequence (..</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (5,397 samples, 10.49%)</title><rect x="87.1593%" y="372" width="10.4922%" height="15" fill="rgb(210,31,22)" fg:x="44833" fg:w="5397"/><text x="87.4093%" y="382.50">__futex_abstime..</text></g><g><title>__pthread_mutex_cond_lock (libc.so.6) (84 samples, 0.16%)</title><rect x="97.6515%" y="372" width="0.1633%" height="15" fill="rgb(239,54,39)" fg:x="50230" fg:w="84"/><text x="97.9015%" y="382.50"></text></g><g><title>__lll_lock_wait (libc.so.6) (84 samples, 0.16%)</title><rect x="97.6515%" y="388" width="0.1633%" height="15" fill="rgb(230,99,41)" fg:x="50230" fg:w="84"/><text x="97.9015%" y="398.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (5,483 samples, 10.66%)</title><rect x="87.1593%" y="356" width="10.6594%" height="15" fill="rgb(253,106,12)" fg:x="44833" fg:w="5483"/><text x="87.4093%" y="366.50">pthread_cond_tim..</text></g><g><title>lib__sequence_to_array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (15,309 samples, 29.76%)</title><rect x="68.1578%" y="340" width="29.7620%" height="15" fill="rgb(213,46,41)" fg:x="35059" fg:w="15309"/><text x="68.4078%" y="350.50">lib__sequence_to_array (pyarrow/lib.cpython-311-..</text></g><g><title>_convert_blocks_to_batches (arrakis_server/server.py:598) (15,312 samples, 29.77%)</title><rect x="68.1539%" y="308" width="29.7679%" height="15" fill="rgb(215,133,35)" fg:x="35057" fg:w="15312"/><text x="68.4039%" y="318.50">_convert_blocks_to_batches (arrakis_server/serve..</text></g><g><title>array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (15,311 samples, 29.77%)</title><rect x="68.1558%" y="324" width="29.7659%" height="15" fill="rgb(213,28,5)" fg:x="35058" fg:w="15311"/><text x="68.4058%" y="334.50">array (pyarrow/lib.cpython-311-x86_64-linux-gnu...</text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (112 samples, 0.22%)</title><rect x="97.9995%" y="388" width="0.2177%" height="15" fill="rgb(215,77,49)" fg:x="50409" fg:w="112"/><text x="98.2495%" y="398.50"></text></g><g><title>arrow::py::ConvertPySequence (pyarrow/libarrow_python.so.2000) (145 samples, 0.28%)</title><rect x="97.9373%" y="356" width="0.2819%" height="15" fill="rgb(248,100,22)" fg:x="50377" fg:w="145"/><text x="98.1873%" y="366.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (113 samples, 0.22%)</title><rect x="97.9995%" y="372" width="0.2197%" height="15" fill="rgb(208,67,9)" fg:x="50409" fg:w="113"/><text x="98.2495%" y="382.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (153 samples, 0.30%)</title><rect x="98.2367%" y="372" width="0.2974%" height="15" fill="rgb(219,133,21)" fg:x="50531" fg:w="153"/><text x="98.4867%" y="382.50"></text></g><g><title>_convert_blocks_to_batches (arrakis_server/server.py:601) (320 samples, 0.62%)</title><rect x="97.9218%" y="308" width="0.6221%" height="15" fill="rgb(246,46,29)" fg:x="50369" fg:w="320"/><text x="98.1718%" y="318.50"></text></g><g><title>array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (320 samples, 0.62%)</title><rect x="97.9218%" y="324" width="0.6221%" height="15" fill="rgb(246,185,52)" fg:x="50369" fg:w="320"/><text x="98.1718%" y="334.50"></text></g><g><title>lib__sequence_to_array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (316 samples, 0.61%)</title><rect x="97.9295%" y="340" width="0.6143%" height="15" fill="rgb(252,136,11)" fg:x="50373" fg:w="316"/><text x="98.1795%" y="350.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (158 samples, 0.31%)</title><rect x="98.2367%" y="356" width="0.3072%" height="15" fill="rgb(219,138,53)" fg:x="50531" fg:w="158"/><text x="98.4867%" y="366.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (258 samples, 0.50%)</title><rect x="98.6041%" y="372" width="0.5016%" height="15" fill="rgb(211,51,23)" fg:x="50720" fg:w="258"/><text x="98.8541%" y="382.50"></text></g><g><title>_convert_blocks_to_batches (arrakis_server/server.py:603) (296 samples, 0.58%)</title><rect x="98.5439%" y="308" width="0.5755%" height="15" fill="rgb(247,221,28)" fg:x="50689" fg:w="296"/><text x="98.7939%" y="318.50"></text></g><g><title>from_arrays (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (296 samples, 0.58%)</title><rect x="98.5439%" y="324" width="0.5755%" height="15" fill="rgb(251,222,45)" fg:x="50689" fg:w="296"/><text x="98.7939%" y="334.50"></text></g><g><title>validate (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (273 samples, 0.53%)</title><rect x="98.5886%" y="340" width="0.5307%" height="15" fill="rgb(217,162,53)" fg:x="50712" fg:w="273"/><text x="98.8386%" y="350.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (265 samples, 0.52%)</title><rect x="98.6041%" y="356" width="0.5152%" height="15" fill="rgb(229,93,14)" fg:x="50720" fg:w="265"/><text x="98.8541%" y="366.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (93 samples, 0.18%)</title><rect x="99.1660%" y="388" width="0.1808%" height="15" fill="rgb(209,67,49)" fg:x="51009" fg:w="93"/><text x="99.4160%" y="398.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (95 samples, 0.18%)</title><rect x="99.1660%" y="372" width="0.1847%" height="15" fill="rgb(213,87,29)" fg:x="51009" fg:w="95"/><text x="99.4160%" y="382.50"></text></g><g><title>arrow::py::ConvertPySequence (pyarrow/libarrow_python.so.2000) (111 samples, 0.22%)</title><rect x="99.1388%" y="356" width="0.2158%" height="15" fill="rgb(205,151,52)" fg:x="50995" fg:w="111"/><text x="99.3888%" y="366.50"></text></g><g><title>__futex_abstimed_wait_common (libc.so.6) (305 samples, 0.59%)</title><rect x="99.3623%" y="372" width="0.5929%" height="15" fill="rgb(253,215,39)" fg:x="51110" fg:w="305"/><text x="99.6123%" y="382.50"></text></g><g><title>pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6) (314 samples, 0.61%)</title><rect x="99.3623%" y="356" width="0.6104%" height="15" fill="rgb(221,220,41)" fg:x="51110" fg:w="314"/><text x="99.6123%" y="366.50"></text></g><g><title>_convert_blocks_to_batches (arrakis_server/server.py:605) (440 samples, 0.86%)</title><rect x="99.1213%" y="308" width="0.8554%" height="15" fill="rgb(218,133,21)" fg:x="50986" fg:w="440"/><text x="99.3713%" y="318.50"></text></g><g><title>array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (439 samples, 0.85%)</title><rect x="99.1232%" y="324" width="0.8535%" height="15" fill="rgb(221,193,43)" fg:x="50987" fg:w="439"/><text x="99.3732%" y="334.50"></text></g><g><title>lib__sequence_to_array (pyarrow/lib.cpython-311-x86_64-linux-gnu.so) (437 samples, 0.85%)</title><rect x="99.1271%" y="340" width="0.8496%" height="15" fill="rgb(240,128,52)" fg:x="50989" fg:w="437"/><text x="99.3771%" y="350.50"></text></g><g><title>_generate_stream (arrakis_server/server.py:620) (49,817 samples, 96.85%)</title><rect x="3.1378%" y="292" width="96.8486%" height="15" fill="rgb(253,114,12)" fg:x="1614" fg:w="49817"/><text x="3.3878%" y="302.50">_generate_stream (arrakis_server/server.py:620)</text></g><g><title>all (51,438 samples, 100%)</title><rect x="0.0000%" y="52" width="100.0000%" height="15" fill="rgb(215,223,47)" fg:x="0" fg:w="51438"/><text x="0.2500%" y="62.50"></text></g><g><title>clone3 (libc.so.6) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="68" width="99.9942%" height="15" fill="rgb(248,225,23)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="78.50">clone3 (libc.so.6)</text></g><g><title>start_thread (libc.so.6) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="84" width="99.9942%" height="15" fill="rgb(250,108,0)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="94.50">start_thread (libc.so.6)</text></g><g><title>grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix(char const*, void (*)(void*), void*, bool*, grpc_core::Thread::Options const&amp;)::{lambda(void*)#1}::_FUN (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="100" width="99.9942%" height="15" fill="rgb(228,208,7)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="110.50">grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix(char const*, void (*)(void*), void*, bool*, grpc_core::Thread::Options const&amp;)::{lambda(vo..</text></g><g><title>grpc::ThreadManager::WorkerThread::Run (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="116" width="99.9942%" height="15" fill="rgb(244,45,10)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="126.50">grpc::ThreadManager::WorkerThread::Run (pyarrow/libarrow_flight.so.2000)</text></g><g><title>grpc::ThreadManager::MainWorkLoop (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="132" width="99.9942%" height="15" fill="rgb(207,125,25)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="142.50">grpc::ThreadManager::MainWorkLoop (pyarrow/libarrow_flight.so.2000)</text></g><g><title>grpc::Server::SyncRequest::ContinueRunAfterInterception (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="148" width="99.9942%" height="15" fill="rgb(210,195,18)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="158.50">grpc::Server::SyncRequest::ContinueRunAfterInterception (pyarrow/libarrow_flight.so.2000)</text></g><g><title>grpc::internal::ServerStreamingHandler&lt;arrow::flight::protocol::FlightService::Service, arrow::flight::protocol::Ticket, arrow::flight::protocol::FlightData&gt;::RunHandler (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="164" width="99.9942%" height="15" fill="rgb(249,80,12)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="174.50">grpc::internal::ServerStreamingHandler&lt;arrow::flight::protocol::FlightService::Service, arrow::flight::protocol::Ticket, arrow::flight::protocol::FlightData&gt;::RunHandl..</text></g><g><title>std::_Function_handler&lt;grpc::Status(arrow::flight::protocol::FlightService::Service*, grpc::ServerContext*, arrow::flight::protocol::Ticket const*, grpc::ServerWriter&lt;arrow::flight::protocol::FlightData&gt;*), arrow::flight::protocol::FlightService::Service()::Service::{lambda(arrow::flight::protocol::FlightService::Service*, grpc::ServerContext*, arrow::flight::protocol::Ticket const*, grpc::ServerWriter&lt;arrow::flight::protocol::FlightData&gt;*)#6}&gt;::_M_invoke (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="180" width="99.9942%" height="15" fill="rgb(221,65,9)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="190.50">std::_Function_handler&lt;grpc::Status(arrow::flight::protocol::FlightService::Service*, grpc::ServerContext*, arrow::flight::protocol::Ticket const*, grpc::ServerWriter&lt;..</text></g><g><title>arrow::flight::transport::grpc::(anonymous namespace)::GrpcServiceHandler::DoGet (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="196" width="99.9942%" height="15" fill="rgb(235,49,36)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="206.50">arrow::flight::transport::grpc::(anonymous namespace)::GrpcServiceHandler::DoGet (pyarrow/libarrow_flight.so.2000)</text></g><g><title>arrow::flight::internal::ServerTransport::DoGet (pyarrow/libarrow_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="212" width="99.9942%" height="15" fill="rgb(225,32,20)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="222.50">arrow::flight::internal::ServerTransport::DoGet (pyarrow/libarrow_flight.so.2000)</text></g><g><title>arrow::py::flight::PyFlightDataStream::Next (pyarrow/libarrow_python_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="228" width="99.9942%" height="15" fill="rgb(215,141,46)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="238.50">arrow::py::flight::PyFlightDataStream::Next (pyarrow/libarrow_python_flight.so.2000)</text></g><g><title>arrow::py::flight::PyGeneratorFlightDataStream::Next (pyarrow/libarrow_python_flight.so.2000) (51,435 samples, 99.99%)</title><rect x="0.0058%" y="244" width="99.9942%" height="15" fill="rgb(250,160,47)" fg:x="3" fg:w="51435"/><text x="0.2558%" y="254.50">arrow::py::flight::PyGeneratorFlightDataStream::Next (pyarrow/libarrow_python_flight.so.2000)</text></g><g><title>std::_Function_handler&lt;arrow::Status(_object*, arrow::flight::FlightPayload*), arrow::Status (*)(void*, arrow::flight::FlightPayload*)&gt;::_M_invoke (pyarrow/_flight.cpython-311-x86_64-linux-gnu.so) (49,828 samples, 96.87%)</title><rect x="3.1300%" y="260" width="96.8700%" height="15" fill="rgb(216,222,40)" fg:x="1610" fg:w="49828"/><text x="3.3800%" y="270.50">std::_Function_handler&lt;arrow::Status(_object*, arrow::flight::FlightPayload*), arrow::Status (*)(void*, arrow::flight::FlightPayload*)&gt;::_M_invoke (pyarrow/_fligh..</text></g><g><title>_flight__data_stream_next (pyarrow/_flight.cpython-311-x86_64-linux-gnu.so) (49,828 samples, 96.87%)</title><rect x="3.1300%" y="276" width="96.8700%" height="15" fill="rgb(234,217,39)" fg:x="1610" fg:w="49828"/><text x="3.3800%" y="286.50">_flight__data_stream_next (pyarrow/_flight.cpython-311-x86_64-linux-gnu.so)</text></g></svg></svg>

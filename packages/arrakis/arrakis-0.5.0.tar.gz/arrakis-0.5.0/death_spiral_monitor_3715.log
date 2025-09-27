@@ -1,0 +1,6 @@
+# Death Spiral Monitoring Log
+# PID: 3715, Duration: 6s, Interval: 5s
+# Started: 2025-08-06T20:00:54.465294
+
+{'iteration': 1, 'elapsed_time': 2.1, 'process': {'timestamp': '2025-08-06T20:00:55.480624', 'pid': 3715, 'rss_mb': 890.1, 'vms_mb': 4584.3, 'uss_mb': 653.3, 'pss_mb': 680.9, 'cpu_percent': 0.0, 'num_threads': 175, 'num_fds': 386, 'connections': 5}, 'system': {'memory_total_gb': 31.0, 'memory_available_gb': 14.2, 'memory_used_percent': 54.3, 'cpu_overall': 7.3, 'cpu_cores': [16.3, 9.4, 3.0, 2.5, 6.0, 19.5, 7.5, 2.5], 'load_1min': 0.72, 'load_5min': 0.45, 'load_15min': 0.29}, 'network': {'total_system_connections': 198, 'process_connections': 5, 'connection_states': {'ESTABLISHED': 5}}}
+{'iteration': 2, 'elapsed_time': 7.1, 'process': {'timestamp': '2025-08-06T20:01:00.531730', 'pid': 3715, 'rss_mb': 889.5, 'vms_mb': 4584.3, 'uss_mb': 652.7, 'pss_mb': 680.3, 'cpu_percent': 10.0, 'num_threads': 175, 'num_fds': 388, 'connections': 5}, 'system': {'memory_total_gb': 31.0, 'memory_available_gb': 14.2, 'memory_used_percent': 54.4, 'cpu_overall': 10.4, 'cpu_cores': [7.4, 6.8, 7.8, 7.9, 5.8, 8.5, 9.3, 7.4], 'load_1min': 0.75, 'load_5min': 0.46, 'load_15min': 0.29}, 'network': {'total_system_connections': 179, 'process_connections': 5, 'connection_states': {'ESTABLISHED': 5}}}
