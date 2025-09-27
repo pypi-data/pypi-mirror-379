@@ -1,0 +1,5 @@
+typeguard
+yt_dlp
+aiohttp
+screeninfo
+requests

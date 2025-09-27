@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infosecmachines"
+version = "0.0.1"
+authors = [
+    { name = "Flick" }
+]
+description = "Infosec machines API created in Python"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+dependencies = [
+    "typeguard",
+    "yt_dlp",
+    "aiohttp",
+    "screeninfo",
+    "requests",
+]
+
+[project.urls]
+Homepage = "https://github.com/SelfDreamer/Infosecmachines"
