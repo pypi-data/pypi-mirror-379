@@ -1,0 +1,7 @@
+boto3_dataclass_appmesh/__init__.py,sha256=Cb0HhHpR3qXhZfbLtL1dhh25DXU3O7uD7dMaS-8077E,108
+boto3_dataclass_appmesh/caster.py,sha256=djW5A04gqO8wAUb18r9dIeNsgdydyaVCLp8wMhCUyG0,7310
+boto3_dataclass_appmesh/type_defs.py,sha256=OFNZC_pG0GWO9V7Db3rH30fCNacCxQY8sjWP4B_YWX4,273462
+boto3_dataclass_appmesh-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_appmesh-1.40.0.dist-info/METADATA,sha256=RbI5x9QR_93gu6RlojspUbJ5UApJPcp9u2nKDGEyK4g,1641
+boto3_dataclass_appmesh-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_appmesh-1.40.0.dist-info/RECORD,,
