@@ -1,0 +1,7 @@
+boto3_dataclass_cloudtrail/__init__.py,sha256=n9VW2mqP2WFj2InlHG6IvFgS81Gd1t0REfKnpvsl_tI,114
+boto3_dataclass_cloudtrail/caster.py,sha256=Zyr8vaQp3F2eMOIxq2lKSvivW92WJAP_MRQ1Xf5a7xQ,9191
+boto3_dataclass_cloudtrail/type_defs.py,sha256=pFCAMWeNuoKHz-9ZL9MuPm-nvW9pBZmMuF107POPxMI,152878
+boto3_dataclass_cloudtrail-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_cloudtrail-1.40.0.dist-info/METADATA,sha256=6A7vWJ0yQqn94zmXqyR99CgKmKovnMx_s-0k6RJkioY,1662
+boto3_dataclass_cloudtrail-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_cloudtrail-1.40.0.dist-info/RECORD,,
