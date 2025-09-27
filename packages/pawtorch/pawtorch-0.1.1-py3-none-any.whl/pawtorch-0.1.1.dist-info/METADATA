@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: pawtorch
+Version: 0.1.1
+Summary: Cat-themed alias layer for PyTorch. import pawtorch -> use paw, nyanya, etc.
+License: MIT
+Project-URL: Homepage, https://example.com/pawtorch
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.1
