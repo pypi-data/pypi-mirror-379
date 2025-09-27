@@ -1,0 +1,2 @@
+[console_scripts]
+paraview-mcp-server = paraview_mcp.paraview_mcp_server:main
