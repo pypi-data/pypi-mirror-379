@@ -1,0 +1,4 @@
+[console_scripts]
+A3rbDL = Anime3rbDL.__main__:main
+An3rbDL = Anime3rbDL.__main__:main
+Anime3rbDL = Anime3rbDL.__main__:main
