@@ -1,0 +1,13 @@
+freeassoc/__init__.py,sha256=4ca0jIyTsf72VrPaMpUqGkqaPUfCFaOHiMoLuStunNA,665
+freeassoc/analysis.py,sha256=FnmpKSxCmKaZ6kJiJVPwh3z518TfZnAFb8dt-TJEMzs,4432
+freeassoc/cache.py,sha256=13gNYwj_DMSRcR_AYkyJZhscQPvx4TH5k0X9u96Q9Hk,3677
+freeassoc/chat.py,sha256=A-9h7vW0nn12uLdEqhqa3YbEMD8imiCMJ4dqRhvWCm8,5151
+freeassoc/clustering.py,sha256=NDxEUwgS-ZOpS4i0D-fHSNGT8dU6zhtbs8BQQ8WMu9U,3967
+freeassoc/core.py,sha256=2qfMbGrL9H7MufVfZjbXAZqYT1UAYE2xqf67yFILonQ,2354
+freeassoc/embeddings.py,sha256=oJre_mz5Koud4j-d2os5TmRx7keTdWaHfR7jEIZ9hc4,6987
+freeassoc/projection.py,sha256=eyqWXOXxSdr19YUUNXF-5ZaYRBLybz3hv8kVIhj8SIU,1981
+freeassoc-0.1.0.dist-info/licenses/LICENSE,sha256=nNFLYUHBqan6xK6LjNruKC4Jk0GxOUYaEwX59MpbCSI,495
+freeassoc-0.1.0.dist-info/METADATA,sha256=OOwZ2f_o2glS_0_-Fi2uz8fyUaUaxRmeknfsywgIvgo,1600
+freeassoc-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+freeassoc-0.1.0.dist-info/top_level.txt,sha256=4MMZ53muNfuhJcpl6lLWE1KUu81TYvEcsCjS1U6mVTM,10
+freeassoc-0.1.0.dist-info/RECORD,,
