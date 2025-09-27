@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/fuzzylinguistics/__init__.py
+src/fuzzylinguistics/fls_pydantic_interface.py
+src/fuzzylinguistics/fuzzy_linguistic_summaries.py
+src/fuzzylinguistics.egg-info/PKG-INFO
+src/fuzzylinguistics.egg-info/SOURCES.txt
+src/fuzzylinguistics.egg-info/dependency_links.txt
+src/fuzzylinguistics.egg-info/requires.txt
+src/fuzzylinguistics.egg-info/top_level.txt
