@@ -1,0 +1,62 @@
+{
+  "manifest_version": "0.2",
+  "name": "mcp-instana",
+  "display_name": "Instana MCP Server",
+  "version": "0.2.0",
+  "description": "MCP server for Instana monitoring and observability",
+  "long_description": "A comprehensive MCP server that provides access to Instana's monitoring capabilities including infrastructure resources, application metrics, events, and automation tools. This extension enables Claude to interact with your Instana instance for monitoring, alerting, and analysis tasks.",
+  "author": {
+    "name": "Riya Kumari",
+    "email": "riyaks1512@gmail.com"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "mcp-instana",
+    "mcp_config": {
+        "command": "uv",
+        "args": [
+            "run",
+            "python",
+            "-m",
+            "src.core.server"
+        ],
+        "env": {
+            "PYTHONPATH": "${__dirname}",
+            "INSTANA_BASE_URL": "${user_config.instana_base_url}",
+            "INSTANA_API_TOKEN": "${user_config.instana_api_token}"
+            }
+        }
+  },
+  "user_config": {
+    "instana_base_url": {
+      "type": "string",
+      "title": "Instana Base URL",
+      "description": "Your Instana instance URL (e.g., https://your-instance.instana.io)",
+      "default": "https://your-instana-instance.instana.io",
+      "required": true
+    },
+    "instana_api_token": {
+      "type": "string",
+      "title": "Instana API Token",
+      "description": "Your Instana API token for authentication",
+      "default": "",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "tools": [
+    {
+      "name": "get_infrastructure_resources",
+      "description": "Get infrastructure resources from Instana"
+    },
+    {
+      "name": "get_application_resources", 
+      "description": "Get application resources from Instana"
+    },
+    {
+      "name": "get_events",
+      "description": "Get monitoring events from Instana"
+    }
+  ],
+  "license": "Apache-2.0"
+}
