@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: lsmcmc
+Version: 0.0.0
+Summary: A light-weight library for large-scale Markov Chain Monte Carlo sampling
+Author-email: Maximilian Kruse <maximilian.kruse@kit.edu>
+Maintainer-email: Maximilian Kruse <maximilian.kruse@kit.edu>
+License: MIT
+Project-URL: repository, https://github.com/UQatKIT/ls-mcmc
+Keywords: markov chain monte carlo,large-scale,Bayesian inverse problems
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.1.2
+Requires-Dist: zarr>=2.18.3
+Dynamic: license-file
+
+:construction: **This repository is under development, and not ready for usage yet** :construction:
