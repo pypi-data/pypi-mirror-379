@@ -1,0 +1,49 @@
+[project]
+name = "barriers"
+version = "2.0.0"
+description = """\
+    Python decorators for including/excluding type checks, \
+    value/bounds checks, and other code blocks within the \
+    compiled bytecode of functions and methods.\
+    """
+license = "MIT"
+authors = [
+    {name = "Andrei Lapets"},
+    {email = "a@lapets.io"}
+]
+readme = "README.rst"
+requires-python = ">=3.9"
+
+[project.urls]
+Repository = "https://github.com/reity/barriers"
+Documentation = "https://barriers.readthedocs.io"
+
+[project.optional-dependencies]
+docs = [
+    "toml~=0.10.2",
+    "sphinx~=7.4",
+    "sphinx-rtd-theme~=3.0"
+]
+test = [
+    "pytest~=8.4",
+    "pytest-cov~=7.0"
+]
+lint = [
+    "pylint~=3.3"
+]
+coveralls = [
+    "coveralls~=4.0"
+]
+publish = [
+    "build~=0.10",
+    "twine~=4.0"
+]
+
+[build-system]
+requires = [
+    "setuptools>=77.0"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --ignore=docs --cov=barriers --cov-report term-missing"
