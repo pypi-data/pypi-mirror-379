@@ -1,0 +1,482 @@
+# A4F Python SDK
+
+[![PyPI version](https://badge.fury.io/py/a4f.svg)](https://badge.fury.io/py/a4f)
+[![Python](https://img.shields.io/pypi/pyversions/a4f.svg)](https://pypi.org/project/a4f/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://pepy.tech/badge/a4f)](https://pepy.tech/project/a4f)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Type Checker: mypy](https://img.shields.io/badge/type%20checker-mypy-blue.svg)](https://github.com/python/mypy)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/a4f)](https://pypi.org/project/a4f/)
+
+**The official Python SDK for A4F** — your unified AI gateway to seamlessly access hundreds of AI models across providers through a single, powerful API.
+
+---
+
+## Table of Contents
+
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Authentication](#-authentication)
+- [Core Features](#-core-features)
+  - [Chat Completions](#-chat-completions)
+  - [Image Generation](#-image-generation)
+  - [Audio Processing](#-audio-processing)
+  - [Text Embeddings](#-text-embeddings)
+- [Advanced Configuration](#-advanced-configuration)
+- [Error Handling](#-error-handling)
+- [Production Considerations](#-production-considerations)
+- [API Reference](#-api-reference)
+- [Support & Resources](#-support--resources)
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+- **Python 3.8+** required
+- **pip** package manager
+
+### Install via pip
+
+```bash
+pip install a4f
+```
+
+---
+
+## 🔄 Quick Start
+
+### 1. Get Your API Key
+Sign up at [A4F.co](https://a4f.co) and obtain your API key from the dashboard.
+
+### 2. Initialize the Client
+
+```python
+from a4f import A4F
+
+# Initialize with API key
+client = A4F(api_key="your_api_key_here")
+```
+
+### 3. Make Your First Request
+
+```python
+response = client.chat.create(
+    model="provider-3/gpt-5-nano",
+    messages=[
+        {"role": "system", "content": "You are a helpful AI assistant."},
+        {"role": "user", "content": "Explain quantum computing in simple terms."}
+    ],
+    max_tokens=500,
+    temperature=0.7
+)
+
+print(response.choices[0].message.content)
+```
+
+---
+
+## 🔑 Authentication
+
+### Environment Variables (Recommended)
+
+```bash
+export A4F_API_KEY="your_api_key_here"
+```
+
+```python
+from a4f import A4F
+
+# Automatically uses A4F_API_KEY environment variable
+client = A4F()
+```
+
+### Direct API Key
+
+```python
+from a4f import A4F
+
+client = A4F(api_key="your_api_key_here")
+```
+
+### Configuration File
+
+```python
+import os
+from a4f import A4F
+
+# Load from config file
+api_key = os.getenv("A4F_API_KEY")
+client = A4F(api_key=api_key)
+```
+
+---
+
+## 🌟 Core Features
+
+### 💬 Chat Completions
+
+#### Basic Chat
+
+```python
+response = client.chat.completions.create(
+    model="provider-3/gpt-5-nano",
+    messages=[
+        {"role": "user", "content": "What is machine learning?"}
+    ],
+    max_tokens=150,
+    temperature=0.5
+)
+
+print(response.choices[0].message.content)
+```
+
+#### Streaming Responses
+
+```python
+stream = client.chat.completions.create(
+    model="provider-3/gpt-5-nano",
+    messages=[
+        {"role": "user", "content": "Count from 1 to 10 slowly"}
+    ],
+    stream=True,
+    max_tokens=100
+)
+
+print("Streaming response:")
+for chunk in stream:
+    if chunk.has_content:
+        print(chunk.content, end="", flush=True)
+print("\n")
+```
+
+#### Advanced Chat with System Prompts
+
+```python
+response = client.chat.completions.create(
+    model="provider-3/gpt-5-nano",
+    messages=[
+        {
+            "role": "system", 
+            "content": "You are an expert data scientist. Provide detailed, technical explanations."
+        },
+        {
+            "role": "user", 
+            "content": "Explain the difference between supervised and unsupervised learning."
+        }
+    ],
+    max_tokens=800,
+    temperature=0.3,
+    top_p=0.9
+)
+```
+
+### 🖼️ Image Generation
+
+#### Text-to-Image
+
+```python
+image_response = client.images.generate(
+    model="provider-4/imagen-4",
+    prompt="A serene mountain landscape at sunset with a crystal clear lake reflecting the sky",
+    size="1024x1024",
+    quality="standard",
+    n=1
+)
+
+# Save the image
+image_url = image_response.data[0].url
+print(f"Generated image: {image_url}")
+```
+
+#### Image Editing
+
+```python
+with open("original_image.jpg", "rb") as image_file:
+    edited_image = client.images.edit(
+        model="provider-3/flux-kontext-pro",
+        image=image_file,
+        prompt="Convert the cartoon characters to photorealistic people",
+        size="1024x1024"
+    )
+    
+print(f"Edited image: {edited_image.data[0].url}")
+```
+
+### 🎙️ Audio Processing
+
+#### Speech-to-Text (Transcription)
+
+```python
+# Transcribe audio file
+with open("meeting_recording.mp3", "rb") as audio_file:
+    transcription = client.audio.transcriptions.create(
+        file=audio_file,
+        model="provider-3/whisper-1"
+    )
+    
+print(f"Transcription: {transcription}")
+```
+
+#### Text-to-Speech (TTS)
+
+```python
+speech_response = client.audio.speech.create(
+    input="Hello! This is a demonstration of high-quality text-to-speech conversion using the A4F SDK.",
+    model="provider-3/gemini-2.5-flash-preview-tts",
+    voice="Orus",
+    response_format="mp3",
+    speed=1.0
+)
+
+# Save audio to file
+speech_response.write_to_file("generated_speech.mp3")
+print("Speech saved to generated_speech.mp3")
+```
+
+### 🔎 Text Embeddings
+
+#### Single Text Embedding
+
+```python
+embedding_response = client.embeddings.create(
+    model="provider-6/qwen3-embedding-4b",
+    input="The quick brown fox jumps over the lazy dog"
+)
+
+vector = embedding_response.data[0].embedding
+print(f"Embedding dimension: {len(vector)}")
+```
+
+#### Batch Embeddings
+
+```python
+texts = [
+    "Machine learning is a subset of artificial intelligence.",
+    "Natural language processing enables computers to understand human language.",
+    "Computer vision allows machines to interpret visual information."
+]
+
+embeddings = client.embeddings.create(
+    model="provider-6/qwen3-embedding-4b",
+    input=texts
+)
+
+for i, embedding_obj in enumerate(embeddings.data):
+    print(f"Text {i+1} embedding dimension: {len(embedding_obj.embedding)}")
+```
+
+---
+
+## ⚙️ Advanced Configuration
+
+### Client Configuration
+
+```python
+from a4f import A4F
+import logging
+
+# Configure comprehensive client settings
+client = A4F(
+    api_key="your_api_key_here",
+    timeout=60  # Request timeout in seconds
+)
+```
+
+### Request-Level Configuration
+
+```python
+# Per-request configuration
+response = client.chat.completions.create(
+    model="provider-3/gpt-5-nano",
+    messages=[{"role": "user", "content": "Hello!"}],
+    timeout=30,           # Override default timeout
+)
+```
+
+### Model Parameters
+
+```python
+# Comprehensive parameter configuration
+response = client.chat.completions.create(
+    model="provider-3/gpt-5-nano",
+    messages=[{"role": "user", "content": "Write a creative story."}],
+    max_tokens=1000,
+    temperature=0.8,      # Creativity level (0.0 - 2.0)
+    top_p=0.9           # Nucleus sampling
+)
+```
+
+---
+
+## ❌ Error Handling
+
+### Error Handling
+
+```python
+from a4f import A4F
+
+client = A4F(api_key="your_api_key_here")
+
+try:
+    response = client.chat.create(
+        model="provider-3/gpt-5-nano",
+        messages=[{"role": "user", "content": "Hello!"}]
+    )
+    print(response.choices[0].message.content)
+    
+except Exception as e:
+    print(f"Unexpected error: {e}")
+```
+---
+
+## 🏭 Production Considerations
+
+### Environment Configuration
+
+```python
+import os
+from a4f import A4F
+
+class A4FConfig:
+    def __init__(self):
+        self.api_key = os.getenv("A4F_API_KEY")
+        self.timeout = int(os.getenv("A4F_TIMEOUT", "60"))
+        self.max_retries = int(os.getenv("A4F_MAX_RETRIES", "3"))
+        
+    def create_client(self):
+        return A4F(
+            api_key=self.api_key,
+            timeout=self.timeout,
+            max_retries=self.max_retries
+        )
+
+# Usage
+config = A4FConfig()
+client = config.create_client()
+```
+
+### Logging and Monitoring
+
+```python
+import logging
+from a4f import A4F
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+logger = logging.getLogger(__name__)
+
+def monitored_chat_request(client, messages, model="provider-3/gpt-5-nano"):
+    try:
+        logger.info(f"Making chat request with model: {model}")
+        
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages
+        )
+        
+        logger.info(f"Request successful. Tokens used: {response.usage.total_tokens}")
+        return response
+        
+    except Exception as e:
+        logger.error(f"Request failed: {str(e)}")
+        raise
+```
+---
+
+## 📚 API Reference
+
+### Chat Completions
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `model` | `str` | Required | Model identifier (e.g., "provider-3/gpt-5-nano") |
+| `messages` | `List[Dict]` | Required | Conversation messages |
+| `max_tokens` | `int` | `None` | Maximum tokens to generate |
+| `temperature` | `float` | `1.0` | Sampling temperature (0.0-2.0) |
+| `top_p` | `float` | `1.0` | Nucleus sampling parameter |
+| `stream` | `bool` | `False` | Enable streaming responses |
+
+### Image Generation
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `prompt` | `str` | Required | Text description of the image |
+| `model` | `str` | Required | Image model identifier |
+| `size` | `str` | `"1024x1024"` | Image dimensions |
+| `quality` | `str` | `"standard"` | Image quality ("standard" or "hd") |
+| `n` | `int` | `1` | Number of images to generate |
+
+### Audio Processing
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `file` | `BinaryIO` | Required | Audio file to process |
+| `model` | `str` | Required | Audio model identifier |
+
+### Embeddings
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `input` | `Union[str, List[str]]` | Required | Text(s) to embed |
+| `model` | `str` | Required | Embedding model identifier |
+
+---
+
+## 🌐 What is A4F?
+
+A4F.co is a revolutionary AI gateway that simplifies interaction with multiple AI providers. Instead of integrating with OpenAI, Anthropic, Google, and others separately, A4F provides one consistent API to access them all, making development faster, cheaper, and more reliable.
+
+### Key Benefits
+
+| Feature | Description | Benefits |
+|---------|-------------|----------|
+| **🌐 Unified API** | Consistent interface for all models | Reduced complexity, faster development |
+| **💰 Free Tier** | Start building with no upfront costs | Risk-free experimentation |
+| **⚡ High Availability** | Built-in failover & load balancing | 99.9% uptime guarantee |
+| **💸 Cost Optimization** | Smart routing & price-performance tuning | Up to 40% cost savings |
+| **🔒 Privacy Controls** | Granular provider selection | Enterprise-grade security |
+| **🚀 Production-Ready** | Enterprise scalability and support | Mission-critical reliability |
+
+### Model Coverage
+
+- **Text Generation**: GPT-4, Claude, Gemini, Llama, Qwen, and more
+- **Image Generation**: DALL-E, Stable Diffusion, Imagen
+- **Audio Processing**: Whisper, Google Cloud TTS
+- **Embeddings**: OpenAI, Cohere, Sentence Transformers
+- **Specialized Models**: Code generation, translation, summarization
+
+---
+
+## 📧 Support & Resources
+
+### Documentation & Guides
+- [📘 Official Documentation](https://a4f.co/docs)
+- [🚀 Changelog](https://www.a4f.co/changelog)
+- [🎯 Function Calling](https://www.a4f.co/docs/tool-calling)
+- [🔧 Errors](https://www.a4f.co/docs/errors)
+
+### Community
+- [💬 Telegram Community](https://t.me/DDC_Group)
+- [🎮 Discord Community](https://discord.gg/9dK2xGFsfw)
+
+### Developer Resources
+- [🔗 API Status](https://www.a4f.co/status)
+- [📊 Usage Dashboard](https://a4f.co/dashboard)
+- [🧪 API Testing](https://chat.a4f.co)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Built with ❤️ by the [A4F Team](https://a4f.co) — *Your Unified AI Gateway*
+
+**Ready to get started?** [Sign up for free](https://www.a4f.co/dashboard) and get your API key today!
