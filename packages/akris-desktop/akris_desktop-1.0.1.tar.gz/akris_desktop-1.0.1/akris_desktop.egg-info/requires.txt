@@ -1,0 +1,12 @@
+Pillow
+akris
+
+[dev]
+black
+pytest
+pytest-mock
+autopep8
+pyinstaller
+markdown2
+staticx
+pylint

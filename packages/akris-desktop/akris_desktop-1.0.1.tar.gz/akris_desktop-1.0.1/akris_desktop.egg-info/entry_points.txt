@@ -1,0 +1,2 @@
+[console_scripts]
+akris-desktop = akris_desktop.main:main
