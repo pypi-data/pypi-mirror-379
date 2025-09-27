@@ -1,0 +1,10 @@
+quantforge-0.1.1.dist-info/METADATA,sha256=-CToX0JzsUJ3LTja8LRxpkyTAx4OIqTGuOTFJ1LPQV0,12756
+quantforge-0.1.1.dist-info/WHEEL,sha256=VRUGISFtmkUtogJQvMvdBlw5mQA2s0VSEJD4NOAK5wg,95
+quantforge-0.1.1.dist-info/licenses/LICENSE,sha256=-3beuSPUJXwnqOgVccfdLv9o8Cd0FaJh8xOS20N8Ni0,1085
+quantforge/__init__.py,sha256=DQ1Nb92dcg3c5SGja0wthDfH5C7tvFBzF1lIvxrNG4Y,215
+quantforge/__init__.pyi,sha256=AWL6-d4-Ya4BFyaK_zXVA-0ocOiFq9YINpsJLB3hbmI,7109
+quantforge/models/__init__.py,sha256=I31RhwIBvON6OMCyKSzw0we5RtAwolQ0j1k4UvLPqpQ,192
+quantforge/py.typed,sha256=oQ4REWiS9sLBF4Kb2yBOgxxcJ3tDFA0FqfiZdTBs34g,114
+quantforge/quantforge.pyd,sha256=jbk51t9PsgY8zxgI8yHjcmPj-hqGscX-vsL2rZl-U-Y,6603776
+quantforge/quantforge.pyi,sha256=D2WJg1TrFNjsgzihk8FynbAgF5JnU44F_f90WJmyCyc,11074
+quantforge-0.1.1.dist-info/RECORD,,
