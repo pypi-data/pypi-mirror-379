@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "freeassoc"
+version = "0.1.0"
+description = "Lightweight utilities for free-association processing: cleaning, embedding, projection, clustering, and label inference."
+readme = "README.md"
+license = "MIT"
+authors = [{name = "Ali Alhosseini", email = "saaay71@gmail.com"}]
+requires-python = ">=3.10"
+
+dependencies = [
+"numpy",
+"pandas",
+"scipy",
+"scikit-learn",
+"tqdm",
+]
+
+[project.urls]
+"Homepage" = "https://example.com/freeassoc"
+"Repository" = "https://example.com/freeassoc.git"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
