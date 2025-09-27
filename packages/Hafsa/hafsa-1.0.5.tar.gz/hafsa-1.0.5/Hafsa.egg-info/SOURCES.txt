@@ -1,0 +1,7 @@
+setup.py
+Hafsa/Hafsa.py
+Hafsa/__init__.py
+Hafsa.egg-info/PKG-INFO
+Hafsa.egg-info/SOURCES.txt
+Hafsa.egg-info/dependency_links.txt
+Hafsa.egg-info/top_level.txt
