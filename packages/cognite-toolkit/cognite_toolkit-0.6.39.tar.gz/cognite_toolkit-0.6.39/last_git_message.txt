@@ -1,0 +1,26 @@
+[CDF-25591] Spaces dump support (#2006)
+
+# Description
+
+Right now user can only dump spaces which are linked to a data models.
+This PR adds support to dumping instance spaces.
+
+<img width="561" height="72" alt="Screenshot 2025-09-24 at 1 58 37 PM"
+src="https://github.com/user-attachments/assets/fca7649a-e726-4b24-9061-6e9fa0dfe374"
+/>
+
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Added
+
+- Support dumping instance spaces, `cdf dump spaces`.
+
+## templates
+
+No changes.
