@@ -1,0 +1,7 @@
+boto3_dataclass_bcm_pricing_calculator/__init__.py,sha256=BcroFAWuEpfG1pvdwkPWxQz0N3zJ6tSGQhpitbLiX-g,138
+boto3_dataclass_bcm_pricing_calculator/caster.py,sha256=9ixZAcXlALE5qqUSuNsDaruXkQXVd39YP3eyhG8eiug,7960
+boto3_dataclass_bcm_pricing_calculator/type_defs.py,sha256=Wei7Z4Q8FaPwed6OQrMCHByZvMTs_gLtdfoU17yQ1I4,155773
+boto3_dataclass_bcm_pricing_calculator-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_bcm_pricing_calculator-1.40.0.dist-info/METADATA,sha256=fy1TgtDa5SYcmcW86ZlcTJbrDafa3PV29Bpv4meQRfk,1746
+boto3_dataclass_bcm_pricing_calculator-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_bcm_pricing_calculator-1.40.0.dist-info/RECORD,,
