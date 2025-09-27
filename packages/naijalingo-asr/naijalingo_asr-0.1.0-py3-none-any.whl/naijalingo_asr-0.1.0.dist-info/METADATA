@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: naijalingo-asr
+Version: 0.1.0
+Summary: ASR SDK for Nigerian languages Yoruba, Igbo, Hausa and Nigerian-accented English using CTranslate2-converted Whisper models
+Author: NaijaLingo
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: faster-whisper>=1.2.0
+Requires-Dist: ctranslate2>=4.6.0
+Requires-Dist: librosa>=0.11.0
+Requires-Dist: numpy>=1.23
+
+# NaijaLingo ASR SDK
+
+ASR SDK for Nigerian languages using CTranslate2-converted Whisper models.
+
+## Install
+
+```bash
+pip install naijalingo-asr
+```
+
+## Quickstart
+
+```python
+from naijalingo_asr import transcribe
+
+text = transcribe("/path/to/audio.wav", language="yo")
+print(text)
+```
+
+## CLI
+
+```bash
+naijalingo-asr --audio /path/to/audio.wav --language yo
+```
+
+## Docker usage (no build required)
+
+Pull the image (CPU):
+
+```bash
+docker pull chukypedro/naijalingo-asr:latest
+```
+
+Run transcription via CLI:
+
+```bash
+docker run --rm -v $(pwd):/data chukypedro/naijalingo-asr:latest \
+  naijalingo-asr --audio /data/audio.wav --language yo
+```
+
+For GPU (CUDA), a separate CUDA-enabled image will be provided later.
+
+## Supported languages
+
+- yo: Yoruba
+- ig: Igbo
+- ha: Hausa
+- en: Nigerian-accented English
+
+## Notes
+- Uses faster-whisper (CTranslate2 backend)
+- Accepts file paths (mp3/wav/m4a/etc.) via librosa, or a numpy array (mono 16k)
+- Task is transcription only; set `task="transcribe"` and the language code.
+
+## Logging
+
+Set via CLI `--log-level INFO` or env `NAIJALINGO_ASR_LOG=INFO`.
+
+
