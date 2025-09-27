@@ -1,0 +1,7 @@
+boto3_dataclass_cloudfront_keyvaluestore/__init__.py,sha256=2zrqx5JcTIr6lVv6n0eqw7l68PYjgn9o_GHKReagje4,142
+boto3_dataclass_cloudfront_keyvaluestore/caster.py,sha256=3HUger6BSKI0cVR5qBHRefWdpoLiPRYQpa1gXqiMBA8,1351
+boto3_dataclass_cloudfront_keyvaluestore/type_defs.py,sha256=_a_PxJMAbm8vIe5vzykPtCB6c3u8DWQTFTv3b8y-Dig,16388
+boto3_dataclass_cloudfront_keyvaluestore-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_cloudfront_keyvaluestore-1.40.0.dist-info/METADATA,sha256=aM3DU-L1cw5RklbFmHOHjnKQyMtaKZHUnh9K_KS-LRE,1760
+boto3_dataclass_cloudfront_keyvaluestore-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_cloudfront_keyvaluestore-1.40.0.dist-info/RECORD,,
