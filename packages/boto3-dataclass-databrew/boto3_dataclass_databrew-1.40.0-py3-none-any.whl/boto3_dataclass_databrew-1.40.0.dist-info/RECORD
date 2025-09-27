@@ -1,0 +1,7 @@
+boto3_dataclass_databrew/__init__.py,sha256=-4k_AGDfTpeXPXIrBKE1do5zRmytZBE9mHrDedce6lk,110
+boto3_dataclass_databrew/caster.py,sha256=AX8pfb5wd9CHZzjaEnzi8AJ9Etrs3gYPAc-e1N6lCeE,8282
+boto3_dataclass_databrew/type_defs.py,sha256=lI4Q2KdQgyL9RruCMoUYeV2uZI5z0VrPVssWiNzBY_E,155755
+boto3_dataclass_databrew-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_databrew-1.40.0.dist-info/METADATA,sha256=_tXxLJOeKzBvkV_4_8e9jQShu4dZODGNQtewp3_A7e4,1648
+boto3_dataclass_databrew-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_databrew-1.40.0.dist-info/RECORD,,
