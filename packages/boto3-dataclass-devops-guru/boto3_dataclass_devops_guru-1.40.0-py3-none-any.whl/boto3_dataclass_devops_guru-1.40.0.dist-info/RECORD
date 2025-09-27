@@ -1,0 +1,7 @@
+boto3_dataclass_devops_guru/__init__.py,sha256=6Uu4UFE7lzDjnvwXoSIjYjsOzN8e73WfSXTTRNAqq1A,116
+boto3_dataclass_devops_guru/caster.py,sha256=vd_hpefVtYmH2bFqykfvO-_ArApEJ8HWTURSVcvZ4W0,5622
+boto3_dataclass_devops_guru/type_defs.py,sha256=xyjlzy4SQwcAySFlACx7-t297PVhEkyoV9fFvyi3ynY,176246
+boto3_dataclass_devops_guru-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_devops_guru-1.40.0.dist-info/METADATA,sha256=CrdriuKesr8gMIzA7t1dr_PucM60T2y3CEiXn0Kl2eI,1669
+boto3_dataclass_devops_guru-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_devops_guru-1.40.0.dist-info/RECORD,,
