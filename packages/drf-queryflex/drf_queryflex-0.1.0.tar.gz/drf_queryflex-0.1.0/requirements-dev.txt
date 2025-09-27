@@ -1,0 +1,9 @@
+Django>=3.0
+djangorestframework>=3.12
+pytest>=6.0
+pytest-django
+black
+flake8
+mypy
+sphinx
+twine
