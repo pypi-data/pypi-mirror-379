@@ -1,0 +1,53 @@
+"""Facade aggregating the exit-tooling helpers exposed by lib_cli_exit_tools.
+
+Purpose:
+    Provide a stable import location for configuration, signal handling, exit
+    code translation, and CLI orchestration primitives after the refactor into
+    layered modules.
+Contents:
+    * ``config`` from :mod:`lib_cli_exit_tools.core.configuration`.
+    * ``get_system_exit_code`` from :mod:`lib_cli_exit_tools.core.exit_codes`.
+    * ``handle_cli_exception`` and ``run_cli`` from
+      :mod:`lib_cli_exit_tools.application.runner`.
+    * Signal helpers from :mod:`lib_cli_exit_tools.adapters.signals`.
+System Integration:
+    The CLI adapter (:mod:`lib_cli_exit_tools.cli`) and external consumers
+    continue importing from this facade to avoid knowledge of the new package
+    structure.
+"""
+
+from __future__ import annotations
+
+from .adapters.signals import (
+    CliSignalError,
+    SigBreakInterrupt,
+    SigIntInterrupt,
+    SigTermInterrupt,
+    SignalSpec,
+    default_signal_specs,
+    install_signal_handlers,
+)
+from .application.runner import (
+    flush_streams,
+    handle_cli_exception,
+    print_exception_message,
+    run_cli,
+)
+from .core.configuration import config
+from .core.exit_codes import get_system_exit_code
+
+__all__ = [
+    "config",
+    "get_system_exit_code",
+    "print_exception_message",
+    "flush_streams",
+    "SignalSpec",
+    "CliSignalError",
+    "SigIntInterrupt",
+    "SigTermInterrupt",
+    "SigBreakInterrupt",
+    "default_signal_specs",
+    "install_signal_handlers",
+    "handle_cli_exception",
+    "run_cli",
+]
