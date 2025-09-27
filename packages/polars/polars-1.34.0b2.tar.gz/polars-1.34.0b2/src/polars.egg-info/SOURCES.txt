@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/polars.egg-info/PKG-INFO
+src/polars.egg-info/SOURCES.txt
+src/polars.egg-info/dependency_links.txt
+src/polars.egg-info/requires.txt
+src/polars.egg-info/top_level.txt
