@@ -1,0 +1,44 @@
+{
+    "protocol": {
+        "name": "Simple_UDP_Beacon",
+        "version": "1.0",
+        "description": "Basic UDP beacon for testing"
+    },
+    "variables": {
+        "MESSAGE": "Hello UPAS",
+        "COUNTER": 0
+    },
+    "functions": {
+        "increment": "lambda x: (x + 1) % 0xFF"
+    },
+    "transports": {
+        "ethernet": {
+            "type": "ethernet",
+            "services": {
+                "udp_service": {
+                    "type": "udp_unicast",
+                    "bind": "0.0.0.0:12345"
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "udp_beacon": {
+            "type": "periodic",
+            "interval": 2000,
+            "transport": "ethernet",
+            "destination": "127.0.0.1:12346",
+            "payload": [
+                {
+                    "prefix": "UPAS"
+                },
+                {
+                    "data": "[MESSAGE]"
+                },
+                {
+                    "counter": "[COUNTER:1:increment]"
+                }
+            ]
+        }
+    }
+}

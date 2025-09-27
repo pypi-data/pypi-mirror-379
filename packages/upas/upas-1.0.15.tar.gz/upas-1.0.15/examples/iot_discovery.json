@@ -1,0 +1,63 @@
+{
+    "protocol": {
+        "name": "IoT_Discovery",
+        "version": "1.0",
+        "description": "Generic IoT device discovery protocol"
+    },
+    "variables": {
+        "DEVICE_ID": "IOT_001",
+        "DEVICE_TYPE": "SENSOR",
+        "FIRMWARE_VERSION": "1.2.3",
+        "CAPABILITIES": 15
+    },
+    "functions": {
+        "random_delay": "lambda: random.randint(100, 500)",
+        "device_status": "lambda: 'ONLINE' if random.random() > 0.1 else 'MAINTENANCE'"
+    },
+    "transports": {
+        "ethernet": {
+            "type": "ethernet",
+            "services": {
+                "discovery_service": {
+                    "type": "udp_multicast",
+                    "bind": "0.0.0.0:5555",
+                    "multicast_groups": [
+                        "239.255.42.99"
+                    ]
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "announce_presence": {
+            "type": "periodic",
+            "interval": 10000,
+            "jitter": "[JITTER:random_delay]",
+            "transport": "ethernet",
+            "destination": "239.255.42.99:5555",
+            "payload": [
+                {
+                    "message_type": "DEVICE_ANNOUNCEMENT"
+                },
+                {
+                    "device_id": "[DEVICE_ID]"
+                },
+                {
+                    "device_type": "[DEVICE_TYPE]"
+                },
+                {
+                    "version": "[FIRMWARE_VERSION]"
+                },
+                {
+                    "capabilities": "[CAPABILITIES:2]"
+                },
+                {
+                    "status": "[STATUS:device_status]"
+                },
+                {
+                    "timestamp": "[TIME:8:timestamp]"
+                }
+            ]
+        }
+    }
+}

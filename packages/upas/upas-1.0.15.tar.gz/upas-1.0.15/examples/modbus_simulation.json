@@ -1,0 +1,107 @@
+{
+    "protocol": {
+        "name": "Modbus_Simulation",
+        "version": "1.0",
+        "description": "Industrial Modbus-like protocol simulation"
+    },
+    "variables": {
+        "SLAVE_ID": 1,
+        "FUNCTION_READ": 3,
+        "FUNCTION_WRITE": 6,
+        "REGISTER_BASE": 4096
+    },
+    "functions": {
+        "modbus_crc": "lambda data: sum(data) & 0xFFFF",
+        "read_register": "lambda addr: random.randint(0, 65535)"
+    },
+    "transports": {
+        "fieldbus": {
+            "type": "ethernet",
+            "services": {
+                "modbus_server": {
+                    "type": "tcp_server",
+                    "bind": "0.0.0.0:502"
+                }
+            }
+        }
+    },
+    "behaviors": {
+        "data_poll": {
+            "type": "periodic",
+            "interval": 2000,
+            "transport": "fieldbus",
+            "destination": "127.0.0.1:502",
+            "payload": [
+                {
+                    "slave_id": "[SLAVE_ID:1]"
+                },
+                {
+                    "function": "[FUNCTION_READ:1]"
+                },
+                {
+                    "start_address": "[REGISTER_BASE:2]"
+                },
+                {
+                    "register_count": "0005"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        },
+        "config_update": {
+            "type": "triggered",
+            "trigger_event": "config_change",
+            "transport": "fieldbus",
+            "destination": "127.0.0.1:502",
+            "payload": [
+                {
+                    "slave_id": "[SLAVE_ID:1]"
+                },
+                {
+                    "function": "[FUNCTION_WRITE:1]"
+                },
+                {
+                    "register_address": "[TARGET_REG:2]"
+                },
+                {
+                    "register_value": "[NEW_VALUE:2]"
+                },
+                {
+                    "crc": "[CRC:2:modbus_crc]"
+                }
+            ]
+        }
+    },
+    "state_machine": {
+        "initial_state": "POLLING",
+        "states": {
+            "POLLING": {
+                "description": "Normal polling mode"
+            },
+            "CONFIGURING": {
+                "description": "Configuration update mode"
+            },
+            "ERROR": {
+                "description": "Error state"
+            }
+        },
+        "transitions": [
+            {
+                "from": "POLLING",
+                "to": "CONFIGURING",
+                "trigger": "config_requested"
+            },
+            {
+                "from": "CONFIGURING",
+                "to": "POLLING",
+                "trigger": "config_complete"
+            }
+        ]
+    },
+    "orchestration": {
+        "normal_operation": {
+            "behavior": "data_poll"
+        }
+    }
+}
