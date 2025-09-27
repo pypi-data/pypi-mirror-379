@@ -1,0 +1,7 @@
+setup.py
+awaitedreqs/__init__.py
+awaitedreqs.egg-info/PKG-INFO
+awaitedreqs.egg-info/SOURCES.txt
+awaitedreqs.egg-info/dependency_links.txt
+awaitedreqs.egg-info/requires.txt
+awaitedreqs.egg-info/top_level.txt
