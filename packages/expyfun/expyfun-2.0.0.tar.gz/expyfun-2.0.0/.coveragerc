@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = expyfun
+include = */expyfun/*
+omit =
+    */setup.py
+    */expyfun/codeblocks/*
