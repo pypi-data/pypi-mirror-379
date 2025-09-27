@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include smart_logger/ui/static *
+recursive-include smart_logger/ui/templates *
