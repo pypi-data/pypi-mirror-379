@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: cuesplit
+Version: 0.1.0
+Summary: Split and tag cd audio base on cue sheets.
+Author-email: Cycloctane <Cycloctane@octane.top>
+License-Expression: GPL-2.0-only
+Project-URL: Repository, https://github.com/Cycloctane/cuesplit.git
+Keywords: cue,libcue,ffmpeg,audio,music,cd,metadata,tag
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Sound/Audio :: CD Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Conversion
+Classifier: Topic :: Multimedia :: Sound/Audio :: CD Audio :: CD Ripping
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: COPYING
+Requires-Dist: pylibcue>=0.4.0
+Dynamic: license-file
+
+cuesplit
+========
+
+Python script that splits CD audio and add metadata tags using the information from CUE sheet.
+
+Based on ffmpeg and libcue. Currently supports flac, mp3 and wav formats.
+
+Requirements
+------------
+
+- ffmpeg binary (in $PATH)
+- `pylibcue <https://pypi.org/project/pylibcue/>`_
+
+Usage
+-----
+
+.. code-block:: bash
+
+	./cuesplit.py -h
+	./cuesplit.py -i input.cue -o ./output/ -f mp3 -j 4
+
+License
+-------
+
+cuesplit is licensed under the GNU General Public License v2.0.
