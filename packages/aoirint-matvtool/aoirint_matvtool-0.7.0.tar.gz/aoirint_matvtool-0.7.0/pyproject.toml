@@ -1,0 +1,58 @@
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+  "E",  # pycodestyle errors
+  "W",  # pycodestyle warnings
+  "F",  # pyflakes
+  "I",  # isort
+  "B",  # flake8-bugbear
+  "C4",  # flake8-comprehensions
+  "UP",  # pyupgrade
+]
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.uv]
+package = true
+
+[project]
+name = "aoirint-matvtool"
+version = "0.7.0"
+description = "A command line tool to handle a multi audio track video file"
+readme = "README.md"
+maintainers = [
+  {name = "aoirint", email = "aoirint@gmail.com"},
+]
+authors = [
+  {name = "aoirint", email = "aoirint@gmail.com"},
+]
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.11.9",
+    "tqdm>=4.67.1",
+]
+
+[project.urls]
+Repository = "https://github.com/aoirint/matvtoolpy"
+
+[project.scripts]
+matvtool = "aoirint_matvtool.cli:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.1",
+    "numpy>=2.3.3",
+    "opencv-python>=4.11.0.86",
+    "pyinstaller>=6.16.0",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "ruff>=0.13.0",
+    "types-tqdm>=4.67.0.20250809",
+]
