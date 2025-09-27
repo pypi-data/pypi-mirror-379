@@ -1,0 +1,46 @@
+[workspace]
+resolver = "2"
+members = ["bindings/python"]
+
+[workspace.package]
+version = "0.1.1"
+edition = "2021"
+authors = ["QuantForge Contributors"]
+license = "MIT"
+repository = "https://github.com/quantforge/quantforge"
+
+[workspace.dependencies]
+# 共通の依存関係を定義
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+ndarray = "0.16"
+rayon = "1.10"
+
+# Arrow関連
+arrow = { version = "56.0", features = ["ffi", "pyarrow"] }
+arrow-array = "56.0"
+arrow-buffer = "56.0"
+
+# PyO3はbindings層のみで使用
+pyo3 = { version = "0.25.1", features = ["extension-module", "abi3-py312"] }
+pyo3-arrow = "0.11.0"
+numpy = "0.25"
+
+# テスト用
+approx = "0.5"
+criterion = "0.5"
+proptest = "1.0"
+
+# リリースプロファイル最適化
+[profile.release]
+opt-level = 3          # 最大最適化
+lto = "fat"           # Link Time Optimization（全体最適化）
+codegen-units = 1     # 単一コンパイル単位（最適化向上）
+panic = "abort"       # パニック時の巻き戻しなし（高速化）
+strip = true          # デバッグ情報削除（バイナリサイズ削減）
+overflow-checks = false # オーバーフローチェック無効化（本番環境）
+
+# LTO専用プロファイル
+[profile.release-lto]
+inherits = "release"
+lto = "fat"
