@@ -1,0 +1,84 @@
+import json
+import os
+import csv
+
+
+def load_game_data(game_file):
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    full_path = os.path.join(script_directory, game_file)
+
+    if os.path.exists(full_path):
+        with open(full_path, "r") as file:
+            return json.load(file)
+    else:
+        print(f"File {game_file} not found. Starting a new save file")
+        return {"games": [] }
+
+def save_game_data(game_file, data):
+        script_directory = os.path.dirname(os.path.abspath(__file__))
+        full_path = os.path.join(script_directory, game_file)
+
+        with open(full_path, "w") as file:
+            json.dump(data, file, indent=4)
+
+def add_game(data, name, game_type, row, col):
+        game = {
+            "name": name,
+            "type": game_type,
+            "row": row,
+            "col": col
+        }
+        data["games"].append(game)
+
+def main():
+  filename = input("Enter the game file name (e.g., games): ")
+  game_file = filename + ".json"
+  data = load_game_data(game_file)
+
+  while True:
+      print("\nMenu:")
+      print("1. Add a new game")
+      print("2. View all games")
+      print("3. Export games to CSV")
+      print("4. Save and exit")
+
+      choice = input("Enter your choice: ")
+
+      if choice == '1':
+            name = input("Enter game name: ")
+            game_type = input("Enter game type: ")
+            row = int(input("Enter rows number: "))
+            col = int(input("Enter columns number: "))
+            add_game(data, name, game_type, row, col)
+
+      elif choice == "2":
+            if data["games"]:
+                for idx, game in enumerate(data["games"], start=1):
+                    print(f"{idx}. Name: {game['name']}, Type: {game['type']}, Rows: {game['row']}, Columns: {game['col']}")
+            else:
+                print("No games available.")
+
+      elif choice == "3":
+          csv_file = filename + ".csv"
+          with open(csv_file, "w", newline='') as csvfile:
+              fieldnames = ["name", "type", "row", "col"]
+              writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+              writer.writeheader()
+              for game in data["games"]:
+                  writer.writerow(game)
+          print("Games exported to games_export.csv")
+
+      elif choice =="4":
+        print("Attempting to save game data...")
+        save_game_data(game_file, data)
+        print("Game data saved. Exiting...")
+        input("Press Enter to exit...")
+        break
+
+      else:
+        print("Invalid choice. Please try again.")
+
+if __name__ == '__main__':
+    main()
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
