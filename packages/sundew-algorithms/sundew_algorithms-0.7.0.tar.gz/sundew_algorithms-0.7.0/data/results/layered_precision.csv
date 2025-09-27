@@ -1,0 +1,3 @@
+dataset,preset,baseline_precision,baseline_recall,baseline_f1,layered_precision,layered_recall,layered_f1,activation_rate,energy_savings_pct,notes
+financial,aggressive,0.22018348623853212,0.1643835616438356,0.18823529411764703,1.0,0.1643835616438356,0.2823529411764706,0.0545,90.09009433962264,"layer test precision=1.000, recall=1.000, f1=1.000, n_test=32, threshold=0.958"
+network_security,aggressive,0.4605263157894737,0.23333333333333334,0.30973451327433627,1.0,0.23333333333333334,0.37837837837837834,0.06333333333333334,89.24842767295598,"layer test precision=1.000, recall=1.000, f1=1.000, n_test=22, threshold=0.825"
