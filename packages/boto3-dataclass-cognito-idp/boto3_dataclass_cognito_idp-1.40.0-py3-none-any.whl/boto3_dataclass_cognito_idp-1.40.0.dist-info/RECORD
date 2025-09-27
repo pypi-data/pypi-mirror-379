@@ -1,0 +1,7 @@
+boto3_dataclass_cognito_idp/__init__.py,sha256=UHrpPLjYxV3X7CWLCqw5Kh2pLDO_awm9znvzFAN4pTw,116
+boto3_dataclass_cognito_idp/caster.py,sha256=IWsWMSCx-upmisfG2205SCHknsW_FLIGKzjSLZWwS1Q,18535
+boto3_dataclass_cognito_idp/type_defs.py,sha256=LFzwet56dhS8QCw3fVpfLov20XgBhiIRm_iLK3nOwd4,305439
+boto3_dataclass_cognito_idp-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_cognito_idp-1.40.0.dist-info/METADATA,sha256=kiJneB7FRqZOzLadYsL6zB4GDgO34QReZumm3_Zn7M4,1669
+boto3_dataclass_cognito_idp-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_cognito_idp-1.40.0.dist-info/RECORD,,
