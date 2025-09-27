@@ -1,0 +1,6 @@
+torch>=2.8.0
+torchcodec>=0.7.0
+
+[test]
+pytest>=8
+pytest-cov
