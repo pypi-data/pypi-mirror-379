@@ -1,0 +1,49 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Seade on juba h\u00e4\u00e4lestatud"
+        },
+        "error": {
+            "cannot_connect": "\u00dchendamine nurjus",
+            "invalid_auth": "Tuvastamine nurjus",
+            "timeout_connect": "\u00dchenduse loomise ajal\u00f5pp",
+            "unknown": "Ootamatu t\u00f5rge"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API v\u00f5ti",
+                    "host": "Host"
+                },
+                "data_description": {
+                    "api_key": "API v\u00f5ti Portaineriga autentimiseks",
+                    "host": "Portainer'i instantsi host/URL, sealhulgas port"
+                },
+                "description": "API-v\u00f5tme saab luua Portaineri kasutajaliideses. Mine **Minu konto > API-v\u00f5tmed** ja vali **Lisa API-v\u00f5ti**."
+            }
+        }
+    },
+    "device": {
+        "unknown_container": {
+            "name": "Tundmatu konteiner"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "status": {
+                "name": "Olek"
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "Portaineri eksemplariga \u00fchenduse loomisel ilmnes t\u00f5rge: {error}"
+        },
+        "invalid_auth": {
+            "message": "Autentimisel ilmnes t\u00f5rge: {error}"
+        },
+        "timeout_connect": {
+            "message": "Portaineri eksemplariga \u00fchenduse loomisel ilmnes ajal\u00f5pp: {error}"
+        }
+    }
+}

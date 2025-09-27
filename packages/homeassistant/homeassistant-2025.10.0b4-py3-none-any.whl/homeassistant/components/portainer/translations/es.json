@@ -1,0 +1,49 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "El dispositivo ya est\u00e1 configurado"
+        },
+        "error": {
+            "cannot_connect": "No se pudo conectar",
+            "invalid_auth": "Autenticaci\u00f3n no v\u00e1lida",
+            "timeout_connect": "Tiempo de espera agotado mientras se establec\u00eda la conexi\u00f3n",
+            "unknown": "Error inesperado"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "Clave API",
+                    "host": "Host"
+                },
+                "data_description": {
+                    "api_key": "La clave API para autenticarse con Portainer",
+                    "host": "El host/URL, incluido el puerto, de tu instancia Portainer"
+                },
+                "description": "Puedes crear una clave API en la interfaz de usuario de Portainer. Ve a **Mi cuenta > Claves API** y selecciona **A\u00f1adir clave API**."
+            }
+        }
+    },
+    "device": {
+        "unknown_container": {
+            "name": "Contenedor desconocido"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "status": {
+                "name": "Estado"
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "Se produjo un error al intentar conectarse a la instancia de Portainer: {error}"
+        },
+        "invalid_auth": {
+            "message": "Se produjo un error al intentar autenticarse: {error}"
+        },
+        "timeout_connect": {
+            "message": "Se produjo un tiempo de espera agotado al intentar conectarse a la instancia de Portainer: {error}"
+        }
+    }
+}
