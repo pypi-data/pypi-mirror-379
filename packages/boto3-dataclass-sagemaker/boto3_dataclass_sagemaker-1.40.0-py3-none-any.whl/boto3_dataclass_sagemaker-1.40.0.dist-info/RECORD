@@ -1,0 +1,7 @@
+boto3_dataclass_sagemaker/__init__.py,sha256=_CsDgy4ygxi2BKrjh9r5aK5HyB2oFSAN_90gWyir_tM,112
+boto3_dataclass_sagemaker/caster.py,sha256=Ofjx5-c4JjrcVrz0tWHP4T4cfBR0LFt7a2RTe3D66BI,76439
+boto3_dataclass_sagemaker/type_defs.py,sha256=JI7byZRBHvoe5_UZh4Et5Ho6su7yB8P8ImwgPLTmWfY,1762744
+boto3_dataclass_sagemaker-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_sagemaker-1.40.0.dist-info/METADATA,sha256=v2gcBsGv_44te6v0qpEhRtYJ8x2mC6gR-yvqje6HaPA,1655
+boto3_dataclass_sagemaker-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_sagemaker-1.40.0.dist-info/RECORD,,
