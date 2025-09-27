@@ -1,0 +1,11 @@
+{
+    "successions": [
+        {
+            "dsi": "co89-SHi5bbOAR2hmbsputtwqQg",
+            "allowed_signers": [
+                "SHA256:ltc0AoK3CyPbqfIOmUaHWm0e8txDSLZcPK8ElYSsR48"
+            ],
+            "editions": []
+        }
+    ]
+}
