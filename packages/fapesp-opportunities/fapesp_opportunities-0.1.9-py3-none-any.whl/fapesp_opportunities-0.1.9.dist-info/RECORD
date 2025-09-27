@@ -1,0 +1,15 @@
+fapesp_opportunities/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+fapesp_opportunities/about.py,sha256=0M5pULcavzhk5mbP8UcIpVN1ieo9AyEuYRB_U1LFI9E,468
+fapesp_opportunities/desktop.py,sha256=MBDgV6ThDq2EGerEQ1l7ADIb1pGsJLsHZPtisjo5URQ,3536
+fapesp_opportunities/program.py,sha256=cg11niKtwf2UTzNuRKg7xCe0z9qX_DwPvXJKuLqM1CQ,12261
+fapesp_opportunities/icons/logo.png,sha256=zbb9zCvgKRRsWTAvFtWwe3aRKsrr0p93p4zAaEbEleY,14914
+fapesp_opportunities/modules/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+fapesp_opportunities/modules/configure.py,sha256=zpRIk4ab9P2cvL0eh9wmWH1pRg1isfOAMIy67Xulvfc,1944
+fapesp_opportunities/modules/fapesp.py,sha256=qskJ5A8yMi6HrHO-ot9hSZJbBqt9OQJRLwQa1NAakt4,6213
+fapesp_opportunities/modules/wabout.py,sha256=Dz8Yko-Z6DeCOCpF_76vgJ_EZyBwBJhCi00wIy2SKUo,4109
+fapesp_opportunities-0.1.9.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fapesp_opportunities-0.1.9.dist-info/METADATA,sha256=D0UAQQmOmcBSlOWn56VoQZU-gJ1Db1036W8SatYyELA,1949
+fapesp_opportunities-0.1.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fapesp_opportunities-0.1.9.dist-info/entry_points.txt,sha256=6iwYf3A2qbV2w4RWumfaWXSDnx5vmP_T9dpvAS0cAQI,75
+fapesp_opportunities-0.1.9.dist-info/top_level.txt,sha256=5HQV_Mz9YHX9VkHSKtMkBO-1WOt-Pwq2Er5DZiYL9Bs,21
+fapesp_opportunities-0.1.9.dist-info/RECORD,,
