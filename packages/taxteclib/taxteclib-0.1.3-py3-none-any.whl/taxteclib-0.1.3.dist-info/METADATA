@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: taxteclib
+Version: 0.1.3
+Summary: Libreria estandar para DeloitteAR BPS Tax Tech
+Author-email: Leonel Marinaro <lmarinaro@deloitte.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyodbc>=5.2.0
+Requires-Dist: sqlalchemy>=2.0.43
+Dynamic: license-file
+
+# taxteclib
+
+`taxteclib` es una librería Python que centraliza módulos y utilidades comunes para los proyectos de BPS Tax Tec (Argentina). Está pensada para contener funciones, clases y helpers reutilizables que faciliten la construcción de servicios y herramientas internas.
+
+## Características
+
+- Paquete ligero, compatible con Python 3.12
+- Estructura lista para pruebas y CI
+- Contiene utilidades comunes para la organización BPS Tax Tec ARG
+
+## Instalación (desarrollo)
+
+Recomendado: crear un entorno virtual y usar las utilidades del proyecto.
+
+Con venv:
+
+```pwsh
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -U pip
+pip install -e .
+```
+
+Si usas `uv` (opcional) y el Makefile del repo:
+
+```pwsh
+make local-setup
+make install
+```
+
+## Uso básico
+
+Ejemplo mínimo usando la clase de ejemplo incluida:
+
+```python
+from taxteclib.dummy_class import Dummy
+
+dummy = Dummy()
+assert dummy.add(2, 3) == 5
+print('2 + 3 =', dummy.add(2, 3))
+```
+
+## Ejecutar pruebas
+
+La suite de tests usa `pytest`. Para correrlas localmente:
+
+```pwsh
+# dentro del entorno virtual
+make test
+# o
+pytest -q
+```
+
+## Contribuir
+
+1. Crea una rama con un nombre descriptivo
+2. Asegúrate de pasar los hooks y tests locales (`make local-setup`)
+3. Envía un Pull Request contra `main`
+
+Para estilos y checks el repo incluye `ruff` y hooks de pre-commit.
+
+## Licencia
+
+Consulta el archivo `LICENSE` del repositorio para detalles.
