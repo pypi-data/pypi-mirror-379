@@ -1,0 +1,7 @@
+boto3_dataclass_bedrock_runtime/__init__.py,sha256=4idQe1mTSHVTpg_PzNXE29Zvfj44fosZv-3EE1H_S0s,124
+boto3_dataclass_bedrock_runtime/caster.py,sha256=WPzhP-TqGg-s36jJrEKSFLbg1iHiHl_Wh9huCt1BBvk,2289
+boto3_dataclass_bedrock_runtime/type_defs.py,sha256=Bf4r5APAt85gyEKNCH5ANFCywNNAlDNMXtIgx1B0Qcs,160640
+boto3_dataclass_bedrock_runtime-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_bedrock_runtime-1.40.0.dist-info/METADATA,sha256=VFwGEnYd82iWg05L7o_zlygf1JyRigZGiw3PmB3TFg0,1697
+boto3_dataclass_bedrock_runtime-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_bedrock_runtime-1.40.0.dist-info/RECORD,,
