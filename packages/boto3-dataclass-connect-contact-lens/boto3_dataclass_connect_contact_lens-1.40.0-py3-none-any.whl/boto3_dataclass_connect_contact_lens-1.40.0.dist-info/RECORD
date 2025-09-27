@@ -1,0 +1,7 @@
+boto3_dataclass_connect_contact_lens/__init__.py,sha256=Cz9q6dAstK2ZshNC_2zRX4NVgrDmSwVLfhFBqUdnKZs,134
+boto3_dataclass_connect_contact_lens/caster.py,sha256=VgjHxQB_DvGqTwgj787dbvuDVgwpsH0EU5F-HdAK3hQ,561
+boto3_dataclass_connect_contact_lens/type_defs.py,sha256=n_4yxK5w2NxTkMxBB7cNmSTO7JTK8oqR614zKmOxptA,10569
+boto3_dataclass_connect_contact_lens-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_connect_contact_lens-1.40.0.dist-info/METADATA,sha256=rsUSg-MtexpFAuxqc3BYv6l47jK3VWwxF1x3QORfq2s,1732
+boto3_dataclass_connect_contact_lens-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_connect_contact_lens-1.40.0.dist-info/RECORD,,
