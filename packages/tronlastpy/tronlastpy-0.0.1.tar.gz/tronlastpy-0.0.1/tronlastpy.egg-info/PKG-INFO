@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: tronlastpy
+Version: 0.0.1
+Summary: tronlastpy library for Python
+Author: yuratron
+Author-email: dueltmp+ldyo2@gmail.com
+License: MIT
+Project-URL: Source Repository, https://github.com
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+tronhex lib
