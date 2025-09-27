@@ -1,0 +1,12 @@
+naijaligo_asr/__init__.py,sha256=8Y6IFF35NdpoUbcb0FU7ekxbxT7_u0eJTYrbANX3fd4,96
+naijaligo_asr/audio.py,sha256=dAWcXyZ-ySaerkt_zRGsMkoRHNaQA08v6buuU_tWAl0,950
+naijaligo_asr/cli.py,sha256=DrdvSZtCOQJeVhXmy77dwEKHJ0YNdPCwI4pOpq-r4mM,1347
+naijaligo_asr/engine.py,sha256=mlH9u28Syi30j7WBJ72NbVpYJ2v2U8LsNL_st1WC4wU,1996
+naijaligo_asr/logging_utils.py,sha256=-PPshpKXS2c1yh428TQI-eV6TTarkxORkSjtOE1sp4o,527
+naijaligo_asr/registry.py,sha256=DbnXijJ8emsmY7W8HtErjFBpDP6N2UVxmhFfntlhS48,566
+naijaligo_asr/transcriber.py,sha256=HLoVb6WhpVaiEWAXqgb8HRsbPTWQux8UXY8QOBQWsoo,2605
+naijaligo_asr-0.1.0.dist-info/METADATA,sha256=g0rkyF4HOuEa82bCdFklvNtEWEmzt6QxyUFropUcELY,1824
+naijaligo_asr-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+naijaligo_asr-0.1.0.dist-info/entry_points.txt,sha256=HnSjpqSVOShrpA1OS3UmDcuee_ClhkdiG1KNM7pIGPY,57
+naijaligo_asr-0.1.0.dist-info/top_level.txt,sha256=1AOVEoW9EKwovzvbRNCij7JWVCIBvEYluFlEEbf5cgs,14
+naijaligo_asr-0.1.0.dist-info/RECORD,,

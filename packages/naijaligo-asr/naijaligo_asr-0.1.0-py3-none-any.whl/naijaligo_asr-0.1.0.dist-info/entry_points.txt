@@ -1,0 +1,2 @@
+[console_scripts]
+naijaligo-asr = naijaligo_asr.cli:main
