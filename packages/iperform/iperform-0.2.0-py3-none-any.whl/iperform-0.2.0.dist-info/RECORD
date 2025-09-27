@@ -1,0 +1,10 @@
+iperform/__init__.py,sha256=7gSCUpRLLmzccrsMrOmlX0Vi7cCs4vAM4ZYZwruflGU,2666
+iperform/core.py,sha256=rDxqJWMU3mAMOL5Z1SC3gBxesPhPWBA76jZOMACk3O0,83953
+iperform/formatting.py,sha256=YRFzayfpeGm86ZiPtLUask8alkw1JUlnejJNFipfKV0,1743
+iperform/plotting.py,sha256=cFJvXqvtvZwHzEqX4GQENunbLQEkCzQqvb0Y97Bpn6M,12300
+iperform/utils.py,sha256=LDWYq5EV9vEhG4EZ--9MhxpA9AMDQnnGmnGXJfvjRXM,806
+iperform-0.2.0.dist-info/licenses/LICENSE,sha256=pGlbVi3WjGfAUrt62FBAcWL_4rnvpAgFBS4L9v3M9R0,1078
+iperform-0.2.0.dist-info/METADATA,sha256=3yynBjPM3WVkx4t8Rn11SoBnw7Os4YKho_PWzwg0_vg,14238
+iperform-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+iperform-0.2.0.dist-info/top_level.txt,sha256=h0efKUpNZZLnEtdpn26EVoR5AF06-m7vx_7HgZIydpk,9
+iperform-0.2.0.dist-info/RECORD,,
