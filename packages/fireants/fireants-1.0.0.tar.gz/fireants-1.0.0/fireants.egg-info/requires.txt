@@ -1,0 +1,11 @@
+torch>=2.3.0
+SimpleITK==2.2.1
+nibabel
+numpy
+scipy
+scikit-image
+matplotlib
+typing
+tqdm
+pandas
+hydra-core
