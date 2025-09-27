@@ -1,0 +1,15 @@
+oxylabs_ai_studio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oxylabs_ai_studio/client.py,sha256=mpAuVpj10hfPrh_uQY1NGTJjEk6b6ICPMl09ilZFIMg,1907
+oxylabs_ai_studio/logger.py,sha256=KdbgiH408jTh9Zzkydt9GauMJl35gXQX2H90jAj67RI,1459
+oxylabs_ai_studio/models.py,sha256=S_kohbnTwqCiYh8shw-ya20uxSsII2vnK18PjuHlJRQ,111
+oxylabs_ai_studio/settings.py,sha256=auoMp9hRs27FjWgZDbnaw-laUMaLlTTUAf1GPnqV0F4,265
+oxylabs_ai_studio/utils.py,sha256=-rbW2hAzJyOS1gw-NjfXQITea69GuInTuiv7xXhL86A,477
+oxylabs_ai_studio/apps/ai_crawler.py,sha256=5i0fdcx-UDnY_nB-RF9BrXk7wYrA8m9e1iTZT5bBQho,7158
+oxylabs_ai_studio/apps/ai_map.py,sha256=huLf0d16MqM6Z4gPzAuQ0tXHZY4AIg0npq9HGzznHA0,5264
+oxylabs_ai_studio/apps/ai_scraper.py,sha256=cZCmTebr2jfGyhdX56S4lUIdQiEipEyuk1p_l8BzrIk,6847
+oxylabs_ai_studio/apps/ai_search.py,sha256=lFTkLy2wKDI_XeKEQ0rwUW2v4gFo3RC2mj-5m87bo2c,4907
+oxylabs_ai_studio/apps/browser_agent.py,sha256=BO8FzrPp5dmetoICwMGUZjq_CsCpsuUpoTGb--yGhmc,6974
+oxylabs_ai_studio-0.2.13.dist-info/METADATA,sha256=CKGzgLqVqRetkkrf8hLPpZyyU9FVjMxC5ur13s8K2J8,5707
+oxylabs_ai_studio-0.2.13.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+oxylabs_ai_studio-0.2.13.dist-info/licenses/LICENSE,sha256=nz4uO80Tof6qZzKqYhY7VLvRB7Y5TQbSvg9XBRdcL6w,1063
+oxylabs_ai_studio-0.2.13.dist-info/RECORD,,
