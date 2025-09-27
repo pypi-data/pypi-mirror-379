@@ -1,0 +1,8 @@
+README.md
+setup.py
+ouverture_firefox/__init__.py
+ouverture_firefox/ouverture_firefox.py
+ouverture_firefox.egg-info/PKG-INFO
+ouverture_firefox.egg-info/SOURCES.txt
+ouverture_firefox.egg-info/dependency_links.txt
+ouverture_firefox.egg-info/top_level.txt

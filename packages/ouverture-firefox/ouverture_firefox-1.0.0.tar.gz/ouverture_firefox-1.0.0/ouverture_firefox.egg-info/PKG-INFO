@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: ouverture-firefox
+Version: 1.0.0
+Summary: Un package d ouverture de firefox qu une seule fois
+Home-page: https://github.com/emmanuel-julien/ouverture_firefox
+Author: emmanuel julien
+Author-email: julienemmanuel01@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# 📦 NomDuProjet
+
+Une courte description de ce que fait ton projet.
+
+---
+
+## 🚀 Fonctionnalités
+
+- ✅ Fonctionnalité 1
+- ✅ Fonctionnalité 2
+- 🔧 Fonctionnalité en cours de développement
+
+---
+
+## 🛠️ Installation
+
+Installe ce paquet via `pip` :
+
+```bash
+pip install nomduprojet
+
