@@ -1,0 +1,15 @@
+create_mcp_app/__init__.py,sha256=J9cBwSRU0ChjGSY2shoaddCL1IXJpE6zsXTT6mnPcHc,119
+create_mcp_app/cli.py,sha256=ru0dU5C_wd8ZTWla1qOY8HWRwLcOrl1tPefclhk69hc,2181
+create_mcp_app/generator.py,sha256=Hbi_4XJtbNfcKLfb_cyvYnUR9F1pVRgx_2pm0LYLDgM,5549
+create_mcp_app/templates/fastmcp/.gitignore,sha256=uW3qiHYxZrdk0mdJMFAiQ7A6FWXK3Lzn2XWL7LBtgO4,408
+create_mcp_app/templates/fastmcp/Dockerfile.j2,sha256=f-0ZcaK_b37MYXtNoorL2ClkrHIHnrk91e6GETR7jRA,276
+create_mcp_app/templates/fastmcp/README.md.j2,sha256=FEMYroT2RdQ9Yyrha2-rRu10-LzwN_m4V82Fb6VkXUQ,326
+create_mcp_app/templates/fastmcp/docker-compose.yml.j2,sha256=I_WUG8Tp9JEIJjueOStWj4vNrdRz9vjoGpvz3FkDoC4,671
+create_mcp_app/templates/fastmcp/requirements.txt.j2,sha256=IWeEm6bwfxArCOVhDpY5hl2EawpOR6n6KsyZ3UaP0Mc,65
+create_mcp_app/templates/fastmcp/setup.py.j2,sha256=Fw4kB4DpukleaYYrt3Ir6XOonCsj4vtG5TG0FIatSMs,809
+create_mcp_app-1.0.5.dist-info/licenses/LICENSE,sha256=J2OmXcGE4kJ76s2yfq1S6nbnCY4tM_DV_dacq0RCjIU,1067
+create_mcp_app-1.0.5.dist-info/METADATA,sha256=Xa11rXqWGATIuRSvjVXjLr9TDfHfh6FUouoRUqQrkhQ,1694
+create_mcp_app-1.0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+create_mcp_app-1.0.5.dist-info/entry_points.txt,sha256=RBzIsxlB8RBMKfIUKXCHCQWQe2sCmaPlgnU7W-bfZrk,59
+create_mcp_app-1.0.5.dist-info/top_level.txt,sha256=Fw_uWAjRh-mV-YaWWYgMo3odd661jdzvfVQN1Ubn7sg,15
+create_mcp_app-1.0.5.dist-info/RECORD,,
