@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+carbonic/__init__.py
+carbonic.egg-info/PKG-INFO
+carbonic.egg-info/SOURCES.txt
+carbonic.egg-info/dependency_links.txt
+carbonic.egg-info/requires.txt
+carbonic.egg-info/top_level.txt
+tests/test_date.py
+tests/test_datetime.py
+tests/test_duration.py
+tests/test_interval.py
+tests/test_locale.py
+tests/test_performance.py
+tests/test_period.py
