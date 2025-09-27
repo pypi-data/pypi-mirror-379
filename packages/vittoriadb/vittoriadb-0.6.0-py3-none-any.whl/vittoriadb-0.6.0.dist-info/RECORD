@@ -1,0 +1,10 @@
+vittoriadb/__init__.py,sha256=MQ6JKySuKMbjh0v0KZ_ZRc-kZ4YegEGliRN6N_3SZwI,2627
+vittoriadb/client.py,sha256=zA-WYE9etYEYDzWfSLi29JCz1L-reQE0aijb7L-uKJE,22883
+vittoriadb/configure.py,sha256=zJVcot1p9RGge0m6h1cC7BSp0QHjV9LsmypU47qiHaE,6149
+vittoriadb/document.py,sha256=e7VHAgj6NW1_3JghaUC4sBz6mbn8_WT35Jk8rDGzGGc,13748
+vittoriadb/types.py,sha256=-3ILiM_puiywH1I5nctyDs2UF9OtPiVbJvyszefEewQ,10778
+vittoriadb-0.6.0.dist-info/METADATA,sha256=c9GXrG7Uv5A5arsCg7Fq_K9w43njTvujeXZA24wQRDY,21396
+vittoriadb-0.6.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+vittoriadb-0.6.0.dist-info/entry_points.txt,sha256=jFFPZ5i1m-RAPAXLNl2e849yivkgXCIwmqtKADNVLSs,58
+vittoriadb-0.6.0.dist-info/top_level.txt,sha256=fpJanQr4T5nfHst0R3tMXVLwa7XM-bOYfeWY2EZAdBc,11
+vittoriadb-0.6.0.dist-info/RECORD,,
