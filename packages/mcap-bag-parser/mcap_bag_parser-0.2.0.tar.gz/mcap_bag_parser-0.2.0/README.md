@@ -1,0 +1,51 @@
+# MCAP Bag Parser
+
+Parse MCAP rosbags into pandas dataframes using an adapter around rosx_introspection for speed.
+
+## Installation
+
+```bash
+pip install mcap-bag-parser
+```
+
+*Note*: The mcap-bag-parser is now a fully self-contained package using `scikit-build-core`, for automatically building/bundling `rosx_introspection` during pip 
+  install. Users now get a unified mcap_bag module with both legacy (BagFileParser) and modern (parse_mcap_file) APIs, with scikit-build-core handling C++ compilation and Python extension creation.
+
+
+
+## Developer Setup/Testing
+
+```bash
+# Clone and setup
+git clone https://gitlab.com/nealtanner/mcap-bag-parser.git
+cd mcap-bag-parser
+git submodule update --init --recursive
+
+# Build self-contained wheel
+pip install build scikit-build-core
+python -m build
+
+# test in clean environment
+python -m venv test_env && source test_env/bin/activate
+pip install pandas mcap numpy
+pip install dist/mcap_bag_parser-*.whl
+python -c "import mcap_bag; print('import success!')"
+```
+
+## Build and Upload
+Following instructions from https://packaging.python.org/en/latest/tutorials/packaging-projects/
+
+**Automated releases:** Push a git tag to automatically build and publish to PyPI via GitLab CI. Ensure PyPI credentials are configured in GitLab CI/CD variables.
+
+**Manual build:** To install build requirements
+```commandline
+python3 -m pip install --upgrade build
+python3 -m pip install --upgrade twine
+```
+
+To build and upload to pypi manually, bump revision in `pyproject.toml`, then
+```commandline
+rm -rf dist
+python3 -m build
+python3 -m twine upload dist/*
+```

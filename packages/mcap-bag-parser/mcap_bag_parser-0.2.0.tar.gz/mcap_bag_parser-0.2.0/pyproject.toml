@@ -1,0 +1,32 @@
+[build-system]
+requires = ["scikit-build-core", "nanobind"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "mcap_bag_parser"
+version = "0.2.0"
+authors = [
+  { name="Neal Tanner"},
+  { name="Teresa Gadda"},
+  { name="Bryan Zhao"},
+]
+description = "Parse ROS2 mcap bagfiles efficiently into pandas dataframes, using the rosx_introspection package."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/nealtanner/mcap-bag-parser"
+Issues = "https://gitlab.com/nealtanner/mcap-bag-parser/-/issues"
+
+
+[tool.scikit-build]
+cmake.source-dir = "."
+cmake.build-type = "Release"
+cmake.args = ["-DROSX_PYTHON_BINDINGS=ON", "-DBUILD_ROSX_SUPPORT=ON", "-DROSX_HAS_JSON=OFF", "-DCMAKE_DISABLE_FIND_PACKAGE_ament_cmake=TRUE"]
+wheel.packages = ["src/mcap_bag", "src/rosx_introspection"]
+sdist.exclude = ["test_env/", "test_env/**", "dist/", "build/", "*.egg-info/", "__pycache__/", ".pytest_cache/"]
