@@ -1,0 +1,7 @@
+boto3_dataclass_ecs/__init__.py,sha256=g5lx3PLvVXXKrP7iz-o0PtpG-EqPJknIjL2NC5NGfYQ,100
+boto3_dataclass_ecs/caster.py,sha256=fTZwbsEnbRqMoLlIF7njtTzNXBGdT199EBSLQDlfBS4,12447
+boto3_dataclass_ecs/type_defs.py,sha256=o1aulDgArBR3Cj-DR6-L3qdi4knI8Cd8SCAceyBzrvQ,300869
+boto3_dataclass_ecs-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_ecs-1.40.0.dist-info/METADATA,sha256=XIlhl2xzR4OtzG_cn18rxgSN-pbVPKNXn9u82fSV2wo,1613
+boto3_dataclass_ecs-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_ecs-1.40.0.dist-info/RECORD,,
