@@ -1,0 +1,9 @@
+qsinc/__init__.py,sha256=Sf7C7NEAcAJVi45mv6oaxWhrMcgQu7m-cJt5Hjsc144,1544
+qsinc/core.py,sha256=KTKVq54v8y-DaFsZ5ehPNccqHNYsklvvuVMMsbAFC1I,15611
+qsinc/utils.py,sha256=mukooAIt_GqNRxM9mVyKUS-nK6qMGpXUZNl1ShN1EbI,9139
+qsinc-3.2.0.dist-info/licenses/LICENSE,sha256=iyE0EYZQsCtc0fzkY93FsFQhaZY_uTbGzEaVnl0XOnI,1068
+qsinc-3.2.0.dist-info/METADATA,sha256=lUjYv1Ri5uwTpaqv3AwnDT0J2X68ejhi_y0QZJdpGBs,11735
+qsinc-3.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+qsinc-3.2.0.dist-info/entry_points.txt,sha256=cGfBtove_jNZU8fcTNszj3Kk-qFH7fPZ6hXZZLm8hDY,104
+qsinc-3.2.0.dist-info/top_level.txt,sha256=vxAycj4FfxK2DanlOEaaOjhdq3O55sChn1uK_QgnGBY,6
+qsinc-3.2.0.dist-info/RECORD,,
