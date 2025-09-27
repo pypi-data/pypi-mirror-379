@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-appendix"
+dynamic = ["version"]                     # <- version comes from __init__.__version__
+description = "A tool to merge appendices into a main PDF."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_LICENSES"]
+authors = [{ name = "Juan Jose Hasbun Wood", email="juan@hasbun-wood-engineering.de" }]
+keywords = ["pdf", "appendix", "merge", "pypdf", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "pypdf>=6.0.0",
+]
+
+[project.scripts]
+pdf-appendix = "pdf_appendix.cli:main"
+
+[project.urls]
+Source = "https://github.com/HasbunWoodEngineering/pdf-appendix"
+"Developer Homepage" = "https://hasbun-wood-engineering.de"
+License = "https://github.com/HasbunWoodEngineering/pdf-appendix/blob/main/LICENSE"
+"Third Party Licenses" = "https://github.com/HasbunWoodEngineering/pdf-appendix/blob/main/THIRD_PARTY_LICENSES"
+
+[project.optional-dependencies]
+dev = [
+  "black>=24.0.0",
+  "pytest>=7.0",
+  "reportlab>=4.0.0",   # only needed for test PDF generation
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Single-source the version from src/pdf_appendix/__init__.py
+[tool.setuptools.dynamic]
+version = { attr = "pdf_appendix.__version__" }
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+include = "\\.pyi?$"
+exclude = '''
+/(
+  \.git
+| \.hg
+| \.mypy_cache
+| \.pytest_cache
+| \.env
+| \.venv
+| env
+| venv
+| build
+| dist
+| .*egg-info
+| __pycache__
+)/
+'''

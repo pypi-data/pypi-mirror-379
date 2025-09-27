@@ -1,0 +1,14 @@
+LICENSE
+README.md
+THIRD_PARTY_LICENSES
+pyproject.toml
+src/pdf_appendix/__init__.py
+src/pdf_appendix/cli.py
+src/pdf_appendix/core.py
+src/pdf_appendix.egg-info/PKG-INFO
+src/pdf_appendix.egg-info/SOURCES.txt
+src/pdf_appendix.egg-info/dependency_links.txt
+src/pdf_appendix.egg-info/entry_points.txt
+src/pdf_appendix.egg-info/requires.txt
+src/pdf_appendix.egg-info/top_level.txt
+tests/test_core.py
