@@ -1,0 +1,40 @@
+User Manual
+Y    (Introduction)
+Y    = Opihi Summary %% Copy from SPIE paper
+Y    = System Framework
+Y    = Command Line
+Y    = Manual Mode
+Y    = Automatic Mode
+    = Accessing Results
+Y    = Configuration
+Y?   = Troubleshooting
+Y    = Citations
+Y    = Trivia
+
+Technical Manual
+    (Introduction)
+Y   = Installation
+Y        (Installation scripts, description)
+Y        = Download
+Y        = Python Part
+Y        = Docs
+Y        = WSL
+        = Astrometry.net
+Y        = Orbfit
+Y   = Architecture
+Y       (Overview)
+Y       = API Services Engines
+Y       = Vehicles Solutions
+Y           = Vehicles
+Y           = PreprocessSolution
+Y           = OpihiSolution
+Y       = GUI
+Y       = Library
+Y    = Algorithms
+Y        = Polynomial Propagation
+Y        = Spherical Kinematics
+~   = Conventions
+Y    = License
+
+Code Manual
+Y    Eh.

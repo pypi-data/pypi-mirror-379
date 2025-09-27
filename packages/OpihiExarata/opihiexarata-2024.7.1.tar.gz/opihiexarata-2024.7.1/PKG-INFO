@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: OpihiExarata
+Version: 2024.7.1
+Summary: Analysis software for the IRTF Opihi telescope.
+Project-URL: Homepage, http://irtfweb.ifa.hawaii.edu/~opihi/
+Project-URL: Documentation, https://psmd-iberutaru.github.io/OpihiExarata
+Project-URL: Issues, https://github.com/psmd-iberutaru/OpihiExarata/issues
+Project-URL: Source, https://github.com/psmd-iberutaru/OpihiExarata/
+Author-email: Sparrow <psmd.iberutaru@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: astropy
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pillow
+Requires-Dist: plotly
+Requires-Dist: pyside6
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# OpihiExarata
+ The NASA Infrared Telescope Facility (IRTF) Opihi telescope software tool used primarily for solving asteroid ephemerides using astrometric solutions.
+
+[![Tests (Windows)](https://github.com/psmd-iberutaru/OpihiExarata/actions/workflows/tests_windows.yml/badge.svg)](https://github.com/psmd-iberutaru/OpihiExarata/actions/workflows/tests_windows.yml) [![Tests (Linux)](https://github.com/psmd-iberutaru/OpihiExarata/actions/workflows/tests_linux.yml/badge.svg)](https://github.com/psmd-iberutaru/OpihiExarata/actions/workflows/tests_linux.yml) [![Code Coverage](https://img.shields.io/badge/dynamic/xml?url=https://raw.githubusercontent.com/psmd-iberutaru/OpihiExarata/master/docs/build/html/code/coverage/results.xml&label=Code%20Coverage&query=round(//coverage/@line-rate*100)&color=455A64&suffix=%)](https://psmd-iberutaru.github.io/OpihiExarata/build/html/code/coverage/index.html)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![Python Black Linting](https://github.com/psmd-iberutaru/OpihiExarata/actions/workflows/black.yml/badge.svg)](https://github.com/psmd-iberutaru/OpihiExarata/actions/workflows/black.yml)
+
+## Complete Documentation
+
+[You can find the complete html documentation here.](https://psmd-iberutaru.github.io/OpihiExarata)
+
+Alternatively, you may find other versions built with Sphinx at [/docs/build/](https://github.com/psmd-iberutaru/OpihiExarata/tree/master/docs/build)
+
+

@@ -1,0 +1,21 @@
+
+# All of the pytest cache files do not need to be tracked.
+.pytest/
+.pytest_cache/
+
+# Built distribution files need not be tracked by git.
+dist/
+build/
+
+# Python bytecode is not needed to be tracked as they are just speed ups.
+*.pyc
+
+# Thumbnail things do not need to be tracked at all.
+**/[Tt]humbs.db
+
+# Visual Studio Code files are different for different people.
+.vscode/
+docs/source/assets/images/Thumbs.db
+
+# Calibration extra files should also not be tracked.
+utility/
