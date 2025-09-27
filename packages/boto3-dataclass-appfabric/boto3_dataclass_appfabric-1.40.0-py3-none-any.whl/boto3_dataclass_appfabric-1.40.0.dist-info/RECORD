@@ -1,0 +1,7 @@
+boto3_dataclass_appfabric/__init__.py,sha256=4HZ7Al3_yOXoNOewyVa7vFV3LRtwq1FfUJdbB_2Pgws,112
+boto3_dataclass_appfabric/caster.py,sha256=EFC_PYkFr8ONSQvIcFRynnpnyrz5AlVdljJnN-Q3zWQ,4092
+boto3_dataclass_appfabric/type_defs.py,sha256=Qth7EIppNYmawgDojUjBKhC_bW0Ij9aQ0BjjtF1wgVc,72064
+boto3_dataclass_appfabric-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_appfabric-1.40.0.dist-info/METADATA,sha256=fZE1LAhCPej453yUn6RnCqyfkKO5dH1KlSxVE0ATfSM,1655
+boto3_dataclass_appfabric-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_appfabric-1.40.0.dist-info/RECORD,,
