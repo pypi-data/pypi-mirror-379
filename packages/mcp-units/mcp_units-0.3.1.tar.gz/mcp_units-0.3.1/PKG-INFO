@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: mcp-units
+Version: 0.3.1
+Summary: An MCP server for cooking unit conversions
+Author-email: Diamantis Sellis <sellisd@gmail.com>
+License-Expression: MIT
+Keywords: conversion,cooking,mcp,units
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.11
+Requires-Dist: jsonschema>=4.0.0
+Requires-Dist: mcp==1.15.0
+Requires-Dist: pytest-asyncio>=0.23.0
+Requires-Dist: pytest>=7.4.4
+Requires-Dist: ruff>=0.11.5
+Provides-Extra: dev
+Requires-Dist: pytest-asyncio>=0.23.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# MCP Cooking Units Converter
+
+[![smithery badge](https://smithery.ai/badge/@sellisd/mcp-units)](https://smithery.ai/server/@sellisd/mcp-units)
+
+<!-- mcp-name: io.github.username/server-name -->
+
+**MCP Cooking Units Converter** is a Python package and MCP server for converting cooking measurements (volume, weight, temperature) between common units. It is designed for integration with MCP-compatible tools and VSCode extensions.
+
+## Installation
+
+### Installing via Smithery
+
+To install Cooking Units Converter for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@sellisd/mcp-units):
+
+```bash
+npx -y @smithery/cli install @sellisd/mcp-units --client claude
+```
+
+### Manual Installation
+1. Clone the repository:
+```bash
+git clone git@github.com:sellisd/mcp-units.git
+cd mcp-units
+```
+
+2. Install:
+```bash
+uv pip install .  # For normal use
+# OR
+uv pip install -e .  # For development
+```
+
+## Usage
+
+### Available Tools
+
+The server provides the following conversion tools:
+
+1. **Volume Conversion**
+   - Convert between: ml, l, cup, tbsp, tsp
+   - Example: 240ml → 1 cup
+
+2. **Weight Conversion**
+   - Convert between: g, kg, oz, lb
+   - Example: 454g → 1 lb
+
+3. **Temperature Conversion**
+   - Convert between: Celsius (C), Fahrenheit (F)
+   - Example: 180°C → 356°F
+
+### Running the Server
+
+```bash
+uvx --with . python -m mcp_units.server
+```
+
+## Using with VSCode Extensions
+
+This MCP server can be integrated with VSCode extensions that support the Model Context Protocol. Here's how to set it up:
+
+1. Install an MCP-compatible VSCode extension (e.g., Roo)
+
+2. Configure the extension to use this server in `.roo/mcp.json`:
+   ```json
+   {
+     "mcpServers": {
+       "units": {
+         "command": "uvx",
+         "args": [
+           "--with",
+           ".",
+           "python",
+           "-m",
+           "mcp_units.server"
+         ],
+         "disabled": false
+       }
+     }
+   }
+   ```
+
+## Contact
+
+For questions, issues, or contributions, please visit the [GitHub repository](https://github.com/sellisd/mcp-units).
+
+## License
+
+This project is licensed under the MIT License.
