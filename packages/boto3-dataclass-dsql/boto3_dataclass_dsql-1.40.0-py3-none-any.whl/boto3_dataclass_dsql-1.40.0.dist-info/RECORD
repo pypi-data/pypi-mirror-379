@@ -1,0 +1,7 @@
+boto3_dataclass_dsql/__init__.py,sha256=zkIFCKrD1HT8H_GEKOqbH_q31gNxau-HBrtR2Q4EDz8,102
+boto3_dataclass_dsql/caster.py,sha256=fhlzbTUiom5hoOSKUoJjMm5TbOY3oA3J_klwaP4khfY,1919
+boto3_dataclass_dsql/type_defs.py,sha256=AvX2vjWi_v767gEB09sUrCwN4rB9SVqZiISCqEBij8c,24946
+boto3_dataclass_dsql-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_dsql-1.40.0.dist-info/METADATA,sha256=4LzYclXPdkEZdZp2sZ-o712km-fLIo03ctAEMQWeJBE,1620
+boto3_dataclass_dsql-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_dsql-1.40.0.dist-info/RECORD,,
