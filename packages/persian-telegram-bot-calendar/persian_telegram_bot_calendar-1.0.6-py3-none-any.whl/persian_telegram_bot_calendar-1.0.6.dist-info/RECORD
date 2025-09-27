@@ -1,0 +1,11 @@
+persian_telegram_bot_calendar-1.0.6.dist-info/licenses/LICENSE.txt,sha256=QBcwvC_RXu9gp0JVhdzcWqsdNfcFSYfe3v-uMAQmi6E,1089
+telegram_bot_calendar/__init__.py,sha256=I6S4XjGH4TG5x-Rq-B4sug6vPai8VVCnO5iOe6s4hz8,222
+telegram_bot_calendar/base.py,sha256=D7fpChs8KSuBKdW4xtm3JNTgSTgnnDfMOKHuz11cUcI,8621
+telegram_bot_calendar/detailed.py,sha256=2bpDDthMVSt0LKmh7I26ZokoGgODi3AiV7bUKDAuwdc,9329
+telegram_bot_calendar/static.py,sha256=Uv3DFnDmsoIY03HsBMzpYRWM_dPWJskh4MPPrjisjPg,932
+telegram_bot_calendar/wmonth.py,sha256=estQc5Dou4rIuDGiVKAP_j9ur4IdxZ1madtzybACJM0,196
+telegram_bot_calendar/wyear.py,sha256=U3EjexkuA2Oh-2A6ApR5Zl9qtjPdv5hl5L5yyNBQNYg,199
+persian_telegram_bot_calendar-1.0.6.dist-info/METADATA,sha256=RLmoZzoYpFymUrHmEEK9yZKtbo_2nTIB7s4VKoKc8lM,7921
+persian_telegram_bot_calendar-1.0.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+persian_telegram_bot_calendar-1.0.6.dist-info/top_level.txt,sha256=nPPfMx7smQomgQUxXlPwufmb9LO4II0tZZcq1XaYgkY,22
+persian_telegram_bot_calendar-1.0.6.dist-info/RECORD,,
