@@ -1,0 +1,2 @@
+[console_scripts]
+quark-cli = quark.experimental.cli.main:main
