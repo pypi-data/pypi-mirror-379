@@ -1,0 +1,6 @@
+setup.py
+polars-runtime-compat/__init__.py
+polars_runtime_compat.egg-info/PKG-INFO
+polars_runtime_compat.egg-info/SOURCES.txt
+polars_runtime_compat.egg-info/dependency_links.txt
+polars_runtime_compat.egg-info/top_level.txt
