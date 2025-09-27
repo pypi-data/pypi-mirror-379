@@ -1,0 +1,14 @@
+opennote/__init__.py,sha256=mgLsMPjuJhjAo6vxK86WYct-r1jlxYiNaqbr03PM8mY,648
+opennote/async_sdk.py,sha256=i0-uvsRhBxwJhx7_sRac8VfE4FNCM8dtZo-g1WjTTns,19706
+opennote/base_client.py,sha256=Ed1T-5ryFMkm1Fna6BqIw5nQRxYlGaTn6SkqyZ4ohYg,4842
+opennote/sync_sdk.py,sha256=eTjXoadbYJu0QCfnrRLnih_JEzY_41keVPmDASyDV3g,17242
+opennote/types/__init__.py,sha256=B5BNGjMQPEJ7a24kEX622RhDQjBOtqNe9d3IFlX6iQY,274
+opennote/types/api_types.py,sha256=0jofNry_suQyCfX34EZprhmxvJZ1DqnRIoaDPaV9-rs,11581
+opennote/types/block_types.py,sha256=VN8L32zGkZMuzn-GnjYn3Vnc1w-qSt-kwlBJHeD4GXc,17306
+opennote/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opennote/util/edit_operations.py,sha256=ytUlEKTlNoRUMmYo4iLNysFWjqxOXnEo7l7GZAy7yjw,2374
+opennote-2.3.1.dist-info/licenses/LICENSE,sha256=ktVEQpacSJlvUtXJ5ZMITNsEDllG4x5oTIGe8dvWk9w,1061
+opennote-2.3.1.dist-info/METADATA,sha256=7VaBLUxzLkMRMlwQnpIn8qGl1uUv7J79ND_1i1dwmBA,1808
+opennote-2.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+opennote-2.3.1.dist-info/top_level.txt,sha256=IC-MdBw-q63sVkF8Ek2LUvnWpaeFHi5L4-a1EpWMUrc,9
+opennote-2.3.1.dist-info/RECORD,,
