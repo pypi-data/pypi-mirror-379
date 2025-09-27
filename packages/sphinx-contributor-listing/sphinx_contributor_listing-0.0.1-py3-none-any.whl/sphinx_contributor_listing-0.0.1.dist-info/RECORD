@@ -1,0 +1,11 @@
+sphinx_contributor_listing/__init__.py,sha256=zfroPfL66xSkPabDoVLosBxkxy8KwxWKRmbnk8sDcK0,1693
+sphinx_contributor_listing/_version.py,sha256=qf6R-J7-UyuABBo8c0HgaquJ8bejVbf07HodXgwAwgQ,704
+sphinx_contributor_listing/callback.py,sha256=mi5H14t_SFyuoAHm7FvHFSvi_L57Rl7lYFHozVP0X7A,4024
+sphinx_contributor_listing/common.py,sha256=-j6PshHs6WR8dA0YJn902FwEUauo13te98U_hJa8KQE,717
+sphinx_contributor_listing/_static/contributors.css,sha256=iA9S0EOPZtTPLVN3vAPUUG6RbQ8yJR_sr9r5REPvV14,866
+sphinx_contributor_listing/_static/contributors.js,sha256=VjrKaqRcYnc7A12b4H_Fg7IoY-2JPzGIg3uLI5bhhNg,323
+sphinx_contributor_listing-0.0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sphinx_contributor_listing-0.0.1.dist-info/METADATA,sha256=hcUYpliWzJs8MibQNQ8xpet8Hq5W3s5CHbMN41XKwew,2722
+sphinx_contributor_listing-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sphinx_contributor_listing-0.0.1.dist-info/top_level.txt,sha256=VGqsV8PBvfsRIz5vmQzdjOM83_K4NLEfYInUOgqMbto,27
+sphinx_contributor_listing-0.0.1.dist-info/RECORD,,
