@@ -1,0 +1,9 @@
+python_freeipa/__init__.py,sha256=ax-bLOB_Z7cwTejW49yU41BLc7M1t58bFfBhxX6kOes,243
+python_freeipa/client.py,sha256=V9OJlXedxZallXbY0ttNVSLynQ7LKDXVyyYBmpS7GsQ,14022
+python_freeipa/client_legacy.py,sha256=QjesjzGjOl_sZz9e7oVp1LN2arzS4K0wdj7YH6vvwOQ,44072
+python_freeipa/client_meta.py,sha256=30sosLAGgzfMRr23lugU1N2Sb4RUXMhf2EKu8Qs_ZwQ,981381
+python_freeipa/exceptions.py,sha256=BZnZmOmv21cnscrOy7rcnIY_hCrBD1TVZ3ZETeoyS-k,3527
+python_freeipa-1.0.10.dist-info/METADATA,sha256=bSER-eGyiLVKkm-104W9xeExZ_5zz7NihySh9QtOh9Q,1860
+python_freeipa-1.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_freeipa-1.0.10.dist-info/licenses/LICENSE.md,sha256=4z9dsJ3Kc5bawz5gsmMbnfNoeXvkFZwJFaSmOxlJiVw,1084
+python_freeipa-1.0.10.dist-info/RECORD,,
