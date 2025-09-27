@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+py_commons_ip/__init__.py
+py_commons_ip.egg-info/PKG-INFO
+py_commons_ip.egg-info/SOURCES.txt
+py_commons_ip.egg-info/dependency_links.txt
+py_commons_ip.egg-info/requires.txt
+py_commons_ip.egg-info/top_level.txt
+py_commons_ip/resources/commons-ip2-cli.jar
+tests/test_examples.py
+tests/test_invalid.py
