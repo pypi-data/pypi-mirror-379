@@ -1,0 +1,11 @@
+torch
+numpy
+pandas
+scikit-learn
+QuantLib-Python
+matplotlib
+yfinance
+xgboost
+joblib
+iisignature
+pandas_market_calendars
