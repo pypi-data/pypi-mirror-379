@@ -1,0 +1,26 @@
+# Qsinc Dependencies
+# ===================
+
+# Core requirements (minimal dependencies for basic functionality)
+
+# Optional high-performance dependencies
+# Install with: pip install qsinc[fast]
+# numpy>=1.20.0
+# cython>=0.29.0
+
+# Development dependencies  
+# Install with: pip install qsinc[dev]
+# pytest>=6.0.0
+# pytest-cov>=2.12.0
+# black>=21.0.0
+# flake8>=3.9.0
+# mypy>=0.910
+
+# Benchmarking dependencies
+# Install with: pip install qsinc[benchmark]  
+# lz4>=3.1.0
+# zstandard>=0.15.0
+# brotli>=1.0.9
+
+# Note: Qsinc is designed to work with minimal dependencies for maximum compatibility
+# All optional dependencies enhance performance or provide additional functionality

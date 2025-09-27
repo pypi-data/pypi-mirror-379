@@ -1,0 +1,3 @@
+[console_scripts]
+qsinc-compress = qsinc.cli:compress_main
+qsinc-decompress = qsinc.cli:decompress_main
