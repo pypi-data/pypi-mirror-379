@@ -1,0 +1,10 @@
+fall_detection/__init__.py,sha256=ZRGf_PVNMo9kyKCo3UCq1Q3XKg4JjuPrJFHRBO-SveY,1313
+fall_detection/api.py,sha256=AyqpIdZXtWP84ZwlwSMm4kGMkS8N9Fk0qEFzUXp-1_o,6217
+fall_detection/detector.py,sha256=9dqWTGxACaxZ_Wq0daWJG4wQ4PH_Rg-HkoTow8w49K4,21431
+fall_detection/models/best.pt,sha256=X29iDQ-ldO2A2DSLuNRgYBSOsLok4-6gDTGjDNrbpB0,22502634
+fall_detection/models/best_fp16.onnx,sha256=7uQ9aEQUG487nOol27T6qfa_3hF9STKaO-Q8v9QsKsc,44747858
+human_fall_detection-0.1.1.dist-info/licenses/LICENCE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+human_fall_detection-0.1.1.dist-info/METADATA,sha256=R8eHAbAoIkFjLPMvYGiyCbgzz4BQVdp1RHeHjLX77s8,6641
+human_fall_detection-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+human_fall_detection-0.1.1.dist-info/top_level.txt,sha256=lOJCvq1vA36bLjTL_4C97K1dfobAHK9YtdDiu_3QSRo,15
+human_fall_detection-0.1.1.dist-info/RECORD,,
