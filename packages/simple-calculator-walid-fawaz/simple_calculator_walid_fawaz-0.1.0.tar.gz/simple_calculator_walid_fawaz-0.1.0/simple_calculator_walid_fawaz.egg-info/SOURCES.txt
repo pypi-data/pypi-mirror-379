@@ -1,0 +1,8 @@
+README.md
+setup.py
+simple_calculator_walid_fawaz/__init__.py
+simple_calculator_walid_fawaz/calculator.py
+simple_calculator_walid_fawaz.egg-info/PKG-INFO
+simple_calculator_walid_fawaz.egg-info/SOURCES.txt
+simple_calculator_walid_fawaz.egg-info/dependency_links.txt
+simple_calculator_walid_fawaz.egg-info/top_level.txt
