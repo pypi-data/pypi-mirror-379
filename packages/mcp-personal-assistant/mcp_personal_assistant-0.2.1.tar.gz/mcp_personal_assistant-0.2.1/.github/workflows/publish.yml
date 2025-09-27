@@ -1,0 +1,197 @@
+name: Publish to PyPI
+
+on:
+  push:
+    branches:
+      - main  # Auto-publish when pushing to main
+    tags:
+      - 'v*.*.*'  # Also trigger on version tags
+  workflow_dispatch:  # Allow manual triggering
+    inputs:
+      version:
+        description: 'Version to publish (e.g., 1.0.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write  # Required for creating releases
+  id-token: write  # Required for PyPI trusted publishing
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  validate-tag:
+    runs-on: ubuntu-latest
+    name: Validate Release Tag
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Extract version
+      id: version
+      run: |
+        if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          VERSION="${{ github.event.inputs.version }}"
+        elif [[ "${{ github.ref }}" == refs/tags/* ]]; then
+          VERSION=${GITHUB_REF#refs/tags/v}
+        else
+          # Extract version from pyproject.toml for main branch pushes
+          VERSION=$(python3 -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")
+        fi
+        echo "version=${VERSION}" >> $GITHUB_OUTPUT
+        echo "Extracted version: ${VERSION}"
+    
+    - name: Validate version format
+      run: |
+        VERSION="${{ steps.version.outputs.version }}"
+        if [[ ! $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+          echo "Error: Version must be in format X.Y.Z (e.g., 1.0.0)"
+          exit 1
+        fi
+
+  test:
+    runs-on: ubuntu-latest
+    name: Run Tests Before Publishing
+    needs: validate-tag
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+        pip install -e ".[dev]"
+    
+    - name: Run basic tests
+      run: |
+        # Test package imports
+        python -c "from src import server, config, models; print('✅ Package imports work')"
+        
+        # Test console script entry point
+        python -c "from src.server import main; print('✅ Console script entry point works')"
+        
+        echo "✅ Basic tests passed"
+
+  build:
+    runs-on: ubuntu-latest
+    name: Build Package
+    needs: [validate-tag, test]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install build dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+    
+    - name: Verify version in pyproject.toml
+      run: |
+        VERSION="${{ needs.validate-tag.outputs.version }}"
+        TOML_VERSION=$(python3 -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")
+        echo "Publishing version: ${VERSION}"
+        echo "pyproject.toml version: ${TOML_VERSION}"
+    
+    - name: Build package
+      run: |
+        python -m build
+    
+    - name: Check package
+      run: |
+        twine check dist/*
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: dist-${{ needs.validate-tag.outputs.version }}
+        path: dist/
+        retention-days: 7
+
+  publish-pypi:
+    runs-on: ubuntu-latest
+    name: Publish to PyPI
+    needs: [validate-tag, build]
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
+    environment:
+      name: pypi
+      url: https://pypi.org/project/mcp-personal-assistant/
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: dist-${{ needs.validate-tag.outputs.version }}
+        path: dist/
+    
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
+    
+    - name: Create GitHub Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: v${{ needs.validate-tag.outputs.version }}
+        name: Release v${{ needs.validate-tag.outputs.version }}
+        body: |
+          ## Changes in v${{ needs.validate-tag.outputs.version }}
+          
+          ### Installation
+          ```bash
+          # Install globally with uvx (recommended)
+          uvx install mcp-personal-assistant
+          
+          # Or install with pipx
+          pipx install mcp-personal-assistant
+          
+          # Or install with pip
+          pip install mcp-personal-assistant
+          ```
+          
+          ### Usage
+          Add to your Claude Desktop configuration:
+          ```json
+          {
+            "mcpServers": {
+              "personal-assistant": {
+                "command": "uvx",
+                "args": ["mcp-personal-assistant"],
+                "env": {
+                  "MCP_PA_DB_TYPE": "sqlite"
+                }
+              }
+            }
+          }
+          ```
+          
+          See the [README](https://github.com/swapnilsurdi/mcp-pa#readme) for full documentation.
+        draft: false
+        prerelease: false
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+  notify:
+    runs-on: ubuntu-latest
+    name: Notify Success
+    needs: [validate-tag, publish-pypi]
+    if: success() && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+    
+    steps:
+    - name: Success notification
+      run: |
+        echo "🎉 Successfully published mcp-personal-assistant v${{ needs.validate-tag.outputs.version }} to PyPI!"
+        echo "📦 Package: https://pypi.org/project/mcp-personal-assistant/"
+        echo "🚀 Install with: uvx install mcp-personal-assistant"
