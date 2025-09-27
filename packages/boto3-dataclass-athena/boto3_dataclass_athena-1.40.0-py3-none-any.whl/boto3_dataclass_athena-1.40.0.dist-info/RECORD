@@ -1,0 +1,7 @@
+boto3_dataclass_athena/__init__.py,sha256=NhweGSEvvBcKotUwsc4PdLyBDYNhNCmlQ1lbZsls-h4,106
+boto3_dataclass_athena/caster.py,sha256=hTBf4PI8IVGI0eqbrluGWubqArMEWltLE0yxbLf0FA8,10123
+boto3_dataclass_athena/type_defs.py,sha256=61v0BblDdbsJvw8Fc3zBgG23aA40KgULEsdO3xcz9_s,188295
+boto3_dataclass_athena-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_athena-1.40.0.dist-info/METADATA,sha256=wsi8pBBbWyShuyJtx6br2ETUoh-C1-mfIe7I3FijJKc,1634
+boto3_dataclass_athena-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_athena-1.40.0.dist-info/RECORD,,
