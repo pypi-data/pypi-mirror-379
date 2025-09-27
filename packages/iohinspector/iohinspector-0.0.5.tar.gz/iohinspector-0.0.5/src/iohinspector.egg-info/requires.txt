@@ -1,0 +1,14 @@
+matplotlib
+moocore>=0.1.8
+numpy
+pandas
+polars>=1.33.1
+pyarrow
+robustranking
+seaborn
+skelo
+
+[test]
+coverage
+ioh
+pymoo
