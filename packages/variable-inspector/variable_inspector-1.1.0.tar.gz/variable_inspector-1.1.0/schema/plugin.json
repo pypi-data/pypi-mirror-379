@@ -1,0 +1,39 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "variable-inspector",
+  "description": "variable-inspector settings.",
+  "type": "object",
+  "properties": {
+    "variableInspectorAutoRefresh": {
+      "type": "boolean",
+      "title": "variableInspectorAutoRefresh",
+      "description": "Enable Auto Refresh",
+      "default": true
+    },
+    "variableInspectorShowType": {
+      "type": "boolean",
+      "title": "variableInspectorShowType",
+      "description": "Show Type Column",
+      "default": true
+    },
+    "variableInspectorShowShape": {
+      "type": "boolean",
+      "title": "variableInspectorShowShape",
+      "description": "Show Shape Column",
+      "default": false
+    },
+    "variableInspectorShowSize": {
+      "type": "boolean",
+      "title": "variableInspectorShowSize",
+      "description": "Show Size Column",
+      "default": false
+    },
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Set the display language for the Your Variables.",
+      "default": "en"
+    }
+  },
+  "additionalProperties": false
+}
