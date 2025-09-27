@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: relign
+Version: 0.1.0
+Summary: A framework for active alignment using reinforcement learning.
+Author-email: "Matthias Burkhardt (HS Kempten)" <matthias.burkhardt@hs-kempten.de>, "Tobias Windisch (HS Kempten)" <tobias.windisch@hs-kempten.de>, "Tobias Schmähling (HS Kempten)" <tobias.schmaehling@hs-kempten.de>
+Maintainer-email: "Matthias Burkhardt (HS Kempten)" <matthias.burkhardt@hs-kempten.de>, "Tobias Windisch (HS Kempten)" <tobias.windisch@hs-kempten.de>, "Tobias Schmähling (HS Kempten)" <tobias.schmaehling@hs-kempten.de>
+License-Expression: Apache-2.0
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: wandb
+Requires-Dist: mitsuba>=3.7.0
+Requires-Dist: gymnasium
+Requires-Dist: scikit-optimize
+Requires-Dist: stable_baselines3
+Requires-Dist: sb3-contrib
+Requires-Dist: typer
+Requires-Dist: tensorboard
+Requires-Dist: scikit-image>=0.25.2
+Dynamic: license-file
