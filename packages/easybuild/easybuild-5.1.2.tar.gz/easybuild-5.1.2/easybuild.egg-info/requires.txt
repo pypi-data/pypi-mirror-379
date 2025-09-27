@@ -1,0 +1,3 @@
+easybuild-framework==5.1.2
+easybuild-easyblocks==5.1.2
+easybuild-easyconfigs==5.1.2
