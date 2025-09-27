@@ -1,0 +1,10 @@
+vdtoys/ansi.py,sha256=hh8q9S088WHw7lM1yxRbDuVtuT38AtKr2roF8og1HDM,1023
+vdtoys/cache.py,sha256=MOoj5Ed_xAY7hObYrjHS26ZHPXwKx0FgrdhxKlazQA8,1398
+vdtoys/framing.py,sha256=O8AHkY5CBlOX7w_oLzaTY7TtLwQe5mEzUMHugwHX57Y,4221
+vdtoys/localstorage.py,sha256=ZqO5aWf5zRyEuT-ZA8d3XUtaOynV5DeBXMb-3qHBAwM,6294
+vdtoys/mvc.py,sha256=euOv9fpdNCLMobolr6Y5JlCY0NnMbiJAte1KlN2Dero,4287
+vdtoys/plot.py,sha256=MH1v_vow-9BspnDiZtM12lzPOEsrX_izeNIZAZ0iFVc,1639
+vdtoys/registry.py,sha256=BWc4PavMwUep20hXr1y9GSIbjqkom3phhY2KxcmCzHo,6444
+vdtoys-0.1.7.dist-info/METADATA,sha256=v3qHwl3B5AHVMkhHoIKQw7qfrUuY3gKRzWPfsUw0630,721
+vdtoys-0.1.7.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+vdtoys-0.1.7.dist-info/RECORD,,
