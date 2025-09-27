@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ftp_core
+Version: 0.1.792
+Summary: Description de votre projet
+Author-email: Votre Nom <votre@email.com>
+Requires-Dist: pytest
