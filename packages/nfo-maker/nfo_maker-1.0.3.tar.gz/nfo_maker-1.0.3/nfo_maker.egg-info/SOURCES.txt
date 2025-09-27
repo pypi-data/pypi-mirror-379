@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+nfo_maker.egg-info/PKG-INFO
+nfo_maker.egg-info/SOURCES.txt
+nfo_maker.egg-info/dependency_links.txt
+nfo_maker.egg-info/entry_points.txt
+nfo_maker.egg-info/requires.txt
+nfo_maker.egg-info/top_level.txt

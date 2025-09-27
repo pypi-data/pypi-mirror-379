@@ -1,0 +1,3 @@
+
+[figlet]
+pyfiglet>=0.8
