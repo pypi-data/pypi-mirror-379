@@ -1,0 +1,13 @@
+amulety/__init__.py,sha256=YHpyo1ykEZZ2OYYoY4v22533Gory5eV5Phz9q1pbkCc,124
+amulety/__main__.py,sha256=_LxfFE89LbkgaxEOKtKUnEhoc6si8bhpju8FIJmc7-A,196
+amulety/amulety.py,sha256=qSz3GTwiCdG8nI8zXczU8stMiV_yazMRFRkdGFPnd7c,39516
+amulety/bcr_embeddings.py,sha256=OyrweuF874uoy8x2lUb067F-Av8SnsFUm5HsVr-w7wY,13958
+amulety/protein_embeddings.py,sha256=524NhYk0pGLxyDxlE_hAakOGmK9Jqo_kaoalKUcsNkg,28338
+amulety/tcr_embeddings.py,sha256=uP2evRF94jS8Noo3uI-zBHmvAzcO-6Hhgk6MNFtMYE0,11317
+amulety/utils.py,sha256=ZDf-4fLMmIv3_G83V7HXl7xYYlcHPJ0JmUl1T_WPEiI,24567
+amulety-2.0.dist-info/licenses/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+amulety-2.0.dist-info/METADATA,sha256=N3F9JKT-OX_u4IGK8QZAh5MoyOZlzl6IQpkVEli1MY0,5399
+amulety-2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+amulety-2.0.dist-info/entry_points.txt,sha256=_ec2k9AIfSh_qQD91yZomxVXwb5wYKc6-5bRelLMlY4,49
+amulety-2.0.dist-info/top_level.txt,sha256=bPU7glbaEDGICKH1pUNCgC2pCq_hmjBU7pvetOOUKU0,8
+amulety-2.0.dist-info/RECORD,,
