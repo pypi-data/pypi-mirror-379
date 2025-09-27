@@ -1,0 +1,9 @@
+ug4py_base-0.2.3.dist-info/RECORD,,
+ug4py_base-0.2.3.dist-info/WHEEL,sha256=m7GNbUaA4XKdsf9l9r8eHfDfe1XvmCDSA7fLL6ZBzD8,115
+ug4py_base-0.2.3.dist-info/METADATA,sha256=GlyHx0mCJgPQh9su7HIs18cv6qoMtq5PedFfsP6knNs,1293
+ug4py_base-0.2.3.dist-info/licenses/LICENSE,sha256=ztzkGXqPZf_vFg81KYmf5bm8jnSB5H-imjuvnKlzIZI,1095
+ug4py/pylimex.cpython-310-darwin.so,sha256=-xzn3AXF13VV-CHjYqInhU9IBxoVXz4wgZef1EZ3ESM,7138920
+ug4py/pyconvectiondiffusion.cpython-310-darwin.so,sha256=RGMCuq_Eg_fApwxCC92oQWGz8QJeplHz195LSDvJyu0,40018952
+ug4py/pyutil.cpython-310-darwin.so,sha256=XxxMaXdnqWrYJ8tX_V1pnjGQ0tkNxcG9H2sS2LxbVfc,2824920
+ug4py/pyugcore.cpython-310-darwin.so,sha256=6g4BsYIYXGg1_Ckeo3iQ3HciJHJsisYCAqrSJH6R4fE,60409736
+lib/libug4_s.a,sha256=3sxNw9FeZby9N3EDClxUlTzmp9b1cM3DyMFVpifkxz4,180386848
