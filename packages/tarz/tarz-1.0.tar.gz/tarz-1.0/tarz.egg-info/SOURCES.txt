@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tarz/__init__.py
+tarz/core.py
+tarz.egg-info/PKG-INFO
+tarz.egg-info/SOURCES.txt
+tarz.egg-info/dependency_links.txt
+tarz.egg-info/requires.txt
+tarz.egg-info/top_level.txt
+tests/test_core.py
