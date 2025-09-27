@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: agushuju
+Version: 0.1.1
+Summary: 爱股数据，A股数据
+Author-email: 安徽爱股科技有限公司 <jinguxun@qq.com>
+License: MIT
+Project-URL: Homepage, https://github.com/agukeji/agushuju
+Keywords: agushuju,爱股数据,A股数据,agudata,api,sdk,token
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: pandas>=1.1.0
+Dynamic: license-file
+
+# agushuju
+爱股数据，A股数据
+官网：https://www.agushuju.com/

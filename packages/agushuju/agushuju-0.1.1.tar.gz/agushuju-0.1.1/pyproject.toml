@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agushuju"
+version = "0.1.1"
+description = "爱股数据，A股数据"
+readme = "README.md"
+authors = [
+    { name = "安徽爱股科技有限公司", email = "jinguxun@qq.com" },
+]
+license = { text = "MIT" }
+keywords = ["agushuju","爱股数据","A股数据","agudata", "api", "sdk", "token"]
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.25.0",
+    "pandas>=1.1.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/agukeji/agushuju"
+
+[tool.setuptools.packages.find]
+where = ["src"]
