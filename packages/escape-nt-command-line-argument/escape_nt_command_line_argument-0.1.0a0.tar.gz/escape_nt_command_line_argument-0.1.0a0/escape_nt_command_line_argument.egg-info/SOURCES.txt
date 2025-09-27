@@ -1,0 +1,10 @@
+LICENSE
+README.md
+escape_nt_command_line_argument.py
+pyproject.toml
+setup.cfg
+escape_nt_command_line_argument.egg-info/PKG-INFO
+escape_nt_command_line_argument.egg-info/SOURCES.txt
+escape_nt_command_line_argument.egg-info/dependency_links.txt
+escape_nt_command_line_argument.egg-info/requires.txt
+escape_nt_command_line_argument.egg-info/top_level.txt
