@@ -1,0 +1,9 @@
+sphinx_ubuntu_images/__init__.py,sha256=JQo3noixZh6SMbk7zbKF20qsDcToN56ey4fJycevarg,679
+sphinx_ubuntu_images/_version.py,sha256=qf6R-J7-UyuABBo8c0HgaquJ8bejVbf07HodXgwAwgQ,704
+sphinx_ubuntu_images/common.py,sha256=J5nAFfqSzWnp9X_H89ejuYOiqHiLzE7njy91tDi1DtU,702
+sphinx_ubuntu_images/ubuntu_images.py,sha256=puSYkGvMMDQHJPhtvHuxNIbRgJ9q_pqf0aVCLYoBIus,39762
+sphinx_ubuntu_images-0.0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sphinx_ubuntu_images-0.0.1.dist-info/METADATA,sha256=zmoJGy_R9yDz-lgiNtRI92EXdGAapPP7wHckYGYFpQo,4550
+sphinx_ubuntu_images-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sphinx_ubuntu_images-0.0.1.dist-info/top_level.txt,sha256=VaZK92xxfe69-JCF--cJE56H2IksXidQ0OfAPnMTMOM,21
+sphinx_ubuntu_images-0.0.1.dist-info/RECORD,,
