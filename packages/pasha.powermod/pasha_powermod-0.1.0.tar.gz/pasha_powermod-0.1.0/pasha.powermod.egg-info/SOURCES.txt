@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+pasha.powermod.egg-info/PKG-INFO
+pasha.powermod.egg-info/SOURCES.txt
+pasha.powermod.egg-info/dependency_links.txt
+pasha.powermod.egg-info/top_level.txt
