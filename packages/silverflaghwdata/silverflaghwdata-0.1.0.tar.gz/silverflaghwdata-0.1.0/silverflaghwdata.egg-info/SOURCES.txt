@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+silverflaghwdata.egg-info/PKG-INFO
+silverflaghwdata.egg-info/SOURCES.txt
+silverflaghwdata.egg-info/dependency_links.txt
+silverflaghwdata.egg-info/entry_points.txt
+silverflaghwdata.egg-info/top_level.txt
+states/__init__.py
+states/alabama.py
+states/alaska.py
+states/arizona.py
+states/arkansas.py
+states/california.py
+states/colorado.py
