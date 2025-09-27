@@ -1,0 +1,2 @@
+eval "$(ssh-agent -s)"
+ssh-add /home/kkt/.ssh/id_ed25519Github

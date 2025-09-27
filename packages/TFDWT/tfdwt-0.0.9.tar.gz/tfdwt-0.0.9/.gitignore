@@ -1,0 +1,35 @@
+# git remote add origin git@github.com:ksatva/attentions.git
+
+/.*
+/!.gitignore
+
+**/.*
+**/__pycache__/
+**/.ipynb_checkpoints/
+
+/TFDWT.pypi/.pypirc
+/TFDWT.pypi/enableremotepush
+/TFDWT.pypi/dockergenpdf_joss
+
+# /dist/tfdwt-0.0.2-py3-none-any.whl
+# /dist/tfdwt-0.0.2.tar.gz
+
+
+# /enableremotepush
+# /paper/jats/
+# /paper/paper.pdf
+# /paper/10.21105.joss.07968.pdf
+# /paper/paper_turnitincheck.pdf
+
+
+#/.github/
+
+#/savedmodel
+# src/__pycache__
+#/logs
+#/.idea/
+#/DWTConvLayers_new/__pycache__/
+#/DWTConvLayers/__pycache__/
+# /!resetpypi                            
+/updateGit
+
