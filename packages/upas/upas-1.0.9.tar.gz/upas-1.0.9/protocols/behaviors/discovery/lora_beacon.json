@@ -1,0 +1,171 @@
+{
+    "behavior": {
+        "name": "LoRa_Beacon",
+        "type": "discovery",
+        "description": "LoRa network beacon for device discovery and network joining"
+    },
+    "beacon_config": {
+        "beacon_type": "network_discovery",
+        "transmission_power": 14,
+        "spreading_factor": 7,
+        "bandwidth": 125000,
+        "coding_rate": 5
+    },
+    "timing": {
+        "beacon_interval": 10000,
+        "beacon_window": 1000,
+        "random_delay": 500,
+        "duty_cycle_limit": 1.0
+    },
+    "behavior_type": "periodic",
+    "interval": "[BEACON_INTERVAL]",
+    "jitter": "[RANDOM_DELAY]",
+    "repeat_count": -1,
+    "variables": {
+        "GATEWAY_ID": "GW_001",
+        "NETWORK_ID": "LORA_NET_ALPHA",
+        "CHANNEL": 0,
+        "BEACON_SEQUENCE": 0,
+        "GPS_TIME": 0
+    },
+    "functions": {
+        "get_gps_time": "lambda: int(time.time())",
+        "increment_seq": "lambda x: (x + 1) % 65536",
+        "calculate_crc": "lambda data: crc16_ccitt(data)"
+    },
+    "payload": [
+        {
+            "beacon_type": "DISCOVERY"
+        },
+        {
+            "protocol_version": "01"
+        },
+        {
+            "gateway_id": "[GATEWAY_ID]"
+        },
+        {
+            "network_id": "[NETWORK_ID]"
+        },
+        {
+            "channel": "[CHANNEL:1]"
+        },
+        {
+            "beacon_sequence": "[BEACON_SEQUENCE:2:increment_seq]"
+        },
+        {
+            "gps_time": "[GPS_TIME:8:get_gps_time]"
+        },
+        {
+            "next_beacon_time": "[NEXT_BEACON:4]"
+        },
+        {
+            "join_enabled": "01"
+        },
+        {
+            "max_devices": "64"
+        },
+        {
+            "current_devices": "[DEVICE_COUNT:1]"
+        },
+        {
+            "default_sf": "07"
+        },
+        {
+            "default_bw": "125"
+        },
+        {
+            "default_cr": "45"
+        },
+        {
+            "network_key_hash": "[NET_KEY_HASH:4]"
+        },
+        {
+            "crc16": "[CRC:2:calculate_crc]"
+        }
+    ],
+    "response_handling": {
+        "listen_after_beacon": true,
+        "listen_duration": 5000,
+        "join_request_format": [
+            {
+                "message_type": "JOIN_REQUEST"
+            },
+            {
+                "device_id": "variable"
+            },
+            {
+                "device_capabilities": "variable"
+            },
+            {
+                "requested_sf": "variable"
+            }
+        ],
+        "join_response": {
+            "enabled": true,
+            "delay": 1000,
+            "payload": [
+                {
+                    "message_type": "JOIN_RESPONSE"
+                },
+                {
+                    "gateway_id": "[GATEWAY_ID]"
+                },
+                {
+                    "device_id": "[REQUESTING_DEVICE_ID]"
+                },
+                {
+                    "assigned_address": "[NEW_DEVICE_ADDR:2]"
+                },
+                {
+                    "network_session_key": "[SESSION_KEY:16]"
+                },
+                {
+                    "uplink_frequency": "[UP_FREQ:4]"
+                },
+                {
+                    "downlink_frequency": "[DOWN_FREQ:4]"
+                },
+                {
+                    "join_status": "ACCEPTED"
+                }
+            ]
+        }
+    },
+    "network_management": {
+        "device_registry": {
+            "enabled": true,
+            "max_devices": 64,
+            "timeout": 300000
+        },
+        "frequency_plan": [
+            {
+                "channel_0": 868100000
+            },
+            {
+                "channel_1": 868300000
+            },
+            {
+                "channel_2": 868500000
+            }
+        ],
+        "adaptive_beacon": {
+            "enabled": true,
+            "increase_interval_when_full": true,
+            "reduce_power_when_crowded": true
+        }
+    },
+    "monitoring": {
+        "track_metrics": [
+            "beacon_transmission_count",
+            "join_requests_received",
+            "join_requests_accepted",
+            "active_devices_count",
+            "network_utilization"
+        ],
+        "alerts": {
+            "network_full": "max_devices >= current_devices",
+            "high_collision_rate": "collision_rate > 10%",
+            "low_signal_quality": "avg_rssi < -120"
+        }
+    }
+}
